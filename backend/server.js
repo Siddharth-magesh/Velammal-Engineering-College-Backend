@@ -127,6 +127,26 @@ app.get('/api/infrastructure/:deptId', async (req, res) => {
     }
 });
 
+//Student Records
+app.get('/api/student-activities/:deptId', async (req, res) => {
+    const deptId = parseInt(req.params.deptId);
+    const db = client.db(dbName);
+    const collection = db.collection('student_activities');
+
+    try {
+        const result = await collection.findOne({ dept_id: deptId });
+
+        if (result) {
+            res.status(200).json(result);
+        } else {
+            res.status(404).json({ error: "No student activities found for the given department ID." });
+        }
+    } catch (error) {
+        console.error("Error fetching student activities:", error);
+        res.status(500).json({ error: "Error fetching student activities" });
+    }
+});
+
 
 app.listen(port, () => {
     console.log(`🚀 Server running at http://localhost:${port}`);
