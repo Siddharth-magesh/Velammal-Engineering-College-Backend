@@ -2,6 +2,8 @@ import os
 import requests
 import pandas as pd
 from pymongo import MongoClient
+from docx import Document
+import json
 
 mongo_uri = "mongodb://localhost:27017/"
 db_name = "VEC"
@@ -86,7 +88,7 @@ def generate_unique_id(index, department, designation):
     return f"VEC-{department_id}-{designation_id}-{unique_id}"
 
 
-df = df.head(5)
+df = df.head(1)
 df['unique_id'] = [
     generate_unique_id(i, df.at[i, 'Department Name'], df.at[i, 'Designation'])
     for i in range(len(df))
@@ -488,815 +490,127 @@ for _, row in df.iterrows():
 
 def insert_department_data():
     collection = db["vision_and_mission"]
+    with open("/Velammal-Engineering-College-Backend/docs/department_data.json", "r") as file:
+        documents = json.load(file)
+        collection.insert_many(documents)
 
-    departments = [
-        {
-            "department_id": 1,
-            "department_name": "Artificial Intelligence and Data Science",
-            "department_image": "url_to_ai_ds_image",
-            "department_quotes": "Empowering innovation through data-driven intelligence.",
-            "vision": "To achieve value based education and bring idealistic, ethical engineers to meet the thriving trends and technology in the field of Artificial Intelligence and Data Science",
-            "mission": [
-                "To engage students with the core competence to solve real world problems using Artificial Intelligence.",
-                "To enlighten students into technically proficient engineers through innovation in Data Science.",
-                "To involve students with industry collaboration, career guidance and leadership skills.",
-                "To mould students as ethical professionals to bring morals to individual and society."
-            ],
-            "about_department": "Department of Artificial Intelligence aims to produce computing graduates with high potency, apply, design and develop systems to pertain and to integrate both software and hardware devices, utilize modern approaches in programming and problem solving techniques. The Department was established in the year 2020 with the main objective of providing quality education in the field of Engineering and Technology. It is recognized as nodal center under Anna University. The Department has proved to be a center of excellence in Academic, Sponsored research and Continuing Education Programme."
-        },
-        {
-            "department_id": 2,
-            "department_name": "Automobile Engineering",
-            "department_image": "url_to_cse_image",
-            "department_quotes": "Innovating the future of technology.",
-            "vision": "To excel in computer science education, research, and innovation.",
-            "mission": [
-                "Deliver quality education in computer science engineering.",
-                "Foster research in emerging fields of technology.",
-                "Build industry-ready professionals with strong ethical values."
-            ],
-            "about_department": "The department emphasizes core computing skills and modern engineering practices."
-        },
-        {
-            "department_id": 3,
-            "department_name": "Chemistry ",
-            "department_image": "url_to_it_image",
-            "department_quotes": "Transforming information into solutions.",
-            "vision": "To be a leader in IT education and innovation, bridging technology and business.",
-            "mission": [
-                "Impart theoretical and practical knowledge in IT.",
-                "Promote research in information systems and technologies.",
-                "Encourage entrepreneurship and innovation."
-            ],
-            "about_department": "The department bridges the gap between technology and practical implementation."
-        },
-        {
-            "department_id": 4,
-            "department_name": "Civil Engineering",
-            "department_image": "url_to_cybersecurity_image",
-            "department_quotes": "Securing the digital world.",
-            "vision": "To be a leader in cybersecurity education and research, ensuring a safer digital environment.",
-            "mission": [
-                "Provide a comprehensive understanding of cybersecurity concepts.",
-                "Conduct research in emerging threats and solutions.",
-                "Train professionals to safeguard information and systems."
-            ],
-            "about_department": "The department focuses on equipping students with skills to tackle modern cybersecurity challenges."
-        },
-        {
-            "department_id": 5,
-            "department_name": "Computer Science & Engineering   ",
-            "department_image": "url_to_ece_image",
-            "department_quotes": "Connecting the world through innovation.",
-            "vision": "To pioneer in electronics and communication engineering education and research.",
-            "mission": [
-                "Develop expertise in electronics and communication technologies.",
-                "Promote innovative research for societal benefits.",
-                "Prepare students for leadership roles in industry and academia."
-            ],
-            "about_department": "The department specializes in modern communication systems and electronic design."
-        },
-        {
-            "department_id": 6,
-            "department_name": "Computer Science and Engineering (CYBER SECURITY)   ",
-            "department_image": "url_to_eee_image",
-            "department_quotes": "Powering the future.",
-            "vision": "To excel in electrical and electronics engineering education and sustainable innovation.",
-            "mission": [
-                "Provide a strong foundation in electrical and electronics engineering.",
-                "Encourage research in renewable energy and smart systems.",
-                "Equip students with problem-solving skills for the energy sector."
-            ],
-            "about_department": "The department addresses challenges in energy systems and electrical technologies."
-        },
-        {
-            "department_id": 7,
-            "department_name": "Electrical & Electronics Engineering   ",
-            "department_image": "url_to_eie_image",
-            "department_quotes": "Precision engineering for a better world.",
-            "vision": "To lead in electronic and instrumentation engineering education and innovation.",
-            "mission": [
-                "Focus on quality education in instrumentation and control systems.",
-                "Promote research in automation and intelligent systems.",
-                "Prepare students for industrial and academic excellence."
-            ],
-            "about_department": "The department emphasizes control systems and precision technologies."
-        },
-        {
-            "department_id": 8,
-            "department_name": "Electronics & Instrumentation Engineering ",
-            "department_image": "url_to_civil_image",
-            "department_quotes": "Building the foundation for tomorrow.",
-            "vision": "To be a leader in civil engineering education, research, and sustainable development.",
-            "mission": [
-                "Provide in-depth knowledge of civil engineering principles.",
-                "Encourage innovation in construction and design.",
-                "Promote sustainable and eco-friendly engineering practices."
-            ],
-            "about_department": "The department focuses on modern construction technologies and sustainability."
-        },
-        {
-            "department_id": 9,
-            "department_name": "Electronics and Communication Engineering ",
-            "department_image": "url_to_mechanical_image",
-            "department_quotes": "Engineering the tools of the future.",
-            "vision": "To achieve excellence in mechanical engineering education and research.",
-            "mission": [
-                "Deliver comprehensive knowledge of mechanical systems.",
-                "Promote research in advanced manufacturing and materials.",
-                "Prepare students for global challenges in engineering."
-            ],
-            "about_department": "The department emphasizes mechanical system design and innovation."
-        },
-        {
-            "department_id": 10,
-            "department_name": "English ",
-            "department_image": "url_to_automobile_image",
-            "department_quotes": "Driving innovation forward.",
-            "vision": "To be a center of excellence in automobile engineering education and innovation.",
-            "mission": [
-                "Provide expertise in automotive technologies.",
-                "Encourage research in sustainable and electric vehicles.",
-                "Prepare industry-ready professionals for the automotive sector."
-            ],
-            "about_department": "The department focuses on automotive design and sustainable transportation."
-        },
-        {
-            "department_id": 11,
-            "department_name": "Information Technology",
-            "department_image": "url_to_english_image",
-            "department_quotes": "Communicating the world with clarity and creativity.",
-            "vision": "To enhance linguistic and literary skills for global communication and cultural understanding.",
-            "mission": [
-                "Promote excellence in English language and literature.",
-                "Foster critical thinking and creativity through language.",
-                "Prepare students for effective communication in diverse contexts."
-            ],
-            "about_department": "The department focuses on linguistic proficiency and literary appreciation."
-        },
-        {
-            "department_id": 12,
-            "department_name": "Mathematics",
-            "department_image": "url_to_chemistry_image",
-            "department_quotes": "Exploring the building blocks of matter.",
-            "vision": "To excel in chemical education and research for sustainable development.",
-            "mission": [
-                "Provide in-depth knowledge of chemical principles.",
-                "Encourage research in green and sustainable chemistry.",
-                "Prepare students for careers in chemical industries and research."
-            ],
-            "about_department": "The department emphasizes chemical analysis and sustainable practices."
-        },
-        {
-            "department_id": 13,
-            "department_name": "Mechancial Engineering",
-            "department_image": "url_to_mathematics_image",
-            "department_quotes": "Unlocking the power of numbers and logic.",
-            "vision": "To be a leader in mathematical education and research, fostering analytical and problem-solving skills.",
-            "mission": [
-                "Provide a strong foundation in mathematical concepts.",
-                "Encourage interdisciplinary research involving mathematics.",
-                "Equip students with analytical skills for diverse applications."
-            ],
-            "about_department": "The department focuses on pure and applied mathematical sciences."
-        },
-        {
-            "department_id": 14,
-            "department_name": "Physical Education",
-            "department_image": "url_to_physics_image",
-            "department_quotes": "Unveiling the mysteries of the universe.",
-            "vision": "To excel in physics education and research, inspiring scientific curiosity.",
-            "mission": [
-                "Provide a strong foundation in fundamental and applied physics.",
-                "Encourage research in emerging areas of physical sciences.",
-                "Prepare students for careers in academia, industry, and research."
-            ],
-            "about_department": "The department emphasizes understanding and applying the principles of physics."
-        },
-        {
-            "department_id": 15,
-            "department_name": "Physics",
-            "department_image": "url_to_biotech_image",
-            "department_quotes": "Harnessing life sciences for a better tomorrow.",
-            "vision": "To lead in biotechnology education and research for sustainable development.",
-            "mission": [
-                "Provide comprehensive knowledge in biotechnology.",
-                "Encourage research in genetic engineering and bioprocess technology.",
-                "Prepare students for global challenges in biotechnology and healthcare."
-            ],
-            "about_department": "The department focuses on cutting-edge research in life sciences and biotechnology applications."
-        }
-    ]
-
-    collection.insert_many(departments)
     print("Department documents inserted successfully.")
 
 def insert_hod_datas():
-    hod_collection = db['HODS']
+    collection = db['HODS']
+    with open("/Velammal-Engineering-College-Backend/docs/hods.json", "r") as file:
+        documents = json.load(file)
+        collection.insert_many(documents)
 
-    departments = [
-        {
-            "Name": "Dr. VISU",
-            "Unique_id": "VEC-001-01-77",
-            "Qualification": ["M.E","PhD"],
-            "Hod_message": "Welcome to the Artificial Intelligence Department!",
-            "Image": "vec pics/Dr.P.VISU - Dr. P. Visu Prof & Head - Dept.of AI & DS.jpg",  # Path to the image
-        
-            "Social_media_links": {
-                "LinkedIn": "https://www.linkedin.com/in/dr-visu-p-12a78961/?trk=public_profile_browsemap&originalSubdomain=in",
-                "Google Scholar": "https://scholar.google.co.in/citations?view_op=list_works&hl=en&authuser=2&hl=en&user=KfwgAmoAAAAJ&sortby=pubdate&authuser=2",
-                "Research Gate": "https://www.researchgate.net/profile/Pandu-Visu",
-                "Orchid Profile": "https://orcid.org/my-orcid?orcid=0000-0001-8020-1678",
-                "Publon": "https://www.webofscience.com/wos/author/record/21718142",
-                "Scopus": "https://www.scopus.com/results/results.uri?src=s&sort=plf-f&st1=VISU&st2=P&nlo=1&nlr=20&nls=count-f&sid=de56d96861725e0547809c9ac4a37743&sot=anl&sdt=aut&sl=29&s=AU-ID%28%22Visu%2c+P.%22+35744043700%29&cl=t&offset=1&ss=plf-f&ws=r-f&ps=plf-f&cs=r-f&origin=resultslist&zone=queryBar"
-            }
-        },
-        {
-        
-            "Name": "Dr. MARY JOANS",
-            "Unique_id": "VEC-009-01-90",
-            "Qualification":  ["M.E","PhD"],
-            "Hod_message": "Welcome to the Electronics and Communication Engineering Department!",
-            "Image": "vec pics/DR.S.MARY_JOANS_PHOTO_22-23_optimized_50 - Dr. S. Mary Joans Professor & Head.jpg",  # Path to the image
-        
-            "Social_media_links": {
-                "Google Scholar": "https://scholar.google.com/citations?user=CXHND6AAAAAJ&hl=en",
-                "Research Gate": "https://www.researchgate.net/profile/Mary-Joans",
-                "Orchid Profile": "https://orcid.org/0009-0008-2908-5438",
-                "Scopus": ".https://www.scopus.com/authid/detail.uri?authorId=54917116200"
-            }
-        },
-        {
-        
-            "Name": "Dr. RAJESWARAN ",
-            "Unique_id": "VEC-012-01-96",
-            "Qualification":["M.sc","M.Phil","PhD"],
-            "Hod_message": "Welcome to the Mathematics Department!",
-            "Image": "vec pics/Dr. S.R - Prof. Rajeswaran. S Prof and Head - Maths.JPG",  # Path to the image
-            "Social_media_links": {
-                "LinkedIn": "http://www.linkedin.com/in/rajeswaran-subramani-03b61349",
-                "Google Scholar": "https://scholar.google.com/citations?hl=en&user=hLT4dVIAAAAJ",
-                "Research Gate": "https://www.researchgate.net/profile/Rajeswaran-Subramani",
-                "Scopus": "https://www.scopus.com/authid/detail.uri?authorId=56049208900"
-            }
-        },
-
-
-        {
-        
-            "Name": "JEBAMALAR",
-            "Unique_id": "VEC-004-01-145",
-            "Qualification":["M.E","PhD"],
-            "Hod_message": "Welcome to the Civil Engineering Department!",
-            "Image": "vec pics/Jebamalar - Dr.A.Jebamalar Prof & Head CIVIL.jpg",
-            "Social_media_links": {
-                "LinkedIn": "https://www.linkedin.com/in/jebamalar-abraham-986a35203/",
-                "Google Scholar": "https://scholar.google.com/citations?hl=en&user=zMX3IjQAAAAJ",
-                "Scopus": "https://www.scopus.com/authid/detail.uri?authorId=58322199400"
-            }
-        },
-
-        {
-            "Name": "Dr. M. RADHAKRISHNAN",
-            "Unique_id": "VEC-002-01-102",
-            "Qualification": ["M.E", "PhD"],
-            "Hod_message": "Welcome to the Automobile Engineering Department!",
-            "Image": "vec pics/Dr.RadhaKrishnan - Dr.M.Radhakrishnan Prof & Head Auto.jpg",
-            "Social_media_links": {
-                "LinkedIn": "https://www.linkedin.com/in/m-radhakrishnan/",
-                "Google Scholar": "https://scholar.google.com/citations?user=mRadhaKrishnan&hl=en",
-                "Research Gate": "https://www.researchgate.net/profile/M-Radhakrishnan",
-                "Scopus": "https://www.scopus.com/authid/detail.uri?authorId=58322199455"
-            }
-        },
-        {
-            "Name": "Dr. S. BALAKRISHNAN",
-            "Unique_id": "VEC-003-01-110",
-            "Qualification": ["M.Sc", "PhD"],
-            "Hod_message": "Welcome to the Chemistry Department!",
-            "Image": "vec pics/Dr.Balakrishnan - Dr.S.Balakrishnan Prof & Head Chemistry.jpg",
-            "Social_media_links": {
-                "LinkedIn": "https://www.linkedin.com/in/s-balakrishnan-03b61349/",
-                "Google Scholar": "https://scholar.google.com/citations?user=sBalakrishnan&hl=en",
-                "Scopus": "https://www.scopus.com/authid/detail.uri?authorId=57349207800"
-            }
-        },
-        {
-            "Name": "Dr. A. MURUGAN",
-            "Unique_id": "VEC-007-01-125",
-            "Qualification": ["M.E", "PhD"],
-            "Hod_message": "Welcome to the Electrical & Electronics Engineering Department!",
-            "Image": "vec pics/Dr.Murugan - Dr.A.Murugan Prof & Head EEE.jpg",
-            "Social_media_links": {
-                "LinkedIn": "https://www.linkedin.com/in/a-murugan/",
-                "Google Scholar": "https://scholar.google.com/citations?user=aMurugan&hl=en",
-                "Scopus": "https://www.scopus.com/authid/detail.uri?authorId=57194019400"
-            }
-        },
-        {
-            "Name": "Dr. K. VELMURUGAN",
-            "Unique_id": "VEC-008-01-130",
-            "Qualification": ["M.E", "PhD"],
-            "Hod_message": "Welcome to the Electronics & Instrumentation Engineering Department!",
-            "Image": "vec pics/Dr.VelMurugan - Dr.K.VelMurugan Prof & Head EIE.jpg",
-            "Social_media_links": {
-                "LinkedIn": "https://www.linkedin.com/in/k-velmurugan/",
-                "Google Scholar": "https://scholar.google.com/citations?user=kVelmurugan&hl=en",
-                "Research Gate": "https://www.researchgate.net/profile/K-Velmurugan",
-                "Scopus": "https://www.scopus.com/authid/detail.uri?authorId=57930299400"
-            }
-        },
-        {
-            "Name": "Dr. K. NAGARAJAN",
-            "Unique_id": "VEC-005-01-120",
-            "Qualification": ["M.E", "PhD"],
-            "Hod_message": "Welcome to the Computer Science & Engineering Department!",
-            "Image": "vec pics/Dr.Nagarajan - Dr.K.Nagarajan Prof & Head CSE.jpg",
-            "Social_media_links": {
-                "LinkedIn": "https://www.linkedin.com/in/k-nagarajan/",
-                "Google Scholar": "https://scholar.google.com/citations?user=kNagarajan&hl=en",
-                "Scopus": "https://www.scopus.com/authid/detail.uri?authorId=56140900400"
-            }
-        },
-        {
-            "Name": "Dr. S. MANOHARAN",
-            "Unique_id": "VEC-006-01-135",
-            "Qualification": ["M.E", "PhD"],
-            "Hod_message": "Welcome to the Computer Science and Engineering (Cyber Security) Department!",
-            "Image": "vec pics/Dr.Manoharan - Dr.S.Manoharan Prof & Head CSE-Cyber.jpg",
-            "Social_media_links": {
-                "LinkedIn": "https://www.linkedin.com/in/s-manoharan/",
-                "Google Scholar": "https://scholar.google.com/citations?user=sManoharan&hl=en",
-                "Research Gate": "https://www.researchgate.net/profile/S-Manoharan",
-                "Scopus": "https://www.scopus.com/authid/detail.uri?authorId=57328209500"
-            }
-        },
-        {
-            "Name": "Dr. S. PRAVEENA",
-            "Unique_id": "VEC-010-01-140",
-            "Qualification": ["M.A", "PhD"],
-            "Hod_message": "Welcome to the English Department!",
-            "Image": "vec pics/Dr.Praveena - Dr.S.Praveena Prof & Head English.jpg",
-            "Social_media_links": {
-                "LinkedIn": "https://www.linkedin.com/in/s-praveena/",
-                "Google Scholar": "https://scholar.google.com/citations?user=sPraveena&hl=en"
-            }
-        },
-        {
-            "Name": "Dr. S. GANESAN",
-            "Unique_id": "VEC-011-01-150",
-            "Qualification": ["M.E", "PhD"],
-            "Hod_message": "Welcome to the Information Technology Department!",
-            "Image": "vec pics/Dr.Ganesan - Dr.S.Ganesan Prof & Head IT.jpg",
-            "Social_media_links": {
-                "LinkedIn": "https://www.linkedin.com/in/s-ganesan/",
-                "Google Scholar": "https://scholar.google.com/citations?user=sGanesan&hl=en",
-                "Research Gate": "https://www.researchgate.net/profile/S-Ganesan",
-                "Scopus": "https://www.scopus.com/authid/detail.uri?authorId=56829630300"
-            }
-        },
-        {
-            "Name": "Dr. R. SENTHIL",
-            "Unique_id": "VEC-013-01-160",
-            "Qualification": ["M.E", "PhD"],
-            "Hod_message": "Welcome to the Mechanical Engineering Department!",
-            "Image": "vec pics/Dr.Senthil - Dr.R.Senthil Prof & Head Mechanical.jpg",
-            "Social_media_links": {
-                "LinkedIn": "https://www.linkedin.com/in/r-senthil/",
-                "Google Scholar": "https://scholar.google.com/citations?user=rSenthil&hl=en",
-                "Scopus": "https://www.scopus.com/authid/detail.uri?authorId=56120129400"
-            }
-        }
-    ]
-
-    hod_collection.insert_many(departments)
     print("HOD documents inserted successfully.")
 
 def insert_infrastructure_data():
     collection = db["infrastructure"]
+    with open("/Velammal-Engineering-College-Backend/docs/infrastructure.json", "r") as file:
+        documents = json.load(file)
+        collection.insert_many(documents)
 
-
-    documents = [
-        {
-            "dept_id": 1,
-            "infrastructure_images": [
-                {"image_path": "path/to/image1_1.jpg", "image_name": "Image 1_1", "image_content": "Description of Image 1_1"},
-                {"image_path": "path/to/image1_2.jpg", "image_name": "Image 1_2", "image_content": "Description of Image 1_2"},
-                {"image_path": "path/to/image1_3.jpg", "image_name": "Image 1_3", "image_content": "Description of Image 1_3"},
-                {"image_path": "path/to/image1_4.jpg", "image_name": "Image 1_4", "image_content": "Description of Image 1_4"},
-                {"image_path": "path/to/image1_5.jpg", "image_name": "Image 1_5", "image_content": "Description of Image 1_5"}
-            ]
-        },
-        {
-            "dept_id": 2,
-            "infrastructure_images": [
-                {"image_path": "path/to/image2_1.jpg", "image_name": "Image 2_1", "image_content": "Description of Image 2_1"},
-                {"image_path": "path/to/image2_2.jpg", "image_name": "Image 2_2", "image_content": "Description of Image 2_2"},
-                {"image_path": "path/to/image2_3.jpg", "image_name": "Image 2_3", "image_content": "Description of Image 2_3"},
-                {"image_path": "path/to/image2_4.jpg", "image_name": "Image 2_4", "image_content": "Description of Image 2_4"},
-                {"image_path": "path/to/image2_5.jpg", "image_name": "Image 2_5", "image_content": "Description of Image 2_5"}
-            ]
-        },
-        {
-            "dept_id": 3,
-            "infrastructure_images": [
-                {"image_path": "path/to/image3_1.jpg", "image_name": "Image 3_1", "image_content": "Description of Image 3_1"},
-                {"image_path": "path/to/image3_2.jpg", "image_name": "Image 3_2", "image_content": "Description of Image 3_2"},
-                {"image_path": "path/to/image3_3.jpg", "image_name": "Image 3_3", "image_content": "Description of Image 3_3"},
-                {"image_path": "path/to/image3_4.jpg", "image_name": "Image 3_4", "image_content": "Description of Image 3_4"},
-                {"image_path": "path/to/image3_5.jpg", "image_name": "Image 3_5", "image_content": "Description of Image 3_5"}
-            ]
-        },
-        {
-            "dept_id": 4,
-            "infrastructure_images": [
-                {"image_path": "path/to/image4_1.jpg", "image_name": "Image 4_1", "image_content": "Description of Image 4_1"},
-                {"image_path": "path/to/image4_2.jpg", "image_name": "Image 4_2", "image_content": "Description of Image 4_2"},
-                {"image_path": "path/to/image4_3.jpg", "image_name": "Image 4_3", "image_content": "Description of Image 4_3"},
-                {"image_path": "path/to/image4_4.jpg", "image_name": "Image 4_4", "image_content": "Description of Image 4_4"},
-                {"image_path": "path/to/image4_5.jpg", "image_name": "Image 4_5", "image_content": "Description of Image 4_5"}
-            ]
-        },
-        {
-            "dept_id": 5,
-            "infrastructure_images": [
-                {"image_path": "path/to/image5_1.jpg", "image_name": "Image 5_1", "image_content": "Description of Image 5_1"},
-                {"image_path": "path/to/image5_2.jpg", "image_name": "Image 5_2", "image_content": "Description of Image 5_2"},
-                {"image_path": "path/to/image5_3.jpg", "image_name": "Image 5_3", "image_content": "Description of Image 5_3"},
-                {"image_path": "path/to/image5_4.jpg", "image_name": "Image 5_4", "image_content": "Description of Image 5_4"},
-                {"image_path": "path/to/image5_5.jpg", "image_name": "Image 5_5", "image_content": "Description of Image 5_5"}
-            ]
-        },
-        {
-            "dept_id": 6,
-            "infrastructure_images": [
-                {"image_path": "path/to/image6_1.jpg", "image_name": "Image 6_1", "image_content": "Description of Image 6_1"},
-                {"image_path": "path/to/image6_2.jpg", "image_name": "Image 6_2", "image_content": "Description of Image 6_2"},
-                {"image_path": "path/to/image6_3.jpg", "image_name": "Image 6_3", "image_content": "Description of Image 6_3"},
-                {"image_path": "path/to/image6_4.jpg", "image_name": "Image 6_4", "image_content": "Description of Image 6_4"},
-                {"image_path": "path/to/image6_5.jpg", "image_name": "Image 6_5", "image_content": "Description of Image 6_5"}
-            ]
-        },
-        {
-            "dept_id": 7,
-            "infrastructure_images": [
-                {"image_path": "path/to/image7_1.jpg", "image_name": "Image 7_1", "image_content": "Description of Image 7_1"},
-                {"image_path": "path/to/image7_2.jpg", "image_name": "Image 7_2", "image_content": "Description of Image 7_2"},
-                {"image_path": "path/to/image7_3.jpg", "image_name": "Image 7_3", "image_content": "Description of Image 7_3"},
-                {"image_path": "path/to/image7_4.jpg", "image_name": "Image 7_4", "image_content": "Description of Image 7_4"},
-                {"image_path": "path/to/image7_5.jpg", "image_name": "Image 7_5", "image_content": "Description of Image 7_5"}
-            ]
-        },
-        {
-            "dept_id": 8,
-            "infrastructure_images": [
-                {"image_path": "path/to/image8_1.jpg", "image_name": "Image 8_1", "image_content": "Description of Image 8_1"},
-                {"image_path": "path/to/image8_2.jpg", "image_name": "Image 8_2", "image_content": "Description of Image 8_2"},
-                {"image_path": "path/to/image8_3.jpg", "image_name": "Image 8_3", "image_content": "Description of Image 8_3"},
-                {"image_path": "path/to/image8_4.jpg", "image_name": "Image 8_4", "image_content": "Description of Image 8_4"},
-                {"image_path": "path/to/image8_5.jpg", "image_name": "Image 8_5", "image_content": "Description of Image 8_5"}
-            ]
-        },
-        {
-            "dept_id": 9,
-            "infrastructure_images": [
-                {"image_path": "path/to/image9_1.jpg", "image_name": "Image 9_1", "image_content": "Description of Image 9_1"},
-                {"image_path": "path/to/image9_2.jpg", "image_name": "Image 9_2", "image_content": "Description of Image 9_2"},
-                {"image_path": "path/to/image9_3.jpg", "image_name": "Image 9_3", "image_content": "Description of Image 9_3"},
-                {"image_path": "path/to/image9_4.jpg", "image_name": "Image 9_4", "image_content": "Description of Image 9_4"},
-                {"image_path": "path/to/image9_5.jpg", "image_name": "Image 9_5", "image_content": "Description of Image 9_5"}
-            ]
-        },
-        {
-            "dept_id": 10,
-            "infrastructure_images": [
-                {"image_path": "path/to/image10_1.jpg", "image_name": "Image 10_1", "image_content": "Description of Image 10_1"},
-                {"image_path": "path/to/image10_2.jpg", "image_name": "Image 10_2", "image_content": "Description of Image 10_2"},
-                {"image_path": "path/to/image10_3.jpg", "image_name": "Image 10_3", "image_content": "Description of Image 10_3"},
-                {"image_path": "path/to/image10_4.jpg", "image_name": "Image 10_4", "image_content": "Description of Image 10_4"},
-                {"image_path": "path/to/image10_5.jpg", "image_name": "Image 10_5", "image_content": "Description of Image 10_5"}
-            ]
-        },
-        {
-            "dept_id": 11,
-            "infrastructure_images": [
-                {"image_path": "path/to/image11_1.jpg", "image_name": "Image 11_1", "image_content": "Description of Image 11_1"},
-                {"image_path": "path/to/image11_2.jpg", "image_name": "Image 11_2", "image_content": "Description of Image 11_2"},
-                {"image_path": "path/to/image11_3.jpg", "image_name": "Image 11_3", "image_content": "Description of Image 11_3"},
-                {"image_path": "path/to/image11_4.jpg", "image_name": "Image 11_4", "image_content": "Description of Image 11_4"},
-                {"image_path": "path/to/image11_5.jpg", "image_name": "Image 11_5", "image_content": "Description of Image 11_5"}
-            ]
-        },
-        {
-            "dept_id": 12,
-            "infrastructure_images": [
-                {"image_path": "path/to/image12_1.jpg", "image_name": "Image 12_1", "image_content": "Description of Image 12_1"},
-                {"image_path": "path/to/image12_2.jpg", "image_name": "Image 12_2", "image_content": "Description of Image 12_2"},
-                {"image_path": "path/to/image12_3.jpg", "image_name": "Image 12_3", "image_content": "Description of Image 12_3"},
-                {"image_path": "path/to/image12_4.jpg", "image_name": "Image 12_4", "image_content": "Description of Image 12_4"},
-                {"image_path": "path/to/image12_5.jpg", "image_name": "Image 12_5", "image_content": "Description of Image 12_5"}
-            ]
-        },
-        {
-            "dept_id": 13,
-            "infrastructure_images": [
-                {"image_path": "path/to/image13_1.jpg", "image_name": "Image 13_1", "image_content": "Description of Image 13_1"},
-                {"image_path": "path/to/image13_2.jpg", "image_name": "Image 13_2", "image_content": "Description of Image 13_2"},
-                {"image_path": "path/to/image13_3.jpg", "image_name": "Image 13_3", "image_content": "Description of Image 13_3"},
-                {"image_path": "path/to/image13_4.jpg", "image_name": "Image 13_4", "image_content": "Description of Image 13_4"},
-                {"image_path": "path/to/image13_5.jpg", "image_name": "Image 13_5", "image_content": "Description of Image 13_5"}
-            ]
-        },
-        {
-            "dept_id": 14,
-            "infrastructure_images": [
-                {"image_path": "path/to/image14_1.jpg", "image_name": "Image 14_1", "image_content": "Description of Image 14_1"},
-                {"image_path": "path/to/image14_2.jpg", "image_name": "Image 14_2", "image_content": "Description of Image 14_2"},
-                {"image_path": "path/to/image14_3.jpg", "image_name": "Image 14_3", "image_content": "Description of Image 14_3"},
-                {"image_path": "path/to/image14_4.jpg", "image_name": "Image 14_4", "image_content": "Description of Image 14_4"},
-                {"image_path": "path/to/image14_5.jpg", "image_name": "Image 14_5", "image_content": "Description of Image 14_5"}
-            ]
-        },
-        {
-            "dept_id": 15,
-            "infrastructure_images": [
-                {"image_path": "path/to/image15_1.jpg", "image_name": "Image 15_1", "image_content": "Description of Image 15_1"},
-                {"image_path": "path/to/image15_2.jpg", "image_name": "Image 15_2", "image_content": "Description of Image 15_2"},
-                {"image_path": "path/to/image15_3.jpg", "image_name": "Image 15_3", "image_content": "Description of Image 15_3"},
-                {"image_path": "path/to/image15_4.jpg", "image_name": "Image 15_4", "image_content": "Description of Image 15_4"},
-                {"image_path": "path/to/image15_5.jpg", "image_name": "Image 15_5", "image_content": "Description of Image 15_5"}
-            ]
-        }
-    ]
-    collection.insert_many(documents)
     print("Infrastructure documents inserted successfully.")
 
 def insert_student_activities_data():
-    collection = db['student_activities']  
-
-    documents = [
-        {
-            "dept_id": 1,
-            "content": "Students' achievements are a testament to their hard work, dedication, and resilience in the pursuit of academic and personal growth. From excelling in academics and securing top grades to showcasing talent in sports, arts, and extracurricular activities, their accomplishments reflect a well-rounded development. Participation in science fairs, debates, and cultural events highlights their creativity and critical thinking, while community service projects demonstrate their commitment to making a positive impact. These achievements not only inspire their peers but also pave the way for future opportunities, building confidence and a strong foundation for lifelong success.",
-            "images": [
-                {"image_path": "path/to/image1_1.jpg", "image_content": "AI&DS Department Paper Presentation (2nd Prize)", "event_name": "III year students of the AI&DS department won second prize in the paper presentation held at Saveetha Engineering College on 23.08.24. Paper Title: 'Are Women Safe in India?", "date": "2024-08-23"},
-                {"image_path": "path/to/image1_2.jpg", "image_content": "AI&DS Department Paper Presentation (2nd Prize)", "event_name": "III year students of our department won second prize in the paper presentation held at Saveetha Engineering College on 23.08.24. Paper Title: 'Preventing Fake Social Media Profiles and Reporting", "date": "2024-08-23"},
-                {"image_path": "path/to/image1_3.jpg", "image_content": "AI&DS Department Paper Presentation (1st Prize)", "event_name": "III year students, Vasantha Raja and Roshan Varghese, won 1st prize in the Paper Presentation held at Saveetha Engineering College on 27/8/2024. They were awarded a trophy and a cash prize of Rs.1000.", "date": "2024-08-27"},
-                {"image_path": "path/to/image1_4.jpg", "image_content": "AI&DS Department IPL Auction Event", "event_name": "II year student Tharun. M participated in the IPL Auction event conducted by the Mechanical Department of Velammal Engineering College and won First place with a prize of Rs.1500", "date": "2024-08-24"},
-                {"image_path": "path/to/image1_5.jpg", "image_content": "Technoxian World Cup Participation", "event_name": "AI&DS Department student T. Vishal Raj of Final year participated in the Maze Solver Challenge of Technoxian World Cup 2024, held at Noida Stadium Complex, Noida from 24th-27th August 2024.", "date": "2024-08-24"},
-                {"image_path": "path/to/image1_6.jpg", "image_content": "AI&DS Department Football Tournament", "event_name": "AI&DS Department student Lokharajan of III year won third place in the football tournament conducted by Velammal Institute of Technology.", "date": "2024-09-01"},
-                {"image_path": "path/to/image1_7.jpg", "image_content": "CM Trophy Basketball Match", "event_name": "AI&DS Department student Mugunthan Balaji from II year achieved Runner-up in the CM Trophy basketball match conducted at __________________.", "date": "2024-09-05"},
-                {"image_path": "path/to/image1_8.jpg", "image_content": "INNOTHON-24 Hackathon", "event_name": "AI&DS Department students Pranesh Kumar, Siddarth, Sriram, Arjun, and Mohamed Yasir won First Place in the Hackathon (INNOTHON-24) conducted by KCG College of Engineering and won a cash prize of Rs.25000 on 21-9-2024.", "date": "2024-09-21"},
-                {"image_path": "path/to/image1_9.jpg", "image_content": "Zonal Level Volleyball Tournament", "event_name": "AI&DS Department II year student Thamizhvendhan won 3rd place in the Zonal level volleyball tournament conducted by RMK Engineering College on 26-9-2024.", "date": "2024-09-26"},
-                {"image_path": "path/to/image1_10.jpg", "image_content": "Zonal Level Basketball Tournament", "event_name": "AI&DS Department II year student Mugunthan Balaji won 2nd place in the Zonal level basketball tournament conducted by RMK Engineering College on 26-9-2024.", "date": "2024-09-26"}
-            ]
-        },
-        {
-            "dept_id": 2,
-            "content": "Department 2 Content",
-            "images": [
-                {"image_path": "path/to/image2_1.jpg", "image_content": "Description of Image 2_1", "event_name": "Event 2_1", "date": "YYYY-MM-DD"},
-                {"image_path": "path/to/image2_2.jpg", "image_content": "Description of Image 2_2", "event_name": "Event 2_2", "date": "YYYY-MM-DD"},
-                {"image_path": "path/to/image2_3.jpg", "image_content": "Description of Image 2_3", "event_name": "Event 2_3", "date": "YYYY-MM-DD"},
-                {"image_path": "path/to/image2_4.jpg", "image_content": "Description of Image 2_4", "event_name": "Event 2_4", "date": "YYYY-MM-DD"},
-                {"image_path": "path/to/image2_5.jpg", "image_content": "Description of Image 2_5", "event_name": "Event 2_5", "date": "YYYY-MM-DD"},
-                {"image_path": "path/to/image2_6.jpg", "image_content": "Description of Image 2_6", "event_name": "Event 2_6", "date": "YYYY-MM-DD"},
-                {"image_path": "path/to/image2_7.jpg", "image_content": "Description of Image 2_7", "event_name": "Event 2_7", "date": "YYYY-MM-DD"},
-                {"image_path": "path/to/image2_8.jpg", "image_content": "Description of Image 2_8", "event_name": "Event 2_8", "date": "YYYY-MM-DD"},
-                {"image_path": "path/to/image2_9.jpg", "image_content": "Description of Image 2_9", "event_name": "Event 2_9", "date": "YYYY-MM-DD"},
-                {"image_path": "path/to/image2_10.jpg", "image_content": "Description of Image 2_10", "event_name": "Event 2_10", "date": "YYYY-MM-DD"}
-            ]
-        },
-        {
-            "dept_id": 3,
-            "content": "Department 3 Content",
-            "images": [
-                {"image_path": "path/to/image3_1.jpg", "image_content": "Description of Image 3_1", "event_name": "Event 3_1", "date": "YYYY-MM-DD"},
-                {"image_path": "path/to/image3_2.jpg", "image_content": "Description of Image 3_2", "event_name": "Event 3_2", "date": "YYYY-MM-DD"},
-                {"image_path": "path/to/image3_3.jpg", "image_content": "Description of Image 3_3", "event_name": "Event 3_3", "date": "YYYY-MM-DD"},
-                {"image_path": "path/to/image3_4.jpg", "image_content": "Description of Image 3_4", "event_name": "Event 3_4", "date": "YYYY-MM-DD"},
-                {"image_path": "path/to/image3_5.jpg", "image_content": "Description of Image 3_5", "event_name": "Event 3_5", "date": "YYYY-MM-DD"},
-                {"image_path": "path/to/image3_6.jpg", "image_content": "Description of Image 3_6", "event_name": "Event 3_6", "date": "YYYY-MM-DD"},
-                {"image_path": "path/to/image3_7.jpg", "image_content": "Description of Image 3_7", "event_name": "Event 3_7", "date": "YYYY-MM-DD"},
-                {"image_path": "path/to/image3_8.jpg", "image_content": "Description of Image 3_8", "event_name": "Event 3_8", "date": "YYYY-MM-DD"},
-                {"image_path": "path/to/image3_9.jpg", "image_content": "Description of Image 3_9", "event_name": "Event 3_9", "date": "YYYY-MM-DD"},
-                {"image_path": "path/to/image3_10.jpg", "image_content": "Description of Image 3_10", "event_name": "Event 3 _10", "date": "YYYY-MM-DD"}
-            ]
-        },
-        {
-            "dept_id": 4,
-            "content": "Department 4 Content",
-            "images": [
-                {"image_path": "path/to/image4_1.jpg", "image_content": "Description of Image 4_1", "event_name": "Event 4_1", "date": "YYYY-MM-DD"},
-                {"image_path": "path/to/image4_2.jpg", "image_content": "Description of Image 4_2", "event_name": "Event 4_2", "date": "YYYY-MM-DD"},
-                {"image_path": "path/to/image4_3.jpg", "image_content": "Description of Image 4_3", "event_name": "Event 4_3", "date": "YYYY-MM-DD"},
-                {"image_path": "path/to/image4_4.jpg", "image_content": "Description of Image 4_4", "event_name": "Event 4_4", "date": "YYYY-MM-DD"},
-                {"image_path": "path/to/image4_5.jpg", "image_content": "Description of Image 4_5", "event_name": "Event 4_5", "date": "YYYY-MM-DD"},
-                {"image_path": "path/to/image4_6.jpg", "image_content": "Description of Image 4_6", "event_name": "Event 4_6", "date": "YYYY-MM-DD"},
-                {"image_path": "path/to/image4_7.jpg", "image_content": "Description of Image 4_7", "event_name": "Event 4_7", "date": "YYYY-MM-DD"},
-                {"image_path": "path/to/image4_8.jpg", "image_content": "Description of Image 4_8", "event_name": "Event 4_8", "date": "YYYY-MM-DD"},
-                {"image_path": "path/to/image4_9.jpg", "image_content": "Description of Image 4_9", "event_name": "Event 4_9", "date": "YYYY-MM-DD"},
-                {"image_path": "path/to/image4_10.jpg", "image_content": "Description of Image 4_10", "event_name": "Event 4_10", "date": "YYYY-MM-DD"}
-            ]
-        },
-        {
-            "dept_id": 5,
-            "content": "Department 4 Content",
-            "images": [
-                {"image_path": "path/to/image4_1.jpg", "image_content": "Description of Image 4_1", "event_name": "Event 4_1", "date": "YYYY-MM-DD"},
-                {"image_path": "path/to/image4_2.jpg", "image_content": "Description of Image 4_2", "event_name": "Event 4_2", "date": "YYYY-MM-DD"},
-                {"image_path": "path/to/image4_3.jpg", "image_content": "Description of Image 4_3", "event_name": "Event 4_3", "date": "YYYY-MM-DD"},
-                {"image_path": "path/to/image4_4.jpg", "image_content": "Description of Image 4_4", "event_name": "Event 4_4", "date": "YYYY-MM-DD"},
-                {"image_path": "path/to/image4_5.jpg", "image_content": "Description of Image 4_5", "event_name": "Event 4_5", "date": "YYYY-MM-DD"},
-                {"image_path": "path/to/image4_6.jpg", "image_content": "Description of Image 4_6", "event_name": "Event 4_6", "date": "YYYY-MM-DD"},
-                {"image_path": "path/to/image4_7.jpg", "image_content": "Description of Image 4_7", "event_name": "Event 4_7", "date": "YYYY-MM-DD"},
-                {"image_path": "path/to/image4_8.jpg", "image_content": "Description of Image 4_8", "event_name": "Event 4_8", "date": "YYYY-MM-DD"},
-                {"image_path": "path/to/image4_9.jpg", "image_content": "Description of Image 4_9", "event_name": "Event 4_9", "date": "YYYY-MM-DD"},
-                {"image_path": "path/to/image4_10.jpg", "image_content": "Description of Image 4_10", "event_name": "Event 4_10", "date": "YYYY-MM-DD"}
-            ]
-        },
-        {
-            "dept_id": 5,
-            "content": "Department 4 Content",
-            "images": [
-                {"image_path": "path/to/image4_1.jpg", "image_content": "Description of Image 4_1", "event_name": "Event 4_1", "date": "YYYY-MM-DD"},
-                {"image_path": "path/to/image4_2.jpg", "image_content": "Description of Image 4_2", "event_name": "Event 4_2", "date": "YYYY-MM-DD"},
-                {"image_path": "path/to/image4_3.jpg", "image_content": "Description of Image 4_3", "event_name": "Event 4_3", "date": "YYYY-MM-DD"},
-                {"image_path": "path/to/image4_4.jpg", "image_content": "Description of Image 4_4", "event_name": "Event 4_4", "date": "YYYY-MM-DD"},
-                {"image_path": "path/to/image4_5.jpg", "image_content": "Description of Image 4_5", "event_name": "Event 4_5", "date": "YYYY-MM-DD"},
-                {"image_path": "path/to/image4_6.jpg", "image_content": "Description of Image 4_6", "event_name": "Event 4_6", "date": "YYYY-MM-DD"},
-                {"image_path": "path/to/image4_7.jpg", "image_content": "Description of Image 4_7", "event_name": "Event 4_7", "date": "YYYY-MM-DD"},
-                {"image_path": "path/to/image4_8.jpg", "image_content": "Description of Image 4_8", "event_name": "Event 4_8", "date": "YYYY-MM-DD"},
-                {"image_path": "path/to/image4_9.jpg", "image_content": "Description of Image 4_9", "event_name": "Event 4_9", "date": "YYYY-MM-DD"},
-                {"image_path": "path/to/image4_10.jpg", "image_content": "Description of Image 4_10", "event_name": "Event 4_10", "date": "YYYY-MM-DD"}
-            ]
-        },
-        {
-            "dept_id": 6,
-            "content": "Department 5 Content",
-            "images": [
-                {"image_path": "path/to/image5_1.jpg", "image_content": "Description of Image 5_1", "event_name": "Event 5_1", "date": "YYYY-MM-DD"},
-                {"image_path": "path/to/image5_2.jpg", "image_content": "Description of Image 5_2", "event_name": "Event 5_2", "date": "YYYY-MM-DD"},
-                {"image_path": "path/to/image5_3.jpg", "image_content": "Description of Image 5_3", "event_name": "Event 5_3", "date": "YYYY-MM-DD"},
-                {"image_path": "path/to/image5_4.jpg", "image_content": "Description of Image 5_4", "event_name": "Event 5_4", "date": "YYYY-MM-DD"},
-                {"image_path": "path/to/image5_5.jpg", "image_content": "Description of Image 5_5", "event_name": "Event 5_5", "date": "YYYY-MM-DD"},
-                {"image_path": "path/to/image5_6.jpg", "image_content": "Description of Image 5_6", "event_name": "Event 5_6", "date": "YYYY-MM-DD"},
-                {"image_path": "path/to/image5_7.jpg", "image_content": "Description of Image 5_7", "event_name": "Event 5_7", "date": "YYYY-MM-DD"},
-                {"image_path": "path/to/image5_8.jpg", "image_content": "Description of Image 5_8", "event_name": "Event 5_8", "date": "YYYY-MM-DD"},
-                {"image_path": "path/to/image5_9.jpg", "image_content": "Description of Image 5_9", "event_name": "Event 5_9", "date": "YYYY-MM-DD"},
-                {"image_path": "path/to/image5_10.jpg", "image_content": "Description of Image 5_10", "event_name": "Event 5_10", "date": "YYYY-MM-DD"}
-            ]
-        },
-        {
-            "dept_id": 7,
-            "content": "Department 5 Content",
-            "images": [
-                {"image_path": "path/to/image5_1.jpg", "image_content": "Description of Image 5_1", "event_name": "Event 5_1", "date": "YYYY-MM-DD"},
-                {"image_path": "path/to/image5_2.jpg", "image_content": "Description of Image 5_2", "event_name": "Event 5_2", "date": "YYYY-MM-DD"},
-                {"image_path": "path/to/image5_3.jpg", "image_content": "Description of Image 5_3", "event_name": "Event 5_3", "date": "YYYY-MM-DD"},
-                {"image_path": "path/to/image5_4.jpg", "image_content": "Description of Image 5_4", "event_name": "Event 5_4", "date": "YYYY-MM-DD"},
-                {"image_path": "path/to/image5_5.jpg", "image_content": "Description of Image 5_5", "event_name": "Event 5_5", "date": "YYYY-MM-DD"},
-                {"image_path": "path/to/image5_6.jpg", "image_content": "Description of Image 5_6", "event_name": "Event 5_6", "date": "YYYY-MM-DD"},
-                {"image_path": "path/to/image5_7.jpg", "image_content": "Description of Image 5_7", "event_name": "Event 5_7", "date": "YYYY-MM-DD"},
-                {"image_path": "path/to/image5_8.jpg", "image_content": "Description of Image 5_8", "event_name": "Event 5_8", "date": "YYYY-MM-DD"},
-                {"image_path": "path/to/image5_9.jpg", "image_content": "Description of Image 5_9", "event_name": "Event 5_9", "date": "YYYY-MM-DD"},
-                {"image_path": "path/to/image5_10.jpg", "image_content": "Description of Image 5_10", "event_name": "Event 5_10", "date": "YYYY-MM-DD"}
-            ]
-        },
-        {
-            "dept_id": 8,
-            "content": "Department 5 Content",
-            "images": [
-                {"image_path": "path/to/image5_1.jpg", "image_content": "Description of Image 5_1", "event_name": "Event 5_1", "date": "YYYY-MM-DD"},
-                {"image_path": "path/to/image5_2.jpg", "image_content": "Description of Image 5_2", "event_name": "Event 5_2", "date": "YYYY-MM-DD"},
-                {"image_path": "path/to/image5_3.jpg", "image_content": "Description of Image 5_3", "event_name": "Event 5_3", "date": "YYYY-MM-DD"},
-                {"image_path": "path/to/image5_4.jpg", "image_content": "Description of Image 5_4", "event_name": "Event 5_4", "date": "YYYY-MM-DD"},
-                {"image_path": "path/to/image5_5.jpg", "image_content": "Description of Image 5_5", "event_name": "Event 5_5", "date": "YYYY-MM-DD"},
-                {"image_path": "path/to/image5_6.jpg", "image_content": "Description of Image 5_6", "event_name": "Event 5_6", "date": "YYYY-MM-DD"},
-                {"image_path": "path/to/image5_7.jpg", "image_content": "Description of Image 5_7", "event_name": "Event 5_7", "date": "YYYY-MM-DD"},
-                {"image_path": "path/to/image5_8.jpg", "image_content": "Description of Image 5_8", "event_name": "Event 5_8", "date": "YYYY-MM-DD"},
-                {"image_path": "path/to/image5_9.jpg", "image_content": "Description of Image 5_9", "event_name": "Event 5_9", "date": "YYYY-MM-DD"},
-                {"image_path": "path/to/image5_10.jpg", "image_content": "Description of Image 5_10", "event_name": "Event 5_10", "date": "YYYY-MM-DD"}
-            ]
-        },
-        {
-            "dept_id": 9,
-            "content": "Department 5 Content",
-            "images": [
-                {"image_path": "path/to/image5_1.jpg", "image_content": "Description of Image 5_1", "event_name": "Event 5_1", "date": "YYYY-MM-DD"},
-                {"image_path": "path/to/image5_2.jpg", "image_content": "Description of Image 5_2", "event_name": "Event 5_2", "date": "YYYY-MM-DD"},
-                {"image_path": "path/to/image5_3.jpg", "image_content": "Description of Image 5_3", "event_name": "Event 5_3", "date": "YYYY-MM-DD"},
-                {"image_path": "path/to/image5_4.jpg", "image_content": "Description of Image 5_4", "event_name": "Event 5_4", "date": "YYYY-MM-DD"},
-                {"image_path": "path/to/image5_5.jpg", "image_content": "Description of Image 5_5", "event_name": "Event 5_5", "date": "YYYY-MM-DD"},
-                {"image_path": "path/to/image5_6.jpg", "image_content": "Description of Image 5_6", "event_name": "Event 5_6", "date": "YYYY-MM-DD"},
-                {"image_path": "path/to/image5_7.jpg", "image_content": "Description of Image 5_7", "event_name": "Event 5_7", "date": "YYYY-MM-DD"},
-                {"image_path": "path/to/image5_8.jpg", "image_content": "Description of Image 5_8", "event_name": "Event 5_8", "date": "YYYY-MM-DD"},
-                {"image_path": "path/to/image5_9.jpg", "image_content": "Description of Image 5_9", "event_name": "Event 5_9", "date": "YYYY-MM-DD"},
-                {"image_path": "path/to/image5_10.jpg", "image_content": "Description of Image 5_10", "event_name": "Event 5_10", "date": "YYYY-MM-DD"}
-            ]
-        },
-        {
-            "dept_id": 10,
-            "content": "Department 5 Content",
-            "images": [
-                {"image_path": "path/to/image5_1.jpg", "image_content": "Description of Image 5_1", "event_name": "Event 5_1", "date": "YYYY-MM-DD"},
-                {"image_path": "path/to/image5_2.jpg", "image_content": "Description of Image 5_2", "event_name": "Event 5_2", "date": "YYYY-MM-DD"},
-                {"image_path": "path/to/image5_3.jpg", "image_content": "Description of Image 5_3", "event_name": "Event 5_3", "date": "YYYY-MM-DD"},
-                {"image_path": "path/to/image5_4.jpg", "image_content": "Description of Image 5_4", "event_name": "Event 5_4", "date": "YYYY-MM-DD"},
-                {"image_path": "path/to/image5_5.jpg", "image_content": "Description of Image 5_5", "event_name": "Event 5_5", "date": "YYYY-MM-DD"},
-                {"image_path": "path/to/image5_6.jpg", "image_content": "Description of Image 5_6", "event_name": "Event 5_6", "date": "YYYY-MM-DD"},
-                {"image_path": "path/to/image5_7.jpg", "image_content": "Description of Image 5_7", "event_name": "Event 5_7", "date": "YYYY-MM-DD"},
-                {"image_path": "path/to/image5_8.jpg", "image_content": "Description of Image 5_8", "event_name": "Event 5_8", "date": "YYYY-MM-DD"},
-                {"image_path": "path/to/image5_9.jpg", "image_content": "Description of Image 5_9", "event_name": "Event 5_9", "date": "YYYY-MM-DD"},
-                {"image_path": "path/to/image5_10.jpg", "image_content": "Description of Image 5_10", "event_name": "Event 5_10", "date": "YYYY-MM-DD"}
-            ]
-        },
-        {
-            "dept_id": 11,
-            "content": "Department 5 Content",
-            "images": [
-                {"image_path": "path/to/image5_1.jpg", "image_content": "Description of Image 5_1", "event_name": "Event 5_1", "date": "YYYY-MM-DD"},
-                {"image _path": "path/to/image5_2.jpg", "image_content": "Description of Image 5_2", "event_name": "Event 5_2", "date": "YYYY-MM-DD"},
-                {"image_path": "path/to/image5_3.jpg", "image_content": "Description of Image 5_3", "event_name": "Event 5_3", "date": "YYYY-MM-DD"},
-                {"image_path": "path/to/image5_4.jpg", "image_content": "Description of Image 5_4", "event_name": "Event 5_4", "date": "YYYY-MM-DD"},
-                {"image_path": "path/to/image5_5.jpg", "image_content": "Description of Image 5_5", "event_name": "Event 5_5", "date": "YYYY-MM-DD"},
-                {"image_path": "path/to/image5_6.jpg", "image_content": "Description of Image 5_6", "event_name": "Event 5_6", "date": "YYYY-MM-DD"},
-                {"image_path": "path/to/image5_7.jpg", "image_content": "Description of Image 5_7", "event_name": "Event 5_7", "date": "YYYY-MM-DD"},
-                {"image_path": "path/to/image5_8.jpg", "image_content": "Description of Image 5_8", "event_name": "Event 5_8", "date": "YYYY-MM-DD"},
-                {"image_path": "path/to/image5_9.jpg", "image_content": "Description of Image 5_9", "event_name": "Event 5_9", "date": "YYYY-MM-DD"},
-                {"image_path": "path/to/image5_10.jpg", "image_content": "Description of Image 5_10", "event_name": "Event 5_10", "date": "YYYY-MM-DD"}
-            ]
-        },
-        {
-            "dept_id": 12,
-            "content": "Department 5 Content",
-            "images": [
-                {"image_path": "path/to/image5_1.jpg", "image_content": "Description of Image 5_1", "event_name": "Event 5_1", "date": "YYYY-MM-DD"},
-                {"image_path": "path/to/image5_2.jpg", "image_content": "Description of Image 5_2", "event_name": "Event 5_2", "date": "YYYY-MM-DD"},
-                {"image_path": "path/to/image5_3.jpg", "image_content": "Description of Image 5_3", "event_name": "Event 5_3", "date": "YYYY-MM-DD"},
-                {"image_path": "path/to/image5_4.jpg", "image_content": "Description of Image 5_4", "event_name": "Event 5_4", "date": "YYYY-MM-DD"},
-                {"image_path": "path/to/image5_5.jpg", "image_content": "Description of Image 5_5", "event_name": "Event 5_5", "date": "YYYY-MM-DD"},
-                {"image_path": "path/to/image5_6.jpg", "image_content": "Description of Image 5_6", "event_name": "Event 5_6", "date": "YYYY-MM-DD"},
-                {"image_path": "path/to/image5_7.jpg", "image_content": "Description of Image 5_7", "event_name": "Event 5_7", "date": "YYYY-MM-DD"},
-                {"image_path": "path/to/image5_8.jpg", "image_content": "Description of Image 5_8", "event_name": "Event 5_8", "date": "YYYY-MM-DD"},
-                {"image_path": "path/to/image5_9.jpg", "image_content": "Description of Image 5_9", "event_name": "Event 5_9", "date": "YYYY-MM-DD"},
-                {"image_path": "path/to/image5_10.jpg", "image_content": "Description of Image 5_10", "event_name": "Event 5_10", "date": "YYYY-MM-DD"}
-            ]
-        },
-        {
-            "dept_id": 13,
-            "content": "Department 5 Content",
-            "images": [
-                {"image_path": "path/to/image5_1.jpg", "image_content": "Description of Image 5_1", "event_name": "Event 5_1", "date": "YYYY-MM-DD"},
-                {"image_path": "path/to/image5_2.jpg", "image_content": "Description of Image 5_ 2", "event_name": "Event 5_2", "date": "YYYY-MM-DD"},
-                {"image_path": "path/to/image5_3.jpg", "image_content": "Description of Image 5_3", "event_name": "Event 5_3", "date": "YYYY-MM-DD"},
-                {"image_path": "path/to/image5_4.jpg", "image_content": "Description of Image 5_4", "event_name": "Event 5_4", "date": "YYYY-MM-DD"},
-                {"image_path": "path/to/image5_5.jpg", "image_content": "Description of Image 5_5", "event_name": "Event 5_5", "date": "YYYY-MM-DD"},
-                {"image_path": "path/to/image5_6.jpg", "image_content": "Description of Image 5_6", "event_name": "Event 5_6", "date": "YYYY-MM-DD"},
-                {"image_path": "path/to/image5_7.jpg", "image_content": "Description of Image 5_7", "event_name": "Event 5_7", "date": "YYYY-MM-DD"},
-                {"image_path": "path/to/image5_8.jpg", "image_content": "Description of Image 5_8", "event_name": "Event 5_8", "date": "YYYY-MM-DD"},
-                {"image_path": "path/to/image5_9.jpg", "image_content": "Description of Image 5_9", "event_name": "Event 5_9", "date": "YYYY-MM-DD"},
-                {"image_path": "path/to/image5_10.jpg", "image_content": "Description of Image 5_10", "event_name": "Event 5_10", "date": "YYYY-MM-DD"}
-            ]
-        },
-        {
-            "dept_id": 14,
-            "content": "Department 5 Content",
-            "images": [
-                {"image_path": "path/to/image5_1.jpg", "image_content": "Description of Image 5_1", "event_name": "Event 5_1", "date": "YYYY-MM-DD"},
-                {"image_path": "path/to/image5_2.jpg", "image_content": "Description of Image 5_2", "event_name": "Event 5_2", "date": "YYYY-MM-DD"},
-                {"image_path": "path/to/image5_3.jpg", "image_content": "Description of Image 5_3", "event_name": "Event 5_3", "date": "YYYY-MM-DD"},
-                {"image_path": "path/to/image5_4.jpg", "image_content": "Description of Image 5_4", "event_name": "Event 5_4", "date": "YYYY-MM-DD"},
-                {"image_path": "path/to/image5_5.jpg", "image_content": "Description of Image 5_5", "event_name": "Event 5_5", "date": "YYYY-MM-DD"},
-                {"image_path": "path/to/image5_6.jpg", "image_content": "Description of Image 5_6", "event_name": "Event 5_6", "date": "YYYY-MM-DD"},
-                {"image_path": "path/to/image5_7.jpg", "image_content": "Description of Image 5_7", "event_name": "Event 5_7", "date": "YYYY-MM-DD"},
-                {"image_path": "path/to/image5_8.jpg", "image_content": "Description of Image 5_8", "event_name": "Event 5_8", "date": "YYYY-MM-DD"},
-                {"image_path": "path/to/image5_9.jpg", "image_content": "Description of Image 5_9", "event_name": "Event 5_9", "date": "YYYY-MM-DD"},
-                {"image_path": "path/to/image5_10.jpg", "image_content": "Description of Image 5_10", "event_name": "Event 5_10", "date": "YYYY-MM-DD"}
-            ]
-        },
-        {
-            "dept_id": 15,
-            "content": "Department 5 Content",
-            "images": [
-                {"image_path": "path/to/image5_1.jpg", "image_content": "Description of Image 5_1", "event_name": "Event 5_1", "date": "YYYY-MM-DD"},
-                {"image_path": "path/to/image5_2.jpg", "image_content": "Description of Image 5_2", "event_name": "Event 5_2", "date": "YYYY-MM-DD"},
-                {"image_path": "path/to/image5_3.jpg", "image_content": "Description of Image 5_3", "event_name": "Event 5_3", "date": "YYYY-MM-DD"},
-                {"image_path": "path/to/image5_4.jpg", "image_content": "Description of Image 5_4", "event_name": "Event 5_4", "date": "YYYY-MM-DD"},
-                {"image_path": "path/to/image5_5.jpg", "image_content": "Description of Image 5_5", "event_name": "Event 5_5", "date": "YYYY-MM-DD"},
-                {"image_path": "path/to/image5_6.jpg", "image_content": "Description of Image 5_6", "event_name": "Event 5_6", "date": "YYYY-MM-DD"},
-                {"image_path": "path/to/image5_7.jpg", "image_content": "Description of Image 5_7", "event_name": "Event 5_7", "date": "YYYY-MM-DD"},
-                {"image_path": "path/to/image5_8.jpg", "image_content": "Description of Image 5_8", "event_name": "Event 5_8", "date": "YYYY-MM-DD"},
-                {"image_path": "path/to/image5_9.jpg", "image_content": "Description of Image 5_9", "event_name": "Event 5_9", "date": "YYYY-MM-DD"},
-                {"image_path": "path/to/image5_10.jpg", "image_content": "Description of Image 5_10", "event_name": "Event 5_10", "date": "YYYY-MM-DD"}
-            ]
-        }
-    ]
-
-    collection.insert_many(documents)
+    collection = db['student_activities'] 
+    with open("/Velammal-Engineering-College-Backend/docs/student_activities.json", "r") as file:
+        documents = json.load(file)
+        collection.insert_many(documents)
+    
     print("Student documents inserted successfully.")
+
+def insert_support_staff_data():
+    collection = db['support_staffs'] 
+    with open("/Velammal-Engineering-College-Backend/docs/support_staffs.json", "r") as file:
+        documents = json.load(file)
+        collection.insert_many(documents)
+    
+    print("Support staffs documents inserted successfully.")
+
+def insert_MOUs_data():
+    collection = db['MOUs'] 
+    with open("/Velammal-Engineering-College-Backend/docs/MOUs.json", "r") as file:
+        documents = json.load(file)
+        collection.insert_many(documents)
+    
+    print("MOUs documents inserted successfully.")
+
+def process_and_combine_Department_Activities_data(folder_path, dept_id):
+    COLLECTION_NAME = "department_activities"
+    collection = db[COLLECTION_NAME]
+    
+    def extract_data_from_docx(file_path):
+        document = Document(file_path)
+        activities = []
+        
+        for table in document.tables:
+            for row in table.rows[1:]:  
+                cells = row.cells
+                if len(cells) >= 6:  
+                    activity = {
+                        "date": cells[1].text.strip(),
+                        "name_of_event": cells[2].text.strip(),
+                        "coordinator": cells[3].text.strip(),
+                        "resource_person": cells[4].text.strip(),
+                        "beneficiaries": cells[5].text.strip(),
+                        "relevant_PO_PSO": cells[6].text.strip(),
+                        "image_path": "image_path yet to be filled",
+                    }
+                    activities.append(activity)
+        return activities
+
+    combined_activities = []
+    if not os.path.exists(folder_path) or not os.listdir(folder_path):
+        print(f"Skipping '{folder_path}'. No data found for dept_id '{dept_id}'.")
+        return
+
+    for file_name in os.listdir(folder_path):
+        if file_name.endswith(".docx"):
+            file_path = os.path.join(folder_path, file_name)
+            activities = extract_data_from_docx(file_path)
+            combined_activities.extend(activities)
+
+    if not combined_activities:
+        print(f"No activity data extracted from '{folder_path}' for dept_id '{dept_id}'. Skipping.")
+        return
+
+    combined_document = {
+        "dept_id": dept_id,
+        "dept_activities": combined_activities
+    }
+
+    collection.update_one(
+        {"dept_id": dept_id},
+        {"$set": combined_document},
+        upsert=True
+    )
+    print(f"Data combined and inserted into MongoDB under dept_id '{dept_id}'.")
 
 insert_department_data()
 insert_hod_datas()
 insert_infrastructure_data()
 insert_student_activities_data()
+insert_support_staff_data()
+insert_MOUs_data()
+
+department_paths = {
+    "1": "/Velammal-Engineering-College-Backend/docs/AIDS-DEPT-ACT/",
+    "2": "/Velammal-Engineering-College-Backend/docs/CSE-DEPT-ACT/",
+    "3": "/Velammal-Engineering-College-Backend/docs/ECE-DEPT-ACT/",
+    "4": "/Velammal-Engineering-College-Backend/docs/EEE-DEPT-ACT/",
+    "5": "/Velammal-Engineering-College-Backend/docs/MECH-DEPT-ACT/",
+    "6": "/Velammal-Engineering-College-Backend/docs/CIVIL-DEPT-ACT/",
+    "7": "/Velammal-Engineering-College-Backend/docs/IT-DEPT-ACT/",
+    "8": "/Velammal-Engineering-College-Backend/docs/BME-DEPT-ACT/",
+    "9": "/Velammal-Engineering-College-Backend/docs/EIE-DEPT-ACT/",
+    "10": "/Velammal-Engineering-College-Backend/docs/MBA-DEPT-ACT/",
+    "11": "/Velammal-Engineering-College-Backend/docs/MCA-DEPT-ACT/",
+    "12": "/Velammal-Engineering-College-Backend/docs/AUTO-DEPT-ACT/",
+    "13": "/Velammal-Engineering-College-Backend/docs/MTECH-IT-DEPT-ACT/",
+    "14": "/Velammal-Engineering-College-Backend/docs/ARCH-DEPT-ACT/",
+    "15": "/Velammal-Engineering-College-Backend/docs/SCI-HUM-DEPT-ACT/",
+}
+
+for dept_id, path in department_paths.items():
+    process_and_combine_Department_Activities_data(path, dept_id)

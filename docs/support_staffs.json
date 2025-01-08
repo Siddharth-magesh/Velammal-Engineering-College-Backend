@@ -1,0 +1,126 @@
+[
+  {
+    "supporting_staff": [
+      {
+        "Name": "Dr. Jane Smith",
+        "Image": "https://example.com/images/jane_smith.jpg",
+        "Designation": "Research Scientist",
+        "Social_media_links": {
+          "Publon": "https://publons.com/researcher/12345/jane-smith/",
+          "LinkedIn": "https://linkedin.com/in/jane-smith/",
+          "GitHub": "https://github.com/jane-smith",
+          "ResearchGate": "https://www.researchgate.net/profile/Jane_Smith"
+        },
+        "Unique_id": "VEC-013-01-160"
+      },
+      {
+        "Name": "Mr. John Doe",
+        "Image": "https://example.com/images/john_doe.jpg",
+        "Designation": "Lab Assistant",
+        "Social_media_links": {
+          "Publon": "https://publons.com/researcher/54321/john-doe/",
+          "LinkedIn": "https://linkedin.com/in/john-doe/",
+          "GitHub": "https://github.com/johndoe",
+          "ResearchGate": "https://www.researchgate.net/profile/John_Doe"
+        },
+        "Unique_id": "VEC-013-01-161"
+      },
+      {
+        "Name": "Ms. Emily Davis",
+        "Image": "https://example.com/images/emily_davis.jpg",
+        "Designation": "Administrative Assistant",
+        "Social_media_links": {
+          "Publon": "https://publons.com/researcher/67890/emily-davis/",
+          "LinkedIn": "https://linkedin.com/in/emily-davis/",
+          "GitHub": "https://github.com/emilydavis",
+          "ResearchGate": "https://www.researchgate.net/profile/Emily_Davis"
+        },
+        "Unique_id": "VEC-013-01-162"
+      },
+      {
+        "Name": "Dr. Michael Brown",
+        "Image": "https://example.com/images/michael_brown.jpg",
+        "Designation": "Senior Technician",
+        "Social_media_links": {
+          "Publon": "https://publons.com/researcher/98765/michael-brown/",
+          "LinkedIn": "https://linkedin.com/in/michael-brown/",
+          "GitHub": "https://github.com/michaelbrown",
+          "ResearchGate": "https://www.researchgate.net/profile/Michael_Brown"
+        },
+        "Unique_id": "VEC-013-01-163"
+      },
+      {
+        "Name": "Dr. Susan Lee",
+        "Image": "https://example.com/images/susan_lee.jpg",
+        "Designation": "Technical Writer",
+        "Social_media_links": {
+          "Publon": "https://publons.com/researcher/23456/susan-lee/",
+          "LinkedIn": "https://linkedin.com/in/susan-lee/",
+          "GitHub": "https://github.com/susanlee",
+          "ResearchGate": "https://www.researchgate.net/profile/Susan_Lee"
+        },
+        "Unique_id": "VEC-013-01-164"
+      },
+      {
+        "Name": "Mr. Alex Wilson",
+        "Image": "https://example.com/images/alex_wilson.jpg",
+        "Designation": "IT Support Specialist",
+        "Social_media_links": {
+          "Publon": "https://publons.com/researcher/34567/alex-wilson/",
+          "LinkedIn": "https://linkedin.com/in/alex-wilson/",
+          "GitHub": "https://github.com/alexwilson",
+          "ResearchGate": "https://www.researchgate.net/profile/Alex_Wilson"
+        },
+        "Unique_id": "VEC-013-01-165"
+      },
+      {
+        "Name": "Ms. Olivia Martinez",
+        "Image": "https://example.com/images/olivia_martinez.jpg",
+        "Designation": "Project Coordinator",
+        "Social_media_links": {
+          "Publon": "https://publons.com/researcher/45678/olivia-martinez/",
+          "LinkedIn": "https://linkedin.com/in/olivia-martinez/",
+          "GitHub": "https://github.com/oliviamartinez",
+          "ResearchGate": "https://www.researchgate.net/profile/Olivia_Martinez"
+        },
+        "Unique_id": "VEC-013-01-166"
+      },
+      {
+        "Name": "Dr. Robert Johnson",
+        "Image": "https://example.com/images/robert_johnson.jpg",
+        "Designation": "Data Analyst",
+        "Social_media_links": {
+          "Publon": "https://publons.com/researcher/56789/robert-johnson/",
+          "LinkedIn": "https://linkedin.com/in/robert-johnson/",
+          "GitHub": "https://github.com/robertjohnson",
+          "ResearchGate": "https://www.researchgate.net/profile/Robert_Johnson"
+        },
+        "Unique_id": "VEC-013-01-167"
+      },
+      {
+        "Name": "Ms. Sophia Walker",
+        "Image": "https://example.com/images/sophia_walker.jpg",
+        "Designation": "Library Manager",
+        "Social_media_links": {
+          "Publon": "https://publons.com/researcher/67890/sophia-walker/",
+          "LinkedIn": "https://linkedin.com/in/sophia-walker/",
+          "GitHub": "https://github.com/sophiawalker",
+          "ResearchGate": "https://www.researchgate.net/profile/Sophia_Walker"
+        },
+        "Unique_id": "VEC-013-01-168"
+      },
+      {
+        "Name": "Mr. Ethan Carter",
+        "Image": "https://example.com/images/ethan_carter.jpg",
+        "Designation": "Research Associate",
+        "Social_media_links": {
+          "Publon": "https://publons.com/researcher/78901/ethan-carter/",
+          "LinkedIn": "https://linkedin.com/in/ethan-carter/",
+          "GitHub": "https://github.com/ethancarter",
+          "ResearchGate": "https://www.researchgate.net/profile/Ethan_Carter"
+        },
+        "Unique_id": "VEC-013-01-169"
+      }
+    ]
+  }
+] 

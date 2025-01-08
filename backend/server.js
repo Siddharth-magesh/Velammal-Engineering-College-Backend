@@ -147,6 +147,97 @@ app.get('/api/student-activities/:deptId', async (req, res) => {
     }
 });
 
+// Support Staff Details
+app.get('/api/support-staff/:deptId', async (req, res) => {
+    const deptId = req.params.deptId;
+    const db = client.db(dbName);
+    const collection = db.collection('support_staffs');
+
+    try {
+        const result = await collection.findOne({
+            "supporting_staff.Unique_id": { $regex: `^VEC-${deptId}-` }
+        });
+
+        if (result && result.supporting_staff.length > 0) {
+            const filteredStaff = result.supporting_staff.filter(staff =>
+                staff.Unique_id.startsWith(`VEC-${deptId}-`)
+            );
+            res.status(200).json(filteredStaff);
+        } else {
+            res.status(404).json({ message: 'No support staff found for the given department ID.' });
+        }
+    } catch (error) {
+        console.error("❌ Error fetching support staff details:", error);
+        res.status(500).json({ error: "Error fetching support staff details" });
+    }
+});
+
+// MOUs Details Endpoint
+app.get('/api/mous/:deptId/:uniqueId?', async (req, res) => {
+    const { deptId, uniqueId } = req.params;
+    const db = client.db(dbName);
+    const collection = db.collection('MOUs');
+
+    try {
+        const departmentData = await collection.findOne({
+            "VEC.Departments": deptId
+        });
+
+        if (!departmentData) {
+            return res.status(404).json({ message: "Department not found" });
+        }
+
+        const department = departmentData.VEC.find(dept => dept.Departments === deptId);
+
+        if (!department) {
+            return res.status(404).json({ message: "Department not found" });
+        }
+        if (uniqueId) {
+            const filteredMOUs = department.MOUs.filter(mou =>
+                mou.unique_id.toString() === uniqueId
+            );
+
+            if (filteredMOUs.length > 0) {
+                return res.status(200).json(filteredMOUs);
+            } else {
+                return res.status(404).json({ message: "No MOU found with the provided unique_id or year." });
+            }
+        }
+        const uniqueIdsList = department.MOUs.map(mou => mou.unique_id);
+        return res.status(200).json({ unique_ids: uniqueIdsList });
+
+    } catch (error) {
+        console.error("❌ Error fetching MOUs:", error);
+        res.status(500).json({ error: "Error fetching MOUs" });
+    }
+});
+
+// Department Activities Endpoint
+app.get('/api/department_activities/:deptId', async (req, res) => {
+    const { deptId } = req.params;
+    const db = client.db(dbName);
+    const collection = db.collection('department_activities');
+
+    try {
+        const departmentData = await collection.findOne({ dept_id: deptId });
+
+        if (!departmentData) {
+            return res.status(404).json({ message: "Department not found" });
+        }
+
+        const sortedActivities = departmentData.dept_activities.sort((a, b) => {
+            const dateA = new Date(a.date);
+            const dateB = new Date(b.date);
+            return dateB - dateA;
+        });
+
+        return res.status(200).json(sortedActivities);
+
+    } catch (error) {
+        console.error("❌ Error fetching department activities:", error);
+        res.status(500).json({ error: "Error fetching department activities" });
+    }
+});
 
 app.listen(port, () => {
     console.log(`🚀 Server running at http://localhost:${port}`);

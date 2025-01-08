@@ -1,3 +1,5 @@
 openpyxl
 pymongo
 pandas
+json
+python-docx

@@ -1,0 +1,1929 @@
+[ 
+ {
+  "VEC":[
+    {
+      "Departments":"001",
+      "MOUs":[
+        {
+          "unique_id":"01",
+          "docs":[
+            {
+              "S_NO": 1,
+              "ORGANISATION_NAME": "NET stack Technology Solutions",
+              "MONTH_AND_YEAR": "22-12-2022",
+              "VALIDITY": "Till date"
+            },
+            {
+              "S_NO": 2,
+              "ORGANISATION_NAME": "ArjunVision Tech Solutions",
+              "MONTH_AND_YEAR": "22-02-2023",
+              "VALIDITY": "Till date"
+            },
+            {
+              "S_NO": 3,
+              "ORGANISATION_NAME": "M/S Tata Elxsi Ltd",
+              "MONTH_AND_YEAR": "23-02-2022",
+              "VALIDITY": "Till date"
+            },
+            {
+              "S_NO": 4,
+              "ORGANISATION_NAME": "DigiALERT Solutions Private Limited",
+              "MONTH_AND_YEAR": "2023",
+              "VALIDITY": "5 Years"
+            },
+            {
+              "S_NO": 5,
+              "ORGANISATION_NAME": "Aristo Creative Technologies",
+              "MONTH_AND_YEAR": "2022",
+              "VALIDITY": "Till date"
+            },
+            {
+              "S_NO": 6,
+              "ORGANISATION_NAME": "Cognizant Technology Solutions India Private Limited",
+              "MONTH_AND_YEAR": "15-02-2024",
+              "VALIDITY": "Till date"
+            },
+            {
+              "S_NO": 7,
+              "ORGANISATION_NAME": "Sify Technologies",
+              "MONTH_AND_YEAR": "09-08-2024",
+              "VALIDITY": "5 Years"
+            },
+            {
+              "S_NO": 8,
+              "ORGANISATION_NAME": "Hexaware Technologies",
+              "MONTH_AND_YEAR": "12-08-2024",
+              "VALIDITY": "3 Years"
+            },
+            {
+              "S_NO": 9,
+              "ORGANISATION_NAME": "Movate Technologies Private Ltd",
+              "MONTH_AND_YEAR": "04-11-2024",
+              "VALIDITY": "3 Years"
+            }
+          ]
+        },
+        {
+          "unique_id":2022,
+          "docs":[
+            {
+              "S_NO":1,
+              "ORGANISATION_NAME":"NET stack Technology Solutions",
+              "MONTH_AND_YEAR":"22-12-2022",
+              "VALIDITY":"Till date"
+            },
+            {
+              "S_NO":2,
+              "ORGANISATION_NAME":"ArjunVision Tech Solutions",
+              "MONTH_AND_YEAR":"22-02-2023",
+              "VALIDITY":"Till date"
+            },
+            {
+              "S_NO":3,
+              "ORGANISATION_NAME":"M/S Tata Elxsi Ltd",
+              "MONTH_AND_YEAR":"23-02-2022",
+              "VALIDITY":"Till date"
+            },
+            {
+              "S_NO":4,
+              "ORGANISATION_NAME":"DigiALERT Solutions Private Limited",
+              "MONTH_AND_YEAR":"2023",
+              "VALIDITY":"5 Years"
+            },
+            {
+              "S_NO":5,
+              "ORGANISATION_NAME":"Aristo Creative Technologies",
+              "MONTH_AND_YEAR":"2022",
+              "VALIDITY":"Till date"
+            }
+          ]
+        },
+        {
+          "unique_id":2023,
+          "docs":[
+            {
+              "S_NO":1,
+              "ORGANISATION_NAME":"Cognizant Technology Solutions India Private Limited",
+              "MONTH_AND_YEAR":"15-02-2024",
+              "VALIDITY":"Till date"
+            },
+            {
+              "S_NO":2,
+              "ORGANISATION_NAME":"Sify Technologies",
+              "MONTH_AND_YEAR":"09-08-2024",
+              "VALIDITY":"5 Years"
+            },
+            {
+              "S_NO":3,
+              "ORGANISATION_NAME":"Hexaware Technologies",
+              "MONTH_AND_YEAR":"12-08-2024",
+              "VALIDITY":"3 Years"
+            },
+            {
+              "S_NO":4,
+              "ORGANISATION_NAME":"Movate Technologies Private Ltd",
+              "MONTH_AND_YEAR":"04-11-2024",
+              "VALIDITY":"3 Years"
+            }
+          ]
+        },
+        {
+          "unique_id":2024,
+          "docs":[
+            {
+              "S_NO":1,
+              "ORGANISATION_NAME":"Sify Technologies",
+              "MONTH_AND_YEAR":"09-08-2024",
+              "VALIDITY":"5 Years"
+            },
+            {
+              "S_NO":2,
+              "ORGANISATION_NAME":"Hexaware Technologies",
+              "MONTH_AND_YEAR":"12-08-2024",
+              "VALIDITY":"3 Years"
+            },
+            {
+              "S_NO":3,
+              "ORGANISATION_NAME":"Movate Technologies Private Ltd",
+              "MONTH_AND_YEAR":"04-11-2024",
+              "VALIDITY":"3 Years"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Departments": "002",
+      "MOUs": [
+        {
+          "unique_id": "02",
+          "docs": [
+            {
+              "S_NO": 1,
+              "ORGANISATION_NAME": "AutoTech Solutions",
+              "MONTH_AND_YEAR": "15-03-2023",
+              "VALIDITY": "3 Years"
+            },
+            {
+              "S_NO": 2,
+              "ORGANISATION_NAME": "CarGo Technologies",
+              "MONTH_AND_YEAR": "10-05-2024",
+              "VALIDITY": "5 Years"
+            }
+          ]
+        },
+        {
+          "unique_id":2022,
+          "docs":[
+            {
+              "S_NO":1,
+              "ORGANISATION_NAME":"NET stack Technology Solutions",
+              "MONTH_AND_YEAR":"22-12-2022",
+              "VALIDITY":"Till date"
+            },
+            {
+              "S_NO":2,
+              "ORGANISATION_NAME":"ArjunVision Tech Solutions",
+              "MONTH_AND_YEAR":"22-02-2023",
+              "VALIDITY":"Till date"
+            },
+            {
+              "S_NO":3,
+              "ORGANISATION_NAME":"M/S Tata Elxsi Ltd",
+              "MONTH_AND_YEAR":"23-02-2022",
+              "VALIDITY":"Till date"
+            },
+            {
+              "S_NO":4,
+              "ORGANISATION_NAME":"DigiALERT Solutions Private Limited",
+              "MONTH_AND_YEAR":"2023",
+              "VALIDITY":"5 Years"
+            },
+            {
+              "S_NO":5,
+              "ORGANISATION_NAME":"Aristo Creative Technologies",
+              "MONTH_AND_YEAR":"2022",
+              "VALIDITY":"Till date"
+            }
+          ]
+        },
+        {
+          "unique_id":2023,
+          "docs":[
+            {
+              "S_NO":1,
+              "ORGANISATION_NAME":"NET stack Technology Solutions",
+              "MONTH_AND_YEAR":"22-12-2022",
+              "VALIDITY":"Till date"
+            },
+            {
+              "S_NO":2,
+              "ORGANISATION_NAME":"ArjunVision Tech Solutions",
+              "MONTH_AND_YEAR":"22-02-2023",
+              "VALIDITY":"Till date"
+            },
+            {
+              "S_NO":3,
+              "ORGANISATION_NAME":"M/S Tata Elxsi Ltd",
+              "MONTH_AND_YEAR":"23-02-2022",
+              "VALIDITY":"Till date"
+            },
+            {
+              "S_NO":4,
+              "ORGANISATION_NAME":"DigiALERT Solutions Private Limited",
+              "MONTH_AND_YEAR":"2023",
+              "VALIDITY":"5 Years"
+            },
+            {
+              "S_NO":5,
+              "ORGANISATION_NAME":"Aristo Creative Technologies",
+              "MONTH_AND_YEAR":"2022",
+              "VALIDITY":"Till date"
+            }
+          ]
+        },
+        {
+          "unique_id":2024,
+          "docs":[
+            {
+              "S_NO":1,
+              "ORGANISATION_NAME":"NET stack Technology Solutions",
+              "MONTH_AND_YEAR":"22-12-2022",
+              "VALIDITY":"Till date"
+            },
+            {
+              "S_NO":2,
+              "ORGANISATION_NAME":"ArjunVision Tech Solutions",
+              "MONTH_AND_YEAR":"22-02-2023",
+              "VALIDITY":"Till date"
+            },
+            {
+              "S_NO":3,
+              "ORGANISATION_NAME":"M/S Tata Elxsi Ltd",
+              "MONTH_AND_YEAR":"23-02-2022",
+              "VALIDITY":"Till date"
+            },
+            {
+              "S_NO":4,
+              "ORGANISATION_NAME":"DigiALERT Solutions Private Limited",
+              "MONTH_AND_YEAR":"2023",
+              "VALIDITY":"5 Years"
+            },
+            {
+              "S_NO":5,
+              "ORGANISATION_NAME":"Aristo Creative Technologies",
+              "MONTH_AND_YEAR":"2022",
+              "VALIDITY":"Till date"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Departments": "003",
+      "MOUs": [
+        {
+          "unique_id": "03",
+          "docs": [
+            {
+              "S_NO": 1,
+              "ORGANISATION_NAME": "ChemLab Solutions",
+              "MONTH_AND_YEAR": "01-01-2022",
+              "VALIDITY": "Till date"
+            },
+            {
+              "S_NO": 2,
+              "ORGANISATION_NAME": "BioChem Industries",
+              "MONTH_AND_YEAR": "11-07-2023",
+              "VALIDITY": "3 Years"
+            }
+          ]
+        },
+        {
+          "unique_id":2022,
+          "docs":[
+            {
+              "S_NO":1,
+              "ORGANISATION_NAME":"NET stack Technology Solutions",
+              "MONTH_AND_YEAR":"22-12-2022",
+              "VALIDITY":"Till date"
+            },
+            {
+              "S_NO":2,
+              "ORGANISATION_NAME":"ArjunVision Tech Solutions",
+              "MONTH_AND_YEAR":"22-02-2023",
+              "VALIDITY":"Till date"
+            },
+            {
+              "S_NO":3,
+              "ORGANISATION_NAME":"M/S Tata Elxsi Ltd",
+              "MONTH_AND_YEAR":"23-02-2022",
+              "VALIDITY":"Till date"
+            },
+            {
+              "S_NO":4,
+              "ORGANISATION_NAME":"DigiALERT Solutions Private Limited",
+              "MONTH_AND_YEAR":"2023",
+              "VALIDITY":"5 Years"
+            },
+            {
+              "S_NO":5,
+              "ORGANISATION_NAME":"Aristo Creative Technologies",
+              "MONTH_AND_YEAR":"2022",
+              "VALIDITY":"Till date"
+            }
+          ]
+        },
+        {
+          "unique_id":2023,
+          "docs":[
+            {
+              "S_NO":1,
+              "ORGANISATION_NAME":"NET stack Technology Solutions",
+              "MONTH_AND_YEAR":"22-12-2022",
+              "VALIDITY":"Till date"
+            },
+            {
+              "S_NO":2,
+              "ORGANISATION_NAME":"ArjunVision Tech Solutions",
+              "MONTH_AND_YEAR":"22-02-2023",
+              "VALIDITY":"Till date"
+            },
+            {
+              "S_NO":3,
+              "ORGANISATION_NAME":"M/S Tata Elxsi Ltd",
+              "MONTH_AND_YEAR":"23-02-2022",
+              "VALIDITY":"Till date"
+            },
+            {
+              "S_NO":4,
+              "ORGANISATION_NAME":"DigiALERT Solutions Private Limited",
+              "MONTH_AND_YEAR":"2023",
+              "VALIDITY":"5 Years"
+            },
+            {
+              "S_NO":5,
+              "ORGANISATION_NAME":"Aristo Creative Technologies",
+              "MONTH_AND_YEAR":"2022",
+              "VALIDITY":"Till date"
+            }
+          ]
+        },
+        {
+          "unique_id":2024,
+          "docs":[
+            {
+              "S_NO":1,
+              "ORGANISATION_NAME":"NET stack Technology Solutions",
+              "MONTH_AND_YEAR":"22-12-2022",
+              "VALIDITY":"Till date"
+            },
+            {
+              "S_NO":2,
+              "ORGANISATION_NAME":"ArjunVision Tech Solutions",
+              "MONTH_AND_YEAR":"22-02-2023",
+              "VALIDITY":"Till date"
+            },
+            {
+              "S_NO":3,
+              "ORGANISATION_NAME":"M/S Tata Elxsi Ltd",
+              "MONTH_AND_YEAR":"23-02-2022",
+              "VALIDITY":"Till date"
+            },
+            {
+              "S_NO":4,
+              "ORGANISATION_NAME":"DigiALERT Solutions Private Limited",
+              "MONTH_AND_YEAR":"2023",
+              "VALIDITY":"5 Years"
+            },
+            {
+              "S_NO":5,
+              "ORGANISATION_NAME":"Aristo Creative Technologies",
+              "MONTH_AND_YEAR":"2022",
+              "VALIDITY":"Till date"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Departments": "004",
+      "MOUs": [
+        {
+          "unique_id": "04",
+          "docs": [
+            {
+              "S_NO": 1,
+              "ORGANISATION_NAME": "InfraBuild Pvt Ltd",
+              "MONTH_AND_YEAR": "20-06-2023",
+              "VALIDITY": "5 Years"
+            },
+            {
+              "S_NO": 2,
+              "ORGANISATION_NAME": "Green Structures",
+              "MONTH_AND_YEAR": "15-08-2022",
+              "VALIDITY": "Till date"
+            }
+          ]
+        },
+        {
+          "unique_id":2022,
+          "docs":[
+            {
+              "S_NO":1,
+              "ORGANISATION_NAME":"NET stack Technology Solutions",
+              "MONTH_AND_YEAR":"22-12-2022",
+              "VALIDITY":"Till date"
+            },
+            {
+              "S_NO":2,
+              "ORGANISATION_NAME":"ArjunVision Tech Solutions",
+              "MONTH_AND_YEAR":"22-02-2023",
+              "VALIDITY":"Till date"
+            },
+            {
+              "S_NO":3,
+              "ORGANISATION_NAME":"M/S Tata Elxsi Ltd",
+              "MONTH_AND_YEAR":"23-02-2022",
+              "VALIDITY":"Till date"
+            },
+            {
+              "S_NO":4,
+              "ORGANISATION_NAME":"DigiALERT Solutions Private Limited",
+              "MONTH_AND_YEAR":"2023",
+              "VALIDITY":"5 Years"
+            },
+            {
+              "S_NO":5,
+              "ORGANISATION_NAME":"Aristo Creative Technologies",
+              "MONTH_AND_YEAR":"2022",
+              "VALIDITY":"Till date"
+            }
+          ]
+        },
+        {
+          "unique_id":2023,
+          "docs":[
+            {
+              "S_NO":1,
+              "ORGANISATION_NAME":"NET stack Technology Solutions",
+              "MONTH_AND_YEAR":"22-12-2022",
+              "VALIDITY":"Till date"
+            },
+            {
+              "S_NO":2,
+              "ORGANISATION_NAME":"ArjunVision Tech Solutions",
+              "MONTH_AND_YEAR":"22-02-2023",
+              "VALIDITY":"Till date"
+            },
+            {
+              "S_NO":3,
+              "ORGANISATION_NAME":"M/S Tata Elxsi Ltd",
+              "MONTH_AND_YEAR":"23-02-2022",
+              "VALIDITY":"Till date"
+            },
+            {
+              "S_NO":4,
+              "ORGANISATION_NAME":"DigiALERT Solutions Private Limited",
+              "MONTH_AND_YEAR":"2023",
+              "VALIDITY":"5 Years"
+            },
+            {
+              "S_NO":5,
+              "ORGANISATION_NAME":"Aristo Creative Technologies",
+              "MONTH_AND_YEAR":"2022",
+              "VALIDITY":"Till date"
+            }
+          ]
+        },
+        {
+          "unique_id":2024,
+          "docs":[
+            {
+              "S_NO":1,
+              "ORGANISATION_NAME":"NET stack Technology Solutions",
+              "MONTH_AND_YEAR":"22-12-2022",
+              "VALIDITY":"Till date"
+            },
+            {
+              "S_NO":2,
+              "ORGANISATION_NAME":"ArjunVision Tech Solutions",
+              "MONTH_AND_YEAR":"22-02-2023",
+              "VALIDITY":"Till date"
+            },
+            {
+              "S_NO":3,
+              "ORGANISATION_NAME":"M/S Tata Elxsi Ltd",
+              "MONTH_AND_YEAR":"23-02-2022",
+              "VALIDITY":"Till date"
+            },
+            {
+              "S_NO":4,
+              "ORGANISATION_NAME":"DigiALERT Solutions Private Limited",
+              "MONTH_AND_YEAR":"2023",
+              "VALIDITY":"5 Years"
+            },
+            {
+              "S_NO":5,
+              "ORGANISATION_NAME":"Aristo Creative Technologies",
+              "MONTH_AND_YEAR":"2022",
+              "VALIDITY":"Till date"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Departments": "005",
+      "MOUs": [
+        {
+          "unique_id": "05",
+          "docs": [
+            {
+              "S_NO": 1,
+              "ORGANISATION_NAME": "TechNova Solutions",
+              "MONTH_AND_YEAR": "05-02-2023",
+              "VALIDITY": "3 Years"
+            },
+            {
+              "S_NO": 2,
+              "ORGANISATION_NAME": "CodeGenix",
+              "MONTH_AND_YEAR": "10-10-2024",
+              "VALIDITY": "5 Years"
+            }
+          ]
+        },
+        {
+          "unique_id":2022,
+          "docs":[
+            {
+              "S_NO":1,
+              "ORGANISATION_NAME":"NET stack Technology Solutions",
+              "MONTH_AND_YEAR":"22-12-2022",
+              "VALIDITY":"Till date"
+            },
+            {
+              "S_NO":2,
+              "ORGANISATION_NAME":"ArjunVision Tech Solutions",
+              "MONTH_AND_YEAR":"22-02-2023",
+              "VALIDITY":"Till date"
+            },
+            {
+              "S_NO":3,
+              "ORGANISATION_NAME":"M/S Tata Elxsi Ltd",
+              "MONTH_AND_YEAR":"23-02-2022",
+              "VALIDITY":"Till date"
+            },
+            {
+              "S_NO":4,
+              "ORGANISATION_NAME":"DigiALERT Solutions Private Limited",
+              "MONTH_AND_YEAR":"2023",
+              "VALIDITY":"5 Years"
+            },
+            {
+              "S_NO":5,
+              "ORGANISATION_NAME":"Aristo Creative Technologies",
+              "MONTH_AND_YEAR":"2022",
+              "VALIDITY":"Till date"
+            }
+          ]
+        },
+        {
+          "unique_id":2023,
+          "docs":[
+            {
+              "S_NO":1,
+              "ORGANISATION_NAME":"NET stack Technology Solutions",
+              "MONTH_AND_YEAR":"22-12-2022",
+              "VALIDITY":"Till date"
+            },
+            {
+              "S_NO":2,
+              "ORGANISATION_NAME":"ArjunVision Tech Solutions",
+              "MONTH_AND_YEAR":"22-02-2023",
+              "VALIDITY":"Till date"
+            },
+            {
+              "S_NO":3,
+              "ORGANISATION_NAME":"M/S Tata Elxsi Ltd",
+              "MONTH_AND_YEAR":"23-02-2022",
+              "VALIDITY":"Till date"
+            },
+            {
+              "S_NO":4,
+              "ORGANISATION_NAME":"DigiALERT Solutions Private Limited",
+              "MONTH_AND_YEAR":"2023",
+              "VALIDITY":"5 Years"
+            },
+            {
+              "S_NO":5,
+              "ORGANISATION_NAME":"Aristo Creative Technologies",
+              "MONTH_AND_YEAR":"2022",
+              "VALIDITY":"Till date"
+            }
+          ]
+        },
+        {
+          "unique_id":2024,
+          "docs":[
+            {
+              "S_NO":1,
+              "ORGANISATION_NAME":"NET stack Technology Solutions",
+              "MONTH_AND_YEAR":"22-12-2022",
+              "VALIDITY":"Till date"
+            },
+            {
+              "S_NO":2,
+              "ORGANISATION_NAME":"ArjunVision Tech Solutions",
+              "MONTH_AND_YEAR":"22-02-2023",
+              "VALIDITY":"Till date"
+            },
+            {
+              "S_NO":3,
+              "ORGANISATION_NAME":"M/S Tata Elxsi Ltd",
+              "MONTH_AND_YEAR":"23-02-2022",
+              "VALIDITY":"Till date"
+            },
+            {
+              "S_NO":4,
+              "ORGANISATION_NAME":"DigiALERT Solutions Private Limited",
+              "MONTH_AND_YEAR":"2023",
+              "VALIDITY":"5 Years"
+            },
+            {
+              "S_NO":5,
+              "ORGANISATION_NAME":"Aristo Creative Technologies",
+              "MONTH_AND_YEAR":"2022",
+              "VALIDITY":"Till date"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Departments": "006",
+      "MOUs": [
+        {
+          "unique_id": "06",
+          "docs": [
+            {
+              "S_NO": 1,
+              "ORGANISATION_NAME": "CyberSecure Solutions",
+              "MONTH_AND_YEAR": "12-03-2024",
+              "VALIDITY": "5 Years"
+            },
+            {
+              "S_NO": 2,
+              "ORGANISATION_NAME": "DataShield Technologies",
+              "MONTH_AND_YEAR": "25-09-2023",
+              "VALIDITY": "3 Years"
+            }
+          ]
+        },
+        {
+          "unique_id":2022,
+          "docs":[
+            {
+              "S_NO":1,
+              "ORGANISATION_NAME":"NET stack Technology Solutions",
+              "MONTH_AND_YEAR":"22-12-2022",
+              "VALIDITY":"Till date"
+            },
+            {
+              "S_NO":2,
+              "ORGANISATION_NAME":"ArjunVision Tech Solutions",
+              "MONTH_AND_YEAR":"22-02-2023",
+              "VALIDITY":"Till date"
+            },
+            {
+              "S_NO":3,
+              "ORGANISATION_NAME":"M/S Tata Elxsi Ltd",
+              "MONTH_AND_YEAR":"23-02-2022",
+              "VALIDITY":"Till date"
+            },
+            {
+              "S_NO":4,
+              "ORGANISATION_NAME":"DigiALERT Solutions Private Limited",
+              "MONTH_AND_YEAR":"2023",
+              "VALIDITY":"5 Years"
+            },
+            {
+              "S_NO":5,
+              "ORGANISATION_NAME":"Aristo Creative Technologies",
+              "MONTH_AND_YEAR":"2022",
+              "VALIDITY":"Till date"
+            }
+          ]
+        },
+        {
+          "unique_id":2023,
+          "docs":[
+            {
+              "S_NO":1,
+              "ORGANISATION_NAME":"NET stack Technology Solutions",
+              "MONTH_AND_YEAR":"22-12-2022",
+              "VALIDITY":"Till date"
+            },
+            {
+              "S_NO":2,
+              "ORGANISATION_NAME":"ArjunVision Tech Solutions",
+              "MONTH_AND_YEAR":"22-02-2023",
+              "VALIDITY":"Till date"
+            },
+            {
+              "S_NO":3,
+              "ORGANISATION_NAME":"M/S Tata Elxsi Ltd",
+              "MONTH_AND_YEAR":"23-02-2022",
+              "VALIDITY":"Till date"
+            },
+            {
+              "S_NO":4,
+              "ORGANISATION_NAME":"DigiALERT Solutions Private Limited",
+              "MONTH_AND_YEAR":"2023",
+              "VALIDITY":"5 Years"
+            },
+            {
+              "S_NO":5,
+              "ORGANISATION_NAME":"Aristo Creative Technologies",
+              "MONTH_AND_YEAR":"2022",
+              "VALIDITY":"Till date"
+            }
+          ]
+        },
+        {
+          "unique_id":2024,
+          "docs":[
+            {
+              "S_NO":1,
+              "ORGANISATION_NAME":"NET stack Technology Solutions",
+              "MONTH_AND_YEAR":"22-12-2022",
+              "VALIDITY":"Till date"
+            },
+            {
+              "S_NO":2,
+              "ORGANISATION_NAME":"ArjunVision Tech Solutions",
+              "MONTH_AND_YEAR":"22-02-2023",
+              "VALIDITY":"Till date"
+            },
+            {
+              "S_NO":3,
+              "ORGANISATION_NAME":"M/S Tata Elxsi Ltd",
+              "MONTH_AND_YEAR":"23-02-2022",
+              "VALIDITY":"Till date"
+            },
+            {
+              "S_NO":4,
+              "ORGANISATION_NAME":"DigiALERT Solutions Private Limited",
+              "MONTH_AND_YEAR":"2023",
+              "VALIDITY":"5 Years"
+            },
+            {
+              "S_NO":5,
+              "ORGANISATION_NAME":"Aristo Creative Technologies",
+              "MONTH_AND_YEAR":"2022",
+              "VALIDITY":"Till date"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Departments": "007",
+      "MOUs": [
+        {
+          "unique_id": "07",
+          "docs": [
+            {
+              "S_NO": 1,
+              "ORGANISATION_NAME": "ElectroTech Solutions",
+              "MONTH_AND_YEAR": "01-11-2022",
+              "VALIDITY": "Till date"
+            },
+            {
+              "S_NO": 2,
+              "ORGANISATION_NAME": "PowerGrid Pvt Ltd",
+              "MONTH_AND_YEAR": "30-05-2023",
+              "VALIDITY": "3 Years"
+            }
+          ]
+        },
+        {
+          "unique_id":2022,
+          "docs":[
+            {
+              "S_NO":1,
+              "ORGANISATION_NAME":"NET stack Technology Solutions",
+              "MONTH_AND_YEAR":"22-12-2022",
+              "VALIDITY":"Till date"
+            },
+            {
+              "S_NO":2,
+              "ORGANISATION_NAME":"ArjunVision Tech Solutions",
+              "MONTH_AND_YEAR":"22-02-2023",
+              "VALIDITY":"Till date"
+            },
+            {
+              "S_NO":3,
+              "ORGANISATION_NAME":"M/S Tata Elxsi Ltd",
+              "MONTH_AND_YEAR":"23-02-2022",
+              "VALIDITY":"Till date"
+            },
+            {
+              "S_NO":4,
+              "ORGANISATION_NAME":"DigiALERT Solutions Private Limited",
+              "MONTH_AND_YEAR":"2023",
+              "VALIDITY":"5 Years"
+            },
+            {
+              "S_NO":5,
+              "ORGANISATION_NAME":"Aristo Creative Technologies",
+              "MONTH_AND_YEAR":"2022",
+              "VALIDITY":"Till date"
+            }
+          ]
+        },
+        {
+          "unique_id":2023,
+          "docs":[
+            {
+              "S_NO":1,
+              "ORGANISATION_NAME":"NET stack Technology Solutions",
+              "MONTH_AND_YEAR":"22-12-2022",
+              "VALIDITY":"Till date"
+            },
+            {
+              "S_NO":2,
+              "ORGANISATION_NAME":"ArjunVision Tech Solutions",
+              "MONTH_AND_YEAR":"22-02-2023",
+              "VALIDITY":"Till date"
+            },
+            {
+              "S_NO":3,
+              "ORGANISATION_NAME":"M/S Tata Elxsi Ltd",
+              "MONTH_AND_YEAR":"23-02-2022",
+              "VALIDITY":"Till date"
+            },
+            {
+              "S_NO":4,
+              "ORGANISATION_NAME":"DigiALERT Solutions Private Limited",
+              "MONTH_AND_YEAR":"2023",
+              "VALIDITY":"5 Years"
+            },
+            {
+              "S_NO":5,
+              "ORGANISATION_NAME":"Aristo Creative Technologies",
+              "MONTH_AND_YEAR":"2022",
+              "VALIDITY":"Till date"
+            }
+          ]
+        },
+        {
+          "unique_id":2024,
+          "docs":[
+            {
+              "S_NO":1,
+              "ORGANISATION_NAME":"NET stack Technology Solutions",
+              "MONTH_AND_YEAR":"22-12-2022",
+              "VALIDITY":"Till date"
+            },
+            {
+              "S_NO":2,
+              "ORGANISATION_NAME":"ArjunVision Tech Solutions",
+              "MONTH_AND_YEAR":"22-02-2023",
+              "VALIDITY":"Till date"
+            },
+            {
+              "S_NO":3,
+              "ORGANISATION_NAME":"M/S Tata Elxsi Ltd",
+              "MONTH_AND_YEAR":"23-02-2022",
+              "VALIDITY":"Till date"
+            },
+            {
+              "S_NO":4,
+              "ORGANISATION_NAME":"DigiALERT Solutions Private Limited",
+              "MONTH_AND_YEAR":"2023",
+              "VALIDITY":"5 Years"
+            },
+            {
+              "S_NO":5,
+              "ORGANISATION_NAME":"Aristo Creative Technologies",
+              "MONTH_AND_YEAR":"2022",
+              "VALIDITY":"Till date"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Departments": "008",
+      "MOUs": [
+        {
+          "unique_id": "08",
+          "docs": [
+            {
+              "S_NO": 1,
+              "ORGANISATION_NAME": "ComSys Technologies",
+              "MONTH_AND_YEAR": "15-01-2023",
+              "VALIDITY": "5 Years"
+            },
+            {
+              "S_NO": 2,
+              "ORGANISATION_NAME": "SignalWave Solutions",
+              "MONTH_AND_YEAR": "20-02-2024",
+              "VALIDITY": "3 Years"
+            }
+          ]
+        },
+        {
+          "unique_id":2022,
+          "docs":[
+            {
+              "S_NO":1,
+              "ORGANISATION_NAME":"NET stack Technology Solutions",
+              "MONTH_AND_YEAR":"22-12-2022",
+              "VALIDITY":"Till date"
+            },
+            {
+              "S_NO":2,
+              "ORGANISATION_NAME":"ArjunVision Tech Solutions",
+              "MONTH_AND_YEAR":"22-02-2023",
+              "VALIDITY":"Till date"
+            },
+            {
+              "S_NO":3,
+              "ORGANISATION_NAME":"M/S Tata Elxsi Ltd",
+              "MONTH_AND_YEAR":"23-02-2022",
+              "VALIDITY":"Till date"
+            },
+            {
+              "S_NO":4,
+              "ORGANISATION_NAME":"DigiALERT Solutions Private Limited",
+              "MONTH_AND_YEAR":"2023",
+              "VALIDITY":"5 Years"
+            },
+            {
+              "S_NO":5,
+              "ORGANISATION_NAME":"Aristo Creative Technologies",
+              "MONTH_AND_YEAR":"2022",
+              "VALIDITY":"Till date"
+            }
+          ]
+        },
+        {
+          "unique_id":2023,
+          "docs":[
+            {
+              "S_NO":1,
+              "ORGANISATION_NAME":"NET stack Technology Solutions",
+              "MONTH_AND_YEAR":"22-12-2022",
+              "VALIDITY":"Till date"
+            },
+            {
+              "S_NO":2,
+              "ORGANISATION_NAME":"ArjunVision Tech Solutions",
+              "MONTH_AND_YEAR":"22-02-2023",
+              "VALIDITY":"Till date"
+            },
+            {
+              "S_NO":3,
+              "ORGANISATION_NAME":"M/S Tata Elxsi Ltd",
+              "MONTH_AND_YEAR":"23-02-2022",
+              "VALIDITY":"Till date"
+            },
+            {
+              "S_NO":4,
+              "ORGANISATION_NAME":"DigiALERT Solutions Private Limited",
+              "MONTH_AND_YEAR":"2023",
+              "VALIDITY":"5 Years"
+            },
+            {
+              "S_NO":5,
+              "ORGANISATION_NAME":"Aristo Creative Technologies",
+              "MONTH_AND_YEAR":"2022",
+              "VALIDITY":"Till date"
+            }
+          ]
+        },
+        {
+          "unique_id":2024,
+          "docs":[
+            {
+              "S_NO":1,
+              "ORGANISATION_NAME":"NET stack Technology Solutions",
+              "MONTH_AND_YEAR":"22-12-2022",
+              "VALIDITY":"Till date"
+            },
+            {
+              "S_NO":2,
+              "ORGANISATION_NAME":"ArjunVision Tech Solutions",
+              "MONTH_AND_YEAR":"22-02-2023",
+              "VALIDITY":"Till date"
+            },
+            {
+              "S_NO":3,
+              "ORGANISATION_NAME":"M/S Tata Elxsi Ltd",
+              "MONTH_AND_YEAR":"23-02-2022",
+              "VALIDITY":"Till date"
+            },
+            {
+              "S_NO":4,
+              "ORGANISATION_NAME":"DigiALERT Solutions Private Limited",
+              "MONTH_AND_YEAR":"2023",
+              "VALIDITY":"5 Years"
+            },
+            {
+              "S_NO":5,
+              "ORGANISATION_NAME":"Aristo Creative Technologies",
+              "MONTH_AND_YEAR":"2022",
+              "VALIDITY":"Till date"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Departments": "009",
+      "MOUs": [
+        {
+          "unique_id": "09",
+          "docs": [
+            {
+              "S_NO": 1,
+              "ORGANISATION_NAME": "InstruTech Pvt Ltd",
+              "MONTH_AND_YEAR": "10-10-2022",
+              "VALIDITY": "Till date"
+            },
+            {
+              "S_NO": 2,
+              "ORGANISATION_NAME": "Precision Instruments Co.",
+              "MONTH_AND_YEAR": "25-12-2023",
+              "VALIDITY": "3 Years"
+            }
+          ]
+        },
+        {
+          "unique_id":2022,
+          "docs":[
+            {
+              "S_NO":1,
+              "ORGANISATION_NAME":"NET stack Technology Solutions",
+              "MONTH_AND_YEAR":"22-12-2022",
+              "VALIDITY":"Till date"
+            },
+            {
+              "S_NO":2,
+              "ORGANISATION_NAME":"ArjunVision Tech Solutions",
+              "MONTH_AND_YEAR":"22-02-2023",
+              "VALIDITY":"Till date"
+            },
+            {
+              "S_NO":3,
+              "ORGANISATION_NAME":"M/S Tata Elxsi Ltd",
+              "MONTH_AND_YEAR":"23-02-2022",
+              "VALIDITY":"Till date"
+            },
+            {
+              "S_NO":4,
+              "ORGANISATION_NAME":"DigiALERT Solutions Private Limited",
+              "MONTH_AND_YEAR":"2023",
+              "VALIDITY":"5 Years"
+            },
+            {
+              "S_NO":5,
+              "ORGANISATION_NAME":"Aristo Creative Technologies",
+              "MONTH_AND_YEAR":"2022",
+              "VALIDITY":"Till date"
+            }
+          ]
+        },
+        {
+          "unique_id":2023,
+          "docs":[
+            {
+              "S_NO":1,
+              "ORGANISATION_NAME":"NET stack Technology Solutions",
+              "MONTH_AND_YEAR":"22-12-2022",
+              "VALIDITY":"Till date"
+            },
+            {
+              "S_NO":2,
+              "ORGANISATION_NAME":"ArjunVision Tech Solutions",
+              "MONTH_AND_YEAR":"22-02-2023",
+              "VALIDITY":"Till date"
+            },
+            {
+              "S_NO":3,
+              "ORGANISATION_NAME":"M/S Tata Elxsi Ltd",
+              "MONTH_AND_YEAR":"23-02-2022",
+              "VALIDITY":"Till date"
+            },
+            {
+              "S_NO":4,
+              "ORGANISATION_NAME":"DigiALERT Solutions Private Limited",
+              "MONTH_AND_YEAR":"2023",
+              "VALIDITY":"5 Years"
+            },
+            {
+              "S_NO":5,
+              "ORGANISATION_NAME":"Aristo Creative Technologies",
+              "MONTH_AND_YEAR":"2022",
+              "VALIDITY":"Till date"
+            }
+          ]
+        },
+        {
+          "unique_id":2024,
+          "docs":[
+            {
+              "S_NO":1,
+              "ORGANISATION_NAME":"NET stack Technology Solutions",
+              "MONTH_AND_YEAR":"22-12-2022",
+              "VALIDITY":"Till date"
+            },
+            {
+              "S_NO":2,
+              "ORGANISATION_NAME":"ArjunVision Tech Solutions",
+              "MONTH_AND_YEAR":"22-02-2023",
+              "VALIDITY":"Till date"
+            },
+            {
+              "S_NO":3,
+              "ORGANISATION_NAME":"M/S Tata Elxsi Ltd",
+              "MONTH_AND_YEAR":"23-02-2022",
+              "VALIDITY":"Till date"
+            },
+            {
+              "S_NO":4,
+              "ORGANISATION_NAME":"DigiALERT Solutions Private Limited",
+              "MONTH_AND_YEAR":"2023",
+              "VALIDITY":"5 Years"
+            },
+            {
+              "S_NO":5,
+              "ORGANISATION_NAME":"Aristo Creative Technologies",
+              "MONTH_AND_YEAR":"2022",
+              "VALIDITY":"Till date"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Departments": "010",
+      "MOUs": [
+        {
+          "unique_id": "10",
+          "docs": [
+            {
+              "S_NO": 1,
+              "ORGANISATION_NAME": "LinguaCorp",
+              "MONTH_AND_YEAR": "12-04-2023",
+              "VALIDITY": "5 Years"
+            }
+          ]
+        },
+        {
+          "unique_id":2022,
+          "docs":[
+            {
+              "S_NO":1,
+              "ORGANISATION_NAME":"NET stack Technology Solutions",
+              "MONTH_AND_YEAR":"22-12-2022",
+              "VALIDITY":"Till date"
+            },
+            {
+              "S_NO":2,
+              "ORGANISATION_NAME":"ArjunVision Tech Solutions",
+              "MONTH_AND_YEAR":"22-02-2023",
+              "VALIDITY":"Till date"
+            },
+            {
+              "S_NO":3,
+              "ORGANISATION_NAME":"M/S Tata Elxsi Ltd",
+              "MONTH_AND_YEAR":"23-02-2022",
+              "VALIDITY":"Till date"
+            },
+            {
+              "S_NO":4,
+              "ORGANISATION_NAME":"DigiALERT Solutions Private Limited",
+              "MONTH_AND_YEAR":"2023",
+              "VALIDITY":"5 Years"
+            },
+            {
+              "S_NO":5,
+              "ORGANISATION_NAME":"Aristo Creative Technologies",
+              "MONTH_AND_YEAR":"2022",
+              "VALIDITY":"Till date"
+            }
+          ]
+        },
+        {
+          "unique_id":2023,
+          "docs":[
+            {
+              "S_NO":1,
+              "ORGANISATION_NAME":"NET stack Technology Solutions",
+              "MONTH_AND_YEAR":"22-12-2022",
+              "VALIDITY":"Till date"
+            },
+            {
+              "S_NO":2,
+              "ORGANISATION_NAME":"ArjunVision Tech Solutions",
+              "MONTH_AND_YEAR":"22-02-2023",
+              "VALIDITY":"Till date"
+            },
+            {
+              "S_NO":3,
+              "ORGANISATION_NAME":"M/S Tata Elxsi Ltd",
+              "MONTH_AND_YEAR":"23-02-2022",
+              "VALIDITY":"Till date"
+            },
+            {
+              "S_NO":4,
+              "ORGANISATION_NAME":"DigiALERT Solutions Private Limited",
+              "MONTH_AND_YEAR":"2023",
+              "VALIDITY":"5 Years"
+            },
+            {
+              "S_NO":5,
+              "ORGANISATION_NAME":"Aristo Creative Technologies",
+              "MONTH_AND_YEAR":"2022",
+              "VALIDITY":"Till date"
+            }
+          ]
+        },
+        {
+          "unique_id":2024,
+          "docs":[
+            {
+              "S_NO":1,
+              "ORGANISATION_NAME":"NET stack Technology Solutions",
+              "MONTH_AND_YEAR":"22-12-2022",
+              "VALIDITY":"Till date"
+            },
+            {
+              "S_NO":2,
+              "ORGANISATION_NAME":"ArjunVision Tech Solutions",
+              "MONTH_AND_YEAR":"22-02-2023",
+              "VALIDITY":"Till date"
+            },
+            {
+              "S_NO":3,
+              "ORGANISATION_NAME":"M/S Tata Elxsi Ltd",
+              "MONTH_AND_YEAR":"23-02-2022",
+              "VALIDITY":"Till date"
+            },
+            {
+              "S_NO":4,
+              "ORGANISATION_NAME":"DigiALERT Solutions Private Limited",
+              "MONTH_AND_YEAR":"2023",
+              "VALIDITY":"5 Years"
+            },
+            {
+              "S_NO":5,
+              "ORGANISATION_NAME":"Aristo Creative Technologies",
+              "MONTH_AND_YEAR":"2022",
+              "VALIDITY":"Till date"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Departments": "011",
+      "MOUs": [
+        {
+          "unique_id": "11",
+          "docs": [
+            {
+              "S_NO": 1,
+              "ORGANISATION_NAME": "InfoSphere Solutions",
+              "MONTH_AND_YEAR": "01-06-2023",
+              "VALIDITY": "3 Years"
+            },
+            {
+              "S_NO": 2,
+              "ORGANISATION_NAME": "DataNet Pvt Ltd",
+              "MONTH_AND_YEAR": "15-07-2024",
+              "VALIDITY": "5 Years"
+            }
+          ]
+        },
+        {
+          "unique_id":2022,
+          "docs":[
+            {
+              "S_NO":1,
+              "ORGANISATION_NAME":"NET stack Technology Solutions",
+              "MONTH_AND_YEAR":"22-12-2022",
+              "VALIDITY":"Till date"
+            },
+            {
+              "S_NO":2,
+              "ORGANISATION_NAME":"ArjunVision Tech Solutions",
+              "MONTH_AND_YEAR":"22-02-2023",
+              "VALIDITY":"Till date"
+            },
+            {
+              "S_NO":3,
+              "ORGANISATION_NAME":"M/S Tata Elxsi Ltd",
+              "MONTH_AND_YEAR":"23-02-2022",
+              "VALIDITY":"Till date"
+            },
+            {
+              "S_NO":4,
+              "ORGANISATION_NAME":"DigiALERT Solutions Private Limited",
+              "MONTH_AND_YEAR":"2023",
+              "VALIDITY":"5 Years"
+            },
+            {
+              "S_NO":5,
+              "ORGANISATION_NAME":"Aristo Creative Technologies",
+              "MONTH_AND_YEAR":"2022",
+              "VALIDITY":"Till date"
+            }
+          ]
+        },
+        {
+          "unique_id":2023,
+          "docs":[
+            {
+              "S_NO":1,
+              "ORGANISATION_NAME":"NET stack Technology Solutions",
+              "MONTH_AND_YEAR":"22-12-2022",
+              "VALIDITY":"Till date"
+            },
+            {
+              "S_NO":2,
+              "ORGANISATION_NAME":"ArjunVision Tech Solutions",
+              "MONTH_AND_YEAR":"22-02-2023",
+              "VALIDITY":"Till date"
+            },
+            {
+              "S_NO":3,
+              "ORGANISATION_NAME":"M/S Tata Elxsi Ltd",
+              "MONTH_AND_YEAR":"23-02-2022",
+              "VALIDITY":"Till date"
+            },
+            {
+              "S_NO":4,
+              "ORGANISATION_NAME":"DigiALERT Solutions Private Limited",
+              "MONTH_AND_YEAR":"2023",
+              "VALIDITY":"5 Years"
+            },
+            {
+              "S_NO":5,
+              "ORGANISATION_NAME":"Aristo Creative Technologies",
+              "MONTH_AND_YEAR":"2022",
+              "VALIDITY":"Till date"
+            }
+          ]
+        },
+        {
+          "unique_id":2024,
+          "docs":[
+            {
+              "S_NO":1,
+              "ORGANISATION_NAME":"NET stack Technology Solutions",
+              "MONTH_AND_YEAR":"22-12-2022",
+              "VALIDITY":"Till date"
+            },
+            {
+              "S_NO":2,
+              "ORGANISATION_NAME":"ArjunVision Tech Solutions",
+              "MONTH_AND_YEAR":"22-02-2023",
+              "VALIDITY":"Till date"
+            },
+            {
+              "S_NO":3,
+              "ORGANISATION_NAME":"M/S Tata Elxsi Ltd",
+              "MONTH_AND_YEAR":"23-02-2022",
+              "VALIDITY":"Till date"
+            },
+            {
+              "S_NO":4,
+              "ORGANISATION_NAME":"DigiALERT Solutions Private Limited",
+              "MONTH_AND_YEAR":"2023",
+              "VALIDITY":"5 Years"
+            },
+            {
+              "S_NO":5,
+              "ORGANISATION_NAME":"Aristo Creative Technologies",
+              "MONTH_AND_YEAR":"2022",
+              "VALIDITY":"Till date"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Departments": "012",
+      "MOUs": [
+        {
+          "unique_id": "12",
+          "docs": [
+            {
+              "S_NO": 1,
+              "ORGANISATION_NAME": "BusinessLink Inc.",
+              "MONTH_AND_YEAR": "20-09-2023",
+              "VALIDITY": "5 Years"
+            },
+            {
+              "S_NO": 2,
+              "ORGANISATION_NAME": "Corporate Connect Pvt Ltd",
+              "MONTH_AND_YEAR": "10-12-2022",
+              "VALIDITY": "Till date"
+            }
+          ]
+        },
+        {
+          "unique_id":2022,
+          "docs":[
+            {
+              "S_NO":1,
+              "ORGANISATION_NAME":"NET stack Technology Solutions",
+              "MONTH_AND_YEAR":"22-12-2022",
+              "VALIDITY":"Till date"
+            },
+            {
+              "S_NO":2,
+              "ORGANISATION_NAME":"ArjunVision Tech Solutions",
+              "MONTH_AND_YEAR":"22-02-2023",
+              "VALIDITY":"Till date"
+            },
+            {
+              "S_NO":3,
+              "ORGANISATION_NAME":"M/S Tata Elxsi Ltd",
+              "MONTH_AND_YEAR":"23-02-2022",
+              "VALIDITY":"Till date"
+            },
+            {
+              "S_NO":4,
+              "ORGANISATION_NAME":"DigiALERT Solutions Private Limited",
+              "MONTH_AND_YEAR":"2023",
+              "VALIDITY":"5 Years"
+            },
+            {
+              "S_NO":5,
+              "ORGANISATION_NAME":"Aristo Creative Technologies",
+              "MONTH_AND_YEAR":"2022",
+              "VALIDITY":"Till date"
+            }
+          ]
+        },
+        {
+          "unique_id":2023,
+          "docs":[
+            {
+              "S_NO":1,
+              "ORGANISATION_NAME":"NET stack Technology Solutions",
+              "MONTH_AND_YEAR":"22-12-2022",
+              "VALIDITY":"Till date"
+            },
+            {
+              "S_NO":2,
+              "ORGANISATION_NAME":"ArjunVision Tech Solutions",
+              "MONTH_AND_YEAR":"22-02-2023",
+              "VALIDITY":"Till date"
+            },
+            {
+              "S_NO":3,
+              "ORGANISATION_NAME":"M/S Tata Elxsi Ltd",
+              "MONTH_AND_YEAR":"23-02-2022",
+              "VALIDITY":"Till date"
+            },
+            {
+              "S_NO":4,
+              "ORGANISATION_NAME":"DigiALERT Solutions Private Limited",
+              "MONTH_AND_YEAR":"2023",
+              "VALIDITY":"5 Years"
+            },
+            {
+              "S_NO":5,
+              "ORGANISATION_NAME":"Aristo Creative Technologies",
+              "MONTH_AND_YEAR":"2022",
+              "VALIDITY":"Till date"
+            }
+          ]
+        },
+        {
+          "unique_id":2024,
+          "docs":[
+            {
+              "S_NO":1,
+              "ORGANISATION_NAME":"NET stack Technology Solutions",
+              "MONTH_AND_YEAR":"22-12-2022",
+              "VALIDITY":"Till date"
+            },
+            {
+              "S_NO":2,
+              "ORGANISATION_NAME":"ArjunVision Tech Solutions",
+              "MONTH_AND_YEAR":"22-02-2023",
+              "VALIDITY":"Till date"
+            },
+            {
+              "S_NO":3,
+              "ORGANISATION_NAME":"M/S Tata Elxsi Ltd",
+              "MONTH_AND_YEAR":"23-02-2022",
+              "VALIDITY":"Till date"
+            },
+            {
+              "S_NO":4,
+              "ORGANISATION_NAME":"DigiALERT Solutions Private Limited",
+              "MONTH_AND_YEAR":"2023",
+              "VALIDITY":"5 Years"
+            },
+            {
+              "S_NO":5,
+              "ORGANISATION_NAME":"Aristo Creative Technologies",
+              "MONTH_AND_YEAR":"2022",
+              "VALIDITY":"Till date"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Departments": "013",
+      "MOUs": [
+        {
+          "unique_id": "13",
+          "docs": [
+            {
+              "S_NO": 1,
+              "ORGANISATION_NAME": "Math Solutions Inc.",
+              "MONTH_AND_YEAR": "01-08-2022",
+              "VALIDITY": "Till date"
+            },
+            {
+              "S_NO": 2,
+              "ORGANISATION_NAME": "Quantify Labs",
+              "MONTH_AND_YEAR": "20-11-2023",
+              "VALIDITY": "3 Years"
+            }
+          ]
+        },
+        {
+          "unique_id":2022,
+          "docs":[
+            {
+              "S_NO":1,
+              "ORGANISATION_NAME":"NET stack Technology Solutions",
+              "MONTH_AND_YEAR":"22-12-2022",
+              "VALIDITY":"Till date"
+            },
+            {
+              "S_NO":2,
+              "ORGANISATION_NAME":"ArjunVision Tech Solutions",
+              "MONTH_AND_YEAR":"22-02-2023",
+              "VALIDITY":"Till date"
+            },
+            {
+              "S_NO":3,
+              "ORGANISATION_NAME":"M/S Tata Elxsi Ltd",
+              "MONTH_AND_YEAR":"23-02-2022",
+              "VALIDITY":"Till date"
+            },
+            {
+              "S_NO":4,
+              "ORGANISATION_NAME":"DigiALERT Solutions Private Limited",
+              "MONTH_AND_YEAR":"2023",
+              "VALIDITY":"5 Years"
+            },
+            {
+              "S_NO":5,
+              "ORGANISATION_NAME":"Aristo Creative Technologies",
+              "MONTH_AND_YEAR":"2022",
+              "VALIDITY":"Till date"
+            }
+          ]
+        },
+        {
+          "unique_id":2023,
+          "docs":[
+            {
+              "S_NO":1,
+              "ORGANISATION_NAME":"NET stack Technology Solutions",
+              "MONTH_AND_YEAR":"22-12-2022",
+              "VALIDITY":"Till date"
+            },
+            {
+              "S_NO":2,
+              "ORGANISATION_NAME":"ArjunVision Tech Solutions",
+              "MONTH_AND_YEAR":"22-02-2023",
+              "VALIDITY":"Till date"
+            },
+            {
+              "S_NO":3,
+              "ORGANISATION_NAME":"M/S Tata Elxsi Ltd",
+              "MONTH_AND_YEAR":"23-02-2022",
+              "VALIDITY":"Till date"
+            },
+            {
+              "S_NO":4,
+              "ORGANISATION_NAME":"DigiALERT Solutions Private Limited",
+              "MONTH_AND_YEAR":"2023",
+              "VALIDITY":"5 Years"
+            },
+            {
+              "S_NO":5,
+              "ORGANISATION_NAME":"Aristo Creative Technologies",
+              "MONTH_AND_YEAR":"2022",
+              "VALIDITY":"Till date"
+            }
+          ]
+        },
+        {
+          "unique_id":2024,
+          "docs":[
+            {
+              "S_NO":1,
+              "ORGANISATION_NAME":"NET stack Technology Solutions",
+              "MONTH_AND_YEAR":"22-12-2022",
+              "VALIDITY":"Till date"
+            },
+            {
+              "S_NO":2,
+              "ORGANISATION_NAME":"ArjunVision Tech Solutions",
+              "MONTH_AND_YEAR":"22-02-2023",
+              "VALIDITY":"Till date"
+            },
+            {
+              "S_NO":3,
+              "ORGANISATION_NAME":"M/S Tata Elxsi Ltd",
+              "MONTH_AND_YEAR":"23-02-2022",
+              "VALIDITY":"Till date"
+            },
+            {
+              "S_NO":4,
+              "ORGANISATION_NAME":"DigiALERT Solutions Private Limited",
+              "MONTH_AND_YEAR":"2023",
+              "VALIDITY":"5 Years"
+            },
+            {
+              "S_NO":5,
+              "ORGANISATION_NAME":"Aristo Creative Technologies",
+              "MONTH_AND_YEAR":"2022",
+              "VALIDITY":"Till date"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Departments": "014",
+      "MOUs": [
+        {
+          "unique_id": "14",
+          "docs": [
+            {
+              "S_NO": 1,
+              "ORGANISATION_NAME": "MechaWorks Pvt Ltd",
+              "MONTH_AND_YEAR": "15-05-2023",
+              "VALIDITY": "5 Years"
+            },
+            {
+              "S_NO": 2,
+              "ORGANISATION_NAME": "AutoMotion Technologies",
+              "MONTH_AND_YEAR": "30-06-2024",
+              "VALIDITY": "3 Years"
+            }
+          ]
+        },
+        {
+          "unique_id":2022,
+          "docs":[
+            {
+              "S_NO":1,
+              "ORGANISATION_NAME":"NET stack Technology Solutions",
+              "MONTH_AND_YEAR":"22-12-2022",
+              "VALIDITY":"Till date"
+            },
+            {
+              "S_NO":2,
+              "ORGANISATION_NAME":"ArjunVision Tech Solutions",
+              "MONTH_AND_YEAR":"22-02-2023",
+              "VALIDITY":"Till date"
+            },
+            {
+              "S_NO":3,
+              "ORGANISATION_NAME":"M/S Tata Elxsi Ltd",
+              "MONTH_AND_YEAR":"23-02-2022",
+              "VALIDITY":"Till date"
+            },
+            {
+              "S_NO":4,
+              "ORGANISATION_NAME":"DigiALERT Solutions Private Limited",
+              "MONTH_AND_YEAR":"2023",
+              "VALIDITY":"5 Years"
+            },
+            {
+              "S_NO":5,
+              "ORGANISATION_NAME":"Aristo Creative Technologies",
+              "MONTH_AND_YEAR":"2022",
+              "VALIDITY":"Till date"
+            }
+          ]
+        },
+        {
+          "unique_id":2023,
+          "docs":[
+            {
+              "S_NO":1,
+              "ORGANISATION_NAME":"NET stack Technology Solutions",
+              "MONTH_AND_YEAR":"22-12-2022",
+              "VALIDITY":"Till date"
+            },
+            {
+              "S_NO":2,
+              "ORGANISATION_NAME":"ArjunVision Tech Solutions",
+              "MONTH_AND_YEAR":"22-02-2023",
+              "VALIDITY":"Till date"
+            },
+            {
+              "S_NO":3,
+              "ORGANISATION_NAME":"M/S Tata Elxsi Ltd",
+              "MONTH_AND_YEAR":"23-02-2022",
+              "VALIDITY":"Till date"
+            },
+            {
+              "S_NO":4,
+              "ORGANISATION_NAME":"DigiALERT Solutions Private Limited",
+              "MONTH_AND_YEAR":"2023",
+              "VALIDITY":"5 Years"
+            },
+            {
+              "S_NO":5,
+              "ORGANISATION_NAME":"Aristo Creative Technologies",
+              "MONTH_AND_YEAR":"2022",
+              "VALIDITY":"Till date"
+            }
+          ]
+        },
+        {
+          "unique_id":2024,
+          "docs":[
+            {
+              "S_NO":1,
+              "ORGANISATION_NAME":"NET stack Technology Solutions",
+              "MONTH_AND_YEAR":"22-12-2022",
+              "VALIDITY":"Till date"
+            },
+            {
+              "S_NO":2,
+              "ORGANISATION_NAME":"ArjunVision Tech Solutions",
+              "MONTH_AND_YEAR":"22-02-2023",
+              "VALIDITY":"Till date"
+            },
+            {
+              "S_NO":3,
+              "ORGANISATION_NAME":"M/S Tata Elxsi Ltd",
+              "MONTH_AND_YEAR":"23-02-2022",
+              "VALIDITY":"Till date"
+            },
+            {
+              "S_NO":4,
+              "ORGANISATION_NAME":"DigiALERT Solutions Private Limited",
+              "MONTH_AND_YEAR":"2023",
+              "VALIDITY":"5 Years"
+            },
+            {
+              "S_NO":5,
+              "ORGANISATION_NAME":"Aristo Creative Technologies",
+              "MONTH_AND_YEAR":"2022",
+              "VALIDITY":"Till date"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Departments": "015",
+      "MOUs": [
+        {
+          "unique_id": "15",
+          "docs": [
+            {
+              "S_NO": 1,
+              "ORGANISATION_NAME": "Photon Labs",
+              "MONTH_AND_YEAR": "01-03-2022",
+              "VALIDITY": "Till date"
+            },
+            {
+              "S_NO": 2,
+              "ORGANISATION_NAME": "Quantum Solutions",
+              "MONTH_AND_YEAR": "12-07-2023",
+              "VALIDITY": "3 Years"
+            }
+          ]
+        },
+        {
+          "unique_id":2022,
+          "docs":[
+            {
+              "S_NO":1,
+              "ORGANISATION_NAME":"NET stack Technology Solutions",
+              "MONTH_AND_YEAR":"22-12-2022",
+              "VALIDITY":"Till date"
+            },
+            {
+              "S_NO":2,
+              "ORGANISATION_NAME":"ArjunVision Tech Solutions",
+              "MONTH_AND_YEAR":"22-02-2023",
+              "VALIDITY":"Till date"
+            },
+            {
+              "S_NO":3,
+              "ORGANISATION_NAME":"M/S Tata Elxsi Ltd",
+              "MONTH_AND_YEAR":"23-02-2022",
+              "VALIDITY":"Till date"
+            },
+            {
+              "S_NO":4,
+              "ORGANISATION_NAME":"DigiALERT Solutions Private Limited",
+              "MONTH_AND_YEAR":"2023",
+              "VALIDITY":"5 Years"
+            },
+            {
+              "S_NO":5,
+              "ORGANISATION_NAME":"Aristo Creative Technologies",
+              "MONTH_AND_YEAR":"2022",
+              "VALIDITY":"Till date"
+            }
+          ]
+        },
+        {
+          "unique_id":2023,
+          "docs":[
+            {
+              "S_NO":1,
+              "ORGANISATION_NAME":"NET stack Technology Solutions",
+              "MONTH_AND_YEAR":"22-12-2022",
+              "VALIDITY":"Till date"
+            },
+            {
+              "S_NO":2,
+              "ORGANISATION_NAME":"ArjunVision Tech Solutions",
+              "MONTH_AND_YEAR":"22-02-2023",
+              "VALIDITY":"Till date"
+            },
+            {
+              "S_NO":3,
+              "ORGANISATION_NAME":"M/S Tata Elxsi Ltd",
+              "MONTH_AND_YEAR":"23-02-2022",
+              "VALIDITY":"Till date"
+            },
+            {
+              "S_NO":4,
+              "ORGANISATION_NAME":"DigiALERT Solutions Private Limited",
+              "MONTH_AND_YEAR":"2023",
+              "VALIDITY":"5 Years"
+            },
+            {
+              "S_NO":5,
+              "ORGANISATION_NAME":"Aristo Creative Technologies",
+              "MONTH_AND_YEAR":"2022",
+              "VALIDITY":"Till date"
+            }
+          ]
+        },
+        {
+          "unique_id":2024,
+          "docs":[
+            {
+              "S_NO":1,
+              "ORGANISATION_NAME":"NET stack Technology Solutions",
+              "MONTH_AND_YEAR":"22-12-2022",
+              "VALIDITY":"Till date"
+            },
+            {
+              "S_NO":2,
+              "ORGANISATION_NAME":"ArjunVision Tech Solutions",
+              "MONTH_AND_YEAR":"22-02-2023",
+              "VALIDITY":"Till date"
+            },
+            {
+              "S_NO":3,
+              "ORGANISATION_NAME":"M/S Tata Elxsi Ltd",
+              "MONTH_AND_YEAR":"23-02-2022",
+              "VALIDITY":"Till date"
+            },
+            {
+              "S_NO":4,
+              "ORGANISATION_NAME":"DigiALERT Solutions Private Limited",
+              "MONTH_AND_YEAR":"2023",
+              "VALIDITY":"5 Years"
+            },
+            {
+              "S_NO":5,
+              "ORGANISATION_NAME":"Aristo Creative Technologies",
+              "MONTH_AND_YEAR":"2022",
+              "VALIDITY":"Till date"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+]

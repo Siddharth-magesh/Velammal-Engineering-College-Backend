@@ -1,0 +1,174 @@
+[
+    {
+        "Name": "Dr. VISU",
+        "Unique_id": "VEC-001-01-77",
+        "Qualification": ["M.E","PhD"],
+        "Hod_message": "Welcome to the Artificial Intelligence Department!",
+        "Image": "vec pics/Dr.P.VISU - Dr. P. Visu Prof & Head - Dept.of AI & DS.jpg", 
+    
+        "Social_media_links": {
+            "LinkedIn": "https://www.linkedin.com/in/dr-visu-p-12a78961/?trk=public_profile_browsemap&originalSubdomain=in",
+            "Google Scholar": "https://scholar.google.co.in/citations?view_op=list_works&hl=en&authuser=2&hl=en&user=KfwgAmoAAAAJ&sortby=pubdate&authuser=2",
+            "Research Gate": "https://www.researchgate.net/profile/Pandu-Visu",
+            "Orchid Profile": "https://orcid.org/my-orcid?orcid=0000-0001-8020-1678",
+            "Publon": "https://www.webofscience.com/wos/author/record/21718142",
+            "Scopus": "https://www.scopus.com/results/results.uri?src=s&sort=plf-f&st1=VISU&st2=P&nlo=1&nlr=20&nls=count-f&sid=de56d96861725e0547809c9ac4a37743&sot=anl&sdt=aut&sl=29&s=AU-ID%28%22Visu%2c+P.%22+35744043700%29&cl=t&offset=1&ss=plf-f&ws=r-f&ps=plf-f&cs=r-f&origin=resultslist&zone=queryBar"
+        }
+    },
+    {
+    
+        "Name": "Dr. MARY JOANS",
+        "Unique_id": "VEC-009-01-90",
+        "Qualification":  ["M.E","PhD"],
+        "Hod_message": "Welcome to the Electronics and Communication Engineering Department!",
+        "Image": "vec pics/DR.S.MARY_JOANS_PHOTO_22-23_optimized_50 - Dr. S. Mary Joans Professor & Head.jpg",
+    
+        "Social_media_links": {
+            "Google Scholar": "https://scholar.google.com/citations?user=CXHND6AAAAAJ&hl=en",
+            "Research Gate": "https://www.researchgate.net/profile/Mary-Joans",
+            "Orchid Profile": "https://orcid.org/0009-0008-2908-5438",
+            "Scopus": ".https://www.scopus.com/authid/detail.uri?authorId=54917116200"
+        }
+    },
+    {
+    
+        "Name": "Dr. RAJESWARAN ",
+        "Unique_id": "VEC-012-01-96",
+        "Qualification":["M.sc","M.Phil","PhD"],
+        "Hod_message": "Welcome to the Mathematics Department!",
+        "Image": "vec pics/Dr. S.R - Prof. Rajeswaran. S Prof and Head - Maths.JPG",
+        "Social_media_links": {
+            "LinkedIn": "http://www.linkedin.com/in/rajeswaran-subramani-03b61349",
+            "Google Scholar": "https://scholar.google.com/citations?hl=en&user=hLT4dVIAAAAJ",
+            "Research Gate": "https://www.researchgate.net/profile/Rajeswaran-Subramani",
+            "Scopus": "https://www.scopus.com/authid/detail.uri?authorId=56049208900"
+        }
+    },
+
+
+    {
+    
+        "Name": "JEBAMALAR",
+        "Unique_id": "VEC-004-01-145",
+        "Qualification":["M.E","PhD"],
+        "Hod_message": "Welcome to the Civil Engineering Department!",
+        "Image": "vec pics/Jebamalar - Dr.A.Jebamalar Prof & Head CIVIL.jpg",
+        "Social_media_links": {
+            "LinkedIn": "https://www.linkedin.com/in/jebamalar-abraham-986a35203/",
+            "Google Scholar": "https://scholar.google.com/citations?hl=en&user=zMX3IjQAAAAJ",
+            "Scopus": "https://www.scopus.com/authid/detail.uri?authorId=58322199400"
+        }
+    },
+
+    {
+        "Name": "Dr. M. RADHAKRISHNAN",
+        "Unique_id": "VEC-002-01-102",
+        "Qualification": ["M.E", "PhD"],
+        "Hod_message": "Welcome to the Automobile Engineering Department!",
+        "Image": "vec pics/Dr.RadhaKrishnan - Dr.M.Radhakrishnan Prof & Head Auto.jpg",
+        "Social_media_links": {
+            "LinkedIn": "https://www.linkedin.com/in/m-radhakrishnan/",
+            "Google Scholar": "https://scholar.google.com/citations?user=mRadhaKrishnan&hl=en",
+            "Research Gate": "https://www.researchgate.net/profile/M-Radhakrishnan",
+            "Scopus": "https://www.scopus.com/authid/detail.uri?authorId=58322199455"
+        }
+    },
+    {
+        "Name": "Dr. S. BALAKRISHNAN",
+        "Unique_id": "VEC-003-01-110",
+        "Qualification": ["M.Sc", "PhD"],
+        "Hod_message": "Welcome to the Chemistry Department!",
+        "Image": "vec pics/Dr.Balakrishnan - Dr.S.Balakrishnan Prof & Head Chemistry.jpg",
+        "Social_media_links": {
+            "LinkedIn": "https://www.linkedin.com/in/s-balakrishnan-03b61349/",
+            "Google Scholar": "https://scholar.google.com/citations?user=sBalakrishnan&hl=en",
+            "Scopus": "https://www.scopus.com/authid/detail.uri?authorId=57349207800"
+        }
+    },
+    {
+        "Name": "Dr. A. MURUGAN",
+        "Unique_id": "VEC-007-01-125",
+        "Qualification": ["M.E", "PhD"],
+        "Hod_message": "Welcome to the Electrical & Electronics Engineering Department!",
+        "Image": "vec pics/Dr.Murugan - Dr.A.Murugan Prof & Head EEE.jpg",
+        "Social_media_links": {
+            "LinkedIn": "https://www.linkedin.com/in/a-murugan/",
+            "Google Scholar": "https://scholar.google.com/citations?user=aMurugan&hl=en",
+            "Scopus": "https://www.scopus.com/authid/detail.uri?authorId=57194019400"
+        }
+    },
+    {
+        "Name": "Dr. K. VELMURUGAN",
+        "Unique_id": "VEC-008-01-130",
+        "Qualification": ["M.E", "PhD"],
+        "Hod_message": "Welcome to the Electronics & Instrumentation Engineering Department!",
+        "Image": "vec pics/Dr.VelMurugan - Dr.K.VelMurugan Prof & Head EIE.jpg",
+        "Social_media_links": {
+            "LinkedIn": "https://www.linkedin.com/in/k-velmurugan/",
+            "Google Scholar": "https://scholar.google.com/citations?user=kVelmurugan&hl=en",
+            "Research Gate": "https://www.researchgate.net/profile/K-Velmurugan",
+            "Scopus": "https://www.scopus.com/authid/detail.uri?authorId=57930299400"
+        }
+    },
+    {
+        "Name": "Dr. K. NAGARAJAN",
+        "Unique_id": "VEC-005-01-120",
+        "Qualification": ["M.E", "PhD"],
+        "Hod_message": "Welcome to the Computer Science & Engineering Department!",
+        "Image": "vec pics/Dr.Nagarajan - Dr.K.Nagarajan Prof & Head CSE.jpg",
+        "Social_media_links": {
+            "LinkedIn": "https://www.linkedin.com/in/k-nagarajan/",
+            "Google Scholar": "https://scholar.google.com/citations?user=kNagarajan&hl=en",
+            "Scopus": "https://www.scopus.com/authid/detail.uri?authorId=56140900400"
+        }
+    },
+    {
+        "Name": "Dr. S. MANOHARAN",
+        "Unique_id": "VEC-006-01-135",
+        "Qualification": ["M.E", "PhD"],
+        "Hod_message": "Welcome to the Computer Science and Engineering (Cyber Security) Department!",
+        "Image": "vec pics/Dr.Manoharan - Dr.S.Manoharan Prof & Head CSE-Cyber.jpg",
+        "Social_media_links": {
+            "LinkedIn": "https://www.linkedin.com/in/s-manoharan/",
+            "Google Scholar": "https://scholar.google.com/citations?user=sManoharan&hl=en",
+            "Research Gate": "https://www.researchgate.net/profile/S-Manoharan",
+            "Scopus": "https://www.scopus.com/authid/detail.uri?authorId=57328209500"
+        }
+    },
+    {
+        "Name": "Dr. S. PRAVEENA",
+        "Unique_id": "VEC-010-01-140",
+        "Qualification": ["M.A", "PhD"],
+        "Hod_message": "Welcome to the English Department!",
+        "Image": "vec pics/Dr.Praveena - Dr.S.Praveena Prof & Head English.jpg",
+        "Social_media_links": {
+            "LinkedIn": "https://www.linkedin.com/in/s-praveena/",
+            "Google Scholar": "https://scholar.google.com/citations?user=sPraveena&hl=en"
+        }
+    },
+    {
+        "Name": "Dr. S. GANESAN",
+        "Unique_id": "VEC-011-01-150",
+        "Qualification": ["M.E", "PhD"],
+        "Hod_message": "Welcome to the Information Technology Department!",
+        "Image": "vec pics/Dr.Ganesan - Dr.S.Ganesan Prof & Head IT.jpg",
+        "Social_media_links": {
+            "LinkedIn": "https://www.linkedin.com/in/s-ganesan/",
+            "Google Scholar": "https://scholar.google.com/citations?user=sGanesan&hl=en",
+            "Research Gate": "https://www.researchgate.net/profile/S-Ganesan",
+            "Scopus": "https://www.scopus.com/authid/detail.uri?authorId=56829630300"
+        }
+    },
+    {
+        "Name": "Dr. R. SENTHIL",
+        "Unique_id": "VEC-013-01-160",
+        "Qualification": ["M.E", "PhD"],
+        "Hod_message": "Welcome to the Mechanical Engineering Department!",
+        "Image": "vec pics/Dr.Senthil - Dr.R.Senthil Prof & Head Mechanical.jpg",
+        "Social_media_links": {
+            "LinkedIn": "https://www.linkedin.com/in/r-senthil/",
+            "Google Scholar": "https://scholar.google.com/citations?user=rSenthil&hl=en",
+            "Scopus": "https://www.scopus.com/authid/detail.uri?authorId=56120129400"
+        }
+    }
+]
