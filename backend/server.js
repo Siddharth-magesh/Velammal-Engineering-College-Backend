@@ -239,6 +239,53 @@ app.get('/api/department_activities/:deptId', async (req, res) => {
     }
 });
 
+// Curriculum 
+app.get('/api/curriculum/:deptId', async (req, res) => {
+    const { deptId } = req.params;
+    const db = client.db(dbName);
+    const collection = db.collection('curriculum');
+
+    try {
+        const departmentData = await collection.findOne({ dept_id: deptId });
+        if (!departmentData) {
+            return res.status(404).json({ message: "Department not found" });
+        }
+        res.status(200).json(departmentData);
+
+    } catch (error) {
+        console.error("❌ Error fetching curriculum data:", error);
+        res.status(500).json({ error: "Error fetching curriculum data" });
+    }
+});
+
+//Research Data
+app.get('/api/fetch-research-data/:dept_id/:year', async (req, res) => {
+    const { dept_id, year } = req.params;
+
+    if (!dept_id || !year) {
+        return res.status(400).json({ error: 'Both dept_id and year are required' });
+    }
+
+    const db = client.db(dbName);
+    const collection = db.collection('research_data');
+
+    try {
+        const result = await collection.find({
+            dept_id: dept_id,
+            "data.data.year": year
+        }).toArray();
+
+        if (result.length === 0) {
+            return res.status(404).json({ message: 'No research data found for the given department and year' });
+        }
+
+        res.status(200).json(result);
+    } catch (error) {
+        console.error("❌ Error fetching research data:", error);
+        res.status(500).json({ error: "Error fetching research data" });
+    }
+});
+
 app.listen(port, () => {
     console.log(`🚀 Server running at http://localhost:${port}`);
 });

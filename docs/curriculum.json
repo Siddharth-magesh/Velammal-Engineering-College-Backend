@@ -1,0 +1,571 @@
+[
+    {
+        "dept_id": "001",
+        "regulation": {
+            "2018": "/path/to/regulation_18.pdf",
+            "2019": "/path/to/regulation_19.pdf",
+            "2020": "/path/to/regulation_20.pdf"
+        },
+        "academic_year": {
+            "2018-2019": "/path/to/academic_year_18_19.pdf",
+            "2019-2020": "/path/to/academic_year_19_20.pdf"
+        },
+        "program_outcomes": [
+            "Engineering knowledge: Apply the knowledge of mathematics, science, engineering fundamentals, and an engineering specialization for the solution of complex engineering problems.",
+            "Problem analysis: Identify, formulate, research literature, and analyze complex engineering problems reaching substantiated conclusions using first principles of mathematics, natural sciences, and engineering sciences.",
+            "Design/development of solutions: Design solutions for complex engineering problems and design system components or processes that meet the specified needs with appropriate consideration for public health and safety, and cultural, societal, and environmental considerations.",
+            "Conduct investigations of complex problems: Use research-based knowledge and research methods including design of experiments, analysis and interpretation of data, and synthesis of the information to provide valid conclusions.",
+            "Modern tool usage: Create, select, and apply appropriate techniques, resources, and modern engineering and AI and Data Science tools, including prediction and modelling to complex engineering activities, with an understanding of the limitations.",
+            "The engineer and society: Apply reasoning informed by the contextual knowledge to assess societal, health, safety, legal and cultural issues and the consequent responsibilities relevant to the professional engineering practice.",
+            "Environment and sustainability: Understand the impact of the professional engineering solutions in societal and environmental contexts, and demonstrate the knowledge of, and need for sustainable development.",
+            "Ethics: Apply ethical principles and commit to professional ethics and responsibilities and norms of the engineering practice.",
+            "Individual and team work: Function effectively as an individual, and as a member or leader in diverse teams, and in multidisciplinary settings.",
+            "Communication: Communicate effectively on complex engineering activities with the engineering community and with the society at large, such as, being able to comprehend and write effective reports and design documentation, make effective presentations, and give and receive clear instructions.",
+            "Project management and finance: Demonstrate knowledge and understanding of the engineering and management principles and apply these to one’s own work, as a member and leader in a team, to manage projects and in multidisciplinary environments.",
+            "Life-long learning: Recognize the need for, and have the preparation and ability to engage in independent and life-long learning in the broadest context of technological change."
+
+        ],
+        "program_specific_outcomes": [
+            "PSO1: Apply the concepts of Artificial Intelligence to provide solutions for the real time problems and to integrate the professional skills with recent tools and technologies to cope with the dynamic AI needs.",
+            "PSO2: Create a concrete foundation and enlighten the innovation, research and entrepreneur skills in the field of Artificial Intelligence and Data science."
+        ],
+        "key_highlights": [
+            "UG - (Data Science, Machine Learning, Artificial Intelligence , Data Exploration Using R, Neural Networks, IoT, Deep Learning, Big Data Analytics, Health Care Analytics, Augmented Reality and Virtual Reality, Reinforcement Learning, Cognitive Science and Analysis, Edge and Fog Computing, Block Chain Technology).",
+            "It makes the student to learn, design and analyze various Machine Learning applications.",
+            "The syllabus also includes topics like Data Science, Machine Learning and programming languages like Python, R, C, OOPs concepts, Web Technologies.",
+            "Provides deeper learning on the various topics of data science, AI and deep Learning.",
+            "Provides deeper learning on the various topics of data science, AI and deep Learning.",
+            "The syllabus includes topics such as the algorithms, programming languages, operating systems, database management systems, computer network, computer graphics and artificial intelligence.",
+            "Fortnightly Group Mentorship with Industry mentors.",
+            "Bachelor’s Degree with 50% Or Equivalent passing marks. No coding experience required."
+        ],
+        "six_unique": [
+            "Block Chain Technologies",
+            "Artificial Intelligence",
+            "Data Science",
+            "Big Data Management",
+            "Social Network Analysis",
+            "Text Analytics"
+        ]
+    },
+    {
+        "dept_id": "002",
+        "regulation": {
+            "2019": "/path/to/regulation_19.pdf",
+            "2020": "/path/to/regulation_20.pdf",
+            "2021": "/path/to/regulation_21.pdf"
+        },
+        "academic_year": {
+            "2019-2020": "/path/to/academic_year_19_20.pdf",
+            "2020-2021": "/path/to/academic_year_20_21.pdf"
+        },
+        "program_outcomes": [
+            "PO1: Description of program outcome 1",
+            "PO2: Description of program outcome 2",
+            "PO3: Description of program outcome 3"
+        ],
+        "program_specific_outcomes": [
+            "PSO1: Description of program-specific outcome 1",
+            "PSO2: Description of program-specific outcome 2",
+            "PSO3: Description of program-specific outcome 3"
+        ],
+        "key_highlights": [
+            "Key Highlight 1: Description of key highlight 1",
+            "Key Highlight 2: Description of key highlight 2",
+            "Key Highlight 3: Description of key highlight 3"
+        ],
+        "six_unique": [
+            "Block Chain Technologies",
+            "Artificial Intelligence",
+            "Data Science",
+            "Big Data Management",
+            "Social Network Analysis",
+            "Text Analytics"
+        ]
+    },
+    {
+        "dept_id": "003",
+        "regulation": {
+            "2020": "/path/to/regulation_20.pdf",
+            "2021": "/path/to/regulation_21.pdf",
+            "2022": "/path/to/regulation_22.pdf"
+        },
+        "academic_year": {
+            "2020-2021": "/path/to/academic_year_20_21.pdf",
+            "2021-2022": "/path/to/academic_year_21_22.pdf"
+        },
+        "program_outcomes": [
+            "PO1: Description of program outcome 1",
+            "PO2: Description of program outcome 2",
+            "PO3: Description of program outcome 3",
+            "PO4: Description of program outcome 4"
+        ],
+        "program_specific_outcomes": [
+            "PSO1: Description of program-specific outcome 1",
+            "PSO2: Description of program-specific outcome 2",
+            "PSO3: Description of program-specific outcome 3"
+        ],
+        "key_highlights": [
+            "Key Highlight 1: Description of key highlight 1",
+            "Key Highlight 2: Description of key highlight 2",
+            "Key Highlight 3: Description of key highlight 3",
+            "Key Highlight 4: Description of key highlight 4"
+        ],
+        "six_unique": [
+            "Block Chain Technologies",
+            "Artificial Intelligence",
+            "Data Science",
+            "Big Data Management",
+            "Social Network Analysis",
+            "Text Analytics"
+        ]
+    },
+    {
+        "dept_id": "004",
+        "regulation": {
+            "2020": "/path/to/regulation_20.pdf",
+            "2021": "/path/to/regulation_21.pdf",
+            "2022": "/path/to/regulation_22.pdf"
+        },
+        "academic_year": {
+            "2020-2021": "/path/to/academic_year_20_21.pdf",
+            "2021-2022": "/path/to/academic_year_21_22.pdf"
+        },
+        "program_outcomes": [
+            "PO1: Description of program outcome 1",
+            "PO2: Description of program outcome 2",
+            "PO3: Description of program outcome 3",
+            "PO4: Description of program outcome 4"
+        ],
+        "program_specific_outcomes": [
+            "PSO1: Description of program-specific outcome 1",
+            "PSO2: Description of program-specific outcome 2",
+            "PSO3: Description of program-specific outcome 3"
+        ],
+        "key_highlights": [
+            "Key Highlight 1: Description of key highlight 1",
+            "Key Highlight 2: Description of key highlight 2",
+            "Key Highlight 3: Description of key highlight 3",
+            "Key Highlight 4: Description of key highlight 4"
+        ],
+        "six_unique": [
+            "Block Chain Technologies",
+            "Artificial Intelligence",
+            "Data Science",
+            "Big Data Management",
+            "Social Network Analysis",
+            "Text Analytics"
+        ]
+    },
+    {
+        "dept_id": "005",
+        "regulation": {
+            "2020": "/path/to/regulation_20.pdf",
+            "2021": "/path/to/regulation_21.pdf",
+            "2022": "/path/to/regulation_22.pdf"
+        },
+        "academic_year": {
+            "2020-2021": "/path/to/academic_year_20_21.pdf",
+            "2021-2022": "/path/to/academic_year_21_22.pdf"
+        },
+        "program_outcomes": [
+            "PO1: Description of program outcome 1",
+            "PO2: Description of program outcome 2",
+            "PO3: Description of program outcome 3",
+            "PO4: Description of program outcome 4"
+        ],
+        "program_specific_outcomes": [
+            "PSO1: Description of program-specific outcome 1",
+            "PSO2: Description of program-specific outcome 2",
+            "PSO3: Description of program-specific outcome 3"
+        ],
+        "key_highlights": [
+            "Key Highlight 1: Description of key highlight 1",
+            "Key Highlight 2: Description of key highlight 2",
+            "Key Highlight 3: Description of key highlight 3",
+            "Key Highlight 4: Description of key highlight 4"
+        ],
+        "six_unique": [
+            "Block Chain Technologies",
+            "Artificial Intelligence",
+            "Data Science",
+            "Big Data Management",
+            "Social Network Analysis",
+            "Text Analytics"
+        ]
+    },
+    {
+        "dept_id": "006",
+        "regulation": {
+            "2020": "/path/to/regulation_20.pdf",
+            "2021": "/path/to/regulation_21.pdf",
+            "2022": "/path/to/regulation_22.pdf"
+        },
+        "academic_year": {
+            "2020-2021": "/path/to/academic_year_20_21.pdf",
+            "2021-2022": "/path/to/academic_year_21_22.pdf"
+        },
+        "program_outcomes": [
+            "PO1: Description of program outcome 1",
+            "PO2: Description of program outcome 2",
+            "PO3: Description of program outcome 3",
+            "PO4: Description of program outcome 4"
+        ],
+        "program_specific_outcomes": [
+            "PSO1: Description of program-specific outcome 1",
+            "PSO2: Description of program-specific outcome 2",
+            "PSO3: Description of program-specific outcome 3"
+        ],
+        "key_highlights": [
+            "Key Highlight 1: Description of key highlight 1",
+            "Key Highlight 2: Description of key highlight 2",
+            "Key Highlight 3: Description of key highlight 3",
+            "Key Highlight 4: Description of key highlight 4"
+        ],
+        "six_unique": [
+            "Block Chain Technologies",
+            "Artificial Intelligence",
+            "Data Science",
+            "Big Data Management",
+            "Social Network Analysis",
+            "Text Analytics"
+        ]
+    },
+    {
+        "dept_id": "007",
+        "regulation": {
+            "2020": "/path/to/regulation_20.pdf",
+            "2021": "/path/to/regulation_21.pdf",
+            "2022": "/path/to/regulation_22.pdf"
+        },
+        "academic_year": {
+            "2020-2021": "/path/to/academic_year_20_21.pdf",
+            "2021-2022": "/path/to/academic_year_21_22.pdf"
+        },
+        "program_outcomes": [
+            "PO1: Description of program outcome 1",
+            "PO2: Description of program outcome 2",
+            "PO3: Description of program outcome 3",
+            "PO4: Description of program outcome 4"
+        ],
+        "program_specific_outcomes": [
+            "PSO1: Description of program-specific outcome 1",
+            "PSO2: Description of program-specific outcome 2",
+            "PSO3: Description of program-specific outcome 3"
+        ],
+        "key_highlights": [
+            "Key Highlight 1: Description of key highlight 1",
+            "Key Highlight 2: Description of key highlight 2",
+            "Key Highlight 3: Description of key highlight 3",
+            "Key Highlight 4: Description of key highlight 4"
+        ],
+        "six_unique": [
+            "Block Chain Technologies",
+            "Artificial Intelligence",
+            "Data Science",
+            "Big Data Management",
+            "Social Network Analysis",
+            "Text Analytics"
+        ]
+    },
+    {
+        "dept_id": "008",
+        "regulation": {
+            "2020": "/path/to/regulation_20.pdf",
+            "2021": "/path/to/regulation_21.pdf",
+            "2022": "/path/to/regulation_22.pdf"
+        },
+        "academic_year": {
+            "2020-2021": "/path/to/academic_year_20_21.pdf",
+            "2021-2022": "/path/to/academic_year_21_22.pdf"
+        },
+        "program_outcomes": [
+            "PO1: Description of program outcome 1",
+            "PO2: Description of program outcome 2",
+            "PO3: Description of program outcome 3",
+            "PO4: Description of program outcome 4"
+        ],
+        "program_specific_outcomes": [
+            "PSO1: Description of program-specific outcome 1",
+            "PSO2: Description of program-specific outcome 2",
+            "PSO3: Description of program-specific outcome 3"
+        ],
+        "key_highlights": [
+            "Key Highlight 1: Description of key highlight 1",
+            "Key Highlight 2: Description of key highlight 2",
+            "Key Highlight 3: Description of key highlight 3",
+            "Key Highlight 4: Description of key highlight 4"
+        ],
+        "six_unique": [
+            "Block Chain Technologies",
+            "Artificial Intelligence",
+            "Data Science",
+            "Big Data Management",
+            "Social Network Analysis",
+            "Text Analytics"
+        ]
+    },
+    {
+        "dept_id": "009",
+        "regulation": {
+            "2020": "/path/to/regulation_20.pdf",
+            "2021": "/path/to/regulation_21.pdf",
+            "2022": "/path/to/regulation_22.pdf"
+        },
+        "academic_year": {
+            "2020-2021": "/path/to/academic_year_20_21.pdf",
+            "2021-2022": "/path/to/academic_year_21_22.pdf"
+        },
+        "program_outcomes": [
+            "PO1: Description of program outcome 1",
+            "PO2: Description of program outcome 2",
+            "PO3: Description of program outcome 3",
+            "PO4: Description of program outcome 4"
+        ],
+        "program_specific_outcomes": [
+            "PSO1: Description of program-specific outcome 1",
+            "PSO2: Description of program-specific outcome 2",
+            "PSO3: Description of program-specific outcome 3"
+        ],
+        "key_highlights": [
+            "Key Highlight 1: Description of key highlight 1",
+            "Key Highlight 2: Description of key highlight 2",
+            "Key Highlight 3: Description of key highlight 3",
+            "Key Highlight 4: Description of key highlight 4"
+        ],
+        "six_unique": [
+            "Block Chain Technologies",
+            "Artificial Intelligence",
+            "Data Science",
+            "Big Data Management",
+            "Social Network Analysis",
+            "Text Analytics"
+        ]
+    },
+    {
+        "dept_id": "010",
+        "regulation": {
+            "2020": "/path/to/regulation_20.pdf",
+            "2021": "/path/to/regulation_21.pdf",
+            "2022": "/path/to/regulation_22.pdf"
+        },
+        "academic_year": {
+            "2020-2021": "/path/to/academic_year_20_21.pdf",
+            "2021-2022": "/path/to/academic_year_21_22.pdf"
+        },
+        "program_outcomes": [
+            "PO1: Description of program outcome 1",
+            "PO2: Description of program outcome 2",
+            "PO3: Description of program outcome 3",
+            "PO4: Description of program outcome 4"
+        ],
+        "program_specific_outcomes": [
+            "PSO1: Description of program-specific outcome 1",
+            "PSO2: Description of program-specific outcome 2",
+            "PSO3: Description of program-specific outcome 3"
+        ],
+        "key_highlights": [
+            "Key Highlight 1: Description of key highlight 1",
+            "Key Highlight 2: Description of key highlight 2",
+            "Key Highlight 3: Description of key highlight 3",
+            "Key Highlight 4: Description of key highlight 4"
+        ],
+        "six_unique": [
+            "Block Chain Technologies",
+            "Artificial Intelligence",
+            "Data Science",
+            "Big Data Management",
+            "Social Network Analysis",
+            "Text Analytics"
+        ]
+    },
+    {
+        "dept_id": "011",
+        "regulation": {
+            "2020": "/path/to/regulation_20.pdf",
+            "2021": "/path/to/regulation_21.pdf",
+            "2022": "/path/to/regulation_22.pdf"
+        },
+        "academic_year": {
+            "2020-2021": "/path/to/academic_year_20_21.pdf",
+            "2021-2022": "/path/to/academic_year_21_22.pdf"
+        },
+        "program_outcomes": [
+            "PO1: Description of program outcome 1",
+            "PO2: Description of program outcome 2",
+            "PO3: Description of program outcome 3",
+            "PO4: Description of program outcome 4"
+        ],
+        "program_specific_outcomes": [
+            "PSO1: Description of program-specific outcome 1",
+            "PSO2: Description of program-specific outcome 2",
+            "PSO3: Description of program-specific outcome 3"
+        ],
+        "key_highlights": [
+            "Key Highlight 1: Description of key highlight 1",
+            "Key Highlight 2: Description of key highlight 2",
+            "Key Highlight 3: Description of key highlight 3",
+            "Key Highlight 4: Description of key highlight 4"
+        ],
+        "six_unique": [
+            "Block Chain Technologies",
+            "Artificial Intelligence",
+            "Data Science",
+            "Big Data Management",
+            "Social Network Analysis",
+            "Text Analytics"
+        ]
+    },
+    {
+        "dept_id": "012",
+        "regulation": {
+            "2020": "/path/to/regulation_20.pdf",
+            "2021": "/path/to/regulation_21.pdf",
+            "2022": "/path/to/regulation_22.pdf"
+        },
+        "academic_year": {
+            "2020-2021": "/path/to/academic_year_20_21.pdf",
+            "2021-2022": "/path/to/academic_year_21_22.pdf"
+        },
+        "program_outcomes": [
+            "PO1: Description of program outcome 1",
+            "PO2: Description of program outcome 2",
+            "PO3: Description of program outcome 3",
+            "PO4: Description of program outcome 4"
+        ],
+        "program_specific_outcomes": [
+            "PSO1: Description of program-specific outcome 1",
+            "PSO2: Description of program-specific outcome 2",
+            "PSO3: Description of program-specific outcome 3"
+        ],
+        "key_highlights": [
+            "Key Highlight 1: Description of key highlight 1",
+            "Key Highlight 2: Description of key highlight 2",
+            "Key Highlight 3: Description of key highlight 3",
+            "Key Highlight 4: Description of key highlight 4"
+        ],
+        "six_unique": [
+            "Block Chain Technologies",
+            "Artificial Intelligence",
+            "Data Science",
+            "Big Data Management",
+            "Social Network Analysis",
+            "Text Analytics"
+        ]
+    },
+    {
+        "dept_id": "013",
+        "regulation": {
+            "2020": "/path/to/regulation_20.pdf",
+            "2021": "/path/to/regulation_21.pdf",
+            "2022": "/path/to/regulation_22.pdf"
+        },
+        "academic_year": {
+            "2020-2021": "/path/to/academic_year_20_21.pdf",
+            "2021-2022": "/path/to/academic_year_21_22.pdf"
+        },
+        "program_outcomes": [
+            "PO1: Description of program outcome 1",
+            "PO2: Description of program outcome 2",
+            "PO3: Description of program outcome 3",
+            "PO4: Description of program outcome 4"
+        ],
+        "program_specific_outcomes": [
+            "PSO1: Description of program-specific outcome 1",
+            "PSO2: Description of program-specific outcome 2",
+            "PSO3: Description of program-specific outcome 3"
+        ],
+        "key_highlights": [
+            "Key Highlight 1: Description of key highlight 1",
+            "Key Highlight 2: Description of key highlight 2",
+            "Key Highlight 3: Description of key highlight 3",
+            "Key Highlight 4: Description of key highlight 4"
+        ],
+        "six_unique": [
+            "Block Chain Technologies",
+            "Artificial Intelligence",
+            "Data Science",
+            "Big Data Management",
+            "Social Network Analysis",
+            "Text Analytics"
+        ]
+    },
+    {
+        "dept_id": "014",
+        "regulation": {
+            "2020": "/path/to/regulation_20.pdf",
+            "2021": "/path/to/regulation_21.pdf",
+            "2022": "/path/to/regulation_22.pdf"
+        },
+        "academic_year": {
+            "2020-2021": "/path/to/academic_year_20_21.pdf",
+            "2021-2022": "/path/to/academic_year_21_22.pdf"
+        },
+        "program_outcomes": [
+            "PO1: Description of program outcome 1",
+            "PO2: Description of program outcome 2",
+            "PO3: Description of program outcome 3",
+            "PO4: Description of program outcome 4"
+        ],
+        "program_specific_outcomes": [
+            "PSO1: Description of program-specific outcome 1",
+            "PSO2: Description of program-specific outcome 2",
+            "PSO3: Description of program-specific outcome 3"
+        ],
+        "key_highlights": [
+            "Key Highlight 1: Description of key highlight 1",
+            "Key Highlight 2: Description of key highlight 2",
+            "Key Highlight 3: Description of key highlight 3",
+            "Key Highlight 4: Description of key highlight 4"
+        ],
+        "six_unique": [
+            "Block Chain Technologies",
+            "Artificial Intelligence",
+            "Data Science",
+            "Big Data Management",
+            "Social Network Analysis",
+            "Text Analytics"
+        ]
+    },
+    {
+        "dept_id": "015",
+        "regulation": {
+            "2021": "/path/to/regulation_21.pdf",
+            "2022": "/path/to/regulation_22.pdf",
+            "2023": "/path/to/regulation_23.pdf"
+        },
+        "academic_year": {
+            "2021-2022": "/path/to/academic_year_21_22.pdf",
+            "2022-2023": "/path/to/academic_year_22_23.pdf",
+            "2023-2024": "/path/to/academic_year_23_24.pdf"
+        },
+        "program_outcomes": [
+            "PO1: Description of program outcome 1",
+            "PO2: Description of program outcome 2",
+            "PO3: Description of program outcome 3",
+            "PO4: Description of program outcome 4",
+            "PO5: Description of program outcome 5"
+        ],
+        "program_specific_outcomes": [
+            "PSO1: Description of program-specific outcome 1",
+            "PSO2: Description of program-specific outcome 2",
+            "PSO3: Description of program-specific outcome 3",
+            "PSO4: Description of program-specific outcome 4"
+        ],
+        "key_highlights": [
+            "Key Highlight 1: Description of key highlight 1",
+            "Key Highlight 2: Description of key highlight 2",
+            "Key Highlight 3: Description of key highlight 3",
+            "Key Highlight 4: Description of key highlight 4",
+            "Key Highlight 5: Description of key highlight 5"
+        ],
+        "six_unique": [
+            "Block Chain Technologies",
+            "Artificial Intelligence",
+            "Data Science",
+            "Big Data Management",
+            "Social Network Analysis",
+            "Text Analytics"
+        ]
+    }
+]
