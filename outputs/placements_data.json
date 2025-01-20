@@ -1,0 +1,159 @@
+[
+    {
+        "_id": "678e3ee402ece0d44bb31d14",
+        "department_wise": {
+            "CSE": {
+                "2015-19": "99.22",
+                "2016-20": "98.35",
+                "2017-21": "100",
+                "2018-22": "98.73",
+                "2019-23": "90.13",
+                "2020-24": "90.85"
+            },
+            "ECE": {
+                "2015-19": "92.94",
+                "2016-20": "98.35",
+                "2017-21": "100",
+                "2018-22": "97.37",
+                "2019-23": "100",
+                "2020-24": "77.46"
+            },
+            "EEE": {
+                "2015-19": "87.50",
+                "2016-20": "84.38",
+                "2017-21": "91.49",
+                "2018-22": "98.00",
+                "2019-23": "88.57",
+                "2020-24": "88.10"
+            },
+            "MECH": {
+                "2015-19": "96.67",
+                "2016-20": "76.27",
+                "2017-21": "95.00",
+                "2018-22": "98.48",
+                "2019-23": "80.21",
+                "2020-24": "88.33"
+            },
+            "IT": {
+                "2015-19": "95.00",
+                "2016-20": "96.00",
+                "2017-21": "100",
+                "2018-22": "98.00",
+                "2019-23": "90.00",
+                "2020-24": "75.00"
+            },
+            "EIE": {
+                "2015-19": "83.33",
+                "2016-20": "89.00",
+                "2017-21": "90.00",
+                "2018-22": "83.33",
+                "2019-23": "100",
+                "2020-24": "76.92"
+            },
+            "CIVIL": {
+                "2015-19": "76.67",
+                "2016-20": "88.64",
+                "2017-21": "88.00",
+                "2018-22": "93.10",
+                "2019-23": "80.00",
+                "2020-24": "100"
+            },
+            "AUTO": {
+                "2015-19": "71.43",
+                "2016-20": "74.19",
+                "2017-21": "94.44",
+                "2018-22": "88.24",
+                "2019-23": "89.00",
+                "2020-24": "77.78"
+            },
+            "AI & DS": {
+                "2015-19": "-",
+                "2016-20": "-",
+                "2017-21": "-",
+                "2018-22": "-",
+                "2019-23": "-",
+                "2020-24": "82.50"
+            },
+            "Over All": {
+                "2015-19": "91.59",
+                "2016-20": "90.72",
+                "2017-21": "95.00",
+                "2018-22": "96.69",
+                "2019-23": "92.51",
+                "2020-24": "83.99"
+            }
+        }
+    },
+    {
+        "_id": "678e3ee402ece0d44bb31d15",
+        "year_wise": {
+            "2010-11": "/Velammal-Engineering-College-Backend/static/placement_docs/placements_23-24.pdf",
+            "2011-12": "/Velammal-Engineering-College-Backend/static/placement_docs/placements_22-23.pdf",
+            "2012-13": "/Velammal-Engineering-College-Backend/static/placement_docs/placements_21-22.pdf",
+            "2013-14": "/Velammal-Engineering-College-Backend/static/placement_docs/placements_20-21.pdf",
+            "2014-15": "/Velammal-Engineering-College-Backend/static/placement_docs/placements_19-20.pdf",
+            "2015-16": "/Velammal-Engineering-College-Backend/static/placement_docs/placements_18-19.pdf",
+            "2016-17": "/Velammal-Engineering-College-Backend/static/placement_docs/placements_17-18.pdf",
+            "2017-18": "/Velammal-Engineering-College-Backend/static/placement_docs/placements_16-17.pdf",
+            "2018-19": "/Velammal-Engineering-College-Backend/static/placement_docs/placements_15-16.pdf",
+            "2019-20": "/Velammal-Engineering-College-Backend/static/placement_docs/placements_14-15.pdf",
+            "2020-21": "/Velammal-Engineering-College-Backend/static/placement_docs/placements_13-14.pdf",
+            "2021-22": "/Velammal-Engineering-College-Backend/static/placement_docs/placements_12-13.pdf",
+            "2022-23": "/Velammal-Engineering-College-Backend/static/placement_docs/placements_11-12.pdf",
+            "2023-24": "/Velammal-Engineering-College-Backend/static/placement_docs/2010.pdf"
+        }
+    },
+    {
+        "_id": "678e3ee402ece0d44bb31d16",
+        "statistics": {
+            "Number of Companies Visited": {
+                "2015-19": "328",
+                "2016-20": "227",
+                "2017-21": "233",
+                "2018-22": "250",
+                "2019-23": "208",
+                "2020-24": "294"
+            },
+            "Number of Students registered for Placements": {
+                "2015-19": "785",
+                "2016-20": "722",
+                "2017-21": "620",
+                "2018-22": "665",
+                "2019-23": "534",
+                "2020-24": "563"
+            },
+            "Number of Students Placed": {
+                "2015-19": "719",
+                "2016-20": "655",
+                "2017-21": "589",
+                "2018-22": "643",
+                "2019-23": "494",
+                "2020-24": "471"
+            },
+            "Total Number of Offers": {
+                "2015-19": "989",
+                "2016-20": "871",
+                "2017-21": "897",
+                "2018-22": "1059",
+                "2019-23": "651",
+                "2020-24": "602"
+            },
+            "Placement Percentage": {
+                "2015-19": "91.59",
+                "2016-20": "90.72",
+                "2017-21": "95.00",
+                "2018-22": "96.69",
+                "2019-23": "92.51",
+                "2020-24": "83.66"
+            },
+            "Average Salary": {
+                "2015-19": "4.10 LPA",
+                "2016-20": "4.30 LPA",
+                "2017-21": "4.54 LPA",
+                "2018-22": "4.66 LPA",
+                "2019-23": "6.10 LPA",
+                "2020-24": "6.15 LPA"
+            }
+        }
+    }
+]

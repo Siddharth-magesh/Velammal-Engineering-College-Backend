@@ -23,7 +23,7 @@ app.get("/", (req, res) => {
     res.send("Welcome to the Node.js MongoDB API!");
 });
 
-//Department Details
+//Vision and Mission
 app.get('/api/department/:id', async (req, res) => {
     const departmentId = parseInt(req.params.id); 
     const db = client.db(dbName);
@@ -358,6 +358,125 @@ app.get('/api/principal', async (req, res) => {
     } catch (error) {
         console.error("❌ Error fetching principal details:", error);
         res.status(500).json({ error: "Error fetching principal details" });
+    }
+});
+
+//Admin Office
+app.get('/api/admin_office', async (req, res) => {
+    const db = client.db(dbName);
+    const collection = db.collection('admin_office');
+
+    try {
+        const announcements = await collection.find({}).toArray();
+        if (announcements.length === 0) {
+            return res.status(404).json({ message: 'No announcements found' });
+        }
+        res.status(200).json(announcements);
+    } catch (error) {
+        console.error('❌ Error fetching announcements:', error);
+        res.status(500).json({ error: 'Error fetching announcements' });
+    }
+});
+
+//Committee
+app.get('/api/committee', async (req, res) => {
+    const db = client.db(dbName);
+    const collection = db.collection('committee');
+
+    try {
+        const announcements = await collection.find({}).toArray();
+        if (announcements.length === 0) {
+            return res.status(404).json({ message: 'No announcements found' });
+        }
+        res.status(200).json(announcements);
+    } catch (error) {
+        console.error('❌ Error fetching announcements:', error);
+        res.status(500).json({ error: 'Error fetching announcements' });
+    }
+});
+
+//Regulations
+app.get('/api/regulation', async (req, res) => {
+    const db = client.db(dbName);
+    const collection = db.collection('regulation');
+
+    try {
+        const announcements = await collection.find({}).toArray();
+        if (announcements.length === 0) {
+            return res.status(404).json({ message: 'No announcements found' });
+        }
+        res.status(200).json(announcements);
+    } catch (error) {
+        console.error('❌ Error fetching announcements:', error);
+        res.status(500).json({ error: 'Error fetching announcements' });
+    }
+});
+
+//Intakes
+app.get('/api/intakes', async (req, res) => {
+    const db = client.db(dbName);
+    const collection = db.collection('Intakes'); // Use the collection for intake data
+
+    try {
+        const intakes = await collection.find({}).toArray(); // Fetch all intakes
+        if (intakes.length === 0) {
+            return res.status(404).json({ message: 'No intake data found' });
+        }
+        res.status(200).json(intakes); // Return the data as JSON
+    } catch (error) {
+        console.error('❌ Error fetching intakes:', error);
+        res.status(500).json({ error: 'Error fetching intake data' });
+    }
+});
+
+// Placement Team
+app.get('/api/placement_team', async (req, res) => {
+    const db = client.db(dbName);
+    const collection = db.collection('placement_team');
+
+    try {
+        const placementTeam = await collection.find({}).toArray();
+        if (placementTeam.length === 0) {
+            return res.status(404).json({ message: 'No placement team data found' });
+        }
+        res.status(200).json(placementTeam);
+    } catch (error) {
+        console.error('❌ Error fetching placement team data:', error);
+        res.status(500).json({ error: 'Error fetching placement team data' });
+    }
+});
+
+//dean_and_associates
+app.get('/api/dean_and_associates', async (req, res) => {
+    const db = client.db(dbName);
+    const collection = db.collection('dean_and_associates');
+
+    try {
+        const deansData = await collection.find({}).toArray();
+        if (deansData.length === 0) {
+            return res.status(404).json({ message: 'No deans data found' });
+        }
+        res.status(200).json(deansData);
+    } catch (error) {
+        console.error('❌ Error fetching deans data:', error);
+        res.status(500).json({ error: 'Error fetching deans data' });
+    }
+});
+
+//Placements Data
+app.get('/api/placements_data', async (req, res) => {
+    const db = client.db(dbName);
+    const collection = db.collection('placements_data');
+
+    try {
+        const announcements = await collection.find({}).toArray();
+        if (announcements.length === 0) {
+            return res.status(404).json({ message: 'No announcements found' });
+        }
+        res.status(200).json(announcements);
+    } catch (error) {
+        console.error('❌ Error fetching announcements:', error);
+        res.status(500).json({ error: 'Error fetching announcements' });
     }
 });
 

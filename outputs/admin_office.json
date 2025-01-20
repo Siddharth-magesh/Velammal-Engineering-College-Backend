@@ -1,0 +1,74 @@
+[
+    {
+        "_id": "678df9390d7ead8278c5f043",
+        "name": "Kalpana M",
+        "designation": "Receptionist & ERP Co-ordinator",
+        "photo_path": "/Velammal-Engineering-College-Backend/static/admin_images/Kalpana.jpg"
+    },
+    {
+        "_id": "678df9390d7ead8278c5f044",
+        "name": "S Kalyani",
+        "designation": "PA to Principal",
+        "photo_path": "/Velammal-Engineering-College-Backend/static/admin_images/Kalyani.jpg"
+    },
+    {
+        "_id": "678df9390d7ead8278c5f045",
+        "name": "B Prakash Kumar",
+        "designation": "Superintendent",
+        "photo_path": "/Velammal-Engineering-College-Backend/static/admin_images/KaPrakash Kumar.jpg"
+    },
+    {
+        "_id": "678df9390d7ead8278c5f046",
+        "name": "C Muruganantham",
+        "designation": "Clerk",
+        "photo_path": "/Velammal-Engineering-College-Backend/static/admin_images/Muruganantham.jpg"
+    },
+    {
+        "_id": "678df9390d7ead8278c5f047",
+        "name": "Vithya",
+        "designation": "Accountant Assistant",
+        "photo_path": "/Velammal-Engineering-College-Backend/static/admin_images/Vithya.jpg"
+    },
+    {
+        "_id": "678df9390d7ead8278c5f048",
+        "name": "E Esther Flora ",
+        "designation": "Manager â€“ HR",
+        "photo_path": "/Velammal-Engineering-College-Backend/static/admin_images/Esther Flora.jpg"
+    },
+    {
+        "_id": "678df9390d7ead8278c5f049",
+        "name": "N Nivethitha",
+        "designation": "Admission Co-Ordinator",
+        "photo_path": "/Velammal-Engineering-College-Backend/static/admin_images/Nivethitha.jpg"
+    },
+    {
+        "_id": "678df9390d7ead8278c5f04a",
+        "name": "K Sheeba",
+        "designation": "Student Affairs",
+        "photo_path": "/Velammal-Engineering-College-Backend/static/admin_images/Sheeba.jpg"
+    },
+    {
+        "_id": "678df9390d7ead8278c5f04b",
+        "name": "M Rajalakshmi",
+        "designation": "Cashier",
+        "photo_path": "/Velammal-Engineering-College-Backend/static/admin_images/Rajalakshmi.jpg"
+    },
+    {
+        "_id": "678df9390d7ead8278c5f04c",
+        "name": "Karthikeyan N",
+        "designation": "Office Assistant",
+        "photo_path": "/Velammal-Engineering-College-Backend/static/admin_images/Karthikeyan.jpg"
+    },
+    {
+        "_id": "678df9390d7ead8278c5f04d",
+        "name": "Thavamani T",
+        "designation": "Office Assistant",
+        "photo_path": "/Velammal-Engineering-College-Backend/static/admin_images/Thavamani.jpg"
+    },
+    {
+        "_id": "678df9390d7ead8278c5f04e",
+        "name": "R Lakshmi",
+        "designation": "Office Assistant",
+        "photo_path": "/Velammal-Engineering-College-Backend/static/admin_images/Lakshmi.jpg"
+    }
+]

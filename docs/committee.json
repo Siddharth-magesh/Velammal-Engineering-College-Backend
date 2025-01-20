@@ -1,0 +1,98 @@
+[
+    {
+        "name": "academic_council",
+        "pdf_path": "/Velammal-Engineering-College-Backend/static/committee_docs/academic_council.pdf"
+    },
+    {
+        "name": "governing_body",
+        "pdf_path": "/Velammal-Engineering-College-Backend/static/committee_docs/governing_body.pdf"
+    },
+    {
+        "name": "finance_committee",
+        "pdf_path": "/Velammal-Engineering-College-Backend/static/committee_docs/finance_committee.pdf"
+    },
+    {
+        "name": "research_committee",
+        "pdf_path": "/Velammal-Engineering-College-Backend/static/committee_docs/research_committee.pdf"
+    },
+    {
+        "name": "internal_quality_assurance_cell",
+        "pdf_path": "/Velammal-Engineering-College-Backend/static/committee_docs/internal_quality_assurance_cell.pdf"
+    },
+    {
+        "name": "planning_and_monitoring_committee",
+        "pdf_path": "/Velammal-Engineering-College-Backend/static/committee_docs/planning_and_monitoring_committee.pdf"
+    },
+    {
+        "name": "anti-ragging_committee",
+        "pdf_path": "/Velammal-Engineering-College-Backend/static/committee_docs/anti-ragging_committee.pdf"
+    },
+    {
+        "name": "anti-ragging_squad",
+        "pdf_path": "/Velammal-Engineering-College-Backend/static/committee_docs/anti-ragging_squad.pdf"
+    },
+    {
+        "name": "discipline_and_welfare_committee",
+        "pdf_path": "/Velammal-Engineering-College-Backend/static/committee_docs/discipline_and_welfare_committee.pdf"
+    },
+    {
+        "name": "grievance_redressal_committee",
+        "pdf_path": "/Velammal-Engineering-College-Backend/static/committee_docs/grievance_redressal_committee.pdf"
+    },
+    {
+        "name": "scst_committee",
+        "pdf_path": "/Velammal-Engineering-College-Backend/static/committee_docs/sc/st_committee.pdf"
+    },
+    {
+        "name": "internal_complaint_committee",
+        "pdf_path": "/Velammal-Engineering-College-Backend/static/committee_docs/internal_complaint_committee.pdf"
+    },
+    {
+        "name": "gender_issues_committee",
+        "pdf_path": "/Velammal-Engineering-College-Backend/static/committee_docs/gender_issues_committee.pdf"
+    },
+    {
+        "name": "institute_industry_interaction_cell",
+        "pdf_path": "/Velammal-Engineering-College-Backend/static/committee_docs/institute_industry_interaction_cell.pdf"
+    },
+    {
+        "name": "nirf_innovation_cell",
+        "pdf_path": "/Velammal-Engineering-College-Backend/static/committee_docs/nirf_innovation_cell.pdf"
+    },
+    {
+        "name": "institution's_innovation_council",
+        "pdf_path": "/Velammal-Engineering-College-Backend/static/committee_docs/institution's_innovation_council.pdf"
+    },
+    {
+        "name": "social_media_cell",
+        "pdf_path": "/Velammal-Engineering-College-Backend/static/committee_docs/social_media_cell.pdf"
+    },
+    {
+        "name": "lemonivy-vec_enterpreneurship_cell",
+        "pdf_path": "/Velammal-Engineering-College-Backend/static/committee_docs/lemonivy-vec_enterpreneurship_cell.pdf"
+    },
+    {
+        "name": "women_enterpreneurship_cell",
+        "pdf_path": "/Velammal-Engineering-College-Backend/static/committee_docs/women_enterpreneurship_cell.pdf"
+    },
+    {
+        "name": "intelluctual_property_rights_cell",
+        "pdf_path": "/Velammal-Engineering-College-Backend/static/committee_docs/intelluctual_property_rights_cell.pdf"
+    },
+    {
+        "name": "innovation_cell",
+        "pdf_path": "/Velammal-Engineering-College-Backend/static/committee_docs/innovation_cell.pdf"
+    },
+    {
+        "name": "start-up_cell",
+        "pdf_path": "/Velammal-Engineering-College-Backend/static/committee_docs/start-up_cell.pdf"
+    },
+    {
+        "name": "technology_transfer_cell",
+        "pdf_path": "/Velammal-Engineering-College-Backend/static/committee_docs/technology_transfer_cell.pdf"
+    },
+    {
+        "name": "internship_cell",
+        "pdf_path": "/Velammal-Engineering-College-Backend/static/committee_docs/Internship_cell.pdf"
+    }
+]

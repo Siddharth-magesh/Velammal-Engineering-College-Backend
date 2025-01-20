@@ -1,0 +1,122 @@
+[
+    {
+        "_id": "678e252c0ea149b9a75ca22a",
+        "name": "academic_council",
+        "pdf_path": "/Velammal-Engineering-College-Backend/static/committee_docs/academic_council.pdf"
+    },
+    {
+        "_id": "678e252c0ea149b9a75ca22b",
+        "name": "governing_body",
+        "pdf_path": "/Velammal-Engineering-College-Backend/static/committee_docs/governing_body.pdf"
+    },
+    {
+        "_id": "678e252c0ea149b9a75ca22c",
+        "name": "finance_committee",
+        "pdf_path": "/Velammal-Engineering-College-Backend/static/committee_docs/finance_committee.pdf"
+    },
+    {
+        "_id": "678e252c0ea149b9a75ca22d",
+        "name": "research_committee",
+        "pdf_path": "/Velammal-Engineering-College-Backend/static/committee_docs/research_committee.pdf"
+    },
+    {
+        "_id": "678e252c0ea149b9a75ca22e",
+        "name": "internal_quality_assurance_cell",
+        "pdf_path": "/Velammal-Engineering-College-Backend/static/committee_docs/internal_quality_assurance_cell.pdf"
+    },
+    {
+        "_id": "678e252c0ea149b9a75ca22f",
+        "name": "planning_and_monitoring_committee",
+        "pdf_path": "/Velammal-Engineering-College-Backend/static/committee_docs/planning_and_monitoring_committee.pdf"
+    },
+    {
+        "_id": "678e252c0ea149b9a75ca230",
+        "name": "anti-ragging_committee",
+        "pdf_path": "/Velammal-Engineering-College-Backend/static/committee_docs/anti-ragging_committee.pdf"
+    },
+    {
+        "_id": "678e252c0ea149b9a75ca231",
+        "name": "anti-ragging_squad",
+        "pdf_path": "/Velammal-Engineering-College-Backend/static/committee_docs/anti-ragging_squad.pdf"
+    },
+    {
+        "_id": "678e252c0ea149b9a75ca232",
+        "name": "discipline_and_welfare_committee",
+        "pdf_path": "/Velammal-Engineering-College-Backend/static/committee_docs/discipline_and_welfare_committee.pdf"
+    },
+    {
+        "_id": "678e252c0ea149b9a75ca233",
+        "name": "grievance_redressal_committee",
+        "pdf_path": "/Velammal-Engineering-College-Backend/static/committee_docs/grievance_redressal_committee.pdf"
+    },
+    {
+        "_id": "678e252c0ea149b9a75ca234",
+        "name": "scst_committee",
+        "pdf_path": "/Velammal-Engineering-College-Backend/static/committee_docs/sc/st_committee.pdf"
+    },
+    {
+        "_id": "678e252c0ea149b9a75ca235",
+        "name": "internal_complaint_committee",
+        "pdf_path": "/Velammal-Engineering-College-Backend/static/committee_docs/internal_complaint_committee.pdf"
+    },
+    {
+        "_id": "678e252c0ea149b9a75ca236",
+        "name": "gender_issues_committee",
+        "pdf_path": "/Velammal-Engineering-College-Backend/static/committee_docs/gender_issues_committee.pdf"
+    },
+    {
+        "_id": "678e252c0ea149b9a75ca237",
+        "name": "institute_industry_interaction_cell",
+        "pdf_path": "/Velammal-Engineering-College-Backend/static/committee_docs/institute_industry_interaction_cell.pdf"
+    },
+    {
+        "_id": "678e252c0ea149b9a75ca238",
+        "name": "nirf_innovation_cell",
+        "pdf_path": "/Velammal-Engineering-College-Backend/static/committee_docs/nirf_innovation_cell.pdf"
+    },
+    {
+        "_id": "678e252c0ea149b9a75ca239",
+        "name": "institution's_innovation_council",
+        "pdf_path": "/Velammal-Engineering-College-Backend/static/committee_docs/institution's_innovation_council.pdf"
+    },
+    {
+        "_id": "678e252c0ea149b9a75ca23a",
+        "name": "social_media_cell",
+        "pdf_path": "/Velammal-Engineering-College-Backend/static/committee_docs/social_media_cell.pdf"
+    },
+    {
+        "_id": "678e252c0ea149b9a75ca23b",
+        "name": "lemonivy-vec_enterpreneurship_cell",
+        "pdf_path": "/Velammal-Engineering-College-Backend/static/committee_docs/lemonivy-vec_enterpreneurship_cell.pdf"
+    },
+    {
+        "_id": "678e252c0ea149b9a75ca23c",
+        "name": "women_enterpreneurship_cell",
+        "pdf_path": "/Velammal-Engineering-College-Backend/static/committee_docs/women_enterpreneurship_cell.pdf"
+    },
+    {
+        "_id": "678e252c0ea149b9a75ca23d",
+        "name": "intelluctual_property_rights_cell",
+        "pdf_path": "/Velammal-Engineering-College-Backend/static/committee_docs/intelluctual_property_rights_cell.pdf"
+    },
+    {
+        "_id": "678e252c0ea149b9a75ca23e",
+        "name": "innovation_cell",
+        "pdf_path": "/Velammal-Engineering-College-Backend/static/committee_docs/innovation_cell.pdf"
+    },
+    {
+        "_id": "678e252c0ea149b9a75ca23f",
+        "name": "start-up_cell",
+        "pdf_path": "/Velammal-Engineering-College-Backend/static/committee_docs/start-up_cell.pdf"
+    },
+    {
+        "_id": "678e252c0ea149b9a75ca240",
+        "name": "technology_transfer_cell",
+        "pdf_path": "/Velammal-Engineering-College-Backend/static/committee_docs/technology_transfer_cell.pdf"
+    },
+    {
+        "_id": "678e252c0ea149b9a75ca241",
+        "name": "internship_cell",
+        "pdf_path": "/Velammal-Engineering-College-Backend/static/committee_docs/Internship_cell.pdf"
+    }
+]

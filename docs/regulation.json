@@ -1,0 +1,26 @@
+[
+    {
+        "name": "R2023(B.E/B.Tech)",
+        "pdf_path": "/Velammal-Engineering-College-Backend/static/regulation_docs/2023_be.pdf"
+    },
+    {
+        "name": "R2023(M.E)",
+        "pdf_path": "/Velammal-Engineering-College-Backend/static/regulation_docs/2023_me.pdf"
+    },
+    {
+        "name": "R2023(MBA)",
+        "pdf_path": "/Velammal-Engineering-College-Backend/static/regulation_docs/2023_mba.pdf"
+    },
+    {
+        "name": "R2019(B.E/B.Tech)",
+        "pdf_path": "/Velammal-Engineering-College-Backend/static/regulation_docs/2019_be.pdf"
+    },
+    {
+        "name": "R2019(M.E)",
+        "pdf_path": "/Velammal-Engineering-College-Backend/static/regulation_docs/2019_me.pdf"
+    },
+    {
+        "name": "R2019(MBA)",
+        "pdf_path": "/Velammal-Engineering-College-Backend/static/regulation_docs/2019_mba.pdf"
+    }
+]

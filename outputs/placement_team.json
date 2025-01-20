@@ -1,0 +1,25 @@
+[
+    {
+        "_id": "678e3ee402ece0d44bb31cf4",
+        "placement_team": [
+            {
+                "name": "Arun Ramaswami A",
+                "designation": "Head of Placement",
+                "content": "Being a post graduate in Business Administration, he is an expert in using his people skills and networking to design students' careers. Mr. Arun strongly believes that getting a job is just a primitive stage, and students have to scale greater heights and bring laurels to our brand, 'Velammal,' globally. His primary focus is on the learning and development of the students in various employability skills in addition to their academic curriculum. He has consistently produced 90% placement in Velammal Group of Colleges, Chennai & Madurai, and improved the average salary to 4.20 LPA. More than 200+ students every year get more than 6.50 LPA.",
+                "photo_path": "/images/placement_team/arun_ramaswami.jpg"
+            },
+            {
+                "name": "Stella Sivanathan",
+                "designation": "Placement Coordinator",
+                "content": "Responsible for coordinating placements and interacting with companies to ensure students have access to top-notch career opportunities.",
+                "photo_path": "/images/placement_team/stella_sivanathan.jpg"
+            },
+            {
+                "name": "Pariksith Vaishnavi",
+                "designation": "Placement Coordinator",
+                "content": "Focused on providing guidance and resources to students for preparing them for job interviews and career advancement.",
+                "photo_path": "/images/placement_team/pariksith_vaishnavi.jpg"
+            }
+        ]
+    }
+]
