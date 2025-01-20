@@ -1,0 +1,62 @@
+[
+    {
+        "start_date": "2025-02-01",
+        "end_date": "2025-02-03",
+        "title": "AI and Robotics Expo",
+        "department": "Computer Science",
+        "content": "An exhibition showcasing advancements in AI and robotics with live demonstrations and keynote sessions.",
+        "brochure_path": "brochures/ai_robotics_expo.pdf",
+        "website_link": "https://airobotics2025.com",
+        "status": "True"
+    },
+    {
+        "start_date": "2025-03-15",
+        "end_date": "2025-03-16",
+        "title": "Sustainable Energy Summit",
+        "department": "Electrical Engineering",
+        "content": "A conference discussing innovations in renewable energy and sustainable practices.",
+        "brochure_path": "brochures/sustainable_energy_summit.pdf",
+        "website_link": "https://sustainable2025.com",
+        "status": "True"
+    },
+    {
+        "start_date": "2025-04-10",
+        "end_date": "2025-04-12",
+        "title": "HealthTech Conference",
+        "department": "Biomedical Engineering",
+        "content": "Exploring the intersection of technology and healthcare with workshops and panel discussions.",
+        "brochure_path": "brochures/healthtech_conference.pdf",
+        "website_link": "https://healthtech2025.com",
+        "status": "True"
+    },
+    {
+        "start_date": "2025-05-05",
+        "end_date": "2025-05-07",
+        "title": "Entrepreneurship Bootcamp",
+        "department": "Business Administration",
+        "content": "An intensive bootcamp for budding entrepreneurs with mentorship sessions and networking opportunities.",
+        "brochure_path": "brochures/entrepreneurship_bootcamp.pdf",
+        "website_link": "https://entrepreneurship2025.com",
+        "status": "True"
+    },
+    {
+        "start_date": "2025-06-01",
+        "end_date": "2025-06-03",
+        "title": "Environmental Awareness Week",
+        "department": "Environmental Science",
+        "content": "A week dedicated to raising awareness about environmental conservation and sustainability.",
+        "brochure_path": "brochures/environmental_awareness_week.pdf",
+        "website_link": "https://environmental2025.com",
+        "status": "True"
+    },
+    {
+        "start_date": "2025-08-15",
+        "end_date": "2025-08-17",
+        "title": "Cultural Fest 2025",
+        "department": "Cultural Club",
+        "content": "A vibrant cultural fest featuring music, dance, and art performances from around the globe.",
+        "brochure_path": "brochures/cultural_fest_2025.pdf",
+        "website_link": "https://culturalfest2025.com",
+        "status": "True"
+    }
+]

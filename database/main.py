@@ -88,7 +88,8 @@ def generate_unique_id(index, department, designation):
     return f"VEC-{department_id}-{designation_id}-{unique_id}"
 
 
-df = df.head(1)
+df = df.head(1) #Remove this line to deactivate Test settings
+
 df['unique_id'] = [
     generate_unique_id(i, df.at[i, 'Department Name'], df.at[i, 'Designation'])
     for i in range(len(df))
@@ -544,6 +545,39 @@ def insert_curriculum_data():
 
     print("Cirrculum documents inserted successfully.")
 
+def insert_events_data():
+    collection = db['events']  
+    with open("/Velammal-Engineering-College-Backend/docs/events.json", "r") as file:
+        documents = json.load(file)
+        collection.insert_many(documents)
+
+    print("Events documents inserted successfully.")
+
+def insert_special_announcements():
+    collection = db['special_announcement']  
+    with open("/Velammal-Engineering-College-Backend/docs/special_announcements.json", "r") as file:
+        documents = json.load(file)
+        collection.insert_many(documents)
+
+    print("special_announcements documents inserted successfully.")
+
+def insert_announcements_data():
+   
+    collection = db['announcements']  
+    with open("/Velammal-Engineering-College-Backend/docs/announcements.json", "r") as file:
+        documents = json.load(file)
+        collection.insert_many(documents)
+
+    print("Announcements documents inserted successfully.")
+
+def principal_data():
+    collection = db["principal_data"]
+    with open("/Velammal-Engineering-College-Backend/docs/principal_data.json", "r") as file:
+        documents = json.load(file)
+        collection.insert_many(documents)
+
+    print("Principals documents inserted successfully.")
+
 def process_and_combine_Department_Activities_data(folder_path, dept_id):
     COLLECTION_NAME = "department_activities"
     collection = db[COLLECTION_NAME]
@@ -602,6 +636,10 @@ insert_student_activities_data()
 insert_support_staff_data()
 insert_MOUs_data()
 insert_curriculum_data()
+insert_events_data()
+insert_announcements_data()
+insert_special_announcements()
+principal_data()
 
 department_paths = {
     "1": "/Velammal-Engineering-College-Backend/docs/AIDS-DEPT-ACT/",
@@ -663,5 +701,5 @@ def upload_research_data(folder_path):
                 except Exception as e:
                     print(f"❌ Error processing {filename}: {e}")
 
-folder_path = r'D:\Velammal-Engineering-College-Backend\docs\RESEARCH-DATA'
+folder_path = r'/Velammal-Engineering-College-Backend/docs/RESEARCH-DATA'
 upload_research_data(folder_path)

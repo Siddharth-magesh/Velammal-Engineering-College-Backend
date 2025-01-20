@@ -286,6 +286,81 @@ app.get('/api/fetch-research-data/:dept_id/:year', async (req, res) => {
     }
 });
 
+// Fetch Event Details
+app.get('/api/events/active', async (req, res) => {
+    const db = client.db(dbName);
+    const collection = db.collection('events');
+
+    try {
+        const activeEvents = await collection.aggregate([
+            { $unwind: "$events" },
+            { $match: { "events.status": "True" } },
+            { $replaceRoot: { newRoot: "$events" } }
+        ]).toArray();
+
+        if (activeEvents.length === 0) {
+            return res.status(404).json({ message: "No active events found" });
+        }
+
+        res.status(200).json(activeEvents);
+
+    } catch (error) {
+        console.error("❌ Error fetching active events:", error);
+        res.status(500).json({ error: "Error fetching active events" });
+    }
+});
+
+// Fetch announcements
+app.get('/api/announcements', async (req, res) => {
+    const db = client.db(dbName);
+    const collection = db.collection('announcements');
+
+    try {
+        const announcements = await collection.find({}).toArray();
+        if (announcements.length === 0) {
+            return res.status(404).json({ message: 'No announcements found' });
+        }
+        res.status(200).json(announcements);
+    } catch (error) {
+        console.error('❌ Error fetching announcements:', error);
+        res.status(500).json({ error: 'Error fetching announcements' });
+    }
+});
+
+// Fetch Special announcements
+app.get('/api/special_announcements', async (req, res) => {
+    const db = client.db(dbName);
+    const collection = db.collection('special_announcement');
+
+    try {
+        const nominationDetails = await collection.find({}).toArray();
+        if (nominationDetails.length === 0) {
+            return res.status(404).json({ message: "No special_announcement details found" });
+        }
+        res.status(200).json(nominationDetails);
+    } catch (error) {
+        console.error("❌ Error fetching special_announcement details:", error);
+        res.status(500).json({ error: "Error fetching special_announcement details" });
+    }
+});
+
+// Fetch Principal Details
+app.get('/api/principal', async (req, res) => {
+    const db = client.db(dbName);
+    const collection = db.collection('principal_data');
+
+    try {
+        const principalDetails = await collection.findOne({});
+        if (!principalDetails) {
+            return res.status(404).json({ message: "Principal details not found" });
+        }
+        res.status(200).json(principalDetails);
+    } catch (error) {
+        console.error("❌ Error fetching principal details:", error);
+        res.status(500).json({ error: "Error fetching principal details" });
+    }
+});
+
 app.listen(port, () => {
     console.log(`🚀 Server running at http://localhost:${port}`);
 });
