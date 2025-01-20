@@ -10,8 +10,8 @@ db_name = "VEC"
 collection_name = "staff_details"
 
 file_path = r"/Velammal-Engineering-College-Backend/docs/VEC Faculty Details.csv"
-photo_base_dir = r"/Velammal-Engineering-College-Backend/database/static/profile_photos/"
-base_save_dir = r"/Velammal-Engineering-College-Backend/database/static/staff_scholar_details/"
+photo_base_dir = r"/Velammal-Engineering-College-Backend/static/profile_photos/"
+base_save_dir = r"/Velammal-Engineering-College-Backend/static/staff_scholar_details/"
 
 client = MongoClient(mongo_uri)
 db = client[db_name]
@@ -578,6 +578,64 @@ def principal_data():
 
     print("Principals documents inserted successfully.")
 
+def insert_admin_office_data():
+    collection = db['admin_office']  
+    with open("/Velammal-Engineering-College-Backend/docs/admin_office.json", "r") as file:
+        documents = json.load(file)
+        collection.insert_many(documents)
+
+    print("admin office documents inserted successfully.")
+
+def insert_committee_data():
+
+    collection = db['committee']  
+    with open("/Velammal-Engineering-College-Backend/docs/committee.json", "r") as file:
+        documents = json.load(file)
+        collection.insert_many(documents)
+
+    print("Committee documents inserted successfully.")
+
+def insert_regulation_data():
+    collection = db['regulation']  
+    with open("/Velammal-Engineering-College-Backend/docs/regulation.json", "r") as file:
+        documents = json.load(file)
+        collection.insert_many(documents)
+
+    print("regulation documents inserted successfully.")
+
+def placement_team():
+    collection = db["placement_team"]
+    with open('/Velammal-Engineering-College-Backend/docs/placement_members.json', 'r') as file:
+        documents = json.load(file)
+        collection.insert_many(documents)
+
+    print(f"Placement Team Details Inserted")
+
+def insert_intake_data():    
+    collection = db["Intakes"]        
+    with open('/Velammal-Engineering-College-Backend/docs/intakes.json', "r") as file:
+        documents = json.load(file)
+    collection.insert_many(documents)
+
+    print("Intake data inserted successfully.")
+
+def insert_dean_and_associates_data():    
+    collection = db["dean_and_associates"]        
+    with open('/Velammal-Engineering-College-Backend/docs/dean_and_associates.json', "r") as file:
+        documents = json.load(file)
+    collection.insert_many(documents)
+
+    print("dean_and_associates data inserted successfully.")
+
+def insert_placement_data():
+
+    collection = db['placements_data']  
+    with open("/Velammal-Engineering-College-Backend/docs/placements_data.json", "r") as file:
+        documents = json.load(file)
+        collection.insert_many(documents)
+
+    print("placement documents inserted successfully.")
+
 def process_and_combine_Department_Activities_data(folder_path, dept_id):
     COLLECTION_NAME = "department_activities"
     collection = db[COLLECTION_NAME]
@@ -640,6 +698,13 @@ insert_events_data()
 insert_announcements_data()
 insert_special_announcements()
 principal_data()
+insert_admin_office_data()
+placement_team()
+insert_regulation_data()
+insert_intake_data()
+insert_committee_data()
+insert_placement_data()
+insert_dean_and_associates_data()
 
 department_paths = {
     "1": "/Velammal-Engineering-College-Backend/docs/AIDS-DEPT-ACT/",
