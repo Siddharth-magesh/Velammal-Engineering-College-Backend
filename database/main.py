@@ -705,6 +705,24 @@ def process_and_combine_Department_Activities_data(folder_path, dept_id):
     )
     print(f"Data combined and inserted into MongoDB under dept_id '{dept_id}'.")
 
+def insert_alumni_data(directory_path='/Velammal-Engineering-College-Backend/docs/ALUMINI'):
+    collection = db["alumni"]
+
+    for filename in os.listdir(directory_path):
+        if filename.endswith(".json"):
+            file_path = os.path.join(directory_path, filename)
+            with open(file_path, "r") as file:
+                data = json.load(file)
+                if isinstance(data, list):
+                    collection.insert_many(data)
+                elif isinstance(data, dict):
+                    collection.insert_one(data)
+                else:
+                    print(f"Unsupported data format in file: {filename}")
+
+    print(f"Data from JSON files in '{directory_path}' has been inserted into the 'alumni' collection.")
+
+
 insert_department_data()
 insert_hod_datas()
 insert_infrastructure_data()
@@ -725,6 +743,7 @@ insert_placement_data()
 insert_dean_and_associates_data()
 insert_curriculum_and_syllabus_data()
 insert_all_forms_data()
+insert_alumni_data()
 
 department_paths = {
     "1": "/Velammal-Engineering-College-Backend/docs/AIDS-DEPT-ACT/",

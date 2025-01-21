@@ -480,6 +480,7 @@ app.get('/api/placements_data', async (req, res) => {
     }
 });
 
+//all_forms
 app.get('/api/all_forms', async (req, res) => {
     const db = client.db(dbName);
     const collection = db.collection('all_forms');
@@ -496,6 +497,7 @@ app.get('/api/all_forms', async (req, res) => {
     }
 });
 
+//curriculum_and_syllabus
 app.get('/api/curriculum_and_syllabus', async (req, res) => {
     const db = client.db(dbName);
     const collection = db.collection('curriculum_and_syllabus');
@@ -509,6 +511,23 @@ app.get('/api/curriculum_and_syllabus', async (req, res) => {
     } catch (error) {
         console.error('❌ Error fetching curriculum and syllabus', error);
         res.status(500).json({ error: 'Error fetching curriculum and syllabus' });
+    }
+});
+
+//alumni
+app.get('/api/alumni', async (req, res) => {
+    const db = client.db(dbName);
+    const collection = db.collection('alumni');
+
+    try {
+        const alumniData = await collection.find({}).toArray();
+        if (alumniData.length === 0) {
+            return res.status(404).json({ message: 'No alumni data found' });
+        }
+        res.status(200).json(alumniData);
+    } catch (error) {
+        console.error('❌ Error fetching alumni data:', error);
+        res.status(500).json({ error: 'Error fetching alumni data' });
     }
 });
 

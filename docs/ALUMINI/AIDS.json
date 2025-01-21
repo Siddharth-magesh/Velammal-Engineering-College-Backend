@@ -1,0 +1,51 @@
+[
+    {
+        "alumni": [
+        {
+            "department_name": "AIDS",
+            "students": [
+            {
+                "name": "test",
+                "photo": "path",
+                "year": "2022-26",
+                "company_name": "test",
+                "LPA": 50000
+            },
+            {
+                "name": "test",
+                "photo": "path",
+                "year": "2022-26",
+                "company_name": "test",
+                "LPA": 50000
+            },
+            {
+                "name": "test",
+                "photo": "path",
+                "year": "2022-26",
+                "company_name": "test",
+                "LPA": 50000
+            }
+            ]
+        },
+        {
+            "department_name": "CSE",
+            "students": [
+            {
+                "name": "test",
+                "photo": "path",
+                "year": "2022-26",
+                "company_name": "test",
+                "LPA": 50000
+            },
+            {
+                "name": "test",
+                "photo": "path",
+                "year": "2022-26",
+                "company_name": "test",
+                "LPA": 50000
+            }
+            ]
+        }
+        ]
+    }
+]  
