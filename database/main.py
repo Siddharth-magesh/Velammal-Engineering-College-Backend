@@ -636,6 +636,24 @@ def insert_placement_data():
 
     print("placement documents inserted successfully.")
 
+def insert_curriculum_and_syllabus_data():
+
+    collection = db['curriculum_and_syllabus']  
+    with open("/Velammal-Engineering-College-Backend/docs/curriculum_and_syllabus.json", "r") as file:
+        documents = json.load(file)
+        collection.insert_many(documents)
+
+    print("curriculum_And_syllabus documents inserted successfully.")
+
+def insert_all_forms_data():
+
+    collection = db['all_forms']  
+    with open("/Velammal-Engineering-College-Backend/docs/all_forms.json", "r") as file:
+        documents = json.load(file)
+        collection.insert_many(documents)
+
+    print("all_forms documents inserted successfully.")
+
 def process_and_combine_Department_Activities_data(folder_path, dept_id):
     COLLECTION_NAME = "department_activities"
     collection = db[COLLECTION_NAME]
@@ -705,6 +723,8 @@ insert_intake_data()
 insert_committee_data()
 insert_placement_data()
 insert_dean_and_associates_data()
+insert_curriculum_and_syllabus_data()
+insert_all_forms_data()
 
 department_paths = {
     "1": "/Velammal-Engineering-College-Backend/docs/AIDS-DEPT-ACT/",

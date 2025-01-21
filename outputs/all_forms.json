@@ -1,0 +1,30 @@
+[
+    {
+        "_id": "678f18748790582e4f697ec1",
+        "students": {
+            "NPTEL Course Registration form for credit transfer": "/Velammal-Engineering-College-Backend/static/all_forms/Applicationform_NPTEL_Course.pdf",
+            "Application Form - NPTEL Credit Transfer": "/Velammal-Engineering-College-Backend/static/all_forms/Applicationform-NPTEL_Credit_transfer.pdf",
+            "Application form - CGPA to Percentage Conversion": "/Velammal-Engineering-College-Backend/static/all_forms/Application_for_CGPA_to_Percentage_conversion.pdf",
+            "Application Form - Review after Revaluation": "/Velammal-Engineering-College-Backend/static/all_forms/Application-Form-Review-after-Revaluation.pdf",
+            "Application Form - Revaluation (After obtaining Photocopy)": "/Velammal-Engineering-College-Backend/static/all_forms/Application-Form-Revaluation-After-obtaining-Photocopy.pdf",
+            "Application Form - Photocopy": "/Velammal-Engineering-College-Backend/static/all_forms/Application-Form-Photocopy.pdf",
+            "Evaluation Form for Photocopy of answer scripts B.E./B.Tech./M.E./MBA (R2023)": "/Velammal-Engineering-College-Backend/static/all_forms/MBA-Evaluation-form-for-Photocopy-of-answer-script.pdf",
+            "B.E.& M.E - Evaluation form for Photocopy of answer script": "/Velammal-Engineering-College-Backend/static/all_forms/B.E.-M.E-Evaluation-form-for-Photocopy-of-answer-script.pdf",
+            "Project Report Format": "/Velammal-Engineering-College-Backend/static/all_forms/Project-report-format.pdf",
+            "Project Report Specimen": "/Velammal-Engineering-College-Backend/static/all_forms/Project-Report-specimen.pdf",
+            "Revised Fee Structure for Certificates & Coursework": "/Velammal-Engineering-College-Backend/static/all_forms/Fee_Sructure_for_certificates_from_March-2024.pdf",
+            "Application Form - Name Correction": "/Velammal-Engineering-College-Backend/static/all_forms/Application-form_Correction-in-Grade-sheet-pdf.pdf",
+            "Application Form - Duplicate Certificate": "/Velammal-Engineering-College-Backend/static/all_forms/Application-form_Duplicate-Grade-Sheet-LossDamage.pdf",
+            "Application Form - Duplicate Hall Ticket": "/Velammal-Engineering-College-Backend/static/all_forms/Application-for-Duplicate-Hall-Ticket.pdf",
+            "Application Form - Withdrawal": "/Velammal-Engineering-College-Backend/static/all_forms/Application-Form-for-Withdrawal.pdf",
+            "Application Form - Transcript Certificate": "/Velammal-Engineering-College-Backend/static/all_forms/Application-for-Transcripts_VEC_UPDATED_03-07-2023.pdf"
+        },
+        "faculty": {
+            "SEE_QP_Feedback_R2023": "/Velammal-Engineering-College-Backend/static/all_forms/SEE_QP_Feedback_R2023.pdf",
+            "SEE_QP_Feedback_R2019": "/Velammal-Engineering-College-Backend/static/all_forms/SEE_QP_Feedback_R2019.pdf",
+            "Self declaration form (Children/Spouse pursuing UG/PG degree in VEC)": "/Velammal-Engineering-College-Backend/static/all_forms/Declaration_from_Staff(Children_Spouse_doing_UG_PG_degree_in_VEC).pdf",
+            "Exam Duty Alteration Format (For Faculty)": "/Velammal-Engineering-College-Backend/static/all_forms/Duty_alteration_Format_Faculty_Final.pdf",
+            "Registration Form - Ph.D. Course Work": "/Velammal-Engineering-College-Backend/static/all_forms/Registration-Form-Ph.D.-Coursework-updated-19-04-2023.pdf"
+        }
+    }
+]
