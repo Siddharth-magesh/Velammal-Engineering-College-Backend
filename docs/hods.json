@@ -5,6 +5,7 @@
         "Qualification": ["M.E","PhD"],
         "Hod_message": "Welcome to the Artificial Intelligence Department!",
         "Image": "vec pics/Dr.P.VISU - Dr. P. Visu Prof & Head - Dept.of AI & DS.jpg", 
+        "designation":"Professor and Head, Dept of Artificial Intelligence and Data Science",
     
         "Social_media_links": {
             "LinkedIn": "https://www.linkedin.com/in/dr-visu-p-12a78961/?trk=public_profile_browsemap&originalSubdomain=in",
@@ -22,6 +23,7 @@
         "Qualification":  ["M.E","PhD"],
         "Hod_message": "Welcome to the Electronics and Communication Engineering Department!",
         "Image": "vec pics/DR.S.MARY_JOANS_PHOTO_22-23_optimized_50 - Dr. S. Mary Joans Professor & Head.jpg",
+        "designation":"Professor and Head, Dept of Artificial Intelligence and Data Science",
     
         "Social_media_links": {
             "Google Scholar": "https://scholar.google.com/citations?user=CXHND6AAAAAJ&hl=en",
@@ -37,6 +39,7 @@
         "Qualification":["M.sc","M.Phil","PhD"],
         "Hod_message": "Welcome to the Mathematics Department!",
         "Image": "vec pics/Dr. S.R - Prof. Rajeswaran. S Prof and Head - Maths.JPG",
+        "designation":"Professor and Head, Dept of Artificial Intelligence and Data Science",
         "Social_media_links": {
             "LinkedIn": "http://www.linkedin.com/in/rajeswaran-subramani-03b61349",
             "Google Scholar": "https://scholar.google.com/citations?hl=en&user=hLT4dVIAAAAJ",
@@ -53,6 +56,7 @@
         "Qualification":["M.E","PhD"],
         "Hod_message": "Welcome to the Civil Engineering Department!",
         "Image": "vec pics/Jebamalar - Dr.A.Jebamalar Prof & Head CIVIL.jpg",
+        "designation":"Professor and Head, Dept of Artificial Intelligence and Data Science",
         "Social_media_links": {
             "LinkedIn": "https://www.linkedin.com/in/jebamalar-abraham-986a35203/",
             "Google Scholar": "https://scholar.google.com/citations?hl=en&user=zMX3IjQAAAAJ",
@@ -66,6 +70,7 @@
         "Qualification": ["M.E", "PhD"],
         "Hod_message": "Welcome to the Automobile Engineering Department!",
         "Image": "vec pics/Dr.RadhaKrishnan - Dr.M.Radhakrishnan Prof & Head Auto.jpg",
+        "designation":"Professor and Head, Dept of Artificial Intelligence and Data Science",
         "Social_media_links": {
             "LinkedIn": "https://www.linkedin.com/in/m-radhakrishnan/",
             "Google Scholar": "https://scholar.google.com/citations?user=mRadhaKrishnan&hl=en",
@@ -79,6 +84,7 @@
         "Qualification": ["M.Sc", "PhD"],
         "Hod_message": "Welcome to the Chemistry Department!",
         "Image": "vec pics/Dr.Balakrishnan - Dr.S.Balakrishnan Prof & Head Chemistry.jpg",
+        "designation":"Professor and Head, Dept of Artificial Intelligence and Data Science",
         "Social_media_links": {
             "LinkedIn": "https://www.linkedin.com/in/s-balakrishnan-03b61349/",
             "Google Scholar": "https://scholar.google.com/citations?user=sBalakrishnan&hl=en",
@@ -91,6 +97,7 @@
         "Qualification": ["M.E", "PhD"],
         "Hod_message": "Welcome to the Electrical & Electronics Engineering Department!",
         "Image": "vec pics/Dr.Murugan - Dr.A.Murugan Prof & Head EEE.jpg",
+        "designation":"Professor and Head, Dept of Artificial Intelligence and Data Science",
         "Social_media_links": {
             "LinkedIn": "https://www.linkedin.com/in/a-murugan/",
             "Google Scholar": "https://scholar.google.com/citations?user=aMurugan&hl=en",
@@ -103,6 +110,7 @@
         "Qualification": ["M.E", "PhD"],
         "Hod_message": "Welcome to the Electronics & Instrumentation Engineering Department!",
         "Image": "vec pics/Dr.VelMurugan - Dr.K.VelMurugan Prof & Head EIE.jpg",
+        "designation":"Professor and Head, Dept of Artificial Intelligence and Data Science",
         "Social_media_links": {
             "LinkedIn": "https://www.linkedin.com/in/k-velmurugan/",
             "Google Scholar": "https://scholar.google.com/citations?user=kVelmurugan&hl=en",
@@ -116,6 +124,7 @@
         "Qualification": ["M.E", "PhD"],
         "Hod_message": "Welcome to the Computer Science & Engineering Department!",
         "Image": "vec pics/Dr.Nagarajan - Dr.K.Nagarajan Prof & Head CSE.jpg",
+        "designation":"Professor and Head, Dept of Artificial Intelligence and Data Science",
         "Social_media_links": {
             "LinkedIn": "https://www.linkedin.com/in/k-nagarajan/",
             "Google Scholar": "https://scholar.google.com/citations?user=kNagarajan&hl=en",
@@ -128,6 +137,7 @@
         "Qualification": ["M.E", "PhD"],
         "Hod_message": "Welcome to the Computer Science and Engineering (Cyber Security) Department!",
         "Image": "vec pics/Dr.Manoharan - Dr.S.Manoharan Prof & Head CSE-Cyber.jpg",
+        "designation":"Professor and Head, Dept of Artificial Intelligence and Data Science",
         "Social_media_links": {
             "LinkedIn": "https://www.linkedin.com/in/s-manoharan/",
             "Google Scholar": "https://scholar.google.com/citations?user=sManoharan&hl=en",
@@ -141,6 +151,7 @@
         "Qualification": ["M.A", "PhD"],
         "Hod_message": "Welcome to the English Department!",
         "Image": "vec pics/Dr.Praveena - Dr.S.Praveena Prof & Head English.jpg",
+        "designation":"Professor and Head, Dept of Artificial Intelligence and Data Science",
         "Social_media_links": {
             "LinkedIn": "https://www.linkedin.com/in/s-praveena/",
             "Google Scholar": "https://scholar.google.com/citations?user=sPraveena&hl=en"
@@ -152,6 +163,7 @@
         "Qualification": ["M.E", "PhD"],
         "Hod_message": "Welcome to the Information Technology Department!",
         "Image": "vec pics/Dr.Ganesan - Dr.S.Ganesan Prof & Head IT.jpg",
+        "designation":"Professor and Head, Dept of Artificial Intelligence and Data Science",
         "Social_media_links": {
             "LinkedIn": "https://www.linkedin.com/in/s-ganesan/",
             "Google Scholar": "https://scholar.google.com/citations?user=sGanesan&hl=en",
@@ -165,6 +177,7 @@
         "Qualification": ["M.E", "PhD"],
         "Hod_message": "Welcome to the Mechanical Engineering Department!",
         "Image": "vec pics/Dr.Senthil - Dr.R.Senthil Prof & Head Mechanical.jpg",
+        "designation":"Professor and Head, Dept of Artificial Intelligence and Data Science",
         "Social_media_links": {
             "LinkedIn": "https://www.linkedin.com/in/r-senthil/",
             "Google Scholar": "https://scholar.google.com/citations?user=rSenthil&hl=en",

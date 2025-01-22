@@ -46,7 +46,7 @@ app.get('/api/department/:id', async (req, res) => {
 app.get('/api/hod/:department_id', async (req, res) => {
     const departmentId = req.params.department_id;
     const db = client.db(dbName);
-    const hodsCollection = db.collection('hods');
+    const hodsCollection = db.collection('HODS');
 
     try {
         const hod = await hodsCollection.findOne({
@@ -91,6 +91,7 @@ app.get('/api/staff/:deptId', async (req, res) => {
                     "Publon Profile": 1,
                     "Scopus Author Profile": 1,
                     "LinkedIn Profile": 1,
+                    unique_id:1,
                     _id: 0, 
                 }
             }
@@ -222,6 +223,7 @@ app.get('/api/department_activities/:deptId', async (req, res) => {
         const departmentData = await collection.findOne({ dept_id: deptId });
 
         if (!departmentData) {
+            console.log("❌ Department not found for dept_id:", deptId);
             return res.status(404).json({ message: "Department not found" });
         }
 
@@ -238,6 +240,7 @@ app.get('/api/department_activities/:deptId', async (req, res) => {
         res.status(500).json({ error: "Error fetching department activities" });
     }
 });
+
 
 // Curriculum 
 app.get('/api/curriculum/:deptId', async (req, res) => {

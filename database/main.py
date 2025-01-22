@@ -746,21 +746,21 @@ insert_all_forms_data()
 insert_alumni_data()
 
 department_paths = {
-    "1": "/Velammal-Engineering-College-Backend/docs/AIDS-DEPT-ACT/",
-    "2": "/Velammal-Engineering-College-Backend/docs/CSE-DEPT-ACT/",
-    "3": "/Velammal-Engineering-College-Backend/docs/ECE-DEPT-ACT/",
-    "4": "/Velammal-Engineering-College-Backend/docs/EEE-DEPT-ACT/",
-    "5": "/Velammal-Engineering-College-Backend/docs/MECH-DEPT-ACT/",
-    "6": "/Velammal-Engineering-College-Backend/docs/CIVIL-DEPT-ACT/",
-    "7": "/Velammal-Engineering-College-Backend/docs/IT-DEPT-ACT/",
-    "8": "/Velammal-Engineering-College-Backend/docs/BME-DEPT-ACT/",
-    "9": "/Velammal-Engineering-College-Backend/docs/EIE-DEPT-ACT/",
-    "10": "/Velammal-Engineering-College-Backend/docs/MBA-DEPT-ACT/",
-    "11": "/Velammal-Engineering-College-Backend/docs/MCA-DEPT-ACT/",
-    "12": "/Velammal-Engineering-College-Backend/docs/AUTO-DEPT-ACT/",
-    "13": "/Velammal-Engineering-College-Backend/docs/MTECH-IT-DEPT-ACT/",
-    "14": "/Velammal-Engineering-College-Backend/docs/ARCH-DEPT-ACT/",
-    "15": "/Velammal-Engineering-College-Backend/docs/SCI-HUM-DEPT-ACT/",
+    "001": "/Velammal-Engineering-College-Backend/docs/AIDS-DEPT-ACT/",
+    "002": "/Velammal-Engineering-College-Backend/docs/CSE-DEPT-ACT/",
+    "003": "/Velammal-Engineering-College-Backend/docs/ECE-DEPT-ACT/",
+    "004": "/Velammal-Engineering-College-Backend/docs/EEE-DEPT-ACT/",
+    "005": "/Velammal-Engineering-College-Backend/docs/MECH-DEPT-ACT/",
+    "006": "/Velammal-Engineering-College-Backend/docs/CIVIL-DEPT-ACT/",
+    "007": "/Velammal-Engineering-College-Backend/docs/IT-DEPT-ACT/",
+    "008": "/Velammal-Engineering-College-Backend/docs/BME-DEPT-ACT/",
+    "009": "/Velammal-Engineering-College-Backend/docs/EIE-DEPT-ACT/",
+    "010": "/Velammal-Engineering-College-Backend/docs/MBA-DEPT-ACT/",
+    "011": "/Velammal-Engineering-College-Backend/docs/MCA-DEPT-ACT/",
+    "012": "/Velammal-Engineering-College-Backend/docs/AUTO-DEPT-ACT/",
+    "013": "/Velammal-Engineering-College-Backend/docs/MTECH-IT-DEPT-ACT/",
+    "014": "/Velammal-Engineering-College-Backend/docs/ARCH-DEPT-ACT/",
+    "015": "/Velammal-Engineering-College-Backend/docs/SCI-HUM-DEPT-ACT/",
 }
 
 for dept_id, path in department_paths.items():
