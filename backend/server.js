@@ -59,6 +59,7 @@ app.get('/api/hod/:department_id', async (req, res) => {
                 Unique_id: hod.Unique_id,
                 Qualification: hod.Qualification,
                 Hod_message: hod.Hod_message,
+                designation:hod.designation,
                 Image: hod.Image,
                 Social_media_links: hod.Social_media_links
             });

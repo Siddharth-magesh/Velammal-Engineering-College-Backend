@@ -6,6 +6,7 @@
             "2019": "/path/to/regulation_19.pdf",
             "2020": "/path/to/regulation_20.pdf"
         },
+        "regulation_year":["2018","2019","2020"],
         "academic_year": {
             "2018-2019": "/path/to/academic_year_18_19.pdf",
             "2019-2020": "/path/to/academic_year_19_20.pdf"
@@ -26,9 +27,11 @@
 
         ],
         "program_specific_outcomes": [
-            "PSO1: Apply the concepts of Artificial Intelligence to provide solutions for the real time problems and to integrate the professional skills with recent tools and technologies to cope with the dynamic AI needs.",
-            "PSO2: Create a concrete foundation and enlighten the innovation, research and entrepreneur skills in the field of Artificial Intelligence and Data science."
+            "Apply the concepts of Artificial Intelligence to provide solutions for the real time problems and to integrate the professional skills with recent tools and technologies to cope with the dynamic AI needs.",
+            "Create a concrete foundation and enlighten the innovation, research and entrepreneur skills in the field of Artificial Intelligence and Data science."
         ],
+        "program_outcomes_headings":["PO1:Engineering knowledge","PO2:Problem analysis","PO3:Design/development of solutions","PO4:Conduct investigations of complex problems","PO5:Modern tool usage","PO6:The engineer and society","PO7:Environment and sustainability","PO8:Ethics","PO9:Individual and team work","PO10:Communication","PO11:Project management and finance","PO12:Life-long learning"],
+        "program_specific_outcomes_headings":["PS01","PSO2"],
         "key_highlights": [
             "UG - (Data Science, Machine Learning, Artificial Intelligence , Data Exploration Using R, Neural Networks, IoT, Deep Learning, Big Data Analytics, Health Care Analytics, Augmented Reality and Virtual Reality, Reinforcement Learning, Cognitive Science and Analysis, Edge and Fog Computing, Block Chain Technology).",
             "It makes the student to learn, design and analyze various Machine Learning applications.",
@@ -55,6 +58,7 @@
             "2020": "/path/to/regulation_20.pdf",
             "2021": "/path/to/regulation_21.pdf"
         },
+        "regulation_year":["2019","2020","2021"],
         "academic_year": {
             "2019-2020": "/path/to/academic_year_19_20.pdf",
             "2020-2021": "/path/to/academic_year_20_21.pdf"
@@ -65,10 +69,12 @@
             "PO3: Description of program outcome 3"
         ],
         "program_specific_outcomes": [
-            "PSO1: Description of program-specific outcome 1",
-            "PSO2: Description of program-specific outcome 2",
-            "PSO3: Description of program-specific outcome 3"
+            "Description of program-specific outcome 1",
+            "Description of program-specific outcome 2",
+            "Description of program-specific outcome 3"
         ],
+        "program_outcomes_headings":["PO1:Engineering knowledge","PO2:Problem analysis","PO3:Design/development of solutions","PO4:Conduct investigations of complex problems","PO5:Modern tool usage","PO6:The engineer and society","PO7:Environment and sustainability","PO8:Ethics","PO9:Individual and team work","PO10:Communication","PO11:Project management and finance","PO12:Life-long learning"],
+        "program_specific_outcomes_headings":["PS01","PSO2"],
         "key_highlights": [
             "Key Highlight 1: Description of key highlight 1",
             "Key Highlight 2: Description of key highlight 2",
@@ -90,6 +96,7 @@
             "2021": "/path/to/regulation_21.pdf",
             "2022": "/path/to/regulation_22.pdf"
         },
+        "regulation_year":["2020","2021","2022"],
         "academic_year": {
             "2020-2021": "/path/to/academic_year_20_21.pdf",
             "2021-2022": "/path/to/academic_year_21_22.pdf"
@@ -101,10 +108,12 @@
             "PO4: Description of program outcome 4"
         ],
         "program_specific_outcomes": [
-            "PSO1: Description of program-specific outcome 1",
-            "PSO2: Description of program-specific outcome 2",
-            "PSO3: Description of program-specific outcome 3"
+            "Description of program-specific outcome 1",
+            "Description of program-specific outcome 2",
+            "Description of program-specific outcome 3"
         ],
+        "program_outcomes_headings":["PO1:Engineering knowledge","PO2:Problem analysis","PO3:Design/development of solutions","PO4:Conduct investigations of complex problems","PO5:Modern tool usage","PO6:The engineer and society","PO7:Environment and sustainability","PO8:Ethics","PO9:Individual and team work","PO10:Communication","PO11:Project management and finance","PO12:Life-long learning"],
+        "program_specific_outcomes_headings":["PS01","PSO2"],
         "key_highlights": [
             "Key Highlight 1: Description of key highlight 1",
             "Key Highlight 2: Description of key highlight 2",
@@ -127,13 +136,14 @@
             "2021": "/path/to/regulation_21.pdf",
             "2022": "/path/to/regulation_22.pdf"
         },
+        "regulation_year":["2020","2021","2022"],
         "academic_year": {
             "2020-2021": "/path/to/academic_year_20_21.pdf",
             "2021-2022": "/path/to/academic_year_21_22.pdf"
         },
         "program_outcomes": [
-            "PO1: Description of program outcome 1",
-            "PO2: Description of program outcome 2",
+            "Description of program outcome 1",
+            "Description of program outcome 2",
             "PO3: Description of program outcome 3",
             "PO4: Description of program outcome 4"
         ],
@@ -142,6 +152,8 @@
             "PSO2: Description of program-specific outcome 2",
             "PSO3: Description of program-specific outcome 3"
         ],
+        "program_outcomes_headings":["PO1:Engineering knowledge","PO2:Problem analysis","PO3:Design/development of solutions","PO4:Conduct investigations of complex problems","PO5:Modern tool usage","PO6:The engineer and society","PO7:Environment and sustainability","PO8:Ethics","PO9:Individual and team work","PO10:Communication","PO11:Project management and finance","PO12:Life-long learning"],
+        "program_specific_outcomes_headings":["PS01","PSO2"],
         "key_highlights": [
             "Key Highlight 1: Description of key highlight 1",
             "Key Highlight 2: Description of key highlight 2",
@@ -164,6 +176,7 @@
             "2021": "/path/to/regulation_21.pdf",
             "2022": "/path/to/regulation_22.pdf"
         },
+        "regulation_year":["2020","2021","2022"],
         "academic_year": {
             "2020-2021": "/path/to/academic_year_20_21.pdf",
             "2021-2022": "/path/to/academic_year_21_22.pdf"
@@ -179,6 +192,8 @@
             "PSO2: Description of program-specific outcome 2",
             "PSO3: Description of program-specific outcome 3"
         ],
+        "program_outcomes_headings":["PO1:Engineering knowledge","PO2:Problem analysis","PO3:Design/development of solutions","PO4:Conduct investigations of complex problems","PO5:Modern tool usage","PO6:The engineer and society","PO7:Environment and sustainability","PO8:Ethics","PO9:Individual and team work","PO10:Communication","PO11:Project management and finance","PO12:Life-long learning"],
+        "program_specific_outcomes_headings":["PS01","PSO2"],
         "key_highlights": [
             "Key Highlight 1: Description of key highlight 1",
             "Key Highlight 2: Description of key highlight 2",
@@ -201,6 +216,7 @@
             "2021": "/path/to/regulation_21.pdf",
             "2022": "/path/to/regulation_22.pdf"
         },
+        "regulation_year":["2020","2021","2022"],
         "academic_year": {
             "2020-2021": "/path/to/academic_year_20_21.pdf",
             "2021-2022": "/path/to/academic_year_21_22.pdf"
@@ -216,6 +232,8 @@
             "PSO2: Description of program-specific outcome 2",
             "PSO3: Description of program-specific outcome 3"
         ],
+        "program_outcomes_headings":["PO1:Engineering knowledge","PO2:Problem analysis","PO3:Design/development of solutions","PO4:Conduct investigations of complex problems","PO5:Modern tool usage","PO6:The engineer and society","PO7:Environment and sustainability","PO8:Ethics","PO9:Individual and team work","PO10:Communication","PO11:Project management and finance","PO12:Life-long learning"],
+        "program_specific_outcomes_headings":["PS01","PSO2"],
         "key_highlights": [
             "Key Highlight 1: Description of key highlight 1",
             "Key Highlight 2: Description of key highlight 2",
@@ -238,6 +256,7 @@
             "2021": "/path/to/regulation_21.pdf",
             "2022": "/path/to/regulation_22.pdf"
         },
+        "regulation_year":["2020","2021","2022"],
         "academic_year": {
             "2020-2021": "/path/to/academic_year_20_21.pdf",
             "2021-2022": "/path/to/academic_year_21_22.pdf"
@@ -253,6 +272,8 @@
             "PSO2: Description of program-specific outcome 2",
             "PSO3: Description of program-specific outcome 3"
         ],
+        "program_outcomes_headings":["PO1:Engineering knowledge","PO2:Problem analysis","PO3:Design/development of solutions","PO4:Conduct investigations of complex problems","PO5:Modern tool usage","PO6:The engineer and society","PO7:Environment and sustainability","PO8:Ethics","PO9:Individual and team work","PO10:Communication","PO11:Project management and finance","PO12:Life-long learning"],
+        "program_specific_outcomes_headings":["PS01","PSO2"],
         "key_highlights": [
             "Key Highlight 1: Description of key highlight 1",
             "Key Highlight 2: Description of key highlight 2",
@@ -275,6 +296,7 @@
             "2021": "/path/to/regulation_21.pdf",
             "2022": "/path/to/regulation_22.pdf"
         },
+        "regulation_year":["2020","2021","2022"],
         "academic_year": {
             "2020-2021": "/path/to/academic_year_20_21.pdf",
             "2021-2022": "/path/to/academic_year_21_22.pdf"
@@ -290,6 +312,8 @@
             "PSO2: Description of program-specific outcome 2",
             "PSO3: Description of program-specific outcome 3"
         ],
+        "program_outcomes_headings":["PO1:Engineering knowledge","PO2:Problem analysis","PO3:Design/development of solutions","PO4:Conduct investigations of complex problems","PO5:Modern tool usage","PO6:The engineer and society","PO7:Environment and sustainability","PO8:Ethics","PO9:Individual and team work","PO10:Communication","PO11:Project management and finance","PO12:Life-long learning"],
+        "program_specific_outcomes_headings":["PS01","PSO2"],
         "key_highlights": [
             "Key Highlight 1: Description of key highlight 1",
             "Key Highlight 2: Description of key highlight 2",
@@ -312,6 +336,7 @@
             "2021": "/path/to/regulation_21.pdf",
             "2022": "/path/to/regulation_22.pdf"
         },
+        "regulation_year":["2020","2021","2022"],
         "academic_year": {
             "2020-2021": "/path/to/academic_year_20_21.pdf",
             "2021-2022": "/path/to/academic_year_21_22.pdf"
@@ -327,6 +352,8 @@
             "PSO2: Description of program-specific outcome 2",
             "PSO3: Description of program-specific outcome 3"
         ],
+        "program_outcomes_headings":["PO1:Engineering knowledge","PO2:Problem analysis","PO3:Design/development of solutions","PO4:Conduct investigations of complex problems","PO5:Modern tool usage","PO6:The engineer and society","PO7:Environment and sustainability","PO8:Ethics","PO9:Individual and team work","PO10:Communication","PO11:Project management and finance","PO12:Life-long learning"],
+        "program_specific_outcomes_headings":["PS01","PSO2"],
         "key_highlights": [
             "Key Highlight 1: Description of key highlight 1",
             "Key Highlight 2: Description of key highlight 2",
@@ -349,6 +376,7 @@
             "2021": "/path/to/regulation_21.pdf",
             "2022": "/path/to/regulation_22.pdf"
         },
+        "regulation_year":["2020","2021","2022"],
         "academic_year": {
             "2020-2021": "/path/to/academic_year_20_21.pdf",
             "2021-2022": "/path/to/academic_year_21_22.pdf"
@@ -364,6 +392,8 @@
             "PSO2: Description of program-specific outcome 2",
             "PSO3: Description of program-specific outcome 3"
         ],
+        "program_outcomes_headings":["PO1:Engineering knowledge","PO2:Problem analysis","PO3:Design/development of solutions","PO4:Conduct investigations of complex problems","PO5:Modern tool usage","PO6:The engineer and society","PO7:Environment and sustainability","PO8:Ethics","PO9:Individual and team work","PO10:Communication","PO11:Project management and finance","PO12:Life-long learning"],
+        "program_specific_outcomes_headings":["PS01","PSO2"],
         "key_highlights": [
             "Key Highlight 1: Description of key highlight 1",
             "Key Highlight 2: Description of key highlight 2",
@@ -386,6 +416,7 @@
             "2021": "/path/to/regulation_21.pdf",
             "2022": "/path/to/regulation_22.pdf"
         },
+        "regulation_year":["2020","2021","2022"],
         "academic_year": {
             "2020-2021": "/path/to/academic_year_20_21.pdf",
             "2021-2022": "/path/to/academic_year_21_22.pdf"
@@ -401,6 +432,8 @@
             "PSO2: Description of program-specific outcome 2",
             "PSO3: Description of program-specific outcome 3"
         ],
+        "program_outcomes_headings":["PO1:Engineering knowledge","PO2:Problem analysis","PO3:Design/development of solutions","PO4:Conduct investigations of complex problems","PO5:Modern tool usage","PO6:The engineer and society","PO7:Environment and sustainability","PO8:Ethics","PO9:Individual and team work","PO10:Communication","PO11:Project management and finance","PO12:Life-long learning"],
+        "program_specific_outcomes_headings":["PS01","PSO2"],
         "key_highlights": [
             "Key Highlight 1: Description of key highlight 1",
             "Key Highlight 2: Description of key highlight 2",
@@ -423,6 +456,7 @@
             "2021": "/path/to/regulation_21.pdf",
             "2022": "/path/to/regulation_22.pdf"
         },
+        "regulation_year":["2020","2021","2022"],
         "academic_year": {
             "2020-2021": "/path/to/academic_year_20_21.pdf",
             "2021-2022": "/path/to/academic_year_21_22.pdf"
@@ -438,6 +472,8 @@
             "PSO2: Description of program-specific outcome 2",
             "PSO3: Description of program-specific outcome 3"
         ],
+        "program_outcomes_headings":["PO1:Engineering knowledge","PO2:Problem analysis","PO3:Design/development of solutions","PO4:Conduct investigations of complex problems","PO5:Modern tool usage","PO6:The engineer and society","PO7:Environment and sustainability","PO8:Ethics","PO9:Individual and team work","PO10:Communication","PO11:Project management and finance","PO12:Life-long learning"],
+        "program_specific_outcomes_headings":["PS01","PSO2"],
         "key_highlights": [
             "Key Highlight 1: Description of key highlight 1",
             "Key Highlight 2: Description of key highlight 2",
@@ -460,6 +496,7 @@
             "2021": "/path/to/regulation_21.pdf",
             "2022": "/path/to/regulation_22.pdf"
         },
+        "regulation_year":["2020","2021","2022"],
         "academic_year": {
             "2020-2021": "/path/to/academic_year_20_21.pdf",
             "2021-2022": "/path/to/academic_year_21_22.pdf"
@@ -475,6 +512,8 @@
             "PSO2: Description of program-specific outcome 2",
             "PSO3: Description of program-specific outcome 3"
         ],
+        "program_outcomes_headings":["PO1:Engineering knowledge","PO2:Problem analysis","PO3:Design/development of solutions","PO4:Conduct investigations of complex problems","PO5:Modern tool usage","PO6:The engineer and society","PO7:Environment and sustainability","PO8:Ethics","PO9:Individual and team work","PO10:Communication","PO11:Project management and finance","PO12:Life-long learning"],
+        "program_specific_outcomes_headings":["PS01","PSO2"],
         "key_highlights": [
             "Key Highlight 1: Description of key highlight 1",
             "Key Highlight 2: Description of key highlight 2",
@@ -497,6 +536,7 @@
             "2021": "/path/to/regulation_21.pdf",
             "2022": "/path/to/regulation_22.pdf"
         },
+        "regulation_year":["2020","2021","2022"],
         "academic_year": {
             "2020-2021": "/path/to/academic_year_20_21.pdf",
             "2021-2022": "/path/to/academic_year_21_22.pdf"
@@ -512,6 +552,8 @@
             "PSO2: Description of program-specific outcome 2",
             "PSO3: Description of program-specific outcome 3"
         ],
+        "program_outcomes_headings":["PO1:Engineering knowledge","PO2:Problem analysis","PO3:Design/development of solutions","PO4:Conduct investigations of complex problems","PO5:Modern tool usage","PO6:The engineer and society","PO7:Environment and sustainability","PO8:Ethics","PO9:Individual and team work","PO10:Communication","PO11:Project management and finance","PO12:Life-long learning"],
+        "program_specific_outcomes_headings":["PS01","PSO2"],
         "key_highlights": [
             "Key Highlight 1: Description of key highlight 1",
             "Key Highlight 2: Description of key highlight 2",
@@ -534,6 +576,7 @@
             "2022": "/path/to/regulation_22.pdf",
             "2023": "/path/to/regulation_23.pdf"
         },
+        "regulation_year":["2020","2021","2022"],
         "academic_year": {
             "2021-2022": "/path/to/academic_year_21_22.pdf",
             "2022-2023": "/path/to/academic_year_22_23.pdf",
@@ -552,6 +595,8 @@
             "PSO3: Description of program-specific outcome 3",
             "PSO4: Description of program-specific outcome 4"
         ],
+        "program_outcomes_headings":["PO1:Engineering knowledge","PO2:Problem analysis","PO3:Design/development of solutions","PO4:Conduct investigations of complex problems","PO5:Modern tool usage","PO6:The engineer and society","PO7:Environment and sustainability","PO8:Ethics","PO9:Individual and team work","PO10:Communication","PO11:Project management and finance","PO12:Life-long learning"],
+        "program_specific_outcomes_headings":["PS01","PSO2"],
         "key_highlights": [
             "Key Highlight 1: Description of key highlight 1",
             "Key Highlight 2: Description of key highlight 2",

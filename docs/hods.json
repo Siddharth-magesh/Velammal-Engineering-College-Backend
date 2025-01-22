@@ -3,7 +3,7 @@
         "Name": "Dr. VISU",
         "Unique_id": "VEC-001-01-77",
         "Qualification": ["M.E","PhD"],
-        "Hod_message": "Welcome to the Artificial Intelligence Department!",
+        "Hod_message": ["I feel privileged to lead a team of talented and experienced faculty members. AI & DS is the most conspicuous technology transforming the facet of industry and mankind. This course is specially designed to enable students to build intelligent machines, software, or applications with a cutting-edge combination of Machine Learning, Deep Learning, Analytics, and Visualization technologies.","Our department aims to produce skilled professionals in the domain of AI and DS and enable them to excel professionally. It also provides state-of-the-art laboratory facilities to the students to get better practical exposure and strong ties with industry, research organizations, and the community at large."],
         "Image": "vec pics/Dr.P.VISU - Dr. P. Visu Prof & Head - Dept.of AI & DS.jpg", 
         "designation":"Professor and Head, Dept of Artificial Intelligence and Data Science",
     
@@ -21,7 +21,7 @@
         "Name": "Dr. MARY JOANS",
         "Unique_id": "VEC-009-01-90",
         "Qualification":  ["M.E","PhD"],
-        "Hod_message": "Welcome to the Electronics and Communication Engineering Department!",
+        "Hod_message": ["I feel privileged to lead a team of talented and experienced faculty members. AI & DS is the most conspicuous technology transforming the facet of industry and mankind. This course is specially designed to enable students to build intelligent machines, software, or applications with a cutting-edge combination of Machine Learning, Deep Learning, Analytics, and Visualization technologies.","Our department aims to produce skilled professionals in the domain of AI and DS and enable them to excel professionally. It also provides state-of-the-art laboratory facilities to the students to get better practical exposure and strong ties with industry, research organizations, and the community at large."],
         "Image": "vec pics/DR.S.MARY_JOANS_PHOTO_22-23_optimized_50 - Dr. S. Mary Joans Professor & Head.jpg",
         "designation":"Professor and Head, Dept of Artificial Intelligence and Data Science",
     
@@ -37,7 +37,7 @@
         "Name": "Dr. RAJESWARAN ",
         "Unique_id": "VEC-012-01-96",
         "Qualification":["M.sc","M.Phil","PhD"],
-        "Hod_message": "Welcome to the Mathematics Department!",
+        "Hod_message": ["I feel privileged to lead a team of talented and experienced faculty members. AI & DS is the most conspicuous technology transforming the facet of industry and mankind. This course is specially designed to enable students to build intelligent machines, software, or applications with a cutting-edge combination of Machine Learning, Deep Learning, Analytics, and Visualization technologies.","Our department aims to produce skilled professionals in the domain of AI and DS and enable them to excel professionally. It also provides state-of-the-art laboratory facilities to the students to get better practical exposure and strong ties with industry, research organizations, and the community at large."],
         "Image": "vec pics/Dr. S.R - Prof. Rajeswaran. S Prof and Head - Maths.JPG",
         "designation":"Professor and Head, Dept of Artificial Intelligence and Data Science",
         "Social_media_links": {
@@ -54,7 +54,7 @@
         "Name": "JEBAMALAR",
         "Unique_id": "VEC-004-01-145",
         "Qualification":["M.E","PhD"],
-        "Hod_message": "Welcome to the Civil Engineering Department!",
+        "Hod_message": ["I feel privileged to lead a team of talented and experienced faculty members. AI & DS is the most conspicuous technology transforming the facet of industry and mankind. This course is specially designed to enable students to build intelligent machines, software, or applications with a cutting-edge combination of Machine Learning, Deep Learning, Analytics, and Visualization technologies.","Our department aims to produce skilled professionals in the domain of AI and DS and enable them to excel professionally. It also provides state-of-the-art laboratory facilities to the students to get better practical exposure and strong ties with industry, research organizations, and the community at large."],
         "Image": "vec pics/Jebamalar - Dr.A.Jebamalar Prof & Head CIVIL.jpg",
         "designation":"Professor and Head, Dept of Artificial Intelligence and Data Science",
         "Social_media_links": {
@@ -68,7 +68,7 @@
         "Name": "Dr. M. RADHAKRISHNAN",
         "Unique_id": "VEC-002-01-102",
         "Qualification": ["M.E", "PhD"],
-        "Hod_message": "Welcome to the Automobile Engineering Department!",
+        "Hod_message": ["I feel privileged to lead a team of talented and experienced faculty members. AI & DS is the most conspicuous technology transforming the facet of industry and mankind. This course is specially designed to enable students to build intelligent machines, software, or applications with a cutting-edge combination of Machine Learning, Deep Learning, Analytics, and Visualization technologies.","Our department aims to produce skilled professionals in the domain of AI and DS and enable them to excel professionally. It also provides state-of-the-art laboratory facilities to the students to get better practical exposure and strong ties with industry, research organizations, and the community at large."],
         "Image": "vec pics/Dr.RadhaKrishnan - Dr.M.Radhakrishnan Prof & Head Auto.jpg",
         "designation":"Professor and Head, Dept of Artificial Intelligence and Data Science",
         "Social_media_links": {
@@ -82,7 +82,7 @@
         "Name": "Dr. S. BALAKRISHNAN",
         "Unique_id": "VEC-003-01-110",
         "Qualification": ["M.Sc", "PhD"],
-        "Hod_message": "Welcome to the Chemistry Department!",
+        "Hod_message": ["I feel privileged to lead a team of talented and experienced faculty members. AI & DS is the most conspicuous technology transforming the facet of industry and mankind. This course is specially designed to enable students to build intelligent machines, software, or applications with a cutting-edge combination of Machine Learning, Deep Learning, Analytics, and Visualization technologies.","Our department aims to produce skilled professionals in the domain of AI and DS and enable them to excel professionally. It also provides state-of-the-art laboratory facilities to the students to get better practical exposure and strong ties with industry, research organizations, and the community at large."],
         "Image": "vec pics/Dr.Balakrishnan - Dr.S.Balakrishnan Prof & Head Chemistry.jpg",
         "designation":"Professor and Head, Dept of Artificial Intelligence and Data Science",
         "Social_media_links": {
@@ -95,7 +95,7 @@
         "Name": "Dr. A. MURUGAN",
         "Unique_id": "VEC-007-01-125",
         "Qualification": ["M.E", "PhD"],
-        "Hod_message": "Welcome to the Electrical & Electronics Engineering Department!",
+        "Hod_message": ["I feel privileged to lead a team of talented and experienced faculty members. AI & DS is the most conspicuous technology transforming the facet of industry and mankind. This course is specially designed to enable students to build intelligent machines, software, or applications with a cutting-edge combination of Machine Learning, Deep Learning, Analytics, and Visualization technologies.","Our department aims to produce skilled professionals in the domain of AI and DS and enable them to excel professionally. It also provides state-of-the-art laboratory facilities to the students to get better practical exposure and strong ties with industry, research organizations, and the community at large."],
         "Image": "vec pics/Dr.Murugan - Dr.A.Murugan Prof & Head EEE.jpg",
         "designation":"Professor and Head, Dept of Artificial Intelligence and Data Science",
         "Social_media_links": {
@@ -108,7 +108,7 @@
         "Name": "Dr. K. VELMURUGAN",
         "Unique_id": "VEC-008-01-130",
         "Qualification": ["M.E", "PhD"],
-        "Hod_message": "Welcome to the Electronics & Instrumentation Engineering Department!",
+        "Hod_message": ["I feel privileged to lead a team of talented and experienced faculty members. AI & DS is the most conspicuous technology transforming the facet of industry and mankind. This course is specially designed to enable students to build intelligent machines, software, or applications with a cutting-edge combination of Machine Learning, Deep Learning, Analytics, and Visualization technologies.","Our department aims to produce skilled professionals in the domain of AI and DS and enable them to excel professionally. It also provides state-of-the-art laboratory facilities to the students to get better practical exposure and strong ties with industry, research organizations, and the community at large."],
         "Image": "vec pics/Dr.VelMurugan - Dr.K.VelMurugan Prof & Head EIE.jpg",
         "designation":"Professor and Head, Dept of Artificial Intelligence and Data Science",
         "Social_media_links": {
@@ -122,7 +122,7 @@
         "Name": "Dr. K. NAGARAJAN",
         "Unique_id": "VEC-005-01-120",
         "Qualification": ["M.E", "PhD"],
-        "Hod_message": "Welcome to the Computer Science & Engineering Department!",
+        "Hod_message": ["I feel privileged to lead a team of talented and experienced faculty members. AI & DS is the most conspicuous technology transforming the facet of industry and mankind. This course is specially designed to enable students to build intelligent machines, software, or applications with a cutting-edge combination of Machine Learning, Deep Learning, Analytics, and Visualization technologies.","Our department aims to produce skilled professionals in the domain of AI and DS and enable them to excel professionally. It also provides state-of-the-art laboratory facilities to the students to get better practical exposure and strong ties with industry, research organizations, and the community at large."],
         "Image": "vec pics/Dr.Nagarajan - Dr.K.Nagarajan Prof & Head CSE.jpg",
         "designation":"Professor and Head, Dept of Artificial Intelligence and Data Science",
         "Social_media_links": {
@@ -135,7 +135,7 @@
         "Name": "Dr. S. MANOHARAN",
         "Unique_id": "VEC-006-01-135",
         "Qualification": ["M.E", "PhD"],
-        "Hod_message": "Welcome to the Computer Science and Engineering (Cyber Security) Department!",
+        "Hod_message": ["I feel privileged to lead a team of talented and experienced faculty members. AI & DS is the most conspicuous technology transforming the facet of industry and mankind. This course is specially designed to enable students to build intelligent machines, software, or applications with a cutting-edge combination of Machine Learning, Deep Learning, Analytics, and Visualization technologies.","Our department aims to produce skilled professionals in the domain of AI and DS and enable them to excel professionally. It also provides state-of-the-art laboratory facilities to the students to get better practical exposure and strong ties with industry, research organizations, and the community at large."],
         "Image": "vec pics/Dr.Manoharan - Dr.S.Manoharan Prof & Head CSE-Cyber.jpg",
         "designation":"Professor and Head, Dept of Artificial Intelligence and Data Science",
         "Social_media_links": {
@@ -149,7 +149,7 @@
         "Name": "Dr. S. PRAVEENA",
         "Unique_id": "VEC-010-01-140",
         "Qualification": ["M.A", "PhD"],
-        "Hod_message": "Welcome to the English Department!",
+        "Hod_message": ["I feel privileged to lead a team of talented and experienced faculty members. AI & DS is the most conspicuous technology transforming the facet of industry and mankind. This course is specially designed to enable students to build intelligent machines, software, or applications with a cutting-edge combination of Machine Learning, Deep Learning, Analytics, and Visualization technologies.","Our department aims to produce skilled professionals in the domain of AI and DS and enable them to excel professionally. It also provides state-of-the-art laboratory facilities to the students to get better practical exposure and strong ties with industry, research organizations, and the community at large."],
         "Image": "vec pics/Dr.Praveena - Dr.S.Praveena Prof & Head English.jpg",
         "designation":"Professor and Head, Dept of Artificial Intelligence and Data Science",
         "Social_media_links": {
@@ -161,7 +161,7 @@
         "Name": "Dr. S. GANESAN",
         "Unique_id": "VEC-011-01-150",
         "Qualification": ["M.E", "PhD"],
-        "Hod_message": "Welcome to the Information Technology Department!",
+        "Hod_message": ["I feel privileged to lead a team of talented and experienced faculty members. AI & DS is the most conspicuous technology transforming the facet of industry and mankind. This course is specially designed to enable students to build intelligent machines, software, or applications with a cutting-edge combination of Machine Learning, Deep Learning, Analytics, and Visualization technologies.","Our department aims to produce skilled professionals in the domain of AI and DS and enable them to excel professionally. It also provides state-of-the-art laboratory facilities to the students to get better practical exposure and strong ties with industry, research organizations, and the community at large."],
         "Image": "vec pics/Dr.Ganesan - Dr.S.Ganesan Prof & Head IT.jpg",
         "designation":"Professor and Head, Dept of Artificial Intelligence and Data Science",
         "Social_media_links": {
@@ -175,7 +175,7 @@
         "Name": "Dr. R. SENTHIL",
         "Unique_id": "VEC-013-01-160",
         "Qualification": ["M.E", "PhD"],
-        "Hod_message": "Welcome to the Mechanical Engineering Department!",
+        "Hod_message": ["I feel privileged to lead a team of talented and experienced faculty members. AI & DS is the most conspicuous technology transforming the facet of industry and mankind. This course is specially designed to enable students to build intelligent machines, software, or applications with a cutting-edge combination of Machine Learning, Deep Learning, Analytics, and Visualization technologies.","Our department aims to produce skilled professionals in the domain of AI and DS and enable them to excel professionally. It also provides state-of-the-art laboratory facilities to the students to get better practical exposure and strong ties with industry, research organizations, and the community at large."],
         "Image": "vec pics/Dr.Senthil - Dr.R.Senthil Prof & Head Mechanical.jpg",
         "designation":"Professor and Head, Dept of Artificial Intelligence and Data Science",
         "Social_media_links": {

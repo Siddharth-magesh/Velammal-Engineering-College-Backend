@@ -11,7 +11,7 @@
             "To involve students with industry collaboration, career guidance and leadership skills.",
             "To mould students as ethical professionals to bring morals to individual and society."
         ],
-        "about_department": "Department of Artificial Intelligence aims to produce computing graduates with high potency, apply, design and develop systems to pertain and to integrate both software and hardware devices, utilize modern approaches in programming and problem solving techniques. The Department was established in the year 2020 with the main objective of providing quality education in the field of Engineering and Technology. It is recognized as nodal center under Anna University. The Department has proved to be a center of excellence in Academic, Sponsored research and Continuing Education Programme."
+        "about_department": ["Department of Artificial Intelligence aims to produce computing graduates with high potency, apply, design and develop systems to pertain and to integrate both software and hardware devices, utilize modern approaches in programming and problem solving techniques."," The Department was established in the year 2020 with the main objective of providing quality education in the field of Engineering and Technology."," It is recognized as nodal center under Anna University. The Department has proved to be a center of excellence in Academic, Sponsored research and Continuing Education Programme."]
     },
     {
         "department_id": 2,
@@ -24,7 +24,7 @@
             "Foster research in emerging fields of technology.",
             "Build industry-ready professionals with strong ethical values."
         ],
-        "about_department": "The department emphasizes core computing skills and modern engineering practices."
+        "about_department": ["Department of Artificial Intelligence aims to produce computing graduates with high potency, apply, design and develop systems to pertain and to integrate both software and hardware devices, utilize modern approaches in programming and problem solving techniques."," The Department was established in the year 2020 with the main objective of providing quality education in the field of Engineering and Technology."," It is recognized as nodal center under Anna University. The Department has proved to be a center of excellence in Academic, Sponsored research and Continuing Education Programme."]
     },
     {
         "department_id": 3,
@@ -37,7 +37,7 @@
             "Promote research in information systems and technologies.",
             "Encourage entrepreneurship and innovation."
         ],
-        "about_department": "The department bridges the gap between technology and practical implementation."
+        "about_department": ["Department of Artificial Intelligence aims to produce computing graduates with high potency, apply, design and develop systems to pertain and to integrate both software and hardware devices, utilize modern approaches in programming and problem solving techniques."," The Department was established in the year 2020 with the main objective of providing quality education in the field of Engineering and Technology."," It is recognized as nodal center under Anna University. The Department has proved to be a center of excellence in Academic, Sponsored research and Continuing Education Programme."]
     },
     {
         "department_id": 4,
@@ -50,7 +50,7 @@
             "Conduct research in emerging threats and solutions.",
             "Train professionals to safeguard information and systems."
         ],
-        "about_department": "The department focuses on equipping students with skills to tackle modern cybersecurity challenges."
+        "about_department": ["Department of Artificial Intelligence aims to produce computing graduates with high potency, apply, design and develop systems to pertain and to integrate both software and hardware devices, utilize modern approaches in programming and problem solving techniques."," The Department was established in the year 2020 with the main objective of providing quality education in the field of Engineering and Technology."," It is recognized as nodal center under Anna University. The Department has proved to be a center of excellence in Academic, Sponsored research and Continuing Education Programme."]
     },
     {
         "department_id": 5,
@@ -63,7 +63,7 @@
             "Promote innovative research for societal benefits.",
             "Prepare students for leadership roles in industry and academia."
         ],
-        "about_department": "The department specializes in modern communication systems and electronic design."
+        "about_department": ["Department of Artificial Intelligence aims to produce computing graduates with high potency, apply, design and develop systems to pertain and to integrate both software and hardware devices, utilize modern approaches in programming and problem solving techniques."," The Department was established in the year 2020 with the main objective of providing quality education in the field of Engineering and Technology."," It is recognized as nodal center under Anna University. The Department has proved to be a center of excellence in Academic, Sponsored research and Continuing Education Programme."]
     },
     {
         "department_id": 6,
@@ -76,7 +76,7 @@
             "Encourage research in renewable energy and smart systems.",
             "Equip students with problem-solving skills for the energy sector."
         ],
-        "about_department": "The department addresses challenges in energy systems and electrical technologies."
+        "about_department": ["Department of Artificial Intelligence aims to produce computing graduates with high potency, apply, design and develop systems to pertain and to integrate both software and hardware devices, utilize modern approaches in programming and problem solving techniques."," The Department was established in the year 2020 with the main objective of providing quality education in the field of Engineering and Technology."," It is recognized as nodal center under Anna University. The Department has proved to be a center of excellence in Academic, Sponsored research and Continuing Education Programme."]
     },
     {
         "department_id": 7,
@@ -89,7 +89,7 @@
             "Promote research in automation and intelligent systems.",
             "Prepare students for industrial and academic excellence."
         ],
-        "about_department": "The department emphasizes control systems and precision technologies."
+        "about_department": ["Department of Artificial Intelligence aims to produce computing graduates with high potency, apply, design and develop systems to pertain and to integrate both software and hardware devices, utilize modern approaches in programming and problem solving techniques."," The Department was established in the year 2020 with the main objective of providing quality education in the field of Engineering and Technology."," It is recognized as nodal center under Anna University. The Department has proved to be a center of excellence in Academic, Sponsored research and Continuing Education Programme."]
     },
     {
         "department_id": 8,
@@ -102,7 +102,7 @@
             "Encourage innovation in construction and design.",
             "Promote sustainable and eco-friendly engineering practices."
         ],
-        "about_department": "The department focuses on modern construction technologies and sustainability."
+        "about_department": ["Department of Artificial Intelligence aims to produce computing graduates with high potency, apply, design and develop systems to pertain and to integrate both software and hardware devices, utilize modern approaches in programming and problem solving techniques."," The Department was established in the year 2020 with the main objective of providing quality education in the field of Engineering and Technology."," It is recognized as nodal center under Anna University. The Department has proved to be a center of excellence in Academic, Sponsored research and Continuing Education Programme."]
     },
     {
         "department_id": 9,
@@ -115,7 +115,7 @@
             "Promote research in advanced manufacturing and materials.",
             "Prepare students for global challenges in engineering."
         ],
-        "about_department": "The department emphasizes mechanical system design and innovation."
+        "about_department": ["Department of Artificial Intelligence aims to produce computing graduates with high potency, apply, design and develop systems to pertain and to integrate both software and hardware devices, utilize modern approaches in programming and problem solving techniques."," The Department was established in the year 2020 with the main objective of providing quality education in the field of Engineering and Technology."," It is recognized as nodal center under Anna University. The Department has proved to be a center of excellence in Academic, Sponsored research and Continuing Education Programme."]
     },
     {
         "department_id": 10,
@@ -128,7 +128,7 @@
             "Encourage research in sustainable and electric vehicles.",
             "Prepare industry-ready professionals for the automotive sector."
         ],
-        "about_department": "The department focuses on automotive design and sustainable transportation."
+        "about_department": ["Department of Artificial Intelligence aims to produce computing graduates with high potency, apply, design and develop systems to pertain and to integrate both software and hardware devices, utilize modern approaches in programming and problem solving techniques."," The Department was established in the year 2020 with the main objective of providing quality education in the field of Engineering and Technology."," It is recognized as nodal center under Anna University. The Department has proved to be a center of excellence in Academic, Sponsored research and Continuing Education Programme."]
     },
     {
         "department_id": 11,
@@ -141,7 +141,7 @@
             "Foster critical thinking and creativity through language.",
             "Prepare students for effective communication in diverse contexts."
         ],
-        "about_department": "The department focuses on linguistic proficiency and literary appreciation."
+        "about_department": ["Department of Artificial Intelligence aims to produce computing graduates with high potency, apply, design and develop systems to pertain and to integrate both software and hardware devices, utilize modern approaches in programming and problem solving techniques."," The Department was established in the year 2020 with the main objective of providing quality education in the field of Engineering and Technology."," It is recognized as nodal center under Anna University. The Department has proved to be a center of excellence in Academic, Sponsored research and Continuing Education Programme."]
     },
     {
         "department_id": 12,
@@ -154,7 +154,7 @@
             "Encourage research in green and sustainable chemistry.",
             "Prepare students for careers in chemical industries and research."
         ],
-        "about_department": "The department emphasizes chemical analysis and sustainable practices."
+        "about_department": ["Department of Artificial Intelligence aims to produce computing graduates with high potency, apply, design and develop systems to pertain and to integrate both software and hardware devices, utilize modern approaches in programming and problem solving techniques."," The Department was established in the year 2020 with the main objective of providing quality education in the field of Engineering and Technology."," It is recognized as nodal center under Anna University. The Department has proved to be a center of excellence in Academic, Sponsored research and Continuing Education Programme."]
     },
     {
         "department_id": 13,
@@ -167,7 +167,7 @@
             "Encourage interdisciplinary research involving mathematics.",
             "Equip students with analytical skills for diverse applications."
         ],
-        "about_department": "The department focuses on pure and applied mathematical sciences."
+        "about_department": ["Department of Artificial Intelligence aims to produce computing graduates with high potency, apply, design and develop systems to pertain and to integrate both software and hardware devices, utilize modern approaches in programming and problem solving techniques."," The Department was established in the year 2020 with the main objective of providing quality education in the field of Engineering and Technology."," It is recognized as nodal center under Anna University. The Department has proved to be a center of excellence in Academic, Sponsored research and Continuing Education Programme."]
     },
     {
         "department_id": 14,
@@ -180,7 +180,7 @@
             "Encourage research in emerging areas of physical sciences.",
             "Prepare students for careers in academia, industry, and research."
         ],
-        "about_department": "The department emphasizes understanding and applying the principles of physics."
+        "about_department": ["Department of Artificial Intelligence aims to produce computing graduates with high potency, apply, design and develop systems to pertain and to integrate both software and hardware devices, utilize modern approaches in programming and problem solving techniques."," The Department was established in the year 2020 with the main objective of providing quality education in the field of Engineering and Technology."," It is recognized as nodal center under Anna University. The Department has proved to be a center of excellence in Academic, Sponsored research and Continuing Education Programme."]
     },
     {
         "department_id": 15,
@@ -193,6 +193,6 @@
             "Encourage research in genetic engineering and bioprocess technology.",
             "Prepare students for global challenges in biotechnology and healthcare."
         ],
-        "about_department": "The department focuses on cutting-edge research in life sciences and biotechnology applications."
+        "about_department": ["Department of Artificial Intelligence aims to produce computing graduates with high potency, apply, design and develop systems to pertain and to integrate both software and hardware devices, utilize modern approaches in programming and problem solving techniques."," The Department was established in the year 2020 with the main objective of providing quality education in the field of Engineering and Technology."," It is recognized as nodal center under Anna University. The Department has proved to be a center of excellence in Academic, Sponsored research and Continuing Education Programme."]
     }
 ]
