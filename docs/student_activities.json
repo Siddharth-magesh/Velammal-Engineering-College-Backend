@@ -1,6 +1,7 @@
 [
     {
-        "dept_id": 1,
+        "dept_id": "001",
+        "department_name": "Artificial Intelligence and Data Science (AI&DS)",
         "content": "Students' achievements are a testament to their hard work, dedication, and resilience in the pursuit of academic and personal growth. From excelling in academics and securing top grades to showcasing talent in sports, arts, and extracurricular activities, their accomplishments reflect a well-rounded development. Participation in science fairs, debates, and cultural events highlights their creativity and critical thinking, while community service projects demonstrate their commitment to making a positive impact. These achievements not only inspire their peers but also pave the way for future opportunities, building confidence and a strong foundation for lifelong success.",
         "images": [
             {"image_path": "path/to/image1_1.jpg", "event_name": "AI&DS Department Paper Presentation (2nd Prize)", "image_content": "III year students of the AI&DS department won second prize in the paper presentation held at Saveetha Engineering College on 23.08.24. Paper Title: 'Are Women Safe in India?", "date": "2024-08-23"},
@@ -16,7 +17,8 @@
         ]
     },
     {
-        "dept_id": 2,
+        "dept_id": "002",
+        "department_name": "Automobile Engineering (AUTO)",
         "content": "Department 2 Content",
         "images": [
             {"image_path": "path/to/image2_1.jpg", "event_name": "Description of Image 2_1", "image_content": "Event 2_1", "date": "YYYY-MM-DD"},
@@ -32,7 +34,8 @@
         ]
     },
     {
-        "dept_id": 3,
+        "dept_id": "003",
+        "department_name": "Chemistry",
         "content": "Department 3 Content",
         "images": [
             {"image_path": "path/to/image3_1.jpg", "event_name": "Description of Image 3_1", "image_content": "Event 3_1", "date": "YYYY-MM-DD"},
@@ -44,11 +47,12 @@
             {"image_path": "path/to/image3_7.jpg", "event_name": "Description of Image 3_7", "image_content": "Event 3_7", "date": "YYYY-MM-DD"},
             {"image_path": "path/to/image3_8.jpg", "event_name": "Description of Image 3_8", "image_content": "Event 3_8", "date": "YYYY-MM-DD"},
             {"image_path": "path/to/image3_9.jpg", "event_name": "Description of Image 3_9", "image_content": "Event 3_9", "date": "YYYY-MM-DD"},
-            {"image_path": "path/to/image3_10.jpg", "event_name": "Description of Image 3_10", "image_content": "Event 3 _10", "date": "YYYY-MM-DD"}
+            {"image_path": "path/to/image3_10.jpg", "event_name": "Description of Image 3_10", "image_content": "Event 3_10", "date": "YYYY-MM-DD"}
         ]
     },
     {
-        "dept_id": 4,
+        "dept_id": "004",
+        "department_name": "Civil Engineering (CIVL)",
         "content": "Department 4 Content",
         "images": [
             {"image_path": "path/to/image4_1.jpg", "event_name": "Description of Image 4_1", "image_content": "Event 4_1", "date": "YYYY-MM-DD"},
@@ -64,7 +68,8 @@
         ]
     },
     {
-        "dept_id": 5,
+        "dept_id": "005",
+        "department_name": "Computer Science & Engineering (CSE)",
         "content": "Department 5 Content",
         "images": [
             {"image_path": "path/to/image5_1.jpg", "event_name": "Description of Image 5_1", "image_content": "Event 5_1", "date": "YYYY-MM-DD"},
@@ -80,7 +85,8 @@
         ]
     },
     {
-        "dept_id": 6,
+        "dept_id": "006",
+        "department_name": "Computer Science and Engineering (CYBER SECURITY)",
         "content": "Department 6 Content",
         "images": [
             {"image_path": "path/to/image6_1.jpg", "event_name": "Description of Image 6_1", "image_content": "Event 6_1", "date": "YYYY-MM-DD"},
@@ -96,7 +102,8 @@
         ]
     },
     {
-        "dept_id": 7,
+        "dept_id": "007",
+        "department_name": "Electrical & Electronics Engineering (EEE)",
         "content": "Department 7 Content",
         "images": [
             {"image_path": "path/to/image7_1.jpg", "event_name": "Description of Image 7_1", "image_content": "Event 7_1", "date": "YYYY-MM-DD"},
@@ -112,7 +119,8 @@
         ]
     },
     {
-        "dept_id": 8,
+        "dept_id": "008",
+        "department_name": "Electronics & Instrumentation Engineering  (EIE)",
         "content": "Department 8 Content",
         "images": [
             {"image_path": "path/to/image8_1.jpg", "event_name": "Description of Image 8_1", "image_content": "Event 8_1", "date": "YYYY-MM-DD"},
@@ -128,7 +136,8 @@
         ]
     },
     {
-        "dept_id": 9,
+        "dept_id": "009",
+        "department_name": "Electronics and Communication Engineering (ECE)",
         "content": "Department 9 Content",
         "images": [
             {"image_path": "path/to/image9_1.jpg", "event_name": "Description of Image 9_1", "image_content": "Event 9_1", "date": "YYYY-MM-DD"},
@@ -144,7 +153,8 @@
         ]
     },
     {
-        "dept_id": 10,
+        "dept_id": "010",
+        "department_name": "English",
         "content": "Department 10 Content",
         "images": [
             {"image_path": "path/to/image10_1.jpg", "image_content": "Description of Image 10_1", "event_name": "Event 10_1", "date": "YYYY-MM-DD"},
@@ -160,7 +170,8 @@
         ]
     },
     {
-        "dept_id": 11,
+        "dept_id": "011",
+        "department_name": "Information Technology (IT)",
         "content": "Department 11 Content",
         "images": [
             {"image_path": "path/to/image11_1.jpg", "image_content": "Description of Image 11_1", "event_name": "Event 11_1", "date": "YYYY-MM-DD"},
@@ -176,7 +187,8 @@
         ]
     },
     {
-        "dept_id": 12,
+        "dept_id": "012",
+        "department_name": "Mathematics",
         "content": "Department 12 Content",
         "images": [
             {"image_path": "path/to/image12_1.jpg", "image_content": "Description of Image 12_1", "event_name": "Event 12_1", "date": "YYYY-MM-DD"},
@@ -192,7 +204,8 @@
         ]
     },
     {
-        "dept_id": 13,
+        "dept_id": "013", 
+        "department_name": "Mechancial Engineering (MECH)",
         "content": "Department 13 Content",
         "images": [
             {"image_path": "path/to/image13_1.jpg", "image_content": "Description of Image 13_1", "event_name": "Event 13_1", "date": "YYYY-MM-DD"},
@@ -208,7 +221,8 @@
         ]
     },
     {
-        "dept_id": 14,
+        "dept_id": "014",
+        "department_name": "Physical Education",
         "content": "Department 14 Content",
         "images": [
             {"image_path": "path/to/image14_1.jpg", "image_content": "Description of Image 14_1", "event_name": "Event 14_1", "date": "YYYY-MM-DD"},
@@ -224,7 +238,8 @@
         ]
     },
     {
-        "dept_id": 15,
+        "dept_id": "015",
+        "department_name": "Physics",
         "content": "Department 15 Content",
         "images": [
             {"image_path": "path/to/image15_1.jpg", "image_content": "Description of Image 15_1", "event_name": "Event 15_1", "date": "YYYY-MM-DD"},
@@ -239,6 +254,4 @@
             {"image_path": "path/to/image15_10.jpg", "image_content": "Description of Image 15_10", "event_name": "Event 15_10", "date": "YYYY-MM-DD"}
         ]
     }
-    
-    
 ]

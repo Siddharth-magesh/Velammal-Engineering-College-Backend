@@ -175,6 +175,7 @@ app.get('/api/support-staff/:deptId', async (req, res) => {
 });
 
 // MOUs Details Endpoint
+
 app.get('/api/mous/:deptId/:uniqueId?', async (req, res) => {
     const { deptId, uniqueId } = req.params;
     const db = client.db(dbName);
@@ -182,20 +183,16 @@ app.get('/api/mous/:deptId/:uniqueId?', async (req, res) => {
 
     try {
         const departmentData = await collection.findOne({
-            "VEC.Departments": deptId
+            Departments: deptId
         });
-
         if (!departmentData) {
             return res.status(404).json({ message: "Department not found" });
         }
 
-        const department = departmentData.VEC.find(dept => dept.Departments === deptId);
+        const departmentMOUs = departmentData.MOUs;
 
-        if (!department) {
-            return res.status(404).json({ message: "Department not found" });
-        }
         if (uniqueId) {
-            const filteredMOUs = department.MOUs.filter(mou =>
+            const filteredMOUs = departmentMOUs.filter(mou =>
                 mou.unique_id.toString() === uniqueId
             );
 
@@ -205,7 +202,8 @@ app.get('/api/mous/:deptId/:uniqueId?', async (req, res) => {
                 return res.status(404).json({ message: "No MOU found with the provided unique_id or year." });
             }
         }
-        const uniqueIdsList = department.MOUs.map(mou => mou.unique_id);
+
+        const uniqueIdsList = departmentMOUs.map(mou => mou.unique_id);
         return res.status(200).json({ unique_ids: uniqueIdsList });
 
     } catch (error) {
@@ -213,6 +211,7 @@ app.get('/api/mous/:deptId/:uniqueId?', async (req, res) => {
         res.status(500).json({ error: "Error fetching MOUs" });
     }
 });
+
 
 // Department Activities Endpoint
 app.get('/api/department_activities/:deptId', async (req, res) => {
@@ -416,20 +415,54 @@ app.get('/api/regulation', async (req, res) => {
     }
 });
 
-//Intakes
-app.get('/api/intakes', async (req, res) => {
+// Endpoint to fetch details for UG and UG_Lateral
+app.get('/api/ug_and_ug_lateral', async (req, res) => {
     const db = client.db(dbName);
-    const collection = db.collection('Intakes'); // Use the collection for intake data
+    const collection = db.collection('Intakes');
 
     try {
-        const intakes = await collection.find({}).toArray(); // Fetch all intakes
-        if (intakes.length === 0) {
-            return res.status(404).json({ message: 'No intake data found' });
+        const data = await collection.findOne({}, { projection: { UG: 1, UG_Lateral: 1, _id: 0 } });
+        if (!data) {
+            return res.status(404).json({ message: 'No UG and UG_Lateral details found' });
         }
-        res.status(200).json(intakes); // Return the data as JSON
+        res.status(200).json(data);
     } catch (error) {
-        console.error('❌ Error fetching intakes:', error);
-        res.status(500).json({ error: 'Error fetching intake data' });
+        console.error('❌ Error fetching UG and UG_Lateral details:', error);
+        res.status(500).json({ error: 'Error fetching UG and UG_Lateral details' });
+    }
+});
+
+// Endpoint to fetch details for PG
+app.get('/api/pg', async (req, res) => {
+    const db = client.db(dbName);
+    const collection = db.collection('Intakes');
+
+    try {
+        const data = await collection.findOne({}, { projection: { PG: 1, _id: 0 } });
+        if (!data) {
+            return res.status(404).json({ message: 'No PG details found' });
+        }
+        res.status(200).json(data);
+    } catch (error) {
+        console.error('❌ Error fetching PG details:', error);
+        res.status(500).json({ error: 'Error fetching PG details' });
+    }
+});
+
+// Endpoint to fetch details for MBA
+app.get('/api/mba', async (req, res) => {
+    const db = client.db(dbName);
+    const collection = db.collection('Intakes');
+
+    try {
+        const data = await collection.findOne({}, { projection: { MBA: 1, _id: 0 } });
+        if (!data) {
+            return res.status(404).json({ message: 'No MBA details found' });
+        }
+        res.status(200).json(data);
+    } catch (error) {
+        console.error('❌ Error fetching MBA details:', error);
+        res.status(500).json({ error: 'Error fetching MBA details' });
     }
 });
 
@@ -532,6 +565,22 @@ app.get('/api/alumni', async (req, res) => {
     } catch (error) {
         console.error('❌ Error fetching alumni data:', error);
         res.status(500).json({ error: 'Error fetching alumni data' });
+    }
+});
+
+app.get('/api/banner', async (req, res) => {
+    const db = client.db(dbName);
+    const collection = db.collection('banner');
+
+    try {
+        const bannersData = await collection.find({}).toArray();
+        if (bannersData.length === 0) {
+            return res.status(404).json({ message: 'No banners found' });
+        }
+        res.status(200).json(bannersData);
+    } catch (error) {
+        console.error('❌ Error fetching banners:', error);
+        res.status(500).json({ error: 'Error fetching banners' });
     }
 });
 

@@ -2,8 +2,8 @@
   {
     "events": [
       {
-        "start_date": "2025-02-01",
-        "end_date": "2025-02-03",
+        "start_date": "1 FEB",
+        "end_date": "3 FEB, 2025",
         "title": "AI and Robotics Expo",
         "department": "Computer Science",
         "content": "An exhibition showcasing advancements in AI and robotics with live demonstrations and keynote sessions.",
@@ -12,8 +12,8 @@
         "status": "True"
       },
       {
-        "start_date": "2025-03-15",
-        "end_date": "2025-03-16",
+        "start_date": "15 MAR",
+        "end_date": "16 MAR, 2025",
         "title": "Sustainable Energy Summit",
         "department": "Electrical Engineering",
         "content": "A conference discussing innovations in renewable energy and sustainable practices.",
@@ -22,8 +22,8 @@
         "status": "True"
       },
       {
-        "start_date": "2025-04-10",
-        "end_date": "2025-04-12",
+        "start_date": "10 APR",
+        "end_date": "12 APR, 2025",
         "title": "HealthTech Conference",
         "department": "Biomedical Engineering",
         "content": "Exploring the intersection of technology and healthcare with workshops and panel discussions.",
@@ -32,8 +32,8 @@
         "status": "True"
       },
       {
-        "start_date": "2025-05-05",
-        "end_date": "2025-05-07",
+        "start_date": "5 MAY",
+        "end_date": "7 MAY, 2025",
         "title": "Entrepreneurship Bootcamp",
         "department": "Business Administration",
         "content": "An intensive bootcamp for budding entrepreneurs with mentorship sessions and networking opportunities.",
@@ -42,8 +42,8 @@
         "status": "True"
       },
       {
-        "start_date": "2025-06-01",
-        "end_date": "2025-06-03",
+        "start_date": "1 JUN",
+        "end_date": "3 JUN, 2025",
         "title": "Environmental Awareness Week",
         "department": "Environmental Science",
         "content": "A week dedicated to raising awareness about environmental conservation and sustainability.",
@@ -52,8 +52,8 @@
         "status": "True"
       },
       {
-        "start_date": "2025-07-20",
-        "end_date": "2025-07-22",
+        "start_date": "20 JUL",
+        "end_date": "22 JUL, 2025",
         "title": "Blockchain Innovations Forum",
         "department": "Information Technology",
         "content": "An event focusing on the latest advancements and applications in blockchain technology.",
@@ -62,8 +62,8 @@
         "status": "False"
       },
       {
-        "start_date": "2025-08-15",
-        "end_date": "2025-08-17",
+        "start_date": "15 AUG",
+        "end_date": "17 AUG, 2025",
         "title": "Cultural Fest 2025",
         "department": "Cultural Club",
         "content": "A vibrant cultural fest featuring music, dance, and art performances from around the globe.",

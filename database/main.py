@@ -530,15 +530,20 @@ def insert_support_staff_data():
     print("Support staffs documents inserted successfully.")
 
 def insert_MOUs_data():
-    collection = db['MOUs'] 
-    with open("/Velammal-Engineering-College-Backend/docs/MOUs.json", "r") as file:
-        documents = json.load(file)
-        collection.insert_many(documents)
+    collection = db['MOUs']
+    folder_path = "/Velammal-Engineering-College-Backend/docs/MOUs/"
+    for filename in os.listdir(folder_path):
+        if filename.endswith(".json"):
+            file_path = os.path.join(folder_path,filename)
+
+            with open(file_path,"r") as file:
+                documents = json.load(file)
+                collection.insert_one(documents)
     
-    print("MOUs documents inserted successfully.")
+    print("All MOU documents have been inserted successfully.")
 
 def insert_curriculum_data():
-    collection = db['curriculum']  
+    collection = db['curriculum']
     with open("/Velammal-Engineering-College-Backend/docs/curriculum.json", "r") as file:
         documents = json.load(file)
         collection.insert_many(documents)
@@ -645,6 +650,14 @@ def insert_curriculum_and_syllabus_data():
 
     print("curriculum_And_syllabus documents inserted successfully.")
 
+def insert_banners():
+    collection = db['banner']  
+    with open("/Velammal-Engineering-College-Backend/docs/banner.json", "r") as file:
+        documents = json.load(file)
+        collection.insert_many(documents)
+
+    print("Banner documents inserted successfully.")
+
 def insert_all_forms_data():
 
     collection = db['all_forms']  
@@ -720,8 +733,7 @@ def insert_alumni_data(directory_path='/Velammal-Engineering-College-Backend/doc
                 else:
                     print(f"Unsupported data format in file: {filename}")
 
-    print(f"Data from JSON files in '{directory_path}' has been inserted into the 'alumni' collection.")
-
+    print("Data from JSON files has been inserted into the 'alumni' collection.")
 
 insert_department_data()
 insert_hod_datas()
@@ -744,6 +756,7 @@ insert_dean_and_associates_data()
 insert_curriculum_and_syllabus_data()
 insert_all_forms_data()
 insert_alumni_data()
+insert_banners()
 
 department_paths = {
     "001": "/Velammal-Engineering-College-Backend/docs/AIDS-DEPT-ACT/",

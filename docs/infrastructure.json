@@ -1,6 +1,7 @@
 [
     {
-        "dept_id": 1,
+        "dept_id": "001",
+        "department_name": "Artificial Intelligence and Data Science (AI&DS)",
         "infrastructure_images": [
             {"image_path": "path/to/image1_1.jpg", "image_name": "Image 1_1", "image_content": "Description of Image 1_1"},
             {"image_path": "path/to/image1_2.jpg", "image_name": "Image 1_2", "image_content": "Description of Image 1_2"},
@@ -10,7 +11,8 @@
         ]
     },
     {
-        "dept_id": 2,
+        "dept_id": "002",
+        "department_name": "Automobile Engineering (AUTO)",
         "infrastructure_images": [
             {"image_path": "path/to/image2_1.jpg", "image_name": "Image 2_1", "image_content": "Description of Image 2_1"},
             {"image_path": "path/to/image2_2.jpg", "image_name": "Image 2_2", "image_content": "Description of Image 2_2"},
@@ -20,7 +22,8 @@
         ]
     },
     {
-        "dept_id": 3,
+        "dept_id": "003",
+        "department_name": "Chemistry",
         "infrastructure_images": [
             {"image_path": "path/to/image3_1.jpg", "image_name": "Image 3_1", "image_content": "Description of Image 3_1"},
             {"image_path": "path/to/image3_2.jpg", "image_name": "Image 3_2", "image_content": "Description of Image 3_2"},
@@ -30,7 +33,8 @@
         ]
     },
     {
-        "dept_id": 4,
+        "dept_id": "004",
+        "department_name": "Civil Engineering (CIVIL)",
         "infrastructure_images": [
             {"image_path": "path/to/image4_1.jpg", "image_name": "Image 4_1", "image_content": "Description of Image 4_1"},
             {"image_path": "path/to/image4_2.jpg", "image_name": "Image 4_2", "image_content": "Description of Image 4_2"},
@@ -40,7 +44,8 @@
         ]
     },
     {
-        "dept_id": 5,
+        "dept_id": "005",
+        "department_name": "Computer Science & Engineering (CSE)",
         "infrastructure_images": [
             {"image_path": "path/to/image5_1.jpg", "image_name": "Image 5_1", "image_content": "Description of Image 5_1"},
             {"image_path": "path/to/image5_2.jpg", "image_name": "Image 5_2", "image_content": "Description of Image 5_2"},
@@ -50,7 +55,8 @@
         ]
     },
     {
-        "dept_id": 6,
+        "dept_id": "006",
+        "department_name": "Computer Science and Engineering (CYBER SECURITY)",
         "infrastructure_images": [
             {"image_path": "path/to/image6_1.jpg", "image_name": "Image 6_1", "image_content": "Description of Image 6_1"},
             {"image_path": "path/to/image6_2.jpg", "image_name": "Image 6_2", "image_content": "Description of Image 6_2"},
@@ -60,7 +66,8 @@
         ]
     },
     {
-        "dept_id": 7,
+        "dept_id": "007",
+        "department_name": "Electrical & Electronics Engineering (ECE)",
         "infrastructure_images": [
             {"image_path": "path/to/image7_1.jpg", "image_name": "Image 7_1", "image_content": "Description of Image 7_1"},
             {"image_path": "path/to/image7_2.jpg", "image_name": "Image 7_2", "image_content": "Description of Image 7_2"},
@@ -70,7 +77,8 @@
         ]
     },
     {
-        "dept_id": 8,
+        "dept_id": "008",
+        "department_name": "Electronics & Instrumentation Engineering (EIE)",
         "infrastructure_images": [
             {"image_path": "path/to/image8_1.jpg", "image_name": "Image 8_1", "image_content": "Description of Image 8_1"},
             {"image_path": "path/to/image8_2.jpg", "image_name": "Image 8_2", "image_content": "Description of Image 8_2"},
@@ -80,7 +88,8 @@
         ]
     },
     {
-        "dept_id": 9,
+        "dept_id": "009",
+        "department_name": "Electronics and Communication Engineering (ECE)",
         "infrastructure_images": [
             {"image_path": "path/to/image9_1.jpg", "image_name": "Image 9_1", "image_content": "Description of Image 9_1"},
             {"image_path": "path/to/image9_2.jpg", "image_name": "Image 9_2", "image_content": "Description of Image 9_2"},
@@ -90,7 +99,8 @@
         ]
     },
     {
-        "dept_id": 10,
+        "dept_id": "010",
+        "department_name": "English",
         "infrastructure_images": [
             {"image_path": "path/to/image10_1.jpg", "image_name": "Image 10_1", "image_content": "Description of Image 10_1"},
             {"image_path": "path/to/image10_2.jpg", "image_name": "Image 10_2", "image_content": "Description of Image 10_2"},
@@ -100,7 +110,8 @@
         ]
     },
     {
-        "dept_id": 11,
+        "dept_id": "011",
+        "department_name": "Information Technology (IT)",
         "infrastructure_images": [
             {"image_path": "path/to/image11_1.jpg", "image_name": "Image 11_1", "image_content": "Description of Image 11_1"},
             {"image_path": "path/to/image11_2.jpg", "image_name": "Image 11_2", "image_content": "Description of Image 11_2"},
@@ -110,7 +121,8 @@
         ]
     },
     {
-        "dept_id": 12,
+        "dept_id": "012",
+        "department_name": "Mathematics",
         "infrastructure_images": [
             {"image_path": "path/to/image12_1.jpg", "image_name": "Image 12_1", "image_content": "Description of Image 12_1"},
             {"image_path": "path/to/image12_2.jpg", "image_name": "Image 12_2", "image_content": "Description of Image 12_2"},
@@ -120,7 +132,8 @@
         ]
     },
     {
-        "dept_id": 13,
+        "dept_id": "013",
+        "department_name": "Mechancial Engineering (MECH)",
         "infrastructure_images": [
             {"image_path": "path/to/image13_1.jpg", "image_name": "Image 13_1", "image_content": "Description of Image 13_1"},
             {"image_path": "path/to/image13_2.jpg", "image_name": "Image 13_2", "image_content": "Description of Image 13_2"},
@@ -130,7 +143,8 @@
         ]
     },
     {
-        "dept_id": 14,
+        "dept_id": "014",
+        "department_name": "Physical Education",
         "infrastructure_images": [
             {"image_path": "path/to/image14_1.jpg", "image_name": "Image 14_1", "image_content": "Description of Image 14_1"},
             {"image_path": "path/to/image14_2.jpg", "image_name": "Image 14_2", "image_content": "Description of Image 14_2"},
@@ -140,7 +154,8 @@
         ]
     },
     {
-        "dept_id": 15,
+        "dept_id": "015",
+        "department_name": "Physics",
         "infrastructure_images": [
             {"image_path": "path/to/image15_1.jpg", "image_name": "Image 15_1", "image_content": "Description of Image 15_1"},
             {"image_path": "path/to/image15_2.jpg", "image_name": "Image 15_2", "image_content": "Description of Image 15_2"},
