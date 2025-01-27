@@ -3,49 +3,63 @@
         "Position": "Academics",
         "Dean": "Dr. A. Jebamalar",
         "Dean_Designation": "Prof & Head - Civil Engineering",
+        "Dean_Image": "/static/images/dean_and_associates/dr_a_jebamalar.jpg",
         "Associate_Dean": "Dr. M. Arockia Jaswin",
-        "Associate_Dean_Designation": "Prof. Mechanical Engg."
+        "Associate_Dean_Designation": "Prof. Mechanical Engg.",
+        "Associate_Dean_Image": "/static/images/dean_and_associates/dr_m_arockia_jaswin.jpg"
     },
     {
         "Position": "Planning and Development",
         "Dean": "Dr. Jeeva Katiravan",
         "Dean_Designation": "Prof and Head - Information Technology",
+        "Dean_Image": "/static/images/dean_and_associates/dr_jeeva_katiravan.jpg",
         "Associate_Dean": "Dr. S. Rajalakshmi",
-        "Associate_Dean_Designation": "AP - CSE"
+        "Associate_Dean_Designation": "AP - CSE",
+        "Associate_Dean_Image": "/static/images/dean_and_associates/dr_s_rajalakshmi.jpg"
     },
     {
         "Position": "Student Development and Welfare",
         "Dean": "Dr. S. Shahil Kirupavathy",
         "Dean_Designation": "Prof and Head - Department of Physics",
+        "Dean_Image": "/static/images/dean_and_associates/dr_s_shahil_kirupavathy.jpg",
         "Associate_Dean": "Dr. Geetha R",
-        "Associate_Dean_Designation": "AP - EEE"
+        "Associate_Dean_Designation": "AP - EEE",
+        "Associate_Dean_Image": "/static/images/dean_and_associates/dr_geetha_r.jpg"
     },
     {
         "Position": "Faculty Development and Welfare",
         "Dean": "Dr. S Mary Jones",
         "Dean_Designation": "Prof & Head - Department of Electronics and Communication Engg.",
+        "Dean_Image": "/static/images/dean_and_associates/dr_s_mary_jones.jpg",
         "Associate_Dean": "Dr. R.S.Lekshmi",
-        "Associate_Dean_Designation": "Asst Prof - Head - MBA"
+        "Associate_Dean_Designation": "Asst Prof - Head - MBA",
+        "Associate_Dean_Image": "/static/images/dean_and_associates/dr_rs_lekshmi.jpg"
     },
     {
         "Position": "Research and Development",
         "Dean": "Dr. A. Balaji Ganesh",
         "Dean_Designation": "Prof - Dept of Computer Science",
+        "Dean_Image": "/static/images/dean_and_associates/dr_a_balaji_ganesh.jpg",
         "Associate_Dean": "Dr. S. Bhaskara Sethupathy",
-        "Associate_Dean_Designation": "Prof & Head - Automobile Engineering"
+        "Associate_Dean_Designation": "Prof & Head - Automobile Engineering",
+        "Associate_Dean_Image": "/static/images/dean_and_associates/dr_s_bhaskara_sethupathy.jpg"
     },
     {
         "Position": "Accreditations and Ranking",
         "Dean": "Dr. E Ganapathy Sundaram",
         "Dean_Designation": "Prof & Head - Mech. Engineering",
+        "Dean_Image": "/static/images/dean_and_associates/dr_e_ganapathy_sundaram.jpg",
         "Associate_Dean": "Dr. P. Visu",
-        "Associate_Dean_Designation": "Prof - CSE"
+        "Associate_Dean_Designation": "Prof - CSE",
+        "Associate_Dean_Image": "/static/images/dean_and_associates/dr_p_visu.jpg"
     },
     {
         "Position": "Corporate Relations and Higher Studies",
         "Dean": "Mr. Arun Ramasamy",
         "Dean_Designation": "Head - Placements",
+        "Dean_Image": "/static/images/dean_and_associates/mr_arun_ramasamy.jpg",
         "Associate_Dean": "Dr. K.Suresh Kumar",
-        "Associate_Dean_Designation": "Asso. Prof - EEE"
+        "Associate_Dean_Designation": "Asso. Prof - EEE",
+        "Associate_Dean_Image": "/static/images/dean_and_associates/dr_k_suresh_kumar.jpg"
     }
 ]

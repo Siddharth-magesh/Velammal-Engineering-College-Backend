@@ -1,0 +1,22 @@
+[
+    {
+        "DEPT": [
+            "Civil",
+            "CSE",
+            "EEE",
+            "ECE",
+            "E&I",
+            "IT",
+            "Mech"
+        ],
+        "PDF_Path": [
+            "/pdfs/Civil_CSE_EEE_ECE_EI.pdf",
+            "/pdfs/Civil_CSE_EEE_ECE_EI.pdf",
+            "/pdfs/Civil_CSE_EEE_ECE_EI.pdf",
+            "/pdfs/Civil_CSE_EEE_ECE_EI.pdf",
+            "/pdfs/Civil_CSE_EEE_ECE_EI.pdf",
+            "IT_Mech.pdf",
+            "IT_Mech.pdf"
+        ]
+    }
+]

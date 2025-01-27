@@ -1,0 +1,77 @@
+[
+    {
+        "Title": [
+            {
+                "IQUAC MOM": {
+                    "PDF_Path": [
+                        "/static/pdf/naac/IQUAC_MOM_ODD_SEM_2020-2021.pdf",
+                        "/static/pdf/naac/IQUAC_MOM_EVEN_SEM_2020-2021.pdf"
+                    ],
+                    "years": [
+                        "ODD SEM 2020-2021",
+                        "EVEN SEM 2020-2021"
+                    ]
+                }
+            },
+            {
+                "AQAR": {
+                    "years": [
+                        "2018-2019",
+                        "2019-2020",
+                        "2020-2021",
+                        "2021-2022",
+                        "2022-2023"
+                    ],
+                    "PDF_Path": [
+                        "/static/pdf/naac/AQAR_2018-2019.pdf",
+                        "/static/pdf/naac/AQAR_2019-2020.pdf",
+                        "/static/pdf/naac/AQAR_2020-2021.pdf",
+                        "/static/pdf/naac/AQAR_2021-2022.pdf",
+                        "/static/pdf/naac/AQAR_2022-2023.pdf"
+                    ]
+                }
+            },
+            {
+                "best_practices": {
+                    "PDF_Path": [
+                        "/static/pdf/naac/best_practices_2019-2020.pdf",
+                        "/static/pdf/naac/best_practices_2020-2021.pdf",
+                        "/static/pdf/naac/best_practices_2021-2022.pdf",
+                        "/static/pdf/naac/best_practices_2022-2023.pdf",
+                        "/static/pdf/naac/best_practices_2023-2024.pdf"
+                    ],
+                    "years": [
+                        "2019-2020",
+                        "2020-2021",
+                        "2021-2022",
+                        "2022-2023",
+                        "2023-2024"
+                    ]
+                }
+            },
+            {
+                "institutional_distinctives": {
+                    "years": [
+                        "2019-2020",
+                        "2020-2021",
+                        "2021-2022",
+                        "2022-2023",
+                        "2023-2024"
+                    ],
+                    "PDF_Path": [
+                        "/static/pdf/naac/institutional_distinctives_2019-2020.pdf",
+                        "/static/pdf/naac/institutional_distinctives_2020-2021.pdf",
+                        "/static/pdf/naac/institutional_distinctives_2021-2022.pdf",
+                        "/static/pdf/naac/institutional_distinctives_2022-2023.pdf",
+                        "/static/pdf/naac/institutional_distinctives_2023-2024.pdf"
+                    ]
+                }
+            },
+            {
+                "code_of_ethics": {
+                    "PDF_Path": "/static/pdf/naac/code_of_ethics.pdf"
+                }
+            }
+        ]
+    }
+]

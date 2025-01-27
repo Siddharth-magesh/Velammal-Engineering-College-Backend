@@ -667,6 +667,28 @@ def insert_all_forms_data():
 
     print("all_forms documents inserted successfully.")
 
+def insert_NBA_data():
+    collection = db['nba']
+    with open("/Velammal-Engineering-College-Backend/docs/nba.json", "r") as file:
+        documents = json.load(file)
+        collection.insert_many(documents)
+
+    print("NBA documents inserted successfully.")
+
+def insert_naac_data():
+    collection = db['naac']
+    with open("/Velammal-Engineering-College-Backend/docs/naac.json", "r") as file:
+        documents = json.load(file)
+        collection.insert_many(documents)
+    print("NAAC documents inserted successfully.")
+
+def insert_nirf_data():
+    collection = db['nirf']
+    with open("/Velammal-Engineering-College-Backend/docs/nirf.json", "r") as file:
+        documents = json.load(file)
+        collection.insert_many(documents)
+    print("NIRF documents inserted successfully.")
+
 def process_and_combine_Department_Activities_data(folder_path, dept_id):
     COLLECTION_NAME = "department_activities"
     collection = db[COLLECTION_NAME]
@@ -757,6 +779,9 @@ insert_curriculum_and_syllabus_data()
 insert_all_forms_data()
 insert_alumni_data()
 insert_banners()
+insert_NBA_data()
+insert_naac_data()
+insert_nirf_data()
 
 department_paths = {
     "001": "/Velammal-Engineering-College-Backend/docs/AIDS-DEPT-ACT/",
@@ -820,3 +845,71 @@ def upload_research_data(folder_path):
 
 folder_path = r'/Velammal-Engineering-College-Backend/docs/RESEARCH-DATA'
 upload_research_data(folder_path)
+
+def insert_faculty_data(folder_path):
+    try:
+        collection = db['faculty_data']
+        if not os.path.exists(folder_path):
+            print(f"Error: Folder path '{folder_path}' does not exist.")
+            return
+
+        for file_name in os.listdir(folder_path):
+            if file_name.endswith(".xlsx"):
+                file_path = os.path.join(folder_path, file_name)
+
+                dept_id = os.path.splitext(file_name)[0]
+
+                try:
+                    df = pd.read_excel(file_path)
+                except Exception as e:
+                    print(f"Error reading Excel file '{file_name}': {e}")
+                    continue
+                required_columns = [
+                    "Name", "Designation", "Photo", "Google Scholar Profile",
+                    "Research Gate", "Orchid Profile", "Publon Profile",
+                    "Scopus Author Profile", "LinkedIn Profile", "unique_id"
+                ]
+                missing_columns = [col for col in required_columns if col not in df.columns]
+                if missing_columns:
+                    print(f"Error: Missing columns in '{file_name}': {missing_columns}")
+                    continue 
+
+                faculty_list = []
+                for index, row in df.iterrows():
+                    try:
+                        faculty_data = {
+                            "name": row["Name"],
+                            "designation": row["Designation"],
+                            "photo": row["Photo"],
+                            "profiles": {
+                                "google_scholar": row["Google Scholar Profile"],
+                                "research_gate": row["Research Gate"],
+                                "orchid": row["Orchid Profile"],
+                                "publon": row["Publon Profile"],
+                                "scopus": row["Scopus Author Profile"],
+                                "linkedin": row["LinkedIn Profile"]
+                            },
+                            "unique_id": row["unique_id"]
+                        }
+                        faculty_list.append(faculty_data)
+                    except Exception as e:
+                        print(f"Error processing row {index} in '{file_name}': {e}")
+                
+                department_document = {
+                    "dept_id": dept_id,
+                    "faculty_members": faculty_list
+                }
+                if faculty_list:
+                    try:
+                        collection.insert_one(department_document)
+                    except Exception as e:
+                        print(f"Error inserting document for '{dept_id}' into MongoDB: {e}")
+                else:
+                    print(f"No valid faculty data to insert for '{file_name}'.")
+    except Exception as e:
+        print(f"Unexpected error: {e}")
+
+    print("Faculty Data Insertion Done")
+    return
+
+insert_faculty_data(folder_path=r"/Velammal-Engineering-College-Backend/docs/STAFF-DATA/")

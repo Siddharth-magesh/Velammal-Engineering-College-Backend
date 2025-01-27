@@ -1,0 +1,272 @@
+{
+    "_id": "679754ab4f256c6588df1bac",
+    "Name": "R.GEETHA",
+    "Initial or Surname": "RAJAMANI",
+    "Designation": "Assistant Professor",
+    "Joined in": "2010-02-10",
+    "Department Name": "Mechancial Engineering",
+    "Mail ID": "geetha@velammal.edu.in",
+    "Photo": "/Velammal-Engineering-College-Backend/static/profile_photos/VEC-013-04-004\\VEC-013-04-004.jpg",
+    "Google Scholar Profile": "https://scholar.google.co.in/citations?user=L3gW2jYAAAAJ&hl=en",
+    "Research Gate": "https://www.researchgate.net/profile/Geetha-Rajamani",
+    "Orchid Profile": null,
+    "Publon Profile": null,
+    "Scopus Author Profile": "https://www.scopus.com/authid/detail.uri?authorId=57210626865",
+    "LinkedIn Profile": "https://www.linkedin.com/in/geetha-rajamani-9ba9972a8?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    "Professional Membership": null,
+    "Sponsored Projects": "1",
+    "Patent Granted": "0",
+    "Patent Published": "0",
+    "Patent Filed": null,
+    "Journal Publications": "8",
+    "Conference Publications": "9",
+    "Book / Book Chapter Published": "2",
+    "Seminar / Workshop / Guest Lectures Delivered": "1",
+    "Seminar / Workshop / Guest Lectures Attended": null,
+    "Conference / Seminar / Workshop / Guest Lectures Organized": "1",
+    "PHD Produced": null,
+    "PHD Pursuing": null,
+    "Upload Your Excel File Here": "https://drive.google.com/u/0/open?usp=forms_web&id=1eXXn35b8h5dgZY3zdvvgd4bg8Jc9oCNP",
+    "unique_id": "VEC-013-04-004",
+    "EDUCATIONAL_QUALIFICATION": [
+        {
+            "DEGREE": "B.E.",
+            "BRANCH": "Mechanical",
+            "INSTITUTE": "Pondichery University",
+            "YEAR": 2002
+        },
+        {
+            "DEGREE": "M.E.",
+            "BRANCH": "Manufacturing",
+            "INSTITUTE": "GCT, Coimbatore",
+            "YEAR": 2005
+        },
+        {
+            "DEGREE": "Ph.D.",
+            "BRANCH": "Materials",
+            "INSTITUTE": "Anna University",
+            "YEAR": 2019
+        }
+    ],
+    "EXPERIENCE": [
+        {
+            "DURATION": "From",
+            "Unnamed:_1": "TO",
+            "EXPERIENCE": "NO.OF.YEARS",
+            "Unnamed:_3": "NO.OF MONTHS",
+            "DESIGNATION": null,
+            "INSTITUTION": null
+        },
+        {
+            "DURATION": "8.02.2010",
+            "Unnamed:_1": "Till Date",
+            "EXPERIENCE": "14",
+            "Unnamed:_3": "7",
+            "DESIGNATION": "Assistant Professor",
+            "INSTITUTION": "Velammal Engg College,"
+        },
+        {
+            "DURATION": "9.01.2006",
+            "Unnamed:_1": "31.10.2009",
+            "EXPERIENCE": "4",
+            "Unnamed:_3": "0",
+            "DESIGNATION": "Assistant Professor",
+            "INSTITUTION": "Mailam Engg College,"
+        },
+        {
+            "DURATION": "23.05.2005",
+            "Unnamed:_1": "20.12.2005",
+            "EXPERIENCE": "-",
+            "Unnamed:_3": "5",
+            "DESIGNATION": "Lecturer",
+            "INSTITUTION": "R.M.K   Engg.College"
+        },
+        {
+            "DURATION": "TOTAL",
+            "Unnamed:_1": null,
+            "EXPERIENCE": "19",
+            "Unnamed:_3": "-",
+            "DESIGNATION": null,
+            "INSTITUTION": null
+        }
+    ],
+    "CONFERENCE_PUBLICATIONS": [
+        {
+            "AUTHORS": "Dr. R. Geetha",
+            "PAPER_TITLE": "Tribological Properties of Hybrid Thermoplastic Nanocomposites",
+            "CONFERENCE_NAME": "International conference on Advances in composites, Biocomposites and Nanocomposites",
+            "ORGANIZED_BY": "Durban, University",
+            "ISBN_/_ISSN_NO": "-",
+            "MONTH_&_YEAR": "2013"
+        },
+        {
+            "AUTHORS": "Dr. R. Geetha",
+            "PAPER_TITLE": "Comparative investigations on the Mechanical and Tribological properties of Glass fibre Reinforced Thermoplastic and Blended Graphene oxide hybrid thermoplastic Nanocomposites",
+            "CONFERENCE_NAME": "International conference on computational intelligence & advanced manufacturing research – ICCIAMR ,Chennai",
+            "ORGANIZED_BY": "Chennai",
+            "ISBN_/_ISSN_NO": "-",
+            "MONTH_&_YEAR": "2nd& 3rd May, 2014"
+        },
+        {
+            "AUTHORS": "Dr. R. Geetha",
+            "PAPER_TITLE": "Tribological analysis of graphene oxide reinforced hybrid polyamide bearings under radial loading conditions in dry rolling contact behaviour",
+            "CONFERENCE_NAME": "International conference on Recent Innovations in production Engineering, RIPE – 2017",
+            "ORGANIZED_BY": "MIT, Chennai",
+            "ISBN_/_ISSN_NO": "-",
+            "MONTH_&_YEAR": "24-25 March 2017"
+        },
+        {
+            "AUTHORS": "Dr. R. Geetha",
+            "PAPER_TITLE": "Experimental study on the machining parameters of in 718 precipitation hardening nickel-chromium alloy synthesized by wire assisted additive manufacturing process (WAAM)",
+            "CONFERENCE_NAME": "National Conference on Advances in Mechanical Science (AIMS 2k23)",
+            "ORGANIZED_BY": "Department of Mechanical Engineering, Velammal Engineering College-Chennai-66",
+            "ISBN_/_ISSN_NO": "-",
+            "MONTH_&_YEAR": "12.04.2023"
+        },
+        {
+            "AUTHORS": "Dr. R. Geetha",
+            "PAPER_TITLE": "Mechanical Studies on Epoxy resin based Hybrid Composite containing Glass-Fibre and Coconut Shell Charcoal Powder",
+            "CONFERENCE_NAME": "ERAMS 2019",
+            "ORGANIZED_BY": "Department of Mechanical Engineering, Velammal Engineering College-Chennai-67",
+            "ISBN_/_ISSN_NO": "-",
+            "MONTH_&_YEAR": "20.03.2019"
+        },
+        {
+            "AUTHORS": "Dr. R. Geetha",
+            "PAPER_TITLE": "Tribological analysis of graphene oxide reinforced hybrid polyamide bearing under radial loading conditions in dry rolling contact behaviour",
+            "CONFERENCE_NAME": "Recent innovations in production engineering",
+            "ORGANIZED_BY": "Madras Institute of Technology",
+            "ISBN_/_ISSN_NO": "-",
+            "MONTH_&_YEAR": "24-25 Mar'2017"
+        },
+        {
+            "AUTHORS": "Dr. R. Geetha",
+            "PAPER_TITLE": "Dry sliding wear behaviour of magnesium matrix composite reinforced with nano TiN particulates ",
+            "CONFERENCE_NAME": "Sustainable development in Mechanical Engineering",
+            "ORGANIZED_BY": "National University Of Singapore",
+            "ISBN_/_ISSN_NO": "-",
+            "MONTH_&_YEAR": "5.11.2019"
+        },
+        {
+            "AUTHORS": "Dr. R. Geetha",
+            "PAPER_TITLE": "Dry sliding wear behaviour of graphene oxide based ployamide nanocomposites",
+            "CONFERENCE_NAME": "Sustainable development in Mechanical Engineering",
+            "ORGANIZED_BY": "National University Of Singapore",
+            "ISBN_/_ISSN_NO": "-",
+            "MONTH_&_YEAR": "5.11.2019"
+        }
+    ],
+    "BOOK_PUBLICATIONS": [
+        {
+            "AUTHOR": "Dr. R. Geetha",
+            "BOOK_NAME,_EDITION": "Fundamentals of Nanoscience (Book)",
+            "PUBLISHER": "Noor Publishing",
+            "ISBN_/_ISSN_NO": "978-620-0-07700-4",
+            "MONTH_&_YEAR": "2020-06-01",
+            "BOOK_/_BOOK_CHAPTER": "BOOK"
+        },
+        {
+            "AUTHOR": "Dr.R. Geetha",
+            "BOOK_NAME,_EDITION": "Precision manufacturing through cryogenic treatment: a case study",
+            "PUBLISHER": "De Gruyter",
+            "ISBN_/_ISSN_NO": "10.1515/9783111335537-006",
+            "MONTH_&_YEAR": "2023-04-01",
+            "BOOK_/_BOOK_CHAPTER": " BOOK CHAPTER"
+        }
+    ],
+    "PATENTS": [],
+    "PROJECTS": [
+        {
+            "TITLE": "Exterior wall painting system\n assisted with wall climbing\n Robot.",
+            "SPONSORING_AGENCY": "Innovation and Entrepreneurship Development Center (IEDC)",
+            "AMOUNT": "Rs. 2,50,000",
+            "YEAR_OF_SANCTION": "2018-2019",
+            "DURATION": "1 Year",
+            "RESPONSIBILITY_(PI_/_CO_PI)": "PI",
+            "STATUS_(_Completed_/_Ongoing)": "Completed"
+        }
+    ],
+    "JOURNAL_PUBLICATIONS": [
+        {
+            "AUTHORS": "Dr. R. Geetha",
+            "PAPER_TITLE": "Mechanical Behaviour of Light Weight Hybrid Metal Matrix Composites for compact Automobile Applications",
+            "JOURNAL_NAME": "SAE Technical paper series",
+            "DOI_NUMBER": "-",
+            "PAGE_NO": "-",
+            "VOL_NO_/_ISSUE_NO": "-",
+            "MONTH_&_YEAR": "2024-09-20",
+            "INDEXED_IN_SCI_/_SCOPUS": "SCOPUS"
+        },
+        {
+            "AUTHORS": "Dr. R. Geetha",
+            "PAPER_TITLE": "Direct metal laser sintering to develop complex contours of AISIMG aluminium alloy",
+            "JOURNAL_NAME": "Surface Reviews and Letters",
+            "DOI_NUMBER": "https://doi.org/10.1142/S0218625X24500963",
+            "PAGE_NO": "1793-6667",
+            "VOL_NO_/_ISSUE_NO": "-",
+            "MONTH_&_YEAR": "2024-03-26",
+            "INDEXED_IN_SCI_/_SCOPUS": "SCI"
+        },
+        {
+            "AUTHORS": "Dr. R. Geetha",
+            "PAPER_TITLE": "Effect of CNT Inclusion on the Thernmo-Mechanical Behaviour of Cu-Ni-Zn-Sn Nano Composite",
+            "JOURNAL_NAME": "Iranian Journal of Chemistry and Chemical Engineering",
+            "DOI_NUMBER": "https://www.ijcce.ac.ir/article_705685.html",
+            "PAGE_NO": "1021-9986",
+            "VOL_NO_/_ISSUE_NO": "Volume : 42, Issue : 11",
+            "MONTH_&_YEAR": "2023-11-01",
+            "INDEXED_IN_SCI_/_SCOPUS": "SCI"
+        },
+        {
+            "AUTHORS": "Dr. R. Geetha",
+            "PAPER_TITLE": "Mechanical Behaviour of Cissus Quadrangularis / Basalt Fibre Reinforced Hybrid Bio Composite for Bone Implantations",
+            "JOURNAL_NAME": "Iranian Journal of Chemistry and Chemical Engineering",
+            "DOI_NUMBER": "10.30492/IJCCE.2022.560033.5514",
+            "PAGE_NO": "2160-2174",
+            "VOL_NO_/_ISSUE_NO": "Volume : 42 Issue : 7",
+            "MONTH_&_YEAR": "2023-07-01",
+            "INDEXED_IN_SCI_/_SCOPUS": "SCI"
+        },
+        {
+            "AUTHORS": "Dr. R. Geetha",
+            "PAPER_TITLE": "Experimental Studies on the Performance of Graphene Oxide Based Hybrid Nanopolymers for Bearing Applications",
+            "JOURNAL_NAME": "International Journal of Polymer Science",
+            "DOI_NUMBER": "https://doi.org/10.1155/2022/2974237",
+            "PAGE_NO": "01-11",
+            "VOL_NO_/_ISSUE_NO": "Volume: 2022",
+            "MONTH_&_YEAR": "2022-04-20",
+            "INDEXED_IN_SCI_/_SCOPUS": "SCI"
+        },
+        {
+            "AUTHORS": "Dr. R. Geetha",
+            "PAPER_TITLE": "Abrasive wear analysis on graphene oxide-based Hybrid Nano polymer composites",
+            "JOURNAL_NAME": "Surface Review and Letters.",
+            "DOI_NUMBER": "http://dx.doi.org/10.1142/S0218625X18501561",
+            "PAGE_NO": "1850156-1 to 1850156-7",
+            "VOL_NO_/_ISSUE_NO": "Volume : 26, Issue : 3",
+            "MONTH_&_YEAR": "2018-03-14",
+            "INDEXED_IN_SCI_/_SCOPUS": "SCI"
+        },
+        {
+            "AUTHORS": "Dr. R. Geetha",
+            "PAPER_TITLE": "Analysis of wear behavior of graphene oxide — polyamide gears for engineering applications",
+            "JOURNAL_NAME": "Surface Review and Letters.",
+            "DOI_NUMBER": "10.1142/S0218625X1850018X",
+            "PAGE_NO": "01-11",
+            "VOL_NO_/_ISSUE_NO": "Volume : 25, Issue : 3",
+            "MONTH_&_YEAR": "2017-04-20",
+            "INDEXED_IN_SCI_/_SCOPUS": "SCI"
+        },
+        {
+            "AUTHORS": "Dr. R. Geetha",
+            "PAPER_TITLE": "Comparative Investigations on the Mechanical and Tribological Properties of Glass Fibre Reinforced Thermoplastic and Blended Graphene-Oxide Hybrid Thermoplastic Nanocomposites",
+            "JOURNAL_NAME": "Applied Mechanics and Materials",
+            "DOI_NUMBER": "https://doi.org/10.4028/www.scientific.net/AMM.591.85",
+            "PAGE_NO": "85-88",
+            "VOL_NO_/_ISSUE_NO": "Volume : 591",
+            "MONTH_&_YEAR": "2014-07-18",
+            "INDEXED_IN_SCI_/_SCOPUS": "SCOPUS"
+        }
+    ],
+    "RESEARCH_SCHOLARS": []
+}

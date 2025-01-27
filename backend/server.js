@@ -72,36 +72,19 @@ app.get('/api/hod/:department_id', async (req, res) => {
     }
 });
 
-//Staff Details
-app.get('/api/staff/:deptId', async (req, res) => {
-    const deptId = req.params.deptId;
+//faculty_details
+app.get('/api/faculty_details/:dept_id', async (req, res) => {
+    const deptId = req.params.dept_id;
     const db = client.db(dbName);
-    const collection = db.collection('staff_details');
+    const collection = db.collection('faculty_data');
 
     try {
-        const staffDetails = await collection.find(
-            { unique_id: { $regex: `^VEC-${deptId}-` } }, 
-            {
-                projection: {
-                    Name: 1,
-                    Designation: 1,
-                    Photo: 1,
-                    "Google Scholar Profile": 1,
-                    "Research Gate": 1,
-                    "Orchid Profile": 1,
-                    "Publon Profile": 1,
-                    "Scopus Author Profile": 1,
-                    "LinkedIn Profile": 1,
-                    unique_id:1,
-                    _id: 0, 
-                }
-            }
-        ).toArray();
+        const staffDetails = await collection.findOne({ dept_id: deptId });
 
-        if (staffDetails.length > 0) {
+        if (staffDetails) {
             res.status(200).json(staffDetails);
         } else {
-            res.status(404).json({ message: 'No staff found for the given department ID.' });
+            res.status(404).json({ message: 'No staff details found for the given department ID.' });
         }
     } catch (error) {
         console.error("❌ Error fetching staff details:", error);
@@ -568,6 +551,7 @@ app.get('/api/alumni', async (req, res) => {
     }
 });
 
+//banner
 app.get('/api/banner', async (req, res) => {
     const db = client.db(dbName);
     const collection = db.collection('banner');
@@ -581,6 +565,73 @@ app.get('/api/banner', async (req, res) => {
     } catch (error) {
         console.error('❌ Error fetching banners:', error);
         res.status(500).json({ error: 'Error fetching banners' });
+    }
+});
+
+// Fetch a specific staff document by unique_id
+app.get('/api/faculty_data/:unique_id', async (req, res) => {
+    const db = client.db(dbName);
+    const collection = db.collection('staff_details');
+    const uniqueId = req.params.unique_id;
+
+    try {
+        const staffData = await collection.findOne({ unique_id: uniqueId });
+        
+        if (!staffData) {
+            return res.status(404).json({ message: 'Staff data not found for the given unique_id' });
+        }
+
+        res.status(200).json(staffData);
+    } catch (error) {
+        console.error('❌ Error fetching Staff data:', error);
+        res.status(500).json({ error: 'Error fetching Staff data' });
+    }
+});
+
+//NBA
+app.get('/api/nba', async (req, res) => {
+    const db = client.db(dbName);
+    const collection = db.collection('nba');
+
+    try {
+        const alumniData = await collection.find({}).toArray();
+        if (alumniData.length === 0) {
+            return res.status(404).json({ message: 'No nba data found' });
+        }
+        res.status(200).json(alumniData);
+    } catch (error) {
+        console.error('❌ Error fetching alumni data:', error);
+        res.status(500).json({ error: 'Error fetching nba data' });
+    }
+});
+
+app.get('/api/naac', async (req, res) => {
+    const db = client.db(dbName);
+    const collection = db.collection('naac');
+    try {
+        const NAACData = await collection.find({}).toArray();
+        if (NAACData.length === 0) {
+            return res.status(404).json({ message: 'No NAAC data found' });
+        }
+        res.status(200).json(NAACData);
+    } catch (error) {
+        console.error('❌ Error fetching NAAC data:', error);
+        res.status(500).json({ error: 'Error fetching NAAC data' });
+    }
+});
+
+app.get('/api/nirf', async (req, res) => {
+    const db = client.db(dbName);
+    const collection = db.collection('nirf');
+    try {
+        const NIRFData = await collection.find({}).toArray();
+        if (NIRFData.length === 0) {
+            return res.status(404).json({ message: 'No NIRF data found' });
+        }
+        res.status(200).json(NIRFData);
+    } catch (error) {
+        console.error('❌ Error fetching NIRF data:', error);
+        res.status(500).json({ error: 'Error fetching NIRF data' });
     }
 });
 

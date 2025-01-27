@@ -1,71 +1,137 @@
 [
     {
-        "2019&2020": [
+        "2023": [
             {
-                "B.E Automobile Engineering": "docs/Curriculum_and_Syllabus/Automobile 2019.pdf",
-                "B.E Civil Engineering": "docs/Curriculum_and_Syllabus/Civil 2019.pdf",
-                "B.E Computer Science and Engineering": "docs/Curriculum_and_Syllabus/ComputerScience 2019.pdf",
-                "B.E Electronics and Communication Engineering": "docs/Curriculum_and_Syllabus/ElectronicsCommunication 2019.pdf",
-                "B.E Electrical and Electronics Engineering": "docs/Curriculum_and_Syllabus/ElectricalElectronics 2019.pdf",
-                "B.E Electronics and Instrumentation Engineering": "docs/Curriculum_and_Syllabus/ElectronicsInstrumentation 2019.pdf",
-                "B.Tech Information Technology": "docs/Curriculum_and_Syllabus/InformationTechnology 2019.pdf",
-                "B.Tech Artificial Intelligence and Data Science": "docs/Curriculum_and_Syllabus/ArtificialIntelligence 2019.pdf",
-                "B.E Mechanical Engineering": "docs/Curriculum_and_Syllabus/Mechanical 2019.pdf",
-                "M.E Computer Science and Engineering": "docs/Curriculum_and_Syllabus/ME_ComputerScience 2019.pdf",
-                "M.E Power Systems Engineering": "docs/Curriculum_and_Syllabus/PowerSystems 2019.pdf",
-                "MBA - Master of Business Administration": "docs/Curriculum_and_Syllabus/MBA 2019.pdf"
+                "year": "2023&2024",
+                "department": [
+                    "B.E Automobile Engineering",
+                    "B.E Civil Engineering",
+                    "B.E Computer Science and Engineering",
+                    "B.E Computer Science and Engineering (Cyber Security)",
+                    "B.E Electronics and Communication Engineering",
+                    "B.E Electrical and Electronics Engineering",
+                    "B.E Electronics and Instrumentation Engineering",
+                    "B.Tech Information Technology",
+                    "B.Tech Artificial Intelligence and Data Science",
+                    "B.E Mechanical Engineering",
+                    "M.E Computer Science and Engineering",
+                    "M.E Power Systems Engineering",
+                    "MBA - Master of Business Administration"
+                ],
+                "pdf_path": [
+                    "docs/Curriculum_and_Syllabus/Automobile 2023.pdf",
+                    "docs/Curriculum_and_Syllabus/Civil 2023.pdf",
+                    "docs/Curriculum_and_Syllabus/ComputerScience 2023.pdf",
+                    "docs/Curriculum_and_Syllabus/ComputerScienceCyberSecurity 2023.pdf",
+                    "docs/Curriculum_and_Syllabus/ElectronicsCommunication 2023.pdf",
+                    "docs/Curriculum_and_Syllabus/ElectricalElectronics 2023.pdf",
+                    "docs/Curriculum_and_Syllabus/ElectronicsInstrumentation 2023.pdf",
+                    "docs/Curriculum_and_Syllabus/InformationTechnology 2023.pdf",
+                    "docs/Curriculum_and_Syllabus/ArtificialIntelligence 2023.pdf",
+                    "docs/Curriculum_and_Syllabus/Mechanical 2023.pdf",
+                    "docs/Curriculum_and_Syllabus/ME_ComputerScience 2023.pdf",
+                    "docs/Curriculum_and_Syllabus/PowerSystems 2023.pdf",
+                    "docs/Curriculum_and_Syllabus/MBA 2023.pdf"
+                ]
             }
         ]
     },
     {
-        "2021&2022": [
+        "2021": [
             {
-                "B.E Automobile Engineering": "docs/Curriculum_and_Syllabus/Automobile 2021.pdf",
-                "B.E Civil Engineering": "docs/Curriculum_and_Syllabus/Civil 2021.pdf",
-                "B.E Computer Science and Engineering": "docs/Curriculum_and_Syllabus/ComputerScience 2021.pdf",
-                "B.E Electronics and Communication Engineering": "docs/Curriculum_and_Syllabus/ElectronicsCommunication 2021.pdf",
-                "B.E Electrical and Electronics Engineering": "docs/Curriculum_and_Syllabus/ElectricalElectronics 2021.pdf",
-                "B.E Electronics and Instrumentation Engineering": "docs/Curriculum_and_Syllabus/ElectronicsInstrumentation 2021.pdf",
-                "B.Tech Information Technology": "docs/Curriculum_and_Syllabus/InformationTechnology 2021.pdf",
-                "B.Tech Artificial Intelligence and Data Science": "docs/Curriculum_and_Syllabus/ArtificialIntelligence 2021.pdf",
-                "B.E Mechanical Engineering": "docs/Curriculum_and_Syllabus/Mechanical 2021.pdf",
-                "M.E Computer Science and Engineering": "docs/Curriculum_and_Syllabus/ME_ComputerScience 2021.pdf",
-                "M.E Power Systems Engineering": "docs/Curriculum_and_Syllabus/PowerSystems 2021.pdf",
-                "MBA - Master of Business Administration": "docs/Curriculum_and_Syllabus/MBA 2021.pdf"
+                "year": "2021&2022",
+                "department": [
+                    "B.E Automobile Engineering",
+                    "B.E Civil Engineering",
+                    "B.E Computer Science and Engineering",
+                    "B.E Electronics and Communication Engineering",
+                    "B.E Electrical and Electronics Engineering",
+                    "B.E Electronics and Instrumentation Engineering",
+                    "B.Tech Information Technology",
+                    "B.Tech Artificial Intelligence and Data Science",
+                    "B.E Mechanical Engineering",
+                    "M.E Computer Science and Engineering",
+                    "M.E Power Systems Engineering",
+                    "MBA - Master of Business Administration"
+                ],
+                "pdf_path": [
+                    "docs/Curriculum_and_Syllabus/Automobile 2021.pdf",
+                    "docs/Curriculum_and_Syllabus/Civil 2021.pdf",
+                    "docs/Curriculum_and_Syllabus/ComputerScience 2021.pdf",
+                    "docs/Curriculum_and_Syllabus/ElectronicsCommunication 2021.pdf",
+                    "docs/Curriculum_and_Syllabus/ElectricalElectronics 2021.pdf",
+                    "docs/Curriculum_and_Syllabus/ElectronicsInstrumentation 2021.pdf",
+                    "docs/Curriculum_and_Syllabus/InformationTechnology 2021.pdf",
+                    "docs/Curriculum_and_Syllabus/ArtificialIntelligence 2021.pdf",
+                    "docs/Curriculum_and_Syllabus/Mechanical 2021.pdf",
+                    "docs/Curriculum_and_Syllabus/ME_ComputerScience 2021.pdf",
+                    "docs/Curriculum_and_Syllabus/PowerSystems 2021.pdf",
+                    "docs/Curriculum_and_Syllabus/MBA 2021.pdf"
+                ]
             }
         ]
     },
     {
-        "2023&2024": [
+        "2019": [
             {
-                "B.E Automobile Engineering": "docs/Curriculum_and_Syllabus/Automobile 2023.pdf",
-                "B.E Civil Engineering": "docs/Curriculum_and_Syllabus/Civil 2023.pdf",
-                "B.E Computer Science and Engineering": "docs/Curriculum_and_Syllabus/ComputerScience 2023.pdf",
-                "B.E Computer Science and Engineering (Cyber Security)": "docs/Curriculum_and_Syllabus/ComputerScienceCyberSecurity 2023.pdf",
-                "B.E Electronics and Communication Engineering": "docs/Curriculum_and_Syllabus/ElectronicsCommunication 2023.pdf",
-                "B.E Electrical and Electronics Engineering": "docs/Curriculum_and_Syllabus/ElectricalElectronics 2023.pdf",
-                "B.E Electronics and Instrumentation Engineering": "docs/Curriculum_and_Syllabus/ElectronicsInstrumentation 2023.pdf",
-                "B.Tech Information Technology": "docs/Curriculum_and_Syllabus/InformationTechnology 2023.pdf",
-                "B.Tech Artificial Intelligence and Data Science": "docs/Curriculum_and_Syllabus/ArtificialIntelligence 2023.pdf",
-                "B.E Mechanical Engineering": "docs/Curriculum_and_Syllabus/Mechanical 2023.pdf",
-                "M.E Computer Science and Engineering": "docs/Curriculum_and_Syllabus/ME_ComputerScience 2023.pdf",
-                "M.E Power Systems Engineering": "docs/Curriculum_and_Syllabus/PowerSystems 2023.pdf",
-                "MBA - Master of Business Administration": "docs/Curriculum_and_Syllabus/MBA 2023.pdf"
+                "year": "2019&2020",
+                "department": [
+                    "B.E Automobile Engineering",
+                    "B.E Civil Engineering",
+                    "B.E Computer Science and Engineering",
+                    "B.E Electronics and Communication Engineering",
+                    "B.E Electrical and Electronics Engineering",
+                    "B.E Electronics and Instrumentation Engineering",
+                    "B.Tech Information Technology",
+                    "B.Tech Artificial Intelligence and Data Science",
+                    "B.E Mechanical Engineering",
+                    "M.E Computer Science and Engineering",
+                    "M.E Power Systems Engineering",
+                    "MBA - Master of Business Administration"
+                ],
+                "pdf_path": [
+                    "docs/Curriculum_and_Syllabus/Automobile 2019.pdf",
+                    "docs/Curriculum_and_Syllabus/Civil 2019.pdf",
+                    "docs/Curriculum_and_Syllabus/ComputerScience 2019.pdf",
+                    "docs/Curriculum_and_Syllabus/ElectronicsCommunication 2019.pdf",
+                    "docs/Curriculum_and_Syllabus/ElectricalElectronics 2019.pdf",
+                    "docs/Curriculum_and_Syllabus/ElectronicsInstrumentation 2019.pdf",
+                    "docs/Curriculum_and_Syllabus/InformationTechnology 2019.pdf",
+                    "docs/Curriculum_and_Syllabus/ArtificialIntelligence 2019.pdf",
+                    "docs/Curriculum_and_Syllabus/Mechanical 2019.pdf",
+                    "docs/Curriculum_and_Syllabus/ME_ComputerScience 2019.pdf",
+                    "docs/Curriculum_and_Syllabus/PowerSystems 2019.pdf",
+                    "docs/Curriculum_and_Syllabus/MBA 2019.pdf"
+                ]
             }
         ]
     },
     {
         "Verticals": [
             {
-                "B.E Automobile Engineering": "docs/Curriculum_and_Syllabus/Automobile.pdf",
-                "B.E Civil Engineering": "docs/Curriculum_and_Syllabus/Civil.pdf",
-                "B.E Computer Science and Engineering": "docs/Curriculum_and_Syllabus/ComputerScience.pdf",
-                "B.E Electronics and Communication Engineering": "docs/Curriculum_and_Syllabus/ElectronicsCommunication.pdf",
-                "B.E Electrical and Electronics Engineering": "docs/Curriculum_and_Syllabus/ElectricalElectronics.pdf",
-                "B.E Electronics and Instrumentation Engineering": "docs/Curriculum_and_Syllabus/ElectronicsInstrumentation.pdf",
-                "B.Tech Information Technology": "docs/Curriculum_and_Syllabus/InformationTechnology.pdf",
-                "B.Tech Artificial Intelligence and Data Science": "docs/Curriculum_and_Syllabus/ArtificialIntelligence.pdf",
-                "B.E Mechanical Engineering": "docs/Curriculum_and_Syllabus/Mechanical.pdf"
+                "year": "Verticals",
+                "department": [
+                    "B.E Automobile Engineering",
+                    "B.E Civil Engineering",
+                    "B.E Computer Science and Engineering",
+                    "B.E Electronics and Communication Engineering",
+                    "B.E Electrical and Electronics Engineering",
+                    "B.E Electronics and Instrumentation Engineering",
+                    "B.Tech Information Technology",
+                    "B.Tech Artificial Intelligence and Data Science",
+                    "B.E Mechanical Engineering"
+                ],
+                "pdf_path": [
+                    "docs/Curriculum_and_Syllabus/Automobile.pdf",
+                    "docs/Curriculum_and_Syllabus/Civil.pdf",
+                    "docs/Curriculum_and_Syllabus/ComputerScience.pdf",
+                    "docs/Curriculum_and_Syllabus/ElectronicsCommunication.pdf",
+                    "docs/Curriculum_and_Syllabus/ElectricalElectronics.pdf",
+                    "docs/Curriculum_and_Syllabus/ElectronicsInstrumentation.pdf",
+                    "docs/Curriculum_and_Syllabus/InformationTechnology.pdf",
+                    "docs/Curriculum_and_Syllabus/ArtificialIntelligence.pdf",
+                    "docs/Curriculum_and_Syllabus/Mechanical.pdf"
+                ]
             }
         ]
     }
