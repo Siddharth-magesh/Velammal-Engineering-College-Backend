@@ -1,9 +1,11 @@
 const express = require('express');
 const { MongoClient } = require('mongodb');
 require('dotenv').config();
+const bodyParser = require('body-parser');
 
 const app = express();
 const port = process.env.PORT || 5000;
+app.use(bodyParser.json());
 
 const mongoUri = process.env.MONGO_URI;
 const dbName = process.env.DB_NAME;
@@ -568,25 +570,111 @@ app.get('/api/banner', async (req, res) => {
     }
 });
 
-// Fetch a specific staff document by unique_id
-app.get('/api/faculty_data/:unique_id', async (req, res) => {
-    const db = client.db(dbName);
-    const collection = db.collection('staff_details');
-    const uniqueId = req.params.unique_id;
-
+//Staff Details
+app.get('/api/staff_details/:unique_id', async (req, res) => {
     try {
-        const staffData = await collection.findOne({ unique_id: uniqueId });
-        
-        if (!staffData) {
-            return res.status(404).json({ message: 'Staff data not found for the given unique_id' });
-        }
+        const db = client.db(dbName);
+        const collection = db.collection('staff_details');
+        const uniqueId = req.params.unique_id;
 
-        res.status(200).json(staffData);
+        const facultyData = await collection.findOne({ unique_id: uniqueId });
+
+        if (!facultyData) {
+            return res.status(404).json({ message: 'Faculty data not found' });
+        }
+        const convertedData = {
+            "_id": facultyData["unique_id"], 
+            "Name": facultyData["Name"],
+            "Surname": facultyData["Surname"],
+            "Designation": facultyData["Designation"],
+            "Joined_in": facultyData["Joined_in"],
+            "Department_Name": facultyData["Department_Name"],
+            "Mail_ID": facultyData["Mail_ID"],
+            "Photo": `/static/images/profile_photos/${facultyData["unique_id"]}.jpg`,
+            "Google_Scholar_Profile": facultyData["Google_Scholar_Profile"],
+            "Research_Gate": facultyData["Research_Gate"],
+            "Orchid_Profile": facultyData["Orchid_Profile"] || null,
+            "Publon_Profile": facultyData["Publon_Profile"] || null,
+            "Scopus_Author_Profile": facultyData["Scopus_Author_Profile"],
+            "LinkedIn_Profile": facultyData["LinkedIn_Profile"],
+            "Professional_Membership": facultyData["Professional_Membership"] || null,
+            "Sponsored_Projects": facultyData["Sponsored_Projects"],
+            "Patent_Granted": facultyData["Patent_Granted"],
+            "Patent_Published": facultyData["Patent_Published"],
+            "Patent_Filed": facultyData["Patent_Filed"] || null,
+            "Journal_Publications": facultyData["Journal_Publications"],
+            "Conference_Publications": facultyData["Conference_Publications"],
+            "Book_Chapter_Published": facultyData["Book_Chapter_Published"],
+            "Guest_Lectures_Delivered": facultyData["Guest_Lectures_Delivered"],
+            "Guest_Lectures_Attended": facultyData["Guest_Lectures_Attended"] || null,
+            "Guest_Lectures_Organized": facultyData["Guest_Lectures_Organized"],
+            "PHD_Produced": facultyData["PHD_Produced"] || null,
+            "PHD_Pursuing": facultyData["PHD_Pursuing"] || null,
+            "Upload_Your_Excel_File_Here": facultyData["Upload_Your_Excel_File_Here"],
+            "unique_id": facultyData["unique_id"],
+            "EDUCATIONAL_QUALIFICATION": facultyData["EDUCATIONAL_QUALIFICATION"].map(qual => ({
+                "DEGREE": qual["DEGREE"],
+                "BRANCH": qual["BRANCH"],
+                "INSTITUTE": qual["INSTITUTE"],
+                "YEAR": qual["YEAR"]
+            })),
+            "EXPERIENCE": facultyData["EXPERIENCE"]
+                .filter(exp => exp.DURATION !== "From")
+                .map(exp => ({
+                    "From": exp["DURATION"] === "TOTAL" ? null : exp["DURATION"],
+                    "TO": exp["Unnamed:_1"] === "TO" ? null : exp["Unnamed:_1"],
+                    "YEARS": exp["EXPERIENCE"] === "NO.OF.YEARS" || exp["EXPERIENCE"] === "-" ? null : exp["EXPERIENCE"],
+                    "MONTHS": exp["Unnamed:_3"] === "NO.OF MONTHS" || exp["Unnamed:_3"] === "-" ? null : exp["Unnamed:_3"],
+                    "DESIGNATION": exp["DESIGNATION"] || null,
+                    "INSTITUTION": exp["INSTITUTION"] || null
+                })),
+            "CONFERENCE_PUBLICATIONS": facultyData["CONFERENCE_PUBLICATIONS"].map(pub => ({
+                "AUTHORS": pub["AUTHORS"],
+                "PAPER_TITLE": pub["PAPER_TITLE"],
+                "CONFERENCE_NAME": pub["CONFERENCE_NAME"],
+                "ORGANIZED_BY": pub["ORGANIZED_BY"],
+                "book_number": pub["book_number"] || "-",
+                "MONTH_&_YEAR": pub["MONTH_&_YEAR"]
+            })),
+            "BOOK_PUBLICATIONS": facultyData["BOOK_PUBLICATIONS"].map(pub => ({
+                "AUTHOR": pub["AUTHOR"],
+                "BOOK_NAME,_EDITION": pub["BOOK_NAME,_EDITION"],
+                "PUBLISHER": pub["PUBLISHER"],
+                "ISBN_/_ISSN_NO": pub["ISBN_/_ISSN_NO"],
+                "MONTH_&_YEAR": pub["MONTH_&_YEAR"],
+                "BOOK": pub["BOOK"]
+            })),
+            "PATENTS": facultyData["PATENTS"] || [],
+            "PROJECTS": facultyData["PROJECTS"].map(project => ({
+                "TITLE": project["TITLE"],
+                "SPONSORING_AGENCY": project["SPONSORING_AGENCY"],
+                "AMOUNT": project["AMOUNT"],
+                "YEAR_OF_SANCTION": project["YEAR_OF_SANCTION"],
+                "DURATION": project["DURATION"],
+                "RESPONSIBILITY": project["RESPONSIBILITY"],
+                "STATUS": project["STATUS"]
+            })),
+            "JOURNAL_PUBLICATIONS": facultyData["JOURNAL_PUBLICATIONS"].map(pub => ({
+                "AUTHORS": pub["AUTHORS"],
+                "PAPER_TITLE": pub["PAPER_TITLE"],
+                "JOURNAL_NAME": pub["JOURNAL_NAME"],
+                "DOI_NUMBER": pub["DOI_NUMBER"],
+                "PAGE_NO": pub["PAGE_NO"] || "-",
+                "VOL_NO": pub["VOL_NO"] || "-",
+                "MONTH_&_YEAR": pub["MONTH_&_YEAR"],
+                "INDEXED": pub["INDEXED"]
+            })),
+            "RESEARCH_SCHOLARS": facultyData["RESEARCH_SCHOLARS"] || []
+        };
+        res.json(convertedData);
     } catch (error) {
-        console.error('❌ Error fetching Staff data:', error);
-        res.status(500).json({ error: 'Error fetching Staff data' });
+        console.error('Error fetching data from MongoDB:', error);
+        res.status(500).json({ message: 'Error fetching faculty data' });
+    } finally {
+        await client.close();
     }
 });
+
 
 //NBA
 app.get('/api/nba', async (req, res) => {
@@ -605,6 +693,7 @@ app.get('/api/nba', async (req, res) => {
     }
 });
 
+//NAAC
 app.get('/api/naac', async (req, res) => {
     const db = client.db(dbName);
     const collection = db.collection('naac');
@@ -620,6 +709,7 @@ app.get('/api/naac', async (req, res) => {
     }
 });
 
+//NIRF
 app.get('/api/nirf', async (req, res) => {
     const db = client.db(dbName);
     const collection = db.collection('nirf');
