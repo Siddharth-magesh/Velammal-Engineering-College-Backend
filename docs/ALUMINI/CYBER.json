@@ -6,21 +6,21 @@
             "students": [
             {
                 "name": "test",
-                "photo": "path",
+                "photo": "/static/images/alumni/006/test.jpg",
                 "year": "2022-26",
                 "company_name": "test",
                 "LPA": 50000
             },
             {
                 "name": "test",
-                "photo": "path",
+                "photo": "/static/images/alumni/006/test.jpg",
                 "year": "2022-26",
                 "company_name": "test",
                 "LPA": 50000
             },
             {
                 "name": "test",
-                "photo": "path",
+                "photo": "/static/images/alumni/006/test.jpg",
                 "year": "2022-26",
                 "company_name": "test",
                 "LPA": 50000

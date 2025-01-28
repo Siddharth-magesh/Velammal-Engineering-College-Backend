@@ -19,19 +19,19 @@
                     "MBA - Master of Business Administration"
                 ],
                 "pdf_path": [
-                    "docs/Curriculum_and_Syllabus/Automobile 2023.pdf",
-                    "docs/Curriculum_and_Syllabus/Civil 2023.pdf",
-                    "docs/Curriculum_and_Syllabus/ComputerScience 2023.pdf",
-                    "docs/Curriculum_and_Syllabus/ComputerScienceCyberSecurity 2023.pdf",
-                    "docs/Curriculum_and_Syllabus/ElectronicsCommunication 2023.pdf",
-                    "docs/Curriculum_and_Syllabus/ElectricalElectronics 2023.pdf",
-                    "docs/Curriculum_and_Syllabus/ElectronicsInstrumentation 2023.pdf",
-                    "docs/Curriculum_and_Syllabus/InformationTechnology 2023.pdf",
-                    "docs/Curriculum_and_Syllabus/ArtificialIntelligence 2023.pdf",
-                    "docs/Curriculum_and_Syllabus/Mechanical 2023.pdf",
-                    "docs/Curriculum_and_Syllabus/ME_ComputerScience 2023.pdf",
-                    "docs/Curriculum_and_Syllabus/PowerSystems 2023.pdf",
-                    "docs/Curriculum_and_Syllabus/MBA 2023.pdf"
+                    "/static/pdfs/curriculum_and_syllabus/auto_23.pdf",
+                    "/static/pdfs/curriculum_and_syllabus/civil_23.pdf",
+                    "/static/pdfs/curriculum_and_syllabus/cse_23.pdf",
+                    "/static/pdfs/curriculum_and_syllabus/cse_cyber_23.pdf",
+                    "/static/pdfs/curriculum_and_syllabus/ece_23.pdf",
+                    "/static/pdfs/curriculum_and_syllabus/eee_23.pdf",
+                    "/static/pdfs/curriculum_and_syllabus/eie_23.pdf",
+                    "/static/pdfs/curriculum_and_syllabus/it_23.pdf",
+                    "/static/pdfs/curriculum_and_syllabus/aids_23.pdf",
+                    "/static/pdfs/curriculum_and_syllabus/mech_23.pdf",
+                    "/static/pdfs/curriculum_and_syllabus/me_cse_23.pdf",
+                    "/static/pdfs/curriculum_and_syllabus/power_23.pdf",
+                    "/static/pdfs/curriculum_and_syllabus/mba_23.pdf"
                 ]
             }
         ]
@@ -55,18 +55,18 @@
                     "MBA - Master of Business Administration"
                 ],
                 "pdf_path": [
-                    "docs/Curriculum_and_Syllabus/Automobile 2021.pdf",
-                    "docs/Curriculum_and_Syllabus/Civil 2021.pdf",
-                    "docs/Curriculum_and_Syllabus/ComputerScience 2021.pdf",
-                    "docs/Curriculum_and_Syllabus/ElectronicsCommunication 2021.pdf",
-                    "docs/Curriculum_and_Syllabus/ElectricalElectronics 2021.pdf",
-                    "docs/Curriculum_and_Syllabus/ElectronicsInstrumentation 2021.pdf",
-                    "docs/Curriculum_and_Syllabus/InformationTechnology 2021.pdf",
-                    "docs/Curriculum_and_Syllabus/ArtificialIntelligence 2021.pdf",
-                    "docs/Curriculum_and_Syllabus/Mechanical 2021.pdf",
-                    "docs/Curriculum_and_Syllabus/ME_ComputerScience 2021.pdf",
-                    "docs/Curriculum_and_Syllabus/PowerSystems 2021.pdf",
-                    "docs/Curriculum_and_Syllabus/MBA 2021.pdf"
+                    "/static/pdfs/curriculum_and_syllabus/auto_21.pdf",
+                    "/static/pdfs/curriculum_and_syllabus/civil_21.pdf",
+                    "/static/pdfs/curriculum_and_syllabus/cse_21.pdf",
+                    "/static/pdfs/curriculum_and_syllabus/ece_21.pdf",
+                    "/static/pdfs/curriculum_and_syllabus/eee_21.pdf",
+                    "/static/pdfs/curriculum_and_syllabus/eie_21.pdf",
+                    "/static/pdfs/curriculum_and_syllabus/it_21.pdf",
+                    "/static/pdfs/curriculum_and_syllabus/aids_21.pdf",
+                    "/static/pdfs/curriculum_and_syllabus/mech_21.pdf",
+                    "/static/pdfs/curriculum_and_syllabus/me_cse_21.pdf",
+                    "/static/pdfs/curriculum_and_syllabus/power_21.pdf",
+                    "/static/pdfs/curriculum_and_syllabus/mba_21.pdf"
                 ]
             }
         ]
@@ -90,18 +90,18 @@
                     "MBA - Master of Business Administration"
                 ],
                 "pdf_path": [
-                    "docs/Curriculum_and_Syllabus/Automobile 2019.pdf",
-                    "docs/Curriculum_and_Syllabus/Civil 2019.pdf",
-                    "docs/Curriculum_and_Syllabus/ComputerScience 2019.pdf",
-                    "docs/Curriculum_and_Syllabus/ElectronicsCommunication 2019.pdf",
-                    "docs/Curriculum_and_Syllabus/ElectricalElectronics 2019.pdf",
-                    "docs/Curriculum_and_Syllabus/ElectronicsInstrumentation 2019.pdf",
-                    "docs/Curriculum_and_Syllabus/InformationTechnology 2019.pdf",
-                    "docs/Curriculum_and_Syllabus/ArtificialIntelligence 2019.pdf",
-                    "docs/Curriculum_and_Syllabus/Mechanical 2019.pdf",
-                    "docs/Curriculum_and_Syllabus/ME_ComputerScience 2019.pdf",
-                    "docs/Curriculum_and_Syllabus/PowerSystems 2019.pdf",
-                    "docs/Curriculum_and_Syllabus/MBA 2019.pdf"
+                    "/static/pdfs/curriculum_and_syllabus/auto_19.pdf",
+                    "/static/pdfs/curriculum_and_syllabus/civil_19.pdf",
+                    "/static/pdfs/curriculum_and_syllabus/cse_19.pdf",
+                    "/static/pdfs/curriculum_and_syllabus/ece_19.pdf",
+                    "/static/pdfs/curriculum_and_syllabus/eee_19.pdf",
+                    "/static/pdfs/curriculum_and_syllabus/eie_19.pdf",
+                    "/static/pdfs/curriculum_and_syllabus/it_19.pdf",
+                    "/static/pdfs/curriculum_and_syllabus/aids_19.pdf",
+                    "/static/pdfs/curriculum_and_syllabus/mech_19.pdf",
+                    "/static/pdfs/curriculum_and_syllabus/me_cse_19.pdf",
+                    "/static/pdfs/curriculum_and_syllabus/power_19.pdf",
+                    "/static/pdfs/curriculum_and_syllabus/mba_19.pdf"
                 ]
             }
         ]
@@ -122,15 +122,15 @@
                     "B.E Mechanical Engineering"
                 ],
                 "pdf_path": [
-                    "docs/Curriculum_and_Syllabus/Automobile.pdf",
-                    "docs/Curriculum_and_Syllabus/Civil.pdf",
-                    "docs/Curriculum_and_Syllabus/ComputerScience.pdf",
-                    "docs/Curriculum_and_Syllabus/ElectronicsCommunication.pdf",
-                    "docs/Curriculum_and_Syllabus/ElectricalElectronics.pdf",
-                    "docs/Curriculum_and_Syllabus/ElectronicsInstrumentation.pdf",
-                    "docs/Curriculum_and_Syllabus/InformationTechnology.pdf",
-                    "docs/Curriculum_and_Syllabus/ArtificialIntelligence.pdf",
-                    "docs/Curriculum_and_Syllabus/Mechanical.pdf"
+                    "/static/pdfs/curriculum_and_syllabus/auto.pdf",
+                    "/static/pdfs/curriculum_and_syllabus/civil.pdf",
+                    "/static/pdfs/curriculum_and_syllabus/cse.pdf",
+                    "/static/pdfs/curriculum_and_syllabus/ece.pdf",
+                    "/static/pdfs/curriculum_and_syllabus/eee.pdf",
+                    "/static/pdfs/curriculum_and_syllabus/eie.pdf",
+                    "/static/pdfs/curriculum_and_syllabus/it.pdf",
+                    "/static/pdfs/curriculum_and_syllabus/aids.pdf",
+                    "/static/pdfs/curriculum_and_syllabus/mech.pdf"
                 ]
             }
         ]

@@ -2,7 +2,7 @@
     {
         "department_id": "001",
         "department_name": "Artificial Intelligence and Data Science (AI&DS)",
-        "department_image": "url_to_ai_ds_image",
+        "department_image": "/static/images/department_data/aids.jpg",
         "department_quotes": "Empowering innovation through data-driven intelligence.",
         "vision": "To achieve value based education and bring idealistic, ethical engineers to meet the thriving trends and technology in the field of Artificial Intelligence and Data Science",
         "mission": [
@@ -16,7 +16,7 @@
     {
         "department_id": "002",
         "department_name": "Automobile Engineering (AUTO)",
-        "department_image": "url_to_cse_image",
+        "department_image": "/static/images/department_data/auto.jpg",
         "department_quotes": "Innovating the future of technology.",
         "vision": "To excel in computer science education, research, and innovation.",
         "mission": [
@@ -29,7 +29,7 @@
     {
         "department_id": "003",
         "department_name": "Chemistry ",
-        "department_image": "url_to_it_image",
+        "department_image": "/static/images/department_data/chem.jpg",
         "department_quotes": "Transforming information into solutions.",
         "vision": "To be a leader in IT education and innovation, bridging technology and business.",
         "mission": [
@@ -42,7 +42,7 @@
     {
         "department_id": "004",
         "department_name": "Civil Engineering (CIVIL)",
-        "department_image": "url_to_cybersecurity_image",
+        "department_image": "/static/images/department_data/civil.jpg",
         "department_quotes": "Securing the digital world.",
         "vision": "To be a leader in cybersecurity education and research, ensuring a safer digital environment.",
         "mission": [
@@ -55,7 +55,7 @@
     {
         "department_id": "005",
         "department_name": "Computer Science & Engineering (CSE)",
-        "department_image": "url_to_ece_image",
+        "department_image": "/static/images/department_data/cse.jpg",
         "department_quotes": "Connecting the world through innovation.",
         "vision": "To pioneer in electronics and communication engineering education and research.",
         "mission": [
@@ -68,7 +68,7 @@
     {
         "department_id": "006",
         "department_name": "Computer Science and Engineering (CYBER SECURITY)",
-        "department_image": "url_to_eee_image",
+        "department_image": "/static/images/department_data/cyber.jpg",
         "department_quotes": "Powering the future.",
         "vision": "To provide comprehensive coverage and Hands-on Experience to enrich the knowledge of the student and also focus on Industry standards. To grab the attention of students in the area of Research, Critical Thinking and Problem-Solving",
         "mission": [
@@ -82,7 +82,7 @@
     {
         "department_id": "007",
         "department_name": "Electrical & Electronics Engineering (EEE)",
-        "department_image": "url_to_eie_image",
+        "department_image": "/static/images/department_data/eee.jpg",
         "department_quotes": "Precision engineering for a better world.",
         "vision": "To lead in electronic and instrumentation engineering education and innovation.",
         "mission": [
@@ -95,7 +95,7 @@
     {
         "department_id": "008",
         "department_name": "Electronics & Instrumentation Engineering (EIE)",
-        "department_image": "url_to_civil_image",
+        "department_image": "/static/images/department_data/eie.jpg",
         "department_quotes": "Building the foundation for tomorrow.",
         "vision": "To be a leader in civil engineering education, research, and sustainable development.",
         "mission": [
@@ -108,7 +108,7 @@
     {
         "department_id": "009",
         "department_name": "Electronics and Communication Engineering (ECE)",
-        "department_image": "url_to_mechanical_image",
+        "department_image": "/static/images/department_data/ece.jpg",
         "department_quotes": "Engineering the tools of the future.",
         "vision": "To achieve excellence in mechanical engineering education and research.",
         "mission": [
@@ -121,7 +121,7 @@
     {
         "department_id": "010",
         "department_name": "English ",
-        "department_image": "url_to_automobile_image",
+        "department_image": "/static/images/department_data/eng.jpg",
         "department_quotes": "Driving innovation forward.",
         "vision": "To be a center of excellence in automobile engineering education and innovation.",
         "mission": [
@@ -134,7 +134,7 @@
     {
         "department_id": "011",
         "department_name": "Information Technology (IT)",
-        "department_image": "url_to_english_image",
+        "department_image": "/static/images/department_data/it.jpg",
         "department_quotes": "Communicating the world with clarity and creativity.",
         "vision": "To enhance linguistic and literary skills for global communication and cultural understanding.",
         "mission": [
@@ -147,7 +147,7 @@
     {
         "department_id": "012",
         "department_name": "Mathematics",
-        "department_image": "url_to_chemistry_image",
+        "department_image": "/static/images/department_data/math.jpg",
         "department_quotes": "Exploring the building blocks of matter.",
         "vision": "To excel in chemical education and research for sustainable development.",
         "mission": [
@@ -160,7 +160,7 @@
     {
         "department_id": "013",
         "department_name": "Mechancial Engineering (MECH)",
-        "department_image": "url_to_mathematics_image",
+        "department_image": "/static/images/department_data/mech.jpg",
         "department_quotes": "Unlocking the power of numbers and logic.",
         "vision": "To be a leader in mathematical education and research, fostering analytical and problem-solving skills.",
         "mission": [
@@ -173,7 +173,7 @@
     {
         "department_id": "014",
         "department_name": "Physical Education",
-        "department_image": "url_to_physics_image",
+        "department_image": "/static/images/department_data/physical.jpg",
         "department_quotes": "Unveiling the mysteries of the universe.",
         "vision": "To excel in physics education and research, inspiring scientific curiosity.",
         "mission": [
@@ -186,7 +186,7 @@
     {
         "department_id": "015",
         "department_name": "Physics",
-        "department_image": "url_to_biotech_image",
+        "department_image": "/static/images/department_data/physics.jpg",
         "department_quotes": "Harnessing life sciences for a better tomorrow.",
         "vision": "To lead in biotechnology education and research for sustainable development.",
         "mission": [

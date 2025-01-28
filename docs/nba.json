@@ -10,13 +10,13 @@
             "Mech"
         ],
         "PDF_Path": [
-            "/pdfs/Civil_CSE_EEE_ECE_EI.pdf",
-            "/pdfs/Civil_CSE_EEE_ECE_EI.pdf",
-            "/pdfs/Civil_CSE_EEE_ECE_EI.pdf",
-            "/pdfs/Civil_CSE_EEE_ECE_EI.pdf",
-            "/pdfs/Civil_CSE_EEE_ECE_EI.pdf",
-            "IT_Mech.pdf",
-            "IT_Mech.pdf"
+            "/static/pdfs/nba/Civil.pdf",
+            "/static/pdfs/nba/CSE.pdf",
+            "/static/pdfs/nba/EEE.pdf",
+            "/static/pdfs/nba/ECE.pdf",
+            "/static/pdfs/nba/EI.pdf",
+            "/static/pdfs/nba/IT.pdf",
+            "/static/pdfs/nba/Mech.pdf"
         ]
     }
 ]

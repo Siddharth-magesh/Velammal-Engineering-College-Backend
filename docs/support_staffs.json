@@ -3,7 +3,7 @@
     "supporting_staff": [
       {
         "Name": "Dr. Jane Smith",
-        "Image": "https://example.com/images/jane_smith.jpg",
+        "Image": "/static/images/support_staffs/example.jpg",
         "Designation": "Research Scientist",
         "Social_media_links": {
           "Publon": "https://publons.com/researcher/12345/jane-smith/",
@@ -15,7 +15,7 @@
       },
       {
         "Name": "Mr. John Doe",
-        "Image": "https://example.com/images/john_doe.jpg",
+        "Image": "/static/images/support_staffs/example.jpg",
         "Designation": "Lab Assistant",
         "Social_media_links": {
           "Publon": "https://publons.com/researcher/54321/john-doe/",
@@ -27,7 +27,7 @@
       },
       {
         "Name": "Ms. Emily Davis",
-        "Image": "https://example.com/images/emily_davis.jpg",
+        "Image": "/static/images/support_staffs/example.jpg",
         "Designation": "Administrative Assistant",
         "Social_media_links": {
           "Publon": "https://publons.com/researcher/67890/emily-davis/",
@@ -39,7 +39,7 @@
       },
       {
         "Name": "Dr. Michael Brown",
-        "Image": "https://example.com/images/michael_brown.jpg",
+        "Image": "/static/images/support_staffs/example.jpg",
         "Designation": "Senior Technician",
         "Social_media_links": {
           "Publon": "https://publons.com/researcher/98765/michael-brown/",
@@ -51,7 +51,7 @@
       },
       {
         "Name": "Dr. Susan Lee",
-        "Image": "https://example.com/images/susan_lee.jpg",
+        "Image": "/static/images/support_staffs/example.jpg",
         "Designation": "Technical Writer",
         "Social_media_links": {
           "Publon": "https://publons.com/researcher/23456/susan-lee/",
@@ -63,7 +63,7 @@
       },
       {
         "Name": "Mr. Alex Wilson",
-        "Image": "https://example.com/images/alex_wilson.jpg",
+        "Image": "/static/images/support_staffs/example.jpg",
         "Designation": "IT Support Specialist",
         "Social_media_links": {
           "Publon": "https://publons.com/researcher/34567/alex-wilson/",
@@ -75,7 +75,7 @@
       },
       {
         "Name": "Ms. Olivia Martinez",
-        "Image": "https://example.com/images/olivia_martinez.jpg",
+        "Image": "/static/images/support_staffs/example.jpg",
         "Designation": "Project Coordinator",
         "Social_media_links": {
           "Publon": "https://publons.com/researcher/45678/olivia-martinez/",
@@ -87,7 +87,7 @@
       },
       {
         "Name": "Dr. Robert Johnson",
-        "Image": "https://example.com/images/robert_johnson.jpg",
+        "Image": "/static/images/support_staffs/example.jpg",
         "Designation": "Data Analyst",
         "Social_media_links": {
           "Publon": "https://publons.com/researcher/56789/robert-johnson/",
@@ -99,7 +99,7 @@
       },
       {
         "Name": "Ms. Sophia Walker",
-        "Image": "https://example.com/images/sophia_walker.jpg",
+        "Image": "/static/images/support_staffs/example.jpg",
         "Designation": "Library Manager",
         "Social_media_links": {
           "Publon": "https://publons.com/researcher/67890/sophia-walker/",
@@ -111,7 +111,7 @@
       },
       {
         "Name": "Mr. Ethan Carter",
-        "Image": "https://example.com/images/ethan_carter.jpg",
+        "Image": "/static/images/support_staffs/example.jpg",
         "Designation": "Research Associate",
         "Social_media_links": {
           "Publon": "https://publons.com/researcher/78901/ethan-carter/",

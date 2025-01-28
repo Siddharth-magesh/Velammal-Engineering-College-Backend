@@ -3,165 +3,165 @@
         "dept_id": "001",
         "department_name": "Artificial Intelligence and Data Science (AI&DS)",
         "infrastructure_images": [
-            {"image_path": "path/to/image1_1.jpg", "image_name": "Image 1_1", "image_content": "Description of Image 1_1"},
-            {"image_path": "path/to/image1_2.jpg", "image_name": "Image 1_2", "image_content": "Description of Image 1_2"},
-            {"image_path": "path/to/image1_3.jpg", "image_name": "Image 1_3", "image_content": "Description of Image 1_3"},
-            {"image_path": "path/to/image1_4.jpg", "image_name": "Image 1_4", "image_content": "Description of Image 1_4"},
-            {"image_path": "path/to/image1_5.jpg", "image_name": "Image 1_5", "image_content": "Description of Image 1_5"}
+            {"image_path": "/static/images/infrastructure/aids_1.jpg", "image_name": "Image 1_1", "image_content": "Description of Image 1_1"},
+            {"image_path": "/static/images/infrastructure/aids_2.jpg", "image_name": "Image 1_2", "image_content": "Description of Image 1_2"},
+            {"image_path": "/static/images/infrastructure/aids_3.jpg", "image_name": "Image 1_3", "image_content": "Description of Image 1_3"},
+            {"image_path": "/static/images/infrastructure/aids_4.jpg", "image_name": "Image 1_4", "image_content": "Description of Image 1_4"},
+            {"image_path": "/static/images/infrastructure/aids_5.jpg", "image_name": "Image 1_5", "image_content": "Description of Image 1_5"}
         ]
     },
     {
         "dept_id": "002",
         "department_name": "Automobile Engineering (AUTO)",
         "infrastructure_images": [
-            {"image_path": "path/to/image2_1.jpg", "image_name": "Image 2_1", "image_content": "Description of Image 2_1"},
-            {"image_path": "path/to/image2_2.jpg", "image_name": "Image 2_2", "image_content": "Description of Image 2_2"},
-            {"image_path": "path/to/image2_3.jpg", "image_name": "Image 2_3", "image_content": "Description of Image 2_3"},
-            {"image_path": "path/to/image2_4.jpg", "image_name": "Image 2_4", "image_content": "Description of Image 2_4"},
-            {"image_path": "path/to/image2_5.jpg", "image_name": "Image 2_5", "image_content": "Description of Image 2_5"}
+            {"image_path": "/static/images/infrastructure/auto_1.jpg", "image_name": "Image 2_1", "image_content": "Description of Image 2_1"},
+            {"image_path": "/static/images/infrastructure/auto_2.jpg", "image_name": "Image 2_2", "image_content": "Description of Image 2_2"},
+            {"image_path": "/static/images/infrastructure/auto_3.jpg", "image_name": "Image 2_3", "image_content": "Description of Image 2_3"},
+            {"image_path": "/static/images/infrastructure/auto_4.jpg", "image_name": "Image 2_4", "image_content": "Description of Image 2_4"},
+            {"image_path": "/static/images/infrastructure/auto_5.jpg", "image_name": "Image 2_5", "image_content": "Description of Image 2_5"}
         ]
     },
     {
         "dept_id": "003",
         "department_name": "Chemistry",
         "infrastructure_images": [
-            {"image_path": "path/to/image3_1.jpg", "image_name": "Image 3_1", "image_content": "Description of Image 3_1"},
-            {"image_path": "path/to/image3_2.jpg", "image_name": "Image 3_2", "image_content": "Description of Image 3_2"},
-            {"image_path": "path/to/image3_3.jpg", "image_name": "Image 3_3", "image_content": "Description of Image 3_3"},
-            {"image_path": "path/to/image3_4.jpg", "image_name": "Image 3_4", "image_content": "Description of Image 3_4"},
-            {"image_path": "path/to/image3_5.jpg", "image_name": "Image 3_5", "image_content": "Description of Image 3_5"}
+            {"image_path": "/static/images/infrastructure/chem_1.jpg", "image_name": "Image 3_1", "image_content": "Description of Image 3_1"},
+            {"image_path": "/static/images/infrastructure/chem_2.jpg", "image_name": "Image 3_2", "image_content": "Description of Image 3_2"},
+            {"image_path": "/static/images/infrastructure/chem_3.jpg", "image_name": "Image 3_3", "image_content": "Description of Image 3_3"},
+            {"image_path": "/static/images/infrastructure/chem_4.jpg", "image_name": "Image 3_4", "image_content": "Description of Image 3_4"},
+            {"image_path": "/static/images/infrastructure/chem_5.jpg", "image_name": "Image 3_5", "image_content": "Description of Image 3_5"}
         ]
     },
     {
         "dept_id": "004",
         "department_name": "Civil Engineering (CIVIL)",
         "infrastructure_images": [
-            {"image_path": "path/to/image4_1.jpg", "image_name": "Image 4_1", "image_content": "Description of Image 4_1"},
-            {"image_path": "path/to/image4_2.jpg", "image_name": "Image 4_2", "image_content": "Description of Image 4_2"},
-            {"image_path": "path/to/image4_3.jpg", "image_name": "Image 4_3", "image_content": "Description of Image 4_3"},
-            {"image_path": "path/to/image4_4.jpg", "image_name": "Image 4_4", "image_content": "Description of Image 4_4"},
-            {"image_path": "path/to/image4_5.jpg", "image_name": "Image 4_5", "image_content": "Description of Image 4_5"}
+            {"image_path": "/static/images/infrastructure/civil_1.jpg", "image_name": "Image 4_1", "image_content": "Description of Image 4_1"},
+            {"image_path": "/static/images/infrastructure/civil_2.jpg", "image_name": "Image 4_2", "image_content": "Description of Image 4_2"},
+            {"image_path": "/static/images/infrastructure/civil_3.jpg", "image_name": "Image 4_3", "image_content": "Description of Image 4_3"},
+            {"image_path": "/static/images/infrastructure/civil_4.jpg", "image_name": "Image 4_4", "image_content": "Description of Image 4_4"},
+            {"image_path": "/static/images/infrastructure/civil_5.jpg", "image_name": "Image 4_5", "image_content": "Description of Image 4_5"}
         ]
     },
     {
         "dept_id": "005",
         "department_name": "Computer Science & Engineering (CSE)",
         "infrastructure_images": [
-            {"image_path": "path/to/image5_1.jpg", "image_name": "Image 5_1", "image_content": "Description of Image 5_1"},
-            {"image_path": "path/to/image5_2.jpg", "image_name": "Image 5_2", "image_content": "Description of Image 5_2"},
-            {"image_path": "path/to/image5_3.jpg", "image_name": "Image 5_3", "image_content": "Description of Image 5_3"},
-            {"image_path": "path/to/image5_4.jpg", "image_name": "Image 5_4", "image_content": "Description of Image 5_4"},
-            {"image_path": "path/to/image5_5.jpg", "image_name": "Image 5_5", "image_content": "Description of Image 5_5"}
+            {"image_path": "/static/images/infrastructure/cse_1.jpg", "image_name": "Image 5_1", "image_content": "Description of Image 5_1"},
+            {"image_path": "/static/images/infrastructure/cse_2.jpg", "image_name": "Image 5_2", "image_content": "Description of Image 5_2"},
+            {"image_path": "/static/images/infrastructure/cse_3.jpg", "image_name": "Image 5_3", "image_content": "Description of Image 5_3"},
+            {"image_path": "/static/images/infrastructure/cse_4.jpg", "image_name": "Image 5_4", "image_content": "Description of Image 5_4"},
+            {"image_path": "/static/images/infrastructure/cse_5.jpg", "image_name": "Image 5_5", "image_content": "Description of Image 5_5"}
         ]
     },
     {
         "dept_id": "006",
         "department_name": "Computer Science and Engineering (CYBER SECURITY)",
         "infrastructure_images": [
-            {"image_path": "path/to/image6_1.jpg", "image_name": "Image 6_1", "image_content": "Description of Image 6_1"},
-            {"image_path": "path/to/image6_2.jpg", "image_name": "Image 6_2", "image_content": "Description of Image 6_2"},
-            {"image_path": "path/to/image6_3.jpg", "image_name": "Image 6_3", "image_content": "Description of Image 6_3"},
-            {"image_path": "path/to/image6_4.jpg", "image_name": "Image 6_4", "image_content": "Description of Image 6_4"},
-            {"image_path": "path/to/image6_5.jpg", "image_name": "Image 6_5", "image_content": "Description of Image 6_5"}
+            {"image_path": "/static/images/infrastructure/cyber_1.jpg", "image_name": "Image 6_1", "image_content": "Description of Image 6_1"},
+            {"image_path": "/static/images/infrastructure/cyber_2.jpg", "image_name": "Image 6_2", "image_content": "Description of Image 6_2"},
+            {"image_path": "/static/images/infrastructure/cyber_3.jpg", "image_name": "Image 6_3", "image_content": "Description of Image 6_3"},
+            {"image_path": "/static/images/infrastructure/cyber_4.jpg", "image_name": "Image 6_4", "image_content": "Description of Image 6_4"},
+            {"image_path": "/static/images/infrastructure/cyber_5.jpg", "image_name": "Image 6_5", "image_content": "Description of Image 6_5"}
         ]
     },
     {
         "dept_id": "007",
         "department_name": "Electrical & Electronics Engineering (ECE)",
         "infrastructure_images": [
-            {"image_path": "path/to/image7_1.jpg", "image_name": "Image 7_1", "image_content": "Description of Image 7_1"},
-            {"image_path": "path/to/image7_2.jpg", "image_name": "Image 7_2", "image_content": "Description of Image 7_2"},
-            {"image_path": "path/to/image7_3.jpg", "image_name": "Image 7_3", "image_content": "Description of Image 7_3"},
-            {"image_path": "path/to/image7_4.jpg", "image_name": "Image 7_4", "image_content": "Description of Image 7_4"},
-            {"image_path": "path/to/image7_5.jpg", "image_name": "Image 7_5", "image_content": "Description of Image 7_5"}
+            {"image_path": "/static/images/infrastructure/ece_1.jpg", "image_name": "Image 7_1", "image_content": "Description of Image 7_1"},
+            {"image_path": "/static/images/infrastructure/ece_2.jpg", "image_name": "Image 7_2", "image_content": "Description of Image 7_2"},
+            {"image_path": "/static/images/infrastructure/ece_3.jpg", "image_name": "Image 7_3", "image_content": "Description of Image 7_3"},
+            {"image_path": "/static/images/infrastructure/ece_4.jpg", "image_name": "Image 7_4", "image_content": "Description of Image 7_4"},
+            {"image_path": "/static/images/infrastructure/ece_5.jpg", "image_name": "Image 7_5", "image_content": "Description of Image 7_5"}
         ]
     },
     {
         "dept_id": "008",
         "department_name": "Electronics & Instrumentation Engineering (EIE)",
         "infrastructure_images": [
-            {"image_path": "path/to/image8_1.jpg", "image_name": "Image 8_1", "image_content": "Description of Image 8_1"},
-            {"image_path": "path/to/image8_2.jpg", "image_name": "Image 8_2", "image_content": "Description of Image 8_2"},
-            {"image_path": "path/to/image8_3.jpg", "image_name": "Image 8_3", "image_content": "Description of Image 8_3"},
-            {"image_path": "path/to/image8_4.jpg", "image_name": "Image 8_4", "image_content": "Description of Image 8_4"},
-            {"image_path": "path/to/image8_5.jpg", "image_name": "Image 8_5", "image_content": "Description of Image 8_5"}
+            {"image_path": "/static/images/infrastructure/eie_1.jpg", "image_name": "Image 8_1", "image_content": "Description of Image 8_1"},
+            {"image_path": "/static/images/infrastructure/eie_2.jpg", "image_name": "Image 8_2", "image_content": "Description of Image 8_2"},
+            {"image_path": "/static/images/infrastructure/eie_3.jpg", "image_name": "Image 8_3", "image_content": "Description of Image 8_3"},
+            {"image_path": "/static/images/infrastructure/eie_4.jpg", "image_name": "Image 8_4", "image_content": "Description of Image 8_4"},
+            {"image_path": "/static/images/infrastructure/eie_5.jpg", "image_name": "Image 8_5", "image_content": "Description of Image 8_5"}
         ]
     },
     {
         "dept_id": "009",
         "department_name": "Electronics and Communication Engineering (ECE)",
         "infrastructure_images": [
-            {"image_path": "path/to/image9_1.jpg", "image_name": "Image 9_1", "image_content": "Description of Image 9_1"},
-            {"image_path": "path/to/image9_2.jpg", "image_name": "Image 9_2", "image_content": "Description of Image 9_2"},
-            {"image_path": "path/to/image9_3.jpg", "image_name": "Image 9_3", "image_content": "Description of Image 9_3"},
-            {"image_path": "path/to/image9_4.jpg", "image_name": "Image 9_4", "image_content": "Description of Image 9_4"},
-            {"image_path": "path/to/image9_5.jpg", "image_name": "Image 9_5", "image_content": "Description of Image 9_5"}
+            {"image_path": "/static/images/infrastructure/ece_1.jpg", "image_name": "Image 9_1", "image_content": "Description of Image 9_1"},
+            {"image_path": "/static/images/infrastructure/ece_2.jpg", "image_name": "Image 9_2", "image_content": "Description of Image 9_2"},
+            {"image_path": "/static/images/infrastructure/ece_3.jpg", "image_name": "Image 9_3", "image_content": "Description of Image 9_3"},
+            {"image_path": "/static/images/infrastructure/ece_4.jpg", "image_name": "Image 9_4", "image_content": "Description of Image 9_4"},
+            {"image_path": "/static/images/infrastructure/ece_5.jpg", "image_name": "Image 9_5", "image_content": "Description of Image 9_5"}
         ]
     },
     {
         "dept_id": "010",
         "department_name": "English",
         "infrastructure_images": [
-            {"image_path": "path/to/image10_1.jpg", "image_name": "Image 10_1", "image_content": "Description of Image 10_1"},
-            {"image_path": "path/to/image10_2.jpg", "image_name": "Image 10_2", "image_content": "Description of Image 10_2"},
-            {"image_path": "path/to/image10_3.jpg", "image_name": "Image 10_3", "image_content": "Description of Image 10_3"},
-            {"image_path": "path/to/image10_4.jpg", "image_name": "Image 10_4", "image_content": "Description of Image 10_4"},
-            {"image_path": "path/to/image10_5.jpg", "image_name": "Image 10_5", "image_content": "Description of Image 10_5"}
+            {"image_path": "/static/images/infrastructure/eng_1.jpg", "image_name": "Image 10_1", "image_content": "Description of Image 10_1"},
+            {"image_path": "/static/images/infrastructure/eng_2.jpg", "image_name": "Image 10_2", "image_content": "Description of Image 10_2"},
+            {"image_path": "/static/images/infrastructure/eng_3.jpg", "image_name": "Image 10_3", "image_content": "Description of Image 10_3"},
+            {"image_path": "/static/images/infrastructure/eng_4.jpg", "image_name": "Image 10_4", "image_content": "Description of Image 10_4"},
+            {"image_path": "/static/images/infrastructure/eng_5.jpg", "image_name": "Image 10_5", "image_content": "Description of Image 10_5"}
         ]
     },
     {
         "dept_id": "011",
         "department_name": "Information Technology (IT)",
         "infrastructure_images": [
-            {"image_path": "path/to/image11_1.jpg", "image_name": "Image 11_1", "image_content": "Description of Image 11_1"},
-            {"image_path": "path/to/image11_2.jpg", "image_name": "Image 11_2", "image_content": "Description of Image 11_2"},
-            {"image_path": "path/to/image11_3.jpg", "image_name": "Image 11_3", "image_content": "Description of Image 11_3"},
-            {"image_path": "path/to/image11_4.jpg", "image_name": "Image 11_4", "image_content": "Description of Image 11_4"},
-            {"image_path": "path/to/image11_5.jpg", "image_name": "Image 11_5", "image_content": "Description of Image 11_5"}
+            {"image_path": "/static/images/infrastructure/it_1.jpg", "image_name": "Image 11_1", "image_content": "Description of Image 11_1"},
+            {"image_path": "/static/images/infrastructure/it_2.jpg", "image_name": "Image 11_2", "image_content": "Description of Image 11_2"},
+            {"image_path": "/static/images/infrastructure/it_3.jpg", "image_name": "Image 11_3", "image_content": "Description of Image 11_3"},
+            {"image_path": "/static/images/infrastructure/it_4.jpg", "image_name": "Image 11_4", "image_content": "Description of Image 11_4"},
+            {"image_path": "/static/images/infrastructure/it_5.jpg", "image_name": "Image 11_5", "image_content": "Description of Image 11_5"}
         ]
     },
     {
         "dept_id": "012",
         "department_name": "Mathematics",
         "infrastructure_images": [
-            {"image_path": "path/to/image12_1.jpg", "image_name": "Image 12_1", "image_content": "Description of Image 12_1"},
-            {"image_path": "path/to/image12_2.jpg", "image_name": "Image 12_2", "image_content": "Description of Image 12_2"},
-            {"image_path": "path/to/image12_3.jpg", "image_name": "Image 12_3", "image_content": "Description of Image 12_3"},
-            {"image_path": "path/to/image12_4.jpg", "image_name": "Image 12_4", "image_content": "Description of Image 12_4"},
-            {"image_path": "path/to/image12_5.jpg", "image_name": "Image 12_5", "image_content": "Description of Image 12_5"}
+            {"image_path": "/static/images/infrastructure/math_1.jpg", "image_name": "Image 12_1", "image_content": "Description of Image 12_1"},
+            {"image_path": "/static/images/infrastructure/math_2.jpg", "image_name": "Image 12_2", "image_content": "Description of Image 12_2"},
+            {"image_path": "/static/images/infrastructure/math_3.jpg", "image_name": "Image 12_3", "image_content": "Description of Image 12_3"},
+            {"image_path": "/static/images/infrastructure/math_4.jpg", "image_name": "Image 12_4", "image_content": "Description of Image 12_4"},
+            {"image_path": "/static/images/infrastructure/math_5.jpg", "image_name": "Image 12_5", "image_content": "Description of Image 12_5"}
         ]
     },
     {
         "dept_id": "013",
         "department_name": "Mechancial Engineering (MECH)",
         "infrastructure_images": [
-            {"image_path": "path/to/image13_1.jpg", "image_name": "Image 13_1", "image_content": "Description of Image 13_1"},
-            {"image_path": "path/to/image13_2.jpg", "image_name": "Image 13_2", "image_content": "Description of Image 13_2"},
-            {"image_path": "path/to/image13_3.jpg", "image_name": "Image 13_3", "image_content": "Description of Image 13_3"},
-            {"image_path": "path/to/image13_4.jpg", "image_name": "Image 13_4", "image_content": "Description of Image 13_4"},
-            {"image_path": "path/to/image13_5.jpg", "image_name": "Image 13_5", "image_content": "Description of Image 13_5"}
+            {"image_path": "/static/images/infrastructure/mech_1.jpg", "image_name": "Image 13_1", "image_content": "Description of Image 13_1"},
+            {"image_path": "/static/images/infrastructure/mech_2.jpg", "image_name": "Image 13_2", "image_content": "Description of Image 13_2"},
+            {"image_path": "/static/images/infrastructure/mech_3.jpg", "image_name": "Image 13_3", "image_content": "Description of Image 13_3"},
+            {"image_path": "/static/images/infrastructure/mech_4.jpg", "image_name": "Image 13_4", "image_content": "Description of Image 13_4"},
+            {"image_path": "/static/images/infrastructure/mech_5.jpg", "image_name": "Image 13_5", "image_content": "Description of Image 13_5"}
         ]
     },
     {
         "dept_id": "014",
         "department_name": "Physical Education",
         "infrastructure_images": [
-            {"image_path": "path/to/image14_1.jpg", "image_name": "Image 14_1", "image_content": "Description of Image 14_1"},
-            {"image_path": "path/to/image14_2.jpg", "image_name": "Image 14_2", "image_content": "Description of Image 14_2"},
-            {"image_path": "path/to/image14_3.jpg", "image_name": "Image 14_3", "image_content": "Description of Image 14_3"},
-            {"image_path": "path/to/image14_4.jpg", "image_name": "Image 14_4", "image_content": "Description of Image 14_4"},
-            {"image_path": "path/to/image14_5.jpg", "image_name": "Image 14_5", "image_content": "Description of Image 14_5"}
+            {"image_path": "/static/images/infrastructure/physical_1.jpg", "image_name": "Image 14_1", "image_content": "Description of Image 14_1"},
+            {"image_path": "/static/images/infrastructure/physical_2.jpg", "image_name": "Image 14_2", "image_content": "Description of Image 14_2"},
+            {"image_path": "/static/images/infrastructure/physical_3.jpg", "image_name": "Image 14_3", "image_content": "Description of Image 14_3"},
+            {"image_path": "/static/images/infrastructure/physical_4.jpg", "image_name": "Image 14_4", "image_content": "Description of Image 14_4"},
+            {"image_path": "/static/images/infrastructure/physical_5.jpg", "image_name": "Image 14_5", "image_content": "Description of Image 14_5"}
         ]
     },
     {
         "dept_id": "015",
         "department_name": "Physics",
         "infrastructure_images": [
-            {"image_path": "path/to/image15_1.jpg", "image_name": "Image 15_1", "image_content": "Description of Image 15_1"},
-            {"image_path": "path/to/image15_2.jpg", "image_name": "Image 15_2", "image_content": "Description of Image 15_2"},
-            {"image_path": "path/to/image15_3.jpg", "image_name": "Image 15_3", "image_content": "Description of Image 15_3"},
-            {"image_path": "path/to/image15_4.jpg", "image_name": "Image 15_4", "image_content": "Description of Image 15_4"},
-            {"image_path": "path/to/image15_5.jpg", "image_name": "Image 15_5", "image_content": "Description of Image 15_5"}
+            {"image_path": "/static/images/infrastructure/physics_1.jpg", "image_name": "Image 15_1", "image_content": "Description of Image 15_1"},
+            {"image_path": "/static/images/infrastructure/physics_2.jpg", "image_name": "Image 15_2", "image_content": "Description of Image 15_2"},
+            {"image_path": "/static/images/infrastructure/physics_3.jpg", "image_name": "Image 15_3", "image_content": "Description of Image 15_3"},
+            {"image_path": "/static/images/infrastructure/physics_4.jpg", "image_name": "Image 15_4", "image_content": "Description of Image 15_4"},
+            {"image_path": "/static/images/infrastructure/physics_5.jpg", "image_name": "Image 15_5", "image_content": "Description of Image 15_5"}
         ]
     }
 ]

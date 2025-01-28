@@ -5,7 +5,7 @@
             "department_name": "AUTO",
             "students": [
             {
-                "name": "test",
+                "name": "/static/images/alumni/002/test.jpg",
                 "photo": "path",
                 "year": "2022-26",
                 "company_name": "test",
@@ -13,14 +13,14 @@
             },
             {
                 "name": "test",
-                "photo": "path",
+                "photo": "/static/images/alumni/002/test.jpg",
                 "year": "2022-26",
                 "company_name": "test",
                 "LPA": 50000
             },
             {
                 "name": "test",
-                "photo": "path",
+                "photo": "/static/images/alumni/002/test.jpg",
                 "year": "2022-26",
                 "company_name": "test",
                 "LPA": 50000
