@@ -274,29 +274,31 @@ app.get('/api/fetch-research-data/:dept_id/:year', async (req, res) => {
     }
 });
 
-// Fetch Event Details
-app.get('/api/events/active', async (req, res) => {
+// Fetch Recent 5 Events
+app.get('/api/events/recent', async (req, res) => {
     const db = client.db(dbName);
     const collection = db.collection('events');
 
     try {
-        const activeEvents = await collection.aggregate([
+        const recentEvents = await collection.aggregate([
             { $unwind: "$events" },
-            { $match: { "events.status": "True" } },
+            { $sort: { "events.date": -1 } },
+            { $limit: 10 },
             { $replaceRoot: { newRoot: "$events" } }
         ]).toArray();
 
-        if (activeEvents.length === 0) {
-            return res.status(404).json({ message: "No active events found" });
+        if (recentEvents.length === 0) {
+            return res.status(404).json({ message: "No events found" });
         }
 
-        res.status(200).json(activeEvents);
+        res.status(200).json(recentEvents);
 
     } catch (error) {
-        console.error("❌ Error fetching active events:", error);
-        res.status(500).json({ error: "Error fetching active events" });
+        console.error("❌ Error fetching recent events:", error);
+        res.status(500).json({ error: "Error fetching recent events" });
     }
 });
+
 
 // Fetch announcements
 app.get('/api/announcements', async (req, res) => {
