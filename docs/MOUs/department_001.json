@@ -1,6 +1,6 @@
 {
     "Departments": "001",
-    "Department_Name":"Artificial Intelligence and Data Science (AI&DS)",
+    "department_name":"Artificial Intelligence and Data Science (AI&DS)",
     "MOUs": [
         {
             "unique_id": "overall",

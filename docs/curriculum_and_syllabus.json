@@ -2,7 +2,7 @@
     {
         "2023": [
             {
-                "year": "2023&2024",
+                "year": "For the Students admitted from 2023&2024",
                 "department": [
                     "B.E Automobile Engineering",
                     "B.E Civil Engineering",
@@ -39,7 +39,7 @@
     {
         "2021": [
             {
-                "year": "2021&2022",
+                "year": "For the Students admitted from 2021&2022",
                 "department": [
                     "B.E Automobile Engineering",
                     "B.E Civil Engineering",
@@ -74,7 +74,7 @@
     {
         "2019": [
             {
-                "year": "2019&2020",
+                "year": "For the Students admitted from 2019&2020",
                 "department": [
                     "B.E Automobile Engineering",
                     "B.E Civil Engineering",
@@ -107,7 +107,7 @@
         ]
     },
     {
-        "Verticals": [
+        "01": [
             {
                 "year": "Verticals",
                 "department": [

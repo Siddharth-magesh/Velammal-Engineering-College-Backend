@@ -727,6 +727,29 @@ app.get('/api/nirf', async (req, res) => {
     }
 });
 
+//Sidebar 
+app.get('/api/sidebar/:deptid', async (req, res) => {
+    const db = client.db(dbName);
+    const collection = db.collection('sidebar');
+    const deptid = req.params.deptid;
+
+    try {
+        // Find the document that matches the given deptid
+        const departmentData = await collection.findOne({ deptId: deptid });
+
+        // Check if the department exists
+        if (!departmentData) {
+            return res.status(404).json({ message: `No data found for deptId: ${deptid}` });
+        }
+
+        // Send the matched department data
+        res.status(200).json(departmentData);
+    } catch (error) {
+        console.error('❌ Error fetching department data:', error);
+        res.status(500).json({ error: 'Error fetching department data' });
+    }
+});
+
 app.listen(port, () => {
     console.log(`🚀 Server running at http://localhost:${port}`);
 });

@@ -66,6 +66,24 @@ department_mapping = {
     "Physics": "015"
 }
 
+department_mapping1 = {
+    "Artificial Intelligence and Data Science (AI&DS)": "001",
+    "Automobile Engineering (AUTO)": "002",
+    "Chemistry (CHEM)": "003",
+    "Civil Engineering (CIVIL)": "004",
+    "Computer Science & Engineering (CSE)": "005",
+    "Computer Science and Engineering (CYBER SECURITY)": "006",
+    "Electrical & Electronics Engineering (EEE)": "007",
+    "Electronics & Instrumentation Engineering (EIE)": "008",
+    "Electronics and Communication Engineering (ECE)": "009",
+    "English (ENG)": "010",
+    "Information Technology (IT)": "011",
+    "Mathematics (MATH)": "012",
+    "Mechancial Engineering (MECH)": "013",
+    "Physical Education": "014",
+    "Physics": "015"
+}
+
 designation_mapping = {
     "Professor & Head": "01",
     "Professor": "02",
@@ -720,6 +738,13 @@ def insert_nirf_data():
         collection.insert_many(documents)
     print("NIRF documents inserted successfully.")
 
+def insert_sidebar_details():
+    collection= db['sidebar']
+    with open ("/Velammal-Engineering-College-Backend/docs/sidebar.json","r") as file:
+        documents= json.load(file)
+        collection.insert_many(documents)
+    print("Sidebar documents inserted successfully")
+
 def process_and_combine_Department_Activities_data(folder_path, dept_id):
     COLLECTION_NAME = "department_activities"
     collection = db[COLLECTION_NAME]
@@ -758,9 +783,16 @@ def process_and_combine_Department_Activities_data(folder_path, dept_id):
     if not combined_activities:
         print(f"No activity data extracted from '{folder_path}' for dept_id '{dept_id}'. Skipping.")
         return
+    
+    department_name=None
+    
+    for name, id in department_mapping1.items() :
+        if id==dept_id:
+            department_name = name
 
     combined_document = {
         "dept_id": dept_id,
+        "department_name":department_name,
         "dept_activities": combined_activities
     }
 
@@ -813,6 +845,7 @@ insert_banners()
 insert_NBA_data()
 insert_naac_data()
 insert_nirf_data()
+insert_sidebar_details()
 
 department_paths = {
     "001": "/Velammal-Engineering-College-Backend/docs/AIDS-DEPT-ACT/",
@@ -878,6 +911,7 @@ folder_path = r'/Velammal-Engineering-College-Backend/docs/RESEARCH-DATA'
 upload_research_data(folder_path)
 
 def insert_faculty_data(folder_path):
+    department_name=None
     try:
         collection = db['faculty_data']
         if not os.path.exists(folder_path):
@@ -885,6 +919,7 @@ def insert_faculty_data(folder_path):
             return
 
         for file_name in os.listdir(folder_path):
+            
             if file_name.endswith(".xlsx"):
                 file_path = os.path.join(folder_path, file_name)
 
@@ -925,11 +960,15 @@ def insert_faculty_data(folder_path):
                         faculty_list.append(faculty_data)
                     except Exception as e:
                         print(f"Error processing row {index} in '{file_name}': {e}")
-                
-                department_document = {
-                    "dept_id": dept_id,
-                    "faculty_members": faculty_list
-                }
+                for name, id in department_mapping1.items() :
+                    if id==dept_id:
+                        department_name=name
+                        
+                        department_document = {
+                            "department_name": department_name,
+                            "dept_id": dept_id,
+                            "faculty_members": faculty_list
+                        }
                 if faculty_list:
                     try:
                         collection.insert_one(department_document)
