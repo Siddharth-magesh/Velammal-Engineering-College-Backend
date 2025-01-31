@@ -753,6 +753,13 @@ def insert_sidebar_details():
         collection.insert_many(documents)
     print("Sidebar documents inserted successfully")
 
+def insert_iic_details():
+    collection= db['iic']
+    with open ("/Velammal-Engineering-College-Backend/docs/iic.json","r") as file:
+        documents= json.load(file)
+        collection.insert_one(documents)
+    print("iic documents inserted successfully")
+
 def process_and_combine_Department_Activities_data(folder_path, dept_id):
     COLLECTION_NAME = "department_activities"
     collection = db[COLLECTION_NAME]
@@ -854,6 +861,7 @@ insert_NBA_data()
 insert_naac_data()
 insert_nirf_data()
 insert_sidebar_details()
+insert_iic_details()
 
 department_paths = {
     "001": "/home/server/Desktop/Velammal-Engineering-College-Backend/docs/AIDS-DEPT-ACT/",

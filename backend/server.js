@@ -726,6 +726,25 @@ app.get('/api/nirf', async (req, res) => {
     }
 });
 
+//iic contents
+app.get('/api/iic', async (req, res) => {
+    try {
+        const db = client.db(dbName);
+        const collection = db.collection('iic');
+
+        const data = await collection.findOne({}); 
+
+        if (!data) {
+            return res.status(404).json({ message: "No data found" });
+        }
+
+        res.json(data); 
+    } catch (error) {
+        console.error("Error fetching data:", error);
+        res.status(500).json({ message: "Internal Server Error" });
+    }
+});
+
 //Sidebar 
 app.get('/api/sidebar/:deptid', async (req, res) => {
     const db = client.db(dbName);
