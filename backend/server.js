@@ -1,11 +1,25 @@
 const express = require('express');
 const { MongoClient } = require('mongodb');
+const session = require('express-session');
 require('dotenv').config();
 const bodyParser = require('body-parser');
+const bcrypt = require('bcrypt');
 
 const app = express();
 const port = process.env.PORT || 5000;
 app.use(bodyParser.json());
+app.use(express.json());
+
+app.use(session({
+    secret: '12345678',
+    resave: false,
+    saveUninitialized: true,
+    cookie: { 
+        secure: false, // Set to true if using HTTPS
+        maxAge: 24 * 60 * 60 * 1000
+    }
+}));
+
 
 const mongoUri = process.env.MONGO_URI;
 const dbName = process.env.DB_NAME;
@@ -743,26 +757,142 @@ app.get('/api/iic', async (req, res) => {
     }
 });
 
-//Sidebar 
+//Sidebar
 app.get('/api/sidebar/:deptid', async (req, res) => {
     const db = client.db(dbName);
     const collection = db.collection('sidebar');
     const deptid = req.params.deptid;
 
     try {
-        // Find the document that matches the given deptid
         const departmentData = await collection.findOne({ deptId: deptid });
-
-        // Check if the department exists
         if (!departmentData) {
             return res.status(404).json({ message: `No data found for deptId: ${deptid}` });
         }
 
-        // Send the matched department data
         res.status(200).json(departmentData);
     } catch (error) {
         console.error('❌ Error fetching department data:', error);
         res.status(500).json({ error: 'Error fetching department data' });
+    }
+});
+
+//Signup
+app.get('/api/nss_members', async (req, res) => {
+    try {
+        await client.connect();
+        const db = client.db(dbName);
+        const collection = db.collection('nss_members');
+        const hashedPassword = await bcrypt.hash(req.body.password, 10);
+
+        const joiningTime = new Date().toISOString();
+
+        const profilePhotoPath = `/static/images/nss_members/${req.body.name}.jpg`;
+
+        const newMember = {
+            ...req.body,
+            password: hashedPassword,
+            adminauth: false,
+            joining_time: joiningTime,
+            profile_photo_path: profilePhotoPath
+        };
+
+        const result = await collection.insertOne(newMember);
+        res.status(201).json({ message: 'Member added successfully', memberId: result.insertedId });
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ error: 'Internal Server Error' });
+    } finally {
+        await client.close();
+    }
+});
+
+//nss_profile_data
+app.get('/api/nss_members/:nss_id', async (req, res) => {
+    try {
+        const db = client.db(dbName);
+        const collection = db.collection('nss_members');
+        const nssId = req.params.nss_id;
+        const member = await collection.findOne({ nss_id: nssId });
+
+        if (!member) {
+            return res.status(404).json({ error: 'Member not found' });
+        }
+
+        res.status(200).json(member);
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ error: 'Internal Server Error' });
+    }
+});
+
+//signin
+app.get('/api/nss_signin', async (req, res) => {
+    try {
+        await client.connect();
+        const db = client.db(dbName);
+        const collection = db.collection('nss_members');
+
+        const { email, password } = req.body;
+        const user = await collection.findOne({ email });
+
+        if (!user) {
+            return res.status(404).json({ error: 'User not found' });
+        }
+        const isMatch = await bcrypt.compare(password, user.password);
+
+        if (!isMatch) {
+            return res.status(401).json({ error: 'Invalid credentials' });
+        }
+        req.session.nss_id = user.nss_id;
+        req.session.auth = true;
+        const { password: _, ...userData } = user;
+
+        res.status(200).json({ message: 'Sign-in successful', user: userData });
+
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ error: 'Internal Server Error' });
+    }
+});
+
+//nsslogout
+app.get('/api/logout', (req, res) => {
+    req.session.destroy((err) => {
+        if (err) {
+            return res.status(500).json({ error: 'Logout failed' });
+        }
+        res.status(200).json({ message: 'Logout successful' });
+    });
+});
+
+//Nsspodcst
+app.get('/api/Nsspodacast', async (req, res) => {
+    try {
+        const db = client.db(dbName);
+        const collection = db.collection('nsspodcast');
+        const podcasts = await collection.find({}).toArray();
+
+        res.json({ podcasts });
+    } catch (error) {
+        console.error('Error fetching podcast data:', error);
+        res.status(500).json({ message: 'Error fetching podcast data' });
+    }
+});
+
+//nsshome
+app.get('/api/nss_home', async (req, res) => {
+    const db = client.db(dbName);
+    const collection = db.collection('nsshome');
+
+    try {
+        const nssHomeData = await collection.find({}).toArray();
+        if (nssHomeData.length === 0) {
+            return res.status(404).json({ message: 'No NSS home data found' });
+        }
+        res.status(200).json(nssHomeData);
+    } catch (error) {
+        console.error('❌ Error fetching NSS home data:', error);
+        res.status(500).json({ error: 'Error fetching NSS home data' });
     }
 });
 

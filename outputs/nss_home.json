@@ -1,0 +1,29 @@
+[
+    {
+        "_id": "67a32316c0a577cc5c9b1cc1",
+        "image_path": [
+            "/static/images/nss_home/1.jpg",
+            "/static/images/nss_home/2.jpg",
+            "/static/images/nss_home/3.jpg",
+            "/static/images/nss_home/4.jpg",
+            "/static/images/nss_home/5.jpg",
+            "/static/images/nss_home/6.jpg",
+            "/static/images/nss_home/7.jpg",
+            "/static/images/nss_home/8.jpg",
+            "/static/images/nss_home/9.jpg",
+            "/static/images/nss_home/10.jpg"
+        ],
+        "image_content": [
+            "Republic Day",
+            "Anti-Drug Awareness Beach Rally",
+            "Eco-Park Cleaning",
+            "Eye Camp",
+            "Traffic Awareness",
+            "Aram Pongal Event",
+            "Campaign",
+            "Eegai",
+            "Vanam Padaipu",
+            "Ignite"
+        ]
+    }
+]

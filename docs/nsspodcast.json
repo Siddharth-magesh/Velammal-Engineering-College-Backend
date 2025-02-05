@@ -1,0 +1,22 @@
+[
+      {
+        "Image": "/static/images/Nsspodcast/ABJ.jpg",
+        "Heading": "Missile Man of India",
+        "Audio": "/static/audio/Nsspodcast/podcast1.mp3",
+        "Video": "/static/video/Nsspodcast/podcast1.mp4",
+        "Description":"Celebrating the Missile Man of India Dr. A.P.J. Abdul Kalam, whose wisdom ? and vision continue to inspire generations. From a humble background to leading the nation with his dreams and dedication, his legacy reminds us to dream big and work hard for a better tomorrow.Happy Birthday, Dr. Kalam. Your light will always guide us",
+        "Release_Date": "2024-10-15",
+        "Duration": "3.37",
+        "Hostname": ["Sharumathi Elayaraja","Abiraj "]
+      },
+      {
+        "Image": "/static/images/Nsspodcast/Thiruvalluvar.jpg",
+        "Heading": "Thiruvalluvar Day",
+        "Audio": "/static/audio/Nsspodcast/podcast2.mp3",
+        "Video": "/static/video/Nsspodcast/podcast2.mp4",
+        "Description":"Honoring the timeless wisdom of Thiruvalluvar, the legendary poet-philosopher who gifted the world the invaluable Thirukkural-a treasure trove of life lessons, prosperity, and virtue. Let's celebrate Thiruvalluvar Day on January 15 with gratitude and pride for his enduring legacy",
+        "Release_Date": "2025-01-15",
+        "Duration": "4.23",
+        "Hostname": "Sandhiya S"
+      }
+]

@@ -2,7 +2,7 @@
     {
         "Name": "Dr. VISU",
         "department_name": "Artificial Intelligence and Data Science (AI&DS) ",
-        "Unique_id": "VEC-001-01-77",
+        "Unique_id": "VEC-001-01-077",
         "Qualification": ["M.E", "PhD"],
         "Hod_message": ["I feel privileged to lead a team of talented and experienced faculty members. AI & DS is the most conspicuous technology transforming the facet of industry and mankind. This course is specially designed to enable students to build intelligent machines, software, or applications with a cutting-edge combination of Machine Learning, Deep Learning, Analytics, and Visualization technologies.", "Our department aims to produce skilled professionals in the domain of AI and DS and enable them to excel professionally. It also provides state-of-the-art laboratory facilities to the students to get better practical exposure and strong ties with industry, research organizations, and the community at large."],
         "Image": "/static/images/hods/aids.jpg",
@@ -19,7 +19,7 @@
     {
         "Name": "Dr. MARY JOANS",
         "department_name": "Electronics and Communication Engineering (ECE) ",
-        "Unique_id": "VEC-007-01-90",
+        "Unique_id": "VEC-007-01-090",
         "Qualification": ["M.E", "PhD"],
         "Hod_message": ["I feel privileged to lead a team of talented and experienced faculty members. AI & DS is the most conspicuous technology transforming the facet of industry and mankind. This course is specially designed to enable students to build intelligent machines, software, or applications with a cutting-edge combination of Machine Learning, Deep Learning, Analytics, and Visualization technologies.", "Our department aims to produce skilled professionals in the domain of AI and DS and enable them to excel professionally. It also provides state-of-the-art laboratory facilities to the students to get better practical exposure and strong ties with industry, research organizations, and the community at large."],
         "Image": "/static/images/hods/ece.jpg",
@@ -34,7 +34,7 @@
     {
         "Name": "Dr. RAJESWARAN",
         "department_name": "Mathematics",
-        "Unique_id": "VEC-012-01-96",
+        "Unique_id": "VEC-012-01-096",
         "Qualification": ["M.sc", "M.Phil", "PhD"],
         "Hod_message": ["I feel privileged to lead a team of talented and experienced faculty members. AI & DS is the most conspicuous technology transforming the facet of industry and mankind. This course is specially designed to enable students to build intelligent machines, software, or applications with a cutting-edge combination of Machine Learning, Deep Learning, Analytics, and Visualization technologies.", "Our department aims to produce skilled professionals in the domain of AI and DS and enable them to excel professionally. It also provides state-of-the-art laboratory facilities to the students to get better practical exposure and strong ties with industry, research organizations, and the community at large."],
         "Image": "/static/images/hods/math.jpg",
@@ -192,7 +192,7 @@
     {
         "Name": "Dr. R. RAJESH",
         "department_name": "Physics",
-        "Unique_id": "VEC-015   -01-170",
+        "Unique_id": "VEC-015-01-170",
         "Qualification": ["M.E", "PhD"],
         "Hod_message": ["I feel privileged to lead a team of talented and experienced faculty members. AI & DS is the most conspicuous technology transforming the facet of industry and mankind. This course is specially designed to enable students to build intelligent machines, software, or applications with a cutting-edge combination of Machine Learning, Deep Learning, Analytics, and Visualization technologies.", "Our department aims to produce skilled professionals in the domain of AI and DS and enable them to excel professionally. It also provides state-of-the-art laboratory facilities to the students to get better practical exposure and strong ties with industry, research organizations, and the community at large."],
         "Image": "/static/images/hods/physics.jpg",
