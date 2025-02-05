@@ -1,0 +1,35 @@
+{
+    "program officer":[
+        {
+            "name": "Dr. R. Karthik" ,
+            "image_path": "/static/images/nss_faculty/KARTHICK.jpg",
+            "instagram":[] ,
+            "linkedin": [],
+            "designation": "NSS, Program Ofiicer"
+
+        }
+    ],
+
+    "core_members":[
+        {
+            "24-25":[{
+                "name": ["KAVIYA SHREE", "LALITH KANAN", "VINOTH KUMAR","DAYANITHA","SANJAI KUMAR","SUBASHINI","RAHUL KUMARAN","SHRAVANTH KUMAR", "SWEDHA","MUKESH","MANOVA DANIEL"] ,
+                "image_path":["/static/images/nss_faculty/KAVIYA.jpg","/static/images/nss_faculty/LALITH.jpg","/static/images/nss_faculty/VINOTH.jpg","/static/images/nss_faculty/DAYANITHA.jpg","/static/images/nss_faculty/SANJAY.jpg","/static/images/nss_faculty/SUBASHINI.jpg","/static/images/nss_faculty/RAHUL.jpg","/static/images/nss_faculty/SHRAVANTH.jpg","/static/images/nss_faculty/SWEDHA.jpg","/static/images/nss_faculty/MUKESH.jpg","/static/images/nss_faculty/MANOVA.jpg"] ,
+                "instagram": ["https://www.instagram.com/kaviya.shree.07/","https://www.instagram.com/lalith_kannan02/?__pwa=1","https://www.instagram.com/persona_unica_22/?__pwa=1","https://www.instagram.com/daya.nitha/?__pwa=1","https://www.instagram.com/.sannnxx/?_pwa=1","https://www.instagram.com/suba_shini277/?__pwa=1","https://www.instagram.com/rahul_21/?__pwa=1","https://www.instagram.com/the.boy_who.lived.934/?__pwa=1","https://www.instagram.com/ps_swe/?__pwa=1","https://www.instagram.com/mxkshh/?__pwa=1","https://www.instagram.com/mxnovx/?__pwa=1"],
+                "linkedin": ["https://www.linkedin.com/in/kaviyashree-saravanan-7089a52a8?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app","https://www.linkedin.com/in/lalith-kannan-m-43ba57289?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app","https://www.linkedin.com/in/vinoth-m-290421312?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app","https://www.linkedin.com/in/dayanitha-s-r-6358392a7?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app","https://www.linkedin.com/in/sanjai-kumarg-ab5a45320?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                    ,"https://www.linkedin.com/in/subashini-gnanavel?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app","https://www.linkedin.com/in/rahul-kumaran-bab386305?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app","https://www.linkedin.com/in/shravanthkumar5?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app","https://www.linkedin.com/in/swedha-p-s-43499a2a8?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app","https://www.linkedin.com/in/mukesh-m-592576322?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app","https://www.linkedin.com/in/manova-daniel-08a28132a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"],
+                "designation":["general coordinator and DCO for mech and automobile","vice coordinator and DCO for cse","dco for ece","DCO for  dept of IT","DCO for EIE,CYBER,CIVIL","DCO for eee","DCO for AI&DS","posters team head","newsletter team head ","technical team head","team head for camera handling and website development"]
+            }
+            ],
+            "23-24":[{
+                "name": ["ROHITH PRABAKARAN","APARNA KUMARESAN","DIVYA M","DINESH PRASAD","LAISA SHYAM KUMAR","AKSHAYAA DHARSHINI","SHREENIDHI","SURYA","GLORY THOMAS JULIA","SARAVANA KUMAR"] ,
+                "image_path":["/static/images/nss_faculty/ROHITH.jpg","/static/images/nss_faculty/APARNA.jpg","/static/images/nss_faculty/DIVYA.jpg","/static/images/nss_faculty/DINESH.jpg","/static/images/nss_faculty/LAISA.jpg","/static/images/nss_faculty/AKSHAYAA.jpg","/static/images/nss_faculty/SHREENIDHI.jpg","/static/images/nss_faculty/SURYA.jpg","/static/images/nss_faculty/GLORY.jpg","/static/images/nss_faculty/SARAVANA.jpg"] ,
+                "instagram": ["https://www.instagram.com/rohith_praba","https://www.instagram.com/appu_here/","http://www.instagram.com/.divya.10","http://www.instagram.com/dineshprasa003d","https://www.instagram.com/itsme_laisa","http://www.instagram.com/akdarshini","http://www.instagram.com/shree_.prakash","https://www.instagram.com/_surya_v/","https://www.instagram.com/glorythomasjulia","https://www.instagram.com/saravanakumar.me/"],
+                "linkedin": ["https://www.linkedin.com/in/rohith-prabakaran-undefined-2a7566286/","https://www.linkedin.com/in/aparna-kumaresan-b7127625a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app","https://www.linkedin.com/in/divya-m-842b94259?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app","https://www.linkedin.com/in/dinesh-prasad-669428220?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app","https://www.linkedin.com/in/laisa-shyamkumar-aab56b279","https://www.linkedin.com/in/akshayaa-darshini-564606270"," https://www.linkedin.com/in/shreenidhi-vp-6a1606270","https://www.linkedin.com/in/surya-venkatesh-495670258?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app","https://www.linkedin.com/in/glory-thomas-julia-g-401b37287","https://www.linkedin.com/in/saravanaramaswamy2003/"],
+                "designation":["GCO & EEE Department Coordinator","VCO & ECE Department Coordinator","CSE Department Coordinator","Newsletter Team Head","AI&DS Department Coordinator","Civil, Cyber, EIE Department Coordinator","MECH & AUTO Department Coordinator","IT Department Coordinator","Posters Team Head","Technical Team Head"]
+            }
+            ]
+        }
+        
+    ]
+}

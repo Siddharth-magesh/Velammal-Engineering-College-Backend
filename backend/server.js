@@ -753,8 +753,8 @@ app.get('/api/iic', async (req, res) => {
         res.json(data); 
     } catch (error) {
         console.error("Error fetching data:", error);
-        res.status(500).json({ message: "Internal Server Error" });
-    }
+        res.status(500).json({ message: "Internal Server Error"});
+    }
 });
 
 //Sidebar
@@ -783,7 +783,6 @@ app.get('/api/nss_members', async (req, res) => {
         const db = client.db(dbName);
         const collection = db.collection('nss_members');
         const hashedPassword = await bcrypt.hash(req.body.password, 10);
-
         const joiningTime = new Date().toISOString();
 
         const profilePhotoPath = `/static/images/nss_members/${req.body.name}.jpg`;
@@ -807,7 +806,7 @@ app.get('/api/nss_members', async (req, res) => {
 });
 
 //nss_profile_data
-app.get('/api/nss_members/:nss_id', async (req, res) => {
+app.get('/api/nss_profile_member/:nss_id', async (req, res) => {
     try {
         const db = client.db(dbName);
         const collection = db.collection('nss_members');
@@ -838,13 +837,16 @@ app.get('/api/nss_signin', async (req, res) => {
         if (!user) {
             return res.status(404).json({ error: 'User not found' });
         }
-        const isMatch = await bcrypt.compare(password, user.password);
 
+        const isMatch = await bcrypt.compare(password, user.password);
         if (!isMatch) {
             return res.status(401).json({ error: 'Invalid credentials' });
         }
+
         req.session.nss_id = user.nss_id;
         req.session.auth = true;
+        req.session.adminauth = user.adminauth || false;
+
         const { password: _, ...userData } = user;
 
         res.status(200).json({ message: 'Sign-in successful', user: userData });
@@ -894,6 +896,165 @@ app.get('/api/nss_home', async (req, res) => {
         console.error('❌ Error fetching NSS home data:', error);
         res.status(500).json({ error: 'Error fetching NSS home data' });
     }
+});
+
+//nss gallery
+app.get('/api/nss_gallery/:year', async (req, res) => {
+    try {
+        await client.connect();
+        const db = client.db(dbName);
+        const collection = db.collection('nssgallery');
+
+        const { year } = req.params;
+        const galleryData = await collection.findOne({ Year: year });
+
+        if (!galleryData) {
+            return res.status(404).json({ error: `No data found for year ${year}` });
+        }
+
+        res.status(200).json({ year: year, data: galleryData.data });
+
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ error: 'Internal Server Error' });
+    }
+});
+
+//insert nss events
+app.post('/api/nssevents', async (req, res) => {
+    try {
+        if (!req.session.auth || !req.session.adminauth) {
+            return res.status(403).json({ error: 'Access denied. Admin authentication required.' });
+        }
+        const db = client.db(dbName);
+        const collection = db.collection('nssevents');
+        const { title, description, placeofevent, starttime, date, branch } = req.body;
+
+        if (!title || !description || !placeofevent || !starttime || !date || !branch) {
+            return res.status(400).json({ error: 'All fields are required' });
+        }
+        const newEvent = {
+            title,
+            description,
+            placeofevent,
+            starttime,
+            date,
+            branch,
+            adminid: req.session.nss_id,
+            createdAt: new Date()
+        };
+
+        const result = await collection.insertOne(newEvent);
+        res.status(201).json({ message: 'Event added successfully', eventId: result.insertedId });
+
+    } catch (error) {
+        console.error('Error adding event:', error);
+        res.status(500).json({ message: 'Error adding event' });
+    }
+});
+
+//newsletter fetching
+app.get('/api/nssevents', async (req, res) => {
+    try {
+        if (!req.session.auth) {
+            return res.status(403).json({ error: 'Access denied. Authentication required.' });
+        }
+        const db = client.db(dbName);
+        const collection = db.collection('nssevents');
+
+        const newsletters = await collection.find().sort({ createdAt: -1 }).toArray();
+
+        if (newsletters.length === 0) {
+            return res.status(404).json({ error: 'No newsletters found' });
+        }
+        res.status(200).json({ newsletters });
+
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ error: 'Internal Server Error' });
+    }
+});
+
+//nss faculty
+app.get('/api/nss_faculty', async (req, res) => {
+    const db = client.db(dbName);
+    const collection = db.collection('nss_faculty');
+
+    try {
+        const nssHomeData = await collection.find({}).toArray();
+        if (nssHomeData.length === 0) {
+            return res.status(404).json({ message: 'No NSS home data found' });
+        }
+        res.status(200).json(nssHomeData);
+    } catch (error) {
+        console.error('❌ Error fetching NSS home data:', error);
+        res.status(500).json({ error: 'Error fetching NSS home data' });
+    }
+});
+
+//newsletter insertion
+app.post('/api/nss_newsletter', async (req, res) => {
+    try {
+        if (!req.session.auth || !req.session.adminauth) {
+            return res.status(403).json({ error: 'Access denied. Admin authentication required.' });
+        }
+        const db = client.db(dbName);
+        const collection = db.collection('nssnewsletter');
+
+        const { title, description, file_path } = req.body;
+
+        if (!title || !description || !file_path) {
+            return res.status(400).json({ error: 'All fields are required' });
+        }
+
+        const newNewsletter = {
+            title,
+            description,
+            file_path,
+            uploaded_by: req.session.nss_id,
+            createdAt: new Date()
+        };
+
+        const result = await collection.insertOne(newNewsletter);
+        res.status(201).json({ message: 'Newsletter added successfully', newsletterId: result.insertedId });
+
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ error: 'Internal Server Error' });
+    }
+});
+
+//newsletter fetching
+app.get('/api/nss_newsletter', async (req, res) => {
+    try {
+        if (!req.session.auth) {
+            return res.status(403).json({ error: 'Access denied. Authentication required.' });
+        }
+        const db = client.db(dbName);
+        const collection = db.collection('nssnewsletter');
+
+        const newsletters = await collection.find().sort({ createdAt: -1 }).toArray();
+
+        if (newsletters.length === 0) {
+            return res.status(404).json({ error: 'No newsletters found' });
+        }
+        res.status(200).json({ newsletters });
+
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ error: 'Internal Server Error' });
+    }
+});
+
+app.get('/api/session', (req, res) => {
+    if (req.session.nss_id && req.session.auth) {
+        return res.json({ 
+            nss_id: req.session.nss_id, 
+            auth: req.session.auth,
+            adminauth: req.session.adminauth || false // Default to false if not set
+        });
+    }
+    res.status(401).json({ error: 'Not authenticated' });
 });
 
 app.listen(port, () => {

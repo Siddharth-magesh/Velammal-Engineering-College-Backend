@@ -1,6 +1,6 @@
 [
       {
-        "Image": "/static/images/Nsspodcast/ABJ.jpg",
+        "Image": "/static/images/Nsspodcast/ABJ.jpeg",
         "Heading": "Missile Man of India",
         "Audio": "/static/audio/Nsspodcast/podcast1.mp3",
         "Video": "/static/video/Nsspodcast/podcast1.mp4",
@@ -10,7 +10,7 @@
         "Hostname": ["Sharumathi Elayaraja","Abiraj "]
       },
       {
-        "Image": "/static/images/Nsspodcast/Thiruvalluvar.jpg",
+        "Image": "/static/images/Nsspodcast/Thiruvalluvar.jpeg",
         "Heading": "Thiruvalluvar Day",
         "Audio": "/static/audio/Nsspodcast/podcast2.mp3",
         "Video": "/static/video/Nsspodcast/podcast2.mp4",
