@@ -69,16 +69,16 @@ department_mapping = {
 department_mapping1 = {
     "Artificial Intelligence and Data Science (AI&DS)": "001",
     "Automobile Engineering (AUTO)": "002",
-    "Chemistry (CHEM)": "003",
+    "Chemistry": "003",
     "Civil Engineering (CIVIL)": "004",
     "Computer Science & Engineering (CSE)": "005",
     "Computer Science and Engineering (CYBER SECURITY)": "006",
     "Electrical & Electronics Engineering (EEE)": "007",
     "Electronics & Instrumentation Engineering (EIE)": "008",
     "Electronics and Communication Engineering (ECE)": "009",
-    "English (ENG)": "010",
+    "English": "010",
     "Information Technology (IT)": "011",
-    "Mathematics (MATH)": "012",
+    "Mathematics": "012",
     "Mechancial Engineering (MECH)": "013",
     "Physical Education": "014",
     "Physics": "015"
@@ -90,7 +90,6 @@ designation_mapping = {
     "Associate Professor": "03",
     "Assistant Professor": "04"
 }
-
 
 try:
     df = pd.read_csv(file_path)
@@ -752,7 +751,7 @@ def insert_iic_details():
         collection.insert_one(documents)
     print("iic documents inserted successfully")
 
-def process_and_combine_Department_Activities_data(folder_path, dept_id):
+def process_and_combine_Department_Activities_data_for_aids(folder_path, dept_id="001"):
     COLLECTION_NAME = "department_activities"
     collection = db[COLLECTION_NAME]
     
@@ -810,6 +809,16 @@ def process_and_combine_Department_Activities_data(folder_path, dept_id):
     )
     print(f"Data combined and inserted into MongoDB under dept_id '{dept_id}'.")
 
+aids_department_path = "/Velammal-Engineering-College-Backend/docs/AIDS-DEPT-ACT/"
+process_and_combine_Department_Activities_data_for_aids(aids_department_path)
+
+def insert_cscb_dept_activities_details():
+    collection= db['department_activities']
+    with open ("/Velammal-Engineering-College-Backend/docs/CSCBS-DEPT-ACT/006.json","r") as file:
+        documents= json.load(file)
+        collection.insert_many(documents)
+    print("cyber securtiy dept activities documents inserted successfully")
+
 def insert_alumni_data(directory_path='/Velammal-Engineering-College-Backend/docs/ALUMINI'):
     collection = db["alumni"]
 
@@ -826,8 +835,6 @@ def insert_alumni_data(directory_path='/Velammal-Engineering-College-Backend/doc
                     print(f"Unsupported data format in file: {filename}")
 
     print("Data from JSON files has been inserted into the 'alumni' collection.")
-
-
 
 insert_department_data()
 insert_hod_datas()
@@ -856,27 +863,7 @@ insert_naac_data()
 insert_nirf_data()
 insert_sidebar_details()
 insert_iic_details()
-
-department_paths = {
-    "001": "/Velammal-Engineering-College-Backend/docs/AIDS-DEPT-ACT/",
-    "002": "/Velammal-Engineering-College-Backend/docs/CSE-DEPT-ACT/",
-    "003": "/Velammal-Engineering-College-Backend/docs/ECE-DEPT-ACT/",
-    "004": "/Velammal-Engineering-College-Backend/docs/EEE-DEPT-ACT/",
-    "005": "/Velammal-Engineering-College-Backend/docs/MECH-DEPT-ACT/",
-    "006": "/Velammal-Engineering-College-Backend/docs/CIVIL-DEPT-ACT/",
-    "007": "/Velammal-Engineering-College-Backend/docs/IT-DEPT-ACT/",
-    "008": "/Velammal-Engineering-College-Backend/docs/BME-DEPT-ACT/",
-    "009": "/Velammal-Engineering-College-Backend/docs/EIE-DEPT-ACT/",
-    "010": "/Velammal-Engineering-College-Backend/docs/MBA-DEPT-ACT/",
-    "011": "/Velammal-Engineering-College-Backend/docs/MCA-DEPT-ACT/",
-    "012": "/Velammal-Engineering-College-Backend/docs/AUTO-DEPT-ACT/",
-    "013": "/Velammal-Engineering-College-Backend/docs/MTECH-IT-DEPT-ACT/",
-    "014": "/Velammal-Engineering-College-Backend/docs/ARCH-DEPT-ACT/",
-    "015": "/Velammal-Engineering-College-Backend/docs/SCI-HUM-DEPT-ACT/",
-}
-
-for dept_id, path in department_paths.items():
-    process_and_combine_Department_Activities_data(path, dept_id)
+insert_cscb_dept_activities_details()
 
 department_mapping = {
     "Artificial Intelligence and Data Science": "001",
@@ -896,7 +883,7 @@ department_mapping = {
     "Physics": "015"
 }
 
-def upload_research_data(folder_path):
+'''def upload_research_data(folder_path):
     collection = db['research_data']
     for filename in os.listdir(folder_path):
         if filename.endswith('.json'):
@@ -918,7 +905,7 @@ def upload_research_data(folder_path):
                     print(f"❌ Error processing {filename}: {e}")
 
 folder_path = r'/Velammal-Engineering-College-Backend/docs/RESEARCH-DATA'
-upload_research_data(folder_path)
+upload_research_data(folder_path)'''
 
 def insert_faculty_data(folder_path):
     department_name=None

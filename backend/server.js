@@ -672,8 +672,6 @@ app.get('/api/staff_details/:unique_id', async (req, res) => {
     } catch (error) {
         console.error('Error fetching data from MongoDB:', error);
         res.status(500).json({ message: 'Error fetching faculty data' });
-    } finally {
-        await client.close();
     }
 });
 
