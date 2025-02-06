@@ -1,0 +1,100 @@
+[
+    {
+        "faculty & Staff": {
+            "name": [
+                "Dr.S.Rajendraprasath",
+                "T.Senthivel",
+                "P.Kumaravel",
+                "M.Panchavarnam",
+                "P.Udayakal"
+            ],
+            "description": "Our faculties are true professionals who have the capacity to raise incisive, difficult and sometimes uncomfortable questions that become potential GAME CHANGER. Our Faculty members consider teaching and training of new generation of graduate students as their highest calling.",
+            "image": [
+                "static/images/library_faculty/1.jpeg",
+                "static/images/library_faculty/2.jpeg",
+                "static/images/library_faculty/3.jpeg",
+                "static/images/library_faculty/4.jpeg",
+                "static/images/library_faculty/5.jpeg"
+            ],
+            "designation": [
+                "Librarian/HOD",
+                "Library Assistant",
+                "Library Assistant",
+                "Library Assistant",
+                "Library Assistant"
+            ],
+            "educational_qualification": [
+                "B.Sc., M.A., M.L.I.Sc., M.phil., Ph.D",
+                " M.A., M.L.I.Sc",
+                "B.A.",
+                "B.Com",
+                "B.A., B.L.I.Sc"
+                ]
+            },
+        
+            "about_the_library":{
+                "Area":"24000 sq.ft",
+                "no_of_books":"77525 Volumes",
+                "no_of_titles":"25156",
+                "no_of_journals":"174 National and International",
+                "no_of_online_journals":"9517"
+            },
+        
+            "membership_details":{
+                "member_details":[
+                    "Professors, Associate Professors and Assistant Professors",
+                    "JRF/Research Scholars",
+                    "UG Students",
+                    "PG Students",
+                    "Skilled Non-Teaching Staff"
+                ],
+                "no_of_books":[
+                    "8",
+                    "6",    
+                    "6",
+                    "6",
+                    "3"],
+                "periodical/back_volumes/cd":[
+                    "1",
+                    "1",
+                    "1",
+                    "1",
+                    "1"
+                ]
+        },
+            "collection":{
+                "resources":[
+                    "no_of_books",
+                    "no_of_titles",
+                    "General Bank Books",
+                    "SC/ST Book Bank Books",
+                    "e-Books",
+                    "Journals",
+                    "International",
+                    "National",
+                    "CD's",
+                    "Video Cassettes",
+                    "Journal Back Volumes",
+                    "Student Project Reports",
+                    "Online Journals Package",
+                    "Magazine And NewsPapers"
+                ],
+                "Total":[
+                    "77525",
+                    "25156",
+                    "1818",
+                    "984",
+                    "155",
+                    "162",
+                    "75",
+                    "87",
+                    "3930",
+                    "127",
+                    "2769",
+                    "3192",
+                    "9517",
+                    "20"
+                ]
+            }
+        }
+]

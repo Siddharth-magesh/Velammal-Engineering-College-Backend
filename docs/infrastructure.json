@@ -139,6 +139,8 @@
             {"image_path": "/static/images/infrastructure/mech_2.jpg", "image_name": "Image 13_2", "image_content": "Description of Image 13_2"},
             {"image_path": "/static/images/infrastructure/mech_3.jpg", "image_name": "Image 13_3", "image_content": "Description of Image 13_3"},
             {"image_path": "/static/images/infrastructure/mech_4.jpg", "image_name": "Image 13_4", "image_content": "Description of Image 13_4"},
+            {"image_path": "/static/images/infrastructure/mech_5.jpg", "image_name": "Image 13_5", "image_content": "Description of Image 13_5"},
+            {"image_path": "/static/images/infrastructure/mech_5.jpg", "image_name": "Image 13_5", "image_content": "Description of Image 13_5"},
             {"image_path": "/static/images/infrastructure/mech_5.jpg", "image_name": "Image 13_5", "image_content": "Description of Image 13_5"}
         ]
     },
@@ -146,13 +148,54 @@
         "dept_id": "014",
         "department_name": "Physical Education",
         "infrastructure_images": [
-            {"image_path": "/static/images/infrastructure/physical_1.jpg", "image_name": "Image 14_1", "image_content": "Description of Image 14_1"},
-            {"image_path": "/static/images/infrastructure/physical_2.jpg", "image_name": "Image 14_2", "image_content": "Description of Image 14_2"},
-            {"image_path": "/static/images/infrastructure/physical_3.jpg", "image_name": "Image 14_3", "image_content": "Description of Image 14_3"},
-            {"image_path": "/static/images/infrastructure/physical_4.jpg", "image_name": "Image 14_4", "image_content": "Description of Image 14_4"},
-            {"image_path": "/static/images/infrastructure/physical_5.jpg", "image_name": "Image 14_5", "image_content": "Description of Image 14_5"}
+            {
+                "image_path": "/static/images/infrastructure/014/BALL BADMINTON COURT.png",
+                "image_name": "BALL BADMINTON COURT",
+                "image_content": "A 12m × 24m court with a 1.5m high net, marked boundaries, and a smooth playing surface."
+            },
+            {
+                "image_path": "/static/images/infrastructure/014/WILMA RUDOLPH INDOOR STADIUM.png",
+                "image_name": "WILMA RUDOLPH INDOOR STADIUM",
+                "image_content": "A spacious indoor stadium for multiple sports with modern facilities."
+            },
+            {
+                "image_path": "/static/images/infrastructure/014/WILMA RUDOLPH INDOOR STADIUM2.png",
+                "image_name": "WILMA RUDOLPH INDOOR STADIUM2",
+                "image_content": "Another view of the indoor stadium showcasing its playing area and seating."
+            },
+            {
+                "image_path": "/static/images/infrastructure/014/WILMA RUDOLPH INDOOR STADIUM VOLLEY BALL COURT.png",
+                "image_name": "WILMA RUDOLPH INDOOR STADIUM VOLLEY BALL COURT",
+                "image_content": "A well-equipped volleyball court inside the indoor stadium."
+            },
+            {
+                "image_path": "/static/images/infrastructure/014/FITNESS CENTRE.png",
+                "image_name": "FITNESS CENTRE",
+                "image_content": "A modern fitness center with gym equipment for strength and cardio workouts."
+            },
+            {
+                "image_path": "/static/images/infrastructure/014/FITNESS CENTRE2.png",
+                "image_name": "FITNESS CENTRE2",
+                "image_content": "Another view of the fitness center with workout machines and free weights."
+            },
+            {
+                "image_path": "/static/images/infrastructure/014/KAPIL DAV CRICKET GROUND.png",
+                "image_name": "KAPIL DAV CRICKET GROUND",
+                "image_content": "A well-maintained cricket ground for practice and matches."
+            },
+            {
+                "image_path": "/static/images/infrastructure/014/KABADDI COURT.png",
+                "image_name": "KABADDI COURT",
+                "image_content": "A designated court for Kabaddi with clear markings and a firm surface."
+            },
+            {
+                "image_path": "/static/images/infrastructure/014/LADIES HOSTEL GYM.png",
+                "image_name": "LADIES HOSTEL GYM",
+                "image_content": "A dedicated gym for female students with essential fitness equipment."
+            }
         ]
     },
+    
     {
         "dept_id": "015",
         "department_name": "Physics",

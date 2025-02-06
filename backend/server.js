@@ -1046,6 +1046,39 @@ app.get('/api/nss_newsletter', async (req, res) => {
     }
 });
 
+//Sports Zonal Data
+app.get('/api/sports_data', async (req, res) => {
+    const db = client.db(dbName);
+    const collection = db.collection('sports_data');
+
+    try {
+        const announcements = await collection.find({}).toArray();
+        if (announcements.length === 0) {
+            return res.status(404).json({ message: 'No Sports data found' });
+        }
+        res.status(200).json(announcements);
+    } catch (error) {
+        console.error('❌ Error fetching Sports data:', error);
+        res.status(500).json({ error: 'Error fetching Sports data' });
+    }
+});
+
+app.get('/api/library', async (req, res) => {
+    const db = client.db(dbName);
+    const collection = db.collection('library');
+
+    try {
+        const libraryData = await collection.find({}).toArray();
+        if (libraryData.length === 0) {
+            return res.status(404).json({ message: 'No library data found' });
+        }
+        res.status(200).json(libraryData);
+    } catch (error) {
+        console.error('❌ Error fetching library data:', error);
+        res.status(500).json({ error: 'Error fetching library data' });
+    }
+});
+
 app.get('/api/session', (req, res) => {
     if (req.session.nss_id && req.session.auth) {
         return res.json({ 

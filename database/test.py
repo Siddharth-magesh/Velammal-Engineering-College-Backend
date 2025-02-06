@@ -1,34 +1,38 @@
-import os
-import shutil
+from pymongo import MongoClient
+import json
 
-def move_profile_photos(photo_base_dir, target_base_dir):
-    for i in range(1, 16):
-        subfolder = f"{i:03}"
-        os.makedirs(os.path.join(target_base_dir, subfolder), exist_ok=True)
+mongo_uri = "mongodb://localhost:27017/"
+db_name = "VEC"
+collection_name = "staff_details"
 
-    for folder in os.listdir(photo_base_dir):
-        folder_path = os.path.join(photo_base_dir, folder)
+client = MongoClient(mongo_uri)
+db = client[db_name]
+collection = db[collection_name]
 
-        if os.path.isdir(folder_path):
-            image_filename = f"{folder}.jpg"
-            image_path = os.path.join(folder_path, image_filename)
+def insert_sports_Zonal_results():
+    collection = db["sports_data"]
+    with open("/Velammal-Engineering-College-Backend/docs/sports_zonal.json", "r") as file:
+        documents = json.load(file)
+        collection.insert_many(documents)
 
-            if os.path.exists(image_path):
-                parts = folder.split('-')
-                if len(parts) >= 3:
-                    department_code = parts[1]
+    print("Sports Zonal data inserted successfully.")
+    
+def insert_sports_Zonal_images():
+    collection = db["sports_data"]
+    with open("/Velammal-Engineering-College-Backend/docs/zonal_images.json", "r") as file:
+        documents = json.load(file)
+        collection.insert_many(documents)
 
-                    if department_code.isdigit() and 1 <= int(department_code) <= 15:
-                        target_folder = os.path.join(target_base_dir, f"{int(department_code):03}")
-                        target_path = os.path.join(target_folder, image_filename)
-                        shutil.move(image_path, target_path)
-                        print(f"Moved {image_filename} to {target_path}")
-                    else:
-                        print(f"Skipping {folder} - Invalid department code {department_code}")
-                else:
-                    print(f"Skipping {folder} - Invalid format")
+    print("Sports Zonal images data inserted successfully.")
 
-if __name__ == "__main__":
-    photo_base_dir = r"/Velammal-Engineering-College-Backend/static/temp_photos/"
-    target_base_dir = r"/Velammal-Engineering-College-Backend/static/images/profile_photos/"
-    move_profile_photos(photo_base_dir, target_base_dir)
+def insert_sports_faculty_data():
+    collection = db["sports_data"]
+    with open("/Velammal-Engineering-College-Backend/docs/sports_faculty.json", "r") as file:
+        documents = json.load(file)
+        collection.insert_one(documents)
+
+    print("sports faculty data inserted successfully.")
+
+#insert_sports_Zonal_results()
+#insert_sports_Zonal_images()
+insert_sports_faculty_data()

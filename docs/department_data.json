@@ -188,14 +188,14 @@
         "department_name": "Physical Education",
         "department_image": "/static/images/department_data/physical.jpg",
         "department_quotes": "Unveiling the mysteries of the universe.",
-        "vision": "To excel in physics education and research, inspiring scientific curiosity.",
+        "vision": "To achieve the physical, mental, and intellectual development of the whole student by fostering a culture that promotes a positive attitude towards physical activity.",
         "mission": [
-            "Provide a strong foundation in fundamental and applied physics.",
-            "Encourage research in emerging areas of physical sciences.",
-            "Prepare students for careers in academia, industry, and research."
+            "To create an environment that fosters a positive attitude towards physical activity and overall well-being.",
+            "To provide opportunities for personal and intellectual growth through fitness, outdoor recreation, and coaching.",
+            "To promote active participation in sports, enhancing teamwork, discipline, and leadership skills."
         ],
         "newsletter_path": "/static/docs/dapartment_data/physical_newsletter.pdf",
-        "about_department": ["Department of Artificial Intelligence aims to produce computing graduates with high potency, apply, design and develop systems to pertain and to integrate both software and hardware devices, utilize modern approaches in programming and problem solving techniques."," The Department was established in the year 2020 with the main objective of providing quality education in the field of Engineering and Technology."," It is recognized as nodal center under Anna University. The Department has proved to be a center of excellence in Academic, Sponsored research and Continuing Education Programme."]
+        "about_department": ["Our College department of physical education is an integral art of our institution right from its inception from the year 2005-2006.","We are now having 3 faculty members, including a Head of the department. In which we have one doctorate in physical education. We engage the students both morning and evening for sports activities and make them to participate in Inter collegiate tournaments. We have one big Indoor stadium and one multi Gym with Fitness trainer.","Our college students got the 18 th consecutive years of overall championship in zone – I competitions. This is our pride for our department of physical education. Moreover, our college students participate for Anna university teams, State and National teams.Our students got places in National level sports competitions every year."]
     },
     {
         "department_id": "015",

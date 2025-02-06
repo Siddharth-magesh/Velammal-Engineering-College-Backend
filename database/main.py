@@ -1016,3 +1016,58 @@ insert_nss_podcast()
 insert_nss_home_data()
 insert_nss_events()
 insert_nss_faculty_data()
+
+def insert_sports_Zonal_results():
+    collection = db["sports_data"]
+    with open("/Velammal-Engineering-College-Backend/docs/sports_zonal.json", "r") as file:
+        documents = json.load(file)
+        collection.insert_many(documents)
+
+    print("Sports Zonal data inserted successfully.")
+
+def insert_sports_Zonal_images():
+    collection = db["sports_data"]
+    with open("/Velammal-Engineering-College-Backend/docs/zonal_images.json", "r") as file:
+        documents = json.load(file)
+        collection.insert_many(documents)
+
+    print("Sports Zonal images data inserted successfully.")
+
+def insert_sports_faculty_data():
+    collection = db["sports_data"]
+    with open("/Velammal-Engineering-College-Backend/docs/sports_faculty.json", "r") as file:
+        documents = json.load(file)
+        collection.insert_one(documents)
+
+    print("sports faculty data inserted successfully.")
+
+def insert_sports_achievements_data():
+    collection = db["sports_data"]
+    with open("/Velammal-Engineering-College-Backend/docs/sports_achievements.json", "r") as file:
+        documents = json.load(file)
+        collection.insert_one(documents)
+
+    print("sports achievements data inserted successfully.")
+
+def insert_other_facilties():
+    collection = db["other_facilties"]
+    with open("/Velammal-Engineering-College-Backend/docs/other_facilties.json", "r") as file:
+        documents = json.load(file)
+        collection.insert_many(documents)
+
+    print("Other Facilties data inserted successfully.")
+
+def insert_library_data():
+    collection = db["library"]
+    with open("/Velammal-Engineering-College-Backend/docs/library.json", "r") as file:
+        documents = json.load(file)
+        collection.insert_many(documents)
+
+    print("Library data inserted successfully.")
+
+insert_sports_Zonal_results()
+insert_sports_Zonal_images()
+insert_sports_faculty_data()
+insert_sports_achievements_data()
+insert_other_facilties()
+insert_library_data()
