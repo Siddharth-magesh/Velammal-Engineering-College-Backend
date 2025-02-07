@@ -1,0 +1,17 @@
+{
+    "name": "Priya Sharma",
+    "registration_number": "113222072001",
+    "password":"$2b$10$JpZsEiEj7l3JwMSsCDCBbOmJ5.UNNouWOJE1BbmGyK.dIqcqAGNiS",
+    "admin_number": "22VEC002",
+    "room_number": "A-310",
+    "department": "ECE",
+    "gender": "Female",
+    "phone_number_student": "8765432109",
+    "phone_number_parent": "9988776655",
+    "city": "Bangalore",
+    "foodtype": "Non-Veg",
+    "year": 3,
+    "profile_photo_path": "/static/hostel/profile_photos/arjun_kumar.jpg",
+    "block_name": "NCGH",
+    "late_count": 3
+}
