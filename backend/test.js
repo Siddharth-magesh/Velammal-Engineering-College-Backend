@@ -117,9 +117,9 @@ app.get('/api/verify_student', async (req, res) => {
 
 //submit pass
 app.post('/api/submit_pass', async (req, res) => {
-    const accountSid = "AC2d825693a3e1207c1998b6a2a99dd5d2";
-    const authToken = "2b702fcdd117c2c8e817d51f1eacb75f";
-    const twilioPhoneNumber = "+16203019504";
+    const accountSid = process.env.ACCOUNTSID;
+    const authToken = process.env.AUTHTOKEN;
+    const twilioPhoneNumber = process.env.TWILIOPHONENUMBER;
 
     const twilioClient = require('twilio')(accountSid, authToken);
 
