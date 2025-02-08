@@ -3,7 +3,7 @@
     "registration_number": "113222072000",
     "password":"$2b$10$JpZsEiEj7l3JwMSsCDCBbOmJ5.UNNouWOJE1BbmGyK.dIqcqAGNiS",
     "admin_number": "22VEC001",
-    "room_number": "B-204",
+    "room_number": "204",
     "department": "CSE",
     "gender": "Male",
     "phone_number_student": "9876543210",
@@ -13,5 +13,7 @@
     "year": 2,
     "profile_photo_path": "/static/hostel/profile_photos/arjun_kumar.jpg",
     "block_name": "NCBH",
-    "late_count": 1
+    "late_count": 1,
+    "barcode_path":"/static/student_barcode/113222072094.png",
+    "edit_status":null
 }
