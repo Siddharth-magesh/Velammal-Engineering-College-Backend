@@ -14,6 +14,6 @@
     "profile_photo_path": "/static/hostel/profile_photos/arjun_kumar.jpg",
     "block_name": "NCBH",
     "late_count": 1,
-    "barcode_path":"/static/student_barcode/113222072094.png",
+    "QR_path":"/static/student_barcode/113222072094.png",
     "edit_status":null
 }

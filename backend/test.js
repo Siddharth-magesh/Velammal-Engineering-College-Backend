@@ -156,11 +156,11 @@ app.post('/api/submit_pass', async (req, res) => {
             reason_type,
             reason_for_visit,
             file_path: file_path || null,
-            barcode_path: null,
+            qrcode_path: null,
             parent_approval: false,
             wardern_approval: false,
             superior_wardern: false,
-            barcode_status: false,
+            qrcode_status: false,
             exit_time: null,
             re_entry_time: null,
             delay_status: false,
@@ -261,6 +261,248 @@ app.post('/api/parent_not_accept/:pass_id', async (req, res) => {
     } catch (error) {
         console.error("❌ Error:", error);
         res.status(500).json({ error: "Internal server error" });
+    }
+});
+
+app.post('/api/change_food_type', async (req, res) => {
+    const { registration_number, name } = req.body;
+    const db = client.db(dbName);
+    const studentsCollection = db.collection('student_database');
+    const requestsCollection = db.collection('food_change_requests');
+    const wardensCollection = db.collection('warden_database');
+
+    try {
+        const student = await studentsCollection.findOne({ registration_number, name });
+        if (!student) {
+            return res.status(404).json({ message: 'Student not found' });
+        }
+
+        const newFoodType = student.foodtype === 'Veg' ? 'Non-Veg' : 'Veg';
+
+        
+        let warden = await wardensCollection.findOne({ primary_year: student.year, active: true });
+        if (!warden) {
+            warden = await wardensCollection.findOne({ secondary_year: student.year, active: true });
+        }
+        if (!warden) {
+            return res.status(403).json({ message: 'No active warden found for this student year' });
+        }
+
+        await requestsCollection.insertOne({ 
+            registration_number, 
+            name,
+            requested_foodtype: newFoodType, 
+            status: 'Pending', 
+            year: student.year, 
+            assigned_warden: warden.warden_name
+        });
+
+        res.status(200).json({ message: 'Request submitted for approval', requested_foodtype: newFoodType });
+    } catch (error) {
+        console.error('❌ Error processing request:', error);
+        res.status(500).json({ error: 'Internal server error' });
+    }
+});
+
+// Warden fetches pending requests
+app.get('/api/food_requests_changes/:unique_id', async (req, res) => {
+    try {
+        const { unique_id } = req.params;
+
+        if (!unique_id) {
+            return res.status(400).json({ error: "warden_unique_id is required" });
+        }
+
+        await client.connect();
+        const db = client.db(dbName);
+        const wardenCollection = db.collection('warden_database');
+        const requestsCollection = db.collection('food_change_requests');
+
+        const warden = await wardenCollection.findOne({ unique_id , active:true });
+
+        if (!warden) {
+            return res.status(404).json({ error: "Warden not found" });
+        }
+
+        const primary_year = warden.primary_year;
+        const requests = await requestsCollection.find({ year: primary_year }).toArray();
+
+        res.status(200).json({ requests });
+    } catch (error) {
+        console.error('❌ Error fetching requests:', error);
+        res.status(500).json({ error: 'Internal server error' });
+    }
+});
+
+
+// Warden approves the request
+app.post('/api/approve_food_change', async (req, res) => {
+    const { registration_number, name } = req.body;
+    const db = client.db(dbName);
+    const studentsCollection = db.collection('student_database');
+    const requestsCollection = db.collection('food_change_requests');
+
+    try {
+        const request = await requestsCollection.findOne({ registration_number, name });
+        if (!request) {
+            return res.status(404).json({ message: 'Request not found' });
+        }
+        await studentsCollection.updateOne(
+            { registration_number, name },
+            { $set: { foodtype: request.requested_foodtype } }
+        );
+        await requestsCollection.deleteOne({ registration_number, name });
+
+        res.status(200).json({ message: 'Food type change approved', newFoodType: request.requested_foodtype });
+    } catch (error) {
+        console.error('❌ Error approving request:', error);
+        res.status(500).json({ error: 'Internal server error' });
+    }
+});
+
+//Requesting for profile update
+app.post('/api/request_profile_update', async (req, res) => {
+    try {
+        const { registration_number, room_number, phone_number_student, phone_number_parent } = req.body;
+
+        await client.connect();
+        const db = client.db(dbName);
+        const studentCollection = db.collection('student_database');
+        const tempRequestCollection = db.collection('profile_change_requests'); 
+        const profile = await studentCollection.findOne({ registration_number });
+        if (!profile) {
+            return res.status(404).json({ error: "Profile not found" });
+        }
+        const fromData = {
+            room_number: profile.room_number,
+            phone_number_student: profile.phone_number_student,
+            phone_number_parent: profile.phone_number_parent
+        };
+        const toData = {
+            room_number: room_number || profile.room_number,
+            phone_number_student: phone_number_student || profile.phone_number_student,
+            phone_number_parent: phone_number_parent || profile.phone_number_parent
+        };
+        const updateRequest = {
+            registration_number,
+            room_number: toData.room_number,
+            year:profile.year,
+            phone_number_student: toData.phone_number_student,
+            phone_number_parent: toData.phone_number_parent,
+            from_data: fromData,
+            to_data: toData,
+            edit_status: 'Pending',
+            created_at: new Date()
+        };
+        await tempRequestCollection.insertOne(updateRequest);
+        await studentCollection.updateOne(
+            { registration_number },
+            { $set: { edit_status: 'Pending' } }
+        );
+
+        res.json({
+            message: "Profile update requested. Waiting for approval from wardens.",
+            request: updateRequest
+        });
+
+    } catch (err) {
+        console.error("❌ Error:", err);
+        res.status(500).json({ error: "Server error" });
+    }
+});
+
+//Supirior wardern fetch for profile
+app.get('/api/profile_request_changes/:unique_id', async (req, res) => {
+    try {
+        const { unique_id } = req.params;
+        if (!unique_id) {
+            return res.status(400).json({ error: "warden_unique_id is required" });
+        }
+
+        await client.connect();
+        const db = client.db(dbName);
+        const wardenCollection = db.collection('warden_database');
+        const requestsCollection = db.collection('profile_change_requests');
+
+        const warden = await wardenCollection.findOne({ unique_id , active:true });
+
+        if (!warden) {
+            return res.status(404).json({ error: "Warden not found" });
+        }
+
+        const primary_year = warden.primary_year;
+        const requests = await requestsCollection.find({ year: primary_year }).toArray();
+
+        res.status(200).json({ requests });
+    } catch (error) {
+        console.error('❌ Error fetching requests:', error);
+        res.status(500).json({ error: 'Internal server error' });
+    }
+});
+
+//Superior warden Profile update handling
+app.post('/api/handle_request', async (req, res) => {
+    try {
+        const { registration_number, action, unique_id } = req.body;
+        await client.connect();
+        const db = client.db(dbName);
+        const wardenCollection = db.collection('warden_database');
+        const studentCollection = db.collection('student_database');
+        const tempRequestCollection = db.collection('profile_change_requests');
+        const warden = await wardenCollection.findOne({ unique_id });
+        if (!warden) {
+            return res.status(404).json({ error: "Warden not found" });
+        }
+        const updateRequest = await tempRequestCollection.findOne({ registration_number });
+        if (!updateRequest) {
+            return res.status(404).json({ error: "Request not found" });
+        }
+
+        if (action === "approve") {
+            await studentCollection.updateOne(
+                { registration_number: updateRequest.registration_number },
+                {
+                    $set: {
+                        room_number: updateRequest.room_number,
+                        phone_number_student: updateRequest.phone_number_student,
+                        phone_number_parent: updateRequest.phone_number_parent,
+                        edit_status: "Approved"
+                    }
+                }
+            );
+            await tempRequestCollection.updateOne(
+                { registration_number },
+                {
+                    $set: {
+                        edit_status: "Approved"
+                    }
+                }
+            );
+            res.json({
+                message: "Request approved and profile updated",
+                approved_by: warden.name
+            });
+        } else if (action === "reject") {
+            await tempRequestCollection.updateOne(
+                { registration_number },
+                {
+                    $set: {
+                        edit_status: "Rejected"
+                    }
+                }
+            );
+            res.json({
+                message: "Request rejected",
+                rejected_by: warden.name
+            });
+        } else {
+            return res.status(400).json({ error: "Invalid action" });
+        }
+        await tempRequestCollection.deleteOne({ registration_number });
+
+    } catch (err) {
+        console.error("❌ Error:", err);
+        res.status(500).json({ error: "Server error" });
     }
 });
 
