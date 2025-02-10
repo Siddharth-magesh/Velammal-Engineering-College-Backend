@@ -211,7 +211,6 @@ app.get('/api/mous/:deptId/:uniqueId?', async (req, res) => {
     }
 });
 
-
 // Department Activities Endpoint
 app.get('/api/department_activities/:deptId', async (req, res) => {
     const { deptId } = req.params;
@@ -225,21 +224,21 @@ app.get('/api/department_activities/:deptId', async (req, res) => {
             console.log("❌ Department not found for dept_id:", deptId);
             return res.status(404).json({ message: "Department not found" });
         }
-
         const sortedActivities = departmentData.dept_activities.sort((a, b) => {
-            const dateA = new Date(a.date);
-            const dateB = new Date(b.date);
+            const dateA = new Date(a.date.split('/').reverse().join('-'));
+            const dateB = new Date(b.date.split('/').reverse().join('-'));
             return dateB - dateA;
         });
-
-        return res.status(200).json(sortedActivities);
+        return res.status(200).json({
+            department_name: departmentData.department_name,
+            dept_activities: sortedActivities
+        });
 
     } catch (error) {
         console.error("❌ Error fetching department activities:", error);
         res.status(500).json({ error: "Error fetching department activities" });
     }
 });
-
 
 // Curriculum 
 app.get('/api/curriculum/:deptId', async (req, res) => {
