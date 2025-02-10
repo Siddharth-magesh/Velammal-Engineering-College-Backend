@@ -993,3 +993,94 @@ def insert_faculty_data(folder_path):
     return
 
 insert_faculty_data(folder_path=r"/home/server/Desktop/Velammal-Engineering-College-Backend/docs/STAFF-DATA/")
+
+def insert_nss_podcast():
+    collection= db['nsspodcast']
+    with open ("/home/server/Desktop/Velammal-Engineering-College-Backend/docs/nsspodcast.json","r") as file:
+        documents= json.load(file)
+        collection.insert_many(documents)
+    print("NSS_Podcast documents inserted successfully")
+
+def insert_nss_home_data():
+    collection = db["nsshome"]
+    with open("/home/server/Desktop/Velammal-Engineering-College-Backend/docs/nss_home.json", "r") as file:
+        documents = json.load(file)
+        collection.insert_one(documents)
+
+    print("NSS home data inserted successfully.")
+
+def insert_nss_events():
+    collection = db["nssgallery"]
+    with open("/home/server/Desktop/Velammal-Engineering-College-Backend/docs/nss_gallery.json", "r") as file:
+        documents = json.load(file)
+        collection.insert_many(documents)
+
+    print("NSS gallery data inserted successfully.")
+
+def insert_nss_faculty_data():
+    collection = db["nss_faculty"]
+    with open("/home/server/Desktop/Velammal-Engineering-College-Backend/docs/nss_faculty.json", "r") as file:
+        documents = json.load(file)
+        collection.insert_one(documents)
+
+    print("NSS faculty data inserted successfully.")
+
+insert_nss_podcast()
+insert_nss_home_data()
+insert_nss_events()
+insert_nss_faculty_data()
+
+def insert_sports_Zonal_results():
+    collection = db["sports_data"]
+    with open("/home/server/Desktop/Velammal-Engineering-College-Backend/docs/sports_zonal.json", "r") as file:
+        documents = json.load(file)
+        collection.insert_many(documents)
+
+    print("Sports Zonal data inserted successfully.")
+
+def insert_sports_Zonal_images():
+    collection = db["sports_data"]
+    with open("/home/server/Desktop/Velammal-Engineering-College-Backend/docs/zonal_images.json", "r") as file:
+        documents = json.load(file)
+        collection.insert_many(documents)
+
+    print("Sports Zonal images data inserted successfully.")
+
+def insert_sports_faculty_data():
+    collection = db["sports_data"]
+    with open("/home/server/Desktop/Velammal-Engineering-College-Backend/docs/sports_faculty.json", "r") as file:
+        documents = json.load(file)
+        collection.insert_one(documents)
+
+    print("sports faculty data inserted successfully.")
+
+def insert_sports_achievements_data():
+    collection = db["sports_data"]
+    with open("/home/server/Desktop/Velammal-Engineering-College-Backend/docs/sports_achievements.json", "r") as file:
+        documents = json.load(file)
+        collection.insert_one(documents)
+
+    print("sports achievements data inserted successfully.")
+
+def insert_other_facilties():
+    collection = db["other_facilties"]
+    with open("/home/server/Desktop/Velammal-Engineering-College-Backend/docs/other_facilties.json", "r") as file:
+        documents = json.load(file)
+        collection.insert_many(documents)
+
+    print("Other Facilties data inserted successfully.")
+
+def insert_library_data():
+    collection = db["library"]
+    with open("/home/server/Desktop/Velammal-Engineering-College-Backend/docs/library.json", "r") as file:
+        documents = json.load(file)
+        collection.insert_many(documents)
+
+    print("Library data inserted successfully.")
+
+insert_sports_Zonal_results()
+insert_sports_Zonal_images()
+insert_sports_faculty_data()
+insert_sports_achievements_data()
+insert_other_facilties()
+insert_library_data()

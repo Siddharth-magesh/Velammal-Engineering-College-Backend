@@ -39,6 +39,7 @@ connectToDatabase();
 // Login Route
 app.post('/api/login', async (req, res) => {
     try {
+        await client.connect();
         const db = client.db(dbName);
         const { registration_number, password, type } = req.body;
         if (!registration_number || !password || !type) {
@@ -547,6 +548,89 @@ app.post('/api/handle_request', async (req, res) => {
     }
 });
 
+//wardern endpoint to fetch the student details
+app.get('/api/get_student_details', async (req, res) => {
+    if (!req.session || req.session.wardenauth !== true) {
+        return res.status(401).json({ error: "Unauthorized access" });
+    }
+    try {
+        const warden_unique_id = req.session.unique_number;
+        await client.connect();
+        const db = client.db(dbName);
+        const wardenCollection = db.collection("warden_database");
+        const studentCollection = db.collection("student_database");
+        const warden = await wardenCollection.findOne({ unique_id : warden_unique_id });
+        const year = warden.primary_year;
+        if (!warden) {
+            return res.status(404).json({ error: "Warden not found" });
+        }
+        
+        const student_data = await studentCollection.find({ year: year }).toArray();
+       
+        if (student_data.length === 0) {
+            return res.status(404).json({ message: "No data found" });
+        }
+        
+        res.json({ students: student_data });
+    } catch (err) {
+        console.error("❌ Error:", err);
+        res.status(500).json({ error: "Server error" });
+}
+});
+
+//to fetch all the request passes by the student
+app.get('/api/get_student_pass', async (req, res) => {
+    if (!req.session || req.session.studentauth !== true) {
+        return res.status(401).json({ error: "Unauthorized access" });
+    }
+    try {
+        const student_unique_id = req.session.unique_number;
+        await client.connect();
+        const db = client.db(dbName);
+        const passCollection = db.collection("pass_details");
+        
+        const passes = await passCollection.find({ registration_number: student_unique_id }).toArray();
+        
+        if (passes.length === 0) {
+            return res.status(404).json({ message: "No passes found" });
+        }
+        
+        res.json({ passes });
+    } catch (err) {
+        console.error("❌ Error:", err);
+        res.status(500).json({ error: "Server error" });
+    }
+});
+
+//fetch all the pending passes for the warden
+app.get('/api/pending_passes', async (req, res) => {
+    if (!req.session || req.session.wardenauth !== true) {
+        return res.status(401).json({ error: "Unauthorized access" });
+    }
+    try {
+        const warden_id = req.session.unique_number;
+        await client.connect();
+        const db = client.db(dbName);
+        const passCollection = db.collection("pass_details");
+        const wardenCollection = db.collection("warden_database");
+
+        const warden_data = await wardenCollection.findOne({ unique_id : warden_id });
+        const warden_primary_year = warden_data.primary_year;
+        
+        const pendingPasses = await passCollection.find({ request_completed: false, year: warden_primary_year }).toArray();
+        
+        if (pendingPasses.length === 0) {
+            return res.status(404).json({ message: "No pending passes found" });
+        }
+        
+        res.json({ pendingPasses });
+    } catch (err) {
+        console.error("❌ Error:", err);
+        res.status(500).json({ error: "Server error" });
+    }
+});
+
+//to fetch all the active sessions
 app.get('/api/session', (req, res) => {
     if (!req.session) {
         return res.status(500).json({ error: "Session not initialized" });
