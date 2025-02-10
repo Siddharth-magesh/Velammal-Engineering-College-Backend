@@ -170,8 +170,8 @@ app.post('/api/submit_pass_parent_approval', async (req, res) => {
             file_path: file_path || null,
             qrcode_path: null,
             parent_approval: null,
-            wardern_approval: false,
-            superior_wardern: false,
+            wardern_approval: null,
+            superior_wardern: null,
             qrcode_status: false,
             exit_time: null,
             re_entry_time: null,
@@ -638,6 +638,91 @@ app.get('/api/session', (req, res) => {
     res.status(200).json({
         session_data: req.session
     });
+});
+
+//Warden Accept Endpoint
+app.post('/api/warden_accept', async (req, res) => {
+    if (!req.session || req.session.wardenauth !== true) {
+        return res.status(401).json({ error: "Unauthorized access" });
+    }
+    try {
+        const warden_unique_id = req.session.unique_number;
+        await client.connect();
+        const db = client.db(dbName);
+        const passCollection = db.collection('pass_details');
+        const wardenCollection = db.collection('warden_database');
+        const warden_data = await wardenCollection.findOne({ unique_id : warden_unique_id });
+        const warden_year = warden_data.year;
+        const year_in_pass = passCollection.year;
+        const { pass_id } = req.body;
+        if (!pass_id) {
+            return res.status(400).json({ error: "pass_id is required" });
+        }
+        const passData = await passCollection.findOne({ pass_id: pass_id });
+        if (warden_year !== year_in_pass){
+            return res.status(400).json({ error: "Warden is accessing the wrong year" });
+        }
+
+        if (!passData) {
+            return res.status(404).json({ error: "Pass not found" });
+        }
+        if (passData.wardern_approval !== null) {
+            return res.status(400).json({
+                message: `You have already ${passData.wardern_approval ? "approved" : "rejected"} this request. If you haven't approved this request, please contact the warden.`,
+            });
+        }
+        await passCollection.updateOne(
+            { pass_id: pass_id },
+            { $set: { wardern_approval: true } }
+        );
+        res.status(200).json({ message: "Warden approval updated successfully" });
+
+    } catch (error) {
+        console.error("❌ Error:", error);
+        res.status(500).json({ error: "Internal server error" });
+    }
+});
+
+//Warden Decline Endpoint
+app.post('/api/warden_not_accept', async (req, res) => {
+    if (!req.session || req.session.wardenauth !== true) {
+        return res.status(401).json({ error: "Unauthorized access" });
+    }
+    try {
+        const warden_unique_id = req.session.unique_number;
+        await client.connect();
+        const db = client.db(dbName);
+        const passCollection = db.collection('pass_details');
+        const wardenCollection = db.collection('warden_database');
+        const warden_data = await wardenCollection.findOne({ unique_id : warden_unique_id });
+        const warden_year = warden_data.year;
+        const year_in_pass = passCollection.year;
+        const { pass_id } = req.body;
+        if (!pass_id) {
+            return res.status(400).json({ error: "pass_id is required" });
+        }
+        const passData = await passCollection.findOne({ pass_id: pass_id });
+        if (warden_year !== year_in_pass){
+            return res.status(400).json({ error: "Warden is accessing the wrong year" });
+        }
+        if (!passData) {
+            return res.status(404).json({ error: "Pass not found" });
+        }
+        if (passData.wardern_approval !== null) {
+            return res.status(400).json({
+                message: `You have already ${passData.wardern_approval ? "approved" : "rejected"} this request. If you haven't approved this request, please contact the warden.`,
+            });
+        }
+        await passCollection.updateOne(
+            { pass_id: pass_id },
+            { $set: { wardern_approval: false } }
+        );
+        res.status(200).json({ message: "Warden rejection updated successfully" });
+
+    } catch (error) {
+        console.error("❌ Error:", error);
+        res.status(500).json({ error: "Internal server error" });
+    }
 });
 
 app.listen(port, () => {
