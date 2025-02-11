@@ -2,3 +2,4 @@ openpyxl
 pymongo
 pandas
 python-docx
+xlrd

@@ -4,6 +4,9 @@ const session = require('express-session');
 require('dotenv').config();
 const bcrypt = require('bcrypt');
 const { v4: uuidv4 } = require('uuid');
+const QRCode = require('qrcode');
+const path = require('path');
+const fs = require('fs');
 
 const app = express();
 const port = process.env.PORT || 6000;
@@ -35,6 +38,27 @@ async function connectToDatabase() {
     }
 }
 connectToDatabase();
+
+async function generateQR(pass_id, registration_number) {
+    try {
+        const baseDir = 'D:/Velammal-Engineering-College-Backend/static/qrcodes'; // Dont forget to change this base dir
+        if (!fs.existsSync(baseDir)) {
+            fs.mkdirSync(baseDir, { recursive: true });
+        }
+        const filePath = path.join(baseDir, `${registration_number}.jpeg`);
+
+        await QRCode.toFile(filePath, pass_id, {
+            type: 'jpeg',
+            width: 300,
+            errorCorrectionLevel: 'H'
+        });
+
+        return filePath;
+    } catch (error) {
+        console.error('Error generating QR code:', error);
+        throw error;
+    }
+}
 
 // Login Route
 app.post('/api/login', async (req, res) => {
@@ -630,16 +654,6 @@ app.get('/api/pending_passes', async (req, res) => {
     }
 });
 
-//to fetch all the active sessions
-app.get('/api/session', (req, res) => {
-    if (!req.session) {
-        return res.status(500).json({ error: "Session not initialized" });
-    }
-    res.status(200).json({
-        session_data: req.session
-    });
-});
-
 //Warden Accept Endpoint
 app.post('/api/warden_accept', async (req, res) => {
     if (!req.session || req.session.wardenauth !== true) {
@@ -647,22 +661,21 @@ app.post('/api/warden_accept', async (req, res) => {
     }
     try {
         const warden_unique_id = req.session.unique_number;
+        const { pass_id } = req.body;
+
+        if (!pass_id) {
+            return res.status(400).json({ error: "pass_id is required" });
+        }
         await client.connect();
         const db = client.db(dbName);
         const passCollection = db.collection('pass_details');
         const wardenCollection = db.collection('warden_database');
-        const warden_data = await wardenCollection.findOne({ unique_id : warden_unique_id });
-        const warden_year = warden_data.year;
-        const year_in_pass = passCollection.year;
-        const { pass_id } = req.body;
-        if (!pass_id) {
-            return res.status(400).json({ error: "pass_id is required" });
+
+        const warden_data = await wardenCollection.findOne({ unique_id: warden_unique_id });
+        if (!warden_data) {
+            return res.status(404).json({ error: "Warden not found" });
         }
         const passData = await passCollection.findOne({ pass_id: pass_id });
-        if (warden_year !== year_in_pass){
-            return res.status(400).json({ error: "Warden is accessing the wrong year" });
-        }
-
         if (!passData) {
             return res.status(404).json({ error: "Pass not found" });
         }
@@ -671,17 +684,25 @@ app.post('/api/warden_accept', async (req, res) => {
                 message: `You have already ${passData.wardern_approval ? "approved" : "rejected"} this request. If you haven't approved this request, please contact the warden.`,
             });
         }
+        if (warden_data.primary_year !== passData.year) {
+            return res.status(400).json({ error: "Warden is accessing the wrong year" });
+        }
+
+        const student_registration_number = passData.registration_number;
+        const qrPath = await generateQR(pass_id, student_registration_number);
         await passCollection.updateOne(
             { pass_id: pass_id },
-            { $set: { wardern_approval: true } }
+            { $set: { wardern_approval: true, qrcode_path: qrPath, qrcode_status: true } }
         );
-        res.status(200).json({ message: "Warden approval updated successfully" });
+
+        res.status(200).json({ message: "Warden approval updated successfully", qrcode_path: qrPath });
 
     } catch (error) {
         console.error("❌ Error:", error);
         res.status(500).json({ error: "Internal server error" });
     }
 });
+
 
 //Warden Decline Endpoint
 app.post('/api/warden_not_accept', async (req, res) => {
@@ -690,39 +711,56 @@ app.post('/api/warden_not_accept', async (req, res) => {
     }
     try {
         const warden_unique_id = req.session.unique_number;
-        await client.connect();
-        const db = client.db(dbName);
-        const passCollection = db.collection('pass_details');
-        const wardenCollection = db.collection('warden_database');
-        const warden_data = await wardenCollection.findOne({ unique_id : warden_unique_id });
-        const warden_year = warden_data.year;
-        const year_in_pass = passCollection.year;
         const { pass_id } = req.body;
         if (!pass_id) {
             return res.status(400).json({ error: "pass_id is required" });
         }
-        const passData = await passCollection.findOne({ pass_id: pass_id });
-        if (warden_year !== year_in_pass){
-            return res.status(400).json({ error: "Warden is accessing the wrong year" });
+        await client.connect();
+        const db = client.db(dbName);
+        const passCollection = db.collection('pass_details');
+        const wardenCollection = db.collection('warden_database');
+
+        const warden_data = await wardenCollection.findOne({ unique_id: warden_unique_id });
+        if (!warden_data) {
+            return res.status(404).json({ error: "Warden not found" });
         }
+        const passData = await passCollection.findOne({ pass_id: pass_id });
         if (!passData) {
             return res.status(404).json({ error: "Pass not found" });
         }
+
+        if (warden_data.primary_year !== passData.year) {
+            return res.status(400).json({ error: "Warden is accessing the wrong year" });
+        }
+
         if (passData.wardern_approval !== null) {
             return res.status(400).json({
                 message: `You have already ${passData.wardern_approval ? "approved" : "rejected"} this request. If you haven't approved this request, please contact the warden.`,
             });
         }
+
         await passCollection.updateOne(
             { pass_id: pass_id },
             { $set: { wardern_approval: false } }
         );
+
         res.status(200).json({ message: "Warden rejection updated successfully" });
 
     } catch (error) {
         console.error("❌ Error:", error);
         res.status(500).json({ error: "Internal server error" });
     }
+});
+
+
+//to fetch all the active sessions
+app.get('/api/session', (req, res) => {
+    if (!req.session) {
+        return res.status(500).json({ error: "Session not initialized" });
+    }
+    res.status(200).json({
+        session_data: req.session
+    });
 });
 
 app.listen(port, () => {
