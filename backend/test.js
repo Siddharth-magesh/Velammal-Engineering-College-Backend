@@ -1044,6 +1044,87 @@ app.post('/api/superior_decline', async (req, res) => {
     }
 });
 
+//food type count
+app.get('/api/food_count', async (req, res) => { 
+    if (!req.session || (!req.session.wardenauth && !req.session.superiorauth)) {
+        return res.status(401).json({ error: "Unauthorized access" });
+    }
+
+    try {
+        await client.connect();
+        const db = client.db(dbName);
+        const studentCollection = db.collection("student_database");
+        const vegCount = await studentCollection.countDocuments({ foodtype: "Veg" });
+        const nonVegCount = await studentCollection.countDocuments({ foodtype: "Non-Veg" });
+
+        res.json({ 
+            veg_count: vegCount, 
+            non_veg_count: nonVegCount 
+        });
+    } catch (err) {
+        console.error("❌ Error:", err);
+        res.status(500).json({ error: "Server error" });
+    }
+});
+
+//fetch student passes
+app.get('/api/get_student_pass', async (req, res) => { 
+    if (!req.session || req.session.studentauth !== true) {
+        return res.status(401).json({ error: "Unauthorized access" });
+    }
+    try {
+        const student_unique_id = req.session.unique_number;
+        await client.connect();
+        const db = client.db(dbName);
+        const passCollection = db.collection("pass_details");
+        const passes = await passCollection
+            .find({ 
+                registration_number: student_unique_id
+            })
+            .sort({ request_date_time: -1 })
+            .toArray();
+
+        if (passes.length === 0) {
+            return res.status(404).json({ message: "No passes found" });
+        }
+        let pendingPass = passes.find(pass => !pass.request_completed);
+        let completedPasses = passes.filter(pass => pass.request_completed);
+        let sortedPasses = pendingPass ? [pendingPass, ...completedPasses] : completedPasses;
+
+        res.json({ passes: sortedPasses });
+    } catch (err) {
+        console.error("❌ Error:", err);
+        res.status(500).json({ error: "Server error" });
+    }
+});
+
+//fetch warden data
+app.get('/api/get_warden_list', async (req, res) => { 
+    if (!req.session || req.session.superiorauth !== true) {
+        return res.status(401).json({ error: "Unauthorized access" });
+    }
+    try {
+        await client.connect();
+        const db = client.db(dbName);
+        const wardenCollection = db.collection("warden_database");
+
+        const wardens = await wardenCollection
+            .find({}, {projection: {password: 0 }}) 
+            .sort({ category: 1 }) 
+            .toArray();
+
+        if (wardens.length === 0) {
+            return res.status(404).json({ message: "No wardens found" });
+        }
+        const headWardens = wardens.filter(w => w.category === "head");
+        const otherWardens = wardens.filter(w => w.category !== "head");
+        res.json({ wardens: [...headWardens, ...otherWardens] });
+    } catch (err) {
+        console.error("❌ Error:", err);
+        res.status(500).json({ error: "Server error" });
+    }
+});
+
 //to fetch all the active sessions
 app.get('/api/session', (req, res) => {
     if (!req.session) {

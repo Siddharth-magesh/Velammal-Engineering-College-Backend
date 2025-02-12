@@ -909,6 +909,8 @@ upload_research_data(folder_path)'''
 
 def insert_faculty_data(folder_path):
     department_name=None
+    with open(r"/Velammal-Engineering-College-Backend/docs/prev_faculty.json","r") as file:
+        data=json.load(file)
     try:
         collection = db['faculty_data']
         if not os.path.exists(folder_path):
@@ -964,6 +966,7 @@ def insert_faculty_data(folder_path):
                         department_document = {
                             "department_name": department_name,
                             "dept_id": dept_id,
+                            "previous_faculty_pdf_path":data.get(dept_id),
                             "faculty_members": faculty_list
                         }
                 if faculty_list:
