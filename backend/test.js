@@ -1098,7 +1098,7 @@ app.get('/api/get_student_pass', async (req, res) => {
     }
 });
 
-//fetch warden data
+//fetch warden data for superior
 app.get('/api/get_warden_list', async (req, res) => { 
     if (!req.session || req.session.superiorauth !== true) {
         return res.status(401).json({ error: "Unauthorized access" });
@@ -1124,6 +1124,28 @@ app.get('/api/get_warden_list', async (req, res) => {
         res.status(500).json({ error: "Server error" });
     }
 });
+
+//student profile fetch his own profile
+app.get('/api/fetch_student_profile', async (req, res) => {
+    if (!req.session || req.session.studentauth !== true) {
+        return res.status(401).json({ error: "Unauthorized access" });
+    }
+    try {
+      await client.connect();
+      const db = client.db(dbName);
+      const profilesCollection = db.collection("student_database");
+      const unique_id = req.session.unique_number;
+      const profile = await profilesCollection.findOne({ registration_number: unique_id });
+  
+      if (!profile) {
+        return res.status(404).json({ message: 'Profile not found' });
+      }
+      return res.status(200).json(profile);
+    } catch (error) {
+      console.error('❌ Error fetching profile:', error);
+      return res.status(500).json({ message: 'Server error' });
+    }
+  });
 
 //to fetch all the active sessions
 app.get('/api/session', (req, res) => {
