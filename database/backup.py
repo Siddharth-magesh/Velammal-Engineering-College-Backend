@@ -2,14 +2,17 @@ import os
 import requests
 import pandas as pd
 from pymongo import MongoClient
+from docx import Document
+import json
+import shutil
 
 mongo_uri = "mongodb://localhost:27017/"
 db_name = "VEC"
 collection_name = "staff_details"
 
-file_path = r"D:\vec_backend\VEC Faculty Details.csv"
-photo_base_dir = r"static/profile_photos/"
-base_save_dir = r"D:\vec_backend\staff_scholar_details"
+file_path = r"/Velammal-Engineering-College-Backend/docs/VEC Faculty Details.csv"
+photo_base_dir = r"/Velammal-Engineering-College-Backend/static/temp_photos/"
+base_save_dir = r"/Velammal-Engineering-College-Backend/static/staff_scholar_details/"
 
 client = MongoClient(mongo_uri)
 db = client[db_name]
@@ -63,13 +66,30 @@ department_mapping = {
     "Physics": "015"
 }
 
+department_mapping1 = {
+    "Artificial Intelligence and Data Science (AI&DS)": "001",
+    "Automobile Engineering (AUTO)": "002",
+    "Chemistry": "003",
+    "Civil Engineering (CIVIL)": "004",
+    "Computer Science & Engineering (CSE)": "005",
+    "Computer Science and Engineering (CYBER SECURITY)": "006",
+    "Electrical & Electronics Engineering (EEE)": "007",
+    "Electronics & Instrumentation Engineering (EIE)": "008",
+    "Electronics and Communication Engineering (ECE)": "009",
+    "English": "010",
+    "Information Technology (IT)": "011",
+    "Mathematics": "012",
+    "Mechancial Engineering (MECH)": "013",
+    "Physical Education": "014",
+    "Physics": "015"
+}
+
 designation_mapping = {
     "Professor & Head": "01",
     "Professor": "02",
     "Associate Professor": "03",
     "Assistant Professor": "04"
 }
-
 
 try:
     df = pd.read_csv(file_path)
@@ -86,30 +106,58 @@ def generate_unique_id(index, department, designation):
     return f"VEC-{department_id}-{designation_id}-{unique_id}"
 
 
-df = df.head(10)
+df = df.head(1) #Remove this line to deactivate Test settings
+
 df['unique_id'] = [
     generate_unique_id(i, df.at[i, 'Department Name'], df.at[i, 'Designation'])
     for i in range(len(df))
 ]
 
-
-def download_image(unique_id, photo_url):
+def download_image(
+        unique_id, 
+        photo_url, 
+        target_base_dir,
+        save_base_dir
+):
     if not photo_url or not isinstance(photo_url, str):
         return None
+    
     file_name = f"{unique_id}.jpg"
-    save_dir = os.path.join(photo_base_dir, unique_id)
-    os.makedirs(save_dir, exist_ok=True)
-    file_path = os.path.join(save_dir, file_name)
+    temp_save_dir = os.path.join(photo_base_dir, unique_id)
+    os.makedirs(temp_save_dir, exist_ok=True)
+    temp_file_path = os.path.join(temp_save_dir, file_name)
+
     try:
         if "drive.google.com" in photo_url:
             file_id = photo_url.split("id=")[-1]
             photo_url = f"https://drive.google.com/uc?id={file_id}"
+        
         response = requests.get(photo_url, stream=True)
         if response.status_code == 200:
-            with open(file_path, "wb") as file:
+            with open(temp_file_path, "wb") as file:
                 for chunk in response.iter_content(1024):
                     file.write(chunk)
-            return file_path
+
+            parts = unique_id.split('-')
+            if len(parts) >= 3:
+                department_code = parts[1]
+
+                if department_code.isdigit() and 1 <= int(department_code) <= 15:
+                    target_folder = os.path.join(target_base_dir, f"{int(department_code):03}")
+                    os.makedirs(target_folder, exist_ok=True)
+
+                    new_file_path = os.path.join(target_folder, file_name)
+                    save_base_dir = os.path.join(save_base_dir, f"{int(department_code):03}")
+                    save_file_path = os.path.join(save_base_dir, file_name)
+                    shutil.move(temp_file_path, new_file_path)
+
+                    return save_file_path
+                else:
+                    print(f"Skipping {unique_id} - Invalid department code {department_code}")
+                    return None
+            else:
+                print(f"Skipping {unique_id} - Invalid format")
+                return None
         else:
             print(f"Failed to download image for {unique_id}. URL: {photo_url}")
             return None
@@ -117,7 +165,10 @@ def download_image(unique_id, photo_url):
         print(f"Error downloading image for {unique_id}: {e}")
         return None
 
-df['Photo'] = df.apply(lambda row: download_image(row['unique_id'], row['Photo']), axis=1)
+target_base_dir = r"/Velammal-Engineering-College-Backend/static/images/profile_photos/"
+save_base_dir = r"/static/images/profile_photos/"
+df['Photo'] = df.apply(lambda row: download_image(row['unique_id'], row['Photo'], target_base_dir,save_base_dir), axis=1)
+
 
 def extract_file_id(url):
     if url and isinstance(url, str) and "id=" in url:
@@ -485,3 +536,551 @@ for _, row in df.iterrows():
     insert_research_scholars(faculty_unique_id)
 
     print(f"Completed processing data for {faculty_unique_id}.")
+
+def insert_department_data():
+    collection = db["vision_and_mission"]
+    with open("/Velammal-Engineering-College-Backend/docs/department_data.json", "r") as file:
+        documents = json.load(file)
+        collection.insert_many(documents)
+
+    print("Department documents inserted successfully.")
+
+def insert_hod_datas():
+    collection = db['HODS']
+    with open("/Velammal-Engineering-College-Backend/docs/hods.json", "r") as file:
+        documents = json.load(file)
+        collection.insert_many(documents)
+
+    print("HOD documents inserted successfully.")
+
+def insert_infrastructure_data():
+    collection = db["infrastructure"]
+    with open("/Velammal-Engineering-College-Backend/docs/infrastructure.json", "r") as file:
+        documents = json.load(file)
+        collection.insert_many(documents)
+
+    print("Infrastructure documents inserted successfully.")
+
+def insert_student_activities_data():
+    collection = db['student_activities'] 
+    with open("/Velammal-Engineering-College-Backend/docs/student_activities.json", "r") as file:
+        documents = json.load(file)
+        collection.insert_many(documents)
+    
+    print("Student documents inserted successfully.")
+
+def insert_support_staff_data():
+    collection = db['support_staffs'] 
+    with open("/Velammal-Engineering-College-Backend/docs/support_staffs.json", "r") as file:
+        documents = json.load(file)
+        collection.insert_many(documents)
+    
+    print("Support staffs documents inserted successfully.")
+
+def insert_MOUs_data():
+    collection = db['MOUs']
+    folder_path = "/Velammal-Engineering-College-Backend/docs/MOUs/"
+    for filename in os.listdir(folder_path):
+        if filename.endswith(".json"):
+            file_path = os.path.join(folder_path,filename)
+
+            with open(file_path,"r") as file:
+                documents = json.load(file)
+                collection.insert_one(documents)
+    
+    print("All MOU documents have been inserted successfully.")
+
+def insert_curriculum_data():
+    collection = db['curriculum']
+    with open("/Velammal-Engineering-College-Backend/docs/curriculum.json", "r") as file:
+        documents = json.load(file)
+        collection.insert_many(documents)
+
+    print("Cirrculum documents inserted successfully.")
+
+def insert_events_data():
+    collection = db['events']  
+    with open("/Velammal-Engineering-College-Backend/docs/events.json", "r") as file:
+        documents = json.load(file)
+        collection.insert_many(documents)
+
+    print("Events documents inserted successfully.")
+
+def insert_special_announcements():
+    collection = db['special_announcement']  
+    with open("/Velammal-Engineering-College-Backend/docs/special_announcements.json", "r") as file:
+        documents = json.load(file)
+        collection.insert_many(documents)
+
+    print("special_announcements documents inserted successfully.")
+
+def insert_announcements_data():
+   
+    collection = db['announcements']  
+    with open("/Velammal-Engineering-College-Backend/docs/announcements.json", "r") as file:
+        documents = json.load(file)
+        collection.insert_many(documents)
+
+    print("Announcements documents inserted successfully.")
+
+def principal_data():
+    collection = db["principal_data"]
+    with open("/Velammal-Engineering-College-Backend/docs/principal_data.json", "r") as file:
+        documents = json.load(file)
+        collection.insert_many(documents)
+
+    print("Principals documents inserted successfully.")
+
+def insert_admin_office_data():
+    collection = db['admin_office']  
+    with open("/Velammal-Engineering-College-Backend/docs/admin_office.json", "r") as file:
+        documents = json.load(file)
+        collection.insert_many(documents)
+
+    print("admin office documents inserted successfully.")
+
+def insert_committee_data():
+
+    collection = db['committee']  
+    with open("/Velammal-Engineering-College-Backend/docs/committee.json", "r") as file:
+        documents = json.load(file)
+        collection.insert_many(documents)
+
+    print("Committee documents inserted successfully.")
+
+def insert_regulation_data():
+    collection = db['regulation']  
+    with open("/Velammal-Engineering-College-Backend/docs/regulation.json", "r") as file:
+        documents = json.load(file)
+        collection.insert_many(documents)
+
+    print("regulation documents inserted successfully.")
+
+def placement_team():
+    collection = db["placement_team"]
+    with open('/Velammal-Engineering-College-Backend/docs/placement_members.json', 'r') as file:
+        documents = json.load(file)
+        collection.insert_many(documents)
+
+    print(f"Placement Team Details Inserted")
+
+def insert_intake_data():    
+    collection = db["Intakes"]        
+    with open('/Velammal-Engineering-College-Backend/docs/intakes.json', "r") as file:
+        documents = json.load(file)
+    collection.insert_many(documents)
+
+    print("Intake data inserted successfully.")
+
+def insert_dean_and_associates_data():    
+    collection = db["dean_and_associates"]        
+    with open('/Velammal-Engineering-College-Backend/docs/dean_and_associates.json', "r") as file:
+        documents = json.load(file)
+    collection.insert_many(documents)
+
+    print("dean_and_associates data inserted successfully.")
+
+def insert_placement_data():
+
+    collection = db['placements_data']  
+    with open("/Velammal-Engineering-College-Backend/docs/placements_data.json", "r") as file:
+        documents = json.load(file)
+        collection.insert_many(documents)
+
+    print("placement documents inserted successfully.")
+
+def insert_curriculum_and_syllabus_data():
+
+    collection = db['curriculum_and_syllabus']  
+    with open("/Velammal-Engineering-College-Backend/docs/curriculum_and_syllabus.json", "r") as file:
+        documents = json.load(file)
+        collection.insert_many(documents)
+
+    print("curriculum_And_syllabus documents inserted successfully.")
+
+def insert_banners():
+    collection = db['banner']  
+    with open("/Velammal-Engineering-College-Backend/docs/banner.json", "r") as file:
+        documents = json.load(file)
+        collection.insert_many(documents)
+
+    print("Banner documents inserted successfully.")
+
+def insert_all_forms_data():
+
+    collection = db['all_forms']  
+    with open("/Velammal-Engineering-College-Backend/docs/all_forms.json", "r") as file:
+        documents = json.load(file)
+        collection.insert_many(documents)
+
+    print("all_forms documents inserted successfully.")
+
+def insert_NBA_data():
+    collection = db['nba']
+    with open("/Velammal-Engineering-College-Backend/docs/nba.json", "r") as file:
+        documents = json.load(file)
+        collection.insert_many(documents)
+
+    print("NBA documents inserted successfully.")
+
+def insert_naac_data():
+    collection = db['naac']
+    with open("/Velammal-Engineering-College-Backend/docs/naac.json", "r") as file:
+        documents = json.load(file)
+        collection.insert_many(documents)
+    print("NAAC documents inserted successfully.")
+
+def insert_nirf_data():
+    collection = db['nirf']
+    with open("/Velammal-Engineering-College-Backend/docs/nirf.json", "r") as file:
+        documents = json.load(file)
+        collection.insert_many(documents)
+    print("NIRF documents inserted successfully.")
+
+def insert_sidebar_details():
+    collection= db['sidebar']
+    with open ("/Velammal-Engineering-College-Backend/docs/sidebar.json","r") as file:
+        documents= json.load(file)
+        collection.insert_many(documents)
+    print("Sidebar documents inserted successfully")
+
+def insert_iic_details():
+    collection= db['iic']
+    with open ("/Velammal-Engineering-College-Backend/docs/iic.json","r") as file:
+        documents= json.load(file)
+        collection.insert_one(documents)
+    print("iic documents inserted successfully")
+
+def process_and_combine_Department_Activities_data_for_aids(folder_path, dept_id="001"):
+    COLLECTION_NAME = "department_activities"
+    collection = db[COLLECTION_NAME]
+    
+    def extract_data_from_docx(file_path):
+        document = Document(file_path)
+        activities = []
+        
+        for table in document.tables:
+            for row in table.rows[1:]:  
+                cells = row.cells
+                if len(cells) >= 6:  
+                    activity = {
+                        "date": cells[1].text.strip(),
+                        "name_of_event": cells[2].text.strip(),
+                        "coordinator": cells[3].text.strip(),
+                        "resource_person": cells[4].text.strip(),
+                        "beneficiaries": cells[5].text.strip(),
+                        "relevant_PO_PSO": cells[6].text.strip(),
+                        "image_path": "image_path yet to be filled",
+                    }
+                    activities.append(activity)
+        return activities
+
+    combined_activities = []
+    if not os.path.exists(folder_path) or not os.listdir(folder_path):
+        print(f"Skipping '{folder_path}'. No data found for dept_id '{dept_id}'.")
+        return
+
+    for file_name in os.listdir(folder_path):
+        if file_name.endswith(".docx"):
+            file_path = os.path.join(folder_path, file_name)
+            activities = extract_data_from_docx(file_path)
+            combined_activities.extend(activities)
+
+    if not combined_activities:
+        print(f"No activity data extracted from '{folder_path}' for dept_id '{dept_id}'. Skipping.")
+        return
+    
+    department_name=None
+    
+    for name, id in department_mapping1.items() :
+        if id==dept_id:
+            department_name = name
+
+    combined_document = {
+        "dept_id": dept_id,
+        "department_name":department_name,
+        "dept_activities": combined_activities
+    }
+
+    collection.update_one(
+        {"dept_id": dept_id},
+        {"$set": combined_document},
+        upsert=True
+    )
+    print(f"Data combined and inserted into MongoDB under dept_id '{dept_id}'.")
+
+aids_department_path = "/Velammal-Engineering-College-Backend/docs/AIDS-DEPT-ACT/"
+process_and_combine_Department_Activities_data_for_aids(aids_department_path)
+
+def insert_cscb_dept_activities_details():
+    collection= db['department_activities']
+    with open ("/Velammal-Engineering-College-Backend/docs/CSCBS-DEPT-ACT/006.json","r") as file:
+        documents= json.load(file)
+        collection.insert_many(documents)
+    print("cyber securtiy dept activities documents inserted successfully")
+
+def insert_alumni_data(directory_path='/Velammal-Engineering-College-Backend/docs/ALUMINI'):
+    collection = db["alumni"]
+
+    for filename in os.listdir(directory_path):
+        if filename.endswith(".json"):
+            file_path = os.path.join(directory_path, filename)
+            with open(file_path, "r") as file:
+                data = json.load(file)
+                if isinstance(data, list):
+                    collection.insert_many(data)
+                elif isinstance(data, dict):
+                    collection.insert_one(data)
+                else:
+                    print(f"Unsupported data format in file: {filename}")
+
+    print("Data from JSON files has been inserted into the 'alumni' collection.")
+
+insert_department_data()
+insert_hod_datas()
+insert_infrastructure_data()
+insert_student_activities_data()
+insert_support_staff_data()
+insert_MOUs_data()
+insert_curriculum_data()
+insert_events_data()
+insert_announcements_data()
+insert_special_announcements()
+principal_data()
+insert_admin_office_data()
+placement_team()
+insert_regulation_data()
+insert_intake_data()
+insert_committee_data()
+insert_placement_data()
+insert_dean_and_associates_data()
+insert_curriculum_and_syllabus_data()
+insert_all_forms_data()
+insert_alumni_data()
+insert_banners()
+insert_NBA_data()
+insert_naac_data()
+insert_nirf_data()
+insert_sidebar_details()
+insert_iic_details()
+insert_cscb_dept_activities_details()
+
+department_mapping = {
+    "Artificial Intelligence and Data Science": "001",
+    "Automobile Engineering": "002",
+    "Chemistry": "003",
+    "Civil Engineering": "004",
+    "Computer Science & Engineering": "005",
+    "Computer Science and Engineering (CYBER SECURITY)": "006",
+    "Electrical & Electronics Engineering": "007",
+    "Electronics & Instrumentation Engineering": "008",
+    "Electronics and Communication Engineering": "009",
+    "English": "010",
+    "Information Technology": "011",
+    "Mathematics": "012",
+    "Mechancial Engineering": "013",
+    "Physical Education": "014",
+    "Physics": "015"
+}
+
+'''def upload_research_data(folder_path):
+    collection = db['research_data']
+    for filename in os.listdir(folder_path):
+        if filename.endswith('.json'):
+            file_path = os.path.join(folder_path, filename)
+            with open(file_path, 'r') as file:
+                try:
+                    data = json.load(file)
+                    dept_id = filename.split('.')[0]
+                    if dept_id not in department_mapping.values():
+                        print(f"Skipping unrecognized dept_id: {dept_id}")
+                        continue
+
+                    collection.insert_one({"dept_id": dept_id, "data": data})
+                    print(f"✅ Successfully inserted data for {dept_id}")
+
+                except json.JSONDecodeError as e:
+                    print(f"❌ Error decoding JSON from {filename}: {e}")
+                except Exception as e:
+                    print(f"❌ Error processing {filename}: {e}")
+
+folder_path = r'/Velammal-Engineering-College-Backend/docs/RESEARCH-DATA'
+upload_research_data(folder_path)'''
+
+def insert_faculty_data(folder_path):
+    department_name=None
+    with open(r"/Velammal-Engineering-College-Backend/docs/prev_faculty.json","r") as file:
+        data=json.load(file)
+    try:
+        collection = db['faculty_data']
+        if not os.path.exists(folder_path):
+            print(f"Error: Folder path '{folder_path}' does not exist.")
+            return
+
+        for file_name in os.listdir(folder_path):
+            
+            if file_name.endswith(".xlsx"):
+                file_path = os.path.join(folder_path, file_name)
+
+                dept_id = os.path.splitext(file_name)[0]
+
+                try:
+                    df = pd.read_excel(file_path)
+                except Exception as e:
+                    print(f"Error reading Excel file '{file_name}': {e}")
+                    continue
+                required_columns = [
+                    "Name", "Designation", "Photo", "Google Scholar Profile",
+                    "Research Gate", "Orchid Profile", "Publon Profile",
+                    "Scopus Author Profile", "LinkedIn Profile", "unique_id"
+                ]
+                missing_columns = [col for col in required_columns if col not in df.columns]
+                if missing_columns:
+                    print(f"Error: Missing columns in '{file_name}': {missing_columns}")
+                    continue 
+
+                faculty_list = []
+                for index, row in df.iterrows():
+                    try:
+                        faculty_data = {
+                            "name": row["Name"],
+                            "designation": row["Designation"],
+                            "photo": row["Photo"],
+                            "profiles": {
+                                "google_scholar": row["Google Scholar Profile"],
+                                "research_gate": row["Research Gate"],
+                                "orchid": row["Orchid Profile"],
+                                "publon": row["Publon Profile"],
+                                "scopus": row["Scopus Author Profile"],
+                                "linkedin": row["LinkedIn Profile"]
+                            },
+                            "unique_id": row["unique_id"]
+                        }
+                        faculty_list.append(faculty_data)
+                    except Exception as e:
+                        print(f"Error processing row {index} in '{file_name}': {e}")
+                for name, id in department_mapping1.items() :
+                    if id==dept_id:
+                        department_name=name
+                        
+                        department_document = {
+                            "department_name": department_name,
+                            "dept_id": dept_id,
+                            "previous_faculty_pdf_path":data.get(dept_id),
+                            "faculty_members": faculty_list
+                        }
+                if faculty_list:
+                    try:
+                        collection.insert_one(department_document)
+                    except Exception as e:
+                        print(f"Error inserting document for '{dept_id}' into MongoDB: {e}")
+                else:
+                    print(f"No valid faculty data to insert for '{file_name}'.")
+    except Exception as e:
+        print(f"Unexpected error: {e}")
+
+    print("Faculty Data Insertion Done")
+    return
+
+insert_faculty_data(folder_path=r"/Velammal-Engineering-College-Backend/docs/STAFF-DATA/")
+
+def insert_nss_podcast():
+    collection= db['nsspodcast']
+    with open ("/Velammal-Engineering-College-Backend/docs/nsspodcast.json","r") as file:
+        documents= json.load(file)
+        collection.insert_many(documents)
+    print("NSS_Podcast documents inserted successfully")
+
+def insert_nss_home_data():
+    collection = db["nsshome"]
+    with open("/Velammal-Engineering-College-Backend/docs/nss_home.json", "r") as file:
+        documents = json.load(file)
+        collection.insert_one(documents)
+
+    print("NSS home data inserted successfully.")
+
+def insert_nss_events():
+    collection = db["nssgallery"]
+    with open("/Velammal-Engineering-College-Backend/docs/nss_gallery.json", "r") as file:
+        documents = json.load(file)
+        collection.insert_many(documents)
+
+    print("NSS gallery data inserted successfully.")
+
+def insert_nss_faculty_data():
+    collection = db["nss_faculty"]
+    with open("/Velammal-Engineering-College-Backend/docs/nss_faculty.json", "r") as file:
+        documents = json.load(file)
+        collection.insert_one(documents)
+
+    print("NSS faculty data inserted successfully.")
+
+insert_nss_podcast()
+insert_nss_home_data()
+insert_nss_events()
+insert_nss_faculty_data()
+
+def insert_sports_Zonal_results():
+    collection = db["sports_data"]
+    with open("/Velammal-Engineering-College-Backend/docs/sports_zonal.json", "r") as file:
+        documents = json.load(file)
+        collection.insert_many(documents)
+
+    print("Sports Zonal data inserted successfully.")
+
+def insert_sports_Zonal_images():
+    collection = db["sports_data"]
+    with open("/Velammal-Engineering-College-Backend/docs/zonal_images.json", "r") as file:
+        documents = json.load(file)
+        collection.insert_many(documents)
+
+    print("Sports Zonal images data inserted successfully.")
+
+def insert_sports_faculty_data():
+    collection = db["sports_data"]
+    with open("/Velammal-Engineering-College-Backend/docs/sports_faculty.json", "r") as file:
+        documents = json.load(file)
+        collection.insert_one(documents)
+
+    print("sports faculty data inserted successfully.")
+
+def insert_sports_achievements_data():
+    collection = db["sports_data"]
+    with open("/Velammal-Engineering-College-Backend/docs/sports_achievements.json", "r") as file:
+        documents = json.load(file)
+        collection.insert_one(documents)
+
+    print("sports achievements data inserted successfully.")
+
+def insert_sports_coordinates():
+    collection = db["sports_data"]
+    with open("/Velammal-Engineering-College-Backend/docs/sports_coordinates.json", "r") as file:
+        documents = json.load(file)
+        collection.insert_one(documents)
+
+    print("sports coordinates data inserted successfully.")
+
+insert_sports_coordinates()
+
+def insert_other_facilties():
+    collection = db["other_facilties"]
+    with open("/Velammal-Engineering-College-Backend/docs/other_facilties.json", "r") as file:
+        documents = json.load(file)
+        collection.insert_many(documents)
+
+    print("Other Facilties data inserted successfully.")
+
+def insert_library_data():
+    collection = db["library"]
+    with open("/Velammal-Engineering-College-Backend/docs/library.json", "r") as file:
+        documents = json.load(file)
+        collection.insert_many(documents)
+
+    print("Library data inserted successfully.")
+
+insert_sports_Zonal_results()
+insert_sports_Zonal_images()
+insert_sports_faculty_data()
+insert_sports_achievements_data()
+insert_other_facilties()
+insert_library_data()

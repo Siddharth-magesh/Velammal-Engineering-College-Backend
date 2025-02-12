@@ -20,7 +20,6 @@ app.use(session({
     }
 }));
 
-
 const mongoUri = process.env.MONGO_URI;
 const dbName = process.env.DB_NAME;
 const client = new MongoClient(mongoUri);
@@ -775,6 +774,8 @@ app.get('/api/sidebar/:deptid', async (req, res) => {
     }
 });
 
+//NSS ENDPOINT START (OLD ENDPOINTS)
+
 //Signup
 app.get('/api/nss_members', async (req, res) => {
     try {
@@ -1044,6 +1045,8 @@ app.get('/api/nss_newsletter', async (req, res) => {
         res.status(500).json({ error: 'Internal Server Error' });
     }
 });
+
+//NSS ENDPOINT END (OLD ENDPOINTS)
 
 //Sports Zonal Data
 app.get('/api/sports_data', async (req, res) => {
