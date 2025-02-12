@@ -7,6 +7,7 @@ const { v4: uuidv4 } = require('uuid');
 const QRCode = require('qrcode');
 const path = require('path');
 const fs = require('fs');
+const twilio = require('twilio');
 
 const app = express();
 const port = process.env.PORT || 6000;
@@ -28,6 +29,10 @@ app.use(
 const mongoUri = process.env.MONGO_URI;
 const dbName = process.env.DB_NAME;
 const client = new MongoClient(mongoUri);
+const accountSid = process.env.ACCOUNTSID;
+const authToken = process.env.AUTHTOKEN;
+const twilioPhoneNumber = process.env.TWILIOPHONENUMBER;
+const twilioClient = twilio(accountSid, authToken);
 
 async function connectToDatabase() {
     try {
@@ -39,6 +44,7 @@ async function connectToDatabase() {
 }
 connectToDatabase();
 
+//function to generate QR
 async function generateQR(pass_id, registration_number) {
     try {
         const baseDir = 'D:/Velammal-Engineering-College-Backend/static/qrcodes'; // Dont forget to change this base dir
@@ -59,6 +65,37 @@ async function generateQR(pass_id, registration_number) {
         throw error;
     }
 }
+
+// Function to send SMS
+const sendParentApprovalSMS = async (parentPhoneNumber, name, place_to_visit, reason_for_visit, from, to, pass_id) => {
+    const approvalUrl = `http://localhost:5000/api/parent_accept/${pass_id}`;
+    const rejectionUrl = `http://localhost:5000/api/parent_not_accept/${pass_id}`;    
+    const smsMessage = `
+    📢 Pass Request Notification
+
+    ${name}, a student of Velammal Engineering College,  
+    has requested a pass to visit **${place_to_visit}**  
+    for the reason: **${reason_for_visit}**.  
+
+    📅 Duration: ${from} ➝ ${to}  
+
+    Please review and take action:  
+    ✅ Approve: ${approvalUrl}  
+    ❌ Reject: ${rejectionUrl}  
+    `;
+
+    try {
+        await twilioClient.messages.create({
+            body: smsMessage,
+            from: twilioPhoneNumber,
+            to: parentPhoneNumber
+        });
+        console.log("✅ SMS sent successfully to parent");
+    } catch (error) {
+        console.error("❌ Error sending SMS:", error);
+        throw new Error("Failed to send SMS");
+    }
+};
 
 // Login Route
 app.post('/api/login', async (req, res) => {
@@ -147,17 +184,11 @@ app.get('/api/verify_student', async (req, res) => {
     }
 });
 
-//submit pass parent approval
+// Endpoint to submit pass with parent approval request
 app.post('/api/submit_pass_parent_approval', async (req, res) => {
     if (!req.session || req.session.studentauth !== true) {
         return res.status(401).json({ error: "Unauthorized access" });
     }
-    
-    const accountSid = process.env.ACCOUNTSID;
-    const authToken = process.env.AUTHTOKEN;
-    const twilioPhoneNumber = process.env.TWILIOPHONENUMBER;
-
-    const twilioClient = require('twilio')(accountSid, authToken);
 
     try {
         await client.connect();
@@ -196,6 +227,7 @@ app.post('/api/submit_pass_parent_approval', async (req, res) => {
             parent_approval: null,
             wardern_approval: null,
             superior_wardern_approval: null,
+            parent_sms_sent_status:false,
             qrcode_status: false,
             exit_time: null,
             re_entry_time: null,
@@ -207,6 +239,11 @@ app.post('/api/submit_pass_parent_approval', async (req, res) => {
             request_date_time: new Date()
         };
 
+        const existingPass = await PassCollection.findOne({ mobile_number, request_completed: false , expiry_status : false});
+        if (existingPass && existingPass.parent_sms_sent_status) {
+            return res.status(200).json({ message: "SMS already sent to parent" });
+        }
+
         await PassCollection.insertOne(PassData);
         const student = await studentDatabase.findOne({ phone_number_student: mobile_number });
         if (!student) {
@@ -214,26 +251,11 @@ app.post('/api/submit_pass_parent_approval', async (req, res) => {
         }
 
         const parentPhoneNumber = student.phone_number_parent;
-        const approvalUrl = `http://localhost:5000/api/parent_accept/${pass_id}`;
-        const rejectionUrl = `http://localhost:5000/api/parent_not_accept${pass_id}`;
-        const smsMessage = `
-        📢 Pass Request Notification
-
-        ${name}, a student of Velammal Engineering College,  
-        has requested a pass to visit **${place_to_visit}**  
-        for the reason: **${reason_for_visit}**.  
-
-        📅 Duration: ${from} ➝ ${to}  
-
-        Please review and take action:  
-        ✅ Approve: ${approvalUrl}  
-        ❌ Reject: ${rejectionUrl}  
-        `;
-        await twilioClient.messages.create({
-            body: smsMessage,
-            from: twilioPhoneNumber,
-            to: parentPhoneNumber
-        });
+        await sendParentApprovalSMS(parentPhoneNumber, name, place_to_visit, reason_for_visit, from, to, pass_id);
+        await PassCollection.updateOne(
+            { pass_id },
+            { $set: { parent_sms_sent_status: true } }
+        );
 
         res.status(201).json({ message: "Visitor pass submitted and SMS sent to parent" });
 
