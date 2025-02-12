@@ -153,6 +153,42 @@ app.post('/api/login', async (req, res) => {
     }
 });
 
+app.post('/api/security_login', async (req, res) => {
+    try {
+        await client.connect();
+        const db = client.db(dbName);
+        const securityCollection = db.collection("security_database");
+        const { registration_number, password } = req.body; 
+        
+        const security_details = await securityCollection.findOne({ unique_id: registration_number });
+
+        if (!security_details) {
+            return res.status(401).json({ error: "Invalid credentials" });
+        }
+
+        const isMatch = await bcrypt.compare(password, security_details.password);
+        if (!isMatch) {
+            return res.status(401).json({ error: "Invalid credentials" });
+        }
+
+        req.session.securityauth = true;
+        req.session.unique_number = registration_number;
+
+        res.status(200).json({ 
+            message: 'Sign-in successful', 
+            user: {
+                userid: security_details.unique_id,
+                name: security_details.name,
+            } 
+        });
+
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ error: "Internal Server Error" });
+    }
+});
+
+
 //Verify Student using mobile number
 app.get('/api/verify_student', async (req, res) => {
     if (!req.session || req.session.studentauth !== true) {
@@ -270,7 +306,9 @@ app.post('/api/submit_pass_parent_approval', async (req, res) => {
             request_completed: false,
             request_time: new Date(),
             expiry_status: false,
-            request_date_time: new Date()
+            request_date_time: new Date(),
+            authorised_Security_id : null,
+            authorised_warden_id : null
         };
 
         await PassCollection.insertOne(PassData);
@@ -355,7 +393,9 @@ app.post('/api/submit_pass_warden_approval', async (req, res) => {
             request_completed: false,
             request_time: new Date(),
             expiry_status: false,
-            request_date_time: new Date()
+            request_date_time: new Date(),
+            authorised_Security_id : null,
+            authorised_warden_id : null
         };
 
         await PassCollection.insertOne(PassData);
@@ -425,7 +465,9 @@ app.post('/api/save_draft', async (req, res) => {
             request_completed: false,
             request_time: new Date(),
             expiry_status: false,
-            request_date_time: new Date()
+            request_date_time: new Date(),
+            authorised_Security_id : null,
+            authorised_warden_id : null
         };
 
         if (existingDraft) {
@@ -885,7 +927,7 @@ app.post('/api/warden_accept', async (req, res) => {
         }
         if (passData.wardern_approval !== null) {
             return res.status(400).json({
-                message: `You have already ${passData.wardern_approval ? "approved" : "rejected"} this request. If you haven't approved this request, please contact the warden.`,
+                message: `The Following wardern ${passData.authorised_warden_id} have already ${passData.wardern_approval ? "approved" : "rejected"} this request. If you haven't approved this request, please contact the warden.`,
             });
         }
         if (warden_data.primary_year !== passData.year) {
@@ -896,7 +938,7 @@ app.post('/api/warden_accept', async (req, res) => {
         const qrPath = await generateQR(pass_id, student_registration_number);
         await passCollection.updateOne(
             { pass_id: pass_id },
-            { $set: { wardern_approval: true, qrcode_path: qrPath, qrcode_status: true } }
+            { $set: { wardern_approval: true, qrcode_path: qrPath, qrcode_status: true , authorised_warden_id : warden_unique_id } }
         );
 
         res.status(200).json({ message: "Warden approval updated successfully", qrcode_path: qrPath });
@@ -938,13 +980,13 @@ app.post('/api/warden_not_accept', async (req, res) => {
 
         if (passData.wardern_approval !== null) {
             return res.status(400).json({
-                message: `You have already ${passData.wardern_approval ? "approved" : "rejected"} this request. If you haven't approved this request, please contact the warden.`,
+                message: `The Following wardern ${passData.authorised_warden_id} have already ${passData.wardern_approval ? "approved" : "rejected"} this request. If you haven't approved this request, please contact the warden.`,
             });
         }
 
         await passCollection.updateOne(
             { pass_id: pass_id },
-            { $set: { wardern_approval: false } }
+            { $set: { wardern_approval: false , authorised_warden_id : warden_unique_id} }
         );
 
         res.status(200).json({ message: "Warden rejection updated successfully" });
@@ -989,7 +1031,7 @@ app.post('/api/superior_accept', async (req, res) => {
         const qrPath = await generateQR(pass_id, student_registration_number);
         await passCollection.updateOne(
             { pass_id: pass_id },
-            { $set: { superior_wardern_approval: true, qrcode_path: qrPath, qrcode_status: true } }
+            { $set: { superior_wardern_approval: true, qrcode_path: qrPath, qrcode_status: true , authorised_warden_id : superior_unique_id } }
         );
 
         res.status(200).json({ message: "Warden approval updated successfully", qrcode_path: qrPath });
@@ -1033,7 +1075,7 @@ app.post('/api/superior_decline', async (req, res) => {
         
         await passCollection.updateOne(
             { pass_id: pass_id },
-            { $set: { superior_wardern_approval: false , qrcode_path: null, qrcode_status: false} }
+            { $set: { superior_wardern_approval: false , qrcode_path: null, qrcode_status: false , authorised_warden_id : superior_unique_id } }
         );
 
         res.status(200).json({ message: "Warden rejection updated successfully" });
@@ -1146,6 +1188,128 @@ app.get('/api/fetch_student_profile', async (req, res) => {
       return res.status(500).json({ message: 'Server error' });
     }
   });
+
+//fetch pass details for security
+app.post('/api/fetch_pass_details', async (req, res) => {
+    if (!req.session || req.session.securityauth !== true) {
+        return res.status(401).json({ error: "Unauthorized access" });
+    }
+
+    try {
+        await client.connect();
+        const db = client.db(dbName);
+        const passCollection = db.collection("pass_details");
+
+        const { pass_unique_id } = req.body;
+        if (!pass_unique_id) {
+            return res.status(400).json({ message: "Pass ID is required" });
+        }
+
+        const pass_data = await passCollection.findOne({ 
+            pass_id: pass_unique_id,
+            $or: [
+                { wardern_approval: true },
+                { superior_wardern_approval: true }
+            ]
+        });
+        
+        if (!pass_data) {
+            return res.status(404).json({ message: "No pass details found for the given ID" });
+        }
+        return res.status(200).json(pass_data);
+    } catch (error) {
+        console.error('❌ Error fetching pass details:', error);
+        return res.status(500).json({ message: "Server error" });
+    }
+});
+
+//security accept
+app.post('/api/security_accept', async (req, res) => {
+    if (!req.session || req.session.securityauth !== true) {
+        return res.status(401).json({ error: "Unauthorized access" });
+    }
+
+    try {
+        await client.connect();
+        const db = client.db(dbName);
+        const passCollection = db.collection("pass_details");
+
+        const { pass_id } = req.body;
+        if (!pass_id) {
+            return res.status(400).json({ error: "Pass ID is required" });
+        }
+
+        const security_id = req.session.unique_number;
+        const exitTime = new Date();
+
+        const updateResult = await passCollection.updateOne(
+            { pass_id: pass_id },
+            { 
+                $set: { 
+                    exit_time: exitTime,
+                    authorised_Security_id: security_id 
+                }
+            }
+        );
+
+        if (updateResult.matchedCount === 0) {
+            return res.status(404).json({ error: "Pass not found" });
+        }
+        res.status(200).json({
+            message: "Exit time updated successfully",
+            pass_id: pass_id,
+            exit_time: exitTime,
+            authorised_Security_id: security_id
+        });
+
+    } catch (error) {
+        console.error("❌ Error updating exit time:", error);
+        res.status(500).json({ error: "Internal server error" });
+    }
+});
+
+//security Decline
+app.post('/api/security_decline', async (req, res) => {
+    if (!req.session || req.session.securityauth !== true) {
+        return res.status(401).json({ error: "Unauthorized access" });
+    }
+
+    try {
+        const db = client.db(dbName);
+        const passCollection = db.collection("pass_details");
+
+        const { pass_id } = req.body;
+        if (!pass_id) {
+            return res.status(400).json({ error: "Pass ID is required" });
+        }
+
+        const security_id = req.session.unique_number;
+        const updateResult = await passCollection.updateOne(
+            { pass_id: pass_id },
+            { 
+                $set: { 
+                    exit_time: null,
+                    authorised_Security_id: security_id,
+                }
+            }
+        );
+
+        if (updateResult.matchedCount === 0) {
+            return res.status(404).json({ error: "Pass not found" });
+        }
+
+        res.status(200).json({
+            message: "Pass request declined successfully",
+            pass_id: pass_id,
+            exit_time: null,
+            authorised_Security_id: security_id
+        });
+
+    } catch (error) {
+        console.error("❌ Error declining pass request:", error);
+        res.status(500).json({ error: "Internal server error" });
+    }
+});
 
 //to fetch all the active sessions
 app.get('/api/session', (req, res) => {
