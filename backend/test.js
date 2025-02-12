@@ -77,7 +77,7 @@ app.post('/api/login', async (req, res) => {
             collectionName = "warden_database";
             query = { unique_id: registration_number };
         } else if (type === "superior") {
-            collectionName = "superior_warden_database";
+            collectionName = "warden_database";
             query = { unique_id: registration_number };
         } else {
             return res.status(400).json({ error: "Invalid user type" });
@@ -195,7 +195,7 @@ app.post('/api/submit_pass_parent_approval', async (req, res) => {
             qrcode_path: null,
             parent_approval: null,
             wardern_approval: null,
-            superior_wardern: null,
+            superior_wardern_approval: null,
             qrcode_status: false,
             exit_time: null,
             re_entry_time: null,
@@ -703,7 +703,6 @@ app.post('/api/warden_accept', async (req, res) => {
     }
 });
 
-
 //Warden Decline Endpoint
 app.post('/api/warden_not_accept', async (req, res) => {
     if (!req.session || req.session.wardenauth !== true) {
@@ -752,6 +751,94 @@ app.post('/api/warden_not_accept', async (req, res) => {
     }
 });
 
+//Superior Warden Accept Endpoint
+app.post('/api/superior_accept', async (req, res) => {
+    if (!req.session || req.session.superiorauth !== true) {
+        return res.status(401).json({ error: "Unauthorized access" });
+    }
+    try {
+        const superior_unique_id = req.session.unique_number;
+        const { pass_id } = req.body;
+
+        if (!pass_id) {
+            return res.status(400).json({ error: "pass_id is required" });
+        }
+        await client.connect();
+        const db = client.db(dbName);
+        const passCollection = db.collection('pass_details');
+        const wardenCollection = db.collection('warden_database');
+
+        const superior_data = await wardenCollection.findOne({ unique_id: superior_unique_id });
+        if (!superior_data) {
+            return res.status(404).json({ error: "Superior Warden not found" });
+        }
+        const passData = await passCollection.findOne({ pass_id: pass_id });
+        if (!passData) {
+            return res.status(404).json({ error: "Pass not found" });
+        }
+        if (passData.superior_wardern_approval !== null) {
+            return res.status(400).json({
+                message: `You have already ${passData.superior_wardern_approval ? "approved" : "rejected"} this request. If you haven't approved this request, please contact the warden.`,
+            });
+        }
+        const student_registration_number = passData.registration_number;
+        const qrPath = await generateQR(pass_id, student_registration_number);
+        await passCollection.updateOne(
+            { pass_id: pass_id },
+            { $set: { superior_wardern_approval: true, qrcode_path: qrPath, qrcode_status: true } }
+        );
+
+        res.status(200).json({ message: "Warden approval updated successfully", qrcode_path: qrPath });
+
+    } catch (error) {
+        console.error("❌ Error:", error);
+        res.status(500).json({ error: "Internal server error" });
+    }
+});
+
+//Superior Warden Decline Endpoint
+app.post('/api/superior_decline', async (req, res) => {
+    if (!req.session || req.session.superiorauth !== true) {
+        return res.status(401).json({ error: "Unauthorized access" });
+    }
+    try {
+        const superior_unique_id = req.session.unique_number;
+        const { pass_id } = req.body;
+
+        if (!pass_id) {
+            return res.status(400).json({ error: "pass_id is required" });
+        }
+        await client.connect();
+        const db = client.db(dbName);
+        const passCollection = db.collection('pass_details');
+        const wardenCollection = db.collection('warden_database');
+
+        const superior_data = await wardenCollection.findOne({ unique_id: superior_unique_id });
+        if (!superior_data) {
+            return res.status(404).json({ error: "Superior Warden not found" });
+        }
+        const passData = await passCollection.findOne({ pass_id: pass_id });
+        if (!passData) {
+            return res.status(404).json({ error: "Pass not found" });
+        }
+        if (passData.superior_wardern_approval !== null) {
+            return res.status(400).json({
+                message: `You have already ${passData.superior_wardern_approval ? "approved" : "rejected"} this request. If you haven't approved this request, please contact the warden.`,
+            });
+        }
+        
+        await passCollection.updateOne(
+            { pass_id: pass_id },
+            { $set: { superior_wardern_approval: false , qrcode_path: null, qrcode_status: false} }
+        );
+
+        res.status(200).json({ message: "Warden rejection updated successfully" });
+
+    } catch (error) {
+        console.error("❌ Error:", error);
+        res.status(500).json({ error: "Internal server error" });
+    }
+});
 
 //to fetch all the active sessions
 app.get('/api/session', (req, res) => {
