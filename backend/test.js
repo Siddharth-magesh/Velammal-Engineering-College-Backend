@@ -206,6 +206,41 @@ app.post('/api/submit_pass_parent_approval', async (req, res) => {
             return res.status(400).json({ error: "Mobile number is required" });
         }
 
+        const existingPassCheck = await PassCollection.findOne({
+            mobile_number,
+            request_completed: false,
+            expiry_status: false,
+            parent_sms_sent_status: false
+        });
+
+        const student = await studentDatabase.findOne({ phone_number_student: mobile_number });
+
+        if (!student) {
+            return res.status(404).json({ error: "Student record not found" });
+        }
+
+        const parentPhoneNumber = student.phone_number_parent;
+
+        if (existingPassCheck) {
+            await sendParentApprovalSMS(parentPhoneNumber, name, place_to_visit, reason_for_visit, from, to, existingPassCheck.pass_id);
+            await PassCollection.updateOne(
+                { pass_id: existingPassCheck.pass_id },
+                { $set: { parent_sms_sent_status: true } }
+            );
+            return res.status(200).json({ message: "SMS sent to parent successfully" });
+        }
+
+        const existingPass = await PassCollection.findOne({
+            mobile_number,
+            request_completed: false,
+            expiry_status: false,
+            parent_sms_sent_status: true
+        });
+
+        if (existingPass) {
+            return res.status(200).json({ message: "SMS already sent to parent" });
+        }
+
         const pass_id = uuidv4();
         const PassData = {
             pass_id,
@@ -227,30 +262,18 @@ app.post('/api/submit_pass_parent_approval', async (req, res) => {
             parent_approval: null,
             wardern_approval: null,
             superior_wardern_approval: null,
-            parent_sms_sent_status:false,
+            parent_sms_sent_status: false,
             qrcode_status: false,
             exit_time: null,
             re_entry_time: null,
             delay_status: false,
-            draft_status: true,
             request_completed: false,
             request_time: new Date(),
             expiry_status: false,
             request_date_time: new Date()
         };
 
-        const existingPass = await PassCollection.findOne({ mobile_number, request_completed: false , expiry_status : false});
-        if (existingPass && existingPass.parent_sms_sent_status) {
-            return res.status(200).json({ message: "SMS already sent to parent" });
-        }
-
         await PassCollection.insertOne(PassData);
-        const student = await studentDatabase.findOne({ phone_number_student: mobile_number });
-        if (!student) {
-            return res.status(404).json({ error: "Student record not found" });
-        }
-
-        const parentPhoneNumber = student.phone_number_parent;
         await sendParentApprovalSMS(parentPhoneNumber, name, place_to_visit, reason_for_visit, from, to, pass_id);
         await PassCollection.updateOne(
             { pass_id },
@@ -258,6 +281,165 @@ app.post('/api/submit_pass_parent_approval', async (req, res) => {
         );
 
         res.status(201).json({ message: "Visitor pass submitted and SMS sent to parent" });
+
+    } catch (error) {
+        console.error("❌ Error:", error);
+        res.status(500).json({ error: "Internal server error" });
+    }
+});
+
+// Endpoint to submit pass with warden and superior approval request
+app.post('/api/submit_pass_warden_approval', async (req, res) => {
+    if (!req.session || req.session.studentauth !== true) {
+        return res.status(401).json({ error: "Unauthorized access" });
+    }
+
+    try {
+        await client.connect();
+        const db = client.db(dbName);
+        const PassCollection = db.collection('pass_details');
+        const studentDatabase = db.collection('student_database');
+
+        const {
+            mobile_number, name, department_name, year, room_no, registration_number,
+            block_name, pass_type, from, to, place_to_visit,
+            reason_type, reason_for_visit, file_path
+        } = req.body;
+
+        if (!mobile_number) {
+            return res.status(400).json({ error: "Mobile number is required" });
+        }
+
+        const existingPassCheck = await PassCollection.findOne({
+            mobile_number,
+            request_completed: false,
+            expiry_status: false,
+        });
+
+        const student = await studentDatabase.findOne({ phone_number_student: mobile_number });
+
+        if (!student) {
+            return res.status(404).json({ error: "Student record not found" });
+        }
+
+        if (existingPassCheck) {
+            return res.status(200).json({ message: "Notified Warden about the Request" });
+        }
+
+        const pass_id = uuidv4();
+        const PassData = {
+            pass_id,
+            name,
+            mobile_number,
+            dept: department_name,
+            year,
+            room_no,
+            registration_number,
+            blockname: block_name,
+            passtype: pass_type,
+            from: new Date(from),
+            to: new Date(to),
+            place_to_visit,
+            reason_type,
+            reason_for_visit,
+            file_path: file_path || null,
+            qrcode_path: null,
+            parent_approval: null,
+            wardern_approval: null,
+            superior_wardern_approval: null,
+            parent_sms_sent_status: false,
+            qrcode_status: false,
+            exit_time: null,
+            re_entry_time: null,
+            delay_status: false,
+            request_completed: false,
+            request_time: new Date(),
+            expiry_status: false,
+            request_date_time: new Date()
+        };
+
+        await PassCollection.insertOne(PassData);
+        res.status(201).json({ message: "Visitor pass submitted and Notified Warden" });
+
+    } catch (error) {
+        console.error("❌ Error:", error);
+        res.status(500).json({ error: "Internal server error" });
+    }
+});
+
+// Save draft endpoint
+app.post('/api/save_draft', async (req, res) => {
+    if (!req.session || req.session.studentauth !== true) {
+        return res.status(401).json({ error: "Unauthorized access" });
+    }
+
+    try {
+        await client.connect();
+        const db = client.db(dbName);
+        const DraftsCollection = db.collection('drafts_details');
+        const studentDatabase = db.collection('student_database');
+
+        const {
+            mobile_number, name, department_name, year, room_no, registration_number,
+            block_name, pass_type, from, to, place_to_visit,
+            reason_type, reason_for_visit, file_path
+        } = req.body;
+
+        if (!mobile_number) {
+            return res.status(400).json({ error: "Mobile number is required" });
+        }
+
+        const student = await studentDatabase.findOne({ phone_number_student: mobile_number });
+
+        if (!student) {
+            return res.status(404).json({ error: "Student record not found" });
+        }
+
+        const existingDraft = await DraftsCollection.findOne({ registration_number });
+
+        const PassData = {
+            pass_id: existingDraft ? existingDraft.pass_id : uuidv4(),
+            name,
+            mobile_number,
+            dept: department_name,
+            year,
+            room_no,
+            registration_number,
+            blockname: block_name,
+            passtype: pass_type,
+            from: new Date(from),
+            to: new Date(to),
+            place_to_visit,
+            reason_type,
+            reason_for_visit,
+            file_path: file_path || null,
+            qrcode_path: null,
+            parent_approval: null,
+            wardern_approval: null,
+            superior_wardern_approval: null,
+            parent_sms_sent_status: false,
+            qrcode_status: false,
+            exit_time: null,
+            re_entry_time: null,
+            delay_status: false,
+            request_completed: false,
+            request_time: new Date(),
+            expiry_status: false,
+            request_date_time: new Date()
+        };
+
+        if (existingDraft) {
+            // Replace the existing draft with the new one
+            await DraftsCollection.updateOne(
+                { registration_number },
+                { $set: PassData }
+            );
+            return res.status(200).json({ message: "Draft updated successfully" });
+        } else {
+            // Insert new draft
+            await DraftsCollection.insertOne(PassData);
+            return res.status(201).json({ message: "Visitor pass saved in the draft" });
+        }
 
     } catch (error) {
         console.error("❌ Error:", error);
