@@ -1034,6 +1034,14 @@ def insert_nss_carousal():
     
     print("nss_carousal data inserted successfully.")
 
+def insert_overall_department_research():
+    collection = db['overall_research']
+    with open("/Velammal-Engineering-College-Backend/docs/research_data.json","r") as file:
+        documents = json.load(file)
+        collection.insert_one(documents)
+    
+    print("inserted overall research data")
+
 insert_sports_Zonal_results()
 insert_sports_Zonal_images()
 insert_sports_faculty_data()
@@ -1043,6 +1051,7 @@ insert_library_data()
 insert_sports_coordinates()
 insert_nss_personnel()
 insert_nss_carousal()
+insert_overall_department_research()
 
 #OLD RESEARCH ENDPOINTS DATA INSERTIONS
 

@@ -1138,10 +1138,33 @@ app.get('/api/fetch_nss_data', async (req, res) => {
     } catch (error) {
         console.error("Error fetching NSS data:", error);
         return res.status(500).json({ error: "Internal server error" });
+    } 
+});
+
+// Endpoint to fetch research data based on category
+app.post("/api/get_research_data", async (req, res) => {
+    const { category } = req.body;
+
+    if (!category) {
+        return res.status(400).json({ error: "Category is required" });
+    }
+    try {
+        const db = client.db(dbName);
+        const collection = db.collection("overall_research");
+        const result = await collection.findOne({}, { projection: { [category]: 1, _id: 0 } });
+
+        if (!result || !result[category]) {
+            return res.status(404).json({ error: "Category not found" });
+        }
+
+        return res.status(200).json(result[category]);
+    } catch (error) {
+        console.error("Error fetching research data:", error);
+        return res.status(500).json({ error: "Internal server error" });
     }
 });
 
-
+//fetch active session
 app.get('/api/session', (req, res) => {
     if (req.session.nss_id && req.session.auth) {
         return res.json({ 
