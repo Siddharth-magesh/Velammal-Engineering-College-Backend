@@ -126,7 +126,6 @@ const sendParentReachedSMS = async (parentPhoneNumber, name, reachedTime) => {
     }
 };
 
-
 // Login Route
 app.post('/api/login', async (req, res) => {
     try {
@@ -1199,6 +1198,46 @@ app.get('/api/fetch_warden_details', async (req, res) => {
     }
 });
 
+// Update Student Details Endpoint
+app.post('/api/update_student_by_warden', async (req, res) => {
+    if (!req.session || req.session.adminauth !== true) { 
+        return res.status(401).json({ error: "Unauthorized access" });
+    }
+
+    try {
+        await client.connect();
+        const db = client.db(dbName);
+        const studentCollection = db.collection("student_database");
+
+        const { registration_number, ...updateFields } = req.body;
+
+        if (!registration_number) {
+            return res.status(400).json({ error: "Registration number is required" });
+        }
+        const restrictedFields = ["registration_number", "password", "_id"];
+        restrictedFields.forEach(field => delete updateFields[field]);
+
+        const updateResult = await studentCollection.updateOne(
+            { registration_number: registration_number },
+            { $set: updateFields }
+        );
+
+        if (updateResult.matchedCount === 0) {
+            return res.status(404).json({ error: "Student not found" });
+        }
+
+        res.status(200).json({
+            message: "Student details updated successfully",
+            registration_number: registration_number,
+            updated_fields: updateFields
+        });
+
+    } catch (error) {
+        console.error("❌ Error updating student details:", error);
+        res.status(500).json({ error: "Internal server error" });
+    }
+});
+
 //student profile fetch his own profile
 app.get('/api/fetch_student_profile', async (req, res) => {
     if (!req.session || req.session.studentauth !== true) {
@@ -1339,13 +1378,13 @@ app.post('/api/security_accept', async (req, res) => {
     }
 });
 
-//security Decline
+// Security Decline Endpoint
 app.post('/api/security_decline', async (req, res) => {
     if (!req.session || req.session.securityauth !== true) {
         return res.status(401).json({ error: "Unauthorized access" });
     }
-
     try {
+        await client.connect();
         const db = client.db(dbName);
         const passCollection = db.collection("pass_details");
 
@@ -1354,15 +1393,25 @@ app.post('/api/security_decline', async (req, res) => {
             return res.status(400).json({ error: "Pass ID is required" });
         }
 
+        const pass_details = await passCollection.findOne({ pass_id: pass_id });
+        if (!pass_details) {
+            return res.status(404).json({ error: "Pass not found" });
+        }
+
         const security_id = req.session.unique_number;
+        let updateFields = { 
+            authorised_Security_id: security_id,
+            request_completed: true
+        };
+        if (pass_details.exit_time && !pass_details.re_entry_time) {
+            updateFields.re_entry_time = null;
+            updateFields.expiry_status = true;
+        } else {
+            updateFields.exit_time = null;
+        }
         const updateResult = await passCollection.updateOne(
             { pass_id: pass_id },
-            { 
-                $set: { 
-                    exit_time: null,
-                    authorised_Security_id: security_id,
-                }
-            }
+            { $set: updateFields }
         );
 
         if (updateResult.matchedCount === 0) {
@@ -1372,7 +1421,6 @@ app.post('/api/security_decline', async (req, res) => {
         res.status(200).json({
             message: "Pass request declined successfully",
             pass_id: pass_id,
-            exit_time: null,
             authorised_Security_id: security_id
         });
 
@@ -1381,7 +1429,6 @@ app.post('/api/security_decline', async (req, res) => {
         res.status(500).json({ error: "Internal server error" });
     }
 });
-
 
 //warden change food type directly
 app.post('/api/warden_change_foodtype', async (req, res) => {
