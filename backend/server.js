@@ -1149,6 +1149,7 @@ app.post("/api/get_research_data", async (req, res) => {
         return res.status(400).json({ error: "Category is required" });
     }
     try {
+        await client.connect();
         const db = client.db(dbName);
         const collection = db.collection("overall_research");
         const result = await collection.findOne({}, { projection: { [category]: 1, _id: 0 } });
@@ -1160,6 +1161,29 @@ app.post("/api/get_research_data", async (req, res) => {
         return res.status(200).json(result[category]);
     } catch (error) {
         console.error("Error fetching research data:", error);
+        return res.status(500).json({ error: "Internal server error" });
+    }
+});
+
+// Endpoint to fetch warden data
+app.get("/api/get_warden_data", async (req, res) => {
+    try {
+        await client.connect();
+        const db = client.db(dbName);
+        const wardenCollection = db.collection("warden_database");
+
+        const warden_details = await wardenCollection
+            .find({}, { projection: { warden_name: 1, phone_number: 1, image_path: 1, _id: 0 } })
+            .toArray();
+
+        if (!warden_details || warden_details.length === 0) {
+            return res.status(404).json({ message: "No assistant wardens found" });
+        }
+
+        res.status(200).json({ wardens: warden_details });
+    
+    } catch (error) {
+        console.error("Error fetching data:", error);
         return res.status(500).json({ error: "Internal server error" });
     }
 });
