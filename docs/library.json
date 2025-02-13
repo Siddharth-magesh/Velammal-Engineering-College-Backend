@@ -63,7 +63,34 @@
                 ]
         },
             "collection":{
-                "resources":[
+                "Free E-Books Download Websites":[
+                    "University of Pennsylvania",
+                    "Project Gutenberg",
+                    "Free e-books",
+                    "Free Tech Books",
+                    "Campus Books",
+                    "University of Virginia e-Book Library",
+                    "NAP Open Book",
+                    "Internet Public Library",
+                    "Direct Textbook",
+                    "e-Books",
+                    "e-Books Palace",
+                    "Electronic Library of Mathematics"
+                ],
+                "Anti-Plagiarism Scanner Software":[
+                    "CopyCatch",
+                    "TurnItOut",
+                    "Eve",
+                    "Plagiarism.com",
+                    "Copyscape",
+                    "CodeMatch (CodeSuite)",
+                    "ArticleChecker",
+                    "PlagiarismDetect.com",
+                    "Duplichecker",
+                    "Small SEO Tools",
+                    "ScanMyEssay & Viper & WCopyFind"
+                ],
+                "Our Collections":[
                     "no_of_books",
                     "no_of_titles",
                     "General Bank Books",
@@ -94,7 +121,24 @@
                     "3192",
                     "9517",
                     "20"
+                ],
+                "Question Bank-UG Courses":[
+                    "B.E Computer Science & Engineering (CSE)",
+                    "B.E Electronics & Communication Engineering (ECE)",
+                    "B.E Electrical & Electronics Engineering (EEE)",
+                    "B.E Electronics & Instrumentation Engineering (E&I)",
+                    "B.Tech Information Technology (IT)",
+                    "B.E Mechanical Engineering (MECH)",
+                    "B.E Civil Engineering (CIVIL)",
+                    "B.E Automobile Engineering (AUTO)",
+                    "B.E Artificial Intelligence & Data Science (AI & DS)"
+                ],
+                "Question Bank-PG Courses":[
+                    "M.E Computer Science & Engineering (CSE)",
+                    "M.E Power Systems Engineering (PSE)",
+                    "Master of Business Administration (MBA)"
                 ]
+                
             }
         }
 ]

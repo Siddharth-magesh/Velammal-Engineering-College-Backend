@@ -97,6 +97,34 @@ const sendParentApprovalSMS = async (parentPhoneNumber, name, place_to_visit, re
     }
 };
 
+// Function to send "Reached" SMS to parent
+const sendParentReachedSMS = async (parentPhoneNumber, name, reachedTime) => {  
+    const smsMessage = `
+    📢 Arrival Notification  
+
+    Dear Parent,  
+
+    Your ward **${name}** has safely returned to the hostel.  
+
+    🏡 **Hostel Arrival Time:** ${reachedTime}  
+
+    Thank you,  
+    Velammal Engineering College  
+    `;
+    try {
+        await twilioClient.messages.create({
+            body: smsMessage,
+            from: twilioPhoneNumber,
+            to: parentPhoneNumber
+        });
+        console.log(`✅ SMS sent successfully to parent of ${name}`);
+    } catch (error) {
+        console.error("❌ Error sending SMS:", error);
+        throw new Error("Failed to send SMS");
+    }
+};
+
+
 // Login Route
 app.post('/api/login', async (req, res) => {
     try {
@@ -1225,28 +1253,31 @@ app.post('/api/fetch_pass_details', async (req, res) => {
     }
 });
 
-//security accept
+// Security accept endpoint
 app.post('/api/security_accept', async (req, res) => {
     if (!req.session || req.session.securityauth !== true) {
         return res.status(401).json({ error: "Unauthorized access" });
     }
-
     try {
         await client.connect();
         const db = client.db(dbName);
         const passCollection = db.collection("pass_details");
-        const { pass_id } = req.body;
-        const pass_details = await passCollection.findOne({ pass_id : pass_id });
+        const studentCollection = db.collection("student_database");
 
+        const { pass_id } = req.body;
         if (!pass_id) {
             return res.status(400).json({ error: "Pass ID is required" });
         }
+        const pass_details = await passCollection.findOne({ pass_id: pass_id });
+        if (!pass_details) {
+            return res.status(404).json({ error: "Pass not found" });
+        }
 
-        if (pass_details.exit_time === null){
-            const security_id = req.session.unique_number;
+        const security_id = req.session.unique_number;
+        const student_data = await studentCollection.findOne({ registration_number : pass_details.registration_number});
+        if (!pass_details.exit_time) {
             const exitTime = new Date();
-
-            const updateResult = await passCollection.updateOne(
+            await passCollection.updateOne(
                 { pass_id: pass_id },
                 { 
                     $set: { 
@@ -1256,43 +1287,52 @@ app.post('/api/security_accept', async (req, res) => {
                 }
             );
 
-            if (updateResult.matchedCount === 0) {
-                return res.status(404).json({ error: "Pass not found" });
-            }
-            res.status(200).json({
+            return res.status(200).json({
                 message: "Exit time updated successfully",
                 pass_id: pass_id,
                 exit_time: exitTime,
                 authorised_Security_id: security_id
             });
         }
-        if (pass_details.exit_time !== null && pass_details.re_entry_time === null) {
-            const security_id = req.session.unique_number;
-            const ReEntryTime = new Date();
-            const updateResult = await passCollection.updateOne(
+        if (pass_details.exit_time && !pass_details.re_entry_time) {
+            const reEntryTime = new Date();
+            const returnDeadline = new Date(pass_details.to);
+            const delayStatus = reEntryTime > returnDeadline;
+
+            let updateFields = {
+                re_entry_time: reEntryTime,
+                request_completed: true,
+                expiry_status: true,
+                delay_status: delayStatus
+            };
+            if (delayStatus) {
+                await studentCollection.updateOne(
+                    { phone_number_student: pass_details.mobile_number },
+                    { $inc: { late_count: 1 } }
+                );
+            }
+
+            await passCollection.updateOne(
                 { pass_id: pass_id },
-                { 
-                    $set: { 
-                        re_entry_time: ReEntryTime,
-                        request_completed : true,
-                        expiry_status: true
-                    }
-                }
+                { $set: updateFields }
+            );
+            await sendParentReachedSMS(
+                student_data.phone_number_parent, 
+                pass_details.name, 
+                reEntryTime.toLocaleString("en-IN", { timeZone: "Asia/Kolkata" })
             );
 
-            if (updateResult.matchedCount === 0) {
-                return res.status(404).json({ error: "Pass not found" });
-            }
-            res.status(200).json({
-                message: "Exit time updated successfully",
+            return res.status(200).json({
+                message: "Re-entry time updated successfully",
                 pass_id: pass_id,
-                re_entry_time: ReEntryTime,
-                authorised_Security_id: security_id
+                re_entry_time: reEntryTime,
+                authorised_Security_id: security_id,
+                delay_status: delayStatus
             });
         }
 
     } catch (error) {
-        console.error("❌ Error updating exit time:", error);
+        console.error("❌ Error updating security pass:", error);
         res.status(500).json({ error: "Internal server error" });
     }
 });

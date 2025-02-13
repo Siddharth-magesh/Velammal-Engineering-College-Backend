@@ -4,6 +4,7 @@ const session = require('express-session');
 require('dotenv').config();
 const bodyParser = require('body-parser');
 const bcrypt = require('bcrypt');
+const nodemailer = require("nodemailer");
 
 const app = express();
 const port = process.env.PORT || 5000;
@@ -1080,6 +1081,49 @@ app.get('/api/library', async (req, res) => {
         res.status(500).json({ error: 'Error fetching library data' });
     }
 });
+
+//greveince endpoint
+app.post('/api/get_grevience', async (req, res) => {
+    try {
+        await client.connect();
+        const db = client.db(dbName);
+        const grevienceCollection = db.collection("grevience_database");
+        const { email, subject, content } = req.body;
+        if (!email || !subject || !content) {
+            return res.status(400).json({ error: "All fields are required" });
+        }
+        const grevienceData = {
+            email,
+            subject,
+            content,
+            submitted_at: new Date()
+        };
+        await grevienceCollection.insertOne(grevienceData);
+        const transporter = nodemailer.createTransport({
+            service: "gmail",
+            auth: {
+                user: process.env.BASE_EMAIL, // Replace with your email
+                pass: process.env.PASSWORD // Use an app password or secure way to store credentials
+            }
+        });
+
+        // Email details
+        const mailOptions = {
+            from: process.env.BASE_EMAIL,
+            to: process.env.TARGET_EMAIL, // Replace with the recipient (grievance handler)
+            subject: `New Grievance Submitted: ${subject}`,
+            text: `You have received a new grievance from ${email}.\n\nMessage:\n${content}\n\nPlease address it as soon as possible.`
+        };
+        await transporter.sendMail(mailOptions);
+
+        res.status(201).json({ message: "Grievance submitted successfully and email notification sent" });
+
+    } catch (error) {
+        console.error("❌ Error:", error);
+        res.status(500).json({ error: "Internal server error" });
+    }
+});
+
 
 app.get('/api/session', (req, res) => {
     if (req.session.nss_id && req.session.auth) {
