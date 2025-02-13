@@ -1102,15 +1102,14 @@ app.post('/api/get_grevience', async (req, res) => {
         const transporter = nodemailer.createTransport({
             service: "gmail",
             auth: {
-                user: process.env.BASE_EMAIL, // Replace with your email
-                pass: process.env.PASSWORD // Use an app password or secure way to store credentials
+                user: process.env.BASE_EMAIL,
+                pass: process.env.PASSWORD
             }
         });
 
-        // Email details
         const mailOptions = {
             from: process.env.BASE_EMAIL,
-            to: process.env.TARGET_EMAIL, // Replace with the recipient (grievance handler)
+            to: process.env.TARGET_EMAIL,
             subject: `New Grievance Submitted: ${subject}`,
             text: `You have received a new grievance from ${email}.\n\nMessage:\n${content}\n\nPlease address it as soon as possible.`
         };
@@ -1121,6 +1120,24 @@ app.post('/api/get_grevience', async (req, res) => {
     } catch (error) {
         console.error("❌ Error:", error);
         res.status(500).json({ error: "Internal server error" });
+    }
+});
+
+app.get('/api/fetch_nss_data', async (req, res) => {
+    try {
+        await client.connect();
+        const db = client.db(dbName);
+        const nssCollection = db.collection("nss_data");
+        const nss_data = await nssCollection.find({}).toArray();
+
+        if (nss_data.length === 0) {
+            return res.status(204).send();
+        }
+
+        return res.status(200).json(nss_data);
+    } catch (error) {
+        console.error("Error fetching NSS data:", error);
+        return res.status(500).json({ error: "Internal server error" });
     }
 });
 
