@@ -8,6 +8,8 @@ const QRCode = require('qrcode');
 const path = require('path');
 const fs = require('fs');
 const twilio = require('twilio');
+const moment = require("moment");
+require("moment-timezone");
 
 const app = express();
 const port = process.env.PORT || 6000;
@@ -1412,6 +1414,136 @@ app.post('/api/warden_change_foodtype', async (req, res) => {
     } catch (err) {
         console.error("❌ Error:", err);
         res.status(500).json({ error: "Server error" });
+    }
+});
+
+//analytics main
+app.get("/pass_measures", async (req, res) => {
+    if (!req.session || req.session.wardenauth !== true){
+        return res.status(401).json({ error : "Unauthorised Access"})
+    }
+    try {
+        await client.connect();
+        const db = client.db(dbName);
+        const collection = db.collection("pass_details");
+
+        const currentDate = moment().utc().startOf("day").toDate();
+        const nextDate = moment().utc().endOf("day").toDate();
+        const exitTimeCount = await collection.countDocuments({
+            exit_time: { $gte: currentDate, $lt: nextDate }
+        });
+        const reEntryTimeCount = await collection.countDocuments({
+            re_entry_time: { $gte: currentDate, $lte: nextDate }
+        });
+        const now = moment().tz("Asia/Kolkata").toDate();
+        const expiredCount = await collection.countDocuments({
+            exit_time: { $exists: true },
+            to: { $gt: now }
+        });
+        const pendingCount = await collection.countDocuments({
+            exit_time: { $exists: true },
+            to: { $lt: now }
+        });
+        const passTypes = ["Od", "Outpass", "Staypass", "Leave"];
+        const passTypeCounts = {};
+
+        for (const type of passTypes) {
+            passTypeCounts[type] = await collection.countDocuments({ passtype: type });
+        }
+        res.json({
+            exitTimeCount,
+            reEntryTimeCount,
+            expiredCount,
+            pendingCount,
+            passTypeCounts
+        });
+    } catch (error) {
+        console.error("Error fetching data:", error);
+        res.status(500).json({ error: "Internal Server Error" });
+    } finally {
+        await client.close();
+    }
+});
+
+const parseDate = (dateStr) => {
+    const [day, month, year] = dateStr.split("/");
+    return new Date(`${year}-${month}-${day}T00:00:00.000Z`);
+};
+
+//analytics second
+app.get("/pass_analysis", async (req, res) => {
+    try {
+
+        await client.connect();
+        const db = client.db(dbName);
+        const collection = db.collection("pass_details");
+        const { pass_type, date } = req.body;
+        if (!pass_type || !date) {
+            return res.status(400).json({ error: "Missing pass_type or date in query params" });
+        }
+        const formattedInputDate = parseDate(date);
+        const nextDay = new Date(formattedInputDate);
+        nextDay.setDate(nextDay.getDate() + 1);
+        const firstMeasureCount = await collection.countDocuments({
+            passtype: pass_type,
+            $or: [
+                { "from": { $lte: formattedInputDate }, "to": { $gte: formattedInputDate } },
+                { "from": { $gte: formattedInputDate, $lt: nextDay } },
+                { "to": { $gte: formattedInputDate, $lt: nextDay } }
+            ]
+        });
+        const secondMeasureCount = await collection.countDocuments({
+            passtype: pass_type,
+            to: { $gte: formattedInputDate, $lt: nextDay }
+        });
+        const thirdMeasureCount = await collection.countDocuments({
+            passtype: pass_type,
+            to: { $gte: formattedInputDate, $lt: nextDay },
+            re_entry_time: null
+        });
+        const reasonTypeAggregation = await collection.aggregate([
+            {
+                $match: {
+                    passtype: pass_type,
+                    $or: [
+                        { "from": { $lte: formattedInputDate }, "to": { $gte: formattedInputDate } },
+                        { "from": { $gte: formattedInputDate, $lt: nextDay } },
+                        { "to": { $gte: formattedInputDate, $lt: nextDay } } 
+                    ]
+                }
+            },
+            {
+                $group: {
+                    _id: {
+                        $switch: {
+                            branches: [
+                                { case: { $eq: ["$reason_type", "Medical"] }, then: "Medical" },
+                                { case: { $eq: ["$reason_type", "Intern"] }, then: "Intern" },
+                                { case: { $eq: ["$reason_type", "Festival"] }, then: "Festival" },
+                                { case: { $eq: ["$reason_type", "Semester"] }, then: "Semester" }
+                            ],
+                            default: "Other"
+                        }
+                    },
+                    count: { $sum: 1 }
+                }
+            }
+        ]).toArray();
+        const reasonTypeCounts = reasonTypeAggregation.reduce((acc, item) => {
+            acc[item._id] = item.count;
+            return acc;
+        }, {});
+
+        res.json({
+            betweenFromToCount: firstMeasureCount,
+            toFieldMatchCount: secondMeasureCount,
+            toFieldNullReEntryCount: thirdMeasureCount,
+            reasonTypeCounts
+        });
+
+    } catch (error) {
+        console.error("Error fetching pass analysis:", error);
+        res.status(500).json({ error: "Internal Server Error" });
     }
 });
 
