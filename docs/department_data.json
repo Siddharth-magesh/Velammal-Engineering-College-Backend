@@ -32,15 +32,15 @@
         "department_id": "003",
         "department_name": "Chemistry ",
         "department_image": "/static/images/department_data/chem.jpg",
-        "department_quotes": "Transforming information into solutions.",
-        "vision": "To be a leader in IT education and innovation, bridging technology and business.",
+        "department_quotes": "Innovating chemistry, transforming the future.",
+        "vision": "To be a world-renowned department of chemistry, known for its superior teaching, research, and innovation, and to cultivate a community of critical and creative thinkers capable of tackling the intricate chemical and environmental problems of the twenty-first century.",
         "mission": [
-            "Impart theoretical and practical knowledge in IT.",
-            "Promote research in information systems and technologies.",
-            "Encourage entrepreneurship and innovation."
+            "Provide strong undergraduate and graduate programs that develop critical thinking, practical skills, and deep theoretical knowledge.",
+            "Conduct cutting-edge research in materials, environmental solutions, and sustainable energy.",
+            "Support industries, government, and communities while fostering innovation, entrepreneurship, and leadership."
         ],
         "newsletter_path": "/static/docs/dapartment_data/chem_newsletter.pdf",
-        "about_department": ["Department of Artificial Intelligence aims to produce computing graduates with high potency, apply, design and develop systems to pertain and to integrate both software and hardware devices, utilize modern approaches in programming and problem solving techniques."," The Department was established in the year 2020 with the main objective of providing quality education in the field of Engineering and Technology."," It is recognized as nodal center under Anna University. The Department has proved to be a center of excellence in Academic, Sponsored research and Continuing Education Programme."]
+        "about_department": ["The Chemistry department is a fascinating field that combines principles from chemistry and engineering to develop innovative solutions for various industries.  Development of new materials with specific properties for applications in energy, aerospace, biomedical, and other fields.Research on sustainable energy sources, energy storage, and environmental remediation technologies.Design and optimization of chemical processes for large-scale production of chemicals, fuels, and pharmaceuticals. Development of corrosion-resistant materials and coatings for various industries."]
     },
     {
         "department_id": "004",
