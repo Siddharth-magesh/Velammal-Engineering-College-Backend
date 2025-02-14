@@ -1,38 +1,51 @@
-from pymongo import MongoClient
 import json
+from pymongo import MongoClient
+import os
 
-mongo_uri = "mongodb://localhost:27017/"
-db_name = "VEC"
-collection_name = "staff_details"
+MONGO_URI = "mongodb://localhost:27017"
+DATABASE_NAME = "your_database" 
+COLLECTION_NAME = "your_collection"
 
-client = MongoClient(mongo_uri)
-db = client[db_name]
-collection = db[collection_name]
+json_file_path = "structured_data2.json" 
 
-def insert_sports_Zonal_results():
-    collection = db["sports_data"]
-    with open("/Velammal-Engineering-College-Backend/docs/sports_zonal.json", "r") as file:
-        documents = json.load(file)
-        collection.insert_many(documents)
+client = MongoClient(MONGO_URI)
+db = client[DATABASE_NAME]
+collection = db[COLLECTION_NAME]
 
-    print("Sports Zonal data inserted successfully.")
+# Read JSON file
+with open(json_file_path, "r", encoding="utf-8") as file:
+    data = json.load(file)  # Load JSON data
+
+# Insert into MongoDB
+if isinstance(data, list):  
+    # If the JSON file contains a list of documents
+    collection.insert_many(data)
+else:
+    # If the JSON file contains a single document
+    collection.insert_one(data)
+
+print("JSON data inserted into MongoDB successfully!")
+
+# Close the MongoDB connection
+client.close()
+
+def insert_department_research_data():
+    collection = db['department_research_data']
     
-def insert_sports_Zonal_images():
-    collection = db["sports_data"]
-    with open("/Velammal-Engineering-College-Backend/docs/zonal_images.json", "r") as file:
-        documents = json.load(file)
-        collection.insert_many(documents)
+    folder_path = "/Velammal-Engineering-College-Backend/docs/new_research_data"
+    
+    for file_name in os.listdir(folder_path):
+        if file_name.endswith(".json"):
+            file_path = os.path.join(folder_path, file_name)
+            
+            try:
+                with open(file_path, "r") as file:
+                    document = json.load(file)
+                    collection.insert_one(document)
+                    print(f"Inserted: {file_name}")
+            except Exception as e:
+                print(f"Error inserting {file_name}: {e}")
+    
+    print("All available documents inserted successfully.")
 
-    print("Sports Zonal images data inserted successfully.")
-
-def insert_sports_faculty_data():
-    collection = db["sports_data"]
-    with open("/Velammal-Engineering-College-Backend/docs/sports_faculty.json", "r") as file:
-        documents = json.load(file)
-        collection.insert_one(documents)
-
-    print("sports faculty data inserted successfully.")
-
-#insert_sports_Zonal_results()
-#insert_sports_Zonal_images()
-insert_sports_faculty_data()
+insert_department_research_data()

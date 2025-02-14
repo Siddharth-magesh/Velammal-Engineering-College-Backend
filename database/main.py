@@ -1055,6 +1055,24 @@ def insert_overall_department_research():
     
     print("inserted overall research data")
 
+def insert_department_research_data():
+    collection = db['department_research_data']
+    
+    folder_path = "/Velammal-Engineering-College-Backend/docs/new_research_data"
+    
+    for file_name in os.listdir(folder_path):
+        if file_name.endswith(".json"):
+            file_path = os.path.join(folder_path, file_name)
+            
+            try:
+                with open(file_path, "r") as file:
+                    document = json.load(file)
+                    collection.insert_one(document)
+            except Exception as e:
+                print(f"Error inserting {file_name}: {e}")
+    
+    print("All available Department Research documents inserted successfully.")
+
 insert_sports_Zonal_results()
 insert_sports_Zonal_images()
 insert_sports_faculty_data()
@@ -1066,6 +1084,7 @@ insert_nss_personnel()
 insert_nss_carousal()
 insert_yrc_data()
 insert_overall_department_research()
+insert_department_research_data()
 
 #OLD RESEARCH ENDPOINTS DATA INSERTIONS
 

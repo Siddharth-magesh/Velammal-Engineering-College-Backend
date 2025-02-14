@@ -259,31 +259,18 @@ app.get('/api/curriculum/:deptId', async (req, res) => {
     }
 });
 
-//Research Data
-app.get('/api/fetch-research-data/:dept_id/:year', async (req, res) => {
-    const { dept_id, year } = req.params;
-
-    if (!dept_id || !year) {
-        return res.status(400).json({ error: 'Both dept_id and year are required' });
-    }
-
-    const db = client.db(dbName);
-    const collection = db.collection('research_data');
-
+//get reseatch department data
+app.post('/api/fetch_dept_research_data', async (req, res) => {
     try {
-        const result = await collection.find({
-            dept_id: dept_id,
-            "data.data.year": year
-        }).toArray();
-
-        if (result.length === 0) {
-            return res.status(404).json({ message: 'No research data found for the given department and year' });
-        }
-
-        res.status(200).json(result);
+        await client.connect();
+        const db = client.db(dbName);
+        const collection = db.collection('department_research_data');
+        const { dept_id } = req.body;
+        const dept_data = await collection.findOne({ department_id : dept_id }).toArray();
+        res.status(200).json(dept_data);
     } catch (error) {
-        console.error("❌ Error fetching research data:", error);
-        res.status(500).json({ error: "Error fetching research data" });
+        console.error("❌ Error fetching recent events:", error);
+        res.status(500).json({ error: "Error fetching recent events" });
     }
 });
 
