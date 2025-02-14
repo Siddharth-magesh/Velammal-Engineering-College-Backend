@@ -2,14 +2,15 @@
   {
     "supporting_staff": [
       {
-        "Name": "Dr. Jane Smith",
+        "Name": "Ms. S. Indumathi",
         "Image": "/static/images/support_staffs/example.jpg",
-        "Designation": "Research Scientist",
+        "Qualification": "M.SC(IT).",
+        "Designation": "Lab Instructor",
         "Social_media_links": {
-          "Publon": "https://publons.com/researcher/12345/jane-smith/",
-          "LinkedIn": "https://linkedin.com/in/jane-smith/",
-          "GitHub": "https://github.com/jane-smith",
-          "ResearchGate": "https://www.researchgate.net/profile/Jane_Smith"
+          "Publon": null,
+          "LinkedIn": null,
+          "GitHub": null,
+          "ResearchGate": null
         },
         "Unique_id": "VEC-013-01-160"
       },

@@ -74,7 +74,7 @@
         "department_id": "006",
         "department_name": "Computer Science and Engineering (CYBER SECURITY)",
         "department_image": "/static/images/department_data/cyber.jpg",
-        "department_quotes": "Powering the future.",
+        "department_quotes": "Securing tomorrow’s technology with today’s intelligence",
         "vision": "To provide comprehensive coverage and Hands-on Experience to enrich the knowledge of the student and also focus on Industry standards. To grab the attention of students in the area of Research, Critical Thinking and Problem-Solving",
         "mission": [
             "To make the students understand basics of Cryptography and Network Security.",
@@ -83,7 +83,7 @@
             "To equip students in Ethical Hacking and Penetration Testing"
         ],
         "newsletter_path": "/static/docs/dapartment_data/cyber_newsletter.pdf",
-        "about_department": ["The Department of Computer Science and Engineering (Cyber Security) was started in the academic year 2023-24 with an intake of 60 students.","The Department of Computer Science and Engineering (Cyber Security) has competent and committed faculty with specialization in the areas of Cyber Security, Artificial Intelligence, Machine Learning and Big Data."]
+        "about_department": ["The Computer Science and Engineering (Cyber Security) course is a specialized branch of CSE that focuses on securing digital systems, networks, and data from cyber threats. It combines core computer science principles with specialized knowledge in Cyber Security. This program provides a strong foundation in computer science along with in-depth training in Cyber Security techniques, Ethical hacking, Cryptography, and Network Security. The curriculum is designed to equip students with skills to detect, prevent, and respond to cyber threats. It is a highly specialized and rewarding field with excellent career prospects. With Cyber threats increasing worldwide, there is a huge demand for skilled Cyber Security professionals. By combining technical expertise, ethical hacking skills, and knowledge of cyber laws, students can build a successful career in Cyber Security."]
     },
     {
         "department_id": "007",
@@ -131,15 +131,13 @@
         "department_id": "010",
         "department_name": "English ",
         "department_image": "/static/images/department_data/eng.jpg",
-        "department_quotes": "Driving innovation forward.",
-        "vision": "To be a center of excellence in automobile engineering education and innovation.",
+        "department_quotes": "Mastering the art of communication: one lesson at a time",
+        "vision": "To empower engineering students with effective communication skills, critical thinking, and creative expression, enabling them to excel as global professionals, innovators, and leaders, while fostering a culture of linguistic excellence, intellectual curiosity, and lifelong learning.”",
         "mission": [
-            "Provide expertise in automotive technologies.",
-            "Encourage research in sustainable and electric vehicles.",
-            "Prepare industry-ready professionals for the automotive sector."
+            "To develop engineering students' communication, critical thinking, and soft skills through innovative teaching, mentoring, and assessment methods, enabling them to articulate ideas, collaborate effectively, and succeed in their academic, professional, and personal pursuits."
         ],
         "newsletter_path": "/static/docs/dapartment_data/eng_newsletter.pdf",
-        "about_department": ["Department of Artificial Intelligence aims to produce computing graduates with high potency, apply, design and develop systems to pertain and to integrate both software and hardware devices, utilize modern approaches in programming and problem solving techniques."," The Department was established in the year 2020 with the main objective of providing quality education in the field of Engineering and Technology."," It is recognized as nodal center under Anna University. The Department has proved to be a center of excellence in Academic, Sponsored research and Continuing Education Programme."]
+        "about_department": ["The Department of English has been in a dynamic existence since the inception of the college equipping the budding engineers with commendable communication skills in order to meet the ever growing demands of industry, business, public and private organizations as well as academic and human services. The Department boasts of practical curricula with a high degree of professional relevance, enabling students to face real time challenges. The faculty of the department are known for their committed teaching, individualized explorative bent of mind and close mentoring. We are delighted to extend our academic support to the institution in all its recognitions."]
     },
     {
         "department_id": "011",

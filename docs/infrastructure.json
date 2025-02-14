@@ -58,11 +58,8 @@
         "dept_id": "006",
         "department_name": "Computer Science and Engineering (CYBER SECURITY)",
         "infrastructure_images": [
-            {"image_path": "/static/images/infrastructure/cyber_1.jpg", "image_name": "Image 6_1", "image_content": "Description of Image 6_1"},
-            {"image_path": "/static/images/infrastructure/cyber_2.jpg", "image_name": "Image 6_2", "image_content": "Description of Image 6_2"},
-            {"image_path": "/static/images/infrastructure/cyber_3.jpg", "image_name": "Image 6_3", "image_content": "Description of Image 6_3"},
-            {"image_path": "/static/images/infrastructure/cyber_4.jpg", "image_name": "Image 6_4", "image_content": "Description of Image 6_4"},
-            {"image_path": "/static/images/infrastructure/cyber_5.jpg", "image_name": "Image 6_5", "image_content": "Description of Image 6_5"}
+            {"image_path": "/static/images/infrastructure/006/1.png", "image_name": "KIRLOSKAR BLOCK  III FLOOR", "image_content": null},
+            {"image_path": "/static/images/infrastructure/006/2.jpg", "image_name": "II YEAR CSE(CYBER SECURITY) - CLASS ROOM", "image_content": null}
         ]
     },
     {
@@ -102,11 +99,8 @@
         "dept_id": "010",
         "department_name": "English",
         "infrastructure_images": [
-            {"image_path": "/static/images/infrastructure/eng_1.jpg", "image_name": "Image 10_1", "image_content": "Description of Image 10_1"},
-            {"image_path": "/static/images/infrastructure/eng_2.jpg", "image_name": "Image 10_2", "image_content": "Description of Image 10_2"},
-            {"image_path": "/static/images/infrastructure/eng_3.jpg", "image_name": "Image 10_3", "image_content": "Description of Image 10_3"},
-            {"image_path": "/static/images/infrastructure/eng_4.jpg", "image_name": "Image 10_4", "image_content": "Description of Image 10_4"},
-            {"image_path": "/static/images/infrastructure/eng_5.jpg", "image_name": "Image 10_5", "image_content": "Description of Image 10_5"}
+            {"image_path": "/static/images/infrastructure/010/1.jpg", "image_name": "Communicative Skills Lab", "image_content": null},
+            {"image_path": "/static/images/infrastructure/010/2.jpg", "image_name": "Department Staff room photo", "image_content": null}
         ]
     },
     {

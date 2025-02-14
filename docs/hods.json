@@ -133,30 +133,33 @@
         }
     },
     {
-        "Name": "Dr.S. Rajalakshmi",
+        "Name": "Dr.S.Rajalakshmi ",
         "department_name": "Computer Science and Engineering (CYBER SECURITY)",
         "Unique_id": "VEC-006-01-135",
         "Qualification": ["M.E", "PhD"],
         "Hod_message": ["It is my privilege to lead a dedicated team that works tirelessly to provide cutting-edge education and hands-on experience in the field of Cyber Security. Our curriculum focuses on key areas like network security, ethical hacking, and data protection, preparing students to tackle the challenges of a rapidly evolving digital world. With a strong emphasis on practical learning, industry collaboration, and innovation, we aim to equip our students with the skills necessary to secure the digital future."],
         "Image": "/static/images/hods/cyber.jpg",
-        "designation":"Professor and Head, Dept of Computer Science and Engineering (Cyber Security)",
+        "designation":"Associate Professor & Head, Department of CSE(Cyber Security)",
         "Social_media_links": {
-            "LinkedIn": null,
-            "Google Scholar": null,
-            "Scopus": null
+            "LinkedIn": "www.linkedin.com/in/rajalakshmi-srinivasan-a14927161",
+            "Google Scholar": "https://scholar.google.com/citations?user=vQoy5VEAAAAJ&hl=en",
+            "Scopus": "https://www.scopus.com/authid/detail.uri?authorId=58321740200",
+            "Orchid":"https://orcid.org/my-orcid?orcid=0000-0002-2963-9057",
+            "Research Gate": "https://www.researchgate.net/profile/S-Rajalakshmi-2"
         }
-    }, 
+    },
+
     {
-        "Name": "Dr. S. PRAVEENA",
+        "Name": "Mr. BASKARAN V",
         "department_name": "English",
         "Unique_id": "VEC-010-01-140",
-        "Qualification": ["M.A", "PhD"],
-        "Hod_message": ["I feel privileged to lead a team of talented and experienced faculty members. AI & DS is the most conspicuous technology transforming the facet of industry and mankind. This course is specially designed to enable students to build intelligent machines, software, or applications with a cutting-edge combination of Machine Learning, Deep Learning, Analytics, and Visualization technologies.", "Our department aims to produce skilled professionals in the domain of AI and DS and enable them to excel professionally. It also provides state-of-the-art laboratory facilities to the students to get better practical exposure and strong ties with industry, research organizations, and the community at large."],
+        "Qualification": ["M.A", "M.Phil."],
+        "Hod_message": ["He plays a pivotal role in steering the department towards its designated goals. His qualification includes M.A, M. Phil, and he has been teaching English for the past 32 years. If the USP of the department is the application of technology in teaching and training, he is the motivator. With his knowledge of grammar and polite demeanour he has been instrumental in fostering a conducive learning environment, encouraging both faculty and students to embrace innovative methods while maintaining a strong foundation in language proficiency."],
         "Image": "/static/images/hods/eng.jpg",
-        "designation": "Professor and Head, Dept of Artificial Intelligence and Data Science",
+        "designation": "Assistant Professor III and HOD",
         "Social_media_links": {
-            "LinkedIn": "https://www.linkedin.com/in/s-praveena/",
-            "Google Scholar": "https://scholar.google.com/citations?user=sPraveena&hl=en"
+            "LinkedIn": "https://www.linkedin.com/in/vhod-english-47812162/",
+            "Google Scholar": "https://scholar.google.com/citations?view_op=new_profile&hl=en"
         }
     },
     {

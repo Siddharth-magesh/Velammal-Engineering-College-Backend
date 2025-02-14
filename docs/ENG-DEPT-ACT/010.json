@@ -1,0 +1,62 @@
+[
+    {
+        "dept_id": "010",
+        "department_name": "English ",
+        "dept_activities": [
+          {
+            "date": "26/03/2024",
+            "name_of_event": "How to be a Technopreneur - A seminar and QA session",
+            "coordinator": "Mr. A. Balaji",
+            "resource_person": "Mr. M. Yuvaraj, Founder &IIC Coordinator,Ilakkanam Pvt. Ltd.",
+            "beneficiaries": "I year Students",
+            "relevant_PO_PSO": "PO-10",
+            "image_path": ["/static/images/dept_activities/010/1.jpg","/static/images/dept_activities/010/2.jpg"]
+          },
+          {
+            "date": "02/06/2022",
+            "name_of_event": "Rendezvous – A Role Play Competition",
+            "coordinator": "Mr. V. Anand",
+            "resource_person": "Mr. V. Baskaran, HOD-English",
+            "beneficiaries": "I,II and III year Students",
+            "relevant_PO_PSO": "PO-10",
+            "image_path": ["/static/images/dept_activities/010/5.jpg","/static/images/dept_activities/010/6.jpg"]
+          },
+          {
+            "date": "05/05/2022",
+            "name_of_event": "Games Console – An Oral Review Competition",
+            "coordinator": "Mr. A. Balaji",
+            "resource_person": "Mr. V. Baskaran, HOD-English",
+            "beneficiaries": "I,II and III year Students",
+            "relevant_PO_PSO": "PO-10",
+            "image_path": ["/static/images/dept_activities/010/7.jpg","/static/images/dept_activities/010/8.jpg","/static/images/dept_activities/010/9.jpg"]
+          },
+          {
+            "date": "06/12/2022",
+            "name_of_event": "Yolo- You Laugh You Lose: A Dad Jokes Competition",
+            "coordinator": "Mr. A. Balaji",
+            "resource_person": "Mr. V. Baskaran, HOD-English",
+            "beneficiaries": "I,II and III year Students",
+            "relevant_PO_PSO": "PO-10",
+            "image_path": ["/static/images/dept_activities/010/3.jpg","/static/images/dept_activities/010/4.jpg"]
+          },
+          {
+            "date": "18/09/2021",
+            "name_of_event": "Luck of the Draw – A Logo Design and Presentation Competition",
+            "coordinator": "Mr. A. Balaji",
+            "resource_person": "Mr. V. Baskaran, HOD-English",
+            "beneficiaries": "I,II and III year Students",
+            "relevant_PO_PSO": "PO-10",
+            "image_path": ["/static/images/dept_activities/010/10.jpg","/static/images/dept_activities/010/11.jpg"]
+          },
+          {
+            "date": "20/08/2019",
+            "name_of_event": "APP-OLOGY – An App Presentation Contest",
+            "coordinator": "Mr. A. Balaji",
+            "resource_person": "Mr. V. Baskaran, HOD-English",
+            "beneficiaries": "I,II and III year Students",
+            "relevant_PO_PSO": "PO-10",
+            "image_path": ["/static/images/dept_activities/010/12.jpg","/static/images/dept_activities/010/13.jpg","/static/images/dept_activities/010/14.png"]
+          }
+        ]
+      }
+    ] 

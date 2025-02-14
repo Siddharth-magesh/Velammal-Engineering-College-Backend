@@ -260,8 +260,8 @@
         "dept_id": "006",
         "department_name": "Computer Science and Engineering (CYBER SECURITY)   ",
         "regulation": {
-        "year":["2020", "2021", "2022"],
-	    "pdf_path":["/static/docs/curriculum/006/reg_20.pdf","/static/docs/curriculum/006/reg_21.pdf","/static/docs/curriculum/006/reg_22.pdf"]
+        "year":["2023"],
+	    "pdf_path":["/static/docs/curriculum/006/reg_23.pdf"]
 
         },
         "academic_year": {
@@ -288,8 +288,8 @@
         "program_specific_outcomes": {
             "headings":["PSO01","PSO02"],
 	        "content":[
-                "Apply the concepts of Artificial Intelligence to provide solutions for the real time problems and to integrate the professional skills with recent tools and technologies to cope with the dynamic AI needs.",
-                "Create a concrete foundation and enlighten the innovation, research and entrepreneur skills in the field of Artificial Intelligence and Data science."
+                "Ability to understand, analyse and develop computer programs in the areas related to networking, cryptography, web development and database management by adhering software development life cycle.",
+                "Graduate students will be able to develop data, resource, and asset protection strategies for organizations, processes, peoples, and individuals through Cyber security-centric skills."
             ]
         },
         "key_highlights": [
@@ -307,6 +307,7 @@
             "Text Analytics"
         ]
     },
+
     {
         "dept_id": "007",
         "department_name": "Electrical & Electronics Engineering  (EEE) ",
@@ -464,8 +465,8 @@
         "dept_id": "010",
         "department_name": "English ",
         "regulation": {
-        "year":["2020", "2021", "2022"],
-	    "pdf_path":["/static/docs/curriculum/010/reg_20.pdf","/static/docs/curriculum/010/reg_21.pdf","/static/docs/curriculum/010/reg_22.pdf"]
+        "year":[],
+	    "pdf_path":[]
 
         },
         "academic_year": {
@@ -490,11 +491,8 @@
                 ]
         },
         "program_specific_outcomes": {
-            "headings":["PSO01","PSO02"],
-	        "content":[
-                "Apply the concepts of Artificial Intelligence to provide solutions for the real time problems and to integrate the professional skills with recent tools and technologies to cope with the dynamic AI needs.",
-                "Create a concrete foundation and enlighten the innovation, research and entrepreneur skills in the field of Artificial Intelligence and Data science."
-            ]
+            "headings":[],
+	        "content":[]
         },
         "key_highlights": [
             "Key Highlight 1: Description of key highlight 1",
@@ -511,6 +509,8 @@
             "Text Analytics"
         ]
     },
+
+
     {
         "dept_id": "011",
         "department_name": "Information Technology (IT)",
