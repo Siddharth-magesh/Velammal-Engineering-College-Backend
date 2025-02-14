@@ -1,0 +1,43 @@
+[
+    {
+        "name":[
+            "Ramesh Kumar",
+            "Praveen Hari S",
+            "Neena V",
+            "Aram Valartha Nayaki K",
+            "Logesh G",
+            "Siddharth M",
+            "Tarakeshwaran S",
+            "Mithun RAj S",
+            "Jothi Lakshmi",
+            "Akshaya S",
+            "Dakshan B"
+        ],
+        "designation":[
+            "coordinator",
+            "chairman",
+            "vice chairman",
+            "secretary",
+            "treasurer",
+            "Tech Head",
+            "Tech Head",
+            "non-tech Head",
+            "non-tech Head",
+            "joint secretary",
+            "joint secretary"
+        ],
+        "image_path":[
+            "static/images/yrc_personnel/1.jpg",
+            "static/images/yrc_personnel/2.jpg",
+            "static/images/yrc_personnel/3.jpg",
+            "static/images/yrc_personnel/4.jpg",
+            "static/images/yrc_personnel/5.jpg",
+            "static/images/yrc_personnel/6.jpg",
+            "static/images/yrc_personnel/7.jpg",
+            "static/images/yrc_personnel/8.jpg",
+            "static/images/yrc_personnel/9.jpg",
+            "static/images/yrc_personnel/10.jpg",
+            "static/images/yrc_personnel/11.jpg"
+        ]
+    }
+]

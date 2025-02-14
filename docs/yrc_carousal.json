@@ -1,0 +1,32 @@
+[
+    {
+        "image_path": [
+            "/static/images/nss_carousal/1.jpg",
+            "/static/images/nss_carousal/2.jpg",
+            "/static/images/nss_carousal/3.jpg",
+            "/static/images/nss_carousal/4.jpg",
+            "/static/images/nss_carousal/5.jpg",
+            "/static/images/nss_carousal/6.jpg",
+            "/static/images/nss_carousal/7.jpg",
+            "/static/images/nss_carousal/8.jpg",
+            "/static/images/nss_carousal/9.jpg",
+            "/static/images/nss_carousal/10.jpg",
+            "/static/images/nss_carousal/11.jpg",
+            "/static/images/nss_carousal/12.jpg"
+        ],
+        "image_content": [
+            "Republic Day",
+            "Anti-Drug Awareness Beach Rally",
+            "Eco-Park Cleaning",
+            "Eye Camp",
+            "Traffic Awareness",
+            "Aram Pongal Event",
+            "Campaign",
+            "Eegai",
+            "Vanam Padaipu",
+            "Ignite",
+            "NSS Day",
+            "Thooimai Nagaram"
+        ]
+    }
+]

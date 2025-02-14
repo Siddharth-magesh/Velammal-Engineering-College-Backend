@@ -1123,6 +1123,7 @@ app.post('/api/get_grevience', async (req, res) => {
     }
 });
 
+//fetch NSS Data
 app.get('/api/fetch_nss_data', async (req, res) => {
     try {
         await client.connect();
@@ -1135,6 +1136,25 @@ app.get('/api/fetch_nss_data', async (req, res) => {
         }
 
         return res.status(200).json(nss_data);
+    } catch (error) {
+        console.error("Error fetching NSS data:", error);
+        return res.status(500).json({ error: "Internal server error" });
+    } 
+});
+
+//Fetch YRC data
+app.get('/api/fetch_yrc_data', async (req, res) => {
+    try {
+        await client.connect();
+        const db = client.db(dbName);
+        const yrcCollection = db.collection("yrc_data");
+        const yrc_data = await yrcCollection.find({}).toArray();
+
+        if (yrc_data.length === 0) {
+            return res.status(204).send();
+        }
+
+        return res.status(200).json(yrc_data);
     } catch (error) {
         console.error("Error fetching NSS data:", error);
         return res.status(500).json({ error: "Internal server error" });
