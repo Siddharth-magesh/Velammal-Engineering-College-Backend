@@ -2,8 +2,8 @@
     {
         "unique_id":"001",
         "warden_name":"Donald",
-        "primary_year":1,
-        "secondary_year":3,
+        "primary_year":[1,2],
+        "secondary_year":[3,4],
         "phone_number":1234567890,
         "image_path":"/static/images/warden_profile_photos/001.jpeg",
         "active":true,
@@ -14,8 +14,8 @@
     {
         "unique_id":"002",
         "warden_name":"Duck",
-        "primary_year":2,
-        "secondary_year":1,
+        "primary_year":[3,4],
+        "secondary_year":[1,2],
         "phone_number":1234567890,
         "image_path":"/static/images/warden_profile_photos/002.jpeg",
         "active":true,
@@ -26,13 +26,25 @@
     {
         "unique_id":"003",
         "warden_name":"Mark",
-        "primary_year":3,
-        "secondary_year":2,
+        "primary_year":[1,2],
+        "secondary_year":[3,4],
         "phone_number":1234567890,
         "image_path":"/static/images/warden_profile_photos/003.jpeg",
         "active":false,
         "password":"$2b$10$JpZsEiEj7l3JwMSsCDCBbOmJ5.UNNouWOJE1BbmGyK.dIqcqAGNiS",
-        "gender":"male",
+        "gender":"female",
+        "category":"assitant"
+    },
+    {
+        "unique_id":"005",
+        "warden_name":"NewMark",
+        "primary_year":[3,4],
+        "secondary_year":[1,2],
+        "phone_number":1234567890,
+        "image_path":"/static/images/warden_profile_photos/005.jpeg",
+        "active":true,
+        "password":"$2b$10$JpZsEiEj7l3JwMSsCDCBbOmJ5.UNNouWOJE1BbmGyK.dIqcqAGNiS",
+        "gender":"female",
         "category":"assitant"
     },
     {

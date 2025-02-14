@@ -629,10 +629,17 @@ app.post('/api/change_food_type', async (req, res) => {
 
         const newFoodType = student.foodtype === 'Veg' ? 'Non-Veg' : 'Veg';
 
-        let warden = await wardensCollection.findOne({ primary_year: student.year, active: true });
+        let warden = await wardensCollection.findOne({ 
+            primary_year: { $in: [student.year] }, 
+            active: true 
+        });
+        
         if (!warden) {
-            warden = await wardensCollection.findOne({ secondary_year: student.year, active: true });
-        }
+            warden = await wardensCollection.findOne({ 
+                secondary_year: { $in: [student.year] }, 
+                active: true 
+            });
+        }        
         if (!warden) {
             return res.status(403).json({ message: 'No active warden found for this student year' });
         }
@@ -676,8 +683,8 @@ app.get('/api/food_requests_changes', async (req, res) => {
             return res.status(404).json({ error: "Warden not found" });
         }
 
-        const primary_year = warden.primary_year;
-        const requests = await requestsCollection.find({ year: primary_year }).toArray();
+        const primary_years = warden.primary_year;
+        const requests = await requestsCollection.find({ year: { $in: primary_years } }).toArray();
 
         res.status(200).json({ requests });
     } catch (error) {
@@ -796,7 +803,7 @@ app.get('/api/profile_request_changes', async (req, res) => {
         }
 
         const primary_year = warden.primary_year;
-        const requests = await requestsCollection.find({ year: primary_year }).toArray();
+        const requests = await requestsCollection.find({ year: { $in: primary_year } }).toArray();
 
         res.status(200).json({ requests });
     } catch (error) {
@@ -892,7 +899,7 @@ app.get('/api/get_student_details', async (req, res) => {
             return res.status(404).json({ error: "Warden not found" });
         }
         
-        const student_data = await studentCollection.find({ year: year }).toArray();
+        const student_data = await studentCollection.find({ year: { $in: year } }).toArray();
        
         if (student_data.length === 0) {
             return res.status(404).json({ message: "No data found" });
@@ -920,8 +927,11 @@ app.get('/api/pending_passes', async (req, res) => {
         const warden_data = await wardenCollection.findOne({ unique_id : warden_id });
         const warden_primary_year = warden_data.primary_year;
         
-        const pendingPasses = await passCollection.find({ request_completed: false, year: warden_primary_year }).toArray();
-        
+        const pendingPasses = await passCollection.find({ 
+            request_completed: false, 
+            year: { $in: warden_primary_year } 
+        }).toArray();
+
         if (pendingPasses.length === 0) {
             return res.status(404).json({ message: "No pending passes found" });
         }
@@ -963,9 +973,9 @@ app.post('/api/warden_accept', async (req, res) => {
                 message: `The Following wardern ${passData.authorised_warden_id} have already ${passData.wardern_approval ? "approved" : "rejected"} this request. If you haven't approved this request, please contact the warden.`,
             });
         }
-        if (warden_data.primary_year !== passData.year) {
+        if (!warden_data.primary_year.includes(passData.year)) {
             return res.status(400).json({ error: "Warden is accessing the wrong year" });
-        }
+        }        
 
         const student_registration_number = passData.registration_number;
         const qrPath = await generateQR(pass_id, student_registration_number);
@@ -1007,9 +1017,9 @@ app.post('/api/warden_not_accept', async (req, res) => {
             return res.status(404).json({ error: "Pass not found" });
         }
 
-        if (warden_data.primary_year !== passData.year) {
+        if (!warden_data.primary_year.includes(passData.year)) {
             return res.status(400).json({ error: "Warden is accessing the wrong year" });
-        }
+        }        
 
         if (passData.wardern_approval !== null) {
             return res.status(400).json({
@@ -1136,6 +1146,32 @@ app.get('/api/food_count', async (req, res) => {
             veg_count: vegCount, 
             non_veg_count: nonVegCount 
         });
+    } catch (err) {
+        console.error("❌ Error:", err);
+        res.status(500).json({ error: "Server error" });
+    }
+});
+
+//warden sidebar
+app.get('/api/sidebar_warden', async (req, res) => { 
+    if (!req.session || (!req.session.wardenauth && !req.session.superiorauth)) {
+        return res.status(401).json({ error: "Unauthorized access" });
+    }
+
+    try {
+        await client.connect();
+        const db = client.db(dbName);
+        const wardenCollection = db.collection("warden_database");
+        const warden_id = req.session.unique_number;
+        const warden_data = await wardenCollection.findOne({ unique_id : warden_id });
+        res.json({
+            "name" : warden_data.warden_name,
+            "primary year" : warden_data.primary_year,
+            "Secondary year": warden_data.secondary_year,
+            "Phone number": warden_data.phone_number,
+            "image_path" : warden_data.image_path,
+            "Active Status": warden_data.active
+        })
     } catch (err) {
         console.error("❌ Error:", err);
         res.status(500).json({ error: "Server error" });
