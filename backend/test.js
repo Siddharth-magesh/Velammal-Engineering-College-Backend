@@ -10,10 +10,34 @@ const fs = require('fs');
 const twilio = require('twilio');
 const moment = require("moment");
 require("moment-timezone");
+const multer = require('multer');
 
 const app = express();
 const port = process.env.PORT || 6000;
 
+const storagePath = 'D:/Velammal-Engineering-College-Backend/static/student_docs';
+if (!fs.existsSync(storagePath)) {
+    fs.mkdirSync(storagePath, { recursive: true });
+}
+const storage = multer.diskStorage({
+    destination: function (req, file, cb) {
+        cb(null, storagePath);
+    },
+    filename: function (req, file, cb) {
+        if (!req.session || !req.session.unique_number) {
+            return cb(new Error("Session unique_number is missing"));
+        }
+
+        const uniqueNumber = req.session.unique_number;
+        const date = new Date().toISOString().slice(0, 10).replace(/-/g, '');
+        const extension = path.extname(file.originalname);
+        const filename = `${date}-${uniqueNumber}${extension}`;
+
+        cb(null, filename);
+    }
+});
+
+const upload = multer({ storage: storage });
 app.use(express.json());
 
 app.use(
@@ -259,11 +283,11 @@ app.post('/api/verify_student', async (req, res) => {
 });
 
 // Endpoint to submit pass with parent approval request
-app.post('/api/submit_pass_parent_approval', async (req, res) => {
+app.post('/api/submit_pass_parent_approval', upload.single('file'), async (req, res) => {
     if (!req.session || req.session.studentauth !== true) {
         return res.status(401).json({ error: "Unauthorized access" });
     }
-    
+
     try {
         await client.connect();
         const db = client.db(dbName);
@@ -273,7 +297,7 @@ app.post('/api/submit_pass_parent_approval', async (req, res) => {
         const {
             mobile_number, name, department_name, year, room_no, registration_number,
             block_name, pass_type, from, to, place_to_visit,
-            reason_type, reason_for_visit, file_path
+            reason_type, reason_for_visit
         } = req.body;
 
         if (!mobile_number) {
@@ -288,22 +312,26 @@ app.post('/api/submit_pass_parent_approval', async (req, res) => {
 
         const parentPhoneNumber = student.phone_number_parent;
 
+        const currentDate = new Date();
+        currentDate.setHours(0, 0, 0, 0);
+        const nextDate = new Date(currentDate);
+        nextDate.setDate(nextDate.getDate() + 1);
+
         const activePassCount = await PassCollection.countDocuments({
             mobile_number,
             request_completed: false,
             expiry_status: false,
+            request_time: { $gte: currentDate, $lt: nextDate }
         });
-        
+
         if (activePassCount >= 3) {
-            return res.status(400).json({ error: "Maximum of 3 active passes allowed per student" });
+            return res.status(400).json({ error: "Maximum of 3 active passes allowed per student for today" });
         }
 
-        const existingPass = await PassCollection.findOne({
-            mobile_number,
-            request_completed: false,
-            expiry_status: false,
-            parent_sms_sent_status: true
-        });
+        let file_path = null;
+        if (req.file) {
+            file_path = `/Velammal-Engineering-College-Backend/static/student_docs/${req.file.filename}`;
+        }
 
         const pass_id = uuidv4();
         const PassData = {
@@ -321,7 +349,7 @@ app.post('/api/submit_pass_parent_approval', async (req, res) => {
             place_to_visit,
             reason_type,
             reason_for_visit,
-            file_path: file_path || null,
+            file_path,
             qrcode_path: null,
             parent_approval: null,
             wardern_approval: null,
@@ -335,8 +363,8 @@ app.post('/api/submit_pass_parent_approval', async (req, res) => {
             request_time: new Date(),
             expiry_status: false,
             request_date_time: new Date(),
-            authorised_Security_id : null,
-            authorised_warden_id : null
+            authorised_Security_id: null,
+            authorised_warden_id: null
         };
 
         await PassCollection.insertOne(PassData);
@@ -346,7 +374,7 @@ app.post('/api/submit_pass_parent_approval', async (req, res) => {
             { $set: { parent_sms_sent_status: true } }
         );
 
-        res.status(201).json({ message: "Visitor pass submitted and SMS sent to parent" });
+        res.status(201).json({ message: "Visitor pass submitted and SMS sent to parent", file_path });
 
     } catch (error) {
         console.error("❌ Error:", error);
@@ -355,7 +383,7 @@ app.post('/api/submit_pass_parent_approval', async (req, res) => {
 });
 
 // Endpoint to submit pass with warden and superior approval request
-app.post('/api/submit_pass_warden_approval', async (req, res) => {
+app.post('/api/submit_pass_warden_approval', upload.single('file'), async (req, res) => {
     if (!req.session || req.session.studentauth !== true) {
         return res.status(401).json({ error: "Unauthorized access" });
     }
@@ -369,27 +397,39 @@ app.post('/api/submit_pass_warden_approval', async (req, res) => {
         const {
             mobile_number, name, department_name, year, room_no, registration_number,
             block_name, pass_type, from, to, place_to_visit,
-            reason_type, reason_for_visit, file_path
+            reason_type, reason_for_visit
         } = req.body;
 
         if (!mobile_number) {
             return res.status(400).json({ error: "Mobile number is required" });
         }
 
+        const currentDate = new Date();
+        currentDate.setHours(0, 0, 0, 0);
+        const nextDate = new Date(currentDate);
+        nextDate.setDate(nextDate.getDate() + 1);
+
         const activePassCount = await PassCollection.countDocuments({
             mobile_number,
             request_completed: false,
             expiry_status: false,
+            request_time: { $gte: currentDate, $lt: nextDate }
         });
 
         if (activePassCount >= 3) {
-            return res.status(400).json({ error: "Maximum of 3 active passes allowed per student" });
+            return res.status(400).json({ error: "Maximum of 3 active passes allowed per student for today" });
         }
+
 
         const student = await studentDatabase.findOne({ phone_number_student: mobile_number });
 
         if (!student) {
             return res.status(404).json({ error: "Student record not found" });
+        }
+
+        let file_path = null;
+        if (req.file) {
+            file_path = `/Velammal-Engineering-College-Backend/static/student_docs/${req.file.filename}`;
         }
 
         const pass_id = uuidv4();
@@ -408,7 +448,7 @@ app.post('/api/submit_pass_warden_approval', async (req, res) => {
             place_to_visit,
             reason_type,
             reason_for_visit,
-            file_path: file_path || null,
+            file_path,
             qrcode_path: null,
             parent_approval: null,
             wardern_approval: null,
@@ -422,12 +462,12 @@ app.post('/api/submit_pass_warden_approval', async (req, res) => {
             request_time: new Date(),
             expiry_status: false,
             request_date_time: new Date(),
-            authorised_Security_id : null,
-            authorised_warden_id : null
+            authorised_Security_id: null,
+            authorised_warden_id: null
         };
 
         await PassCollection.insertOne(PassData);
-        res.status(201).json({ message: "Visitor pass submitted and Notified Warden" });
+        res.status(201).json({ message: "Visitor pass submitted and Notified Warden", file_path });
 
     } catch (error) {
         console.error("❌ Error:", error);
@@ -436,7 +476,7 @@ app.post('/api/submit_pass_warden_approval', async (req, res) => {
 });
 
 // Save draft endpoint
-app.post('/api/save_draft', async (req, res) => {
+app.post('/api/save_draft', upload.single('file'), async (req, res) => {
     if (!req.session || req.session.studentauth !== true) {
         return res.status(401).json({ error: "Unauthorized access" });
     }
@@ -450,7 +490,7 @@ app.post('/api/save_draft', async (req, res) => {
         const {
             mobile_number, name, department_name, year, room_no, registration_number,
             block_name, pass_type, from, to, place_to_visit,
-            reason_type, reason_for_visit, file_path
+            reason_type, reason_for_visit
         } = req.body;
 
         if (!mobile_number) {
@@ -461,6 +501,11 @@ app.post('/api/save_draft', async (req, res) => {
 
         if (!student) {
             return res.status(404).json({ error: "Student record not found" });
+        }
+
+        let file_path = null;
+        if (req.file) {
+            file_path = `/Velammal-Engineering-College-Backend/static/student_docs/${req.file.filename}`;
         }
 
         const existingDraft = await DraftsCollection.findOne({ registration_number });
@@ -480,7 +525,7 @@ app.post('/api/save_draft', async (req, res) => {
             place_to_visit,
             reason_type,
             reason_for_visit,
-            file_path: file_path || null,
+            file_path,
             qrcode_path: null,
             parent_approval: null,
             wardern_approval: null,
@@ -494,8 +539,8 @@ app.post('/api/save_draft', async (req, res) => {
             request_time: new Date(),
             expiry_status: false,
             request_date_time: new Date(),
-            authorised_Security_id : null,
-            authorised_warden_id : null
+            authorised_Security_id: null,
+            authorised_warden_id: null
         };
 
         if (existingDraft) {
