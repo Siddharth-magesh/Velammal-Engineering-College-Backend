@@ -220,7 +220,7 @@ app.post('/api/security_login', async (req, res) => {
 });
 
 //Verify Student using mobile number
-app.get('/api/verify_student', async (req, res) => {
+app.post('/api/verify_student', async (req, res) => {
     if (!req.session || req.session.studentauth !== true) {
         return res.status(401).json({ error: "Unauthorized access" });
     }
@@ -228,6 +228,14 @@ app.get('/api/verify_student', async (req, res) => {
     const db = client.db(dbName);
     const usersCollection = db.collection('student_database');
     const { phone_number_student } = req.body;
+    const unique_id = req.session.unique_number;
+    const user_valid = await usersCollection.findOne({registration_number : unique_id });
+    if (!user_valid) {
+        return res.status(401).json({ error: "Couldn't Find the User data" });
+    }
+    if (user_valid.phone_number_student !== phone_number_student) {
+        return res.status(401).json({ error: "Enter Valid Mobile number" });
+    }
     try {
         const user = await usersCollection.findOne({ phone_number_student: String(phone_number_student) });
         if (!user) {
@@ -255,7 +263,7 @@ app.post('/api/submit_pass_parent_approval', async (req, res) => {
     if (!req.session || req.session.studentauth !== true) {
         return res.status(401).json({ error: "Unauthorized access" });
     }
-
+    
     try {
         await client.connect();
         const db = client.db(dbName);
@@ -272,13 +280,6 @@ app.post('/api/submit_pass_parent_approval', async (req, res) => {
             return res.status(400).json({ error: "Mobile number is required" });
         }
 
-        const existingPassCheck = await PassCollection.findOne({
-            mobile_number,
-            request_completed: false,
-            expiry_status: false,
-            parent_sms_sent_status: false
-        });
-
         const student = await studentDatabase.findOne({ phone_number_student: mobile_number });
 
         if (!student) {
@@ -287,13 +288,14 @@ app.post('/api/submit_pass_parent_approval', async (req, res) => {
 
         const parentPhoneNumber = student.phone_number_parent;
 
-        if (existingPassCheck) {
-            await sendParentApprovalSMS(parentPhoneNumber, name, place_to_visit, reason_for_visit, from, to, existingPassCheck.pass_id);
-            await PassCollection.updateOne(
-                { pass_id: existingPassCheck.pass_id },
-                { $set: { parent_sms_sent_status: true } }
-            );
-            return res.status(200).json({ message: "SMS sent to parent successfully" });
+        const activePassCount = await PassCollection.countDocuments({
+            mobile_number,
+            request_completed: false,
+            expiry_status: false,
+        });
+        
+        if (activePassCount >= 3) {
+            return res.status(400).json({ error: "Maximum of 3 active passes allowed per student" });
         }
 
         const existingPass = await PassCollection.findOne({
@@ -302,10 +304,6 @@ app.post('/api/submit_pass_parent_approval', async (req, res) => {
             expiry_status: false,
             parent_sms_sent_status: true
         });
-
-        if (existingPass) {
-            return res.status(200).json({ message: "SMS already sent to parent" });
-        }
 
         const pass_id = uuidv4();
         const PassData = {
@@ -378,20 +376,20 @@ app.post('/api/submit_pass_warden_approval', async (req, res) => {
             return res.status(400).json({ error: "Mobile number is required" });
         }
 
-        const existingPassCheck = await PassCollection.findOne({
+        const activePassCount = await PassCollection.countDocuments({
             mobile_number,
             request_completed: false,
             expiry_status: false,
         });
 
+        if (activePassCount >= 3) {
+            return res.status(400).json({ error: "Maximum of 3 active passes allowed per student" });
+        }
+
         const student = await studentDatabase.findOne({ phone_number_student: mobile_number });
 
         if (!student) {
             return res.status(404).json({ error: "Student record not found" });
-        }
-
-        if (existingPassCheck) {
-            return res.status(200).json({ message: "Notified Warden about the Request" });
         }
 
         const pass_id = uuidv4();
@@ -528,7 +526,7 @@ app.post('/api/fetch_drafts', async (req, res) => {
         const db = client.db(dbName);
         const DraftsCollection = db.collection("drafts_details");
 
-        const { registration_number } = req.body;
+        const registration_number = req.session.unique_number;
         if (!registration_number) {
             return res.status(400).json({ error: "Registration number is required" });
         }
