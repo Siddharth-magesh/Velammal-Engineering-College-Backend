@@ -174,7 +174,8 @@ app.post('/api/login', async (req, res) => {
                 userid: user.userid,
                 name: user.name,
                 type
-            } 
+            },
+            redirect:`${type}`
         });
     } catch (error) {
         console.error(error);
@@ -732,28 +733,32 @@ app.post('/api/request_profile_update', async (req, res) => {
         return res.status(401).json({ error: "Unauthorized access" });
     }
     try {
-        const { registration_number, room_number, phone_number_student, phone_number_parent } = req.body;
+        const { room_number, phone_number_student, phone_number_parent , name } = req.body;
 
         await client.connect();
         const db = client.db(dbName);
         const studentCollection = db.collection('student_database');
-        const tempRequestCollection = db.collection('profile_change_requests'); 
+        const tempRequestCollection = db.collection('profile_change_requests');
+        const registration_number = req.session.unique_number;
         const profile = await studentCollection.findOne({ registration_number });
         if (!profile) {
             return res.status(404).json({ error: "Profile not found" });
         }
         const fromData = {
+            name: profile.name,
             room_number: profile.room_number,
             phone_number_student: profile.phone_number_student,
             phone_number_parent: profile.phone_number_parent
         };
         const toData = {
+            name: name || profile.name,
             room_number: room_number || profile.room_number,
             phone_number_student: phone_number_student || profile.phone_number_student,
             phone_number_parent: phone_number_parent || profile.phone_number_parent
         };
         const updateRequest = {
             registration_number,
+            name: toData.name,
             room_number: toData.room_number,
             year:profile.year,
             phone_number_student: toData.phone_number_student,
@@ -839,6 +844,7 @@ app.post('/api/handle_request', async (req, res) => {
                 { registration_number: updateRequest.registration_number },
                 {
                     $set: {
+                        name: updateRequest.name,
                         room_number: updateRequest.room_number,
                         phone_number_student: updateRequest.phone_number_student,
                         phone_number_parent: updateRequest.phone_number_parent,
