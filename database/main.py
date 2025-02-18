@@ -539,7 +539,7 @@ for _, row in df.iterrows():
 
 def insert_department_data():
     collection = db["vision_and_mission"]
-    with open("/Velammal-Engineering-College-Backend/docs/department_data.json", "r") as file:
+    with open("/Velammal-Engineering-College-Backend/docs/department_data.json", "r",encoding="utf-8") as file:
         documents = json.load(file)
         collection.insert_many(documents)
 
