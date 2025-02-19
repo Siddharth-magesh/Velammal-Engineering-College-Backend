@@ -692,10 +692,19 @@ app.post('/api/change_food_type', async (req, res) => {
             registration_number, 
             name : student.name,
             requested_foodtype: newFoodType, 
-            status: 'Pending', 
+            status: 'Pending',
             year: student.year, 
             assigned_warden: warden.warden_name
         });
+        await studentsCollection.updateOne(
+            { registration_number },
+            { 
+                $set: { edit_status: 'Pending' },
+                $push: {
+                    changes: `food_type: ${newFoodType}, timestamp: ${new Date().toISOString()}`
+                }
+            }
+        );        
 
         res.status(200).json({ message: 'Request submitted for approval', requested_foodtype: newFoodType });
     } catch (error) {
@@ -757,9 +766,27 @@ app.post('/api/approve_food_change', async (req, res) => {
                 { $set: { foodtype: request.requested_foodtype } }
             );
             await requestsCollection.deleteOne({ registration_number, name });
+            await studentsCollection.updateOne(
+                { registration_number },
+                { 
+                    $set: { 
+                        edit_status: 'Approved',
+                        changes: []
+                    }
+                }
+            ); 
             return res.status(200).json({ message: 'Food type change approved', newFoodType: request.requested_foodtype });
         } else if (action === "decline") {
             await requestsCollection.deleteOne({ registration_number, name });
+            await studentsCollection.updateOne(
+                { registration_number },
+                { 
+                    $set: { 
+                        edit_status: 'Declined',
+                        changes: []
+                    }
+                }
+            ); 
             return res.status(200).json({ message: 'Food type change request declined' });
         } else {
             return res.status(400).json({ error: 'Invalid action' });
@@ -799,6 +826,12 @@ app.post('/api/request_profile_update', async (req, res) => {
             phone_number_student: phone_number_student || profile.phone_number_student,
             phone_number_parent: phone_number_parent || profile.phone_number_parent
         };
+        const changes = [];
+        for (const key in fromData) {
+            if (fromData[key] !== toData[key]) {
+                changes.push(`${key}: ${toData[key]}`);
+            }
+        }
         const updateRequest = {
             registration_number,
             name: toData.name,
@@ -814,7 +847,10 @@ app.post('/api/request_profile_update', async (req, res) => {
         await tempRequestCollection.insertOne(updateRequest);
         await studentCollection.updateOne(
             { registration_number },
-            { $set: { edit_status: 'Pending' } }
+            { 
+                $set: { edit_status: 'Pending' },
+                $push: { changes: { $each: changes } }
+            }
         );
 
         res.json({
@@ -891,7 +927,8 @@ app.post('/api/handle_request', async (req, res) => {
                         room_number: updateRequest.room_number,
                         phone_number_student: updateRequest.phone_number_student,
                         phone_number_parent: updateRequest.phone_number_parent,
-                        edit_status: "Approved"
+                        edit_status: "Approved",
+                        changes: []
                     }
                 }
             );
@@ -912,10 +949,19 @@ app.post('/api/handle_request', async (req, res) => {
                 { registration_number },
                 {
                     $set: {
-                        edit_status: "Rejected"
+                        edit_status: "Declined"
                     }
                 }
             );
+            await studentCollection.updateOne(
+                { registration_number: updateRequest.registration_number },
+                { 
+                    $set: { 
+                        edit_status: 'Declined',
+                        changes: []
+                    }
+                }
+            ); 
             res.json({
                 message: "Request rejected",
                 rejected_by: warden.name
