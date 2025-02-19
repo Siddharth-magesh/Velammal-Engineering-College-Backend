@@ -701,7 +701,7 @@ app.post('/api/change_food_type', async (req, res) => {
             { 
                 $set: { edit_status: 'Pending' },
                 $push: {
-                    changes: `food_type: ${newFoodType}, timestamp: ${new Date().toISOString()}`
+                    changes: `food_type: ${newFoodType}`
                 }
             }
         );        
@@ -754,7 +754,7 @@ app.post('/api/approve_food_change', async (req, res) => {
     const { registration_number, name, action } = req.body;
     const db = client.db(dbName);
     const studentsCollection = db.collection('student_database');
-    const requestsCollection = db.collection('food_change_requests');
+    const requestsCollection = db.collection('food_change_requests');  
     try {
         const request = await requestsCollection.findOne({ registration_number, name });
         if (!request) {
@@ -769,23 +769,17 @@ app.post('/api/approve_food_change', async (req, res) => {
             await studentsCollection.updateOne(
                 { registration_number },
                 { 
-                    $set: { 
-                        edit_status: 'Approved',
-                        changes: []
-                    }
-                }
-            ); 
+                    $set: { edit_status: 'Approved' },
+                    $pull: { changes: { $regex: `^food_type: ` } } }
+            );
             return res.status(200).json({ message: 'Food type change approved', newFoodType: request.requested_foodtype });
         } else if (action === "decline") {
             await requestsCollection.deleteOne({ registration_number, name });
             await studentsCollection.updateOne(
                 { registration_number },
                 { 
-                    $set: { 
-                        edit_status: 'Declined',
-                        changes: []
-                    }
-                }
+                    $set: { edit_status: 'Declined' },
+                    $pull: { changes: { $regex: `^food_type: ` } } }
             ); 
             return res.status(200).json({ message: 'Food type change request declined' });
         } else {
@@ -896,7 +890,7 @@ app.get('/api/profile_request_changes', async (req, res) => {
     }
 });
 
-//Superior warden Profile update handling
+// Superior Warden Profile Update Handling
 app.post('/api/handle_request', async (req, res) => {
     if (!req.session || req.session.superiorauth !== true) {
         return res.status(401).json({ error: "Unauthorized access" });
@@ -927,18 +921,23 @@ app.post('/api/handle_request', async (req, res) => {
                         room_number: updateRequest.room_number,
                         phone_number_student: updateRequest.phone_number_student,
                         phone_number_parent: updateRequest.phone_number_parent,
-                        edit_status: "Approved",
-                        changes: []
-                    }
+                        edit_status: "Approved"
+                    },
+                    $pull: {
+                        changes: {
+                            $in: [
+                                `name: ${updateRequest.name}`,
+                                `room_number: ${updateRequest.room_number}`,
+                                `phone_number_student: ${updateRequest.phone_number_student}`,
+                                `phone_number_parent: ${updateRequest.phone_number_parent}`
+                            ]
+                        }
+                    }                    
                 }
             );
             await tempRequestCollection.updateOne(
                 { registration_number },
-                {
-                    $set: {
-                        edit_status: "Approved"
-                    }
-                }
+                { $set: { edit_status: "Approved" } }
             );
             res.json({
                 message: "Request approved and profile updated",
@@ -947,21 +946,24 @@ app.post('/api/handle_request', async (req, res) => {
         } else if (action === "reject") {
             await tempRequestCollection.updateOne(
                 { registration_number },
-                {
-                    $set: {
-                        edit_status: "Declined"
-                    }
-                }
+                { $set: { edit_status: "Declined" } }
             );
             await studentCollection.updateOne(
                 { registration_number: updateRequest.registration_number },
                 { 
-                    $set: { 
-                        edit_status: 'Declined',
-                        changes: []
-                    }
+                    $set: { edit_status: 'Declined' },
+                    $pull: {
+                        changes: {
+                            $in: [
+                                `name: ${updateRequest.name}`,
+                                `room_number: ${updateRequest.room_number}`,
+                                `phone_number_student: ${updateRequest.phone_number_student}`,
+                                `phone_number_parent: ${updateRequest.phone_number_parent}`
+                            ]
+                        }
+                    }                    
                 }
-            ); 
+            );
             res.json({
                 message: "Request rejected",
                 rejected_by: warden.name
