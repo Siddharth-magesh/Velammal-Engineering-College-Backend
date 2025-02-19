@@ -1275,7 +1275,7 @@ app.get('/api/sidebar_warden', async (req, res) => {
     }
 });
 
-//fetch student passes
+// Fetch student passes in stored date order (recent first)
 app.get('/api/get_student_pass', async (req, res) => { 
     if (!req.session || req.session.studentauth !== true) {
         return res.status(401).json({ error: "Unauthorized access" });
@@ -1285,21 +1285,17 @@ app.get('/api/get_student_pass', async (req, res) => {
         await client.connect();
         const db = client.db(dbName);
         const passCollection = db.collection("pass_details");
+
         const passes = await passCollection
-            .find({ 
-                registration_number: student_unique_id
-            })
+            .find({ registration_number: student_unique_id })
             .sort({ request_date_time: -1 })
             .toArray();
 
         if (passes.length === 0) {
             return res.status(404).json({ message: "No passes found" });
         }
-        let pendingPass = passes.find(pass => !pass.request_completed);
-        let completedPasses = passes.filter(pass => pass.request_completed);
-        let sortedPasses = pendingPass ? [pendingPass, ...completedPasses] : completedPasses;
 
-        res.json({ passes: sortedPasses });
+        res.json({ passes });
     } catch (err) {
         console.error("❌ Error:", err);
         res.status(500).json({ error: "Server error" });
