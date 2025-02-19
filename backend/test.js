@@ -1679,6 +1679,21 @@ app.get("/pass_analysis", async (req, res) => {
     }
 });
 
+//logout
+app.get('/api/logout', (req, res) => {
+    if (req.session) {
+        req.session.destroy(err => {
+            if (err) {
+                return res.status(500).json({ error: "Failed to log out" });
+            }
+            res.clearCookie('connect.sid');
+            return res.json({ message: "Logged out successfully" });
+        });
+    } else {
+        return res.status(400).json({ error: "No active session" });
+    }
+});
+
 //to fetch all the active sessions
 app.get('/api/session', (req, res) => {
     if (!req.session) {
