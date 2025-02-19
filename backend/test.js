@@ -313,6 +313,19 @@ app.post('/api/submit_pass_parent_approval', upload.single('file'), async (req, 
         const parentPhoneNumber = student.phone_number_parent;
 
         const currentDate = new Date();
+
+        if (new Date(from) < currentDate) {
+            return res.status(400).json({ error: "From date cannot be in the past" });
+        }
+
+        if (new Date(to) < currentDate) {
+            return res.status(400).json({ error: "To date cannot be in the past" });
+        }
+
+        if (new Date(to) < new Date(from)) {
+            return res.status(400).json({ error: "To date cannot be earlier than From date" });
+        }
+
         currentDate.setHours(0, 0, 0, 0);
         const nextDate = new Date(currentDate);
         nextDate.setDate(nextDate.getDate() + 1);
@@ -409,6 +422,18 @@ app.post('/api/submit_pass_warden_approval', upload.single('file'), async (req, 
         const nextDate = new Date(currentDate);
         nextDate.setDate(nextDate.getDate() + 1);
 
+        if (new Date(from) < currentDate) {
+            return res.status(400).json({ error: "From date cannot be in the past" });
+        }
+
+        if (new Date(to) < currentDate) {
+            return res.status(400).json({ error: "To date cannot be in the past" });
+        }
+
+        if (new Date(to) < new Date(from)) {
+            return res.status(400).json({ error: "To date cannot be earlier than From date" });
+        }
+
         const activePassCount = await PassCollection.countDocuments({
             mobile_number,
             request_completed: false,
@@ -501,6 +526,18 @@ app.post('/api/save_draft', upload.single('file'), async (req, res) => {
 
         if (!student) {
             return res.status(404).json({ error: "Student record not found" });
+        }
+        const currentDate = new Date();
+        if (new Date(from) < currentDate) {
+            return res.status(400).json({ error: "From date cannot be in the past" });
+        }
+
+        if (new Date(to) < currentDate) {
+            return res.status(400).json({ error: "To date cannot be in the past" });
+        }
+
+        if (new Date(to) < new Date(from)) {
+            return res.status(400).json({ error: "To date cannot be earlier than From date" });
         }
 
         let file_path = null;

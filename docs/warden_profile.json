@@ -1,0 +1,52 @@
+[
+    { 
+        "warden_name": "Donald1",
+        "phone_number": 1234567890,
+        "image_path": "/static/images/warden_profile_photos/001.jpeg",
+        "designation": "supreme"
+    },
+    {
+        "warden_name": "Donald2",
+        "phone_number": 1234567890,
+        "image_path": "/static/images/warden_profile_photos/002.jpeg",
+        "designation": "head"
+    },
+    {
+        "male_warden_list": [
+            {
+                "warden_name": "Donald3",
+                "phone_number": 1234567891,
+                "image_path": "/static/images/warden_profile_photos/003.jpeg",
+                "designation": "deputy"
+            },
+            {
+                "warden_name": "Donald4",
+                "phone_number": 1234567892,
+                "image_path": "/static/images/warden_profile_photos/004.jpeg",
+                "designation": "deputy"
+            },
+            {
+                "warden_name": "Donald5",
+                "phone_number": 1234567893,
+                "image_path": "/static/images/warden_profile_photos/005.jpeg",
+                "designation": "deputy"
+            }
+        ]
+    },
+    {
+        "female_warden_list": [
+            {
+                "warden_name": "Donald6",
+                "phone_number": 1234567894,
+                "image_path": "/static/images/warden_profile_photos/006.jpeg",
+                "designation": "deputy"
+            },
+            {
+                "warden_name": "Donald7",
+                "phone_number": 1234567895,
+                "image_path": "/static/images/warden_profile_photos/007.jpeg",
+                "designation": "deputy"
+            }
+        ]
+    }
+]

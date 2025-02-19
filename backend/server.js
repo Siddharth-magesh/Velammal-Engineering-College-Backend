@@ -1172,25 +1172,23 @@ app.post("/api/get_research_data", async (req, res) => {
     }
 });
 
-// Endpoint to fetch warden data
+// Endpoint to fetch all warden data
 app.get("/api/get_warden_data", async (req, res) => {
     try {
         await client.connect();
         const db = client.db(dbName);
-        const wardenCollection = db.collection("warden_database");
+        const wardenCollection = db.collection("warden_profile");
 
-        const warden_details = await wardenCollection
-            .find({}, { projection: { warden_name: 1, phone_number: 1, image_path: 1, _id: 0 } })
-            .toArray();
+        const warden_details = await wardenCollection.find({}).toArray();
 
         if (!warden_details || warden_details.length === 0) {
-            return res.status(404).json({ message: "No assistant wardens found" });
+            return res.status(404).json({ message: "No wardens found" });
         }
 
         res.status(200).json({ wardens: warden_details });
-    
+
     } catch (error) {
-        console.error("Error fetching data:", error);
+        console.error("❌ Error fetching data:", error);
         return res.status(500).json({ error: "Internal server error" });
     }
 });

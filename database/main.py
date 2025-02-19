@@ -1073,6 +1073,14 @@ def insert_department_research_data():
     
     print("All available Department Research documents inserted successfully.")
 
+def insert_warden_hostel_data():
+    collection = db['warden_profile']
+    with open("/Velammal-Engineering-College-Backend/docs/warden_profile.json","r") as file:
+        documents = json.load(file)
+        collection.insert_many(documents)
+    
+    print("inserted warden profile data")
+
 insert_sports_Zonal_results()
 insert_sports_Zonal_images()
 insert_sports_faculty_data()
@@ -1085,6 +1093,7 @@ insert_nss_carousal()
 insert_yrc_data()
 insert_overall_department_research()
 insert_department_research_data()
+insert_warden_hostel_data()
 
 #OLD RESEARCH ENDPOINTS DATA INSERTIONS
 

@@ -3,6 +3,8 @@ import pymongo
 import bcrypt
 import requests
 import os
+import imghdr
+import re
 
 client = pymongo.MongoClient("mongodb://localhost:27017/")
 db = client["VEC"]
@@ -35,21 +37,46 @@ def set_path(drive_link, reg_number):
         return None
 
     image_path = os.path.join(image_dir, f"{reg_number}.jpeg")
-    download_url = f"https://drive.google.com/uc?id={file_id}"
+    session = requests.Session()
 
-    try:
-        response = requests.get(download_url, stream=True)
-        if response.status_code == 200:
-            with open(image_path, "wb") as file:
-                for chunk in response.iter_content(1024):
-                    file.write(chunk)
-            print(f"✅ Downloaded profile photo for {reg_number}")
-            return f"/static/images/student_profile_photos/{reg_number}.jpeg"
-        else:
-            print(f"❌ Failed to download image for {reg_number} (HTTP {response.status_code})")
+    download_url = f"https://drive.google.com/uc?id={file_id}&export=download"
+    
+    print(f"🔍 Trying to download image for {reg_number}")
+    print(f"🔗 Download URL: {download_url}")
+    
+    response = session.get(download_url, stream=True)
+
+    print(f"📄 Response Headers: {response.headers}")
+    
+    if "text/html" in response.headers.get("Content-Type", ""):
+        print(f"⚠️ Received an HTML response instead of an image for {reg_number}. Saving debug file.")
+        debug_path = os.path.join(storage_dir, f"debug_{reg_number}.html")
+        with open(debug_path, "wb") as debug_file:
+            debug_file.write(response.content)
+        print(f"🔎 Check {debug_path} for possible Google Drive warning page.")
+        
+        # Check for a confirmation link
+        match = re.search(r'href="(/uc\?export=download[^"]+)', response.text)
+        if match:
+            confirm_url = "https://drive.google.com" + match.group(1).replace("&amp;", "&")
+            print(f"🔁 Following confirmation URL: {confirm_url}")
+            response = session.get(confirm_url, stream=True)
+
+    # Check if the response is now an image
+    if response.status_code == 200 and "image" in response.headers.get("Content-Type", ""):
+        with open(image_path, "wb") as file:
+            for chunk in response.iter_content(1024):
+                file.write(chunk)
+
+        if imghdr.what(image_path) not in ["jpeg", "jpg"]:
+            print(f"❌ Invalid image format for {reg_number}. Removing corrupt file.")
+            os.remove(image_path)
             return None
-    except Exception as e:
-        print(f"❌ Error downloading image for {reg_number}: {e}")
+
+        print(f"✅ Downloaded profile photo for {reg_number}")
+        return f"/static/images/student_profile_photos/{reg_number}.jpeg"
+    else:
+        print(f"❌ Failed to download image for {reg_number} (Invalid content type: {response.headers.get('Content-Type')})")
         return None
 
 def hash_password(password):
