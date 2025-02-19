@@ -10,7 +10,7 @@ mongo_uri = "mongodb://localhost:27017/"
 db_name = "VEC"
 collection_name = "staff_details"
 
-file_path = r"/Velammal-Engineering-College-Backend/docs/VEC Faculty Details.csv"
+file_path = r"/Velammal-Engineering-College-Backend/docs/VEC_Faculty_Details.csv"
 photo_base_dir = r"/Velammal-Engineering-College-Backend/static/temp_photos/"
 base_save_dir = r"/Velammal-Engineering-College-Backend/static/staff_scholar_details/"
 
