@@ -8,10 +8,13 @@
     "gender": "Female",
     "phone_number_student": "8765432109",
     "phone_number_parent": "9988776655",
-    "city": "Bangalore",
+    "city": "Chennai",
     "foodtype": "Non-Veg",
-    "year": 3,
+    "year": 2,
     "profile_photo_path": "/static/hostel/profile_photos/arjun_kumar.jpg",
-    "block_name": "NCGH",
-    "late_count": 3
+    "block_name": "FCBH",
+    "late_count": 1,
+    "QR_path":"/static/student_barcode/113222072094.png",
+    "edit_status":null,
+    "changes":[]
 }
