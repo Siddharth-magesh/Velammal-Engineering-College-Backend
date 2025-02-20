@@ -1,87 +1,77 @@
-import pandas as pd
-import pymongo
-import bcrypt
-import requests
 import os
+import json
+import re
+import pandas as pd
 
-client = pymongo.MongoClient("mongodb://localhost:27017/")
-db = client["VEC"]
-collection = db["student_database"]
+department_mapping1 = {
+    "001": "Artificial Intelligence and Data Science (AI&DS)",
+    "002": "Automobile Engineering (AUTO)",
+    "003": "Chemistry",
+    "004": "Civil Engineering (CIVIL)",
+    "005": "Computer Science & Engineering (CSE)",
+    "006": "Computer Science and Engineering (CYBER SECURITY)",
+    "007": "Electrical & Electronics Engineering (EEE)",
+    "008": "Electronics & Instrumentation Engineering (EIE)",
+    "009": "Electronics and Communication Engineering (ECE)",
+    "010": "English",
+    "011": "Information Technology (IT)",
+    "012": "Mathematics",
+    "013": "Mechancial Engineering (MECH)",
+    "014": "Physical Education",
+    "015": "Physics"
+}
 
-storage_dir = r"D:\Velammal-Engineering-College-Backend\docs"
-image_dir = r"D:\Velammal-Engineering-College-Backend\static\student_database"
-os.makedirs(storage_dir, exist_ok=True)  
-os.makedirs(image_dir, exist_ok=True)  
+parent_folder = "D:\Velammal-Engineering-College-Backend\docs\depts_fol"
 
-csv_file_path = os.path.join(storage_dir, "VEC_Hostel_Students.csv")
+def convert_df_to_json(df):
+    df = df.astype(str)
+    return {col: df[col].dropna().tolist() for col in df.columns}
 
-df = pd.read_csv(csv_file_path)
-df = df.head(1)
+def format_sheet_name(sheet_name):
+    return sheet_name.lower().replace(" ", "_")
 
-df.columns = df.columns.str.strip()
+def extract_year_from_filename(filename):
+    match = re.search(r"(\d{4}-\d{2})", filename)
+    return match.group(1) if match else "Unknown"
 
-def extract_drive_file_id(drive_link):
-    if isinstance(drive_link, str) and "drive.google.com" in drive_link:
-        if "id=" in drive_link:
-            return drive_link.split("id=")[-1]
-        elif "/d/" in drive_link:
-            return drive_link.split("/d/")[1].split("/")[0]
-    return None
-
-def set_path(drive_link, reg_number):
-    file_id = extract_drive_file_id(drive_link)
-    if not file_id:
-        print(f"⚠️ Invalid Google Drive link for {reg_number}: {drive_link}")
-        return None
-
-    image_path = os.path.join(image_dir, f"{reg_number}.jpeg")
-    download_url = f"https://drive.google.com/uc?id={file_id}"
-
-    try:
-        response = requests.get(download_url, stream=True)
-        if response.status_code == 200:
-            with open(image_path, "wb") as file:
-                for chunk in response.iter_content(1024):
-                    file.write(chunk)
-            print(f"✅ Downloaded profile photo for {reg_number}")
-            return f"/static/images/student_profile_photos/{reg_number}.jpeg"
-        else:
-            print(f"❌ Failed to download image for {reg_number} (HTTP {response.status_code})")
-            return None
-    except Exception as e:
-        print(f"❌ Error downloading image for {reg_number}: {e}")
-        return None
-
-def hash_password(password):
-    return bcrypt.hashpw(password.encode('utf-8'), bcrypt.gensalt()).decode('utf-8')
-
-students = []
-for _, row in df.iterrows():
-    reg_number = str(row["Registration Number (Example : 11322207000)"])
+for department_id in os.listdir(parent_folder):
+    department_path = os.path.join(parent_folder, department_id)
     
-    student_doc = {
-        "name": row["Name (Example : JOHN DOE K)"],
-        "registration_number": reg_number,
-        "password": hash_password(str(row["Password (Format  DD-MM-YYYY)"])),
-        "admin_number": row["Admission Number (Example : 22VEC-000)"],
-        "room_number": row["Room Number (Current)"],
-        "department": row["Department"],
-        "gender": row["Gender"],
-        "phone_number_student": row["Student Phone Number (Example : 9876543210)"],
-        "city": row["City"],
-        "foodtype": row["Food Type"],
-        "year": int(row["Year of Studying"]),
-        "profile_photo_path": set_path(row.get("Student Image", ""), reg_number),
-        "block_name": row["Block Name"],
-        "late_count": 0,
-        "QR_path": f"/static/student_barcode/{reg_number}.png",
-        "edit_status": "Approved",
-        "changes": []
-    }
-    students.append(student_doc)
+    if not os.path.isdir(department_path) or department_id not in department_mapping1:
+        continue
 
-if students:
-    collection.insert_many(students)
-    print(f"✅ Successfully inserted {len(students)} students into MongoDB!")
-else:
-    print("⚠️ No student data to insert.")
+    department_name = department_mapping1[department_id]
+    
+    research_data = []
+
+    for file in os.listdir(department_path):
+        if file.endswith(".xlsx") or file.endswith(".xls"):
+            file_path = os.path.join(department_path, file)
+            
+            year = extract_year_from_filename(file)
+            xls = pd.ExcelFile(file_path)
+            
+            data_dict = {}
+
+            for sheet_name in xls.sheet_names:
+                formatted_sheet_name = format_sheet_name(sheet_name)
+                df = pd.read_excel(xls, sheet_name=sheet_name)
+                data_dict[formatted_sheet_name] = convert_df_to_json(df)
+
+            research_data.append({
+                "year": year,
+                "data": data_dict
+            })
+
+    output_json = {
+        "department_id": department_id,
+        "department_name": department_name,
+        "research_data": research_data
+    }
+    output_file = os.path.join(parent_folder, f"{department_id}.json")
+    with open(output_file, "w", encoding="utf-8") as json_file:
+        json.dump(output_json, json_file, indent=4)
+
+    print(f"✅ Processed {department_name} ({department_id}) → {output_file}")
+
+print("🎉 All department files processed successfully!")

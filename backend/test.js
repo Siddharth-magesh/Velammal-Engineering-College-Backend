@@ -345,6 +345,7 @@ app.post('/api/submit_pass_parent_approval', upload.single('file'), async (req, 
         if (req.file) {
             file_path = `/Velammal-Engineering-College-Backend/static/student_docs/${req.file.filename}`;
         }
+        const yearInt = parseInt(year, 10); 
 
         const pass_id = uuidv4();
         const PassData = {
@@ -352,7 +353,7 @@ app.post('/api/submit_pass_parent_approval', upload.single('file'), async (req, 
             name,
             mobile_number,
             dept: department_name,
-            year,
+            year: yearInt,
             room_no,
             registration_number,
             blockname: block_name,
@@ -456,6 +457,7 @@ app.post('/api/submit_pass_warden_approval', upload.single('file'), async (req, 
         if (req.file) {
             file_path = `/Velammal-Engineering-College-Backend/static/student_docs/${req.file.filename}`;
         }
+        const yearInt = parseInt(year, 10);
 
         const pass_id = uuidv4();
         const PassData = {
@@ -463,7 +465,7 @@ app.post('/api/submit_pass_warden_approval', upload.single('file'), async (req, 
             name,
             mobile_number,
             dept: department_name,
-            year,
+            year: yearInt,
             room_no,
             registration_number,
             blockname: block_name,
@@ -546,13 +548,14 @@ app.post('/api/save_draft', upload.single('file'), async (req, res) => {
         }
 
         const existingDraft = await DraftsCollection.findOne({ registration_number });
+        const yearInt = parseInt(year, 10);
 
         const PassData = {
             pass_id: existingDraft ? existingDraft.pass_id : uuidv4(),
             name,
             mobile_number,
             dept: department_name,
-            year,
+            year: yearInt,
             room_no,
             registration_number,
             blockname: block_name,
@@ -1272,14 +1275,23 @@ app.get('/api/food_count', async (req, res) => {
     try {
         await client.connect();
         const db = client.db(dbName);
+        const unique_id = req.session.unique_number;
+        const wardenCollection = db.collection("warden_database");
         const studentCollection = db.collection("student_database");
-        const vegCount = await studentCollection.countDocuments({ foodtype: "Veg" });
-        const nonVegCount = await studentCollection.countDocuments({ foodtype: "Non-Veg" });
 
-        res.json({ 
-            veg_count: vegCount, 
-            non_veg_count: nonVegCount 
-        });
+        const warden_data = await wardenCollection.findOne({ unique_id });
+        const target_years = warden_data.primary_year;
+
+        let foodCounts = {};
+
+        for (const year of target_years) {
+            const vegCount = await studentCollection.countDocuments({ foodtype: "Veg", year });
+            const nonVegCount = await studentCollection.countDocuments({ foodtype: "Non-Veg", year });
+
+            foodCounts[year] = { veg_count: vegCount, non_veg_count: nonVegCount };
+        }
+
+        res.json(foodCounts);
     } catch (err) {
         console.error("❌ Error:", err);
         res.status(500).json({ error: "Server error" });
@@ -1630,61 +1642,169 @@ app.post('/api/warden_change_foodtype', async (req, res) => {
     }
 });
 
-//analytics main
-app.get("/pass_measures", async (req, res) => {
-    if (!req.session || req.session.wardenauth !== true){
-        return res.status(401).json({ error : "Unauthorised Access"})
+//fetch waiting members name list
+app.post("/api/fetch_waiting_members", async (req, res) => {
+    if (!req.session || req.session.wardenauth !== true) {
+        return res.status(401).json({ error: "Unauthorized Access" });
     }
+
+    try {
+        await client.connect();
+        const db = client.db(dbName);
+        const passCollection = db.collection("pass_details");
+        const { target_year } = req.body;
+
+        const waiting_data = await passCollection.find({
+            year: target_year,
+            re_entry_time: null,
+            request_completed: false
+        }).toArray();
+
+        const names = waiting_data.map(member => member.name);
+
+        res.status(200).json({ waiting_members: names });
+    } catch (error) {
+        console.error("Error fetching data:", error);
+        res.status(500).json({ error: "Internal Server Error" });
+    }
+});
+
+//fetch late members name list
+app.post("/api/fetch_late_members", async (req, res) => {
+    if (!req.session || req.session.wardenauth !== true) {
+        return res.status(401).json({ error: "Unauthorized Access" });
+    }
+
+    try {
+        await client.connect();
+        const db = client.db(dbName);
+        const passCollection = db.collection("pass_details");
+        const { target_year } = req.body;
+
+        const currentTime = new Date();
+        const istOffset = 5.5 * 60 * 60 * 1000;
+        const istTime = new Date(currentTime.getTime() + istOffset);
+
+        const late_members = await passCollection.find({
+            year: target_year,
+            re_entry_time: null,
+            request_completed: false
+        }).toArray();
+
+        const lateList = late_members
+            .map(member => {
+                if (!member.to) return null;
+
+                const toTime = new Date(member.to);
+                if (isNaN(toTime)) return null;
+
+                if (toTime < istTime) {
+                    const diffMs = istTime - toTime;
+                    const diffMinutes = Math.floor(diffMs / 60000);
+                    const hours = Math.floor(diffMinutes / 60);
+                    const minutes = diffMinutes % 60;
+
+                    return {
+                        name: member.name,
+                        late_by: `${hours} hours ${minutes} minutes`
+                    };
+                }
+                return null;
+            })
+            .filter(member => member !== null);
+
+        res.status(200).json({ late_members: lateList });
+    } catch (error) {
+        console.error("Error fetching data:", error);
+        res.status(500).json({ error: "Internal Server Error" });
+    }
+});
+
+// Analytics - Pass Measures
+app.get("/api/pass_measures", async (req, res) => {
+    if (!req.session || req.session.wardenauth !== true) {
+        return res.status(401).json({ error: "Unauthorized Access" });
+    }
+
     try {
         await client.connect();
         const db = client.db(dbName);
         const collection = db.collection("pass_details");
+        const warden_id = req.session.unique_number;
+        const wardenCollection = db.collection("warden_database");
+        const warden_data = await wardenCollection.findOne({ unique_id: warden_id });
+
+        if (!warden_data || !warden_data.primary_year) {
+            return res.status(400).json({ error: "Invalid warden data." });
+        }
+
+        const primary_years = warden_data.primary_year;
+        if (!Array.isArray(primary_years) || primary_years.length === 0) {
+            return res.status(400).json({ error: "Primary years must be an array with at least one value." });
+        }
 
         const currentDate = moment().utc().startOf("day").toDate();
         const nextDate = moment().utc().endOf("day").toDate();
-        const exitTimeCount = await collection.countDocuments({
-            exit_time: { $gte: currentDate, $lt: nextDate }
-        });
-        const reEntryTimeCount = await collection.countDocuments({
-            re_entry_time: { $gte: currentDate, $lte: nextDate }
-        });
         const now = moment().tz("Asia/Kolkata").toDate();
-        const expiredCount = await collection.countDocuments({
-            exit_time: { $exists: true },
-            to: { $gt: now }
-        });
-        const pendingCount = await collection.countDocuments({
-            exit_time: { $exists: true },
-            to: { $lt: now }
-        });
-        const passTypes = ["Od", "Outpass", "Staypass", "Leave"];
-        const passTypeCounts = {};
 
-        for (const type of passTypes) {
-            passTypeCounts[type] = await collection.countDocuments({ passtype: type });
+        const passTypes = ["Od", "Outpass", "Staypass", "Leave"];
+        
+        let results = {};
+
+        for (const year of primary_years) {
+            const yearFilter = { year };
+
+            const exitTimeCount = await collection.countDocuments({
+                exit_time: { $gte: currentDate, $lt: nextDate },
+                ...yearFilter
+            });
+
+            const reEntryTimeCount = await collection.countDocuments({
+                re_entry_time: { $gte: currentDate, $lte: nextDate },
+                ...yearFilter
+            });
+
+            const expiredCount = await collection.countDocuments({
+                exit_time: { $exists: true },
+                to: { $gt: now },
+                ...yearFilter
+            });
+
+            const pendingCount = await collection.countDocuments({
+                exit_time: { $exists: true },
+                to: { $lt: now },
+                ...yearFilter
+            });
+
+            let passTypeCounts = {};
+            for (const type of passTypes) {
+                passTypeCounts[type] = await collection.countDocuments({
+                    passtype: type,
+                    ...yearFilter
+                });
+            }
+            results[year] = {
+                exitTimeCount,
+                reEntryTimeCount,
+                expiredCount,
+                pendingCount,
+                passTypeCounts
+            };
         }
+
         res.json({
-            exitTimeCount,
-            reEntryTimeCount,
-            expiredCount,
-            pendingCount,
-            passTypeCounts
+            primary_years,
+            data: results
         });
+
     } catch (error) {
         console.error("Error fetching data:", error);
         res.status(500).json({ error: "Internal Server Error" });
-    } finally {
-        await client.close();
     }
 });
 
-const parseDate = (dateStr) => {
-    const [day, month, year] = dateStr.split("/");
-    return new Date(`${year}-${month}-${day}T00:00:00.000Z`);
-};
-
 //analytics second
-app.get("/pass_analysis", async (req, res) => {
+app.get("/api/pass_analysis", async (req, res) => {
     try {
 
         await client.connect();

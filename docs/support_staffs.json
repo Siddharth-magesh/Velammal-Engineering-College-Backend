@@ -15,14 +15,15 @@
         "Unique_id": "VEC-013-01-160"
       },
       {
-        "Name": "Mr. John Doe",
+        "Name": "Mr. C. Ravi kumar",
         "Image": "/static/images/support_staffs/example.jpg",
-        "Designation": "Lab Assistant",
+        "Qualification":"M.Sc., M. Phil",
+        "Designation": "Lab Instructor",
         "Social_media_links": {
-          "Publon": "https://publons.com/researcher/54321/john-doe/",
-          "LinkedIn": "https://linkedin.com/in/john-doe/",
-          "GitHub": "https://github.com/johndoe",
-          "ResearchGate": "https://www.researchgate.net/profile/John_Doe"
+          "Publon": null,
+          "LinkedIn": null,
+          "GitHub": null,
+          "ResearchGate": null
         },
         "Unique_id": "VEC-013-01-161"
       },

@@ -185,12 +185,12 @@
         "department_id": "014",
         "department_name": "Physical Education",
         "department_image": "/static/images/department_data/physical.jpg",
-        "department_quotes": "Unveiling the mysteries of the universe.",
-        "vision": "To achieve the physical, mental, and intellectual development of the whole student by fostering a culture that promotes a positive attitude towards physical activity.",
+        "department_quotes": "Bridging the gap between theory and innovation, Physics drives the technology that engineers the future.",
+        "vision": "To provide knowledge of Physics in all areas of life through transfer of fundamental technology and to do more research work",
         "mission": [
-            "To create an environment that fosters a positive attitude towards physical activity and overall well-being.",
-            "To provide opportunities for personal and intellectual growth through fitness, outdoor recreation, and coaching.",
-            "To promote active participation in sports, enhancing teamwork, discipline, and leadership skills."
+            "Provide top-quality education in Engineering Physics.",
+            "Promote research in Materials Science, Nanotechnology, and Environmental Engineering.",
+            "Offer exposure to both experimental and theoretical foundations."
         ],
         "newsletter_path": "/static/docs/dapartment_data/physical_newsletter.pdf",
         "about_department": ["Our College department of physical education is an integral art of our institution right from its inception from the year 2005-2006.","We are now having 3 faculty members, including a Head of the department. In which we have one doctorate in physical education. We engage the students both morning and evening for sports activities and make them to participate in Inter collegiate tournaments. We have one big Indoor stadium and one multi Gym with Fitness trainer.","Our college students got the 18 th consecutive years of overall championship in zone – I competitions. This is our pride for our department of physical education. Moreover, our college students participate for Anna university teams, State and National teams.Our students got places in National level sports competitions every year."]

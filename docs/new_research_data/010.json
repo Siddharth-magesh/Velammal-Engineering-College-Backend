@@ -1,0 +1,422 @@
+{
+    "department_id": "010",
+    "department_name": "English",
+    "research_data": [
+        {
+            "year": "2023-24",
+            "data": {
+                "funded_proposals": {
+                    "S.No": [],
+                    "Name of the Faculty": [],
+                    "Title of the Proposal": [],
+                    "Name of Funding Agency": [],
+                    "Amount in Lakhs": [],
+                    "Project Duration in Yrs": [],
+                    "Date of Submission": [],
+                    "Current Status": [],
+                    "Colloboration Institute": [],
+                    "Colloboration agreement Yes / No": [],
+                    "E copy of sanctioned letter google drive link": [],
+                    "Image": []
+                },
+                "journal_publications": {
+                    "S.No": [
+                        "1",
+                        "2",
+                        "3",
+                        "4",
+                        "5"
+                    ],
+                    "Name of the Author(s)": [
+                        "Ms. S.SUGAPRIYA",
+                        "Dr. M. Vinothkumar",
+                        "Dr. M. Vinothkumar",
+                        "Mr. A. Balaji",
+                        "Ms. S.SUGAPRIYA"
+                    ],
+                    "Title of the Paper": [
+                        "SENSE OF BELONGING AND AFFINITY IN ROHINTON MISTRY\u2019S FAMILY MATTERS",
+                        "A Study of Techno- Nationalism, an Emerging Trend in the 21st Century India",
+                        "An Analysis on Domestic Violence, Depression and Surge of Anger During the COVID-19 Outbreak in India",
+                        "The Cultual and Religious Melieu in Gita Mehta's Raj",
+                        "The Survivors of Old Age in Chitra Baneerjee Divaharuni's \"Mrs. Dutta Writes a Letter\" from The Unknown Errors of Our Lives"
+                    ],
+                    "SCI/ WoS/ Scopus/ Google scholar/ UGC Care/Other": [
+                        "UGC",
+                        "UGC",
+                        "UGC",
+                        "UGC",
+                        "UGC"
+                    ],
+                    "Name of the Journal": [
+                        "RABINDRA BHARATI JOURNAL OF PHILOSOPHY",
+                        "International Journal of Humanities and Education Development",
+                        "International Journal of English Literature and Social Sciences",
+                        "Aadhunik Sahitya",
+                        "Mukt Shabd Journal"
+                    ],
+                    "Month and Year of publication": [
+                        "July, 2023",
+                        "2024-01-01 00:00:00",
+                        "2024-01-01 00:00:00",
+                        "2023-12-01 00:00:00",
+                        "2023-12-01 00:00:00"
+                    ],
+                    "ISSN": [
+                        "ISSN : 0973-0087",
+                        "2581-8651",
+                        "2456-7620",
+                        "2277-7083",
+                        "2347-3150"
+                    ],
+                    "DOI": [
+                        "nan",
+                        "https://doi.org/10.22161/jhed.6.1.5",
+                        "https://dx.doi.org/10.22161/ijels.91.8",
+                        "nan",
+                        "10.0014.MSJ.2023"
+                    ],
+                    "Colloboration Institute": [
+                        "-",
+                        "-",
+                        "-",
+                        "-",
+                        "-"
+                    ],
+                    "Colloboration agreement Yes / No": [
+                        "-",
+                        "-",
+                        "-",
+                        "-",
+                        "-"
+                    ],
+                    " E copy of journal papers google drive link": [
+                        "https://drive.google.com/file/d/1Dwwd11dOFVDXXros6cvCEOAMhoTPJTek/view?usp=drive_link",
+                        "https://drive.google.com/file/d/1-e3xkiqD8hg4W8kA6_5O7PFdyPWeq1WO/view?usp=drive_link",
+                        "https://drive.google.com/file/d/1kytzFW3Z2WGHA2_kv0TnTyL8YC0nsPb7/view?usp=drive_link",
+                        "nan",
+                        "nan"
+                    ],
+                    "Journal Proof": [
+                        "nan",
+                        "nan",
+                        "nan",
+                        "nan",
+                        "nan"
+                    ]
+                },
+                "patent_details": {
+                    "S.No": [],
+                    "Faculty": [],
+                    "Title of the Patent": [],
+                    "Application Number": [],
+                    "Date of Filing": [],
+                    "Status": [],
+                    "Colloboration Institute": [],
+                    "Colloboration agreement Yes / No": [],
+                    "E copy patent google drive link": []
+                },
+                "book_book_chapters": {
+                    "S.No": [
+                        "1",
+                        "2"
+                    ],
+                    "Name of Faculty": [
+                        "Ms.S.Sugaprriya",
+                        "Mr.A.Balaji"
+                    ],
+                    "Book/Chapter Title": [
+                        "Exploring the Role of Self-Motivation in Second Language Acquisition: A Task-Based Learning Perspective",
+                        "Evolving Concepts: Language ad Literature"
+                    ],
+                    "Name of Publisher": [
+                        "Innovation Online Training Academy",
+                        "Innovation Online Training Academy"
+                    ],
+                    "ISBN Details": [
+                        "978-93-93622-70-9",
+                        "978-93-93622-70-9"
+                    ],
+                    "Colloboration Institute": [
+                        "nan",
+                        "nan"
+                    ],
+                    "Colloboration agreement Yes / No": [
+                        "No",
+                        "No"
+                    ],
+                    "E copy of Book front page google drive link": [
+                        "nan",
+                        "nan"
+                    ]
+                },
+                "international_national_conferen": {
+                    "S.No": [
+                        "1",
+                        "2",
+                        "3",
+                        "4",
+                        "5",
+                        "6",
+                        "7"
+                    ],
+                    "Name of faculty": [
+                        "Ms. S. Sugapriya",
+                        "Mr. A.Balaji",
+                        "Ms. J. Latha",
+                        "Dr. M. Vinothkumar",
+                        "Mr. V. Anand",
+                        "Ms. G. M. Archana",
+                        "Mr. Kirubakaran Amalraj"
+                    ],
+                    "Title of the Paper": [
+                        "The Autumn of Our Lives: The Portrayal of Old Age in Indian Silver Literature",
+                        "Silent Voices, Bold Truths: Gita Mehta\u2019s Novels and the Reimagined Image of Indian Womanhood",
+                        "Mataphor of Escape and Healing in selected novels of Toni Morrison",
+                        "A Semiotic Reading of the Novel and Analysis of Icon, Index, and Symbol, in Water by Ashokamithran",
+                        "A Man of Resilience: A Critical Study On Mahesh Elkunchwar's Play \u201cAn Actor Exits\u201d",
+                        "Cultural Clash and Identity in Kamala Markandeya's novel Nector and the seive",
+                        "Unveiling the Ecological Crisis in Margaret Atwood's Surfacing"
+                    ],
+                    "Name of Conference": [
+                        "Cultural Diverssity and Social Reality in Contemporary Literature",
+                        "Cultural Diverssity and Social Reality in Contemporary Literature",
+                        "Cultural Diverssity and Social Reality in Contemporary Literature",
+                        "Cultural Diverssity and Social Reality in Contemporary Literature",
+                        "Cultural Diverssity and Social Reality in Contemporary Literature",
+                        "Cultural Diverssity and Social Reality in Contemporary Literature",
+                        "Cultural Diverssity and Social Reality in Contemporary Literature"
+                    ],
+                    "Type of Conference National / International": [
+                        "International Conference",
+                        "International Conference",
+                        "International Conference",
+                        "International Conference",
+                        "International Conference",
+                        "International Conference",
+                        "International Conference"
+                    ],
+                    "Organizer": [
+                        "Department of English, Thiruvalluvar University, Vellore, TN",
+                        "Department of English, Thiruvalluvar University, Vellore, TN",
+                        "Department of English, Thiruvalluvar University, Vellore, TN",
+                        "Department of English, Thiruvalluvar University, Vellore, TN",
+                        "Department of English, Thiruvalluvar University, Vellore, TN",
+                        "Department of English, Thiruvalluvar University, Vellore, TN",
+                        "Department of English, Thiruvalluvar University, Vellore, TN"
+                    ],
+                    " Prceedings ISBN": [
+                        "nan",
+                        "nan",
+                        "nan",
+                        "nan",
+                        "nan",
+                        "nan",
+                        "nan"
+                    ],
+                    "E-Copy of Prceeding google drive link": [
+                        "nan",
+                        "nan",
+                        "nan",
+                        "https://drive.google.com/file/d/12NXxoXrXmFvLUUwtkMdOeegsKqt3BMvd/view?usp=drive_link",
+                        "nan",
+                        "nan",
+                        "nan"
+                    ]
+                },
+                "consultancy": {
+                    "S.No": [],
+                    "Name of the Faculty": [],
+                    "Title of the Consultancy": [],
+                    "Funding Organisation": [],
+                    "Duration": [],
+                    "Fund Received in Rs.": [],
+                    "Request and acceptance communication details": [],
+                    "E-Copy of consultancy google drive link": []
+                },
+                "internship": {
+                    "S.No": [],
+                    "Name of the Industry, address": [],
+                    "Name of the Student": [],
+                    "Duration": [],
+                    "Request and acceptance communication details": [],
+                    "Internship proof google drive link": []
+                },
+                "product_development": {
+                    "S.No": [],
+                    "Name of the Faculty": [],
+                    "Name of the Product": [],
+                    "Team members details": [],
+                    "Demo availability status": [],
+                    "Funding agency/Industrial Partners": [],
+                    "Product image in google drive link": []
+                },
+                "start-up_technology_transfer": {}
+            }
+        },
+        {
+            "year": "2024-25",
+            "data": {
+                "funded_proposals": {
+                    "S.No": [],
+                    "Name of the Faculty": [],
+                    "Title of the Proposal": [],
+                    "Name of Funding Agency": [],
+                    "Amount in Lakhs": [],
+                    "Project Duration in Yrs": [],
+                    "Date of Submission": [],
+                    "Current Status": [],
+                    "Colloboration Institute": [],
+                    "Colloboration agreement Yes / No": [],
+                    "E copy of sanctioned letter google drive link": [],
+                    "Image": []
+                },
+                "journal_publications": {
+                    "S.No": [
+                        "1",
+                        "2",
+                        "3"
+                    ],
+                    "Name of the Author(s)": [
+                        "Ms.G. M. Archana",
+                        "Mrs. J.LATHA",
+                        "Ms.G. M. Archana"
+                    ],
+                    "Title of the Paper": [
+                        "Self- Help Books and their Importance in Today's World: The Key to Success",
+                        "TRAUMA OF SLAVERY: AN INDELIBLE MARK ON THE ERA IN TONI MORRISON\u2019S BELOVED AND A MERCY",
+                        "STRESS MANAGEMENT, WORK AND FAMILY BALANCE - RIGHT APPROACHES TO TACKLE FAMILY LIFE AND WORK"
+                    ],
+                    "SCI/ WoS/ Scopus/ Google scholar/ UGC Care/Other": [
+                        "Scopus",
+                        "UGC",
+                        "International Peer Reviewed"
+                    ],
+                    "Name of the Journal": [
+                        "African Journal of Bio Medical Research",
+                        "Indian Literature Sahitya Akademi Bimonthly Journal",
+                        "International Journal of Interdisciplinary Research in Arts and Humanities"
+                    ],
+                    "Month and Year of publication": [
+                        "Nov. 2024",
+                        "2024-12-01 00:00:00",
+                        "Dec. 2024"
+                    ],
+                    "ISSN": [
+                        "5792-5796",
+                        "0019-5804",
+                        "2456 - 3145"
+                    ],
+                    "DOI": [
+                        "https://doi.org/10.53555/AJBR.v273S.3427",
+                        "nan",
+                        "nan"
+                    ],
+                    "Colloboration Institute": [
+                        "No",
+                        "nan",
+                        "nan"
+                    ],
+                    "Colloboration agreement Yes / No": [
+                        "No",
+                        "nan",
+                        "nan"
+                    ],
+                    " E copy of journal papers google drive link": [
+                        "nan",
+                        "nan",
+                        "nan"
+                    ],
+                    "Journal Proof": [
+                        "https://africanjournalofbiomedicalresearch.com/index.php/AJBR/article/view/3427/2631",
+                        "nan",
+                        "nan"
+                    ]
+                },
+                "patent_details": {
+                    "S.No": [],
+                    "Faculty": [],
+                    "Title of the Patent": [],
+                    "Application Number": [],
+                    "Date of Filing": [],
+                    "Status": [],
+                    "Colloboration Institute": [],
+                    "Colloboration agreement Yes / No": [],
+                    "E copy patent google drive link": []
+                },
+                "book_book_chapters": {
+                    "S.No": [
+                        "1",
+                        "2"
+                    ],
+                    "Name of Faculty": [
+                        "Ms.S.Sugaprriya",
+                        "Mr.A.Balaji"
+                    ],
+                    "Book/Chapter Title": [
+                        "Exploring the Role of Self-Motivation in Second Language Acquisition: A Task-Based Learning Perspective",
+                        "Evolving Concepts: Language ad Literature"
+                    ],
+                    "Name of Publisher": [
+                        "Innovation Online Training Academy",
+                        "Innovation Online Training Academy"
+                    ],
+                    "ISBN Details": [
+                        "978-93-93622-70-9",
+                        "978-93-93622-70-9"
+                    ],
+                    "Colloboration Institute": [
+                        "nan",
+                        "nan"
+                    ],
+                    "Colloboration agreement Yes / No": [
+                        "No",
+                        "No"
+                    ],
+                    "E copy of Book front page google drive link": [
+                        "nan",
+                        "nan"
+                    ]
+                },
+                "international_national_conferen": {
+                    "S.No": [],
+                    "Name of faculty": [],
+                    "Title of the Paper": [],
+                    "Name of Conference": [],
+                    "Type of Conference National / Inter national": [],
+                    "Organizer": [],
+                    " Prceedings ISBN": [],
+                    "E-Copy of Prceeding google drive link": []
+                },
+                "consultancy": {
+                    "S.No": [],
+                    "Name of the Faculty": [],
+                    "Title of the Consultancy": [],
+                    "Funding Organisation": [],
+                    "Duration": [],
+                    "Fund Received in Rs.": [],
+                    "Request and acceptance communication details": [],
+                    "E-Copy of consultancy google drive link": []
+                },
+                "internship": {
+                    "S.No": [],
+                    "Name of the Industry, address": [],
+                    "Name of the Student": [],
+                    "Duration": [],
+                    "Request and acceptance communication details": [],
+                    "Internship proof google drive link": []
+                },
+                "product_development": {
+                    "S.No": [],
+                    "Name of the Faculty": [],
+                    "Name of the Product": [],
+                    "Team members details": [],
+                    "Demo availability status": [],
+                    "Funding agency/Industrial Partners": [],
+                    "Product image in google drive link": []
+                },
+                "start-up_technology_transfer": {}
+            }
+        }
+    ]
+}
