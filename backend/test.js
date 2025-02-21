@@ -767,7 +767,7 @@ app.post('/api/change_food_type', async (req, res) => {
     }
 });
 
-// Warden fetches pending requests
+// Warden fetches pending food requests
 app.get('/api/food_requests_changes', async (req, res) => {
     if (!req.session || req.session.wardenauth !== true) {
         return res.status(401).json({ error: "Unauthorized access" });
