@@ -740,16 +740,19 @@ app.post('/api/change_food_type', async (req, res) => {
         await requestsCollection.insertOne({ 
             registration_number, 
             name : student.name,
+            previous_foodtype: student.foodtype,
             requested_foodtype: newFoodType, 
+            room_number: student.room_number,
+            department: student.department,
             gender: student.gender,
-            status: 'Pending',
+            status: null,
             year: student.year, 
             assigned_warden: warden.warden_name
         });
         await studentsCollection.updateOne(
             { registration_number },
             { 
-                $set: { edit_status: 'Pending' },
+                $set: { edit_status: null },
                 $push: {
                     changes: `food_type: ${newFoodType}`
                 }
@@ -820,7 +823,7 @@ app.post('/api/approve_food_change', async (req, res) => {
             await studentsCollection.updateOne(
                 { registration_number },
                 { 
-                    $set: { edit_status: 'Approved' },
+                    $set: { edit_status: true },
                     $pull: { changes: { $regex: `^food_type: ` } } }
             );
             return res.status(200).json({ message: 'Food type change approved', newFoodType: request.requested_foodtype });
@@ -829,7 +832,7 @@ app.post('/api/approve_food_change', async (req, res) => {
             await studentsCollection.updateOne(
                 { registration_number },
                 { 
-                    $set: { edit_status: 'Declined' },
+                    $set: { edit_status: false },
                     $pull: { changes: { $regex: `^food_type: ` } } }
             ); 
             return res.status(200).json({ message: 'Food type change request declined' });
@@ -882,11 +885,12 @@ app.post('/api/request_profile_update', async (req, res) => {
             name: toData.name,
             room_number: toData.room_number,
             year:profile.year,
+            department: profile.department,
             phone_number_student: toData.phone_number_student,
             phone_number_parent: toData.phone_number_parent,
             from_data: fromData,
             to_data: toData,
-            edit_status: 'Pending',
+            edit_status: null,
             created_at: new Date(),
             gender: profile.gender
         };
@@ -894,7 +898,7 @@ app.post('/api/request_profile_update', async (req, res) => {
         await studentCollection.updateOne(
             { registration_number },
             { 
-                $set: { edit_status: 'Pending' },
+                $set: { edit_status: null },
                 $push: { changes: { $each: changes } }
             }
         );
@@ -973,7 +977,7 @@ app.post('/api/handle_request', async (req, res) => {
                         room_number: updateRequest.room_number,
                         phone_number_student: updateRequest.phone_number_student,
                         phone_number_parent: updateRequest.phone_number_parent,
-                        edit_status: "Approved"
+                        edit_status: true
                     },
                     $pull: {
                         changes: {
@@ -989,7 +993,7 @@ app.post('/api/handle_request', async (req, res) => {
             );
             await tempRequestCollection.updateOne(
                 { registration_number },
-                { $set: { edit_status: "Approved" } }
+                { $set: { edit_status: true } }
             );
             res.json({
                 message: "Request approved and profile updated",
@@ -998,12 +1002,12 @@ app.post('/api/handle_request', async (req, res) => {
         } else if (action === "reject") {
             await tempRequestCollection.updateOne(
                 { registration_number },
-                { $set: { edit_status: "Declined" } }
+                { $set: { edit_status: false } }
             );
             await studentCollection.updateOne(
                 { registration_number: updateRequest.registration_number },
                 { 
-                    $set: { edit_status: 'Declined' },
+                    $set: { edit_status: false },
                     $pull: {
                         changes: {
                             $in: [
