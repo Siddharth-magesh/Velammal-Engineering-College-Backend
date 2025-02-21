@@ -165,10 +165,10 @@ app.post('/api/login', async (req, res) => {
             query = { registration_number };
         } else if (type === "warden") {
             collectionName = "warden_database";
-            query = { unique_id: registration_number };
+            query = { unique_id: registration_number , category : "assistant" };
         } else if (type === "superior") {
             collectionName = "warden_database";
-            query = { unique_id: registration_number };
+            query = { unique_id: registration_number , category : "head" };
         } else {
             return res.status(400).json({ error: "Invalid user type" });
         }
@@ -1096,15 +1096,14 @@ app.get('/api/fetch_pending_passes_warden', async (req, res) => {
     }
 });
 
-//Warden Accept Endpoint
+// Warden Accept Endpoint
 app.post('/api/warden_accept', async (req, res) => {
     if (!req.session || req.session.wardenauth !== true) {
         return res.status(401).json({ error: "Unauthorized access" });
     }
     try {
         const warden_unique_id = req.session.unique_number;
-        const { pass_id } = req.body;
-
+        const { pass_id, medical_status } = req.body;
         if (!pass_id) {
             return res.status(400).json({ error: "pass_id is required" });
         }
@@ -1123,19 +1122,27 @@ app.post('/api/warden_accept', async (req, res) => {
         }
         if (passData.wardern_approval !== null) {
             return res.status(400).json({
-                message: `The Following wardern ${passData.authorised_warden_id} have already ${passData.wardern_approval ? "approved" : "rejected"} this request. If you haven't approved this request, please contact the warden.`,
+                message: `The following warden ${passData.authorised_warden_id} has already ${passData.wardern_approval ? "approved" : "rejected"} this request. If you haven't approved this request, please contact the warden.`,
             });
         }
         if (!warden_data.primary_year.includes(passData.year)) {
             return res.status(400).json({ error: "Warden is accessing the wrong year" });
-        }        
+        }
 
         const student_registration_number = passData.registration_number;
         const qrPath = await generateQR(pass_id, student_registration_number);
-        await passCollection.updateOne(
-            { pass_id: pass_id },
-            { $set: { wardern_approval: true, qrcode_path: qrPath, qrcode_status: true , authorised_warden_id : warden_unique_id } }
-        );
+
+        const updateData = {
+            wardern_approval: true,
+            qrcode_path: qrPath,
+            qrcode_status: true,
+            authorised_warden_id: warden_unique_id,
+        };
+        if (medical_status === true) {
+            updateData.reason_type = "medical";
+        }
+
+        await passCollection.updateOne({ pass_id: pass_id }, { $set: updateData });
 
         res.status(200).json({ message: "Warden approval updated successfully", qrcode_path: qrPath });
 
@@ -1193,14 +1200,14 @@ app.post('/api/warden_not_accept', async (req, res) => {
     }
 });
 
-//Superior Warden Accept Endpoint
+// Superior Warden Accept Endpoint
 app.post('/api/superior_accept', async (req, res) => {
     if (!req.session || req.session.superiorauth !== true) {
         return res.status(401).json({ error: "Unauthorized access" });
     }
     try {
         const superior_unique_id = req.session.unique_number;
-        const { pass_id } = req.body;
+        const { pass_id, medical_status } = req.body;
 
         if (!pass_id) {
             return res.status(400).json({ error: "pass_id is required" });
@@ -1225,12 +1232,21 @@ app.post('/api/superior_accept', async (req, res) => {
         }
         const student_registration_number = passData.registration_number;
         const qrPath = await generateQR(pass_id, student_registration_number);
-        await passCollection.updateOne(
-            { pass_id: pass_id },
-            { $set: { superior_wardern_approval: true, qrcode_path: qrPath, qrcode_status: true , authorised_warden_id : superior_unique_id } }
-        );
 
-        res.status(200).json({ message: "Warden approval updated successfully", qrcode_path: qrPath });
+        const updateData = {
+            superior_wardern_approval: true,
+            qrcode_path: qrPath,
+            qrcode_status: true,
+            authorised_warden_id: superior_unique_id,
+        };
+
+        if (medical_status === true) {
+            updateData.reason_type = "medical";
+        }
+
+        await passCollection.updateOne({ pass_id: pass_id }, { $set: updateData });
+
+        res.status(200).json({ message: "Superior Warden approval updated successfully", qrcode_path: qrPath });
 
     } catch (error) {
         console.error("❌ Error:", error);
@@ -1508,6 +1524,44 @@ app.post('/api/update_student_by_warden', async (req, res) => {
 
     } catch (error) {
         console.error("❌ Error updating student details:", error);
+        res.status(500).json({ error: "Internal server error" });
+    }
+});
+
+// Update Warden Details Endpoint (Only by Superior Warden)
+app.post('/api/update_warden_by_superior', async (req, res) => {
+    if (!req.session || req.session.superiorauth !== true) { 
+        return res.status(401).json({ error: "Unauthorized access" });
+    }
+
+    try {
+        await client.connect();
+        const db = client.db(dbName);
+        const wardenCollection = db.collection("warden_database");
+
+        const { unique_id, ...updateFields } = req.body;
+
+        if (!unique_id) {
+            return res.status(400).json({ error: "Warden unique ID is required" });
+        }
+
+        const updateResult = await wardenCollection.updateOne(
+            { unique_id: unique_id },
+            { $set: updateFields }
+        );
+
+        if (updateResult.matchedCount === 0) {
+            return res.status(404).json({ error: "Warden not found" });
+        }
+
+        res.status(200).json({
+            message: "Warden details updated successfully",
+            unique_id: unique_id,
+            updated_fields: updateFields
+        });
+
+    } catch (error) {
+        console.error("❌ Error updating warden details:", error);
         res.status(500).json({ error: "Internal server error" });
     }
 });
@@ -2212,6 +2266,32 @@ app.get('/api/fetch_passes_for_superior', async (req, res) => {
         res.status(500).json({ error: "Internal Server Error" });
     }
 });
+
+// Fetch All student details for superior warden (sorted)
+app.get('/api/fetch_student_details_superior', async (req, res) => {
+    if (!req.session || req.session.superiorauth !== true) {
+        return res.status(401).json({ error: "Unauthorized Access" });
+    }
+    try {
+        await client.connect();
+        const db = client.db(dbName);
+        const studentsCollection = db.collection("student_database");
+        const student_data = await studentsCollection.find({}).toArray();
+        student_data.sort((a, b) => {
+            if (b.year !== a.year) {
+                return b.year - a.year;
+            }
+            return a.gender === "Male" ? -1 : 1;
+        });
+
+        res.status(200).json({ data: student_data });
+
+    } catch (error) {
+        console.error("Error fetching student details:", error);
+        res.status(500).json({ error: "Internal Server Error" });
+    }
+});
+
 
 //logout
 app.get('/api/logout', (req, res) => {

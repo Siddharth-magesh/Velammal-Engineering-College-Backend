@@ -54,8 +54,8 @@
     {
         "unique_id":"004",
         "warden_name":"Selvan",
-        "primary_year":0,
-        "secondary_year":0,
+        "primary_year":[1,2,3,4],
+        "secondary_year":[1,2,3,4],
         "phone_number":1234567890,
         "image_path":"/static/images/warden_profile_photos/004.jpeg",
         "active":true,
