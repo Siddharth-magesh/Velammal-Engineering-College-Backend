@@ -380,7 +380,8 @@ app.post('/api/submit_pass_parent_approval', upload.single('file'), async (req, 
             expiry_status: false,
             request_date_time: new Date(),
             authorised_Security_id: null,
-            authorised_warden_id: null
+            authorised_warden_id: null,
+            notify_superior: false
         };
 
         await PassCollection.insertOne(PassData);
@@ -805,10 +806,12 @@ app.post('/api/approve_food_change', async (req, res) => {
     if (!req.session || req.session.wardenauth !== true) {
         return res.status(401).json({ error: "Unauthorized access" });
     }
+
     const { registration_number, name, action } = req.body;
     const db = client.db(dbName);
     const studentsCollection = db.collection('student_database');
-    const requestsCollection = db.collection('food_change_requests');  
+    const requestsCollection = db.collection('food_change_requests');
+
     try {
         const request = await requestsCollection.findOne({ registration_number, name });
         if (!request) {
@@ -819,26 +822,31 @@ app.post('/api/approve_food_change', async (req, res) => {
                 { registration_number, name },
                 { $set: { foodtype: request.requested_foodtype } }
             );
-            await requestsCollection.deleteOne({ registration_number, name });
-            await studentsCollection.updateOne(
-                { registration_number },
-                { 
-                    $set: { edit_status: true },
-                    $pull: { changes: { $regex: `^food_type: ` } } }
-            );
-            return res.status(200).json({ message: 'Food type change approved', newFoodType: request.requested_foodtype });
-        } else if (action === "decline") {
-            await requestsCollection.deleteOne({ registration_number, name });
-            await studentsCollection.updateOne(
-                { registration_number },
-                { 
-                    $set: { edit_status: false },
-                    $pull: { changes: { $regex: `^food_type: ` } } }
-            ); 
-            return res.status(200).json({ message: 'Food type change request declined' });
-        } else {
-            return res.status(400).json({ error: 'Invalid action' });
         }
+        await requestsCollection.deleteOne({ registration_number, name });
+        const student = await studentsCollection.findOne({ registration_number });
+        const changesArray = student?.changes || [];
+
+        const hasOtherChanges = changesArray.some(change =>
+            ["name:", "room_number:", "phone_number_student:", "phone_number_parent:"].some(key => change.includes(key))
+        );
+        let editStatus = hasOtherChanges ? null : action === "approve" ? true : false;
+
+        await studentsCollection.updateOne(
+            { registration_number },
+            {
+                $set: { edit_status: editStatus },
+                $pull: { changes: { $regex: `^food_type: ` } }
+            }
+        );
+
+        return res.status(200).json({
+            message: action === "approve"
+                ? 'Food type change approved'
+                : 'Food type change request declined',
+            newFoodType: action === "approve" ? request.requested_foodtype : undefined
+        });
+
     } catch (error) {
         console.error('❌ Error processing request:', error);
         res.status(500).json({ error: 'Internal server error' });
@@ -936,7 +944,7 @@ app.get('/api/profile_request_changes', async (req, res) => {
             return res.status(404).json({ error: "Warden not found" });
         }
 
-        const primary_year = warden.primary_year;
+        const primary_year = warden.profile_years;
         const requests = await requestsCollection.find({ year: { $in: primary_year } }).toArray();
 
         res.status(200).json({ requests });
@@ -968,6 +976,12 @@ app.post('/api/handle_request', async (req, res) => {
             return res.status(404).json({ error: "Request not found" });
         }
 
+        const student = await studentCollection.findOne({ registration_number });
+        if (!student) {
+            return res.status(404).json({ error: "Student not found" });
+        }
+        const changesArray = student?.changes || [];
+        const hasFoodTypeChange = changesArray.some(change => /^food_type: /.test(change));
         if (action === "approve") {
             await studentCollection.updateOne(
                 { registration_number: updateRequest.registration_number },
@@ -988,13 +1002,19 @@ app.post('/api/handle_request', async (req, res) => {
                                 `phone_number_parent: ${updateRequest.phone_number_parent}`
                             ]
                         }
-                    }                    
+                    }
                 }
             );
             await tempRequestCollection.updateOne(
                 { registration_number },
                 { $set: { edit_status: true } }
             );
+            if (hasFoodTypeChange) {
+                await studentCollection.updateOne(
+                    { registration_number },
+                    { $set: { edit_status: null } }
+                );
+            }
             res.json({
                 message: "Request approved and profile updated",
                 approved_by: warden.name
@@ -1006,7 +1026,7 @@ app.post('/api/handle_request', async (req, res) => {
             );
             await studentCollection.updateOne(
                 { registration_number: updateRequest.registration_number },
-                { 
+                {
                     $set: { edit_status: false },
                     $pull: {
                         changes: {
@@ -1017,9 +1037,15 @@ app.post('/api/handle_request', async (req, res) => {
                                 `phone_number_parent: ${updateRequest.phone_number_parent}`
                             ]
                         }
-                    }                    
+                    }
                 }
             );
+            if (hasFoodTypeChange) {
+                await studentCollection.updateOne(
+                    { registration_number },
+                    { $set: { edit_status: null } }
+                );
+            }
             res.json({
                 message: "Request rejected",
                 rejected_by: warden.name
@@ -1087,6 +1113,7 @@ app.get('/api/fetch_pending_passes_warden', async (req, res) => {
             qrcode_status: false,
             wardern_approval: null,
             superior_wardern_approval: null,
+            notify_superior: false,
             year: { $in: warden_primary_year } 
         }).toArray();
 
@@ -1413,8 +1440,89 @@ app.get('/api/fetch_warden_details', async (req, res) => {
     }
 });
 
-// Warden status handling
-app.post('/api/warden_status_handling', async (req, res) => {
+// Fetch warden details for reallocation
+app.post('/api/fetch_warden_details_reallocation', async (req, res) => {
+    if (!req.session || req.session.superiorauth !== true) {
+        return res.status(401).json({ error: "Unauthorized access" });
+    }
+    try {
+        await client.connect();
+        const db = client.db(dbName);
+        const wardenCollection = db.collection("warden_database");
+        const { target_warden_id } = req.body;
+        if (!target_warden_id) {
+            return res.status(400).json({ error: "Missing target_warden_id" });
+        }
+        const target_warden_data = await wardenCollection.findOne({ unique_id: target_warden_id });
+
+        if (!target_warden_data) {
+            return res.status(404).json({ error: "Target warden not found" });
+        }
+        const primary_years = target_warden_data.primary_year;
+        const target_warden_gender = target_warden_data.gender;
+        const warden_details = await wardenCollection.find({
+            active: true,
+            gender: target_warden_gender,
+            category: "assistant",
+            unique_id: { $ne: target_warden_id }
+        }).toArray();
+
+        const superior_warden_data = await wardenCollection.findOne({ category: "head" });
+
+        if (!superior_warden_data) {
+            return res.status(404).json({ error: "Superior warden not found" });
+        }
+        const superior_warden_name = superior_warden_data.warden_name;
+
+        const warden_names = warden_details.map(warden => warden.warden_name);
+        warden_names.push(superior_warden_name);
+
+        res.status(200).json({ warden_names, primary_years });
+
+    } catch (error) {
+        console.error("Error fetching warden details:", error);
+        return res.status(500).json({ error: "Internal Server Error" });
+    }
+});
+
+// Warden Inactive status handling
+app.post('/api/warden_inactive_status_handling', async (req, res) => {
+    if (!req.session || req.session.superiorauth !== true) {
+        return res.status(401).json({ error: "Unauthorized access" });
+    }
+    try {
+        await client.connect();
+        const db = client.db(dbName);
+        const wardenCollection = db.collection("warden_database");
+        const { warden_name, inactive_warden_id, year } = req.body;
+        if (!warden_name || !inactive_warden_id || !year) {
+            return res.status(400).json({ error: "Missing warden_name, inactive_warden_id, or year" });
+        }
+        const warden_details = await wardenCollection.findOne({ warden_name });
+        if (!warden_details) {
+            return res.status(404).json({ message: "Warden not found" });
+        }
+        const updateResult = await wardenCollection.updateOne(
+            { unique_id: inactive_warden_id },
+            { $set: { active: false } }
+        );
+
+        if (updateResult.matchedCount === 0) {
+            return res.status(404).json({ message: "Inactive warden not found" });
+        }
+        await wardenCollection.updateOne(
+            { warden_name },
+            { $addToSet: { primary_year: year } }
+        );
+        res.json({ message: "Warden status updated and year added successfully" });
+    } catch (error) {
+        console.error("❌ Error handling warden status:", error);
+        return res.status(500).json({ error: "Internal Server Error" });
+    }
+});
+
+// Warden Active Status Handling
+app.post('/api/warden_active_status_handling', async (req, res) => {
     if (!req.session || req.session.superiorauth !== true) {
         return res.status(401).json({ error: "Unauthorized access" });
     }
@@ -1423,72 +1531,31 @@ app.post('/api/warden_status_handling', async (req, res) => {
         await client.connect();
         const db = client.db(dbName);
         const wardenCollection = db.collection("warden_database");
-        const { warden_id, action } = req.body;
+        const { warden_id } = req.body;
+        if (!warden_id) {
+            return res.status(400).json({ error: "Missing warden_id" });
+        }
         const warden_details = await wardenCollection.findOne({ unique_id: warden_id });
 
         if (!warden_details) {
             return res.status(404).json({ message: "Warden not found" });
         }
-        if (action === "inactive") {
-            await wardenCollection.updateOne(
-                { unique_id: warden_id },
-                { $set: { active: false } }
-            );
-            const target_warden = await wardenCollection.findOne({
-                secondary_year: { $in: warden_details.primary_year },
-                gender: warden_details.gender
-            });
-            if (target_warden) {
-                const updated_primary_years = [...new Set([...target_warden.primary_year, ...warden_details.primary_year])];
-                await wardenCollection.updateOne(
-                    { unique_id: target_warden.unique_id },
-                    { $set: { primary_year: updated_primary_years } }
-                );
-                return res.json({
-                    message: "Warden deactivated and secondary year assigned successfully",
-                    updated_warden: {
-                        unique_id: target_warden.unique_id,
-                        primary_year: updated_primary_years
-                    }
-                });
-            } else {
-                return res.json({
-                    message: "Warden deactivated, but no matching secondary year found"
-                });
-            }
-        }
+        const primary_years = warden_details.primary_year || [];
+        await wardenCollection.updateMany(
+            { unique_id: { $ne: warden_id } },
+            { $pull: { primary_year: { $in: primary_years } } }
+        );
+        const updateResult = await wardenCollection.updateOne(
+            { unique_id: warden_id },
+            { $set: { active: true } }
+        );
 
-        if (action === "active") {
-            await wardenCollection.updateOne(
-                { unique_id: warden_id },
-                { $set: { active: true } }
-            );
-            const target_warden = await wardenCollection.findOne({
-                secondary_year: { $in: warden_details.primary_year },
-                gender: warden_details.gender
-            });
-            if (target_warden) {
-                const updated_primary_years = target_warden.primary_year.filter(
-                    (year) => !warden_details.primary_year.includes(year)
-                );
-                await wardenCollection.updateOne(
-                    { unique_id: target_warden.unique_id },
-                    { $set: { primary_year: updated_primary_years } }
-                );
-                return res.json({
-                    message: "Warden reactivated and primary year removed from secondary warden",
-                    updated_warden: {
-                        unique_id: target_warden.unique_id,
-                        primary_year: updated_primary_years
-                    }
-                });
-            }
-            return res.json({ message: "Warden activated successfully" });
+        if (updateResult.matchedCount === 0) {
+            return res.status(404).json({ message: "Warden not found or not updated" });
         }
-        res.json({ message: "No action performed" });
-
+        res.json({ message: "Warden activated and primary years updated successfully" });
     } catch (error) {
-        console.error("❌ Error fetching warden details:", error);
+        console.error("❌ Error handling warden status:", error);
         return res.status(500).json({ error: "Internal Server Error" });
     }
 });
