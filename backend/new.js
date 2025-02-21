@@ -1,68 +1,91 @@
-// pass analysis 2
 app.get("/pass_analysis", async (req, res) => {
     if (!req.session || req.session.wardenauth !== true) {
         return res.status(401).json({ error: "Unauthorized Access" });
     }
+
     try {
         await client.connect();
         const db = client.db(dbName);
         const collection = db.collection("pass_details");
 
-        const { type } = req.query;
-        if (!type) {
-            return res.status(400).json({ error: "Missing 'type' parameter in query" });
+        const { type, year } = req.body;
+        if (!type || !year) {
+            return res.status(400).json({ error: "Missing 'type' or 'year' parameter in request" });
         }
-        const now = new Date();
-        const formattedDate = now.toISOString().split("T")[0];
-        const formattedTime = now.toISOString().split("T")[1];
-        const formattedTimeWithOffset = `T${formattedTime.slice(0, -1)}+00:00`;
-        const firstMeasureCount = await collection.countDocuments({
+
+        const warden_id = req.session.unique_number;
+        const wardenCollection = db.collection("warden_database");
+        const warden_data = await wardenCollection.findOne({ unique_id: warden_id });
+
+        if (!warden_data || !warden_data.primary_year) {
+            return res.status(400).json({ error: "Invalid warden data." });
+        }
+
+        const warden_handling_gender = warden_data.gender;
+        const primary_years = warden_data.primary_year;
+        if (!Array.isArray(primary_years) || primary_years.length === 0) {
+            return res.status(400).json({ error: "Primary years must be an array with at least one value." });
+        }
+
+        // Get Current Date & Time in UTC
+        const currentTime=new Date();
+        const istTime = new Date(currentTime.getTime() + (5.5 * 60 * 60 * 1000));
+        const formattedDate = istTime.toISOString().split("T")[0]; // YYYY-MM-DD
+
+        // Convert formatted date back to Date object at 00:00:00 UTC
+        const formattedDateStart = new Date(`${formattedDate}T00:00:00.000Z`);
+        const formattedDateEnd = new Date(`${formattedDate}T23:59:59.999Z`);
+
+        // Build Year Filter
+        let yearFilter;
+        if (["1", "2", "3", "4"].includes(year)) {
+            yearFilter = { year: parseInt(year) }; // Convert to number
+        } else if (year === "overall") {
+            yearFilter = { year: { $in: primary_years } };
+        } else {
+            return res.status(400).json({ error: "Invalid year value." });
+        }
+
+        // Common Filters
+        const commonFilters = {
             passtype: type,
+            gender: warden_handling_gender,
+            qrcode_status:true,
+            ...yearFilter
+        };
+
+        // **First Measure:** Active Passes Count
+        const activePassesCount = await collection.countDocuments({
+            ...commonFilters,
             $or: [
-                { 
-                    from: { $lte: new Date() },
-                    to: { $gte: new Date() }
-                },
-                { 
-                    from: { 
-                        $gte: new Date(`${formattedDate}T00:00:00.000Z`), 
-                        $lt: new Date(`${formattedDate}T23:59:59.999Z`) 
-                    }
-                },
-                { 
-                    to: { 
-                        $gte: new Date(`${formattedDate}T00:00:00.000Z`), 
-                        $lt: new Date(`${formattedDate}T23:59:59.999Z`) 
-                    }
-                }
+                { from: { $lte: istTime }, to: { $gte: istTime } }, // Between from and to
+                { from: formattedDateStart },
+                { to: formattedDateStart }
             ]
         });
-        
-        const secondMeasureCount = await collection.countDocuments({
-            passtype: type,
-            to: { 
-                $gte: new Date(`${formattedDate}T00:00:00.000Z`), 
-                $lt: new Date(`${formattedDate}T23:59:59.999Z`)
-              }
+
+        // **Second Measure:** Passes Ending Today
+        const toFieldMatchCount = await collection.countDocuments({
+            ...commonFilters,
+            to: { $gte: formattedDateStart, $lt: formattedDateEnd }
         });
-        const thirdMeasureCount = await collection.countDocuments({
-            passtype: type,
-            to: { $lt: new Date(`${formattedDate}T23:59:59.999Z`) },
-            re_entry_time: { $in: [null, ""] }
+
+        // **Third Measure:** Overdue Passes Count (Past "to" AND re_entry_time is null)
+        const overduePassesCount = await collection.countDocuments({
+            ...commonFilters,
+            re_entry_time: { $in: [null, ""], $exists: true }, // Ensure it's null or empty
+            to: { $lt: istTime } // Already expired
         });
+
+        // **Fourth Measure:** Reason Type Grouped Count
         const reasonTypeAggregation = await collection.aggregate([
             {
                 $match: {
-                    passtype: type,
+                    ...commonFilters,
                     $or: [
-                        { 
-                            from: { 
-                                $lte: new Date(`${formattedDate}T23:59:59.999Z`) 
-                            }, 
-                            to: { 
-                                $gte: new Date(`${formattedDate}T00:00:00.000Z`) 
-                            } 
-                        }
+                        { from: { $lte: formattedDateEnd }, to: { $gte: formattedDateStart } },
+                        { from: formattedDateStart },
+                        { to: formattedDateStart }
                     ]
                 }
             },
@@ -83,95 +106,118 @@ app.get("/pass_analysis", async (req, res) => {
                 }
             }
         ]).toArray();
+
         const reasonTypeCounts = reasonTypeAggregation.reduce((acc, item) => {
             acc[item._id] = item.count;
             return acc;
         }, {});
-        res.json({
-            activePassesCount: firstMeasureCount,
-            toFieldMatchCount: secondMeasureCount,
-            overduePassesCount: thirdMeasureCount,
-            reasonTypeCounts
-        });
 
-    } catch (error) {
+        res.json({
+            activePassesCount,
+            toFieldMatchCount,
+            overduePassesCount,
+            reasonTypeCounts,
+            istTime
+
+    });
+}catch (error) {
         console.error("Error fetching pass analysis:", error);
         res.status(500).json({ error: "Internal Server Error" });
     }
 });
+
+
+
 
 // pass analysis 3
 app.get("/pass_analysis_by_date", async (req, res) => {
     if (!req.session || req.session.wardenauth !== true) {
         return res.status(401).json({ error: "Unauthorized Access" });
     }
+
     try {
         await client.connect();
         const db = client.db(dbName);
         const collection = db.collection("pass_details");
-        const { type, date } = req.query;
-        if (!type) {
-            return res.status(400).json({ error: "Missing 'type' parameter in query" });
+
+        const { type, year,date } = req.body;
+        if (!type || !year) {
+            return res.status(400).json({ error: "Missing 'type' or 'year' parameter in request" });
         }
-        if (!date) {
-            return res.status(400).json({ error: "Missing 'date' parameter in query" });
+
+        const warden_id = req.session.unique_number;
+        const wardenCollection = db.collection("warden_database");
+        const warden_data = await wardenCollection.findOne({ unique_id: warden_id });
+
+        if (!warden_data || !warden_data.primary_year) {
+            return res.status(400).json({ error: "Invalid warden data." });
         }
-        const dateRegex = /^\d{4}-\d{2}-\d{2}$/;
-        if (!dateRegex.test(date)) {
-            return res.status(400).json({ error: "Invalid date format. Use 'YYYY-MM-DD'." });
+
+        const warden_handling_gender = warden_data.gender;
+        const primary_years = warden_data.primary_year;
+        if (!Array.isArray(primary_years) || primary_years.length === 0) {
+            return res.status(400).json({ error: "Primary years must be an array with at least one value." });
         }
-        const formattedDate = date; 
-        const now = new Date();
-        const formattedTime = now.toISOString().split("T")[1];
-        const formattedTimeWithOffset = `T${formattedTime.slice(0, -1)}+00:00`;
-        const firstMeasureCount = await collection.countDocuments({
+
+        // Get Current Date & Time in UTC
+        const currentTime=new Date();
+        const istTime = new Date(currentTime.getTime() + (5.5 * 60 * 60 * 1000));
+        const formattedDate = date // YYYY-MM-DD
+
+        // Convert formatted date back to Date object at 00:00:00 UTC
+        const formattedDateStart = new Date(`${formattedDate}T00:00:00.000Z`);
+        const formattedDateEnd = new Date(`${formattedDate}T23:59:59.999Z`);
+
+        // Build Year Filter
+        let yearFilter;
+        if (["1", "2", "3", "4"].includes(year)) {
+            yearFilter = { year: parseInt(year) }; // Convert to number
+        } else if (year === "overall") {
+            yearFilter = { year: { $in: primary_years } };
+        } else {
+            return res.status(400).json({ error: "Invalid year value." });
+        }
+
+        // Common Filters
+        const commonFilters = {
             passtype: type,
+            gender: warden_handling_gender,
+            qrcode_status:true,
+            ...yearFilter
+        };
+
+        // **First Measure:** Active Passes Count
+        const activePassesCount = await collection.countDocuments({
+            ...commonFilters,
             $or: [
-                { 
-                    from: { $lte: new Date() },
-                    to: { $gte: new Date() }
-                },
-                { 
-                    from: { 
-                        $gte: new Date(`${formattedDate}T00:00:00.000Z`), 
-                        $lt: new Date(`${formattedDate}T23:59:59.999Z`) 
-                    }
-                },
-                { 
-                    to: { 
-                        $gte: new Date(`${formattedDate}T00:00:00.000Z`), 
-                        $lt: new Date(`${formattedDate}T23:59:59.999Z`) 
-                    }
-                }
+                { from: { $lte: istTime }, to: { $gte: istTime } }, // Between from and to
+                { from: formattedDateStart },
+                { to: formattedDateStart }
             ]
         });
-        
-        const secondMeasureCount = await collection.countDocuments({
-            passtype: type,
-            to: { 
-                $gte: new Date(`${formattedDate}T00:00:00.000Z`), 
-                $lt: new Date(`${formattedDate}T23:59:59.999Z`)
-              }
+
+        // **Second Measure:** Passes Ending Today
+        const toFieldMatchCount = await collection.countDocuments({
+            ...commonFilters,
+            to: { $gte: formattedDateStart, $lt: formattedDateEnd }
         });
-        const thirdMeasureCount = await collection.countDocuments({
-            passtype: type,
-            to: { $lt: new Date(`${formattedDate}T23:59:59.999Z)`),
-            re_entry_time: { $in: [null, ""] }
-        }
+
+        // **Third Measure:** Overdue Passes Count (Past "to" AND re_entry_time is null)
+        const overduePassesCount = await collection.countDocuments({
+            ...commonFilters,
+            re_entry_time: { $in: [null, ""], $exists: true }, // Ensure it's null or empty
+            to: { $lt: istTime } // Already expired
         });
+
+        // **Fourth Measure:** Reason Type Grouped Count
         const reasonTypeAggregation = await collection.aggregate([
             {
                 $match: {
-                    passtype: type,
+                    ...commonFilters,
                     $or: [
-                        { 
-                            from: { 
-                                $lte: new Date(`${formattedDate}T23:59:59.999Z`) 
-                            }, 
-                            to: { 
-                                $gte: new Date(`${formattedDate}T00:00:00.000Z`) 
-                            } 
-                        }
+                        { from: { $lte: formattedDateEnd }, to: { $gte: formattedDateStart } },
+                        { from: formattedDateStart },
+                        { to: formattedDateStart }
                     ]
                 }
             },
@@ -192,15 +238,18 @@ app.get("/pass_analysis_by_date", async (req, res) => {
                 }
             }
         ]).toArray();
+
         const reasonTypeCounts = reasonTypeAggregation.reduce((acc, item) => {
             acc[item._id] = item.count;
             return acc;
         }, {});
+
         res.json({
-            activePassesCount: firstMeasureCount,
-            toFieldMatchCount: secondMeasureCount,
-            overduePassesCount: thirdMeasureCount,
+            activePassesCount,
+            toFieldMatchCount,
+            overduePassesCount,
             reasonTypeCounts
+            
         });
 
     } catch (error) {
