@@ -1,128 +1,273 @@
 [{
   "_id": {
-    "$oid": "67b6c4116679117818f1cd77"
+    "$oid": "67b7fbe906a10686902b3220"
   },
-  "pass_id": "998c39fa-7f6f-4b6a-ba57-4ea70a1e51fb",
+  "pass_id": "8e60f8cd-0754-4f4f-a848-0a22ba54eb5e",
   "name": "John Doe",
   "mobile_number": "9876543210",
-  "dept": "Computer Science",
+  "dept": "CSE",
   "year": 2,
   "room_no": "B-203",
   "registration_number": "113222072000",
+  "gender": "Male",
+  "late_count": 1,
   "blockname": "Alpha Block",
-  "passtype": "Outing",
+  "passtype": "outpass",
   "from": {
-    "$date": "2025-02-21T04:30:00.000Z"
+    "$date": "2025-02-21T09:00:00.000Z"
   },
   "to": {
-    "$date": "2025-02-21T14:30:00.000Z"
+    "$date": "2025-02-21T18:00:00.000Z"
   },
   "place_to_visit": "City Mall",
   "reason_type": "Personal",
-  "reason_for_visit": "Shopping",
+  "reason_for_visit": "Shopping and groceries",
   "file_path": null,
   "qrcode_path": null,
   "parent_approval": null,
   "wardern_approval": null,
   "superior_wardern_approval": null,
   "parent_sms_sent_status": false,
-  "qrcode_status": false,
-  "exit_time": null,
+  "qrcode_status": true,
+  "exit_time": {
+    "$date": "2025-02-21T10:00:00.000Z"
+  },
   "re_entry_time": null,
   "delay_status": false,
   "request_completed": false,
   "request_time": {
-    "$date": "2025-02-20T05:56:33.425Z"
+    "$date": "2025-02-21T04:07:05.668Z"
   },
   "expiry_status": false,
   "request_date_time": {
-    "$date": "2025-02-20T05:56:33.425Z"
+    "$date": "2025-02-21T04:07:05.668Z"
   },
   "authorised_Security_id": null,
   "authorised_warden_id": null
 },
 {
   "_id": {
-    "$oid": "67b6c4bb6679117818f1cd78"
+    "$oid": "67b7fd4706a10686902b3221"
   },
-  "pass_id": "630a48f0-8a96-43b6-9184-cda4452c639e",
-  "name": "John Doe",
+  "pass_id": "b0d93962-021d-4a64-8824-d464dfabdbe7",
+  "name": "John Doe 1",
   "mobile_number": "9876543210",
-  "dept": "Computer Science",
+  "dept": "CSE",
   "year": 2,
   "room_no": "B-203",
-  "registration_number": "CS20231001",
+  "registration_number": "113222072000",
+  "gender": "Male",
+  "late_count": 1,
   "blockname": "Alpha Block",
-  "passtype": "Outing",
+  "passtype": "od",
   "from": {
-    "$date": "2025-02-21T04:30:00.000Z"
+    "$date": "2025-02-21T09:00:00.000Z"
   },
   "to": {
-    "$date": "2025-02-21T14:30:00.000Z"
+    "$date": "2025-02-21T18:00:00.000Z"
   },
   "place_to_visit": "City Mall",
   "reason_type": "Personal",
-  "reason_for_visit": "Shopping",
+  "reason_for_visit": "Shopping and groceries",
   "file_path": null,
   "qrcode_path": null,
   "parent_approval": null,
   "wardern_approval": null,
   "superior_wardern_approval": null,
   "parent_sms_sent_status": false,
-  "qrcode_status": false,
-  "exit_time": null,
+  "qrcode_status": true,
+  "exit_time": {
+    "$date": "2025-02-21T10:00:00.000Z"
+  },
   "re_entry_time": null,
   "delay_status": false,
   "request_completed": false,
   "request_time": {
-    "$date": "2025-02-20T05:59:23.858Z"
+    "$date": "2025-02-21T04:12:55.294Z"
   },
   "expiry_status": false,
   "request_date_time": {
-    "$date": "2025-02-20T05:59:23.858Z"
+    "$date": "2025-02-21T04:12:55.294Z"
   },
   "authorised_Security_id": null,
   "authorised_warden_id": null
 },
 {
   "_id": {
-    "$oid": "67b6c4bd6679117818f1cd79"
+    "$oid": "67b7fd7d06a10686902b3222"
   },
-  "pass_id": "73c21c0e-e396-41a2-b875-029e3b0d3f1f",
+  "pass_id": "35c18d59-2ca1-4576-80dd-7525c64722f3",
   "name": "John Doe",
   "mobile_number": "9876543210",
-  "dept": "Computer Science",
+  "dept": "CSE",
   "year": 2,
   "room_no": "B-203",
-  "registration_number": "CS20231001",
+  "registration_number": "113222072000",
+  "gender": "Male",
+  "late_count": 1,
   "blockname": "Alpha Block",
-  "passtype": "Outing",
+  "passtype": "outpass",
   "from": {
-    "$date": "2025-02-21T04:30:00.000Z"
+    "$date": "2025-02-21T09:00:00.000Z"
   },
   "to": {
-    "$date": "2025-02-21T14:30:00.000Z"
+    "$date": "2025-02-21T18:00:00.000Z"
   },
   "place_to_visit": "City Mall",
   "reason_type": "Personal",
-  "reason_for_visit": "Shopping",
+  "reason_for_visit": "Shopping and groceries",
   "file_path": null,
   "qrcode_path": null,
   "parent_approval": null,
   "wardern_approval": null,
   "superior_wardern_approval": null,
   "parent_sms_sent_status": false,
-  "qrcode_status": false,
+  "qrcode_status": true,
   "exit_time": null,
   "re_entry_time": null,
   "delay_status": false,
   "request_completed": false,
   "request_time": {
-    "$date": "2025-02-20T05:59:25.197Z"
+    "$date": "2025-02-21T04:13:49.939Z"
   },
   "expiry_status": false,
   "request_date_time": {
-    "$date": "2025-02-20T05:59:25.197Z"
+    "$date": "2025-02-21T04:13:49.939Z"
+  },
+  "authorised_Security_id": null,
+  "authorised_warden_id": null
+},
+{
+  "_id": {
+    "$oid": "67b802a506a10686902b322a"
+  },
+  "pass_id": "ed719d2c-4f36-4fdd-a1f0-f690a5226e74",
+  "name": "Priya Sharma",
+  "mobile_number": "8765432109",
+  "dept": "ECE",
+  "year": 2,
+  "room_no": "310",
+  "registration_number": "113222072001",
+  "gender": "Female",
+  "late_count": 1,
+  "blockname": "FCBH",
+  "passtype": "staypass",
+  "from": {
+    "$date": "2025-02-21T22:57:00.000Z"
+  },
+  "to": {
+    "$date": "2025-02-22T22:57:00.000Z"
+  },
+  "place_to_visit": "VEC",
+  "reason_type": "semester",
+  "reason_for_visit": "",
+  "file_path": null,
+  "qrcode_path": null,
+  "parent_approval": null,
+  "wardern_approval": null,
+  "superior_wardern_approval": null,
+  "parent_sms_sent_status": false,
+  "qrcode_status": true,
+  "exit_time": null,
+  "re_entry_time": null,
+  "delay_status": false,
+  "request_completed": false,
+  "request_time": {
+    "$date": "2025-02-21T04:35:49.750Z"
+  },
+  "expiry_status": false,
+  "request_date_time": {
+    "$date": "2025-02-21T04:35:49.750Z"
+  },
+  "authorised_Security_id": null,
+  "authorised_warden_id": null
+},
+{
+  "_id": {
+    "$oid": "67b8049206a10686902b322d"
+  },
+  "pass_id": "1121cdb3-127d-4f01-a1ff-08e29365d514",
+  "name": "Priya Sharma",
+  "mobile_number": "8765432109",
+  "dept": "ECE",
+  "year": 2,
+  "room_no": "310",
+  "registration_number": "113222072001",
+  "gender": "Female",
+  "late_count": 1,
+  "blockname": "FCBH",
+  "passtype": "staypass",
+  "from": {
+    "$date": "2025-02-21T22:57:00.000Z"
+  },
+  "to": {
+    "$date": "2025-02-22T22:57:00.000Z"
+  },
+  "place_to_visit": "VEC",
+  "reason_type": "semester",
+  "reason_for_visit": "",
+  "file_path": null,
+  "qrcode_path": null,
+  "parent_approval": null,
+  "wardern_approval": null,
+  "superior_wardern_approval": null,
+  "parent_sms_sent_status": false,
+  "qrcode_status": true,
+  "exit_time": null,
+  "re_entry_time": null,
+  "delay_status": false,
+  "request_completed": false,
+  "request_time": {
+    "$date": "2025-02-21T04:44:02.227Z"
+  },
+  "expiry_status": false,
+  "request_date_time": {
+    "$date": "2025-02-21T04:44:02.227Z"
+  },
+  "authorised_Security_id": null,
+  "authorised_warden_id": null
+},
+{
+  "_id": {
+    "$oid": "67b804ad06a10686902b322e"
+  },
+  "pass_id": "877f82cf-6200-4d55-a5ff-d911408772fc",
+  "name": "Priya Sharma",
+  "mobile_number": "8765432109",
+  "dept": "ECE",
+  "year": 2,
+  "room_no": "310",
+  "registration_number": "113222072001",
+  "gender": "Female",
+  "late_count": 1,
+  "blockname": "FCBH",
+  "passtype": "staypass",
+  "from": {
+    "$date": "2025-02-21T22:57:00.000Z"
+  },
+  "to": {
+    "$date": "2025-02-22T22:57:00.000Z"
+  },
+  "place_to_visit": "VEC",
+  "reason_type": "semester",
+  "reason_for_visit": "",
+  "file_path": null,
+  "qrcode_path": null,
+  "parent_approval": null,
+  "wardern_approval": null,
+  "superior_wardern_approval": null,
+  "parent_sms_sent_status": false,
+  "qrcode_status": true,
+  "exit_time": null,
+  "re_entry_time": null,
+  "delay_status": false,
+  "request_completed": false,
+  "request_time": {
+    "$date": "2025-02-21T04:44:29.658Z"
+  },
+  "expiry_status": false,
+  "request_date_time": {
+    "$date": "2025-02-21T04:44:29.658Z"
   },
   "authorised_Security_id": null,
   "authorised_warden_id": null

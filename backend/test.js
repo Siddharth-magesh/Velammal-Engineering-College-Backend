@@ -282,7 +282,7 @@ app.post('/api/verify_student', async (req, res) => {
     }
 });
 
-// Endpoint to submit pass with parent approval request
+// Endpoint to submit pass for parent approval request
 app.post('/api/submit_pass_parent_approval', upload.single('file'), async (req, res) => {
     if (!req.session || req.session.studentauth !== true) {
         return res.status(401).json({ error: "Unauthorized access" });
@@ -311,21 +311,39 @@ app.post('/api/submit_pass_parent_approval', upload.single('file'), async (req, 
         }
 
         const parentPhoneNumber = student.phone_number_parent;
+        const gender = student.gender;
+        const fromDate = new Date(from);
+        const toDate = new Date(to);
 
-        const currentDate = new Date();
-
-        if (new Date(from) < currentDate) {
+        if (fromDate < new Date()) {
             return res.status(400).json({ error: "From date cannot be in the past" });
         }
 
-        if (new Date(to) < currentDate) {
+        if (toDate < new Date()) {
             return res.status(400).json({ error: "To date cannot be in the past" });
         }
 
-        if (new Date(to) < new Date(from)) {
+        if (toDate < fromDate) {
             return res.status(400).json({ error: "To date cannot be earlier than From date" });
         }
 
+        const toHours = toDate.getUTCHours();
+        const toMinutes = toDate.getUTCMinutes();
+        const totalToMinutes = toHours * 60 + toMinutes;
+
+        const maleTimeLimit = 21 * 60 + 30;
+        const femaleTimeLimit = 18 * 60;
+
+        if (pass_type.toLowerCase() === "outpass") {
+            if (gender === "Male" && totalToMinutes > maleTimeLimit) {
+                return res.status(400).json({ error: "For male students, outpass 'To' time cannot be later than 21:30 (9:30 PM)" });
+            }
+            if (gender === "Female" && totalToMinutes > femaleTimeLimit) {
+                return res.status(400).json({ error: "For female students, outpass 'To' time cannot be later than 18:00 (6:00 PM)" });
+            }
+        }
+
+        const currentDate = new Date();
         currentDate.setHours(0, 0, 0, 0);
         const nextDate = new Date(currentDate);
         nextDate.setDate(nextDate.getDate() + 1);
@@ -345,9 +363,9 @@ app.post('/api/submit_pass_parent_approval', upload.single('file'), async (req, 
         if (req.file) {
             file_path = `/Velammal-Engineering-College-Backend/static/student_docs/${req.file.filename}`;
         }
-        const yearInt = parseInt(year, 10); 
-
+        const yearInt = parseInt(year, 10);
         const pass_id = uuidv4();
+
         const PassData = {
             pass_id,
             name,
@@ -356,12 +374,12 @@ app.post('/api/submit_pass_parent_approval', upload.single('file'), async (req, 
             year: yearInt,
             room_no,
             registration_number,
-            gender: student.gender,
+            gender,
             late_count: student.late_count,
             blockname: block_name,
             passtype: pass_type,
-            from: new Date(from),
-            to: new Date(to),
+            from: fromDate,
+            to: toDate,
             place_to_visit,
             reason_type,
             reason_for_visit,
@@ -381,7 +399,9 @@ app.post('/api/submit_pass_parent_approval', upload.single('file'), async (req, 
             request_date_time: new Date(),
             authorised_Security_id: null,
             authorised_warden_id: null,
-            notify_superior: false
+            notify_superior: false,
+            transit_status: false,
+            comment: null
         };
 
         await PassCollection.insertOne(PassData);
@@ -414,55 +434,71 @@ app.post('/api/submit_pass_warden_approval', upload.single('file'), async (req, 
         const {
             mobile_number, name, department_name, year, room_no, registration_number,
             block_name, pass_type, from, to, place_to_visit,
-            reason_type, reason_for_visit , notify_superior
+            reason_type, reason_for_visit, notify_superior
         } = req.body;
 
         if (!mobile_number) {
             return res.status(400).json({ error: "Mobile number is required" });
         }
 
-        const currentDate = new Date();
-        currentDate.setHours(0, 0, 0, 0);
-        const nextDate = new Date(currentDate);
-        nextDate.setDate(nextDate.getDate() + 1);
-
-        if (new Date(from) < currentDate) {
-            return res.status(400).json({ error: "From date cannot be in the past" });
-        }
-
-        if (new Date(to) < currentDate) {
-            return res.status(400).json({ error: "To date cannot be in the past" });
-        }
-
-        if (new Date(to) < new Date(from)) {
-            return res.status(400).json({ error: "To date cannot be earlier than From date" });
-        }
-
-        const activePassCount = await PassCollection.countDocuments({
-            mobile_number,
-            request_completed: false,
-            expiry_status: false,
-            request_time: { $gte: currentDate, $lt: nextDate }
-        });
-
-        if (activePassCount >= 3) {
-            return res.status(400).json({ error: "Maximum of 3 active passes allowed per student for today" });
-        }
         const student = await studentDatabase.findOne({ phone_number_student: mobile_number });
 
         if (!student) {
             return res.status(404).json({ error: "Student record not found" });
         }
 
+        const gender = student.gender;
+        const fromDate = new Date(from);
+        const toDate = new Date(to);
+
+        if (fromDate < new Date()) {
+            return res.status(400).json({ error: "From date cannot be in the past" });
+        }
+
+        if (toDate < new Date()) {
+            return res.status(400).json({ error: "To date cannot be in the past" });
+        }
+
+        if (toDate < fromDate) {
+            return res.status(400).json({ error: "To date cannot be earlier than From date" });
+        }
+
+        const toHours = toDate.getUTCHours();
+        const toMinutes = toDate.getUTCMinutes();
+        const totalToMinutes = toHours * 60 + toMinutes;
+
+        const maleTimeLimit = 21 * 60 + 30;
+        const femaleTimeLimit = 18 * 60;
+
+        if (pass_type.toLowerCase() === "outpass") {
+            if (gender === "Male" && totalToMinutes > maleTimeLimit) {
+                return res.status(400).json({ error: "For male students, outpass 'To' time cannot be later than 21:30 (9:30 PM)" });
+            }
+
+            if (gender === "Female" && totalToMinutes > femaleTimeLimit) {
+                return res.status(400).json({ error: "For female students, outpass 'To' time cannot be later than 18:00 (6:00 PM)" });
+            }
+        }
+
+        const activePassCount = await PassCollection.countDocuments({
+            mobile_number,
+            request_completed: false,
+            expiry_status: false,
+            request_time: { $gte: new Date().setHours(0, 0, 0, 0), $lt: new Date().setHours(23, 59, 59, 999) }
+        });
+
+        if (activePassCount >= 3) {
+            return res.status(400).json({ error: "Maximum of 3 active passes allowed per student for today" });
+        }
+
         let file_path = null;
         if (req.file) {
             file_path = `/Velammal-Engineering-College-Backend/static/student_docs/${req.file.filename}`;
         }
+
         const yearInt = parseInt(year, 10);
-
-        const notifySuperiorStatus = notify_superior === true ? true : false;
-
         const pass_id = uuidv4();
+
         const PassData = {
             pass_id,
             name,
@@ -471,12 +507,12 @@ app.post('/api/submit_pass_warden_approval', upload.single('file'), async (req, 
             year: yearInt,
             room_no,
             registration_number,
-            gender: student.gender,
+            gender,
             late_count: student.late_count,
             blockname: block_name,
             passtype: pass_type,
-            from: new Date(from),
-            to: new Date(to),
+            from: fromDate,
+            to: toDate,
             place_to_visit,
             reason_type,
             reason_for_visit,
@@ -496,7 +532,9 @@ app.post('/api/submit_pass_warden_approval', upload.single('file'), async (req, 
             request_date_time: new Date(),
             authorised_Security_id: null,
             authorised_warden_id: null,
-            notify_superior: notifySuperiorStatus
+            notify_superior: notify_superior === true,
+            transit_status: false,
+            comment: null
         };
 
         await PassCollection.insertOne(PassData);
@@ -535,17 +573,38 @@ app.post('/api/save_draft', upload.single('file'), async (req, res) => {
         if (!student) {
             return res.status(404).json({ error: "Student record not found" });
         }
+
+        const fromDate = new Date(from);
+        const toDate = new Date(to);
         const currentDate = new Date();
-        if (new Date(from) < currentDate) {
+
+        if (fromDate < currentDate) {
             return res.status(400).json({ error: "From date cannot be in the past" });
         }
 
-        if (new Date(to) < currentDate) {
+        if (toDate < currentDate) {
             return res.status(400).json({ error: "To date cannot be in the past" });
         }
 
-        if (new Date(to) < new Date(from)) {
+        if (toDate < fromDate) {
             return res.status(400).json({ error: "To date cannot be earlier than From date" });
+        }
+
+        const toHours = toDate.getHours();
+        const toMinutes = toDate.getMinutes();
+        const totalToMinutes = toHours * 60 + toMinutes;
+
+        const maleTimeLimit = 21 * 60 + 30;
+        const femaleTimeLimit = 18 * 60;
+
+        if (pass_type.toLowerCase() === "outpass") {
+            if (student.gender === "Male" && totalToMinutes > maleTimeLimit) {
+                return res.status(400).json({ error: "For male students, outpass 'To' time cannot be later than 21:30 (9:30 PM)" });
+            }
+
+            if (student.gender === "Female" && totalToMinutes > femaleTimeLimit) {
+                return res.status(400).json({ error: "For female students, outpass 'To' time cannot be later than 18:00 (6:00 PM)" });
+            }
         }
 
         let file_path = null;
@@ -568,8 +627,8 @@ app.post('/api/save_draft', upload.single('file'), async (req, res) => {
             late_count: student.late_count,
             blockname: block_name,
             passtype: pass_type,
-            from: new Date(from),
-            to: new Date(to),
+            from: fromDate,
+            to: toDate,
             place_to_visit,
             reason_type,
             reason_for_visit,
@@ -588,7 +647,8 @@ app.post('/api/save_draft', upload.single('file'), async (req, res) => {
             expiry_status: false,
             request_date_time: new Date(),
             authorised_Security_id: null,
-            authorised_warden_id: null
+            authorised_warden_id: null,
+            comment: null
         };
 
         if (existingDraft) {
@@ -859,7 +919,7 @@ app.post('/api/request_profile_update', async (req, res) => {
         return res.status(401).json({ error: "Unauthorized access" });
     }
     try {
-        const { room_number, phone_number_student, phone_number_parent , name } = req.body;
+        const { phone_number_student, phone_number_parent , name } = req.body;
 
         await client.connect();
         const db = client.db(dbName);
@@ -872,13 +932,11 @@ app.post('/api/request_profile_update', async (req, res) => {
         }
         const fromData = {
             name: profile.name,
-            room_number: profile.room_number,
             phone_number_student: profile.phone_number_student,
             phone_number_parent: profile.phone_number_parent
         };
         const toData = {
             name: name || profile.name,
-            room_number: room_number || profile.room_number,
             phone_number_student: phone_number_student || profile.phone_number_student,
             phone_number_parent: phone_number_parent || profile.phone_number_parent
         };
@@ -891,7 +949,7 @@ app.post('/api/request_profile_update', async (req, res) => {
         const updateRequest = {
             registration_number,
             name: toData.name,
-            room_number: toData.room_number,
+            room_number: profile.room_number,
             year:profile.year,
             department: profile.department,
             phone_number_student: toData.phone_number_student,
@@ -988,7 +1046,6 @@ app.post('/api/handle_request', async (req, res) => {
                 {
                     $set: {
                         name: updateRequest.name,
-                        room_number: updateRequest.room_number,
                         phone_number_student: updateRequest.phone_number_student,
                         phone_number_parent: updateRequest.phone_number_parent,
                         edit_status: true
@@ -997,7 +1054,6 @@ app.post('/api/handle_request', async (req, res) => {
                         changes: {
                             $in: [
                                 `name: ${updateRequest.name}`,
-                                `room_number: ${updateRequest.room_number}`,
                                 `phone_number_student: ${updateRequest.phone_number_student}`,
                                 `phone_number_parent: ${updateRequest.phone_number_parent}`
                             ]
@@ -1032,7 +1088,6 @@ app.post('/api/handle_request', async (req, res) => {
                         changes: {
                             $in: [
                                 `name: ${updateRequest.name}`,
-                                `room_number: ${updateRequest.room_number}`,
                                 `phone_number_student: ${updateRequest.phone_number_student}`,
                                 `phone_number_parent: ${updateRequest.phone_number_parent}`
                             ]
@@ -1128,14 +1183,14 @@ app.get('/api/fetch_pending_passes_warden', async (req, res) => {
     }
 });
 
-// Warden Accept Endpoint
+// Warden Accept Endpoint (Updated with Comment Handling)
 app.post('/api/warden_accept', async (req, res) => {
     if (!req.session || req.session.wardenauth !== true) {
         return res.status(401).json({ error: "Unauthorized access" });
     }
     try {
         const warden_unique_id = req.session.unique_number;
-        const { pass_id, medical_status } = req.body;
+        const { pass_id, medical_status, comment } = req.body;
         if (!pass_id) {
             return res.status(400).json({ error: "pass_id is required" });
         }
@@ -1174,9 +1229,16 @@ app.post('/api/warden_accept', async (req, res) => {
             updateData.reason_type = "medical";
         }
 
+        if (comment && typeof comment === "string") {
+            updateData.comment = comment;
+        }
+
         await passCollection.updateOne({ pass_id: pass_id }, { $set: updateData });
 
-        res.status(200).json({ message: "Warden approval updated successfully", qrcode_path: qrPath });
+        res.status(200).json({ 
+            message: "Warden approval updated successfully", 
+            qrcode_path: qrPath 
+        });
 
     } catch (error) {
         console.error("❌ Error:", error);
@@ -1184,14 +1246,15 @@ app.post('/api/warden_accept', async (req, res) => {
     }
 });
 
-//Warden Decline Endpoint
+// Warden Decline Endpoint (Updated with Comment Handling)
 app.post('/api/warden_not_accept', async (req, res) => {
     if (!req.session || req.session.wardenauth !== true) {
         return res.status(401).json({ error: "Unauthorized access" });
     }
     try {
         const warden_unique_id = req.session.unique_number;
-        const { pass_id } = req.body;
+        const { pass_id, comment } = req.body;
+
         if (!pass_id) {
             return res.status(400).json({ error: "pass_id is required" });
         }
@@ -1211,18 +1274,24 @@ app.post('/api/warden_not_accept', async (req, res) => {
 
         if (!warden_data.primary_year.includes(passData.year)) {
             return res.status(400).json({ error: "Warden is accessing the wrong year" });
-        }        
+        }
 
         if (passData.wardern_approval !== null) {
             return res.status(400).json({
-                message: `The Following wardern ${passData.authorised_warden_id} have already ${passData.wardern_approval ? "approved" : "rejected"} this request. If you haven't approved this request, please contact the warden.`,
+                message: `The following warden ${passData.authorised_warden_id} has already ${passData.wardern_approval ? "approved" : "rejected"} this request. If you haven't approved this request, please contact the warden.`,
             });
         }
 
-        await passCollection.updateOne(
-            { pass_id: pass_id },
-            { $set: { wardern_approval: false , authorised_warden_id : warden_unique_id} }
-        );
+        const updateData = {
+            wardern_approval: false,
+            authorised_warden_id: warden_unique_id,
+        };
+
+        if (comment && typeof comment === "string") {
+            updateData.comment = comment; 
+        }
+
+        await passCollection.updateOne({ pass_id: pass_id }, { $set: updateData });
 
         res.status(200).json({ message: "Warden rejection updated successfully" });
 
@@ -1232,14 +1301,14 @@ app.post('/api/warden_not_accept', async (req, res) => {
     }
 });
 
-// Superior Warden Accept Endpoint
+// Superior Warden Accept Endpoint (Updated with Comment)
 app.post('/api/superior_accept', async (req, res) => {
     if (!req.session || req.session.superiorauth !== true) {
         return res.status(401).json({ error: "Unauthorized access" });
     }
     try {
         const superior_unique_id = req.session.unique_number;
-        const { pass_id, medical_status } = req.body;
+        const { pass_id, medical_status, comment } = req.body;
 
         if (!pass_id) {
             return res.status(400).json({ error: "pass_id is required" });
@@ -1276,6 +1345,10 @@ app.post('/api/superior_accept', async (req, res) => {
             updateData.reason_type = "medical";
         }
 
+        if (comment && typeof comment === "string") {
+            updateData.comment = comment;
+        }
+
         await passCollection.updateOne({ pass_id: pass_id }, { $set: updateData });
 
         res.status(200).json({ message: "Superior Warden approval updated successfully", qrcode_path: qrPath });
@@ -1286,14 +1359,14 @@ app.post('/api/superior_accept', async (req, res) => {
     }
 });
 
-//Superior Warden Decline Endpoint
+// Superior Warden Decline Endpoint (Updated with Comment)
 app.post('/api/superior_decline', async (req, res) => {
     if (!req.session || req.session.superiorauth !== true) {
         return res.status(401).json({ error: "Unauthorized access" });
     }
     try {
         const superior_unique_id = req.session.unique_number;
-        const { pass_id } = req.body;
+        const { pass_id, comment } = req.body;
 
         if (!pass_id) {
             return res.status(400).json({ error: "pass_id is required" });
@@ -1317,12 +1390,20 @@ app.post('/api/superior_decline', async (req, res) => {
             });
         }
         
-        await passCollection.updateOne(
-            { pass_id: pass_id },
-            { $set: { superior_wardern_approval: false , qrcode_path: null, qrcode_status: false , authorised_warden_id : superior_unique_id } }
-        );
+        const updateData = {
+            superior_wardern_approval: false,
+            qrcode_path: null,
+            qrcode_status: false,
+            authorised_warden_id: superior_unique_id,
+        };
 
-        res.status(200).json({ message: "Warden rejection updated successfully" });
+        if (comment && typeof comment === "string") {
+            updateData.comment = comment;
+        }
+
+        await passCollection.updateOne({ pass_id: pass_id }, { $set: updateData });
+
+        res.status(200).json({ message: "Superior Warden rejection updated successfully" });
 
     } catch (error) {
         console.error("❌ Error:", error);
@@ -1871,7 +1952,7 @@ app.post('/api/warden_change_foodtype', async (req, res) => {
     }
 });
 
-// Fetch waiting members name list
+// Fetch waiting members name list with pass type
 app.post("/api/fetch_waiting_members", async (req, res) => {
     if (!req.session || req.session.wardenauth !== true) {
         return res.status(401).json({ error: "Unauthorized Access" });
@@ -1907,11 +1988,13 @@ app.post("/api/fetch_waiting_members", async (req, res) => {
         }
 
         const waiting_data = await passCollection.find(query).toArray();
-        const names = waiting_data.map(member => member.name);
 
-        console.log(names);
+        const waiting_members = waiting_data.map(member => ({
+            name: member.name,
+            pass_type: member.passtype
+        }));
 
-        res.status(200).json({ waiting_members: names });
+        res.status(200).json({ waiting_members });
     } catch (error) {
         console.error("Error fetching data:", error);
         res.status(500).json({ error: "Internal Server Error" });
@@ -2030,7 +2113,7 @@ app.get("/api/pass_measures", async (req, res) => {
         }
 
         for (const year of primary_years) {
-            const yearFilter = { year, gender: warden_handling_gender , qrcode_status:true };
+            const yearFilter = { year, gender: warden_handling_gender , qrcode_status:true , exit_time : { $ne : null }};
 
             const exitTimeCount = await collection.countDocuments({
                 exit_time: { $gte: currentDate, $lt: nextDate },
