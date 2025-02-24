@@ -1461,9 +1461,9 @@ app.post('/api/superior_decline', async (req, res) => {
     }
 });
 
-//food type count 
-app.get('/api/food_count', async (req, res) => { 
-    if (!req.session || (!req.session.wardenauth && !req.session.superiorauth)) {
+//food type count warden
+app.get('/api/food_count_warden', async (req, res) => { 
+    if (!req.session || req.session.wardenauth !== true) {
         return res.status(401).json({ error: "Unauthorized access" });
     }
 
@@ -1476,6 +1476,38 @@ app.get('/api/food_count', async (req, res) => {
 
         const warden_data = await wardenCollection.findOne({ unique_id });
         const target_years = warden_data.primary_year;
+
+        let foodCounts = {};
+
+        for (const year of target_years) {
+            const vegCount = await studentCollection.countDocuments({ foodtype: "Veg", year , gender:warden_data.gender });
+            const nonVegCount = await studentCollection.countDocuments({ foodtype: "Non-Veg", year , gender:warden_data.gender });
+
+            foodCounts[year] = { veg_count: vegCount, non_veg_count: nonVegCount };
+        }
+
+        res.json(foodCounts);
+    } catch (err) {
+        console.error("❌ Error:", err);
+        res.status(500).json({ error: "Server error" });
+    }
+});
+
+//food type count superior
+app.get('/api/food_count_superior', async (req, res) => { 
+    if (!req.session || req.session.superiorauth !== true) {
+        return res.status(401).json({ error: "Unauthorized access" });
+    }
+
+    try {
+        await client.connect();
+        const db = client.db(dbName);
+        const unique_id = req.session.unique_number;
+        const wardenCollection = db.collection("warden_database");
+        const studentCollection = db.collection("student_database");
+
+        const warden_data = await wardenCollection.findOne({ unique_id });
+        const target_years = warden_data.profile_years;
 
         let foodCounts = {};
 
@@ -1515,6 +1547,26 @@ app.get('/api/sidebar_warden', async (req, res) => {
         })
     } catch (err) {
         console.error("❌ Error:", err);
+        res.status(500).json({ error: "Server error" });
+    }
+});
+
+// Fetch Warden Logs (Recent First)
+app.get('/api/fetch_logs', async (req, res) => { 
+    if (!req.session || req.session.superiorauth !== true) {
+        return res.status(401).json({ error: "Unauthorized access" });
+    }
+
+    try {
+        await client.connect();
+        const db = client.db(dbName);
+        const logsCollection = db.collection("warden_logs");
+        const logs = await logsCollection.find().sort({ deactivated_date: -1 }).toArray();
+
+        res.json({logs : logs});
+
+    } catch (err) {
+        console.error("❌ Error fetching logs:", err);
         res.status(500).json({ error: "Server error" });
     }
 });
@@ -1616,7 +1668,7 @@ app.post('/api/fetch_warden_details_reallocation', async (req, res) => {
     }
 });
 
-// Warden Inactive status handling
+// Warden Inactive Status Handling with Logging
 app.post('/api/warden_inactive_status_handling', async (req, res) => {
     if (!req.session || req.session.superiorauth !== true) {
         return res.status(401).json({ error: "Unauthorized access" });
@@ -1625,57 +1677,85 @@ app.post('/api/warden_inactive_status_handling', async (req, res) => {
         await client.connect();
         const db = client.db(dbName);
         const wardenCollection = db.collection("warden_database");
+        const logsCollection = db.collection("warden_logs");
         const { warden_name, inactive_warden_id, year } = req.body;
+
         if (!warden_name || !inactive_warden_id || !year) {
-            return res.status(400).json({ error: "Missing warden_name, inactive_warden_id, or year" });
+            return res.status(400).json({ error: "Missing required fields" });
         }
-        const warden_details = await wardenCollection.findOne({ warden_name });
-        if (!warden_details) {
-            return res.status(404).json({ message: "Warden not found" });
+
+        const inactive_warden = await wardenCollection.findOne({ unique_id: inactive_warden_id });
+        if (!inactive_warden) {
+            return res.status(404).json({ message: "Inactive warden not found" });
         }
-        const updateResult = await wardenCollection.updateOne(
+
+        const new_warden = await wardenCollection.findOne({ warden_name: warden_name });
+        if (!new_warden) {
+            return res.status(404).json({ message: "New warden not found" });
+        }
+        await wardenCollection.updateOne(
             { unique_id: inactive_warden_id },
             { $set: { active: false } }
         );
 
-        if (updateResult.matchedCount === 0) {
-            return res.status(404).json({ message: "Inactive warden not found" });
-        }
         await wardenCollection.updateOne(
-            { warden_name },
+            { warden_name: warden_name },
             { $addToSet: { primary_year: year } }
         );
-        res.json({ message: "Warden status updated and year added successfully" });
+
+        const log_entry = {
+            inactive_warden_id,
+            inactive_warden_name: inactive_warden.warden_name,
+            deactivated_date: new Date(),
+            new_warden_id: new_warden.unique_id,
+            new_warden_name: warden_name,
+            transferred_year: year,
+            log_status: "active"
+        };
+
+        await logsCollection.insertOne(log_entry);
+
+        res.json({ message: "Warden status updated, year transferred, and log recorded successfully" });
+
     } catch (error) {
         console.error("❌ Error handling warden status:", error);
         return res.status(500).json({ error: "Internal Server Error" });
     }
 });
 
-// Warden Active Status Handling
+// Warden Active Status Handling with Logging
 app.post('/api/warden_active_status_handling', async (req, res) => {
     if (!req.session || req.session.superiorauth !== true) {
         return res.status(401).json({ error: "Unauthorized access" });
     }
-
     try {
         await client.connect();
         const db = client.db(dbName);
         const wardenCollection = db.collection("warden_database");
+        const logsCollection = db.collection("warden_logs");
         const { warden_id } = req.body;
+
         if (!warden_id) {
             return res.status(400).json({ error: "Missing warden_id" });
         }
         const warden_details = await wardenCollection.findOne({ unique_id: warden_id });
-
         if (!warden_details) {
             return res.status(404).json({ message: "Warden not found" });
         }
+
         const primary_years = warden_details.primary_year || [];
+
+        const active_logs = await logsCollection.find({ inactive_warden_id: warden_id, log_status: "active" }).toArray();
+
+        if (active_logs.length === 0) {
+            return res.status(404).json({ message: "No active logs found for this warden" });
+        }
+
         await wardenCollection.updateMany(
-            { unique_id: { $ne: warden_id } },
+            { unique_id: { $ne: warden_id } ,  gender : warden_details.gender },
             { $pull: { primary_year: { $in: primary_years } } }
         );
+
         const updateResult = await wardenCollection.updateOne(
             { unique_id: warden_id },
             { $set: { active: true } }
@@ -1684,7 +1764,22 @@ app.post('/api/warden_active_status_handling', async (req, res) => {
         if (updateResult.matchedCount === 0) {
             return res.status(404).json({ message: "Warden not found or not updated" });
         }
-        res.json({ message: "Warden activated and primary years updated successfully" });
+
+        for (const log of active_logs) {
+            await logsCollection.updateOne(
+                { _id: log._id },
+                {
+                    $set: {
+                        log_status: "resolved",
+                        activated_date: new Date(),
+                        returned_years: log.transferred_year
+                    }
+                }
+            );
+        }
+
+        res.json({ message: "Warden activated, years updated, and logs resolved successfully" });
+
     } catch (error) {
         console.error("❌ Error handling warden status:", error);
         return res.status(500).json({ error: "Internal Server Error" });
@@ -2692,7 +2787,7 @@ app.post('/api/fetch_old_passes_for_superior', async (req, res) => {
         res.status(200).json({ message: "Old passes fetched successfully", data: pass_data });
 
     } catch (error) {
-        console.error("❌ Error fetching old passes:", error);
+        console.error("Error fetching old passes:", error);
         res.status(500).json({ error: "Internal server error" });
     }
 });
@@ -2723,7 +2818,7 @@ app.post('/api/edit_student_room_number', async (req, res) => {
         }
         res.status(200).json({ message: "Room number updated successfully" });
     } catch (error) {
-        console.error("❌ Error Editing Room Number:", error);
+        console.error("Error Editing Room Number:", error);
         res.status(500).json({ error: "Internal server error" });
     }
 });
@@ -2775,7 +2870,41 @@ app.post('/api/add_warden', upload.single('file'), async (req, res) => {
         res.status(201).json({ message: "Warden added successfully", unique_id });
 
     } catch (error) {
-        console.error("❌ Error Adding New Warden:", error);
+        console.error("Error Adding New Warden:", error);
+        res.status(500).json({ error: "Internal server error" });
+    }
+});
+
+// Increment Student Year
+app.post('/api/increment_student_year', async (req, res) => {
+    if (!req.session || req.session.superiorauth !== true) {
+        return res.status(401).json({ error: "Unauthorized Access" });
+    }
+    try {
+        const { student_id } = req.body;
+        if (!student_id) {
+            return res.status(400).json({ error: "Missing student_id" });
+        }
+
+        await client.connect();
+        const db = client.db(dbName);
+        const studentCollection = db.collection("student_database");
+        const student = await studentCollection.findOne({ registration_number: student_id });
+        if (!student) {
+            return res.status(404).json({ error: "Student not found" });
+        }
+        if (student.year >= 4) {
+            return res.status(400).json({ error: "Cannot increment year. Student is already in final year." });
+        }
+        await studentCollection.updateOne(
+            { registration_number: student_id },
+            { $inc: { year: 1 } }
+        );
+
+        res.status(200).json({ message: "Student year incremented successfully", new_year: student.year + 1 });
+
+    } catch (error) {
+        console.error("❌ Error Incrementing the Student Year:", error);
         res.status(500).json({ error: "Internal server error" });
     }
 });
