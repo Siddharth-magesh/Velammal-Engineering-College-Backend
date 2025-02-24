@@ -270,6 +270,7 @@ app.post('/api/verify_student', async (req, res) => {
             name: user.name,
             phone_number_student: user.phone_number_student,
             year: user.year,
+            gender : user.gender,
             department: user.department,
             room_number: user.room_number,
             registration_number: user.registration_number,
@@ -400,9 +401,12 @@ app.post('/api/submit_pass_parent_approval', upload.single('file'), async (req, 
             authorised_Security_id: null,
             authorised_warden_id: null,
             notify_superior: false,
-            transit_status: false,
             comment: null
         };
+        await studentDatabase.updateOne(
+            { registration_number : req.session.unique_number },
+            { $set: { transit_status: false } }
+        );
 
         await PassCollection.insertOne(PassData);
         await sendParentApprovalSMS(parentPhoneNumber, name, place_to_visit, reason_for_visit, from, to, pass_id);
@@ -533,9 +537,12 @@ app.post('/api/submit_pass_warden_approval', upload.single('file'), async (req, 
             authorised_Security_id: null,
             authorised_warden_id: null,
             notify_superior: notify_superior === true,
-            transit_status: false,
             comment: null
         };
+        await studentDatabase.updateOne(
+            { registration_number : req.session.unique_number },
+            { $set: { transit_status: false } }
+        );
 
         await PassCollection.insertOne(PassData);
         res.status(201).json({ message: "Visitor pass submitted and Notified Warden", file_path });
@@ -1116,34 +1123,77 @@ app.post('/api/handle_request', async (req, res) => {
     }
 });
 
-//wardern endpoint to fetch the student details
+//fetch student profiles for warden
 app.get('/api/get_student_details', async (req, res) => {
     if (!req.session || req.session.wardenauth !== true) {
         return res.status(401).json({ error: "Unauthorized access" });
     }
+
+    let clientInstance;
     try {
         const warden_unique_id = req.session.unique_number;
-        await client.connect();
-        const db = client.db(dbName);
+        clientInstance = await client.connect();
+        const db = clientInstance.db(dbName);
         const wardenCollection = db.collection("warden_database");
         const studentCollection = db.collection("student_database");
-        const warden = await wardenCollection.findOne({ unique_id : warden_unique_id });
-        const year = warden.primary_year;
+        const passCollection = db.collection("pass_details");
+
+        const warden = await wardenCollection.findOne({ unique_id: warden_unique_id });
+
         if (!warden) {
             return res.status(404).json({ error: "Warden not found" });
         }
-        
-        const student_data = await studentCollection.find({ year: { $in: year } , gender: warden.gender }).toArray();
-       
-        if (student_data.length === 0) {
-            return res.status(404).json({ message: "No data found" });
+        if (!warden.primary_year) {
+            return res.status(400).json({ error: "Warden primary year not found" });
         }
-        
-        res.json({ students: student_data });
+
+        const student_data = await studentCollection.find({
+            year: { $in: warden.primary_year },
+            gender: warden.gender
+        }).toArray();
+
+        if (student_data.length === 0) {
+            return res.status(404).json({ message: "No students found" });
+        }
+
+        const students_with_pass_data = await Promise.all(student_data.map(async (student) => {
+            let pass_info = {
+                from: null,
+                to: null,
+                passtype: null
+            };
+
+            if (student.transit_status === true) {
+                const pass_data = await passCollection.findOne({
+                    registration_number: student.registration_number,
+                    request_completed: false
+                });
+
+                if (pass_data) {
+                    pass_info = {
+                        from: pass_data.from,
+                        to: pass_data.to,
+                        passtype: pass_data.passtype
+                    };
+                }
+            }
+
+            return {
+                ...student,
+                pass_info
+            };
+        }));
+
+        res.json({ students: students_with_pass_data });
+
     } catch (err) {
-        console.error("❌ Error:", err);
+        console.error("❌ Error fetching student details:", err);
         res.status(500).json({ error: "Server error" });
-}
+    } finally {
+        if (clientInstance) {
+            await clientInstance.close();
+        }
+    }
 });
 
 //fetch all the pending passes for the warden
@@ -1389,7 +1439,7 @@ app.post('/api/superior_decline', async (req, res) => {
                 message: `You have already ${passData.superior_wardern_approval ? "approved" : "rejected"} this request. If you haven't approved this request, please contact the warden.`,
             });
         }
-        
+
         const updateData = {
             superior_wardern_approval: false,
             qrcode_path: null,
@@ -1411,7 +1461,7 @@ app.post('/api/superior_decline', async (req, res) => {
     }
 });
 
-//food type count
+//food type count 
 app.get('/api/food_count', async (req, res) => { 
     if (!req.session || (!req.session.wardenauth && !req.session.superiorauth)) {
         return res.status(401).json({ error: "Unauthorized access" });
@@ -1811,7 +1861,15 @@ app.post('/api/security_accept', async (req, res) => {
                 { 
                     $set: { 
                         exit_time: exitTime,
-                        authorised_Security_id: security_id 
+                        authorised_Security_id: security_id
+                    }
+                }
+            );
+            await studentCollection.updateOne(
+                { registration_number : pass_details.registration_number },
+                {
+                    $set: {
+                        transit_status: true
                     }
                 }
             );
@@ -1834,7 +1892,7 @@ app.post('/api/security_accept', async (req, res) => {
                 expiry_status: true,
                 delay_status: delayStatus
             };
-            if (delayStatus) {
+            if (delayStatus || pass_details.passtype == "outpass") {
                 await studentCollection.updateOne(
                     { phone_number_student: pass_details.mobile_number },
                     { $inc: { late_count: 1 } }
@@ -1844,6 +1902,14 @@ app.post('/api/security_accept', async (req, res) => {
             await passCollection.updateOne(
                 { pass_id: pass_id },
                 { $set: updateFields }
+            );
+            await studentCollection.updateOne(
+                { registration_number : pass_details.registration_number },
+                {
+                    $set: {
+                        transit_status: false
+                    }
+                }
             );
             await sendParentReachedSMS(
                 student_data.phone_number_parent, 
@@ -1971,7 +2037,13 @@ app.post("/api/fetch_waiting_members", async (req, res) => {
         }
 
         const warden_handling_gender = warden_data.gender;
-        const { target_year } = req.body;
+        const { target_year1 } = req.body;
+        let target_year;
+        if (target_year1=="overall"){
+            target_year = target_year1;
+        } else {
+            target_year = parseInt(target_year1);
+        }
 
         let query = {
             re_entry_time: null,
@@ -1980,7 +2052,7 @@ app.post("/api/fetch_waiting_members", async (req, res) => {
             gender: warden_handling_gender,
             exit_time: { $ne: null }
         };
-
+        
         if (target_year === "overall") {
             query.year = { $in: warden_data.primary_year };
         } else {
@@ -2020,7 +2092,13 @@ app.post("/api/fetch_late_members", async (req, res) => {
 
         const warden_handling_gender = warden_data.gender;
         const passCollection = db.collection("pass_details");
-        const { target_year } = req.body;
+        const { target_year1 } = req.body;
+        let target_year;
+        if (target_year1=="overall"){
+            target_year = target_year1;
+        } else {
+            target_year = parseInt(target_year1);
+        }
 
         const currentTime = new Date();
         const istTime = new Date(currentTime.getTime() + (5.5 * 60 * 60 * 1000));
@@ -2486,26 +2564,221 @@ app.get('/api/fetch_student_details_superior', async (req, res) => {
     if (!req.session || req.session.superiorauth !== true) {
         return res.status(401).json({ error: "Unauthorized Access" });
     }
+
+    let clientInstance;
     try {
-        await client.connect();
-        const db = client.db(dbName);
+        clientInstance = await client.connect();
+        const db = clientInstance.db(dbName);
         const studentsCollection = db.collection("student_database");
-        const student_data = await studentsCollection.find({}).toArray();
-        student_data.sort((a, b) => {
+        const passCollection = db.collection("pass_details");
+
+        let student_data = await studentsCollection.find({}).toArray();
+
+        const students_with_pass_data = await Promise.all(student_data.map(async (student) => {
+            let pass_info = {
+                from: null,
+                to: null,
+                passtype: null
+            };
+
+            if (student.transit_status === true) {
+                const pass_data = await passCollection.findOne({
+                    registration_number: student.registration_number,
+                    request_completed: false
+                });
+
+                if (pass_data) {
+                    pass_info = {
+                        from: pass_data.from,
+                        to: pass_data.to,
+                        passtype: pass_data.passtype
+                    };
+                }
+            }
+
+            return {
+                ...student,
+                pass_info
+            };
+        }));
+        students_with_pass_data.sort((a, b) => {
             if (b.year !== a.year) {
                 return b.year - a.year;
             }
             return a.gender === "Male" ? -1 : 1;
         });
-
-        res.status(200).json({ data: student_data });
+        res.status(200).json({ students: students_with_pass_data });
 
     } catch (error) {
-        console.error("Error fetching student details:", error);
+        console.error("❌ Error fetching student details:", error);
         res.status(500).json({ error: "Internal Server Error" });
     }
 });
 
+// Fetch the old passes for the warden
+app.post('/api/fetch_old_passes_for_warden', async (req, res) => {
+    if (!req.session || req.session.wardenauth !== true) {
+        return res.status(401).json({ error: "Unauthorized Access" });
+    }
+    try {
+        await client.connect();
+        const db = client.db(dbName);
+        const wardenCollection = db.collection("warden_database");
+        const passCollection = db.collection("pass_details");
+
+        const warden_id = req.session.unique_number;
+        const { date } = req.body;
+        const targetDate = date ? new Date(date) : new Date();
+
+        const startOfDay = new Date(targetDate.setHours(0, 0, 0, 0));
+        const endOfDay = new Date(targetDate.setHours(23, 59, 59, 999));
+        const warden_data = await wardenCollection.findOne({ unique_id: warden_id });
+        if (!warden_data) {
+            return res.status(404).json({ error: "Warden not found" });
+        }
+
+        const target_years = warden_data.primary_year;
+        const pass_data = await passCollection.find({
+            request_completed: true,
+            gender: warden_data.gender,
+            year: { $in: target_years },
+            request_time: { $gte: startOfDay, $lte: endOfDay }
+        }).toArray();
+
+        res.status(200).json({ message: "Old passes fetched successfully", data: pass_data });
+
+    } catch (error) {
+        console.error("❌ Error fetching old passes:", error);
+        res.status(500).json({ error: "Internal server error" });
+    }
+});
+
+// Fetch the old passes for the superior warden
+app.post('/api/fetch_old_passes_for_superior', async (req, res) => {
+    if (!req.session || req.session.superiorauth !== true) {
+        return res.status(401).json({ error: "Unauthorized Access" });
+    }
+    try {
+        await client.connect();
+        const db = client.db(dbName);
+        const wardenCollection = db.collection("warden_database");
+        const passCollection = db.collection("pass_details");
+
+        const superior_id = req.session.unique_number;
+        const { date, warden_id } = req.body;
+        const targetDate = date ? new Date(date) : new Date();
+
+        const startOfDay = new Date(targetDate.setHours(0, 0, 0, 0));
+        const endOfDay = new Date(targetDate.setHours(23, 59, 59, 999));
+        const superior_data = await wardenCollection.findOne({ unique_id: superior_id });
+
+        if (!superior_data) {
+            return res.status(404).json({ error: "Superior Warden not found" });
+        }
+
+        let filterQuery = {
+            request_completed: true,
+            request_time: { $gte: startOfDay, $lte: endOfDay }
+        };
+
+        if (warden_id && warden_id !== "overall") {
+            filterQuery.authorised_warden_id = warden_id;
+        } else {
+            filterQuery.year = { $in: superior_data.profile_years };
+        }
+
+        const pass_data = await passCollection.find(filterQuery).toArray();
+
+        res.status(200).json({ message: "Old passes fetched successfully", data: pass_data });
+
+    } catch (error) {
+        console.error("❌ Error fetching old passes:", error);
+        res.status(500).json({ error: "Internal server error" });
+    }
+});
+
+// Edit Room Student number by Warden or Superior
+app.post('/api/edit_student_room_number', async (req, res) => {
+    if (!req.session || (!req.session.wardenauth && !req.session.superiorauth)) {
+        return res.status(401).json({ error: "Unauthorized Access" });
+    }
+
+    try {
+        const { student_id, new_room_number } = req.body;
+        if (!student_id || !new_room_number) {
+            return res.status(400).json({ error: "Missing student_id or new_room_number" });
+        }
+
+        await client.connect();
+        const db = client.db(dbName);
+        const studentCollection = db.collection("student_database");
+
+        const updateResult = await studentCollection.updateOne(
+            { registration_number: student_id },
+            { $set: { room_number: new_room_number } }
+        );
+
+        if (updateResult.matchedCount === 0) {
+            return res.status(404).json({ error: "Student not found" });
+        }
+        res.status(200).json({ message: "Room number updated successfully" });
+    } catch (error) {
+        console.error("❌ Error Editing Room Number:", error);
+        res.status(500).json({ error: "Internal server error" });
+    }
+});
+
+// Add New Warden
+app.post('/api/add_warden', upload.single('file'), async (req, res) => {
+    if (!req.session || (!req.session.wardenauth && !req.session.superiorauth)) {
+        return res.status(401).json({ error: "Unauthorized Access" });
+    }
+    try {
+        const { name, primary_year, phone_number, password, gender, category, joined_date } = req.body;
+        
+        if (!name || !primary_year || !phone_number || !password || !gender || !category || !joined_date) {
+            return res.status(400).json({ error: "Missing required fields" });
+        }
+
+        await client.connect();
+        const db = client.db(dbName);
+        const wardenCollection = db.collection("warden_database");
+
+        const existingWarden = await wardenCollection.findOne({ phone_number });
+        if (existingWarden) {
+            return res.status(409).json({ error: "Phone number already exists" });
+        }
+        const wardenCount = await wardenCollection.countDocuments({ category: "assistant" });
+        const unique_id = String(wardenCount + 1).padStart(3, '0');
+
+        let file_path = null;
+        if (req.file) {
+            file_path = `/Velammal-Engineering-College-Backend/static/images/warden_profile_images/${req.file.filename}`;
+        }
+        const hashedPassword = await bcrypt.hash(password, 10);
+
+        const newWarden = {
+            unique_id,
+            name,
+            primary_year,
+            phone_number,
+            password: hashedPassword,
+            gender,
+            category,
+            joined_date,
+            active: true,
+            image_path: file_path
+        };
+
+        await wardenCollection.insertOne(newWarden);
+
+        res.status(201).json({ message: "Warden added successfully", unique_id });
+
+    } catch (error) {
+        console.error("❌ Error Adding New Warden:", error);
+        res.status(500).json({ error: "Internal server error" });
+    }
+});
 
 //logout
 app.get('/api/logout', (req, res) => {

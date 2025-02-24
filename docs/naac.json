@@ -20,14 +20,16 @@
                         "2019-2020",
                         "2020-2021",
                         "2021-2022",
-                        "2022-2023"
+                        "2022-2023",
+                        "2023-2024"
                     ],
                     "PDF_Path": [
                         "/static/pdfs/naac/AQAR_2018-2019.pdf",
                         "/static/pdfs/naac/AQAR_2019-2020.pdf",
                         "/static/pdfs/naac/AQAR_2020-2021.pdf",
                         "/static/pdfs/naac/AQAR_2021-2022.pdf",
-                        "/static/pdfs/naac/AQAR_2022-2023.pdf"
+                        "/static/pdfs/naac/AQAR_2022-2023.pdf",
+                        "/static/pdfs/naac/AQAR_2023-2024.pdf"
                     ]
                 }
             },
