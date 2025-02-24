@@ -1493,38 +1493,37 @@ app.get('/api/food_count_warden', async (req, res) => {
     }
 });
 
-//food type count superior
+// Food Type Count for Superior (Grouped by Gender)
 app.get('/api/food_count_superior', async (req, res) => { 
     if (!req.session || req.session.superiorauth !== true) {
         return res.status(401).json({ error: "Unauthorized access" });
     }
-
     try {
         await client.connect();
         const db = client.db(dbName);
-        const unique_id = req.session.unique_number;
-        const wardenCollection = db.collection("warden_database");
         const studentCollection = db.collection("student_database");
-
-        const warden_data = await wardenCollection.findOne({ unique_id });
-        const target_years = warden_data.profile_years;
-
+        const genders = ["Male", "Female"];
+        const target_years = [1, 2, 3, 4];
         let foodCounts = {};
-
-        for (const year of target_years) {
-            const vegCount = await studentCollection.countDocuments({ foodtype: "Veg", year , gender:warden_data.gender });
-            const nonVegCount = await studentCollection.countDocuments({ foodtype: "Non-Veg", year , gender:warden_data.gender });
-
-            foodCounts[year] = { veg_count: vegCount, non_veg_count: nonVegCount };
+        for (const gender of genders) {
+            foodCounts[gender] = {};
+            let totalVegCount = 0;
+            let totalNonVegCount = 0;
+            for (const year of target_years) {
+                const vegCount = await studentCollection.countDocuments({ foodtype: "Veg", year, gender });
+                const nonVegCount = await studentCollection.countDocuments({ foodtype: "Non-Veg", year, gender });
+                foodCounts[gender][year] = { veg_count: vegCount, non_veg_count: nonVegCount };
+                totalVegCount += vegCount;
+                totalNonVegCount += nonVegCount;
+            }
+            foodCounts[gender]["Overall"] = { veg_count: totalVegCount, non_veg_count: totalNonVegCount };
         }
-
         res.json(foodCounts);
     } catch (err) {
         console.error("❌ Error:", err);
         res.status(500).json({ error: "Server error" });
     }
 });
-
 //warden sidebar
 app.get('/api/sidebar_warden', async (req, res) => { 
     if (!req.session || (!req.session.wardenauth && !req.session.superiorauth)) {
@@ -2908,6 +2907,152 @@ app.post('/api/increment_student_year', async (req, res) => {
         res.status(500).json({ error: "Internal server error" });
     }
 });
+
+//activate vacate status for student
+app.post('/api/mark_student_vacate', async (req, res) => {
+    if (!req.session || req.session.wardenauth !== true) {
+        return res.status(401).json({ error: "Unauthorized access" });
+    }
+    try {
+        await client.connect();
+        const db = client.db(dbName);
+        const studentCollection = db.collection("student_database");
+
+        const { student_id } = req.body;
+        if (!student_id) {
+            return res.status(400).json({ error: "Missing student_id" });
+        }
+
+        const updateResult = await studentCollection.updateOne(
+            { registration_number : student_id },
+            { $set: { vacate_status: true } }
+        );
+
+        if (updateResult.matchedCount === 0) {
+            return res.status(404).json({ error: "Student not found" });
+        }
+
+        res.json({ message: "Student marked for vacating successfully" });
+    } catch (err) {
+        console.error("❌ Error:", err);
+        res.status(500).json({ error: "Server error" });
+    }
+});
+
+//student submit vacate forms
+app.post('/api/submit_vacate_form', async (req, res) => {
+    if (!req.session || req.session.studentauth !== true) {
+        return res.status(401).json({ error: "Unauthorized access" });
+    }
+    try {
+        await client.connect();
+        const db = client.db(dbName);
+        const studentCollection = db.collection("student_database");
+        const vacateCollection = db.collection("vacate_forms");
+
+        const { student_id, reason_for_leave, last_date_of_stay, any_dues_pending, room_condition, feedback } = req.body;
+
+        if (!student_id || !reason_for_leave || !last_date_of_stay || !any_dues_pending || !room_condition || !feedback) {
+            return res.status(400).json({ error: "Missing required fields" });
+        }
+
+        const studentData = await studentCollection.findOne({ registration_number : student_id });
+        if (!studentData) {
+            return res.status(404).json({ error: "Student not found" });
+        }
+        const vacateEntry = {
+            name: studentData.name,
+            registration_number: studentData.registration_number,
+            dept: studentData.dept,
+            year: studentData.year,
+            gender: studentData.gender,
+            room_no: studentData.room_no,
+            blockname: studentData.blockname,
+            reason_for_leave,
+            last_date_of_stay,
+            any_dues_pending,
+            room_condition,
+            feedback,
+            vacate_date: new Date()
+        };
+        await vacateCollection.insertOne(vacateEntry);
+        await studentCollection.updateOne(
+            { registration_number : student_id },
+            { $set: { vacate_status: false } }
+        );
+
+        res.json({
+            message: "Vacate form submitted successfully"
+        });
+    } catch (err) {
+        console.error("Error:", err);
+        res.status(500).json({ error: "Server error" });
+    }
+});
+
+//superior to fetch all the vacate forms
+app.get('/api/get_all_vacate_forms', async (req, res) => {
+    if (!req.session || req.session.superiorauth !== true) {
+        return res.status(401).json({ error: "Unauthorized access" });
+    }
+
+    try {
+        await client.connect();
+        const db = client.db(dbName);
+        const vacateCollection = db.collection("vacate_forms");
+
+        const vacateForms = await vacateCollection.find().toArray();
+
+        res.json({ vacate_forms: vacateForms });
+    } catch (err) {
+        console.error("Error fetching vacate forms:", err);
+        res.status(500).json({ error: "Internal Server Error" });
+    }
+});
+
+//archive student
+app.post('/api/archive_student', async (req, res) => {
+    if (!req.session || req.session.superiorauth !== true) {
+        return res.status(401).json({ error: "Unauthorized access" });
+    }
+
+    try {
+        await client.connect();
+        const db = client.db(dbName);
+        const studentCollection = db.collection("student_database");
+        const vacateCollection = db.collection("vacate_forms");
+        const archiveCollection = db.collection("student_archive");
+
+        const { student_id, action } = req.body;
+        if (!student_id || !action) {
+            return res.status(400).json({ error: "Missing student_id or action" });
+        }
+
+        if (action === 'approve') {
+            const studentData = await studentCollection.findOne({ registration_number: student_id });
+            if (!studentData) {
+                return res.status(404).json({ error: "Student not found in database" });
+            }
+
+            await archiveCollection.insertOne(studentData);
+            await studentCollection.deleteOne({ registration_number: student_id });
+            await vacateCollection.deleteOne({ registration_number: student_id });
+
+            return res.json({ message: "Student archived and removed from student database & vacate forms" });
+        } 
+        
+        if (action === 'decline') {
+            await vacateCollection.deleteOne({ registration_number: student_id });
+            return res.json({ message: "Student vacate request declined, removed from vacate forms" });
+        }
+
+        res.status(400).json({ error: "Invalid action" });
+    } catch (err) {
+        console.error("❌ Error:", err);
+        res.status(500).json({ error: "Server error" });
+    }
+});
+
 
 //logout
 app.get('/api/logout', (req, res) => {
