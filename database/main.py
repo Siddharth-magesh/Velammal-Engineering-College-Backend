@@ -909,6 +909,27 @@ department_mapping = {
     "Physics": "015"
 }
 
+def insert_incubation_data():
+    collection= db['incubation']
+    with open ("/Velammal-Engineering-College-Backend/docs/incubation.json","r") as file:
+        documents= json.load(file)
+        collection.insert_many(documents)
+    print("Incubation documents inserted successfully")
+    
+def insert_army_data():
+    collection = db['army']
+    with open("/Velammal-Engineering-College-Backend/docs/ncc_army.json", "r") as file:
+        documents = json.load(file)
+        collection.insert_many(documents)
+    print("armydocuments inserted successfully.")
+
+def insert_navy_data():
+    collection = db['navy']
+    with open("/Velammal-Engineering-College-Backend/docs/navy.json", "r") as file:
+        documents = json.load(file)
+        collection.insert_many(documents)
+    print("navy documents inserted successfully.")
+
 def insert_faculty_data(folder_path):
     department_name=None
     with open(r"/Velammal-Engineering-College-Backend/docs/prev_faculty.json","r") as file:
@@ -1120,6 +1141,9 @@ insert_yrc_data()
 insert_overall_department_research()
 insert_department_research_data()
 insert_warden_hostel_data()
+insert_incubation_data()
+insert_army_data()
+insert_navy_data()
 
 def add_hostel_student_database():
     collection = db["student_database"]

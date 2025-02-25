@@ -762,6 +762,38 @@ app.get('/api/sidebar/:deptid', async (req, res) => {
     }
 });
 
+//NSS ARMY
+app.get('/api/army', async (req, res) => {
+    const db = client.db(dbName);
+    const collection = db.collection('army');
+    try {
+        const Data = await collection.find({}).toArray();
+        if (Data.length === 0) {
+            return res.status(404).json({ message: 'No navy data found' });
+        }
+        res.status(200).json(Data);
+    } catch (error) {
+        console.error('❌ Error fetching navy data:', error);
+        res.status(500).json({ error: 'Error fetching armydata' });
+    }
+});
+
+//NSS NAVY
+app.get('/api/navy', async (req, res) => {
+    const db = client.db(dbName);
+    const collection = db.collection('navy');
+    try {
+        const NAVYData = await collection.find({}).toArray();
+        if (NAVYData.length === 0) {
+            return res.status(404).json({ message: 'No navy data found' });
+        }
+        res.status(200).json(NIRFData);
+    } catch (error) {
+        console.error('❌ Error fetching navy data:', error);
+        res.status(500).json({ error: 'Error fetching navy data' });
+    }
+});
+
 //NSS ENDPOINT START (OLD ENDPOINTS)
 
 //Signup

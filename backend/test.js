@@ -241,6 +241,9 @@ app.post('/api/login', async (req, res) => {
         } else if (type === "superior") {
             collectionName = "warden_database";
             query = { unique_id: registration_number , category : "head" };
+        } else if (type === "security") {
+            collectionName = "security_database";
+            query = { unique_id: registration_number };
         } else {
             return res.status(400).json({ error: "Invalid user type" });
         }
@@ -262,6 +265,8 @@ app.post('/api/login', async (req, res) => {
             req.session.wardenauth = true;
         } else if (type === "superior") {
             req.session.superiorauth = true;
+        } else if (type === "security") {
+            req.session.securityauth = true;
         }
         req.session.unique_number = registration_number;
         res.status(200).json({ 
@@ -273,42 +278,6 @@ app.post('/api/login', async (req, res) => {
             },
             redirect:`/${type}`
         });
-    } catch (error) {
-        console.error(error);
-        res.status(500).json({ error: "Internal Server Error" });
-    }
-});
-
-//security login
-app.post('/api/security_login', async (req, res) => {
-    try {
-        await client.connect();
-        const db = client.db(dbName);
-        const securityCollection = db.collection("security_database");
-        const { registration_number, password } = req.body; 
-        
-        const security_details = await securityCollection.findOne({ unique_id: registration_number });
-
-        if (!security_details) {
-            return res.status(401).json({ error: "Invalid credentials" });
-        }
-
-        const isMatch = await bcrypt.compare(password, security_details.password);
-        if (!isMatch) {
-            return res.status(401).json({ error: "Invalid credentials" });
-        }
-
-        req.session.securityauth = true;
-        req.session.unique_number = registration_number;
-
-        res.status(200).json({ 
-            message: 'Sign-in successful', 
-            user: {
-                userid: security_details.unique_id,
-                name: security_details.name,
-            } 
-        });
-
     } catch (error) {
         console.error(error);
         res.status(500).json({ error: "Internal Server Error" });

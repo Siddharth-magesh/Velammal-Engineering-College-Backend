@@ -1,0 +1,82 @@
+[
+    {
+    "2023-24": {
+        "carousal_images": [
+            "https://ncc.army.mil.in/Content/Carousel/1.jpg",
+            "https://ncc.army.mil.in/Content/Carousel/2.jpg",
+            "https://ncc.army.mil.in/Content/Carousel/3.jpg",
+            "https://ncc.army.mil.in/Content/Carousel/4.jpg",
+            "https://ncc.army.mil.in/Content/Carousel/5.jpg"
+        ],
+        "carousal_title": [
+            "NCC Army",
+            "NCC Army",
+            "NCC Army",
+            "NCC Army",
+            "NCC Army"
+        ],
+        "carousal_description": [
+            "NCC Army",
+            "NCC Army",
+            "NCC Army",
+            "NCC Army",
+            "NCC Army"
+        ],
+        "coordinator_name": "Captain R Chezian",
+        "coordinator_image": "https://ncc.army.mil.in/Content/Coordinator/1.jpg",
+        "coordinator_designation": "NCC Army Coordinator",
+        "coordinator_description": "NCC Army Coordinator",
+        "s.no": [
+            1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
+            21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38
+        ],
+        "rank": [
+            "SGT", "CQMS", "CPL", "SGT", "SGT", "CPL", "CSM", "SCUO", "CPL", "CPL",
+            "CPL", "SGT", "SCUO", "CPL", "CPL", "CQMS", "CSM", "CPL", "SGT", "SGT",
+            "SGT", "CPL", "CPL", "L/CPL", "L/CPL", "L/CPL", "L/CPL", "L/CPL", "L/CPL",
+            "L/CPL", "L/CPL", "L/CPL", "L/CPL", "L/CPL", "L/CPL", "L/CPL", "L/CPL"
+        ],
+        "name": [
+            "BALA SHANMUGAM S", "GIRIDHARAN S", "JOHNBRIGHTSON J S", "SANIDHYA VARDHAN SINGH",
+            "SRIRAM R", "UKESHRAJ V", "SADHANADEVI G", "SHARMILAMANGAI E", "SIBI T", "VARSHA D",
+            "AKASH G", "GOKULA KRISHNAN M", "JACOB GIDEON RAJ R", "JITVAN S", "MUTHU KUMARAN A",
+            "NAVEN A", "NAVEEN KUMAR T", "SURYADEVU V", "THARUN P", "VIMALKANTH B",
+            "VINEETH N", "AARTHI K K", "KEERTHANA B", "AKASHBABU K", "CHARLES S",
+            "CHITHIRAISELVAN G", "ESAKKIRAJAN G", "INNDHAR M", "KATHIRVEL S", "LOKESH THAMBIRAN R",
+            "NISHANTH V", "SADIKALI K", "UTHAYAKUMAR S", "ABINAYA V", "RUTHRA S", "SAIDHARSHINI D"
+        ],
+        "regimental_number": [
+            "TN21SDA614501", "TN21SDA614504", "TN21SDA614505", "TN21SDA614506",
+            "TN21SDA614509", "TN21SDA614510", "TN21SWA614515", "TN21SWA614516",
+            "TN21SWA614517", "TN21SWA614520", "TN22SDA614501", "TN22SDA614503",
+            "TN22SDA614505", "TN22SDA614506", "TN22SDA614507", "TN22SDA614508",
+            "TN22SDA614509", "TN22SDA614510", "TN22SDA614511", "TN22SDA614512",
+            "TN22SDA614513", "TN22SDA614514", "TN22SDA614521", "TN23SDA614501",
+            "TN23SDA614502", "TN23SDA614503", "TN23SDA032153", "TN23SDA032164",
+            "TN23SDA614507", "TN23SDA614508", "TN23SDA614509", "TN23SDA614511",
+            "TN23SDA614512", "TN23SDA614516", "TN23SDA614523", "TN23SDA614524"
+        ],
+        "branch": [
+            "III/CSE/A", "III/CSE/B", "III/CSE/A", "III/CSE/A", "III/MECH/B",
+            "III/ECE/B", "III/CSE/A", "III/ECE/A", "III/EEE", "IV/ECE/C",
+            "III/ECE/C", "III/EEE", "III/MECH/A", "III/ECE/C", "III/IT/B",
+            "III/MECH/B", "III/ECE/C", "III/AUTO", "III/CSE/B", "III/ECE/C",
+            "III/CSE/B", "III/IT/A", "III/EEE", "I/CIVIL/A", "I/MECH/A",
+            "I/AUTO", "I/MECH/A", "I/CSE/C", "I/ECE/A", "I/MECH/A",
+            "I/MECH/A", "I/AIDS/A", "I/MECH/A", "I/AIDS/B", "I/EIE/A",
+            "I/ECE/C"
+        ],
+        "register_number": [
+            "113221031023", "113221031052", "113221081031", "113221031127",
+            "113221081072", "113221041151", "113221031126", "113221041132",
+            "113221051046", "113220041149", "113222041003", "113222051013",
+            "113222081024", "113222041070", "113222071062", "113222081041",
+            "113222041098", "113222011012", "113222081061", "113222041172",
+            "113222031172", "113222071001", "113222051027", "113223021002",
+            "113223081010", "113223011005", "113223081013", "113223031071",
+            "113223041058", "113223081027", "113223081030", "113223072084",
+            "113223081046", "113223072004", "113223061021", "113223021121"
+        ]
+    }
+}
+]
