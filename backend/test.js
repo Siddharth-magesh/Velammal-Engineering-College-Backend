@@ -3286,6 +3286,42 @@ app.post('/api/set_new_password', async (req, res) => {
     }
 });
 
+//edit student documents
+app.post('/api/edit_student_pass', upload.single('file'), async (req, res) => {
+    if (!req.session || req.session.studentauth !== true) {
+        return res.status(401).json({ error: "Unauthorized access" });
+    }
+
+    try {
+        if (!req.file) {
+            return res.status(400).json({ error: "No file uploaded" });
+        }
+        const { pass_id } = req.body;
+        const file_path = `/Velammal-Engineering-College-Backend/static/images/student_docs/${req.file.filename}`;
+        await client.connect();
+        const db = client.db(dbName);
+        const passCollection = db.collection("pass_details");
+        const pass_details = await passCollection.findOne({ pass_id });
+
+        if (pass_details && pass_details.file_path) {
+            const oldFilePath = path.join(__dirname, pass_details.file_path);
+            if (fs.existsSync(oldFilePath)) {
+                fs.unlinkSync(oldFilePath);
+            }
+        }
+        await passCollection.updateOne(
+            { pass_id },
+            { $set: { file_path: file_path } }
+        );
+
+        res.json({ message: "Student pass file updated successfully", file_path });
+
+    } catch (err) {
+        console.error("Error:", err);
+        res.status(500).json({ error: "Server error" });
+    }
+});
+
 //to fetch all the active sessions
 app.get('/api/session', (req, res) => {
     if (!req.session) {
