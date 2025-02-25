@@ -151,6 +151,36 @@ const sendParentReachedSMS = async (parentPhoneNumber, name, reachedTime) => {
     }
 };
 
+const sendOTPForForgetPassword = async (warden_number, name) => {  
+    const otp = Math.floor(100000 + Math.random() * 900000);
+    req.session.otp = otp;
+    req.session.otpExpires = Date.now() + 5 * 60 * 1000;
+    const smsMessage = `
+    🔐 Password Reset OTP  
+
+    Dear ${name},  
+
+    Your One-Time Password (OTP) for resetting your password is: **${otp}**  
+
+    ⏳ This OTP is valid for 5 minutes. Do not share it with anyone.  
+
+    Thank you,  
+    Velammal Engineering College  
+    `;
+
+    try {
+        await twilioClient.messages.create({
+            body: smsMessage,
+            from: twilioPhoneNumber,
+            to: warden_number
+        });
+        console.log(`OTP sent successfully to ${name}`);
+    } catch (error) {
+        console.error("Error sending OTP:", error);
+        throw new Error("Failed to send OTP");
+    }
+};
+
 //cron job for food request updation
 cron.schedule("0 * * * *", async () => {
     console.log("Checking for pending food type updates...");
@@ -929,12 +959,11 @@ app.post('/api/approve_food_change', async (req, res) => {
         }
 
         let updateMessage = 'Food type change request declined';
+        const currentTime = new Date();
+        const istTime = new Date(currentTime.getTime() + (5.5 * 60 * 60 * 1000));
+        const updateTimeIST = new Date(istTime.getTime() + (24 * 60 * 60 * 1000));
 
         if (action === "approve") {
-            const currentTime = new Date();
-            const istTime = new Date(currentTime.getTime() + (5.5 * 60 * 60 * 1000));
-            const updateTimeIST = new Date(istTime.getTime() + (24 * 60 * 60 * 1000)); 
-
             await cronCollection.insertOne({
                 registration_number,
                 name,
@@ -3119,6 +3148,98 @@ app.get('/api/logout', (req, res) => {
         });
     } else {
         return res.status(400).json({ error: "No active session" });
+    }
+});
+
+//Send OTP for forget password warden
+app.post('/api/send_otp', async (req, res) => {
+    if (!req.session || req.session.wardenauth !== true) {
+        return res.status(401).json({ error: "Unauthorized access" });
+    }
+
+    try {
+        await client.connect();
+        const db = client.db(dbName);
+        const warden_id = req.session.unique_number;
+        const wardenCollection = db.collection("warden_database");
+        const warden_data = await wardenCollection.findOne({ unique_id: warden_id });
+        if (!warden_data) {
+            return res.status(404).json({ error: "Warden not found" });
+        }
+        await sendOTPForForgetPassword(warden_data.phone_number_student, warden_data.warden_name);
+
+        res.status(200).json({ message: "OTP sent successfully" });
+
+    } catch (err) {
+        console.error("❌ Error:", err);
+        res.status(500).json({ error: "Server error" });
+    }
+});
+
+//otp validation
+app.post('/api/otp_validation', async (req, res) => {
+    if (!req.session || req.session.wardenauth !== true) {
+        return res.status(401).json({ error: "Unauthorized access" });
+    }
+
+    try {
+        const { otp } = req.body;
+        if (!req.session.otp || !req.session.otpExpires) {
+            return res.status(400).json({ error: "OTP not found or expired" });
+        }
+        if (Date.now() > req.session.otpExpires) {
+            delete req.session.otp;
+            delete req.session.otpExpires;
+            return res.status(400).json({ error: "OTP has expired" });
+        }
+
+        if (parseInt(otp) !== req.session.otp) {
+            return res.status(400).json({ error: "Invalid OTP" });
+        }
+        delete req.session.otp;
+        delete req.session.otpExpires;
+
+        res.status(200).json({ message: "OTP validated successfully" , redirect : '/chnage_password' });
+
+    } catch (err) {
+        console.error("❌ Error:", err);
+        res.status(500).json({ error: "Server error" });
+    }
+});
+
+//set new password
+app.post('/api/set_new_password', async (req, res) => {
+    if (!req.session || req.session.wardenauth !== true) {
+        return res.status(401).json({ error: "Unauthorized access" });
+    }
+
+    try {
+        const { new_password } = req.body;
+
+        if (!new_password || new_password.length < 4) {
+            return res.status(400).json({ error: "Password must be at least 4 characters long" });
+        }
+        const hashedPassword = await bcrypt.hash(new_password, 10);
+
+        await client.connect();
+        const db = client.db(dbName);
+        const warden_id = req.session.unique_number;
+        const wardenCollection = db.collection("warden_database");
+        const updateResult = await wardenCollection.updateOne(
+            { registration_number: warden_id },
+            { $set: { password: hashedPassword } }
+        );
+
+        if (updateResult.modifiedCount === 0) {
+            return res.status(400).json({ error: "Failed to update password. Warden not found or same password used." });
+        }
+
+        res.status(200).json({ message: "Password updated successfully" });
+
+    } catch (err) {
+        console.error("Error:", err);
+        res.status(500).json({ error: "Server error" });
+
     }
 });
 
