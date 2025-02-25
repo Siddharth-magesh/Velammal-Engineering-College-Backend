@@ -103,15 +103,17 @@
         "department_id": "008",
         "department_name": "Electronics & Instrumentation Engineering (EIE)",
         "department_image": "/static/images/department_data/eie.jpg",
-        "department_quotes": "Building the foundation for tomorrow.",
-        "vision": "To be a leader in civil engineering education, research, and sustainable development.",
+        "department_quotes": "Empowering minds with the knowledge of electronics, instrumentation, and control, we pave the path for innovation and leadership, nurturing talents for a globally competitive future.",
+        "vision": "To impart knowledge base and skill sets in the field of Electronics and Instrumentation by providing learning ambience for academic and research activities, leading to global competence.",
         "mission": [
-            "Provide in-depth knowledge of civil engineering principles.",
-            "Encourage innovation in construction and design.",
-            "Promote sustainable and eco-friendly engineering practices."
+            "To provide students with strong foundation in electronics, instrumentation and control engineering.",
+            "To enhance the core competency, leadership and managerial skills of the students to cater the industrial needs.",
+            "To cultivate adaption of ethics, morality and healthy practices in professional life towards serving the society and the country.",
+            "To facilitate graduate with Entrepreneurship skills.",
+            "To encourage faculty members and students to engage themselves in multidisciplinary research endeavors and keep abreast of current trends through continuing education."
         ],
         "newsletter_path": "/static/docs/dapartment_data/eie_newsletter.pdf",
-        "about_department": ["Department of Artificial Intelligence aims to produce computing graduates with high potency, apply, design and develop systems to pertain and to integrate both software and hardware devices, utilize modern approaches in programming and problem solving techniques."," The Department was established in the year 2020 with the main objective of providing quality education in the field of Engineering and Technology."," It is recognized as nodal center under Anna University. The Department has proved to be a center of excellence in Academic, Sponsored research and Continuing Education Programme."]
+        "about_department": ["Department of Electronics & Instrumentation Engineering is an advanced branch which deals with the application of existing scientific knowledge in electronics, instrumentation, measurements, control and automation of processes."," Started in the year 2002, the department of Electronics and Instrumentation Engineering is running a four year under graduate program accredited by NBA.","From inception, the department has grown in leaps and bounds with the state of art of infrastructure and lab facilities.","The program provides an opportunity to learn the technical skills thereby enhancing their technical competency and leadership qualities.","The graduates are having wide scope to get career opportunities in major process, energy, oil and natural gas industries as well as research opportunities in highly ranked institutes and universities within and outside the country."]
     },
     {
         "department_id": "009",
@@ -144,11 +146,12 @@
         "department_name": "Information Technology (IT)",
         "department_image": "/static/images/department_data/it.jpg",
         "department_quotes": "Communicating the world with clarity and creativity.",
-        "vision": "To enhance linguistic and literary skills for global communication and cultural understanding.",
+        "vision": "Empowering innovation through cutting-edge technology solutions, transforming learning experiences with digital excellence, driving operational efficiency through strategic IT initiatives, and securing a dynamic digital future.",
         "mission": [
-            "Promote excellence in English language and literature.",
-            "Foster critical thinking and creativity through language.",
-            "Prepare students for effective communication in diverse contexts."
+            "To continuously research, develop, and implement innovative technology solutions that empower academic and administrative excellence, fostering a culture of creativity and problem-solving.",
+            "o seamlessly integrate digital technologies into every facet of the learning experience, from classrooms to online platforms, ensuring accessibility, engagement, and effectiveness in education.",
+            "To engage with the wider community, including alumni, local businesses, and societal stakeholders, to promote digital literacy, foster technology adoption, and contribute to the socio-economic development.",
+            "To cultivate a dynamic environment that encourages continual growth, entrepreneurial   spirit, cohesive teamwork, exemplary professionalism, and leadership with a strong sense of social responsibility."
         ],
         "newsletter_path": "/static/docs/dapartment_data/it_newsletter.pdf",
         "about_department": ["Department of Artificial Intelligence aims to produce computing graduates with high potency, apply, design and develop systems to pertain and to integrate both software and hardware devices, utilize modern approaches in programming and problem solving techniques."," The Department was established in the year 2020 with the main objective of providing quality education in the field of Engineering and Technology."," It is recognized as nodal center under Anna University. The Department has proved to be a center of excellence in Academic, Sponsored research and Continuing Education Programme."]
@@ -171,15 +174,18 @@
         "department_id": "013",
         "department_name": "Mechancial Engineering (MECH)",
         "department_image": "/static/images/department_data/mech.jpg",
-        "department_quotes": "Unlocking the power of numbers and logic.",
-        "vision": "To be a leader in mathematical education and research, fostering analytical and problem-solving skills.",
+        "department_quotes": "Quality and consistency are not an accident; it's the result of high intention, sincere effort, intelligent direction, and skillful execution.",
+        "vision": "Producing competent Mechanical Engineers by imparting quality education blended with human values, as potential contributors to the industrial development of the nation leading to the well being of the future generation.",
         "mission": [
-            "Provide a strong foundation in mathematical concepts.",
-            "Encourage interdisciplinary research involving mathematics.",
-            "Equip students with analytical skills for diverse applications."
+            "Imparting quality education to the students in core areas with moral values through our dedicated team.",
+            "Promoting research and development by giving hands on experience of state of the art facilities.",
+            "Providing platform for the students to explore their innovative and creative skills.",
+            "Promoting activities to cultivate the spirit of entrepreneurship to the students.",
+            "Empowering the students in organizing events to gain experience in team work and leadership qualities.",
+            "Preparing the students for their role as Engineers in society with an awareness of ethical, environmental, economic, safety and quality issues"
         ],
         "newsletter_path": "/static/docs/dapartment_data/mech_newsletter.pdf",
-        "about_department": ["Department of Artificial Intelligence aims to produce computing graduates with high potency, apply, design and develop systems to pertain and to integrate both software and hardware devices, utilize modern approaches in programming and problem solving techniques."," The Department was established in the year 2020 with the main objective of providing quality education in the field of Engineering and Technology."," It is recognized as nodal center under Anna University. The Department has proved to be a center of excellence in Academic, Sponsored research and Continuing Education Programme."]
+        "about_department": ["Mechanical Engineering is the only branch of engineering that can fit into any kind of industries, is the oldest engineering disciplines and an extremely diverse profession. Mechanical engineers are inherently multi-disciplinary and having wide range of career choices. Manufacturing has emerged as one of the high growth sectors in India.  Government aims to create 100 million new jobs in the sector in near future.The Department of Mechanical Engineering at Velammal Engineering College, Chennai started its journey in the year 1999. We have a strong undergraduate program in mechanical engineering. The Department has a distinguished record in both teaching and research. The Department is committed to provide knowledge creation, innovation and research among the students to meet challenges in Mechanical Engineering Field.  Minor degree in the area of Electric vehicle Technology and Data Science, and honours degree in the area of Robotics and Automation are offered to Mechanical Engineering Students.The department is accredited by National Board of Accreditation (NBA), New Delhi is recognized as the Nodal Research Centre by Anna University, Chennai.  Our Alumni play key role in different industrial, academic and Government organizations. The department providing value based holistic development for each student."]
     },
     {
         "department_id": "014",

@@ -446,6 +446,7 @@ app.post('/api/submit_pass_parent_approval', upload.single('file'), async (req, 
             dept: department_name,
             year: yearInt,
             room_no,
+            profile_image: student.profile_photo_path,
             registration_number,
             gender,
             late_count: student.late_count,
@@ -583,6 +584,7 @@ app.post('/api/submit_pass_warden_approval', upload.single('file'), async (req, 
             year: yearInt,
             room_no,
             registration_number,
+            profile_image: student.profile_photo_path,
             gender,
             late_count: student.late_count,
             blockname: block_name,
@@ -703,6 +705,7 @@ app.post('/api/save_draft', upload.single('file'), async (req, res) => {
             room_no,
             registration_number,
             gender: student.gender,
+            profile_image: student.profile_photo_path,
             late_count: student.late_count,
             blockname: block_name,
             passtype: pass_type,
@@ -2425,7 +2428,7 @@ app.get("/api/pass_measures", async (req, res) => {
 });
 
 //pass analysis 2
-app.get("/api/pass_analysis", async (req, res) => {
+app.get("/pass_analysis", async (req, res) => {
     if (!req.session || req.session.wardenauth !== true) {
         return res.status(401).json({ error: "Unauthorized Access" });
     }
@@ -2435,11 +2438,12 @@ app.get("/api/pass_analysis", async (req, res) => {
         const collection = db.collection("pass_details");
 
         const { type, year } = req.body;
-        if (!type || !year) {
-            return res.status(400).json({ error: "Missing 'type' or 'year' parameter in request" });
+        if (!type) {
+            return res.status(400).json({ error: "Missing 'type' parameter in query" });
         }
+        
 
-        const warden_id = req.session.unique_number;
+        const warden_id=req.session.unique_number;
         const wardenCollection = db.collection("warden_database");
         const warden_data = await wardenCollection.findOne({ unique_id: warden_id });
 
@@ -2453,63 +2457,73 @@ app.get("/api/pass_analysis", async (req, res) => {
             return res.status(400).json({ error: "Primary years must be an array with at least one value." });
         }
 
-        const currentTime=new Date();
-        const istTime = new Date(currentTime.getTime() + (5.5 * 60 * 60 * 1000));
-        const formattedDate = istTime.toISOString().split("T")[0];
-
-        const formattedDateStart = new Date(`${formattedDate}T00:00:00.000Z`);
-        const formattedDateEnd = new Date(`${formattedDate}T23:59:59.999Z`);
+        const now = new Date();
+        const istTime = new Date(now.getTime() + (5.5 * 60 * 60 * 1000));
+        const formattedDate = now.toISOString().split("T")[0];
 
         let yearFilter;
-        if (year === "overall") {
+        if (["1", "2", "3", "4"].includes(year)) {
+            yearFilter = { year: parseInt(year) };
+        } else if (year === "overall") {
             yearFilter = { year: { $in: primary_years } };
         } else {
-            yearFilter = parseInt(year);
+            return res.status(400).json({ error: "Invalid year value." });
         }
+
         const commonFilters = {
             passtype: type,
             gender: warden_handling_gender,
             qrcode_status:true,
             ...yearFilter
         };
-        const activePassesCount = await collection.countDocuments({
-            ...commonFilters,
-            from: { $lte: formattedDateEnd },
-            to: { $gte: formattedDateStart }
-        });
-        const toFieldMatchCount = await collection.countDocuments({
-            ...commonFilters,
-            to: { $gte: formattedDateStart, $lt: formattedDateEnd }
-        });
 
-        const overduePassesCount = await collection.countDocuments({
+        const firstMeasureDocs = await collection.find({
             ...commonFilters,
-            re_entry_time: { $in: [null, ""], $exists: true },
-            to: { $lt: istTime }
-        });
+            $or: [
+                { from: { $lte: now }, to: { $gte: now } },
+                { from: { $gte: new Date(`${formattedDate}T00:00:00.000Z`), $lt: new Date(`${formattedDate}T23:59:59.999Z`) } },
+                { to: { $gte: new Date(`${formattedDate}T00:00:00.000Z`), $lt: new Date(`${formattedDate}T23:59:59.999Z`) } }
+            ]
+        }).project({ name: 1, _id: 0 }).toArray();
 
-        const reasonTypeAggregation = await collection.aggregate([
+        const secondMeasureDocs = await collection.find({
+            ...commonFilters,
+            to: { $gte: new Date(`${formattedDate}T00:00:00.000Z`), $lt: new Date(`${formattedDate}T23:59:59.999Z`) }
+        }).project({ name: 1, _id: 0 }).toArray();
+
+        const thirdMeasureDocs = await collection.find({
+            ...commonFilters,
+            to: { $lt: istTime },
+            re_entry_time: { $in: [null, ""] }
+        }).project({ name: 1, _id: 0 }).toArray();
+
+        const reasonCategories = {
+            outpass: ["shopping", "classes", "internship", "medical"],
+            staypass: ["holiday", "weekend holiday", "semester holiday", "festival holiday"],
+            od: ["internship", "symposium", "sports", "hackathon"],
+            leave: ["function", "medical", "exams", "emergency"]
+        };
+        
+        const validReasons = reasonCategories[type.toLowerCase()] || [];
+        const fourthMeasureAggregation = await collection.aggregate([
             {
                 $match: {
                     ...commonFilters,
+                    reason_for_visit: { $exists: true, $ne: null },
                     $or: [
-                        { from: { $lte: formattedDateEnd }, to: { $gte: formattedDateStart } },
-                        { from: formattedDateStart },
-                        { to: formattedDateStart }
+                        { from: { $lte: now }, to: { $gte: now } },
+                        { from: { $gte: new Date(`${formattedDate}T00:00:00.000Z`), $lt: new Date(`${formattedDate}T23:59:59.999Z`) } },
+                        { to: { $gte: new Date(`${formattedDate}T00:00:00.000Z`), $lt: new Date(`${formattedDate}T23:59:59.999Z`) } }
                     ]
                 }
             },
             {
                 $group: {
                     _id: {
-                        $switch: {
-                            branches: [
-                                { case: { $eq: [{ $toLower: "$reason_type" }, "medical"] }, then: "Medical" },
-                                { case: { $eq: [{ $toLower: "$reason_type" }, "intern"] }, then: "Intern" },
-                                { case: { $eq: [{ $toLower: "$reason_type" }, "festival"] }, then: "Festival" },
-                                { case: { $eq: [{ $toLower: "$reason_type" }, "semester"] }, then: "Semester" }
-                            ],
-                            default: "Other"
+                        $cond: {
+                            if: { $in: ["$reason_type", validReasons] },
+                            then: "$reason_type",
+                            else: "Others"
                         }
                     },
                     count: { $sum: 1 }
@@ -2517,133 +2531,160 @@ app.get("/api/pass_analysis", async (req, res) => {
             }
         ]).toArray();
 
-        const reasonTypeCounts = reasonTypeAggregation.reduce((acc, item) => {
+        const fourthMeasureCounts = fourthMeasureAggregation.reduce((acc, item) => {
             acc[item._id] = item.count;
             return acc;
-        }, {});
+        }, {});        
 
         res.json({
-            activePassesCount,
-            toFieldMatchCount,
-            overduePassesCount,
-            reasonTypeCounts
-    });
-}catch (error) {
+            activePasses: {
+                count: firstMeasureDocs.length,
+                names: firstMeasureDocs.map(doc => doc.name)
+            },
+            toFieldMatch: {
+                count: secondMeasureDocs.length,
+                names: secondMeasureDocs.map(doc => doc.name)
+            },
+            overduePasses: {
+                count: thirdMeasureDocs.length,
+                names: thirdMeasureDocs.map(doc => doc.name)
+            },
+            reasonTypeCounts: fourthMeasureCounts,
+            now
+        });
+
+    } catch (error) {
         console.error("Error fetching pass analysis:", error);
         res.status(500).json({ error: "Internal Server Error" });
     }
 });
 
-// pass analysis 3
-app.get("/api/pass_analysis_by_date", async (req, res) => {
-    
-        if (!req.session || req.session.wardenauth !== true) {
-            return res.status(401).json({ error: "Unauthorized Access" });
+//analysis by date - 3
+app.get("/pass_analysis_by_date", async (req, res) => {
+    if (!req.session || req.session.wardenauth !== true) {
+        return res.status(401).json({ error: "Unauthorized Access" });
+    }
+    try {
+        await client.connect();
+        const db = client.db(dbName);
+        const collection = db.collection("pass_details");
+
+        const { type, year,date } = req.body;
+        if (!type) {
+            return res.status(400).json({ error: "Missing 'type' parameter in query" });
         }
-        try {
-            await client.connect();
-            const db = client.db(dbName);
-            const collection = db.collection("pass_details");
-    
-            const { type, year,date } = req.body;
-            if (!type || !year) {
-                return res.status(400).json({ error: "Missing 'type' or 'year' parameter in request" });
-            }
-    
-            const warden_id = req.session.unique_number;
-            const wardenCollection = db.collection("warden_database");
-            const warden_data = await wardenCollection.findOne({ unique_id: warden_id });
-    
-            if (!warden_data || !warden_data.primary_year) {
-                return res.status(400).json({ error: "Invalid warden data." });
-            }
-    
-            const warden_handling_gender = warden_data.gender;
-            const primary_years = warden_data.primary_year;
-            if (!Array.isArray(primary_years) || primary_years.length === 0) {
-                return res.status(400).json({ error: "Primary years must be an array with at least one value." });
-            }
-    
-            const currentTime=new Date();
-            const istTime = new Date(currentTime.getTime() + (5.5 * 60 * 60 * 1000));
-            const formattedDate = date
-    
-            const formattedDateStart = new Date(`${formattedDate}T00:00:00.000Z`);
-            const formattedDateEnd = new Date(`${formattedDate}T23:59:59.999Z`);
-    
-            let yearFilter;
-            if (year === "overall") {
-                yearFilter = { year: { $in: primary_years } };
-            } else {
-                yearFilter = parseInt(year);
-            }
-            const commonFilters = {
-                passtype: type,
-                gender: warden_handling_gender,
-                qrcode_status:true,
-                ...yearFilter
-            };
-            const activePassesCount = await collection.countDocuments({
-                ...commonFilters,
-                from: { $lte: formattedDateEnd },
-                to: { $gte: formattedDateStart }
-            });
-            const toFieldMatchCount = await collection.countDocuments({
-                ...commonFilters,
-                to: { $gte: formattedDateStart, $lt: formattedDateEnd }
-            });
-    
-            const overduePassesCount = await collection.countDocuments({
-                ...commonFilters,
-                re_entry_time: { $in: [null, ""], $exists: true },
-                to: { $lt: istTime }
-            });
-    
-            const reasonTypeAggregation = await collection.aggregate([
-                {
-                    $match: {
-                        ...commonFilters,
-                        $or: [
-                            { from: { $lte: formattedDateEnd }, to: { $gte: formattedDateStart } },
-                            { from: formattedDateStart },
-                            { to: formattedDateStart }
-                        ]
-                    }
-                },
-                {
-                    $group: {
-                        _id: {
-                            $switch: {
-                                branches: [
-                                    { case: { $eq: [{ $toLower: "$reason_type" }, "medical"] }, then: "Medical" },
-                                    { case: { $eq: [{ $toLower: "$reason_type" }, "intern"] }, then: "Intern" },
-                                    { case: { $eq: [{ $toLower: "$reason_type" }, "festival"] }, then: "Festival" },
-                                    { case: { $eq: [{ $toLower: "$reason_type" }, "semester"] }, then: "Semester" }
-                                ],
-                                default: "Other"
-                            }
-                        },
-                        count: { $sum: 1 }
-                    }
+        
+
+        const warden_id=req.session.unique_number;
+        const wardenCollection = db.collection("warden_database");
+        const warden_data = await wardenCollection.findOne({ unique_id: warden_id });
+
+        if (!warden_data || !warden_data.primary_year) {
+            return res.status(400).json({ error: "Invalid warden data." });
+        }
+
+        const warden_handling_gender = warden_data.gender;
+        const primary_years = warden_data.primary_year;
+        if (!Array.isArray(primary_years) || primary_years.length === 0) {
+            return res.status(400).json({ error: "Primary years must be an array with at least one value." });
+        }
+
+        const now = new Date(`${date}T00:00:00.000Z`);
+        const istTime = new Date(now.getTime() + (5.5 * 60 * 60 * 1000));
+        const formattedDate = now.toISOString().split("T")[0];
+
+        let yearFilter;
+        if (["1", "2", "3", "4"].includes(year)) {
+            yearFilter = { year: parseInt(year) };
+        } else if (year === "overall") {
+            yearFilter = { year: { $in: primary_years } };
+        } else {
+            return res.status(400).json({ error: "Invalid year value." });
+        }
+
+        const commonFilters = {
+            passtype: type,
+            gender: warden_handling_gender,
+            qrcode_status:true,
+            ...yearFilter
+        };
+        const firstMeasureDocs = await collection.find({
+            ...commonFilters,
+            $or: [
+                { from: { $lte: now }, to: { $gte: now } },
+                { from: { $gte: new Date(`${formattedDate}T00:00:00.000Z`), $lt: new Date(`${formattedDate}T23:59:59.999Z`) } },
+                { to: { $gte: new Date(`${formattedDate}T00:00:00.000Z`), $lt: new Date(`${formattedDate}T23:59:59.999Z`) } }
+            ]
+        }).project({ name: 1, _id: 0 }).toArray();
+        const secondMeasureDocs = await collection.find({
+            ...commonFilters,
+            to: { $gte: new Date(`${formattedDate}T00:00:00.000Z`), $lt: new Date(`${formattedDate}T23:59:59.999Z`) }
+        }).project({ name: 1, _id: 0 }).toArray();
+        const thirdMeasureDocs = await collection.find({
+            ...commonFilters,
+            to: { $lt: istTime },
+            re_entry_time: { $in: [null, ""] }
+        }).project({ name: 1, _id: 0 }).toArray();
+        const reasonCategories = {
+            outpass: ["shopping", "classes", "internship", "medical"],
+            staypass: ["holiday", "weekend holiday", "semester holiday", "festival holiday"],
+            od: ["internship", "symposium", "sports", "hackathon"],
+            leave: ["function", "medical", "exams", "emergency"]
+        };
+        
+        const validReasons = reasonCategories[type.toLowerCase()] || [];
+        const fourthMeasureAggregation = await collection.aggregate([
+            {
+                $match: {
+                    ...commonFilters,
+                    reason_for_visit: { $exists: true, $ne: null },
+                    $or: [
+                        { from: { $lte: now }, to: { $gte: now } },
+                        { from: { $gte: new Date(`${formattedDate}T00:00:00.000Z`), $lt: new Date(`${formattedDate}T23:59:59.999Z`) } },
+                        { to: { $gte: new Date(`${formattedDate}T00:00:00.000Z`), $lt: new Date(`${formattedDate}T23:59:59.999Z`) } }
+                    ]
                 }
-            ]).toArray();
-    
-            const reasonTypeCounts = reasonTypeAggregation.reduce((acc, item) => {
-                acc[item._id] = item.count;
-                return acc;
-            }, {});
-    
-            res.json({
-                activePassesCount,
-                toFieldMatchCount,
-                overduePassesCount,
-                reasonTypeCounts
+            },
+            {
+                $group: {
+                    _id: {
+                        $cond: {
+                            if: { $in: ["$reason_type", validReasons] },
+                            then: "$reason_type",
+                            else: "Others"
+                        }
+                    },
+                    count: { $sum: 1 }
+                }
+            }
+        ]).toArray();
+        
+        const fourthMeasureCounts = fourthMeasureAggregation.reduce((acc, item) => {
+            acc[item._id] = item.count;
+            return acc;
+        }, {});        
+
+        res.json({
+            activePasses: {
+                count: firstMeasureDocs.length,
+                names: firstMeasureDocs.map(doc => doc.name)
+            },
+            toFieldMatch: {
+                count: secondMeasureDocs.length,
+                names: secondMeasureDocs.map(doc => doc.name)
+            },
+            overduePasses: {
+                count: thirdMeasureDocs.length,
+                names: thirdMeasureDocs.map(doc => doc.name)
+            },
+            reasonTypeCounts: fourthMeasureCounts
         });
-    }catch (error) {
-            console.error("Error fetching pass analysis:", error);
-            res.status(500).json({ error: "Internal Server Error" });
-        }
-    });
+
+    } catch (error) {
+        console.error("Error fetching pass analysis:", error);
+        res.status(500).json({ error: "Internal Server Error" });
+    }
+});
 
 // Fetch Warden Active Year
 app.get('/api/fetch_warden_year', async (req, res) => {

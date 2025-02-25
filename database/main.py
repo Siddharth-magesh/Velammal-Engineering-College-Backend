@@ -565,7 +565,7 @@ def insert_infrastructure_data():
 
 def insert_student_activities_data():
     collection = db['student_activities'] 
-    with open("/Velammal-Engineering-College-Backend/docs/student_activities.json", "r") as file:
+    with open("/Velammal-Engineering-College-Backend/docs/student_activities.json", "r", encoding="utf-8") as file:
         documents = json.load(file)
         collection.insert_many(documents)
     
@@ -821,6 +821,27 @@ def insert_cscb_dept_activities_details():
         collection.insert_many(documents)
     print("cyber securtiy dept activities documents inserted successfully")
 
+def insert_eie_dept_activities_details():
+    collection= db['department_activities']
+    with open ("/Velammal-Engineering-College-Backend/docs/EIE-DEPT-ACT/008.json","r") as file:
+        documents= json.load(file)
+        collection.insert_many(documents)
+    print("EIE dept activities documents inserted successfully")
+
+def insert_mech_dept_activities_details():
+    collection= db['department_activities']
+    with open ("/Velammal-Engineering-College-Backend/docs/MECH-DEPT-ACT/013.json","r") as file:
+        documents= json.load(file)
+        collection.insert_many(documents)
+    print("MECH dept activities documents inserted successfully")
+
+def insert_math_dept_activities_details():
+    collection= db['department_activities']
+    with open ("/Velammal-Engineering-College-Backend/docs/MATH-DEPT-ACT/012.json","r") as file:
+        documents= json.load(file)
+        collection.insert_many(documents)
+    print("MATH dept activities documents inserted successfully")
+
 def insert_alumni_data(directory_path='/Velammal-Engineering-College-Backend/docs/ALUMINI'):
     collection = db["alumni"]
 
@@ -866,6 +887,9 @@ insert_nirf_data()
 insert_sidebar_details()
 insert_iic_details()
 insert_cscb_dept_activities_details()
+insert_eie_dept_activities_details()
+insert_mech_dept_activities_details()
+insert_math_dept_activities_details()
 
 department_mapping = {
     "Artificial Intelligence and Data Science": "001",

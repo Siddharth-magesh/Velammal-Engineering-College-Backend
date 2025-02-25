@@ -34,24 +34,8 @@
                 "Create a concrete foundation and enlighten the innovation, research and entrepreneur skills in the field of Artificial Intelligence and Data science."
             ]
         },
-        "key_highlights": [
-            "UG - (Data Science, Machine Learning, Artificial Intelligence , Data Exploration Using R, Neural Networks, IoT, Deep Learning, Big Data Analytics, Health Care Analytics, Augmented Reality and Virtual Reality, Reinforcement Learning, Cognitive Science and Analysis, Edge and Fog Computing, Block Chain Technology).",
-            "It makes the student to learn, design and analyze various Machine Learning applications.",
-            "The syllabus also includes topics like Data Science, Machine Learning and programming languages like Python, R, C, OOPs concepts, Web Technologies.",
-            "Provides deeper learning on the various topics of data science, AI and deep Learning.",
-            "Provides deeper learning on the various topics of data science, AI and deep Learning.",
-            "The syllabus includes topics such as the algorithms, programming languages, operating systems, database management systems, computer network, computer graphics and artificial intelligence.",
-            "Fortnightly Group Mentorship with Industry mentors.",
-            "Bachelor’s Degree with 50% Or Equivalent passing marks. No coding experience required."
-        ],
-        "six_unique": [
-            "Block Chain Technologies",
-            "Artificial Intelligence",
-            "Data Science",
-            "Big Data Management",
-            "Social Network Analysis",
-            "Text Analytics"
-        ]
+        "key_highlights": [],
+        "six_unique": []
     },
     {
         "dept_id": "002",
@@ -363,8 +347,8 @@
         "dept_id": "008",
         "department_name": "Electronics & Instrumentation Engineering (EIE)",
         "regulation": {
-        "year":["2020", "2021", "2022"],
-	    "pdf_path":["/static/docs/curriculum/008/reg_20.pdf","/static/docs/curriculum/008/reg_21.pdf","/static/docs/curriculum/008/reg_22.pdf"]
+        "year":["2019", "2021", "2023"],
+	    "pdf_path":["/static/docs/curriculum/008/reg_19.pdf","/static/docs/curriculum/008/reg_21.pdf","/static/docs/curriculum/008/reg_23.pdf"]
 
         },
         "academic_year": {
@@ -389,26 +373,15 @@
                 ]
         },
         "program_specific_outcomes": {
-            "headings":["PSO01","PSO02"],
+            "headings":["PSO01","PSO02","PSO03"],
 	        "content":[
-                "Apply the concepts of Artificial Intelligence to provide solutions for the real time problems and to integrate the professional skills with recent tools and technologies to cope with the dynamic AI needs.",
-                "Create a concrete foundation and enlighten the innovation, research and entrepreneur skills in the field of Artificial Intelligence and Data science."
+                "Develop mathematical models of the industrial process and provide solutions for industrial automation systems ",
+                "Design, implement, test and analyses embedded based instrumentation systems for monitoring and control.",
+                "Empower the students to work on research platforms and instill entrepreneurship skills to work on a large industrial scale. "
             ]
         },
-        "key_highlights": [
-            "Key Highlight 1: Description of key highlight 1",
-            "Key Highlight 2: Description of key highlight 2",
-            "Key Highlight 3: Description of key highlight 3",
-            "Key Highlight 4: Description of key highlight 4"
-        ],
-        "six_unique": [
-            "Block Chain Technologies",
-            "Artificial Intelligence",
-            "Data Science",
-            "Big Data Management",
-            "Social Network Analysis",
-            "Text Analytics"
-        ]
+        "key_highlights": [],
+        "six_unique": []
     },
     {
         "dept_id": "009",
@@ -446,20 +419,8 @@
                 "Create a concrete foundation and enlighten the innovation, research and entrepreneur skills in the field of Artificial Intelligence and Data science."
             ]
         },
-        "key_highlights": [
-            "Key Highlight 1: Description of key highlight 1",
-            "Key Highlight 2: Description of key highlight 2",
-            "Key Highlight 3: Description of key highlight 3",
-            "Key Highlight 4: Description of key highlight 4"
-        ],
-        "six_unique": [
-            "Block Chain Technologies",
-            "Artificial Intelligence",
-            "Data Science",
-            "Big Data Management",
-            "Social Network Analysis",
-            "Text Analytics"
-        ]
+        "key_highlights": [],
+        "six_unique": []
     },
     {
         "dept_id": "010",
@@ -516,7 +477,7 @@
         "department_name": "Information Technology (IT)",
         "regulation": {
         "year":["2020", "2021", "2022"],
-	    "pdf_path":["/static/docs/curriculum/011/reg_20.pdf","/static/docs/curriculum/011/reg_21.pdf","/static/docs/curriculum/011/reg_22.pdf"]
+	    "pdf_path":["/static/docs/curriculum/011/it_reg_19.pdf","/static/docs/curriculum/011/it_reg_21.pdf","/static/docs/curriculum/011/it_reg_23.pdf"]
 
         },
         "academic_year": {
@@ -543,24 +504,12 @@
         "program_specific_outcomes": {
             "headings":["PSO01","PSO02"],
 	        "content":[
-                "Apply the concepts of Artificial Intelligence to provide solutions for the real time problems and to integrate the professional skills with recent tools and technologies to cope with the dynamic AI needs.",
-                "Create a concrete foundation and enlighten the innovation, research and entrepreneur skills in the field of Artificial Intelligence and Data science."
+                "To utilize cutting-edge techniques, programming languages, and the latest Information Technology tools and platforms for solving real time applications to meet out the societal and industrial needs.",
+                "To design and develop fruitful service utilities and products for various aspects of technological needs involving different domains"
             ]
         },
-        "key_highlights": [
-            "Key Highlight 1: Description of key highlight 1",
-            "Key Highlight 2: Description of key highlight 2",
-            "Key Highlight 3: Description of key highlight 3",
-            "Key Highlight 4: Description of key highlight 4"
-        ],
-        "six_unique": [
-            "Block Chain Technologies",
-            "Artificial Intelligence",
-            "Data Science",
-            "Big Data Management",
-            "Social Network Analysis",
-            "Text Analytics"
-        ]
+        "key_highlights": [],
+        "six_unique": []
     },
     {
         "dept_id": "012",
@@ -645,24 +594,12 @@
         "program_specific_outcomes": {
             "headings":["PSO01","PSO02"],
 	        "content":[
-                "Apply the concepts of Artificial Intelligence to provide solutions for the real time problems and to integrate the professional skills with recent tools and technologies to cope with the dynamic AI needs.",
-                "Create a concrete foundation and enlighten the innovation, research and entrepreneur skills in the field of Artificial Intelligence and Data science."
+                "Graduates will have an ability to identify, formulate and analyze the problems related to design, manufacturing, thermal and materials engineering",
+                "Graduates will have an ability to implement/use appropriate techniques, programming skills, and latest/recent computer aided engineering tools/packages for modelling, simulation and analysis of mechanical engineering problems."
             ]
         },
-        "key_highlights": [
-            "Key Highlight 1: Description of key highlight 1",
-            "Key Highlight 2: Description of key highlight 2",
-            "Key Highlight 3: Description of key highlight 3",
-            "Key Highlight 4: Description of key highlight 4"
-        ],
-        "six_unique": [
-            "Block Chain Technologies",
-            "Artificial Intelligence",
-            "Data Science",
-            "Big Data Management",
-            "Social Network Analysis",
-            "Text Analytics"
-        ]
+        "key_highlights": [],
+        "six_unique": []
     },
     {
         "dept_id": "014",

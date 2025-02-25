@@ -1,0 +1,159 @@
+[
+    {
+        "dept_id": "008",
+        "department_name": "Electrical & Electronics Engineering (EEE)",
+        "dept_activities": [
+
+            {
+                "date": "28/02/2023",
+                "name_of_event": "EPIC 2023 ",
+                "coordinator": null,
+                "resource_person": null,
+                "beneficiaries": null,
+                "relevant_PO_PSO": null,
+                "image_path": ["/static/images/dept_activities/008/1.jpg","/static/images/dept_activities/008/2.jpg","/static/images/dept_activities/008/3.jpg"]
+            },
+
+
+            {
+                "date": "25/03/2023",
+                "name_of_event": "SEMINAR ON ARTIFICIAL INTELLIGENCE IN AUTOMATION",
+                "coordinator": null,
+                "resource_person": null,
+                "beneficiaries": "II & III Year Students",
+                "relevant_PO_PSO": null,
+                "image_path": ["/static/images/dept_activities/006/3.jpg"]
+            },  
+
+
+          {
+            "date": "4/7/2024",
+            "name_of_event": "EPIC'24 ",
+            "coordinator": null,
+            "resource_person": null,
+            "beneficiaries": null,
+            "relevant_PO_PSO": null,
+            "image_path": ["/static/images/dept_activities/006/1.jpg","/static/images/dept_activities/008/2.jpg"]
+          },
+          {
+            "date": "03 /08 /2024",
+            "name_of_event": "MEACON 2K24 -2.0 ",
+            "coordinator": null,
+            "resource_person": null,
+            "beneficiaries": null,
+            "relevant_PO_PSO": null,
+            "image_path": ["/static/images/dept_activities/008/19.jpg","/static/images/dept_activities/008/15.jpg","/static/images/dept_activities/008/16.jpg","/static/images/dept_activities/008/17.jpg","/static/images/dept_activities/008/18.jpg"]
+          },
+
+          {
+            "date": "10/01/2023",
+            "name_of_event": "MOU signed with YASHIKA INDUSTRIES",
+            "coordinator": null,
+            "resource_person": null,
+            "beneficiaries": null,
+            "relevant_PO_PSO": null,
+            "image_path": ["/static/images/dept_activities/008/4.jpg"]
+          },
+
+          {
+            "date": "3/4/2023",
+            "name_of_event": "WEBINAR ON “BEST RESEARCH AND INNOVATION PRACTICES",
+            "coordinator": null,
+            "resource_person": null,
+            "beneficiaries": null,
+            "relevant_PO_PSO": null,
+            "image_path": ["/static/images/dept_activities/008/20.jpg"]
+          },
+
+
+
+          {
+            "date": "6/4/2023",
+            "name_of_event": "SEMINAR ON AUTOMATION IN MANUFACTURING AND PROCESS INDUSTRIES",
+            "coordinator": null,
+            "resource_person": null,
+            "beneficiaries": "II yr and III yr students",
+            "relevant_PO_PSO": null,
+            "image_path": ["/static/images/dept_activities/008/7.jpg"]
+          },
+
+          {
+            "date": "18/04/2023",
+            "name_of_event": "INDUSTRIAL VISIT:RENAULT NISSAN AUTOMOTIVE INDIA PRIVATE LTD.,",
+            "coordinator": null,
+            "resource_person": null,
+            "beneficiaries": "III YR STUDENTS",
+            "relevant_PO_PSO": null,
+            "image_path": ["/static/images/dept_activities/008/21.jpg"]
+          },
+
+          {
+            "date": "24/11/2021",
+            "name_of_event": "FIRST YEAR ORIENTATION PROGRAM FOR BATCH (2021 -2025)",
+            "coordinator": null,
+            "resource_person": null,
+            "beneficiaries": "III YR STUDENTS",
+            "relevant_PO_PSO": null,
+            "image_path": ["/static/images/dept_activities/008/9.jpg"]
+          },
+
+
+          {
+            "date": "15/02/2020",
+            "name_of_event": "MEACON '20",
+            "coordinator": null,
+            "resource_person": null,
+            "beneficiaries": null,
+            "relevant_PO_PSO": null,
+            "image_path": ["/static/images/dept_activities/008/10.jpg"]
+          },
+
+          {
+            "date": "11/01/2020",
+            "name_of_event": "EPIC'20",
+            "coordinator": null,
+            "resource_person": null,
+            "beneficiaries": null,
+            "relevant_PO_PSO": null,
+            "image_path": ["/static/images/dept_activities/008/11.jpg"]
+          },
+
+
+          {
+            "date": "29/03/2019",
+            "name_of_event": "National Conference on Trends in Instrumentation and Automation NCTIA-2019",
+            "coordinator": null,
+            "resource_person": null,
+            "beneficiaries": null,
+            "relevant_PO_PSO": null,
+            "image_path": ["/static/images/dept_activities/008/12.jpg"]
+          },
+          
+          
+          {
+            "date": "11/01/19 - 12/01/19",
+            "name_of_event": "TWO DAY WORKSHOP ON SKILL APPROACH TO INDUSTRIAL CIRCUIT",
+            "coordinator": null,
+            "resource_person": null,
+            "beneficiaries": null,
+            "relevant_PO_PSO": null,
+            "image_path": ["/static/images/dept_activities/008/13.jpg"]
+          },
+          
+          
+          
+          {
+            "date": "09/01/19",
+            "name_of_event": "ONE DAY SEMINAR ON Application of PLC-SCADA in Industrial Automation ",
+            "coordinator": null,
+            "resource_person": null,
+            "beneficiaries": null,
+            "relevant_PO_PSO": null,
+            "image_path": ["/static/images/dept_activities/008/14.jpg"]
+          }
+          
+
+          
+        ]
+      }
+    ]

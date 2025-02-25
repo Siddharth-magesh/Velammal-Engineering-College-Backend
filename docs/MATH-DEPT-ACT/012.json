@@ -55,7 +55,7 @@
             "resource_person": null,
             "beneficiaries": "II Year Students",
             "relevant_PO_PSO": null,
-            "image_path":["/static/images/dept_activities/012/6.jpg","/static/images/dept_activities/012/7.jpg"]
+            "image_path":["/static/images/dept_activities/012/6.jpg"]
           },
           {
             "date": "24/12/2018",
@@ -64,7 +64,7 @@
             "resource_person": null,
             "beneficiaries": "II Year Students",
             "relevant_PO_PSO": null,
-            "image_path": ["/static/images/dept_activities/012/8.jpg","/static/images/dept_activities/012/9.jpg"]
+            "image_path": ["/static/images/dept_activities/012/7.jpg"]
           },
           {
             "date": "05/01/2019",
@@ -73,7 +73,7 @@
             "resource_person": null,
             "beneficiaries": "II & III Year Students",
             "relevant_PO_PSO": null,
-            "image_path": ["/static/images/dept_activities/012/10.jpg","/static/images/dept_activities/012/11.jpg"]
+            "image_path": ["/static/images/dept_activities/012/8.jpg"]
           },
           {
             "date": "20/02/2019",
@@ -82,7 +82,7 @@
             "resource_person": null,
             "beneficiaries": "I Year Students",
             "relevant_PO_PSO": null,
-            "image_path":  ["/static/images/dept_activities/012/12.jpg","/static/images/dept_activities/012/13.jpg"]
+            "image_path":  ["/static/images/dept_activities/012/9.jpg"]
           },
           {
             "date": "01/03/2019",
@@ -91,7 +91,7 @@
             "resource_person": null,
             "beneficiaries": "II Year Students",
             "relevant_PO_PSO": null,
-            "image_path":  ["/static/images/dept_activities/012/14.jpg","/static/images/dept_activities/012/15.jpg"]
+            "image_path":  ["/static/images/dept_activities/012/10.jpg"]
           },
           {
             "date": "04/03/2019",
@@ -100,7 +100,7 @@
             "resource_person": null,
             "beneficiaries": "II Year Students",
             "relevant_PO_PSO": null,
-            "image_path":  ["/static/images/dept_activities/012/16.jpg","/static/images/dept_activities/012/17.jpg"]
+            "image_path":  ["/static/images/dept_activities/012/11.jpg"]
           },
           {
             "date": "04/03/2019",
@@ -109,7 +109,7 @@
             "resource_person": null,
             "beneficiaries": "III Year Students",
             "relevant_PO_PSO": null,
-            "image_path":  ["/static/images/dept_activities/012/18.jpg","/static/images/dept_activities/012/19.jpg"]
+            "image_path":  ["/static/images/dept_activities/012/12.jpg"]
           },
           {
             "date": "16/02/2017",
@@ -118,7 +118,7 @@
             "resource_person": null,
             "beneficiaries": "I Year Students",
             "relevant_PO_PSO": null,
-            "image_path": ["/static/images/dept_activities/012/20.jpg","/static/images/dept_activities/012/21.jpg"]
+            "image_path": ["/static/images/dept_activities/012/13.jpg"]
           },
           {
             "date": "23/02/2017",
@@ -127,7 +127,7 @@
             "resource_person": null,
             "beneficiaries": "II Year Students",
             "relevant_PO_PSO": null,
-            "image_path":["/static/images/dept_activities/012/22.jpg","/static/images/dept_activities/012/23.jpg"]
+            "image_path":["/static/images/dept_activities/012/14.jpg"]
           },
           {
             "date": "07/03/2017",
@@ -136,7 +136,7 @@
             "resource_person": null,
             "beneficiaries": "III Year Students",
             "relevant_PO_PSO": null,
-            "image_path": ["/static/images/dept_activities/012/24.jpg","/static/images/dept_activities/012/25.jpg"]
+            "image_path": ["/static/images/dept_activities/012/15.jpg"]
           },
           {
             "date": "22/03/2017",
@@ -145,7 +145,7 @@
             "resource_person": null,
             "beneficiaries": "III Year Students",
             "relevant_PO_PSO": null,
-            "image_path": ["/static/images/dept_activities/012/26.jpg","/static/images/dept_activities/012/27.jpg","/static/images/dept_activities/012/28.jpg","/static/images/dept_activities/012/29.jpg"]
+            "image_path": ["/static/images/dept_activities/012/16.jpg"]
           }
           
         ]
