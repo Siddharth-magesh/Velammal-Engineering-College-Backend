@@ -1301,6 +1301,7 @@ app.get('/api/fetch_pending_passes_warden', async (req, res) => {
             wardern_approval: null,
             superior_wardern_approval: null,
             notify_superior: false,
+            parent_approval: { $ne: false},
             year: { $in: warden_primary_year } 
         }).toArray();
 
@@ -2724,6 +2725,7 @@ app.get('/api/fetch_passes_for_superior', async (req, res) => {
             qrcode_status: false,
             wardern_approval: null,
             superior_wardern_approval: null,
+            parent_approval: { $ne : false},
             notify_superior: true
         }).toArray();
 
