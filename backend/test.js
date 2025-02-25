@@ -11,6 +11,7 @@ const twilio = require('twilio');
 const moment = require("moment");
 require("moment-timezone");
 const multer = require('multer');
+const cron = require("node-cron");
 
 const app = express();
 const port = process.env.PORT || 6000;
@@ -149,6 +150,47 @@ const sendParentReachedSMS = async (parentPhoneNumber, name, reachedTime) => {
         throw new Error("Failed to send SMS");
     }
 };
+
+//cron job for food request updation
+cron.schedule("0 * * * *", async () => {
+    console.log("Checking for pending food type updates...");
+
+    try {
+        await client.connect();
+        const db = client.db(dbName);
+        const studentsCollection = db.collection('student_database');
+        const cronCollection = db.collection('cronCollection');
+
+        const nowUTC = new Date();
+        const nowIST = new Date(nowUTC.getTime() + (5.5 * 60 * 60 * 1000));
+
+        const pendingUpdates = await cronCollection.find({ updation_time: { $lte: nowIST } }).toArray();
+
+        if (pendingUpdates.length === 0) {
+            console.log("No pending food type updates at this time.");
+            return;
+        }
+
+        for (const update of pendingUpdates) {
+            const { registration_number, name, foodtype } = update;
+            const result = await studentsCollection.updateOne(
+                { registration_number },
+                { $set: { foodtype } }
+            );
+
+            if (result.modifiedCount > 0) {
+                console.log(`Successfully updated food type for ${name} (${registration_number}) to ${foodtype}.`);
+            } else {
+                console.log(`No matching student found for ${name} (${registration_number}).`);
+            }
+            await cronCollection.deleteOne({ registration_number, name });
+        }
+
+        console.log("Food type update process completed.");
+    } catch (error) {
+        console.error("Error running cron job:", error);
+    }
+});
 
 // Login Route
 app.post('/api/login', async (req, res) => {
@@ -878,17 +920,29 @@ app.post('/api/approve_food_change', async (req, res) => {
     const db = client.db(dbName);
     const studentsCollection = db.collection('student_database');
     const requestsCollection = db.collection('food_change_requests');
+    const cronCollection = db.collection('cronCollection');
 
     try {
         const request = await requestsCollection.findOne({ registration_number, name });
         if (!request) {
             return res.status(404).json({ message: 'Request not found' });
         }
+
+        let updateMessage = 'Food type change request declined';
+
         if (action === "approve") {
-            await studentsCollection.updateOne(
-                { registration_number, name },
-                { $set: { foodtype: request.requested_foodtype } }
-            );
+            const currentTime = new Date();
+            const istTime = new Date(currentTime.getTime() + (5.5 * 60 * 60 * 1000));
+            const updateTimeIST = new Date(istTime.getTime() + (24 * 60 * 60 * 1000)); 
+
+            await cronCollection.insertOne({
+                registration_number,
+                name,
+                foodtype: request.requested_foodtype,
+                updation_time: updateTimeIST,
+            });
+
+            updateMessage = `Food type change approved. It will be effective on ${updateTimeIST.toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' })} IST.`;
         }
         await requestsCollection.deleteOne({ registration_number, name });
         const student = await studentsCollection.findOne({ registration_number });
@@ -908,10 +962,9 @@ app.post('/api/approve_food_change', async (req, res) => {
         );
 
         return res.status(200).json({
-            message: action === "approve"
-                ? 'Food type change approved'
-                : 'Food type change request declined',
-            newFoodType: action === "approve" ? request.requested_foodtype : undefined
+            message: updateMessage,
+            newFoodType: action === "approve" ? request.requested_foodtype : undefined,
+            effectiveDate: action === "approve" ? updateTimeIST.toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' }) : undefined
         });
 
     } catch (error) {
