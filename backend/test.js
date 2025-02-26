@@ -484,7 +484,7 @@ app.post('/api/submit_pass_warden_approval', upload.single('file'), async (req, 
         const {
             mobile_number, name, department_name, year, room_no, registration_number,
             block_name, pass_type, from, to, place_to_visit,
-            reason_type, reason_for_visit, notify_superior
+            reason_type, reason_for_visit, notify_superior 
         } = req.body;
 
         if (!mobile_number) {
@@ -2197,6 +2197,9 @@ app.post("/api/fetch_waiting_members", async (req, res) => {
         } else {
             target_year = parseInt(target_year1);
         }
+        if (unique_id === "004") {
+            target_year = warden_data.profile_years;
+        }
 
         let query = {
             re_entry_time: null,
@@ -2251,6 +2254,9 @@ app.post("/api/fetch_late_members", async (req, res) => {
             target_year = target_year1;
         } else {
             target_year = parseInt(target_year1);
+        }
+        if (unique_id === "004") {
+            target_year = warden_data.profile_years;
         }
 
         const currentTime = new Date();
@@ -2327,6 +2333,7 @@ app.get("/api/pass_measures_warden", async (req, res) => {
         const currentDate = moment().utc().startOf("day").toDate();
         const nextDate = moment().utc().endOf("day").toDate();
         const now = moment().tz("Asia/Kolkata").toDate();
+        const istTime = new Date(now.getTime() + (5.5 * 60 * 60 * 1000));
 
         const passTypes = ["od", "outpass", "staypass", "leave"];
         
@@ -2344,11 +2351,15 @@ app.get("/api/pass_measures_warden", async (req, res) => {
         }
 
         for (const year of primary_years) {
-            const yearFilter = { year, gender: warden_handling_gender , qrcode_status:true , exit_time : { $ne : null }};
+            const yearFilter = { year, gender: warden_handling_gender , qrcode_status:true , exit_time : {$ne:null}};
 
             const exitTimeCount = await collection.countDocuments({
-                exit_time: { $gte: currentDate, $lt: nextDate },
-                ...yearFilter
+                ...yearFilter,
+                $or: [
+                    { from: { $lte: currentDate }, to: { $gte: currentDate } },
+                    { from: { $gte: currentDate, $lt: nextDate } },
+                    { to: { $gte: currentDate, $lt: nextDate } }
+                ]
             });
 
             const reEntryTimeCount = await collection.countDocuments({
@@ -2357,13 +2368,15 @@ app.get("/api/pass_measures_warden", async (req, res) => {
             });
             const activeOutsideCount = await collection.countDocuments({
                 exit_time: { $exists: true },
-                to: { $gt: now },
+                to: { $gt: istTime },
+                re_entry_time: { $in: [null, ""]},
                 ...yearFilter
             });
 
             const overdueReturnCount = await collection.countDocuments({
                 exit_time: { $exists: true },
-                to: { $lt: now },
+                to: { $lt: istTime },
+                re_entry_time: { $in: [null, ""]},
                 ...yearFilter
             });
 
@@ -2380,7 +2393,10 @@ app.get("/api/pass_measures_warden", async (req, res) => {
                 reEntryTimeCount,
                 activeOutsideCount,
                 overdueReturnCount,
-                passTypeCounts
+                passTypeCounts,
+                currentDate,
+                nextDate,
+                now
             };
             overall.exitTimeCount += exitTimeCount;
             overall.reEntryTimeCount += reEntryTimeCount;
@@ -2674,6 +2690,7 @@ app.get("/api/pass_measures_superior", async (req, res) => {
         const currentDate = moment().utc().startOf("day").toDate();
         const nextDate = moment().utc().endOf("day").toDate();
         const now = moment().tz("Asia/Kolkata").toDate();
+        const istTime = new Date(now.getTime() + (5.5 * 60 * 60 * 1000));
 
         const passTypes = ["od", "outpass", "staypass", "leave"];
         
@@ -2694,8 +2711,12 @@ app.get("/api/pass_measures_superior", async (req, res) => {
             const yearFilter = { year, gender: gender , qrcode_status:true , exit_time : { $ne : null }};
 
             const exitTimeCount = await collection.countDocuments({
-                exit_time: { $gte: currentDate, $lt: nextDate },
-                ...yearFilter
+                ...yearFilter,
+                $or: [
+                    { from: { $lte: currentDate }, to: { $gte: currentDate } },
+                    { from: { $gte: currentDate, $lt: nextDate } },
+                    { to: { $gte: currentDate, $lt: nextDate } }
+                ]
             });
 
             const reEntryTimeCount = await collection.countDocuments({
@@ -2704,13 +2725,15 @@ app.get("/api/pass_measures_superior", async (req, res) => {
             });
             const activeOutsideCount = await collection.countDocuments({
                 exit_time: { $exists: true },
-                to: { $gt: now },
+                to: { $gt: istTime },
+                re_entry_time: { $in: [null, ""]},
                 ...yearFilter
             });
 
             const overdueReturnCount = await collection.countDocuments({
                 exit_time: { $exists: true },
-                to: { $lt: now },
+                to: { $lt: istTime },
+                re_entry_time: { $in: [null, ""]},
                 ...yearFilter
             });
 
@@ -2746,6 +2769,7 @@ app.get("/api/pass_measures_superior", async (req, res) => {
         res.status(500).json({ error: "Internal Server Error" });
     }
 });
+
 
 //pass analysis 2
 app.get("/pass_analysis_superior", async (req, res) => {
