@@ -4,8 +4,8 @@ import pandas as pd
 from pymongo import MongoClient
 from docx import Document
 import json
-import bcrypt
 import shutil
+import bcrypt
 import re
 
 mongo_uri = "mongodb://localhost:27017/"
@@ -168,7 +168,7 @@ def download_image(
         return None
 
 target_base_dir = r"/root/Velammal-Engineering-College-Backend/static/images/profile_photos/"
-save_base_dir = r"/root/Velammal-Engineering-college/static/images/profile_photos/"
+save_base_dir = r"/root/static/images/profile_photos/"
 df['Photo'] = df.apply(lambda row: download_image(row['unique_id'], row['Photo'], target_base_dir,save_base_dir), axis=1)
 
 
@@ -565,7 +565,7 @@ def insert_infrastructure_data():
 
 def insert_student_activities_data():
     collection = db['student_activities'] 
-    with open("/root/Velammal-Engineering-College-Backend/docs/student_activities.json", "r") as file:
+    with open("/root/Velammal-Engineering-College-Backend/docs/student_activities.json", "r", encoding="utf-8") as file:
         documents = json.load(file)
         collection.insert_many(documents)
     
@@ -751,7 +751,7 @@ def insert_iic_details():
     with open ("/root/Velammal-Engineering-College-Backend/docs/iic.json","r") as file:
         documents= json.load(file)
         collection.insert_one(documents)
-    print("iic documents inserted successfully")
+    print("iic documents inserted successfully")
 
 def process_and_combine_Department_Activities_data_for_aids(folder_path, dept_id="001"):
     COLLECTION_NAME = "department_activities"
@@ -819,28 +819,28 @@ def insert_cscb_dept_activities_details():
     with open ("/root/Velammal-Engineering-College-Backend/docs/CSCBS-DEPT-ACT/006.json","r") as file:
         documents= json.load(file)
         collection.insert_many(documents)
-    print("cyber securtiy dept activities documents inserted successfully")
+    print("cyber securtiy dept activities documents inserted successfully")
 
 def insert_eie_dept_activities_details():
     collection= db['department_activities']
     with open ("/root/Velammal-Engineering-College-Backend/docs/EIE-DEPT-ACT/008.json","r") as file:
         documents= json.load(file)
         collection.insert_many(documents)
-    print("EIE dept activities documents inserted successfully")
+    print("EIE dept activities documents inserted successfully")
 
 def insert_mech_dept_activities_details():
     collection= db['department_activities']
     with open ("/root/Velammal-Engineering-College-Backend/docs/MECH-DEPT-ACT/013.json","r") as file:
         documents= json.load(file)
         collection.insert_many(documents)
-    print("MECH dept activities documents inserted successfully")
+    print("MECH dept activities documents inserted successfully")
 
 def insert_math_dept_activities_details():
     collection= db['department_activities']
     with open ("/root/Velammal-Engineering-College-Backend/docs/MATH-DEPT-ACT/012.json","r") as file:
         documents= json.load(file)
         collection.insert_many(documents)
-    print("MATH dept activities documents inserted successfully")
+    print("MATH dept activities documents inserted successfully")
 
 def insert_alumni_data(directory_path='/root/Velammal-Engineering-College-Backend/docs/ALUMINI'):
     collection = db["alumni"]
@@ -914,7 +914,7 @@ def insert_incubation_data():
     with open ("/root/Velammal-Engineering-College-Backend/docs/incubation.json","r") as file:
         documents= json.load(file)
         collection.insert_many(documents)
-    print("Incubation documents inserted successfully")
+    print("Incubation documents inserted successfully")
     
 def insert_army_data():
     collection = db['army']
@@ -1102,14 +1102,6 @@ def insert_overall_department_research():
     
     print("inserted overall research data")
 
-def insert_warden_hostel_data():
-    collection = db['warden_profile']
-    with open("/Velammal-Engineering-College-Backend/docs/warden_profile.json","r") as file:
-        documents = json.load(file)
-        collection.insert_many(documents)
-    
-    print("inserted warden profile data")
-
 def insert_department_research_data():
     collection = db['department_research_data']
     
@@ -1128,6 +1120,14 @@ def insert_department_research_data():
     
     print("All available Department Research documents inserted successfully.")
 
+def insert_warden_hostel_data():
+    collection = db['warden_profile']
+    with open("/root/Velammal-Engineering-College-Backend/docs/warden_profile.json","r") as file:
+        documents = json.load(file)
+        collection.insert_many(documents)
+    
+    print("inserted warden profile data")
+
 insert_sports_Zonal_results()
 insert_sports_Zonal_images()
 insert_sports_faculty_data()
@@ -1140,8 +1140,8 @@ insert_nss_carousal()
 insert_yrc_data()
 insert_overall_department_research()
 insert_department_research_data()
-insert_incubation_data()
 insert_warden_hostel_data()
+insert_incubation_data()    
 insert_army_data()
 insert_navy_data()
 
@@ -1170,7 +1170,7 @@ def add_hostel_student_database():
     def set_path(drive_link, reg_number):
         file_id = extract_drive_file_id(drive_link)
         if not file_id:
-            print(f"⚠️ Invalid Google Drive link for {reg_number}: {drive_link}")
+            print(f"⚠ Invalid Google Drive link for {reg_number}: {drive_link}")
             return None
 
         image_path = os.path.join(image_dir, f"{reg_number}.jpeg")
@@ -1226,7 +1226,7 @@ def add_hostel_student_database():
         collection.insert_many(students)
         print(f"✅ Successfully inserted {len(students)} students into MongoDB!")
     else:
-        print("⚠️ No student data to insert.")
+        print("⚠ No student data to insert.")
 
 #add_hostel_student_database()
 
@@ -1248,7 +1248,7 @@ department_mapping1 = {
     "015": "Physics"
 }
 
-parent_folder = "/Velammal-Engineering-College-Backend.docs/depts_fol"
+parent_folder = "/root/Velammal-Engineering-College-Backend/docs/depts_fol"
 
 def convert_df_to_json(df):
     df = df.astype(str)
@@ -1302,68 +1302,3 @@ for department_id in os.listdir(parent_folder):
     print(f"✅ Processed {department_name} ({department_id}) → {output_file}")
 
 print("🎉 All department files processed successfully!")
-
-#OLD RESEARCH ENDPOINTS DATA INSERTIONS
-
-'''def upload_research_data(folder_path):
-    collection = db['research_data']
-    for filename in os.listdir(folder_path):
-        if filename.endswith('.json'):
-            file_path = os.path.join(folder_path, filename)
-            with open(file_path, 'r') as file:
-                try:
-                    data = json.load(file)
-                    dept_id = filename.split('.')[0]
-                    if dept_id not in department_mapping.values():
-                        print(f"Skipping unrecognized dept_id: {dept_id}")
-                        continue
-
-                    collection.insert_one({"dept_id": dept_id, "data": data})
-                    print(f"✅ Successfully inserted data for {dept_id}")
-
-                except json.JSONDecodeError as e:
-                    print(f"❌ Error decoding JSON from {filename}: {e}")
-                except Exception as e:
-                    print(f"❌ Error processing {filename}: {e}")
-
-folder_path = r'/root/Velammal-Engineering-College-Backend/docs/RESEARCH-DATA'
-upload_research_data(folder_path)'''
-
-
-#OLD NSS ENDPOINTS DATA INSERTIONS
-
-'''def insert_nss_podcast():
-    collection= db['nsspodcast']
-    with open ("/root/Velammal-Engineering-College-Backend/docs/nsspodcast.json","r") as file:
-        documents= json.load(file)
-        collection.insert_many(documents)
-    print("NSS_Podcast documents inserted successfully")
-
-def insert_nss_home_data():
-    collection = db["nsshome"]
-    with open("/root/Velammal-Engineering-College-Backend/docs/nss_home.json", "r") as file:
-        documents = json.load(file)
-        collection.insert_one(documents)
-
-    print("NSS home data inserted successfully.")
-
-def insert_nss_events():
-    collection = db["nssgallery"]
-    with open("/root/Velammal-Engineering-College-Backend/docs/nss_gallery.json", "r") as file:
-        documents = json.load(file)
-        collection.insert_many(documents)
-
-    print("NSS gallery data inserted successfully.")
-
-def insert_nss_faculty_data():
-    collection = db["nss_faculty"]
-    with open("/root/Velammal-Engineering-College-Backend/docs/nss_faculty.json", "r") as file:
-        documents = json.load(file)
-        collection.insert_one(documents)
-
-    print("NSS faculty data inserted successfully.")
-
-insert_nss_podcast()
-insert_nss_home_data()
-insert_nss_events()
-insert_nss_faculty_data()'''
