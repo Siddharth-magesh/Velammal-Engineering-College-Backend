@@ -3613,7 +3613,15 @@ app.post('/api/edit_student_pass', upload.single('file'), async (req, res) => {
         if (!req.file) {
             return res.status(400).json({ error: "No file uploaded" });
         }
-        const { pass_id } = req.body;
+        const {
+            pass_id , 
+            passtype , 
+            from , 
+            to , 
+            place_to_visit , 
+            reason_type , 
+            reason_for_visit
+        } = req.body;
         const file_path = `/Velammal-Engineering-College-Backend/static/images/student_docs/${req.file.filename}`;
         await client.connect();
         const db = client.db(dbName);
@@ -3628,7 +3636,15 @@ app.post('/api/edit_student_pass', upload.single('file'), async (req, res) => {
         }
         await passCollection.updateOne(
             { pass_id },
-            { $set: { file_path: file_path } }
+            { $set: { 
+                file_path,
+                passtype,
+                from,
+                to,
+                place_to_visit,
+                reason_type,
+                reason_for_visit
+            } }
         );
 
         res.json({ message: "Student pass file updated successfully", file_path });
