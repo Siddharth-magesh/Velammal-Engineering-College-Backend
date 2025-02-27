@@ -3316,36 +3316,38 @@ app.post('/api/add_warden', upload.single('file'), async (req, res) => {
     }
 });
 
-// Increment Student Year
+// Increment Student Year for a Given Batch
 app.post('/api/increment_student_year', async (req, res) => {
     if (!req.session || req.session.superiorauth !== true) {
         return res.status(401).json({ error: "Unauthorized Access" });
     }
     try {
-        const { student_id } = req.body;
-        if (!student_id) {
-            return res.status(400).json({ error: "Missing student_id" });
+        const { batch } = req.body;
+        if (!batch) {
+            return res.status(400).json({ error: "Missing batch" });
         }
 
         await client.connect();
         const db = client.db(dbName);
         const studentCollection = db.collection("student_database");
-        const student = await studentCollection.findOne({ registration_number: student_id });
-        if (!student) {
-            return res.status(404).json({ error: "Student not found" });
+
+        const students = await studentCollection.find({ batch: batch, year: { $lt: 4 } }).toArray();
+
+        if (students.length === 0) {
+            return res.status(404).json({ error: "No eligible students found in this batch" });
         }
-        if (student.year >= 4) {
-            return res.status(400).json({ error: "Cannot increment year. Student is already in final year." });
-        }
-        await studentCollection.updateOne(
-            { registration_number: student_id },
+        await studentCollection.updateMany(
+            { batch: batch, year: { $lt: 4 } },
             { $inc: { year: 1 } }
         );
 
-        res.status(200).json({ message: "Student year incremented successfully", new_year: student.year + 1 });
+        res.status(200).json({ 
+            message: "Student years incremented successfully", 
+            updated_students: students.length 
+        });
 
     } catch (error) {
-        console.error("❌ Error Incrementing the Student Year:", error);
+        console.error("❌ Error Incrementing Student Year:", error);
         res.status(500).json({ error: "Internal server error" });
     }
 });
@@ -3600,6 +3602,28 @@ app.post('/api/set_new_password', async (req, res) => {
         console.error("Error:", err);
         res.status(500).json({ error: "Server error" });
 
+    }
+});
+
+//fetch student passes for editing
+app.post('/api/fetch_pass_details_for_edit', async (req, res) => {
+    if (!req.session || req.session.studentauth !== true) {
+        return res.status(401).json({ error: "Unauthorized access" });
+    }
+    try{
+        await client.connect();
+        const db = client.db(dbName);
+        const passCollection = db.collection("pass_details");
+        const { pass_id } = req.body;
+
+        const student_data = await passCollection.findOne({
+            pass_id : pass_id,
+            request_completed : false
+        });
+        res.json(student_data)
+    } catch (err) {
+        console.error("Error:", err);
+        res.status(500).json({ error: "Server error" });
     }
 });
 

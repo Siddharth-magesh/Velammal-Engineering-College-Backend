@@ -17,5 +17,6 @@
     "QR_path":"/static/student_barcode/113222072094.png",
     "edit_status":null,
     "changes":[],
-    "transit_status":false
+    "transit_status":false,
+    "batch":"2023-2024"
 }

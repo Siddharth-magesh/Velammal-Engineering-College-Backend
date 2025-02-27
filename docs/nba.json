@@ -1,17 +1,102 @@
-[
-    {
-        "year": [2021, 2022, 2023, 2024],
-        "DEPT": [
-            ["Civil","CSE","EEE","ECE","E&I","IT","Mech"],
-            ["Civil","CSE","EEE","ECE","E&I","IT","Mech"],
-            ["Civil","CSE","EEE","ECE","E&I","IT","Mech"],
-            ["Civil","CSE","EEE","ECE","E&I","IT","Mech"]
-        ],
-        "PDF_Path": [
-            ["/static/pdfs/nba/2021/Civil.pdf","/static/pdfs/nba/2021/CSE.pdf","/static/pdfs/nba/2021/EEE.pdf","/static/pdfs/nba/2021/ECE.pdf","/static/pdfs/nba/2021/EI.pdf","/static/pdfs/nba/2021/IT.pdf","/static/pdfs/nba/2021/Mech.pdf"],
-            ["/static/pdfs/nba/2022/Civil.pdf","/static/pdfs/nba/2022/CSE.pdf","/static/pdfs/nba/2022/EEE.pdf","/static/pdfs/nba/2022/ECE.pdf","/static/pdfs/nba/2022/EI.pdf","/static/pdfs/nba/2022/IT.pdf","/static/pdfs/nba/2022/Mech.pdf"],
-            ["/static/pdfs/nba/2023/Civil.pdf","/static/pdfs/nba/2023/CSE.pdf","/static/pdfs/nba/2023/EEE.pdf","/static/pdfs/nba/2023/ECE.pdf","/static/pdfs/nba/2023/EI.pdf","/static/pdfs/nba/2023/IT.pdf","/static/pdfs/nba/2023/Mech.pdf"],
-            ["/static/pdfs/nba/2024/Civil.pdf","/static/pdfs/nba/2024/CSE.pdf","/static/pdfs/nba/2024/EEE.pdf","/static/pdfs/nba/2024/ECE.pdf","/static/pdfs/nba/2024/EI.pdf","/static/pdfs/nba/2024/IT.pdf","/static/pdfs/nba/2024/Mech.pdf"]
-        ]
-    }
-]
+[{
+    "_id": {
+      "$oid": "67bd3dc8e25b6edfa0616109"
+    },
+    "DEPT": [
+      "Civil",
+      "CSE",
+      "EEE",
+      "ECE",
+      "E&I",
+      "IT",
+      "Mech"
+    ],
+    "year": [
+      [
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      [
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      [
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      [
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      [
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      [
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      [
+        2021,
+        2022,
+        2023,
+        2024
+      ]
+    ],
+    "PDF_Path": [
+      [
+        "/static/pdfs/nba/2021/Civil.pdf",
+        "/static/pdfs/nba/2022/Civil.pdf",
+        "/static/pdfs/nba/2023/Civil.pdf",
+        "/static/pdfs/nba/2024/Civil.pdf"
+      ],
+      [
+        "/static/pdfs/nba/2021/CSE.pdf",
+        "/static/pdfs/nba/2022/CSE.pdf",
+        "/static/pdfs/nba/2023/CSE.pdf",
+        "/static/pdfs/nba/2024/CSE.pdf"
+      ],
+      [
+        "/static/pdfs/nba/2021/EEE.pdf",
+        "/static/pdfs/nba/2022/EEE.pdf",
+        "/static/pdfs/nba/2023/EEE.pdf",
+        "/static/pdfs/nba/2024/EEE.pdf"
+      ],
+      [
+        "/static/pdfs/nba/2021/ECE.pdf",
+        "/static/pdfs/nba/2022/ECE.pdf",
+        "/static/pdfs/nba/2023/ECE.pdf",
+        "/static/pdfs/nba/2024/ECE.pdf"
+      ],
+      [
+        "/static/pdfs/nba/2021/EI.pdf",
+        "/static/pdfs/nba/2022/EI.pdf",
+        "/static/pdfs/nba/2023/EI.pdf",
+        "/static/pdfs/nba/2024/EI.pdf"
+      ],
+      [
+        "/static/pdfs/nba/2021/IT.pdf",
+        "/static/pdfs/nba/2022/IT.pdf",
+        "/static/pdfs/nba/2023/IT.pdf",
+        "/static/pdfs/nba/2024/IT.pdf"
+      ],
+      [
+        "/static/pdfs/nba/2021/Mech.pdf",
+        "/static/pdfs/nba/2022/Mech.pdf",
+        "/static/pdfs/nba/2023/Mech.pdf",
+        "/static/pdfs/nba/2024/Mech.pdf"
+      ]
+    ]
+  }]

@@ -18,5 +18,6 @@
     "edit_status":null,
     "changes":[],
     "transit_status":false,
-    "vacate_status":false
+    "vacate_status":false,
+    "batch":"2023-2027"
 }
