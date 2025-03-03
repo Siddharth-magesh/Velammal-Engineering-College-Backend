@@ -55,18 +55,11 @@
         "department_name": "Civil Engineering (CIVL)",
         "content": "Department 4 Content",
         "images": [
-            {"image_path": "/static/images/student_activities/civil_1.jpg", "event_name": "Description of Image 4_1", "image_content": "Event 4_1", "date": "YYYY-MM-DD"},
-            {"image_path": "/static/images/student_activities/civil_2.jpg", "event_name": "Description of Image 4_2", "image_content": "Event 4_2", "date": "YYYY-MM-DD"},
-            {"image_path": "/static/images/student_activities/civil_3.jpg", "event_name": "Description of Image 4_3", "image_content": "Event 4_3", "date": "YYYY-MM-DD"},
-            {"image_path": "/static/images/student_activities/civil_4.jpg", "event_name": "Description of Image 4_4", "image_content": "Event 4_4", "date": "YYYY-MM-DD"},
-            {"image_path": "/static/images/student_activities/civil_5.jpg", "event_name": "Description of Image 4_5", "image_content": "Event 4_5", "date": "YYYY-MM-DD"},
-            {"image_path": "/static/images/student_activities/civil_6.jpg", "event_name": "Description of Image 4_6", "image_content": "Event 4_6", "date": "YYYY-MM-DD"},
-            {"image_path": "/static/images/student_activities/civil_7.jpg", "event_name": "Description of Image 4_7", "image_content": "Event 4_7", "date": "YYYY-MM-DD"},
-            {"image_path": "/static/images/student_activities/civil_8.jpg", "event_name": "Description of Image 4_8", "image_content": "Event 4_8", "date": "YYYY-MM-DD"},
-            {"image_path": "/static/images/student_activities/civil_9.jpg", "event_name": "Description of Image 4_9", "image_content": "Event 4_9", "date": "YYYY-MM-DD"},
-            {"image_path": "/static/images/student_activities/civil_10.jpg", "event_name": "Description of Image 4_10", "image_content": "Event 4_10", "date": "YYYY-MM-DD"}
-        ]
-    },
+            {"image_path": "/static/images/student_activities/civil_1.jpg", "event_name": "Anna University   Civilization - 2024 - Overall Championship ", "image_content": "VEC Civil Engineering Department won the Overall Championship of Civilization - a national level technical symposium conducted by College of Engineering, Guindy, Anna University consecutively for 7 years.", "date": "2024"},
+            {"image_path": "/static/images/student_activities/civil_2.jpg", "event_name": "ANNA UNIVERSITY   CIVILIZATION - 2022 - OVERALL CHAMPIONSHIP ", "image_content": "Civil Engineering Department won the Overall Championship of Civilization - a national level technical symposium conducted by College of Engineering, Guindy, Anna University consecutively for 7 years.", "date": "2022"},
+            {"image_path": "/static/images/student_activities/civil_3.jpg", "event_name": "Inter-collegiate symposium ", "image_content": "Overall Trophy in Inter-collegiate symposium conducted by Dayanand Sagar College of Engineering & Technology, Bengaluru", "date": "2022"},
+            {"image_path": "/static/images/student_activities/civil_4.jpg", "event_name": "BAI - builders’ Association of India Oratory Competition", "image_content": "Our Students have been winning prizes every year since 2016 in the BAI - builders’ Association of India Oratory Competition.", "date": "2021"}
+        ] },
     {
         "dept_id": "005",
         "department_name": "Computer Science & Engineering (CSE)",
@@ -98,18 +91,15 @@
     {
         "dept_id": "007",
         "department_name": "Electrical & Electronics Engineering (EEE)",
-        "content": "Department 7 Content",
+        "content": "The students of the EEE department have consistently demonstrated their technical prowess by actively participating in various competitions, including project expos, paper presentations, circuit design challenges, and robotics competitions at inter-college and university levels. Their innovative research and problem-solving abilities have earned them recognition at prestigious technical symposiums and conferences. Notably, our students have presented papers on emerging technologies such as Smart Grids, Renewable Energy Systems, Electric Vehicles, and Industrial Automation, showcasing their expertise and dedication to the field. Their achievements reflect the department’s strong emphasis on academic excellence, research, and hands-on learning, inspiring future engineers to push the boundaries of innovation.",
         "images": [
-            {"image_path": "/static/images/student_activities/eee_1.jpg", "event_name": "Description of Image 7_1", "image_content": "Event 7_1", "date": "YYYY-MM-DD"},
-            {"image_path": "/static/images/student_activities/eee_2.jpg", "event_name": "Description of Image 7_2", "image_content": "Event 7_2", "date": "YYYY-MM-DD"},
-            {"image_path": "/static/images/student_activities/eee_3.jpg", "event_name": "Description of Image 7_3", "image_content": "Event 7_3", "date": "YYYY-MM-DD"},
-            {"image_path": "/static/images/student_activities/eee_4.jpg", "event_name": "Description of Image 7_4", "image_content": "Event 7_4", "date": "YYYY-MM-DD"},
-            {"image_path": "/static/images/student_activities/eee_5.jpg", "event_name": "Description of Image 7_5", "image_content": "Event 7_5", "date": "YYYY-MM-DD"},
-            {"image_path": "/static/images/student_activities/eee_6.jpg", "event_name": "Description of Image 7_6", "image_content": "Event 7_6", "date": "YYYY-MM-DD"},
-            {"image_path": "/static/images/student_activities/eee_7.jpg", "event_name": "Description of Image 7_7", "image_content": "Event 7_7", "date": "YYYY-MM-DD"},
-            {"image_path": "/static/images/student_activities/eee_8.jpg", "event_name": "Description of Image 7_8", "image_content": "Event 7_8", "date": "YYYY-MM-DD"},
-            {"image_path": "/static/images/student_activities/eee_9.jpg", "event_name": "Description of Image 7_9", "image_content": "Event 7_9", "date": "YYYY-MM-DD"},
-            {"image_path": "/static/images/student_activities/eee_10.jpg", "event_name": "Description of Image 7_10", "image_content": "Event 7_10", "date": "YYYY-MM-DD"}
+            {"image_path": "/static/images/student_activities/007/1.png", "event_name": "SAEINDIA Electric Two Weeler Design Competition", "image_content": "LakshmanRaj of EEE  won 1st prize in SAEINDIA Electric Two Weeler Design Competition -2023 and received Rs10,000 Cheque", "date": "2023-07-23"},
+            {"image_path": "/static/images/student_activities/007/2.png", "event_name": "National Level Symposium VERSIO 22", "image_content": "Best Paper Award titled 'Smart Assistance With Motion Detecting Sensor received by S Devi Priya,M Pavithraa  & A P Sritharani at National Level Symposium VERSIO 22, SRM Ramapuram Campus", "date": "2022"},
+            {"image_path": "/static/images/student_activities/007/3.png", "event_name": "National Level Symposium Impulse 22", "image_content": "Won 2nd  Prize in Paper Presentation titled “Smart Celling System” by Gayathri B M at National Level Symposium, Impulse 22 held  at Chennai Institute Of Technology", "date": "2022"},
+            {"image_path": "/static/images/student_activities/007/4.png", "event_name": "National Level Symposium INSTRUBLITZ 22", "image_content": "Won 3rd Prize in paper presentation event titled, 'Solar Charging Electric Vehicle' by T Thakshana  & M Siddharth at National Level Symposium INSTRUBLITZ 22 held at SRM Eswari Engineering College.", "date": "2022"},
+            {"image_path": "/static/images/student_activities/007/5.png", "event_name": "National Level Symposium GENERIX 22", "image_content": "Won 1st prize in paper presentation titled 'Gesture based door control system using SOC FPGA' by Joan Daniel A & Sugunesan R at National Level Symposium GENERIX 22, R.M.D Engineering College ", "date": "2022"},
+            {"image_path": "/static/images/student_activities/007/6.png", "event_name": "Gnista 22", "image_content": "Won 2nd Prize in paper presentation titled  “Power Transformer Differential Protection Based on Current and Voltage Ratio” by Jayashree M & Harini R  Gnista 22 TJS Engineering College.", "date": "2022"},
+            {"image_path": "/static/images/student_activities/007/7.png", "event_name": "IIT Madra's Carbon Zero Challenge", "image_content": "Mr. Sachin gets the award along with Scarpify Ecotech Pvt Ltd team at IIT Madra's Carbon Zero Challenge", "date": null}
         ]
     },
     {
@@ -170,16 +160,16 @@
         "department_name": "Information Technology (IT)",
         "content": "Department 11 Content",
         "images": [
-            {"image_path": "/static/images/student_activities/it_1.jpg", "image_content": "Description of Image 11_1", "event_name": "Event 11_1", "date": "YYYY-MM-DD"},
-            {"image_path": "/static/images/student_activities/it_2.jpg", "image_content": "Description of Image 11_2", "event_name": "Event 11_2", "date": "YYYY-MM-DD"},
-            {"image_path": "/static/images/student_activities/it_3.jpg", "image_content": "Description of Image 11_3", "event_name": "Event 11_3", "date": "YYYY-MM-DD"},
-            {"image_path": "/static/images/student_activities/it_4.jpg", "image_content": "Description of Image 11_4", "event_name": "Event 11_4", "date": "YYYY-MM-DD"},
-            {"image_path": "/static/images/student_activities/it_5.jpg", "image_content": "Description of Image 11_5", "event_name": "Event 11_5", "date": "YYYY-MM-DD"},
-            {"image_path": "/static/images/student_activities/it_6.jpg", "image_content": "Description of Image 11_6", "event_name": "Event 11_6", "date": "YYYY-MM-DD"},
-            {"image_path": "/static/images/student_activities/it_7.jpg", "image_content": "Description of Image 11_7", "event_name": "Event 11_7", "date": "YYYY-MM-DD"},
-            {"image_path": "/static/images/student_activities/it_8.jpg", "image_content": "Description of Image 11_8", "event_name": "Event 11_8", "date": "YYYY-MM-DD"},
-            {"image_path": "/static/images/student_activities/it_9.jpg", "image_content": "Description of Image 11_9", "event_name": "Event 11_9", "date": "YYYY-MM-DD"},
-            {"image_path": "/static/images/student_activities/it_10.jpg", "image_content": "Description of Image 11_10", "event_name": "Event 11_10", "date": "YYYY-MM-DD"}
+            {"image_path": "/static/images/student_activities/011/it_1.jpg", "image_content": "Subathra and Udayaravina of III IT won Second  prize(Cash Prize of Rs.22000) in Idea Incubators (Paper Presentation) in the event IDEA INCUBATORS conducted by Department of Spatial Informatics  at Saveetha Engineering College Description of Image 11_1", "event_name": "IDEA INCUBATORS ", "date": "2024-01-24"},
+            {"image_path": "/static/images/student_activities/011/it_2.jpg", "image_content": "Harish Ragav of II year IT B Section won first prize(Cash Prize of Rs.5000) in Research Showcase (Paper Presentation) in the event CISBOSSIUM'24 conducted by Department of Computer Science and Business System at R.M.K Engineering college ", "event_name": "CISBOSSIUM'24", "date": "2024-02-05"},
+            {"image_path": "/static/images/student_activities/011/it_3.jpg", "image_content": "Sesha Janani and Pratippa of III IT won Second Prize in Paper Presentation in PISTOBOLTZ'24 conducted by Department of Production Technology at Madras Institute of Technology ", "event_name": "PISTOBOLTZ'24", "date": "2024-03-16"},
+            {"image_path": "/static/images/student_activities/011/it_4.jpg", "image_content": "Vishnupriya and Srimathi of III IT won First Prize in Paper Presentation in TRIDENT'24 conducted by Department of Mechanical and Mechatronics  at Velammal Institute of technology ", "event_name": "TRIDENT'24", "date": "2024-02-23"},
+            {"image_path": "/static/images/student_activities/011/it_5.jpg", "image_content": "Nivedha of III IT won Second  Prize in Group Discussion, Shivani and Dhivyabharathi participated  in TRIDENT'24 conducted by Department of Mechanical and Mechatronics  at Velammal Institute of technology ", "event_name": "TRIDENT'24 ", "date": "2024-02-23"},
+            {"image_path": "/static/images/student_activities/011/it_7.jpg", "image_content": "Dharmaseelan, Vidyasagar,Abdul Afshith  of III IT won First  Prize in Techtangle Event  in PINNACLE'24 conducted by Department of Information Technology at SRM Easwari Engineering College ", "event_name": "PINNACLE'24", "date": "2024-02-23"},
+            {"image_path": "/static/images/student_activities/011/it_8.jpg", "image_content": "Vedavalli and Sruthinila of III Year IT won First Prize in paper presentation in SLICE V23 conducted by Department of Electronics and Communication Engineering at Loyala Icam Nungambakkam  ", "event_name": "SLICE V23 ", "date": "2023-09-16"},
+            {"image_path": "/static/images/student_activities/011/it_6.jpg", "image_content": "Vedavalli and Sruthinila of III Year IT won First Prize in paper presentation in HACKERZ conducted by Department of Computer Science and Engineering(Cyber Security) at Chennai Institute Of Technology ", "event_name": "HACKERZ", "date": "2023-09-19"},
+            {"image_path": "/static/images/student_activities/011/it_9.jpg", "image_content": "Abdul Kareem Faridh of II IT won Third Prize in paper presentation in PRECISION+ 2022 conducted by Department of Electronics and Instrumentation Engineering at B.S.Abdur Rahman crescent Institute of science & ", "event_name": "PRECISION+ 2022", "date": "2022-05-10"},
+            {"image_path": "/static/images/student_activities/011/it_10.jpg", "image_content": "Abdul Kareem Faridh of III IT won Third Prize in paper presentation in PINNACLE  2K23 conducted by Department of Information Technology at Easwari Engineering College  ", "event_name": "PINNACLE  2K23", "date": "2023-03-25"}
         ]
     },
     {

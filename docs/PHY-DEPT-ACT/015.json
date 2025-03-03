@@ -1,0 +1,158 @@
+[
+    {
+        "dept_id": "015",
+        "department_name": "Physics",
+        "dept_activities": [
+            {
+                "date": "11/06/2021",
+                "name_of_event": "My Dream Project",
+                "coordinator": "Dr. V. Ramesh Kumar, Mr. Moses V.G. Isiah",
+                "resource_person": null,
+                "beneficiaries": null,
+                "relevant_PO_PSO": null,
+                "image_path": ["/static/images/dept_activities/015/1.jpg"]
+            },
+            {
+                "date": "28/02/2022",
+                "name_of_event": "Science - The Fundamental of Engineering",
+                "coordinator": "Dr. V. Ramesh Kumar, Dr. J. Arumugam",
+                "resource_person": "Dr. P. K. Palanisamy (Emeritus Professor, Dept of Medical Physics, Anna University, Chennai)",
+                "beneficiaries": null,
+                "relevant_PO_PSO": null,
+                "image_path": ["/static/images/dept_activities/015/2.jpg"]
+            },
+            {
+                "date": "12/01/2022",
+                "name_of_event": "Innovation Begins at Home",
+                "coordinator": "Prof. S. Shahil Kirupavathy",
+                "resource_person": "Prof. S. Shahil Kirupavathy",
+                "beneficiaries": null,
+                "relevant_PO_PSO": null,
+                "image_path": ["/static/images/dept_activities/015/3.jpg"]
+            },
+            {
+                "date": "29/05/2021",
+                "name_of_event": "Quiz for VEC 1st Year B.E / B.Tech Students",
+                "coordinator": "Mrs. G. Hamsavalli, Dr. J. Arumugam",
+                "resource_person": null,
+                "beneficiaries": "I Year Students",
+                "relevant_PO_PSO": null,
+                "image_path": ["/static/images/dept_activities/015/4.jpg"]
+            },
+            {
+                "date": "10/04/2021",
+                "name_of_event": "Physics Quiz for Engineering Aspirants",
+                "coordinator": "Dr. V. Ramesh Kumar",
+                "resource_person": null,
+                "beneficiaries": "+2 Students",
+                "relevant_PO_PSO": null,
+                "image_path": ["/static/images/dept_activities/015/5.jpg"]
+            },
+            {
+                "date": "04/06/2021",
+                "name_of_event": "Paper Presentation for 1st Year VEC B.E / B.Tech Students",
+                "coordinator": "Dr. T. A. Revathy, Mrs. J. Breethy",
+                "resource_person": null,
+                "beneficiaries": "I Year Students",
+                "relevant_PO_PSO": null,
+                "image_path": ["/static/images/dept_activities/015/6.jpg"]
+            },
+            {
+                "date": "27/01/2022",
+                "name_of_event": "Physics Quiz for 1st Year B.E / B.Tech Students",
+                "coordinator": "Mrs. G. Hamsavalli",
+                "resource_person": "Dr. V. Ramesh Kumar, Dr. J. Arumugam, Mr. Moses V. G. Isaiah, Dr. T. Revathy",
+                "beneficiaries": "I Year Students",
+                "relevant_PO_PSO": null,
+                "image_path": ["/static/images/dept_activities/015/7.jpg"]
+            },
+            {
+                "date": "27/02/2022",
+                "name_of_event": "Photography Contest for Velammalites",
+                "coordinator": "Dr. T. A. Revathy",
+                "resource_person": "Dr. V. Ramesh Kumar, Mrs. G. Hamsavalli, Mr. Moses V. G. Isaiah",
+                "beneficiaries": null,
+                "relevant_PO_PSO": null,
+                "image_path": ["/static/images/dept_activities/015/8.jpg"]
+            },
+            {
+                "date": "27/04/2022",
+                "name_of_event": "Poster Presentation Contest for VEC Students (Topic - Save Earth)",
+                "coordinator": "Dr. J. Arumugam",
+                "resource_person": "Dr. V. Ramesh Kumar, Mrs. G. Hamsavalli, Mr. Moses V. G. Isaiah, Dr. T. Revathy",
+                "beneficiaries": null,
+                "relevant_PO_PSO": null,
+                "image_path": [
+                    "/static/images/dept_activities/015/9.jpg",
+                    "/static/images/dept_activities/015/9_1.jpg"
+                ]
+            },
+            {
+                "date": "14/08/2024",
+                "name_of_event": "EndNote - Citation and Reference Management Tool for Technical Writing",
+                "coordinator": "Mrs. G. Hamsavalli",
+                "resource_person": "Dr. T. A. Revathy",
+                "beneficiaries": "Faculties",
+                "relevant_PO_PSO": null,
+                "image_path": [
+                    "/static/images/dept_activities/015/10.jpg",
+                    "/static/images/dept_activities/015/10_1.jpg",
+                    "/static/images/dept_activities/015/10_2.jpg"
+                ]
+            },
+            {
+                "date": "21/05/2024",
+                "name_of_event": "Ideathon'24 for 1st Year B.E / B.Tech Students",
+                "coordinator": "Dr. M. Jayachandiran",
+                "resource_person": null,
+                "beneficiaries": null,
+                "relevant_PO_PSO": null,
+                "image_path": [
+                    "/static/images/dept_activities/015/11.jpg",
+                    "/static/images/dept_activities/015/11_1.jpg",
+                    "/static/images/dept_activities/015/11_2.jpg",
+                    "/static/images/dept_activities/015/11_3.jpg"
+                ]
+            },
+            {
+                "date": "29/04/2024",
+                "name_of_event": "Naan Mudhalvan for 1st Year B.E / B.Tech Students",
+                "coordinator": "Dr. J. Arumugam",
+                "resource_person": "Gowrishankar",
+                "beneficiaries": null,
+                "relevant_PO_PSO": null,
+                "image_path": [
+                    "/static/images/dept_activities/015/12.jpg",
+                    "/static/images/dept_activities/015/12_1.jpg",
+                    "/static/images/dept_activities/015/12_2.jpg"
+                ]
+            },
+            {
+                "date": "09/08/2024",
+                "name_of_event": "AI Tools - Innovation and Research",
+                "coordinator": "Dr. V. Ramesh Kumar",
+                "resource_person": "Dr. A. Mohamed Sikkander Abdul Razak (Associate Professor and Head, Department of Chemistry, Velammal Engineering College)",
+                "beneficiaries": "Faculties",
+                "relevant_PO_PSO": null,
+                "image_path": [
+                    "/static/images/dept_activities/015/13.jpg",
+                    "/static/images/dept_activities/015/13_1.jpg",
+                    "/static/images/dept_activities/015/13_2.jpg"
+                ]
+            },
+            {
+                "date": "28/11/2024",
+                "name_of_event": "Guest Lecture on 'Innovation and Entrepreneurship: A Pathway to Career Success' for 1st Year B.E / B.Tech Students",
+                "coordinator": "Dr. M. Jayachandiran",
+                "resource_person": null,
+                "beneficiaries": "I Year Students",
+                "relevant_PO_PSO": null,
+                "image_path": [
+                    "/static/images/dept_activities/015/14.jpg",
+                    "/static/images/dept_activities/015/14_1.jpg",
+                    "/static/images/dept_activities/015/14_2.jpg"
+                ]
+            }
+        ]
+    }
+]

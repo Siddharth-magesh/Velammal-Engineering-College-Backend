@@ -155,9 +155,9 @@ const sendParentReachedSMS = async (parentPhoneNumber, name, reachedTime) => {
     }
 };
 
-const sendOTPForForgetPassword = async (warden_number, name) => {  
+const sendOTPForForgetPassword = async (warden_number, name , req) => {  
     const otp = Math.floor(100000 + Math.random() * 900000);
-    req.session.otp = otp;
+    req.session.otp = JSON.stringify(otp);
     req.session.otpExpires = Date.now() + 5 * 60 * 1000;
     const smsMessage = `
     🔐 Password Reset OTP  
@@ -319,7 +319,8 @@ app.post('/api/verify_student', async (req, res) => {
             department: user.department,
             room_number: user.room_number,
             registration_number: user.registration_number,
-            block_name: user.block_name
+            block_name: user.block_name,
+            vacate_status : user.vacate_status
         });
 
     } catch (error) {
@@ -3393,8 +3394,9 @@ app.post('/api/submit_vacate_form', async (req, res) => {
         const db = client.db(dbName);
         const studentCollection = db.collection("student_database");
         const vacateCollection = db.collection("vacate_forms");
+        const wardenCollection = db.collection("warden_database");
 
-        const { student_id, reason_for_leave, last_date_of_stay, any_dues_pending, room_condition, feedback } = req.body;
+        const { student_id, Reason, date_time , Address } = req.body;
 
         if (!student_id || !reason_for_leave || !last_date_of_stay || !any_dues_pending || !room_condition || !feedback) {
             return res.status(400).json({ error: "Missing required fields" });
@@ -3412,11 +3414,9 @@ app.post('/api/submit_vacate_form', async (req, res) => {
             gender: studentData.gender,
             room_no: studentData.room_no,
             blockname: studentData.blockname,
-            reason_for_leave,
-            last_date_of_stay,
-            any_dues_pending,
-            room_condition,
-            feedback,
+            Reason,
+            date_time,
+            Address,
             vacate_date: new Date()
         };
         await vacateCollection.insertOne(vacateEntry);
@@ -3424,9 +3424,12 @@ app.post('/api/submit_vacate_form', async (req, res) => {
             { registration_number : student_id },
             { $set: { vacate_status: false } }
         );
+        const warden_data = await wardenCollection.findOne({ unique_id : "004" });
+        const count = warden_data.vacated_students + 1;
 
         res.json({
-            message: "Vacate form submitted successfully"
+            message: "Vacate form submitted successfully",
+            count : count
         });
     } catch (err) {
         console.error("Error:", err);
@@ -3515,20 +3518,17 @@ app.get('/api/logout', (req, res) => {
 
 //Send OTP for forget password warden
 app.post('/api/send_otp', async (req, res) => {
-    if (!req.session || req.session.wardenauth !== true) {
-        return res.status(401).json({ error: "Unauthorized access" });
-    }
-
     try {
         await client.connect();
         const db = client.db(dbName);
-        const warden_id = req.session.unique_number;
+        const { warden_id } = req.body;
         const wardenCollection = db.collection("warden_database");
         const warden_data = await wardenCollection.findOne({ unique_id: warden_id });
         if (!warden_data) {
             return res.status(404).json({ error: "Warden not found" });
         }
-        await sendOTPForForgetPassword(warden_data.phone_number_student, warden_data.warden_name);
+        await sendOTPForForgetPassword(warden_data.phone_number, warden_data.warden_name , req);
+        req.session.unique_number = warden_id
 
         res.status(200).json({ message: "OTP sent successfully" });
 
@@ -3540,10 +3540,6 @@ app.post('/api/send_otp', async (req, res) => {
 
 //otp validation
 app.post('/api/otp_validation', async (req, res) => {
-    if (!req.session || req.session.wardenauth !== true) {
-        return res.status(401).json({ error: "Unauthorized access" });
-    }
-
     try {
         const { otp } = req.body;
         if (!req.session.otp || !req.session.otpExpires) {
@@ -3555,7 +3551,7 @@ app.post('/api/otp_validation', async (req, res) => {
             return res.status(400).json({ error: "OTP has expired" });
         }
 
-        if (parseInt(otp) !== req.session.otp) {
+        if (otp !== req.session.otp) {
             return res.status(400).json({ error: "Invalid OTP" });
         }
         delete req.session.otp;
@@ -3571,10 +3567,6 @@ app.post('/api/otp_validation', async (req, res) => {
 
 //set new password
 app.post('/api/set_new_password', async (req, res) => {
-    if (!req.session || req.session.wardenauth !== true) {
-        return res.status(401).json({ error: "Unauthorized access" });
-    }
-
     try {
         const { new_password } = req.body;
 

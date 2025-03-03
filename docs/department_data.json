@@ -44,7 +44,7 @@
     },
     {
         "department_id": "004",
-        "department_name": "Civil Engineering",
+        "department_name": "Civil Engineering (CIVIL)",
         "department_image": "/static/images/department_data/civil.jpg",
         "department_quotes": "The road to success is always under construction",
         "vision": "Department of Civil Engineering aims to transform the students, through theory and practice, into competitive civil engineers, who will provide smart solutions for the futuristic sustainable development of the nation with human values.",
@@ -57,7 +57,7 @@
         ],
         "newsletter_path": "/static/docs/dapartment_data/civil_newsletter.pdf",
         "about_department": ["Civil Engineering, the Mother of all Engineering Disciplines, its Sons and Daughters, the Young Civil Engineers are the Nation Builders for sustaining Civilization anywhere in the World and Universe.Starting from 2007, Department of Civil Engineering joined in contributing towards nation building through our Graduate Civil Engineers.","The BE Civil Engineering program of VEC is continuously accredited by NBA since 2015. So far 32 graduates from the Department have been placed in State and Central Government jobs (IRS, IOCL, Revenue, Police, PWD, Highways, Water Resources, Buildings, CMDA, Local Administration...) and also in many other countries like UK, USA, Canada, Singapore, Dubai, Australia, etc. in various roles and positions.","To achieve this, the Department is equipped with sophisticated laboratories and field oriented teaching and training. About 85% of students are placed in Core & IT companies (45+ Core Companies & 20+ IT companies). Around 200+ Students opted for higher studies in India & Foreign Universities through GATE, GRE & GMAT. Currently under Autonomous mode, the curriculum is further enriched to facilitate student community to reach greater heights and zeniths."]
-    },
+    },      
     {
         "department_id": "005",
         "department_name": "Computer Science & Engineering (CSE)",
@@ -91,15 +91,16 @@
         "department_id": "007",
         "department_name": "Electrical & Electronics Engineering (EEE)",
         "department_image": "/static/images/department_data/eee.jpg",
-        "department_quotes": "Precision engineering for a better world.",
-        "vision": "To lead in electronic and instrumentation engineering education and innovation.",
+        "department_quotes": "Electrify, Energize, Enlighten. Driving the future with electric brilliance!",
+        "vision": "Imparting high quality education and grooming of competent Electrical and Electronics Engineers to cater to the global needs of Academics, Industry and Society",
         "mission": [
-            "Focus on quality education in instrumentation and control systems.",
-            "Promote research in automation and intelligent systems.",
-            "Prepare students for industrial and academic excellence."
+            "To impart knowledge, skills and attitudes for developing engineers to compete at global level with dedication, determination and distinction.",
+            "To motivate creativity, kindle innovation and build leadership.",
+            "To promote self-learning and teamwork and to make them industry ready graduates.",
+            "To involve the faculty and students in research and consultancy for the benefit of institute, industry and society."
         ],
         "newsletter_path": "/static/docs/dapartment_data/eee_newsletter.pdf",
-        "about_department": ["Department of Artificial Intelligence aims to produce computing graduates with high potency, apply, design and develop systems to pertain and to integrate both software and hardware devices, utilize modern approaches in programming and problem solving techniques."," The Department was established in the year 2020 with the main objective of providing quality education in the field of Engineering and Technology."," It is recognized as nodal center under Anna University. The Department has proved to be a center of excellence in Academic, Sponsored research and Continuing Education Programme."]
+        "about_department": ["The department of Electrical and Electronics Engineering at Velammal Engineering College with its rich and traditional academic ambiance targets both the theory and the practical applications of engineering and technology to handle global challenges of the present and future scenarios.","The department is celebrating 25 years of academic excellence since 1995. All the departmental activities are NBA Accredited since 2002 and also ISO certified.","With academic autonomy, it offers variety of courses across a wide spectrum of specialized topics in UG, PG and PhD level under choice-based credit system in concurrence with the modern technological advancements and industrial requirements."]
     },
     {
         "department_id": "008",

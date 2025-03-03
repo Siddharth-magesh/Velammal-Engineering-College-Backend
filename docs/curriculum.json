@@ -170,24 +170,12 @@
         "program_specific_outcomes": {
             "headings":["PSO01","PSO02"],
 	        "content":[
-                "Apply the concepts of Artificial Intelligence to provide solutions for the real time problems and to integrate the professional skills with recent tools and technologies to cope with the dynamic AI needs.",
-                "Create a concrete foundation and enlighten the innovation, research and entrepreneur skills in the field of Artificial Intelligence and Data science."
+                "Plan, design and implement smart and sustainable infrastructure.",
+                "Provide solutions for the social needs and challenges by applying modern tools and techniques."
             ]
         },
-        "key_highlights": [
-            "Key Highlight 1: Description of key highlight 1",
-            "Key Highlight 2: Description of key highlight 2",
-            "Key Highlight 3: Description of key highlight 3",
-            "Key Highlight 4: Description of key highlight 4"
-        ],
-        "six_unique": [
-            "Block Chain Technologies",
-            "Artificial Intelligence",
-            "Data Science",
-            "Big Data Management",
-            "Social Network Analysis",
-            "Text Analytics"
-        ]
+        "key_highlights": [],
+        "six_unique": []
     },
     {
         "dept_id": "005",
@@ -225,20 +213,8 @@
                 "Create a concrete foundation and enlighten the innovation, research and entrepreneur skills in the field of Artificial Intelligence and Data science."
             ]
         },
-        "key_highlights": [
-            "Key Highlight 1: Description of key highlight 1",
-            "Key Highlight 2: Description of key highlight 2",
-            "Key Highlight 3: Description of key highlight 3",
-            "Key Highlight 4: Description of key highlight 4"
-        ],
-        "six_unique": [
-            "Block Chain Technologies",
-            "Artificial Intelligence",
-            "Data Science",
-            "Big Data Management",
-            "Social Network Analysis",
-            "Text Analytics"
-        ]
+        "key_highlights": [],
+        "six_unique": []
     },
     {
         "dept_id": "006",
@@ -276,28 +252,15 @@
                 "Graduate students will be able to develop data, resource, and asset protection strategies for organizations, processes, peoples, and individuals through Cyber security-centric skills."
             ]
         },
-        "key_highlights": [
-            "Key Highlight 1: Description of key highlight 1",
-            "Key Highlight 2: Description of key highlight 2",
-            "Key Highlight 3: Description of key highlight 3",
-            "Key Highlight 4: Description of key highlight 4"
-        ],
-        "six_unique": [
-            "Block Chain Technologies",
-            "Artificial Intelligence",
-            "Data Science",
-            "Big Data Management",
-            "Social Network Analysis",
-            "Text Analytics"
-        ]
+        "key_highlights": [],
+        "six_unique": []
     },
-
     {
         "dept_id": "007",
-        "department_name": "Electrical & Electronics Engineering  (EEE) ",
+        "department_name": "Electrical & Electronics Engineering  (EEE)",
         "regulation": {
-        "year":["2020", "2021", "2022"],
-	    "pdf_path":["/static/docs/curriculum/007/reg_20.pdf","/static/docs/curriculum/007/reg_21.pdf","/static/docs/curriculum/007/reg_22.pdf"]
+        "year":["2019", "2021", "2023"],
+	    "pdf_path":["/static/docs/curriculum/007/reg_19.pdf","/static/docs/curriculum/007/reg_21.pdf","/static/docs/curriculum/007/reg_23.pdf"]
 
         },
         "academic_year": {
@@ -324,23 +287,13 @@
         "program_specific_outcomes": {
             "headings":["PSO01","PSO02"],
 	        "content":[
-                "Apply the concepts of Artificial Intelligence to provide solutions for the real time problems and to integrate the professional skills with recent tools and technologies to cope with the dynamic AI needs.",
-                "Create a concrete foundation and enlighten the innovation, research and entrepreneur skills in the field of Artificial Intelligence and Data science."
+                "Graduates will have the ability to design, simulate and control the Electrical and Electronics circuits using the concepts of power and control engineering.",
+                "Graduates will have the ability to identify, analyze the problems and innovate ideas by adapting the concepts of Power electronics, Recent trends in power systems and Drives systems in Electrical Engineering to provide solutions to existing/novel problems."
             ]
         },
         "key_highlights": [
-            "Key Highlight 1: Description of key highlight 1",
-            "Key Highlight 2: Description of key highlight 2",
-            "Key Highlight 3: Description of key highlight 3",
-            "Key Highlight 4: Description of key highlight 4"
         ],
         "six_unique": [
-            "Block Chain Technologies",
-            "Artificial Intelligence",
-            "Data Science",
-            "Big Data Management",
-            "Social Network Analysis",
-            "Text Analytics"
         ]
     },
     {
@@ -455,20 +408,8 @@
             "headings":[],
 	        "content":[]
         },
-        "key_highlights": [
-            "Key Highlight 1: Description of key highlight 1",
-            "Key Highlight 2: Description of key highlight 2",
-            "Key Highlight 3: Description of key highlight 3",
-            "Key Highlight 4: Description of key highlight 4"
-        ],
-        "six_unique": [
-            "Block Chain Technologies",
-            "Artificial Intelligence",
-            "Data Science",
-            "Big Data Management",
-            "Social Network Analysis",
-            "Text Analytics"
-        ]
+        "key_highlights": [],
+        "six_unique": []
     },
 
 
@@ -547,20 +488,8 @@
                 "Create a concrete foundation and enlighten the innovation, research and entrepreneur skills in the field of Artificial Intelligence and Data science."
             ]
         },
-        "key_highlights": [
-            "Key Highlight 1: Description of key highlight 1",
-            "Key Highlight 2: Description of key highlight 2",
-            "Key Highlight 3: Description of key highlight 3",
-            "Key Highlight 4: Description of key highlight 4"
-        ],
-        "six_unique": [
-            "Block Chain Technologies",
-            "Artificial Intelligence",
-            "Data Science",
-            "Big Data Management",
-            "Social Network Analysis",
-            "Text Analytics"
-        ]
+        "key_highlights": [],
+        "six_unique": []
     },
     {
         "dept_id": "013",

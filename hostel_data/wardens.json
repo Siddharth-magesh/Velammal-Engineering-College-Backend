@@ -58,6 +58,7 @@
         "gender":"Male",
         "category":"head",
         "joined_date":"22/12/2020",
-        "profile_years":[1,2,3,4]
+        "profile_years":[1,2,3,4],
+        "vacated_students":0
     }
 ]
