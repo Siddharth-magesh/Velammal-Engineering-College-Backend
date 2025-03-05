@@ -1104,7 +1104,7 @@ def insert_overall_department_research():
 
 def insert_warden_hostel_data():
     collection = db['warden_profile']
-    with open("/Velammal-Engineering-College-Backend/docs/warden_profile.json","r") as file:
+    with open("/root/Velammal-Engineering-College-Backend/docs/warden_profile.json","r") as file:
         documents = json.load(file)
         collection.insert_many(documents)
     
