@@ -1,7 +1,4 @@
 [{
-    "_id": {
-      "$oid": "67bd3dc8e25b6edfa0616109"
-    },
     "DEPT": [
       "Civil",
       "CSE",
