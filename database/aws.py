@@ -1248,7 +1248,7 @@ department_mapping1 = {
     "015": "Physics"
 }
 
-parent_folder = "/Velammal-Engineering-College-Backend.docs/depts_fol"
+parent_folder = "/Velammal-Engineering-College-Backend/docs/depts_fol"
 
 def convert_df_to_json(df):
     df = df.astype(str)
