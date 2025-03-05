@@ -19,19 +19,19 @@
                     "MBA - Master of Business Administration"
                 ],
                 "pdf_path": [
-                    "/static/pdfs/curriculum_and_syllabus/auto_23.pdf",
-                    "/static/pdfs/curriculum_and_syllabus/civil_23.pdf",
-                    "/static/pdfs/curriculum_and_syllabus/cse_23.pdf",
-                    "/static/pdfs/curriculum_and_syllabus/cse_cyber_23.pdf",
-                    "/static/pdfs/curriculum_and_syllabus/ece_23.pdf",
-                    "/static/pdfs/curriculum_and_syllabus/eee_23.pdf",
-                    "/static/pdfs/curriculum_and_syllabus/eie_23.pdf",
-                    "/static/pdfs/curriculum_and_syllabus/it_23.pdf",
-                    "/static/pdfs/curriculum_and_syllabus/aids_23.pdf",
-                    "/static/pdfs/curriculum_and_syllabus/mech_23.pdf",
-                    "/static/pdfs/curriculum_and_syllabus/me_cse_23.pdf",
-                    "/static/pdfs/curriculum_and_syllabus/power_23.pdf",
-                    "/static/pdfs/curriculum_and_syllabus/mba_23.pdf"
+                    "/static/pdfs/curriculum/002/reg_23.pdf",
+                    "/static/pdfs/curriculum/004/reg_23.pdf",
+                    "/static/pdfs/curriculum/005/reg_23.pdf",
+                    "/static/pdfs/curriculum/006/reg_23.pdf",
+                    "/static/pdfs/curriculum/009/reg_23.pdf",
+                    "/static/pdfs/curriculum/007/reg_23.pdf",
+                    "/static/pdfs/curriculum/008/reg_23.pdf",
+                    "/static/pdfs/curriculum/011/reg_23.pdf",
+                    "/static/pdfs/curriculum/001/reg_23.pdf",
+                    "/static/pdfs/curriculum/013/reg_23.pdf",
+                    "/static/pdfs/curriculum/me_cse_23.pdf",
+                    "/static/pdfs/curriculum/power_23.pdf",
+                    "/static/pdfs/curriculum/mba_23.pdf"
                 ]
             }
         ]
@@ -55,18 +55,19 @@
                     "MBA - Master of Business Administration"
                 ],
                 "pdf_path": [
-                    "/static/pdfs/curriculum_and_syllabus/auto_21.pdf",
-                    "/static/pdfs/curriculum_and_syllabus/civil_21.pdf",
-                    "/static/pdfs/curriculum_and_syllabus/cse_21.pdf",
-                    "/static/pdfs/curriculum_and_syllabus/ece_21.pdf",
-                    "/static/pdfs/curriculum_and_syllabus/eee_21.pdf",
-                    "/static/pdfs/curriculum_and_syllabus/eie_21.pdf",
-                    "/static/pdfs/curriculum_and_syllabus/it_21.pdf",
-                    "/static/pdfs/curriculum_and_syllabus/aids_21.pdf",
-                    "/static/pdfs/curriculum_and_syllabus/mech_21.pdf",
-                    "/static/pdfs/curriculum_and_syllabus/me_cse_21.pdf",
-                    "/static/pdfs/curriculum_and_syllabus/power_21.pdf",
-                    "/static/pdfs/curriculum_and_syllabus/mba_21.pdf"
+                    "/static/pdfs/curriculum/002/reg_21.pdf",
+                    "/static/pdfs/curriculum/004/reg_21.pdf",
+                    "/static/pdfs/curriculum/005/reg_21.pdf",
+                    "/static/pdfs/curriculum/006/reg_21.pdf",
+                    "/static/pdfs/curriculum/009/reg_21.pdf",
+                    "/static/pdfs/curriculum/007/reg_21.pdf",
+                    "/static/pdfs/curriculum/008/reg_21.pdf",
+                    "/static/pdfs/curriculum/011/reg_21.pdf",
+                    "/static/pdfs/curriculum/001/reg_21.pdf",
+                    "/static/pdfs/curriculum/013/reg_21.pdf",
+                    "/static/pdfs/curriculum/me_cse_21.pdf",
+                    "/static/pdfs/curriculum/power_21.pdf",
+                    "/static/pdfs/curriculum/mba_21.pdf"
                 ]
             }
         ]
@@ -90,18 +91,19 @@
                     "MBA - Master of Business Administration"
                 ],
                 "pdf_path": [
-                    "/static/pdfs/curriculum_and_syllabus/auto_19.pdf",
-                    "/static/pdfs/curriculum_and_syllabus/civil_19.pdf",
-                    "/static/pdfs/curriculum_and_syllabus/cse_19.pdf",
-                    "/static/pdfs/curriculum_and_syllabus/ece_19.pdf",
-                    "/static/pdfs/curriculum_and_syllabus/eee_19.pdf",
-                    "/static/pdfs/curriculum_and_syllabus/eie_19.pdf",
-                    "/static/pdfs/curriculum_and_syllabus/it_19.pdf",
-                    "/static/pdfs/curriculum_and_syllabus/aids_19.pdf",
-                    "/static/pdfs/curriculum_and_syllabus/mech_19.pdf",
-                    "/static/pdfs/curriculum_and_syllabus/me_cse_19.pdf",
-                    "/static/pdfs/curriculum_and_syllabus/power_19.pdf",
-                    "/static/pdfs/curriculum_and_syllabus/mba_19.pdf"
+                    "/static/pdfs/curriculum/002/reg_19.pdf",
+                    "/static/pdfs/curriculum/004/reg_19.pdf",
+                    "/static/pdfs/curriculum/005/reg_19.pdf",
+                    "/static/pdfs/curriculum/006/reg_19.pdf",
+                    "/static/pdfs/curriculum/009/reg_19.pdf",
+                    "/static/pdfs/curriculum/007/reg_19.pdf",
+                    "/static/pdfs/curriculum/008/reg_19.pdf",
+                    "/static/pdfs/curriculum/011/reg_19.pdf",
+                    "/static/pdfs/curriculum/001/reg_19.pdf",
+                    "/static/pdfs/curriculum/013/reg_19.pdf",
+                    "/static/pdfs/curriculum/me_cse_19.pdf",
+                    "/static/pdfs/curriculum/power_19.pdf",
+                    "/static/pdfs/curriculum/mba_19.pdf"
                 ]
             }
         ]
@@ -122,15 +124,15 @@
                     "B.E Mechanical Engineering"
                 ],
                 "pdf_path": [
-                    "/static/pdfs/curriculum_and_syllabus/auto.pdf",
-                    "/static/pdfs/curriculum_and_syllabus/civil.pdf",
-                    "/static/pdfs/curriculum_and_syllabus/cse.pdf",
-                    "/static/pdfs/curriculum_and_syllabus/ece.pdf",
-                    "/static/pdfs/curriculum_and_syllabus/eee.pdf",
-                    "/static/pdfs/curriculum_and_syllabus/eie.pdf",
-                    "/static/pdfs/curriculum_and_syllabus/it.pdf",
-                    "/static/pdfs/curriculum_and_syllabus/aids.pdf",
-                    "/static/pdfs/curriculum_and_syllabus/mech.pdf"
+                    "/static/pdfs/curriculum_and_syllabus/auto_ve.pdf",
+                    "/static/pdfs/curriculum_and_syllabus/civil_ve.pdf",
+                    "/static/pdfs/curriculum_and_syllabus/cse_ve.pdf",
+                    "/static/pdfs/curriculum_and_syllabus/ece_ve.pdf",
+                    "/static/pdfs/curriculum_and_syllabus/eee_ve.pdf",
+                    "/static/pdfs/curriculum_and_syllabus/eie_ve.pdf",
+                    "/static/pdfs/curriculum_and_syllabus/it_ve.pdf",
+                    "/static/pdfs/curriculum_and_syllabus/aids_ve.pdf",
+                    "/static/pdfs/curriculum_and_syllabus/mech_ve.pdf"
                 ]
             }
         ]

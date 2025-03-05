@@ -2334,76 +2334,123 @@ app.get("/api/pass_measures_warden", async (req, res) => {
         const currentDate = moment().utc().startOf("day").toDate();
         const nextDate = moment().utc().endOf("day").toDate();
         const now = moment().tz("Asia/Kolkata").toDate();
-        const istTime = new Date(now.getTime() + (5.5 * 60 * 60 * 1000));
+        const istTime = new Date(now.getTime() + 5.5 * 60 * 60 * 1000);
 
         const passTypes = ["od", "outpass", "staypass", "leave"];
-        
+
         let results = {};
         let overall = {
             exitTimeCount: 0,
             reEntryTimeCount: 0,
             activeOutsideCount: 0,
             overdueReturnCount: 0,
+            activeOutsideDetails: { names: [], passtypes: [] },  // ✅ Added
+            overdueReturnDetails: { names: [], late_by: [] },  // ✅ Added
             passTypeCounts: {}
         };
 
         for (const type of passTypes) {
-            overall.passTypeCounts[type] = 0;
+            overall.passTypeCounts[type] = { count: 0, names: [] };
         }
 
         for (const year of primary_years) {
-            const yearFilter = { year, gender: warden_handling_gender , qrcode_status:true , exit_time : {$ne:null}};
+            const yearFilter = { year, gender: warden_handling_gender, qrcode_status: true, exit_time: { $ne: null } };
 
-            const exitTimeCount = await collection.countDocuments({
+            // Measure 1: Exit Time Count
+            const exitTimeData = await collection.find({
                 ...yearFilter,
                 $or: [
                     { from: { $lte: currentDate }, to: { $gte: currentDate } },
                     { from: { $gte: currentDate, $lt: nextDate } },
                     { to: { $gte: currentDate, $lt: nextDate } }
                 ]
-            });
+            }).project({ name: 1, _id: 0 }).toArray();
+            const exitTimeCount = exitTimeData.length;
 
-            const reEntryTimeCount = await collection.countDocuments({
-                re_entry_time: { $gte: currentDate, $lte: nextDate },
+            // Measure 2: Re-entry Time Count
+            const reEntryTimeData = await collection.find({
+                re_entry_time: { $gte: currentDate, $lt: nextDate },
                 ...yearFilter
-            });
-            const activeOutsideCount = await collection.countDocuments({
+            }).project({ name: 1, _id: 0 }).toArray();
+            const reEntryTimeCount = reEntryTimeData.length;
+
+            // Measure 3: Active Outside Count (with passtype)
+            const activeOutsideData = await collection.find({
                 exit_time: { $exists: true },
                 to: { $gt: istTime },
-                re_entry_time: { $in: [null, ""]},
+                re_entry_time: { $in: [null, ""] },
                 ...yearFilter
-            });
+            }).project({ name: 1, passtype: 1, _id: 0 }).toArray();
+            const activeOutsideCount = activeOutsideData.length;
+            const activeOutsideDetails = {
+                names: activeOutsideData.map(p => p.name),
+                passtypes: activeOutsideData.map(p => p.passtype)
+            };
 
-            const overdueReturnCount = await collection.countDocuments({
+            // Measure 4: Overdue Return Count (with late_by)
+            const overdueReturnData = await collection.find({
                 exit_time: { $exists: true },
                 to: { $lt: istTime },
-                re_entry_time: { $in: [null, ""]},
+                re_entry_time: { $in: [null, ""] },
                 ...yearFilter
-            });
+            }).project({ name: 1, to: 1, _id: 0 }).toArray();
+            const overdueReturnCount = overdueReturnData.length;
+
+            // Calculate late_by (hours and minutes)
+            const overdueReturnProcessed = {
+                names: overdueReturnData.map(entry => entry.name),
+                late_by: overdueReturnData.map(entry => {
+                    const toTime = new Date(entry.to);
+                    const lateByMs = istTime - toTime;
+                    const lateHours = Math.floor(lateByMs / (1000 * 60 * 60));
+                    const lateMinutes = Math.floor((lateByMs % (1000 * 60 * 60)) / (1000 * 60));
+
+                    return `${lateHours} hours ${lateMinutes} minutes`;
+                })
+            };
 
             let passTypeCounts = {};
             for (const type of passTypes) {
-                passTypeCounts[type] = await collection.countDocuments({
+                const passData = await collection.find({
                     passtype: type,
                     ...yearFilter
-                });
-                overall.passTypeCounts[type] += passTypeCounts[type];
+                }).project({ name: 1, _id: 0 }).toArray();
+                passTypeCounts[type] = { count: passData.length, names: passData.map(p => p.name) };
+
+                overall.passTypeCounts[type].count += passData.length;
+                overall.passTypeCounts[type].names.push(...passData.map(p => p.name));
             }
+
             results[year] = {
                 exitTimeCount,
+                exitTimeDetails: { names: exitTimeData.map(p => p.name) },
                 reEntryTimeCount,
+                reEntryTimeDetails: { names: reEntryTimeData.map(p => p.name) },
                 activeOutsideCount,
+                activeOutsideDetails,
                 overdueReturnCount,
+                overdueReturnDetails: overdueReturnProcessed,
                 passTypeCounts,
                 currentDate,
                 nextDate,
-                now
+                now,
+                istTime
             };
+
             overall.exitTimeCount += exitTimeCount;
             overall.reEntryTimeCount += reEntryTimeCount;
             overall.activeOutsideCount += activeOutsideCount;
             overall.overdueReturnCount += overdueReturnCount;
+            
+            // ✅ Append Active Outside details to overall section
+            overall.activeOutsideDetails.names.push(...activeOutsideDetails.names);
+            overall.activeOutsideDetails.passtypes.push(...activeOutsideDetails.passtypes);
+
+            // ✅ Append Overdue Return details to overall section
+            overall.overdueReturnDetails.names.push(...overdueReturnProcessed.names);
+            overall.overdueReturnDetails.late_by.push(...overdueReturnProcessed.late_by);
         }
+
         results["overall"] = overall;
 
         res.json({
@@ -2417,8 +2464,10 @@ app.get("/api/pass_measures_warden", async (req, res) => {
     }
 });
 
+
+
 //pass analysis 2
-app.get("/pass_analysis_warden", async (req, res) => {
+app.post("/api/pass_analysis_warden", async (req, res) => {
     if (!req.session || req.session.wardenauth !== true) {
         return res.status(401).json({ error: "Unauthorized Access" });
     }
@@ -2550,7 +2599,7 @@ app.get("/pass_analysis_warden", async (req, res) => {
 });
 
 //analysis by date - 3
-app.get("/pass_analysis_by_date_warden", async (req, res) => {
+app.post("/api/pass_analysis_by_date_warden", async (req, res) => {
     if (!req.session || req.session.wardenauth !== true) {
         return res.status(401).json({ error: "Unauthorized Access" });
     }
@@ -2686,79 +2735,165 @@ app.get("/api/pass_measures_superior", async (req, res) => {
         await client.connect();
         const db = client.db(dbName);
         const collection = db.collection("pass_details");
-        const gender=["Male","Female"]
+        const warden_id = req.session.unique_number;
+        const wardenCollection = db.collection("warden_database");
+        const warden_data = await wardenCollection.findOne({ unique_id: warden_id });
+
+        if (!warden_data || !warden_data.profile_years) {
+            return res.status(400).json({ error: "Invalid warden data." });
+        }
+
+        const primary_years = warden_data.profile_years;
+        if (!Array.isArray(primary_years) || primary_years.length === 0) {
+            return res.status(400).json({ error: "Primary years must be an array with at least one value." });
+        }
 
         const currentDate = moment().utc().startOf("day").toDate();
         const nextDate = moment().utc().endOf("day").toDate();
         const now = moment().tz("Asia/Kolkata").toDate();
-        const istTime = new Date(now.getTime() + (5.5 * 60 * 60 * 1000));
+        const istTime = new Date(now.getTime() + 5.5 * 60 * 60 * 1000);
 
         const passTypes = ["od", "outpass", "staypass", "leave"];
-        
-        let results = {};
-        let overall = {
-            exitTimeCount: 0,
-            reEntryTimeCount: 0,
-            activeOutsideCount: 0,
-            overdueReturnCount: 0,
-            passTypeCounts: {}
+
+        let results = {
+            male: {},
+            female: {}
         };
 
-        for (const type of passTypes) {
-            overall.passTypeCounts[type] = 0;
-        }
-
-        for (const year of primary_years) {
-            const yearFilter = { year, gender: gender , qrcode_status:true , exit_time : { $ne : null }};
-
-            const exitTimeCount = await collection.countDocuments({
-                ...yearFilter,
-                $or: [
-                    { from: { $lte: currentDate }, to: { $gte: currentDate } },
-                    { from: { $gte: currentDate, $lt: nextDate } },
-                    { to: { $gte: currentDate, $lt: nextDate } }
-                ]
-            });
-
-            const reEntryTimeCount = await collection.countDocuments({
-                re_entry_time: { $gte: currentDate, $lte: nextDate },
-                ...yearFilter
-            });
-            const activeOutsideCount = await collection.countDocuments({
-                exit_time: { $exists: true },
-                to: { $gt: istTime },
-                re_entry_time: { $in: [null, ""]},
-                ...yearFilter
-            });
-
-            const overdueReturnCount = await collection.countDocuments({
-                exit_time: { $exists: true },
-                to: { $lt: istTime },
-                re_entry_time: { $in: [null, ""]},
-                ...yearFilter
-            });
-
-            let passTypeCounts = {};
-            for (const type of passTypes) {
-                passTypeCounts[type] = await collection.countDocuments({
-                    passtype: type,
-                    ...yearFilter
-                });
-                overall.passTypeCounts[type] += passTypeCounts[type];
-            }
-            results[year] = {
-                exitTimeCount,
-                reEntryTimeCount,
-                activeOutsideCount,
-                overdueReturnCount,
-                passTypeCounts
+        for (const gender of ["Male", "Female"]) {
+            let overall = {
+                exitTimeNames: [],
+                exitTimeCount: 0,
+                reEntryTimeNames: [],
+                reEntryTimeCount: 0,
+                activeOutsideNames: [],
+                activeOutsideCount: 0,
+                activeOutsidePassTypes: [],
+                overdueReturnNames: [],
+                overdueReturnCount: 0,
+                overdueReturnLateBy: [],
+                passTypeNames: {},
+                passTypeCounts: {}
             };
-            overall.exitTimeCount += exitTimeCount;
-            overall.reEntryTimeCount += reEntryTimeCount;
-            overall.activeOutsideCount += activeOutsideCount;
-            overall.overdueReturnCount += overdueReturnCount;
+
+            for (const type of passTypes) {
+                overall.passTypeNames[type] = [];
+                overall.passTypeCounts[type] = 0;
+            }
+
+            results[gender] = {};
+
+            for (const year of primary_years) {
+                const yearFilter = { year, gender, qrcode_status: true, exit_time: { $ne: null } };
+
+                // Fetch exit time users
+                const exitTimeUsers = await collection
+                    .find({
+                        ...yearFilter,
+                        $or: [
+                            { from: { $lte: currentDate }, to: { $gte: currentDate } },
+                            { from: { $gte: currentDate, $lt: nextDate } },
+                        ]
+                    })
+                    .project({ name: 1, _id: 0 })
+                    .toArray();
+                const exitTimeNames = exitTimeUsers.map(doc => doc.name);
+                const exitTimeCount = exitTimeNames.length;
+
+                // Fetch re-entry time users
+                const reEntryTimeUsers = await collection
+                    .find({
+                        re_entry_time: { $gte: currentDate, $lte: nextDate },
+                        ...yearFilter
+                    })
+                    .project({ name: 1, _id: 0 })
+                    .toArray();
+                const reEntryTimeNames = reEntryTimeUsers.map(doc => doc.name);
+                const reEntryTimeCount = reEntryTimeNames.length;
+
+                // Fetch active outside users
+                const activeOutsideList = await collection
+                    .find({
+                        exit_time: { $exists: true },
+                        to: { $gt: istTime },
+                        re_entry_time: { $in: [null, ""] },
+                        ...yearFilter
+                    })
+                    .project({ name: 1, passtype: 1, _id: 0 })
+                    .toArray();
+                const activeOutsideNames = activeOutsideList.map(doc => doc.name);
+                const activeOutsidePassTypes = activeOutsideList.map(doc => doc.passtype);
+                const activeOutsideCount = activeOutsideNames.length;
+
+                // Fetch overdue return users
+                const overdueReturnList = await collection
+                    .find({
+                        exit_time: { $exists: true },
+                        to: { $lt: istTime },
+                        re_entry_time: { $in: [null, ""] },
+                        ...yearFilter
+                    })
+                    .project({ name: 1, to: 1, _id: 0 })
+                    .toArray();
+                const overdueReturnNames = overdueReturnList.map(doc => doc.name);
+                const overdueReturnCount = overdueReturnNames.length;
+                const overdueReturnLateBy = overdueReturnList.map(doc => {
+                    const minutesLate = Math.round((istTime - doc.to) / (1000 * 60));
+                    const hours = Math.floor(minutesLate / 60);
+                    const minutes = minutesLate % 60;
+                    return `${hours} hours ${minutes} minutes`;
+                });
+
+                // Fetch pass type users
+                let passTypeNames = {};
+                let passTypeCounts = {};
+                for (const type of passTypes) {
+                    passTypeNames[type] = await collection
+                        .find({
+                            passtype: type,
+                            ...yearFilter
+                        })
+                        .project({ name: 1, _id: 0 })
+                        .toArray();
+                    passTypeNames[type] = passTypeNames[type].map(doc => doc.name);
+                    passTypeCounts[type] = passTypeNames[type].length;
+
+                    overall.passTypeNames[type] = overall.passTypeNames[type].concat(passTypeNames[type]);
+                    overall.passTypeCounts[type] += passTypeCounts[type];
+                }
+
+                results[gender][year] = {
+                    exitTimeNames,
+                    exitTimeCount,
+                    reEntryTimeNames,
+                    reEntryTimeCount,
+                    activeOutsideNames,
+                    activeOutsidePassTypes,
+                    activeOutsideCount,
+                    overdueReturnNames,
+                    overdueReturnCount,
+                    overdueReturnLateBy,
+                    passTypeNames,
+                    passTypeCounts,
+                    currentDate,
+                    nextDate,
+                    now
+                };
+
+                overall.exitTimeNames = overall.exitTimeNames.concat(exitTimeNames);
+                overall.exitTimeCount += exitTimeCount;
+                overall.reEntryTimeNames = overall.reEntryTimeNames.concat(reEntryTimeNames);
+                overall.reEntryTimeCount += reEntryTimeCount;
+                overall.activeOutsideNames = overall.activeOutsideNames.concat(activeOutsideNames);
+                overall.activeOutsidePassTypes = overall.activeOutsidePassTypes.concat(activeOutsidePassTypes);
+                overall.activeOutsideCount += activeOutsideCount;
+                overall.overdueReturnNames = overall.overdueReturnNames.concat(overdueReturnNames);
+                overall.overdueReturnCount += overdueReturnCount;
+                overall.overdueReturnLateBy = overall.overdueReturnLateBy.concat(overdueReturnLateBy);
+            }
+
+            results[gender]["overall"] = overall;
         }
-        results["overall"] = overall;
 
         res.json({
             primary_years,
@@ -2773,7 +2908,7 @@ app.get("/api/pass_measures_superior", async (req, res) => {
 
 
 //pass analysis 2
-app.get("/pass_analysis_superior", async (req, res) => {
+app.post("/api/pass_analysis_superior", async (req, res) => {
     if (!req.session || req.session.superiorauth !== true) {
         return res.status(401).json({ error: "Unauthorized Access" });
     }
@@ -2795,7 +2930,7 @@ app.get("/pass_analysis_superior", async (req, res) => {
         if (["1", "2", "3", "4"].includes(year)) {
             yearFilter = { year: parseInt(year) };
         } else if (year === "overall") {
-            yearFilter = { year: { $in: primary_years } };
+            yearFilter = { year: { $in: primary_years.map(y => parseInt(y)) } };
         } else {
             return res.status(400).json({ error: "Invalid year value." });
         }
@@ -2839,7 +2974,7 @@ app.get("/pass_analysis_superior", async (req, res) => {
             {
                 $match: {
                     ...commonFilters,
-                    reason_for_visit: { $exists: true, $ne: null },
+                    reason_type: { $exists: true, $ne: null }, // Ensure reason_type exists
                     $or: [
                         { from: { $lte: now }, to: { $gte: now } },
                         { from: { $gte: new Date(`${formattedDate}T00:00:00.000Z`), $lt: new Date(`${formattedDate}T23:59:59.999Z`) } },
@@ -2851,7 +2986,7 @@ app.get("/pass_analysis_superior", async (req, res) => {
                 $group: {
                     _id: {
                         $cond: {
-                            if: { $in: ["$reason_type", validReasons] },
+                            if: validReasons.length > 0 && { $in: ["$reason_type", validReasons] },
                             then: "$reason_type",
                             else: "Others"
                         }
@@ -2890,7 +3025,7 @@ app.get("/pass_analysis_superior", async (req, res) => {
 });
 
 //analysis by date - 3
-app.get("/pass_analysis_by_date_superior", async (req, res) => {
+app.post("/api/pass_analysis_by_date_superior", async (req, res) => {
     if (!req.session || req.session.superiorauth !== true) {
         return res.status(401).json({ error: "Unauthorized Access" });
     }
@@ -2914,7 +3049,7 @@ app.get("/pass_analysis_by_date_superior", async (req, res) => {
         if (["1", "2", "3", "4"].includes(year)) {
             yearFilter = { year: parseInt(year) };
         } else if (year === "overall") {
-            yearFilter = { year: { $in: primary_years } };
+            yearFilter = { year: { $in: primary_years.map(y => parseInt(y)) } };
         } else {
             return res.status(400).json({ error: "Invalid year value." });
         }
@@ -2994,7 +3129,10 @@ app.get("/pass_analysis_by_date_superior", async (req, res) => {
                 count: thirdMeasureDocs.length,
                 names: thirdMeasureDocs.map(doc => doc.name)
             },
-            reasonTypeCounts: fourthMeasureCounts
+            reasonTypeCounts: fourthMeasureCounts,
+            now,
+            formattedDate,
+            istTime
         });
 
     } catch (error) {

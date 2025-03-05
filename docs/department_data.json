@@ -62,15 +62,16 @@
         "department_id": "005",
         "department_name": "Computer Science & Engineering (CSE)",
         "department_image": "/static/images/department_data/cse.jpg",
-        "department_quotes": "Connecting the world through innovation.",
-        "vision": "To pioneer in electronics and communication engineering education and research.",
+        "department_quotes": "To build strategic partnerships with industry to encourage collaborative innovation, facilitate knowledge exchange, and align educational efforts with real-world demands",
+        "vision": "To provide quality education aimed at cultivating exceptionally skilled technologists and entrepreneurs with a global footprint, supported by strong ethical values, and inventive thinking in the field of Computer Science and Engineering, tailored to fulfill both industrial demands and societal aspirations",
         "mission": [
-            "Develop expertise in electronics and communication technologies.",
-            "Promote innovative research for societal benefits.",
-            "Prepare students for leadership roles in industry and academia."
+            "To focus on delivering education that is both affordable and of high quality, ensuring that it aligns with current industry needs. ",
+            "To strive for excellence in teaching and learning processes by integrating strong ethical values, inventive thinking, and a focus on entrepreneurship.",
+            "To create an environment that encourages innovation supports multidisciplinary research endeavors, and cultivates professionals focused on research excellence in Computer Science and Engineering. ",
+            "To enhance educational outcomes by nurturing entrepreneurship, integrating project-based learning, and aligning educational efforts with both industrial demands and societal aspirations."
         ],
         "newsletter_path": "/static/docs/dapartment_data/cse_newsletter.pdf",
-        "about_department": ["Department of Artificial Intelligence aims to produce computing graduates with high potency, apply, design and develop systems to pertain and to integrate both software and hardware devices, utilize modern approaches in programming and problem solving techniques."," The Department was established in the year 2020 with the main objective of providing quality education in the field of Engineering and Technology."," It is recognized as nodal center under Anna University. The Department has proved to be a center of excellence in Academic, Sponsored research and Continuing Education Programme."]
+        "about_department": ["Established in 1995, the Department of Computer Science and Engineering at our institution has been dedicated to providing high-quality education to 240 students. Our mission is to equip young minds with the knowledge and skills necessary to excel in the field of IT and drive organizational success.To achieve this, we offer a comprehensive curriculum that incorporates the latest technologies, collaborative projects, research associations, and hands-on training through semester-long internships and live industry problem-solving. Our program also features flexible electives, open electives, honors, and minor degrees, promoting an interdisciplinary approach that prepares students to thrive in a rapidly evolving tech landscape."]
     },
     {
         "department_id": "006",

@@ -47,11 +47,16 @@
         "dept_id": "005",
         "department_name": "Computer Science & Engineering (CSE)",
         "infrastructure_images": [
-            {"image_path": "/static/images/infrastructure/cse_1.jpg", "image_name": "Image 5_1", "image_content": "Description of Image 5_1"},
-            {"image_path": "/static/images/infrastructure/cse_2.jpg", "image_name": "Image 5_2", "image_content": "Description of Image 5_2"},
-            {"image_path": "/static/images/infrastructure/cse_3.jpg", "image_name": "Image 5_3", "image_content": "Description of Image 5_3"},
-            {"image_path": "/static/images/infrastructure/cse_4.jpg", "image_name": "Image 5_4", "image_content": "Description of Image 5_4"},
-            {"image_path": "/static/images/infrastructure/cse_5.jpg", "image_name": "Image 5_5", "image_content": "Description of Image 5_5"}
+            {"image_path": "/static/images/infrastructure/cse_1.jpg", "image_name": "Lab Facilities", "image_content": "Multimedia Lab"},
+            {"image_path": "/static/images/infrastructure/cse_2.jpg", "image_name": "Lab Facilities", "image_content": "Networks Lab"},
+            {"image_path": "/static/images/infrastructure/cse_3.jpg", "image_name": "Lab Facilities", "image_content": "Operating Systems Lab"},
+            {"image_path": "/static/images/infrastructure/cse_4.jpg", "image_name": "Lab Facilities", "image_content": "Computing Lab"},
+            {"image_path": "/static/images/infrastructure/cse_5.jpg", "image_name": "Classroom Facilities", "image_content": "Comfortable learning environment"},
+            {"image_path": "/static/images/infrastructure/cse_6.jpg", "image_name": "Classroom Facilities", "image_content": "Reduced distractions"},
+            {"image_path": "/static/images/infrastructure/cse_7.jpg", "image_name": "Classroom Facilities", "image_content": "Increased mobility and flexibility"},
+            {"image_path": "/static/images/infrastructure/cse_8.jpg", "image_name": "Classroom Facilities", "image_content": "Enhanced collaboration and group work opportunities"},
+            {"image_path": "/static/images/infrastructure/cse_9.jpg", "image_name": "Classroom Facilities", "image_content": "Improved focus and productivity"}
+
         ]
     },
     {
