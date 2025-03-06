@@ -12,9 +12,9 @@ mongo_uri = "mongodb://localhost:27017/"
 db_name = "VEC"
 collection_name = "staff_details"
 
-file_path = r"/root/root/Velammal-Engineering-College-Backend/docs/VEC_Faculty_Details.csv"
-photo_base_dir = r"/root/root/Velammal-Engineering-College-Backend/static/temp_photos/"
-base_save_dir = r"/root/root/Velammal-Engineering-College-Backend/static/staff_scholar_details/"
+file_path = r"/root/Velammal-Engineering-College-Backend/docs/VEC_Faculty_Details.csv"
+photo_base_dir = r"/root/Velammal-Engineering-College-Backend/static/temp_photos/"
+base_save_dir = r"/root/Velammal-Engineering-College-Backend/static/staff_scholar_details/"
 
 client = MongoClient(mongo_uri)
 db = client[db_name]
@@ -167,7 +167,7 @@ def download_image(
         print(f"Error downloading image for {unique_id}: {e}")
         return None
 
-target_base_dir = r"/root/root/Velammal-Engineering-College-Backend/static/images/profile_photos/"
+target_base_dir = r"/root/Velammal-Engineering-College-Backend/static/images/profile_photos/"
 save_base_dir = r"/root/Velammal-Engineering-college/static/images/profile_photos/"
 df['Photo'] = df.apply(lambda row: download_image(row['unique_id'], row['Photo'], target_base_dir,save_base_dir), axis=1)
 
