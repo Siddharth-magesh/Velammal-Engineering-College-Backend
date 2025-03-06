@@ -762,7 +762,7 @@ app.get('/api/sidebar/:deptid', async (req, res) => {
     }
 });
 
-//NSS ARMY
+//NCC ARMY
 app.get('/api/army', async (req, res) => {
     const db = client.db(dbName);
     const collection = db.collection('army');
@@ -778,7 +778,7 @@ app.get('/api/army', async (req, res) => {
     }
 });
 
-//NSS NAVY
+//Ncc NAVY
 app.get('/api/navy', async (req, res) => {
     const db = client.db(dbName);
     const collection = db.collection('navy');
@@ -787,7 +787,7 @@ app.get('/api/navy', async (req, res) => {
         if (NAVYData.length === 0) {
             return res.status(404).json({ message: 'No navy data found' });
         }
-        res.status(200).json(NIRFData);
+        res.status(200).json(NAVYData);
     } catch (error) {
         console.error('❌ Error fetching navy data:', error);
         res.status(500).json({ error: 'Error fetching navy data' });

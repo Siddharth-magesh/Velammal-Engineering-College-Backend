@@ -4,17 +4,17 @@ import pandas as pd
 from pymongo import MongoClient
 from docx import Document
 import json
-import bcrypt
 import shutil
+import bcrypt
 import re
 
 mongo_uri = "mongodb://localhost:27017/"
 db_name = "VEC"
 collection_name = "staff_details"
 
-file_path = r"/root/Velammal-Engineering-College-Backend/docs/VEC_Faculty_Details.csv"
-photo_base_dir = r"/root/Velammal-Engineering-College-Backend/static/temp_photos/"
-base_save_dir = r"/root/Velammal-Engineering-College-Backend/static/staff_scholar_details/"
+file_path = r"/root/root/Velammal-Engineering-College-Backend/docs/VEC_Faculty_Details.csv"
+photo_base_dir = r"/root/root/Velammal-Engineering-College-Backend/static/temp_photos/"
+base_save_dir = r"/root/root/Velammal-Engineering-College-Backend/static/staff_scholar_details/"
 
 client = MongoClient(mongo_uri)
 db = client[db_name]
@@ -64,7 +64,7 @@ department_mapping = {
     "Information Technology": "011",
     "Mathematics": "012",
     "Mechancial Engineering": "013",
-    "Physical Education": "014",
+    "Tamil": "014",
     "Physics": "015"
 }
 
@@ -82,7 +82,7 @@ department_mapping1 = {
     "Information Technology (IT)": "011",
     "Mathematics": "012",
     "Mechancial Engineering (MECH)": "013",
-    "Physical Education": "014",
+    "Tamil": "014",
     "Physics": "015"
 }
 
@@ -167,7 +167,7 @@ def download_image(
         print(f"Error downloading image for {unique_id}: {e}")
         return None
 
-target_base_dir = r"/root/Velammal-Engineering-College-Backend/static/images/profile_photos/"
+target_base_dir = r"/root/root/Velammal-Engineering-College-Backend/static/images/profile_photos/"
 save_base_dir = r"/root/Velammal-Engineering-college/static/images/profile_photos/"
 df['Photo'] = df.apply(lambda row: download_image(row['unique_id'], row['Photo'], target_base_dir,save_base_dir), axis=1)
 
@@ -565,7 +565,7 @@ def insert_infrastructure_data():
 
 def insert_student_activities_data():
     collection = db['student_activities'] 
-    with open("/root/Velammal-Engineering-College-Backend/docs/student_activities.json", "r") as file:
+    with open("/root/Velammal-Engineering-College-Backend/docs/student_activities.json", "r", encoding="utf-8") as file:
         documents = json.load(file)
         collection.insert_many(documents)
     
@@ -842,6 +842,20 @@ def insert_math_dept_activities_details():
         collection.insert_many(documents)
     print("MATH dept activities documents inserted successfully")
 
+def insert_eee_dept_activities_details():
+    collection= db['department_activities']
+    with open ("/root/Velammal-Engineering-College-Backend/docs/EEE-DEPT-ACT/007.json","r") as file:
+        documents= json.load(file)
+        collection.insert_many(documents)
+    print("EEE dept activities documents inserted successfully")
+
+def insert_civil_dept_activities_details():
+    collection= db['department_activities']
+    with open ("/root/Velammal-Engineering-College-Backend/docs/CIVIL-DEPT-ACT/004.json","r") as file:
+        documents= json.load(file)
+        collection.insert_many(documents)
+    print("civil dept activities documents inserted successfully")
+
 def insert_alumni_data(directory_path='/root/Velammal-Engineering-College-Backend/docs/ALUMINI'):
     collection = db["alumni"]
 
@@ -890,6 +904,8 @@ insert_cscb_dept_activities_details()
 insert_eie_dept_activities_details()
 insert_mech_dept_activities_details()
 insert_math_dept_activities_details()
+insert_eee_dept_activities_details()
+insert_civil_dept_activities_details()
 
 department_mapping = {
     "Artificial Intelligence and Data Science": "001",
@@ -905,7 +921,7 @@ department_mapping = {
     "Information Technology": "011",
     "Mathematics": "012",
     "Mechancial Engineering": "013",
-    "Physical Education": "014",
+    "Tamil": "014",
     "Physics": "015"
 }
 
@@ -1102,14 +1118,6 @@ def insert_overall_department_research():
     
     print("inserted overall research data")
 
-def insert_warden_hostel_data():
-    collection = db['warden_profile']
-    with open("/root/Velammal-Engineering-College-Backend/docs/warden_profile.json","r") as file:
-        documents = json.load(file)
-        collection.insert_many(documents)
-    
-    print("inserted warden profile data")
-
 def insert_department_research_data():
     collection = db['department_research_data']
     
@@ -1128,6 +1136,14 @@ def insert_department_research_data():
     
     print("All available Department Research documents inserted successfully.")
 
+def insert_warden_hostel_data():
+    collection = db['warden_profile']
+    with open("/root/Velammal-Engineering-College-Backend/docs/warden_profile.json","r") as file:
+        documents = json.load(file)
+        collection.insert_many(documents)
+    
+    print("inserted warden profile data")
+
 insert_sports_Zonal_results()
 insert_sports_Zonal_images()
 insert_sports_faculty_data()
@@ -1140,8 +1156,8 @@ insert_nss_carousal()
 insert_yrc_data()
 insert_overall_department_research()
 insert_department_research_data()
-insert_incubation_data()
 insert_warden_hostel_data()
+insert_incubation_data()
 insert_army_data()
 insert_navy_data()
 
@@ -1244,7 +1260,7 @@ department_mapping1 = {
     "011": "Information Technology (IT)",
     "012": "Mathematics",
     "013": "Mechancial Engineering (MECH)",
-    "014": "Physical Education",
+    "014": "Tamil",
     "015": "Physics"
 }
 
