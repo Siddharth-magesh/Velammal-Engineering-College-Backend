@@ -169,3 +169,11 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+chatbotv1/
+chatbotv2/
+chatbotv3/
+hostelData/
+outputs/
+static/
+backup/
+output/

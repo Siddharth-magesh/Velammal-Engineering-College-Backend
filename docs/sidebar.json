@@ -1,243 +1,242 @@
 [
-  
     {
-        "deptId":"001",
-        "department_name": "Artificial Intelligence and Data Science (AI&DS)",
-        "content":[
-            {"id":"HeadDepartment","hascontent":true},
-            {"id":"Vision&Mission","hascontent":true},
-            {"id":"Faculties","hascontent":true},
-            {"id":"Activities","hascontent":true},
-            {"id":"Syllabus","hascontent":true},
-            {"id":"Infrastructure","hascontent":true},
-            {"id":"StudentActivities","hascontent":true},
-            {"id":"SupportingStaff","hascontent":true},
-            {"id":"Mous","hascontent":true},
-            {"id":"Research","hascontent":true}
-        ]
+      "deptId": "001",
+      "department_name": "Artificial Intelligence and Data Science (AI&DS)",
+      "content": [
+        {"id": "HeadDepartment", "hascontent": true},
+        {"id": "Vision&Mission", "hascontent": true},
+        {"id": "Faculties", "hascontent": true},
+        {"id": "Activities", "hascontent": true},
+        {"id": "Syllabus", "hascontent": true},
+        {"id": "Infrastructure", "hascontent": true},
+        {"id": "StudentActivities", "hascontent": true},
+        {"id": "SupportingStaff", "hascontent": false},
+        {"id": "Mous", "hascontent": false},
+        {"id": "Research", "hascontent": true}
+      ]
     },
     {
-        "deptId":"002",
-        "department_name": "Automobile Engineering (AUTO)",
-        "content":[
-            {"id":"HeadDepartment","hascontent":true},
-            {"id":"Vision&Mission","hascontent":true},
-            {"id":"Faculties","hascontent":true},
-            {"id":"Activities","hascontent":true},
-            {"id":"Syllabus","hascontent":true},
-            {"id":"Infrastructure","hascontent":true},
-            {"id":"StudentActivities","hascontent":true},
-            {"id":"SupportingStaff","hascontent":true},
-            {"id":"Mous","hascontent":true},
-            {"id":"Research","hascontent":true}
-        ]
+      "deptId": "002",
+      "department_name": "Automobile Engineering (AUTO)",
+      "content": [
+        {"id": "HeadDepartment", "hascontent": false},
+        {"id": "Vision&Mission", "hascontent": false},
+        {"id": "Faculties", "hascontent": false},
+        {"id": "Activities", "hascontent": false},
+        {"id": "Syllabus", "hascontent": false},
+        {"id": "Infrastructure", "hascontent": false},
+        {"id": "StudentActivities", "hascontent": false},
+        {"id": "SupportingStaff", "hascontent": false},
+        {"id": "Mous", "hascontent": false},
+        {"id": "Research", "hascontent": false}
+      ]
     },
     {
-        "deptId":"003",
-        "department_name": "Chemistry ",
-        "content":[
-            {"id":"HeadDepartment","hascontent":true},
-            {"id":"Vision&Mission","hascontent":true},
-            {"id":"Faculties","hascontent":true},
-            {"id":"Activities","hascontent":true},
-            {"id":"Syllabus","hascontent":true},
-            {"id":"Infrastructure","hascontent":true},
-            {"id":"StudentActivities","hascontent":true},
-            {"id":"SupportingStaff","hascontent":true},
-            {"id":"Mous","hascontent":true},
-            {"id":"Research","hascontent":true}
-        ]
+      "deptId": "003",
+      "department_name": "Chemistry ",
+      "content": [
+        {"id": "HeadDepartment", "hascontent": true},
+        {"id": "Vision&Mission", "hascontent": true},
+        {"id": "Faculties", "hascontent": true},
+        {"id": "Activities", "hascontent": false},
+        {"id": "Syllabus", "hascontent": false},
+        {"id": "Infrastructure", "hascontent": false},
+        {"id": "StudentActivities", "hascontent": false},
+        {"id": "SupportingStaff", "hascontent": false},
+        {"id": "Mous", "hascontent": false},
+        {"id": "Research", "hascontent": true}
+      ]
     },
     {
-        "deptId":"004",
-        "department_name": "Civil Engineering (CIVIL)",
-        "content":[
-            {"id":"HeadDepartment","hascontent":true},
-            {"id":"Vision&Mission","hascontent":true},
-            {"id":"Faculties","hascontent":true},
-            {"id":"Activities","hascontent":true},
-            {"id":"Syllabus","hascontent":true},
-            {"id":"Infrastructure","hascontent":true},
-            {"id":"StudentActivities","hascontent":true},
-            {"id":"SupportingStaff","hascontent":true},
-            {"id":"Mous","hascontent":true},
-            {"id":"Research","hascontent":true}
-        ]
+      "deptId": "004",
+      "department_name": "Civil Engineering (CIVIL)",
+      "content": [
+        {"id": "HeadDepartment", "hascontent": true},
+        {"id": "Vision&Mission", "hascontent": true},
+        {"id": "Faculties", "hascontent": true},
+        {"id": "Activities", "hascontent": true},
+        {"id": "Syllabus", "hascontent": true},
+        {"id": "Infrastructure", "hascontent": true},
+        {"id": "StudentActivities", "hascontent": true},
+        {"id": "SupportingStaff", "hascontent": false},
+        {"id": "Mous", "hascontent": false},
+        {"id": "Research", "hascontent": true}
+      ]
     },
     {
-        "deptId":"005",
-        "department_name": "Computer Science & Engineering (CSE)",
-        "content":[
-            {"id":"HeadDepartment","hascontent":true},
-            {"id":"Vision&Mission","hascontent":true},
-            {"id":"Faculties","hascontent":true},
-            {"id":"Activities","hascontent":true},
-            {"id":"Syllabus","hascontent":true},
-            {"id":"Infrastructure","hascontent":true},
-            {"id":"StudentActivities","hascontent":true},
-            {"id":"SupportingStaff","hascontent":true},
-            {"id":"Mous","hascontent":true},
-            {"id":"Research","hascontent":true}
-        ]
+      "deptId": "005",
+      "department_name": "Computer Science & Engineering (CSE)",
+      "content": [
+        {"id": "HeadDepartment", "hascontent": false},
+        {"id": "Vision&Mission", "hascontent": false},
+        {"id": "Faculties", "hascontent": true},
+        {"id": "Activities", "hascontent": false},
+        {"id": "Syllabus", "hascontent": false},
+        {"id": "Infrastructure", "hascontent": false},
+        {"id": "StudentActivities", "hascontent": false},
+        {"id": "SupportingStaff", "hascontent": false},
+        {"id": "Mous", "hascontent": false},
+        {"id": "Research", "hascontent": true}
+      ]
     },
     {
-        "deptId":"006",
-        "department_name": "Computer Science and Engineering (CYBER SECURITY)",
-        "content":[
-            {"id":"HeadDepartment","hascontent":true},
-            {"id":"Vision&Mission","hascontent":true},
-            {"id":"Faculties","hascontent":true},
-            {"id":"Activities","hascontent":true},
-            {"id":"Syllabus","hascontent":true},
-            {"id":"Infrastructure","hascontent":true},
-            {"id":"StudentActivities","hascontent":true},
-            {"id":"SupportingStaff","hascontent":true},
-            {"id":"Mous","hascontent":true},
-            {"id":"Research","hascontent":true}
-        ]
+      "deptId": "006",
+      "department_name": "Computer Science and Engineering (CYBER SECURITY)",
+      "content": [
+        {"id": "HeadDepartment", "hascontent": true},
+        {"id": "Vision&Mission", "hascontent": true},
+        {"id": "Faculties", "hascontent": true},
+        {"id": "Activities", "hascontent": true},
+        {"id": "Syllabus", "hascontent": true},
+        {"id": "Infrastructure", "hascontent": true},
+        {"id": "StudentActivities", "hascontent": true},
+        {"id": "SupportingStaff", "hascontent": false},
+        {"id": "Mous", "hascontent": false},
+        {"id": "Research", "hascontent": true}
+      ]
     },
     {
-        "deptId":"007",
-        "department_name": "Electrical & Electronics Engineering (EEE)",
-        "content":[
-            {"id":"HeadDepartment","hascontent":true},
-            {"id":"Vision&Mission","hascontent":true},
-            {"id":"Faculties","hascontent":true},
-            {"id":"Activities","hascontent":true},
-            {"id":"Syllabus","hascontent":true},
-            {"id":"Infrastructure","hascontent":true},
-            {"id":"StudentActivities","hascontent":true},
-            {"id":"SupportingStaff","hascontent":true},
-            {"id":"Mous","hascontent":true},
-            {"id":"Research","hascontent":true}
-        ]
+      "deptId": "007",
+      "department_name": "Electrical & Electronics Engineering (EEE)",
+      "content": [
+        {"id": "HeadDepartment", "hascontent": false},
+        {"id": "Vision&Mission", "hascontent": true},
+        {"id": "Faculties", "hascontent": true},
+        {"id": "Activities", "hascontent": true},
+        {"id": "Syllabus", "hascontent": true},
+        {"id": "Infrastructure", "hascontent": true},
+        {"id": "StudentActivities", "hascontent": true},
+        {"id": "SupportingStaff", "hascontent": true},
+        {"id": "Mous", "hascontent": false},
+        {"id": "Research", "hascontent": true}
+      ]
     },
     {
-        "deptId":"008",
-        "department_name": "Electronics & Instrumentation Engineering (EIE)",
-        "content":[
-            {"id":"HeadDepartment","hascontent":true},
-            {"id":"Vision&Mission","hascontent":true},
-            {"id":"Faculties","hascontent":true},
-            {"id":"Activities","hascontent":true},
-            {"id":"Syllabus","hascontent":true},
-            {"id":"Infrastructure","hascontent":true},
-            {"id":"StudentActivities","hascontent":true},
-            {"id":"SupportingStaff","hascontent":true},
-            {"id":"Mous","hascontent":true},
-            {"id":"Research","hascontent":true}
-        ]
+      "deptId": "008",
+      "department_name": "Electronics & Instrumentation Engineering (EIE)",
+      "content": [
+        {"id": "HeadDepartment", "hascontent": false},
+        {"id": "Vision&Mission", "hascontent": true},
+        {"id": "Faculties", "hascontent": true},
+        {"id": "Activities", "hascontent": true},
+        {"id": "Syllabus", "hascontent": true},
+        {"id": "Infrastructure", "hascontent": true},
+        {"id": "StudentActivities", "hascontent": true},
+        {"id": "SupportingStaff", "hascontent": true},
+        {"id": "Mous", "hascontent": false},
+        {"id": "Research", "hascontent": true}
+      ]
     },
     {
-        "deptId":"009",
-        "department_name": "Electronics and Communication Engineering (ECE)",
-        "content":[
-            {"id":"HeadDepartment","hascontent":true},
-            {"id":"Vision&Mission","hascontent":true},
-            {"id":"Faculties","hascontent":true},
-            {"id":"Activities","hascontent":true},
-            {"id":"Syllabus","hascontent":true},
-            {"id":"Infrastructure","hascontent":true},
-            {"id":"StudentActivities","hascontent":true},
-            {"id":"SupportingStaff","hascontent":true},
-            {"id":"Mous","hascontent":true},
-            {"id":"Research","hascontent":true}
-        ]
+      "deptId": "009",
+      "department_name": "Electronics and Communication Engineering (ECE)",
+      "content": [
+        {"id": "HeadDepartment", "hascontent": false},
+        {"id": "Vision&Mission", "hascontent": false},
+        {"id": "Faculties", "hascontent": true},
+        {"id": "Activities", "hascontent": false},
+        {"id": "Syllabus", "hascontent": false},
+        {"id": "Infrastructure", "hascontent": false},
+        {"id": "StudentActivities", "hascontent": false},
+        {"id": "SupportingStaff", "hascontent": false},
+        {"id": "Mous", "hascontent": false},
+        {"id": "Research", "hascontent": true}
+      ]
     },
     {
-        "deptId":"010",
-        "department_name": "English ",
-        "content":[
-            {"id":"HeadDepartment","hascontent":true},
-            {"id":"Vision&Mission","hascontent":true},
-            {"id":"Faculties","hascontent":true},
-            {"id":"Activities","hascontent":true},
-            {"id":"Syllabus","hascontent":true},
-            {"id":"Infrastructure","hascontent":true},
-            {"id":"StudentActivities","hascontent":true},
-            {"id":"SupportingStaff","hascontent":true},
-            {"id":"Mous","hascontent":true},
-            {"id":"Research","hascontent":true}
-        ]
+      "deptId": "010",
+      "department_name": "English ",
+      "content": [
+        {"id": "HeadDepartment", "hascontent": true},
+        {"id": "Vision&Mission", "hascontent": true},
+        {"id": "Faculties", "hascontent": true},
+        {"id": "Activities", "hascontent": true},
+        {"id": "Syllabus", "hascontent": true},
+        {"id": "Infrastructure", "hascontent": true},
+        {"id": "StudentActivities", "hascontent": false},
+        {"id": "SupportingStaff", "hascontent": true},
+        {"id": "Mous", "hascontent": false},
+        {"id": "Research", "hascontent": true}
+      ]
     },
     {
-        "deptId":"011",
-        "department_name": "Information Technology (IT)",
-        "content":[
-            {"id":"HeadDepartment","hascontent":true},
-            {"id":"Vision&Mission","hascontent":true},
-            {"id":"Faculties","hascontent":true},
-            {"id":"Activities","hascontent":true},
-            {"id":"Syllabus","hascontent":true},
-            {"id":"Infrastructure","hascontent":true},
-            {"id":"StudentActivities","hascontent":true},
-            {"id":"SupportingStaff","hascontent":true},
-            {"id":"Mous","hascontent":true},
-            {"id":"Research","hascontent":true}
-        ]
+      "deptId": "011",
+      "department_name": "Information Technology (IT)",
+      "content": [
+        {"id": "HeadDepartment", "hascontent": false},
+        {"id": "Vision&Mission", "hascontent": false},
+        {"id": "Faculties", "hascontent": true},
+        {"id": "Activities", "hascontent": false},
+        {"id": "Syllabus", "hascontent": true},
+        {"id": "Infrastructure", "hascontent": false},
+        {"id": "StudentActivities", "hascontent": true},
+        {"id": "SupportingStaff", "hascontent": false},
+        {"id": "Mous", "hascontent": false},
+        {"id": "Research", "hascontent": true}
+      ]
     },
     {
-        "deptId":"012",
-        "department_name": "Mathematics",
-        "content":[
-            {"id":"HeadDepartment","hascontent":true},
-            {"id":"Vision&Mission","hascontent":true},
-            {"id":"Faculties","hascontent":true},
-            {"id":"Activities","hascontent":true},
-            {"id":"Syllabus","hascontent":true},
-            {"id":"Infrastructure","hascontent":true},
-            {"id":"StudentActivities","hascontent":true},
-            {"id":"SupportingStaff","hascontent":true},
-            {"id":"Mous","hascontent":true},
-            {"id":"Research","hascontent":true}
-        ]
+      "deptId": "012",
+      "department_name": "Mathematics",
+      "content": [
+        {"id": "HeadDepartment", "hascontent": true},
+        {"id": "Vision&Mission", "hascontent": true},
+        {"id": "Faculties", "hascontent": true},
+        {"id": "Activities", "hascontent": true},
+        {"id": "Syllabus", "hascontent": false},
+        {"id": "Infrastructure", "hascontent": true},
+        {"id": "StudentActivities", "hascontent": false},
+        {"id": "SupportingStaff", "hascontent": false},
+        {"id": "Mous", "hascontent": false},
+        {"id": "Research", "hascontent": true}
+      ]
     },
     {
-        "deptId":"013",
-        "department_name": "Mechancial Engineering (MECH)",
-        "content":[
-            {"id":"HeadDepartment","hascontent":true},
-            {"id":"Vision&Mission","hascontent":true},
-            {"id":"Faculties","hascontent":true},
-            {"id":"Activities","hascontent":true},
-            {"id":"Syllabus","hascontent":true},
-            {"id":"Infrastructure","hascontent":true},
-            {"id":"StudentActivities","hascontent":true},
-            {"id":"SupportingStaff","hascontent":true},
-            {"id":"Mous","hascontent":true},
-            {"id":"Research","hascontent":true}
-        ]
+      "deptId": "013",
+      "department_name": "Mechancial Engineering (MECH)",
+      "content": [
+        {"id": "HeadDepartment", "hascontent": true},
+        {"id": "Vision&Mission", "hascontent": true},
+        {"id": "Faculties", "hascontent": true},
+        {"id": "Activities", "hascontent": true},
+        {"id": "Syllabus", "hascontent": true},
+        {"id": "Infrastructure", "hascontent": true},
+        {"id": "StudentActivities", "hascontent": true},
+        {"id": "SupportingStaff", "hascontent": false},
+        {"id": "Mous", "hascontent": false},
+        {"id": "Research", "hascontent": true}
+      ]
     },
     {
-        "deptId":"014",
-        "department_name": "Physical Education",
-        "content":[
-            {"id":"HeadDepartment","hascontent":true},
-            {"id":"Vision&Mission","hascontent":true},
-            {"id":"Faculties","hascontent":true},
-            {"id":"Activities","hascontent":true},
-            {"id":"Syllabus","hascontent":true},
-            {"id":"Infrastructure","hascontent":true},
-            {"id":"StudentActivities","hascontent":true},
-            {"id":"SupportingStaff","hascontent":true},
-            {"id":"Mous","hascontent":true},
-            {"id":"Research","hascontent":true}
-        ]
+      "deptId": "014",
+      "department_name": "Physical Education",
+      "content": [
+        {"id": "HeadDepartment", "hascontent": false},
+        {"id": "Vision&Mission", "hascontent": true},
+        {"id": "Faculties", "hascontent": true},
+        {"id": "Activities", "hascontent": false},
+        {"id": "Syllabus", "hascontent": false},
+        {"id": "Infrastructure", "hascontent": false},
+        {"id": "StudentActivities", "hascontent": false},
+        {"id": "SupportingStaff", "hascontent": false},
+        {"id": "Mous", "hascontent": false},
+        {"id": "Research", "hascontent": true}
+      ]
     },
     {
-        "deptId":"015",
-        "department_name": "Physics",
-        "content":[
-            {"id":"HeadDepartment","hascontent":true},
-            {"id":"Vision&Mission","hascontent":true},
-            {"id":"Faculties","hascontent":true},
-            {"id":"Activities","hascontent":true},
-            {"id":"Syllabus","hascontent":true},
-            {"id":"Infrastructure","hascontent":true},
-            {"id":"StudentActivities","hascontent":true},
-            {"id":"SupportingStaff","hascontent":true},
-            {"id":"Mous","hascontent":true},
-            {"id":"Research","hascontent":true}
-        ]
+      "deptId": "015",
+      "department_name": "Physics",
+      "content": [
+        {"id": "HeadDepartment", "hascontent": true},
+        {"id": "Vision&Mission", "hascontent": false},
+        {"id": "Faculties", "hascontent": true},
+        {"id": "Activities", "hascontent": true},
+        {"id": "Syllabus", "hascontent": false},
+        {"id": "Infrastructure", "hascontent": true},
+        {"id": "StudentActivities", "hascontent": false},
+        {"id": "SupportingStaff", "hascontent": false},
+        {"id": "Mous", "hascontent": false},
+        {"id": "Research", "hascontent": true}
+      ]
     }
-]
+  ]
