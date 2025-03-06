@@ -22,42 +22,14 @@
             ]
         },
         {
-            "unique_id": 2022,
+            "unique_id": 2021,
             "docs": [
                 {
                     "S_NO": 1,
-                    "ORGANISATION_NAME": "NET stack Technology Solutions",
-                    "MONTH_AND_YEAR": "22-12-2022",
-                    "VALIDITY": "Till date",
+                    "ORGANISATION_NAME": "CMTI    Construction Management Training Institute ",
+                    "MONTH_AND_YEAR": "15-04-2021",
+                    "VALIDITY": "5 years ",
                     "LOGO_PATH": "/static/images/mous/004/net_stack_technology_solutions.jpg"
-                },
-                {
-                    "S_NO": 2,
-                    "ORGANISATION_NAME": "ArjunVision Tech Solutions",
-                    "MONTH_AND_YEAR": "22-02-2023",
-                    "VALIDITY": "Till date",
-                    "LOGO_PATH": "/static/images/mous/004/arjunvision_tech_solutions.jpg"
-                },
-                {
-                    "S_NO": 3,
-                    "ORGANISATION_NAME": "M/S Tata Elxsi Ltd",
-                    "MONTH_AND_YEAR": "23-02-2022",
-                    "VALIDITY": "Till date",
-                    "LOGO_PATH": "/static/images/mous/004/m/s_tata_elxsi_ltd.jpg"
-                },
-                {
-                    "S_NO": 4,
-                    "ORGANISATION_NAME": "DigiALERT Solutions Private Limited",
-                    "MONTH_AND_YEAR": "2023",
-                    "VALIDITY": "5 Years",
-                    "LOGO_PATH": "/static/images/mous/004/digialert_solutions_private_limited.jpg"
-                },
-                {
-                    "S_NO": 5,
-                    "ORGANISATION_NAME": "Aristo Creative Technologies",
-                    "MONTH_AND_YEAR": "2022",
-                    "VALIDITY": "Till date",
-                    "LOGO_PATH": "/static/images/mous/004/aristo_creative_technologies.jpg"
                 }
             ]
         },
@@ -66,38 +38,10 @@
             "docs": [
                 {
                     "S_NO": 1,
-                    "ORGANISATION_NAME": "NET stack Technology Solutions",
-                    "MONTH_AND_YEAR": "22-12-2022",
-                    "VALIDITY": "Till date",
+                    "ORGANISATION_NAME": "Ganesan Builders Limited ",
+                    "MONTH_AND_YEAR": "3 years ",
+                    "VALIDITY": "5th April 2023   to  4th April 2026 date",
                     "LOGO_PATH": "/static/images/mous/004/net_stack_technology_solutions.jpg"
-                },
-                {
-                    "S_NO": 2,
-                    "ORGANISATION_NAME": "ArjunVision Tech Solutions",
-                    "MONTH_AND_YEAR": "22-02-2023",
-                    "VALIDITY": "Till date",
-                    "LOGO_PATH": "/static/images/mous/004/arjunvision_tech_solutions.jpg"
-                },
-                {
-                    "S_NO": 3,
-                    "ORGANISATION_NAME": "M/S Tata Elxsi Ltd",
-                    "MONTH_AND_YEAR": "23-02-2022",
-                    "VALIDITY": "Till date",
-                    "LOGO_PATH": "/static/images/mous/004/m/s_tata_elxsi_ltd.jpg"
-                },
-                {
-                    "S_NO": 4,
-                    "ORGANISATION_NAME": "DigiALERT Solutions Private Limited",
-                    "MONTH_AND_YEAR": "2023",
-                    "VALIDITY": "5 Years",
-                    "LOGO_PATH": "/static/images/mous/004/digialert_solutions_private_limited.jpg"
-                },
-                {
-                    "S_NO": 5,
-                    "ORGANISATION_NAME": "Aristo Creative Technologies",
-                    "MONTH_AND_YEAR": "2022",
-                    "VALIDITY": "Till date",
-                    "LOGO_PATH": "/static/images/mous/004/aristo_creative_technologies.jpg"
                 }
             ]
         },
@@ -106,39 +50,11 @@
             "docs": [
                 {
                     "S_NO": 1,
-                    "ORGANISATION_NAME": "NET stack Technology Solutions",
-                    "MONTH_AND_YEAR": "22-12-2022",
-                    "VALIDITY": "Till date",
+                    "ORGANISATION_NAME": "ETA   Geospatial Solutions",
+                    "MONTH_AND_YEAR": "18-12-2024",
+                    "VALIDITY": " 5 years ",
                     "LOGO_PATH": "/static/images/mous/004/net_stack_technology_solutions.jpg"
-                },
-                {
-                    "S_NO": 2,
-                    "ORGANISATION_NAME": "ArjunVision Tech Solutions",
-                    "MONTH_AND_YEAR": "22-02-2023",
-                    "VALIDITY": "Till date",
-                    "LOGO_PATH": "/static/images/mous/004/arjunvision_tech_solutions.jpg"
-                },
-                {
-                    "S_NO": 3,
-                    "ORGANISATION_NAME": "M/S Tata Elxsi Ltd",
-                    "MONTH_AND_YEAR": "23-02-2022",
-                    "VALIDITY": "Till date",
-                    "LOGO_PATH": "/static/images/mous/004/m/s_tata_elxsi_ltd.jpg"
-                },
-                {
-                    "S_NO": 4,
-                    "ORGANISATION_NAME": "DigiALERT Solutions Private Limited",
-                    "MONTH_AND_YEAR": "2023",
-                    "VALIDITY": "5 Years",
-                    "LOGO_PATH": "/static/images/mous/004/digialert_solutions_private_limited.jpg"
-                },
-                {
-                    "S_NO": 5,
-                    "ORGANISATION_NAME": "Aristo Creative Technologies",
-                    "MONTH_AND_YEAR": "2022",
-                    "VALIDITY": "Till date",
-                    "LOGO_PATH": "/static/images/mous/004/aristo_creative_technologies.jpg"
-                }
+                }   
             ]
         }
     ]
