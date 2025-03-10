@@ -193,17 +193,18 @@
     },
     {
         "department_id": "014",
-        "department_name": "Physical Education",
+        "department_name": "தமிழ்த்துறை",
         "department_image": "/static/images/department_data/physical.jpg",
-        "department_quotes": "Bridging the gap between theory and innovation, Physics drives the technology that engineers the future.",
-        "vision": "To provide knowledge of Physics in all areas of life through transfer of fundamental technology and to do more research work",
+        "department_quotes": "தமிழ் எங்கள் சமூகத்தின் விளைவுக்கு நீர்!",
+        "vision": "தமிழரின் பண்பாட்டு விழுமியங்களைக் கற்று வாழ்நாள் முழுவதும் பயன்படுத்துதல். பொறியியல் துறைகளில் தமிழரின் அறிவியல் மற்றும் தொழில்நுட்பச் சிந்தனைகளை ஆய்ந்து மரபார்ந்த புத்தாக்கங்களைப் படைத்தல் ஆகிய இரு இலக்குகளைத் தமிழ்த்துறை தொலைநோக்காகக் கொண்டுள்ளது.",
         "mission": [
-            "Provide top-quality education in Engineering Physics.",
-            "Promote research in Materials Science, Nanotechnology, and Environmental Engineering.",
-            "Offer exposure to both experimental and theoretical foundations."
+            "தமிழரின் வளமான பாரம்பரிய பண்பாட்டுக் கூறுகளைத் தெரிந்து கொள்ளச் செய்தல்.",
+            "பொறியியல் தொழில்நுட்பக் கூறுகளை அறிந்து கொள்ளச் செய்தல்.",
+            "மொழித்திறன் மற்றும் படைப்பாற்றலை வளர்த்தல்.",
+           "சமூகத்திற்குப் பயனளிக்கும் வகையில் ஒழுக்கமும் ஆளுமைத்திறனும் உடையவர்களாக உருவாக்குதல்." 
         ],
         "newsletter_path": "/static/docs/dapartment_data/physical_newsletter.pdf",
-        "about_department": ["Our College department of physical education is an integral art of our institution right from its inception from the year 2005-2006.","We are now having 3 faculty members, including a Head of the department. In which we have one doctorate in physical education. We engage the students both morning and evening for sports activities and make them to participate in Inter collegiate tournaments. We have one big Indoor stadium and one multi Gym with Fitness trainer.","Our college students got the 18 th consecutive years of overall championship in zone – I competitions. This is our pride for our department of physical education. Moreover, our college students participate for Anna university teams, State and National teams.Our students got places in National level sports competitions every year."]
+        "about_department": ["தமிழர்களின் வளமான பண்பாடு, கலை, கலாச்சாரம், இலக்கியம், அறிவியல் சிந்தனைகள், பொறியியல் தொழில்நுட்பத் தகவல்கள் முதலானவற்றை மாணவர்கள் கற்கும் நோக்கில் ‘தமிழர் மரபு’ மற்றும் தமிழர் தொழில்நுட்பம்’ ஆகிய இரண்டு தனித்துவமான பாடங்களைக் கற்பிப்பதனை நோக்கமாகக் கொண்டு 2023 ஆம் ஆண்டு முதல் தமிழ்த்துறை இயங்கிவருகிறது."," மேலும் இத்துறை, மாணவர்கள் மொழி, ஆளுமைத்திறன், புதுமை படைத்தல், வாழ்வியல் அறநெறி மற்றும் பண்பாட்டு மாண்புகளைப் பெற்று, சமூகத்தோடு கூடி வாழ வழிகாட்டுகிறது."]
     },
     {
         "department_id": "015",
@@ -218,5 +219,32 @@
         ],
         "newsletter_path": "/static/docs/dapartment_data/physics_newsletter.pdf",
         "about_department": ["Department of Artificial Intelligence aims to produce computing graduates with high potency, apply, design and develop systems to pertain and to integrate both software and hardware devices, utilize modern approaches in programming and problem solving techniques."," The Department was established in the year 2020 with the main objective of providing quality education in the field of Engineering and Technology."," It is recognized as nodal center under Anna University. The Department has proved to be a center of excellence in Academic, Sponsored research and Continuing Education Programme."]
+    },
+    {
+        "department_id": "016",
+        "department_name": "M.E Computer Science Engineering",
+        "department_image": "/static/images/department_data/mecse.jpg",
+        "department_quotes": "Harnessing life sciences for a better tomorrow.",
+        "vision": "To provide quality education aimed at cultivating exceptionally skilled technologists and entrepreneurs with a global footprint, supported by strong ethical values, and inventive thinking in the field of Computer Science and Engineering, tailored to fulfill both industrial demands and societal aspirations",
+        "mission": [
+            "To focus on delivering education that is both affordable and of high quality, ensuring that it aligns with current industry needs. ",
+            "To strive for excellence in teaching and learning processes by integrating strong ethical values, inventive thinking, and a focus on entrepreneurship.",
+            "To create an environment that encourages innovation supports multidisciplinary research endeavors, and cultivates professionals focused on research excellence in Computer Science and Engineering. ",
+            "To enhance educational outcomes by nurturing entrepreneurship, integrating project-based learning, and aligning educational efforts with both industrial demands and societal aspirations."
+        ],
+        "newsletter_path": "/static/docs/dapartment_data/physics_newsletter.pdf",
+        "about_department": ["Computer Science and Engineering plays a vital role in helping organizations to achieve profitable results and keep competitive forces in check. Keeping this objective in mind, young mindsets are educated here with full academic rigor to convert them into effective IT professionals. The de-partment is instrumental in conducting various technical and non-technical activities for students as well as faculty members. The focus is not only technical stuff on but also moral values, ethics, professionalism and so. Regular classes of the latest technologies are being conducted for stu-dents. On a continuous basis, students are made aware of the latest industry trends and needs in various technological domains. Well-motivated, competent faculty members are always engaged in student’s welfare. Encouragement and guidance is offered to the students for participating in sports and various extracurricular activities to highlight and strengthen their nontechnical skills. Our academic rigor, Plan Do Check Act approach in all sorts of aspects has made this department to be a one of the best choices for UG, PG and PhD admission aspirants. The industry inputs are taken into consideration in each and every course. The Curriculum has features like Industry con-nect, research associations, semester-long internship, live industry problem-solving, electives, open elective, honors and minor degree to support an interdisciplinary approach."]
+    },
+    {
+        "department_id": "017",
+        "department_name": "Master of Business Administration (MBA)",
+        "department_image": "/static/images/department_data/mba.jpg",
+        "department_quotes": "Harnessing life sciences for a better tomorrow.",
+        "vision": "Educate with Global Exposure, Enhance Research Knowledge and Energize Entrepreneurial Spirit.",
+        "mission": [
+            "To become a world class institution of higher learning renowned for its excellence in management and for its commitment to the holistic development of the individual and society by creating a novel approach to students through education and industry practice by encouraging value-based knowledge, thus creating a goodwill to the future generation of our country."
+        ],
+        "newsletter_path": "/static/docs/dapartment_data/physics_newsletter.pdf",
+        "about_department": ["The Department of Management Sciences (DoMS) is committed to nurturing learners into Champions, Mindful Leaders, Entrepreneurial Managers, and Innovators. With this vision, inspired by the ideology of its founder, DoMS was established in 2007."," The department is on a transformative journey to become a B-School of excellence, embracing modern learning methodologies and an outcome-based approach.", "It has implemented a choice-based credit system, a case discussion courtyard, and a hybrid learning model that integrates Bloom's taxonomy on knowledge levels."]
     }
 ]

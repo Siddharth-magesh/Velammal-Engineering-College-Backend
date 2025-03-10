@@ -246,5 +246,33 @@
             {"image_path": "/static/images/student_activities/physics_9.jpg", "image_content": "Description of Image 13_9", "event_name": "Event 13_9", "date": "YYYY-MM-DD"},
             {"image_path": "/static/images/student_activities/physics_10.jpg", "image_content": "Description of Image 13_10", "event_name": "Event 13_10", "date": "YYYY-MM-DD"}
         ]
+    },
+    {
+        "dept_id": "016",
+        "department_name": "M.E. Computer Science Engineering",
+        "content": "Students' achievements are a testament to their hard work, dedication, and resilience in the pursuit of academic and personal growth. From excelling in academics and securing top grades to showcasing talent in sports, arts, and extracurricular activities, their accomplishments reflect a well-rounded development. Participation in science fairs, debates, and cultural events highlights their creativity and critical thinking, while community service projects demonstrate their commitment to making a positive impact. These achievements not only inspire their peers but also pave the way for future opportunities, building confidence and a strong foundation for lifelong success.",
+        "images": [
+            {"image_path": "/static/images/student_activities/aids_1.jpg", "event_name": "AI&DS Department Paper Presentation (2nd Prize)", "image_content": "Won 1st Prize in Smart India Hackathon event with cash award worth of Rs. 1 Lakh for the 2 consecutive years 2022 and 2023.", "date": "2024-08-23"},
+            {"image_path": "/static/images/student_activities/aids_2.jpg", "event_name": "AI&DS Department Paper Presentation (2nd Prize)", "image_content": "Selected as one of the top 4 teams in ETHERNALS 2022(The Biggest WEB3 Hackathon in India) and received worth of Rs 4 Lakhs. ", "date": "2024-08-23"},
+            {"image_path": "/static/images/student_activities/aids_3.jpg", "event_name": "AI&DS Department Paper Presentation (1st Prize)", "image_content": "The project titled as “Breaking the bottleneck” for GS1 International company and received cash prize of Rs. 3.2 Lakhs. ", "date": "2024-08-27"},
+            {"image_path": "/static/images/student_activities/aids_4.jpg", "event_name": "AI&DS Department IPL Auction Event", "image_content": "Won 1st Place in Assistive Makeathon at SHAASTRA 2022, IIT Madras with a cash prize of Rs. 32,000. ", "date": "2024-08-24"},
+            {"image_path": "/static/images/student_activities/aids_5.jpg", "event_name": "Technoxian World Cup Participation", "image_content": "Won 1st Place in Hero ColabsXdrags Game Development Challenge with a cash prize of Rs. 20,000.", "date": "2024-08-24"}
+ 
+        ]
+    },
+    {
+        "dept_id": "017", 
+        "department_name": "Master of Business Administration (MBA)",
+        "content": "Department 17 Content",
+        "images": [
+            {"image_path": "/static/images/student_activities/physics_1.jpg", "image_content": "LOCALITY BUSINESS CONSULTANCY is a student's activity that was assigned to the students for their welfare and exposure on consultation…Students will identify a business entity, get concurrence letter for period of 90 days and start consulting for the firm.", "event_name": "LOCALITY BUSINESS CONSULTANCY ", "date": "2024"},
+            {"image_path": "/static/images/student_activities/physics_2.jpg", "image_content": "Veena Bharathi, Vidhya and Koushe of I MBA won First place and Cash Prize Rs.5000 in Show Fest event", "event_name": " MATRIX", "date": "2025-02-28"},
+            {"image_path": "/static/images/student_activities/physics_3.jpg", "image_content": "Abdul Kalam K U A, Mr.Sushil V Panicker, A Sathish ,B Nadin Prasad, Rohin Kumar S Won I prize and Rs.5000 cash prize in Lights camera action event", "event_name": "MATRIX", "date": "2025-02-28"},
+            {"image_path": "/static/images/student_activities/physics_4.jpg", "image_content": "Ganesan D, Monicka and Priyanka, B Vaitheeswari, Prasanna kumar and Rithikashri won Second Prize and prize of Rs.2000 in Mime event", "event_name": "MATRIX", "date": "2025-02-28"},
+            {"image_path": "/static/images/student_activities/physics_5.jpg", "image_content": "Bharathi Srinivasan and Moonisha. A of First year (MBA) has won Rs. 5000 CASH PRIZE in the event FORD VS FERARRI at NATIONAL LEVEL TECHNICAL SYMPOSIUM, conducted at SRM INSTITUTE OF SCIENCE AND TECHNOLOGY ", "event_name": "FORD VS FERARRI ", "date": "2023-06-13"},
+            {"image_path": "/static/images/student_activities/physics_6.jpg", "image_content": "Bharathi Srinivasan and Moonisha of First year (MBA) has won SECOND PRIZE in the event MARGINAL CALL at NATIONAL LEVEL TECHNICAL SYMPOSIUM, conducted at SRM INSTITUTE OF SCIENCE AND TECHNOLOGY ", "event_name": "MARGINAL CALL ", "date": "2023-06-13"},
+            {"image_path": "/static/images/student_activities/physics_7.jpg", "image_content": "Kanda Sirparan, First year (MBA) has won FIRST PRIZE in the event PORTFOLIO MANGEMENT at PARADIGM 2022, conducted at ETHIRAJ COLLEGE FOR WOMEN", "event_name": "PARADIGM 2022", "date": "2022-11-08"},
+            {"image_path": "/static/images/student_activities/physics_8.jpg", "image_content": "HR Conclave Synchronize'25 Organised By Nhrd, at IITM Research Park 28.2.25 ,II Year Mba Students S.Kishore And Nithya Shree Batch 2023-25 Participated", "event_name": " Synchronize'25", "date": "2025-02-28"}
+        ]
     }
 ]

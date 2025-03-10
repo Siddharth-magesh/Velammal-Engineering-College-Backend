@@ -532,10 +532,10 @@
     },
     {
         "dept_id": "014",
-        "department_name": "Physical Education",
+        "department_name": "Tamil",
         "regulation": {
-        "year":["2020", "2021", "2022"],
-	    "pdf_path":["/static/docs/curriculum/014/reg_20.pdf","/static/docs/curriculum/014/reg_21.pdf","/static/docs/curriculum/014/reg_22.pdf"]
+        "year":["2023","2023"],
+	    "pdf_path":["/static/docs/curriculum/014/reg_23_1.pdf","/static/docs/curriculum/014/reg_23_2.pdf"]
 
         },
         "academic_year": {

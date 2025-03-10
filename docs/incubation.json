@@ -1,108 +1,178 @@
-[
-    {
+[{
+    "_id": {
+      "$oid": "67cc1a5d45829d2dfd353ea5"
+    },
+    "Incubation_Document": {
+      "Committee_Members": {
         "name": [
-            "Aarav Mehta", "Saanvi Iyer", "Rohan Sharma", "Ishita Patel", "Karan Verma",
-            "Neha Kapoor", "Aditya Menon", "Meera Nair", "Vikram Joshi", "Tanya Saxena",
-            "Rahul Bansal", "Priya Deshmukh", "Harsh Agarwal", "Sneha Reddy", "Arjun Malhotra"
+          "Aarav Mehta",
+          "Saanvi Iyer",
+          "Rohan Sharma",
+          "Ishita Patel",
+          "Karan Verma",
+          "Neha Kapoor",
+          "Aditya Menon",
+          "Meera Nair",
+          "Vikram Joshi",
+          "Tanya Saxena",
+          "Rahul Bansal",
+          "Priya Deshmukh",
+          "Harsh Agarwal",
+          "Sneha Reddy",
+          "Arjun Malhotra"
         ],
-        "designation":["President","Vice-President","Convener","Industry Expert","IPR Expert","Alumni Expert","Secretary","Treasurer","Event Coordinator","Marketing & Outreach Coordinator","Innovation Lab Manager","Startup Liaison Officer","Industry Relation Manager","Research & Development Coordinator","Committee Members"
+        "designation": [
+          "President",
+          "Vice-President",
+          "Convener",
+          "Industry Expert",
+          "IPR Expert",
+          "Alumni Expert",
+          "Secretary",
+          "Treasurer",
+          "Event Coordinator",
+          "Marketing & Outreach Coordinator",
+          "Innovation Lab Manager",
+          "Startup Liaison Officer",
+          "Industry Relation Manager",
+          "Research & Development Coordinator",
+          "Committee Members"
         ]
-    },
-    {
-        "letter_path":"/static/images/incubation/letter.png"
-    },
-    {
-        "company_name":[
-            "Swap Inc LLP",
-            "Inblue Infotech (OPC) Private Limted",
-            "Roshan Refractory",
-            "Critter Graphix",
-            "One Host Private Ltd",
-            "Arcsys Labs Private Limited",
-            "Hyperlynx Infotech",
-            "Emsensing Technologies Private Limited",
-            "Amply Innovations Private Limited",
-            "Cogniacc Energy Solutions Private Limited",
-            "SSR Engineering Solutions",
-            "Naaz Engineering Works",
-            "Naveen & Co",
-            "12 OX Enterprises",
-            "ONYX",
-            "Ilakkanam Private Limited",
-            "VBIND innovation Private Limited",
-            "Dharshan Brothers Technologies Pvt. Ltd.,",
-            "PP-VAC Engineering",
-            "Zedtribe Private Limited",
-            "Thirumurugan Woodworks",
-            "Jayasree Chemical Pvt Ltd  ",
-            "Madras Goli Soda",
-            "Atlanwa"
+      },
+      "Letter": {
+        "letter_path": "sports/2013-14.jpg"
+      },
+      "Company_Details": {
+        "company_name": [
+          "Swap Inc LLP",
+          "Inblue Infotech (OPC) Private Limited",
+          "Roshan Refractory",
+          "Critter Graphix",
+          "One Host Private Ltd",
+          "Arcsys Labs Private Limited",
+          "Hyperlynx Infotech",
+          "Emsensing Technologies Private Limited",
+          "Amply Innovations Private Limited",
+          "Cogniacc Energy Solutions Private Limited",
+          "SSR Engineering Solutions",
+          "Naaz Engineering Works",
+          "Naveen & Co",
+          "12 OX Enterprises",
+          "ONYX",
+          "Ilakkanam Private Limited",
+          "VBIND Innovation Private Limited",
+          "Dharshan Brothers Technologies Pvt. Ltd.",
+          "PP-VAC Engineering",
+          "Zedtribe Private Limited",
+          "Thirumurugan Woodworks",
+          "Jayasree Chemical Pvt Ltd",
+          "Madras Goli Soda",
+          "Atlanwa"
         ],
-        "department_name":[
-            "ECE",
-            "EEE",
-            "EEE",
-            "CSE",
-            "CSE",
-            "CSE",
-            "CSE",
-            "CSE",
-            "CSE",
-            "Mech",
-            "Mech",
-            "Mech",
-            "Mech",
-            "Mech",
-            "Mech",
-            "AUTO",
-            "AUTO",
-            "AUTO",
-            "AUTO",
-            "Mech",
-            "IT",
-            "IT",
-            "IT",
-            "EIE"
+        "department_name": [
+          "ECE",
+          "EEE",
+          "EEE",
+          "CSE",
+          "CSE",
+          "CSE",
+          "CSE",
+          "CSE",
+          "CSE",
+          "Mech",
+          "Mech",
+          "Mech",
+          "Mech",
+          "Mech",
+          "Mech",
+          "AUTO",
+          "AUTO",
+          "AUTO",
+          "AUTO",
+          "Mech",
+          "IT",
+          "IT",
+          "IT",
+          "EIE"
         ],
-        "year":[
-            "2021-2022",
-            "2022-2023",
-            "2022-2023",
-            "2023-2024",
-            "2023-2024",
-            "2022-2023",
-            "2021-2022",
-            "2021-2022",
-            "2023-2024",
-            "2022-2023",
-            "2023-2024",
-            "2022-2023",
-            "2021-2022",
-            "2022-2023",
-            "2023-2024",
-            "2021-2022",
-            "2021-2022",
-            "2023-2024",
-            "2022-2023",
-            "2021-2022",
-            "2023-2024",
-            "2022-2023",
-            "2021-2022",
-            "2022-2023"
+        "year": [
+          "2021-2022",
+          "2022-2023",
+          "2022-2023",
+          "2023-2024",
+          "2023-2024",
+          "2022-2023",
+          "2021-2022",
+          "2021-2022",
+          "2023-2024",
+          "2022-2023",
+          "2023-2024",
+          "2022-2023",
+          "2021-2022",
+          "2022-2023",
+          "2023-2024",
+          "2021-2022",
+          "2021-2022",
+          "2023-2024",
+          "2022-2023",
+          "2021-2022",
+          "2023-2024",
+          "2022-2023",
+          "2021-2022",
+          "2022-2023"
+        ],
+        "lic": [
+          "LLP-AAZ-3585",
+          "U72900TN2022OPC156531",
+          "UDYAM-TN-24-0077492",
+          "U62099TN2024OPC166488",
+          "U72900TN2017PTC115116",
+          "U62013TN2023PTC165847",
+          "UDYAM-TN-02-0343894",
+          "DIPP102706",
+          "DIPP163912",
+          "U35105TN2023PTC166275",
+          "33OLUPS1657C1ZI",
+          "AGOPE1783C",
+          "33BYWPN24321ZH",
+          "33AGOPE1783C1ZO",
+          "33ASHPJ6368F1ZO",
+          "U29308TN2022PTC150501",
+          "U73100TN2021PTC146111",
+          "U27504TN2023PTC159850",
+          "U27900TN2023PTC163627",
+          "DIPP87880",
+          "UDYAM-TN-12-0135000",
+          "U24100TN2020PTC138147",
+          "UAM NO. TN24A0051924",
+          "33DTFPP0740D1Z3"
         ]
-    },
-    {
-        "name":[
-            "EMSENSING TECHNOLOGIES PRIVATE LIMITED",
-            "EMSENSING TECHNOLOGIES PRIVATE LIMITED",
-            "EMSENSING TECHNOLOGIES PRIVATE LIMITED",
-            "EMSENSING TECHNOLOGIES PRIVATE LIMITED"
+      },
+      "Funding_Details": {
+        "name": [
+          "EMSENSING TECHNOLOGIES PRIVATE LIMITED",
+          "EMSENSING TECHNOLOGIES PRIVATE LIMITED",
+          "EMSENSING TECHNOLOGIES PRIVATE LIMITED",
+          "EMSENSING TECHNOLOGIES PRIVATE LIMITED"
         ],
-        "funding":[
-            "14,50,000",
-            "10,00,000",
-            "10,10,000",
-            "6,00,000"
+        "funding": [
+          "14,50,000",
+          "10,00,000",
+          "10,10,000",
+          "6,00,000"
+        ],
+        "year": [
+          "2023-2024",
+          "2022-2023",
+          "2022-2023",
+          "2022-2023"
+        ],
+        "government_org": [
+          "MSME",
+          "TBI – Startup India Seed fund (SISFS) Scheme",
+          "EDII-Innovation Voucher Programme (IVP)EDII-Innovation Voucher Programme (IVP)",
+          "Meity TIDE 2.0"
         ]
+      }
     }
-]
+  }]

@@ -549,7 +549,7 @@ def insert_department_data():
 
 def insert_hod_datas():
     collection = db['HODS']
-    with open("/Velammal-Engineering-College-Backend/docs/hods.json", "r") as file:
+    with open("/Velammal-Engineering-College-Backend/docs/hods.json", "r",encoding="utf-8") as file:
         documents = json.load(file)
         collection.insert_many(documents)
 
@@ -557,7 +557,7 @@ def insert_hod_datas():
 
 def insert_infrastructure_data():
     collection = db["infrastructure"]
-    with open("/Velammal-Engineering-College-Backend/docs/infrastructure.json", "r") as file:
+    with open("/Velammal-Engineering-College-Backend/docs/infrastructure.json", "r",encoding="utf-8") as file:
         documents = json.load(file)
         collection.insert_many(documents)
 
@@ -573,7 +573,7 @@ def insert_student_activities_data():
 
 def insert_support_staff_data():
     collection = db['support_staffs'] 
-    with open("/Velammal-Engineering-College-Backend/docs/support_staffs.json", "r") as file:
+    with open("/Velammal-Engineering-College-Backend/docs/support_staffs.json", "r",encoding="utf-8") as file:
         documents = json.load(file)
         collection.insert_many(documents)
     
@@ -594,7 +594,7 @@ def insert_MOUs_data():
 
 def insert_curriculum_data():
     collection = db['curriculum']
-    with open("/Velammal-Engineering-College-Backend/docs/curriculum.json", "r") as file:
+    with open("/Velammal-Engineering-College-Backend/docs/curriculum.json", "r",encoding="utf-8") as file:
         documents = json.load(file)
         collection.insert_many(documents)
 
@@ -602,7 +602,7 @@ def insert_curriculum_data():
 
 def insert_events_data():
     collection = db['events']  
-    with open("/Velammal-Engineering-College-Backend/docs/events.json", "r") as file:
+    with open("/Velammal-Engineering-College-Backend/docs/events.json", "r",encoding="utf-8") as file:
         documents = json.load(file)
         collection.insert_many(documents)
 
@@ -610,7 +610,7 @@ def insert_events_data():
 
 def insert_special_announcements():
     collection = db['special_announcement']  
-    with open("/Velammal-Engineering-College-Backend/docs/special_announcements.json", "r") as file:
+    with open("/Velammal-Engineering-College-Backend/docs/special_announcements.json", "r",encoding="utf-8") as file:
         documents = json.load(file)
         collection.insert_many(documents)
 
@@ -619,7 +619,7 @@ def insert_special_announcements():
 def insert_announcements_data():
    
     collection = db['announcements']  
-    with open("/Velammal-Engineering-College-Backend/docs/announcements.json", "r") as file:
+    with open("/Velammal-Engineering-College-Backend/docs/announcements.json", "r",encoding="utf-8") as file:
         documents = json.load(file)
         collection.insert_many(documents)
 
@@ -627,7 +627,7 @@ def insert_announcements_data():
 
 def principal_data():
     collection = db["principal_data"]
-    with open("/Velammal-Engineering-College-Backend/docs/principal_data.json", "r") as file:
+    with open("/Velammal-Engineering-College-Backend/docs/principal_data.json", "r",encoding="utf-8") as file:
         documents = json.load(file)
         collection.insert_many(documents)
 
@@ -635,7 +635,7 @@ def principal_data():
 
 def insert_admin_office_data():
     collection = db['admin_office']  
-    with open("/Velammal-Engineering-College-Backend/docs/admin_office.json", "r") as file:
+    with open("/Velammal-Engineering-College-Backend/docs/admin_office.json", "r",encoding="utf-8") as file:
         documents = json.load(file)
         collection.insert_many(documents)
 
@@ -644,7 +644,7 @@ def insert_admin_office_data():
 def insert_committee_data():
 
     collection = db['committee']  
-    with open("/Velammal-Engineering-College-Backend/docs/committee.json", "r") as file:
+    with open("/Velammal-Engineering-College-Backend/docs/committee.json", "r",encoding="utf-8") as file:
         documents = json.load(file)
         collection.insert_many(documents)
 
@@ -652,7 +652,7 @@ def insert_committee_data():
 
 def insert_regulation_data():
     collection = db['regulation']  
-    with open("/Velammal-Engineering-College-Backend/docs/regulation.json", "r") as file:
+    with open("/Velammal-Engineering-College-Backend/docs/regulation.json", "r",encoding="utf-8") as file:
         documents = json.load(file)
         collection.insert_many(documents)
 
@@ -660,7 +660,7 @@ def insert_regulation_data():
 
 def placement_team():
     collection = db["placement_team"]
-    with open('/Velammal-Engineering-College-Backend/docs/placement_members.json', 'r') as file:
+    with open('/Velammal-Engineering-College-Backend/docs/placement_members.json', 'r',encoding="utf-8") as file:
         documents = json.load(file)
         collection.insert_many(documents)
 
@@ -668,7 +668,7 @@ def placement_team():
 
 def insert_intake_data():    
     collection = db["Intakes"]        
-    with open('/Velammal-Engineering-College-Backend/docs/intakes.json', "r") as file:
+    with open('/Velammal-Engineering-College-Backend/docs/intakes.json', "r",encoding="utf-8") as file:
         documents = json.load(file)
     collection.insert_many(documents)
 
@@ -676,7 +676,7 @@ def insert_intake_data():
 
 def insert_dean_and_associates_data():    
     collection = db["dean_and_associates"]        
-    with open('/Velammal-Engineering-College-Backend/docs/dean_and_associates.json', "r") as file:
+    with open('/Velammal-Engineering-College-Backend/docs/dean_and_associates.json', "r",encoding="utf-8") as file:
         documents = json.load(file)
     collection.insert_many(documents)
 
@@ -685,7 +685,7 @@ def insert_dean_and_associates_data():
 def insert_placement_data():
 
     collection = db['placements_data']  
-    with open("/Velammal-Engineering-College-Backend/docs/placements_data.json", "r") as file:
+    with open("/Velammal-Engineering-College-Backend/docs/placements_data.json", "r",encoding="utf-8") as file:
         documents = json.load(file)
         collection.insert_many(documents)
 
@@ -694,7 +694,7 @@ def insert_placement_data():
 def insert_curriculum_and_syllabus_data():
 
     collection = db['curriculum_and_syllabus']  
-    with open("/Velammal-Engineering-College-Backend/docs/curriculum_and_syllabus.json", "r") as file:
+    with open("/Velammal-Engineering-College-Backend/docs/curriculum_and_syllabus.json", "r",encoding="utf-8") as file:
         documents = json.load(file)
         collection.insert_many(documents)
 
@@ -702,7 +702,7 @@ def insert_curriculum_and_syllabus_data():
 
 def insert_banners():
     collection = db['banner']  
-    with open("/Velammal-Engineering-College-Backend/docs/banner.json", "r") as file:
+    with open("/Velammal-Engineering-College-Backend/docs/banner.json", "r",encoding="utf-8") as file:
         documents = json.load(file)
         collection.insert_many(documents)
 
@@ -711,7 +711,7 @@ def insert_banners():
 def insert_all_forms_data():
 
     collection = db['all_forms']  
-    with open("/Velammal-Engineering-College-Backend/docs/all_forms.json", "r") as file:
+    with open("/Velammal-Engineering-College-Backend/docs/all_forms.json", "r",encoding="utf-8") as file:
         documents = json.load(file)
         collection.insert_many(documents)
 
@@ -719,7 +719,7 @@ def insert_all_forms_data():
 
 def insert_NBA_data():
     collection = db['nba']
-    with open("/Velammal-Engineering-College-Backend/docs/nba.json", "r") as file:
+    with open("/Velammal-Engineering-College-Backend/docs/nba.json", "r",encoding="utf-8") as file:
         documents = json.load(file)
         collection.insert_many(documents)
 
@@ -727,28 +727,28 @@ def insert_NBA_data():
 
 def insert_naac_data():
     collection = db['naac']
-    with open("/Velammal-Engineering-College-Backend/docs/naac.json", "r") as file:
+    with open("/Velammal-Engineering-College-Backend/docs/naac.json", "r",encoding="utf-8") as file:
         documents = json.load(file)
         collection.insert_many(documents)
     print("NAAC documents inserted successfully.")
 
 def insert_nirf_data():
     collection = db['nirf']
-    with open("/Velammal-Engineering-College-Backend/docs/nirf.json", "r") as file:
+    with open("/Velammal-Engineering-College-Backend/docs/nirf.json", "r",encoding="utf-8") as file:
         documents = json.load(file)
         collection.insert_many(documents)
     print("NIRF documents inserted successfully.")
 
 def insert_sidebar_details():
     collection= db['sidebar']
-    with open ("/Velammal-Engineering-College-Backend/docs/sidebar.json","r") as file:
+    with open ("/Velammal-Engineering-College-Backend/docs/sidebar.json","r",encoding="utf-8") as file:
         documents= json.load(file)
         collection.insert_many(documents)
     print("Sidebar documents inserted successfully")
 
 def insert_iic_details():
     collection= db['iic']
-    with open ("/Velammal-Engineering-College-Backend/docs/iic.json","r") as file:
+    with open ("/Velammal-Engineering-College-Backend/docs/iic.json","r",encoding="utf-8") as file:
         documents= json.load(file)
         collection.insert_one(documents)
     print("iic documents inserted successfully")
@@ -816,42 +816,42 @@ process_and_combine_Department_Activities_data_for_aids(aids_department_path)
 
 def insert_cscb_dept_activities_details():
     collection= db['department_activities']
-    with open ("/Velammal-Engineering-College-Backend/docs/CSCBS-DEPT-ACT/006.json","r") as file:
+    with open ("/Velammal-Engineering-College-Backend/docs/CSCBS-DEPT-ACT/006.json","r",encoding="utf-8") as file:
         documents= json.load(file)
         collection.insert_many(documents)
     print("cyber securtiy dept activities documents inserted successfully")
 
 def insert_eie_dept_activities_details():
     collection= db['department_activities']
-    with open ("/Velammal-Engineering-College-Backend/docs/EIE-DEPT-ACT/008.json","r") as file:
+    with open ("/Velammal-Engineering-College-Backend/docs/EIE-DEPT-ACT/008.json","r",encoding="utf-8") as file:
         documents= json.load(file)
         collection.insert_many(documents)
     print("EIE dept activities documents inserted successfully")
 
 def insert_mech_dept_activities_details():
     collection= db['department_activities']
-    with open ("/Velammal-Engineering-College-Backend/docs/MECH-DEPT-ACT/013.json","r") as file:
+    with open ("/Velammal-Engineering-College-Backend/docs/MECH-DEPT-ACT/013.json","r",encoding="utf-8") as file:
         documents= json.load(file)
         collection.insert_many(documents)
     print("MECH dept activities documents inserted successfully")
 
 def insert_math_dept_activities_details():
     collection= db['department_activities']
-    with open ("/Velammal-Engineering-College-Backend/docs/MATH-DEPT-ACT/012.json","r") as file:
+    with open ("/Velammal-Engineering-College-Backend/docs/MATH-DEPT-ACT/012.json","r",encoding="utf-8") as file:
         documents= json.load(file)
         collection.insert_many(documents)
     print("MATH dept activities documents inserted successfully")
 
 def insert_eee_dept_activities_details():
     collection= db['department_activities']
-    with open ("/Velammal-Engineering-College-Backend/docs/EEE-DEPT-ACT/007.json","r") as file:
+    with open ("/Velammal-Engineering-College-Backend/docs/EEE-DEPT-ACT/007.json","r",encoding="utf-8") as file:
         documents= json.load(file)
         collection.insert_many(documents)
     print("EEE dept activities documents inserted successfully")
 
 def insert_civil_dept_activities_details():
     collection= db['department_activities']
-    with open ("/Velammal-Engineering-College-Backend/docs/CIVIL-DEPT-ACT/004.json","r") as file:
+    with open ("/Velammal-Engineering-College-Backend/docs/CIVIL-DEPT-ACT/004.json","r",encoding="utf-8") as file:
         documents= json.load(file)
         collection.insert_many(documents)
     print("civil dept activities documents inserted successfully")
@@ -927,28 +927,28 @@ department_mapping = {
 
 def insert_incubation_data():
     collection= db['incubation']
-    with open ("/Velammal-Engineering-College-Backend/docs/incubation.json","r") as file:
+    with open ("/Velammal-Engineering-College-Backend/docs/incubation.json","r",encoding="utf-8") as file:
         documents= json.load(file)
         collection.insert_many(documents)
     print("Incubation documents inserted successfully")
     
 def insert_army_data():
     collection = db['army']
-    with open("/Velammal-Engineering-College-Backend/docs/ncc_army.json", "r") as file:
+    with open("/Velammal-Engineering-College-Backend/docs/ncc_army.json", "r",encoding="utf-8") as file:
         documents = json.load(file)
         collection.insert_many(documents)
     print("armydocuments inserted successfully.")
 
 def insert_navy_data():
     collection = db['navy']
-    with open("/Velammal-Engineering-College-Backend/docs/navy.json", "r") as file:
+    with open("/Velammal-Engineering-College-Backend/docs/navy.json", "r",encoding="utf-8") as file:
         documents = json.load(file)
         collection.insert_many(documents)
     print("navy documents inserted successfully.")
 
 def insert_faculty_data(folder_path):
     department_name=None
-    with open(r"/Velammal-Engineering-College-Backend/docs/prev_faculty.json","r") as file:
+    with open(r"/Velammal-Engineering-College-Backend/docs/prev_faculty.json","r",encoding="utf-8") as file:
         data=json.load(file)
     try:
         collection = db['faculty_data']
@@ -1027,7 +1027,7 @@ insert_faculty_data(folder_path=r"/Velammal-Engineering-College-Backend/docs/STA
 
 def insert_sports_Zonal_results():
     collection = db["sports_data"]
-    with open("/Velammal-Engineering-College-Backend/docs/sports_zonal.json", "r") as file:
+    with open("/Velammal-Engineering-College-Backend/docs/sports_zonal.json", "r",encoding="utf-8") as file:
         documents = json.load(file)
         collection.insert_many(documents)
 
@@ -1035,7 +1035,7 @@ def insert_sports_Zonal_results():
 
 def insert_sports_Zonal_images():
     collection = db["sports_data"]
-    with open("/Velammal-Engineering-College-Backend/docs/zonal_images.json", "r") as file:
+    with open("/Velammal-Engineering-College-Backend/docs/zonal_images.json", "r",encoding="utf-8") as file:
         documents = json.load(file)
         collection.insert_many(documents)
 
@@ -1043,7 +1043,7 @@ def insert_sports_Zonal_images():
 
 def insert_sports_faculty_data():
     collection = db["sports_data"]
-    with open("/Velammal-Engineering-College-Backend/docs/sports_faculty.json", "r") as file:
+    with open("/Velammal-Engineering-College-Backend/docs/sports_faculty.json", "r",encoding="utf-8") as file:
         documents = json.load(file)
         collection.insert_one(documents)
 
@@ -1051,7 +1051,7 @@ def insert_sports_faculty_data():
 
 def insert_sports_achievements_data():
     collection = db["sports_data"]
-    with open("/Velammal-Engineering-College-Backend/docs/sports_achievements.json", "r") as file:
+    with open("/Velammal-Engineering-College-Backend/docs/sports_achievements.json", "r",encoding="utf-8") as file:
         documents = json.load(file)
         collection.insert_one(documents)
 
@@ -1059,7 +1059,7 @@ def insert_sports_achievements_data():
 
 def insert_sports_coordinates():
     collection = db["sports_data"]
-    with open("/Velammal-Engineering-College-Backend/docs/sports_coordinates.json", "r") as file:
+    with open("/Velammal-Engineering-College-Backend/docs/sports_coordinates.json", "r",encoding="utf-8") as file:
         documents = json.load(file)
         collection.insert_many(documents)
 
@@ -1067,7 +1067,7 @@ def insert_sports_coordinates():
 
 def insert_other_facilties():
     collection = db["other_facilties"]
-    with open("/Velammal-Engineering-College-Backend/docs/other_facilties.json", "r") as file:
+    with open("/Velammal-Engineering-College-Backend/docs/other_facilties.json", "r",encoding="utf-8") as file:
         documents = json.load(file)
         collection.insert_many(documents)
 
@@ -1075,7 +1075,7 @@ def insert_other_facilties():
 
 def insert_library_data():
     collection = db["library"]
-    with open("/Velammal-Engineering-College-Backend/docs/library.json", "r") as file:
+    with open("/Velammal-Engineering-College-Backend/docs/library.json", "r",encoding="utf-8") as file:
         documents = json.load(file)
         collection.insert_many(documents)
 
@@ -1083,7 +1083,7 @@ def insert_library_data():
 
 def insert_nss_personnel():
     collection = db["nss_data"]
-    with open("/Velammal-Engineering-College-Backend/docs/nss_personnel.json", "r") as file:
+    with open("/Velammal-Engineering-College-Backend/docs/nss_personnel.json", "r",encoding="utf-8") as file:
         documents = json.load(file)
         collection.insert_many(documents)
 
@@ -1091,7 +1091,7 @@ def insert_nss_personnel():
 
 def insert_nss_carousal():
     collection = db["nss_data"]
-    with open("/Velammal-Engineering-College-Backend/docs/nss_carousal.json", "r") as file:
+    with open("/Velammal-Engineering-College-Backend/docs/nss_carousal.json", "r",encoding="utf-8") as file:
         documents = json.load(file)
         collection.insert_many(documents)
     
@@ -1099,20 +1099,20 @@ def insert_nss_carousal():
 
 def insert_yrc_data():
     collection = db["yrc_data"]
-    with open("/Velammal-Engineering-College-Backend/docs/yrc_carousal.json", "r") as file:
+    with open("/Velammal-Engineering-College-Backend/docs/yrc_carousal.json", "r",encoding="utf-8") as file:
         documents = json.load(file)
         collection.insert_many(documents)
 
     print("yrc_carousal data inserted successfully.")
 
-    with open("/Velammal-Engineering-College-Backend/docs/yrc_personnel.json", "r") as file:
+    with open("/Velammal-Engineering-College-Backend/docs/yrc_personnel.json", "r",encoding="utf-8") as file:
         documents = json.load(file)
         collection.insert_many(documents)
     print("yrc_personnel data inserted successfully.")
 
 def insert_overall_department_research():
     collection = db['overall_research']
-    with open("/Velammal-Engineering-College-Backend/docs/research_data.json","r") as file:
+    with open("/Velammal-Engineering-College-Backend/docs/research_data.json","r",encoding="utf-8") as file:
         documents = json.load(file)
         collection.insert_one(documents)
     
@@ -1138,7 +1138,7 @@ def insert_department_research_data():
 
 def insert_warden_hostel_data():
     collection = db['warden_profile']
-    with open("/Velammal-Engineering-College-Backend/docs/warden_profile.json","r") as file:
+    with open("/Velammal-Engineering-College-Backend/docs/warden_profile.json","r",encoding="utf-8") as file:
         documents = json.load(file)
         collection.insert_many(documents)
     
