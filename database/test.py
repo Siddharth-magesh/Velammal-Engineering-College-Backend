@@ -9,21 +9,21 @@ db = client[db_name]
 
 def insert_incubation_data():
     collection= db['incubation']
-    with open ("/Velammal-Engineering-College-Backend/docs/incubation.json","r",encoding="utf-8") as file:
+    with open ("/root/Velammal-Engineering-College-Backend/docs/incubation.json","r",encoding="utf-8") as file:
         documents= json.load(file)
         collection.insert_many(documents)
     print("Incubation documents inserted successfully")
 
 def insert_army_data():
     collection = db['army']
-    with open("/Velammal-Engineering-College-Backend/docs/ncc_army.json", "r",encoding="utf-8") as file:
+    with open("/root/Velammal-Engineering-College-Backend/docs/ncc_army.json", "r",encoding="utf-8") as file:
         documents = json.load(file)
         collection.insert_many(documents)
     print("armydocuments inserted successfully.")
 
 def insert_navy_data():
     collection = db['navy']
-    with open("/Velammal-Engineering-College-Backend/docs/navy.json", "r",encoding="utf-8") as file:
+    with open("/root/Velammal-Engineering-College-Backend/docs/navy.json", "r",encoding="utf-8") as file:
         documents = json.load(file)
         collection.insert_many(documents)
     print("navy documents inserted successfully.")
