@@ -1,7 +1,4 @@
 [{
-    "_id": {
-      "$oid": "67c9667e12481ca519aba476"
-    },
     "Coordinator": {
       "coordinator_name": "R DHANALAKSHMI",
       "coordinator_image": "/static/images/navy/chairman.jpg",

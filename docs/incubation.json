@@ -1,7 +1,4 @@
 [{
-    "_id": {
-      "$oid": "67cc1a5d45829d2dfd353ea5"
-    },
     "Incubation_Document": {
       "Committee_Members": {
         "name": [
@@ -169,7 +166,7 @@
         ],
         "government_org": [
           "MSME",
-          "TBI – Startup India Seed fund (SISFS) Scheme",
+          "TBI Startup India Seed fund (SISFS) Scheme",
           "EDII-Innovation Voucher Programme (IVP)EDII-Innovation Voucher Programme (IVP)",
           "Meity TIDE 2.0"
         ]

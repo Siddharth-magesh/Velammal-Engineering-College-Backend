@@ -1,7 +1,4 @@
 [{
-    "_id": {
-      "$oid": "67c95f5112481ca519aba473"
-    },
     "Coordinator": {
       "coordinator_name": "Captain R Chezian",
       "coordinator_image": "https://ncc.army.mil.in/Content/Coordinator/1.jpg",
