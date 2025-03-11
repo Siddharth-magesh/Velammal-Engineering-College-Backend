@@ -104,7 +104,7 @@
         }
     },
     {
-        "Name": "Dr. Z. Brijet,",
+        "Name": "Dr. Z. Brijet",
         "department_name": "Electronics & Instrumentation Engineering (EIE)",
         "Unique_id": "VEC-008-01-130",
         "Qualification": ["M.E", "PhD"],
@@ -119,7 +119,7 @@
         }
     },
     {
-        "Name": "Dr.B.Murugeswari ",
+        "Name": "Dr.B.Murugeswari",
         "department_name": "Computer Science & Engineering (CSE)",
         "Unique_id": "VEC-005-01-120",
         "Qualification": ["M.E", "PhD"],
@@ -133,7 +133,7 @@
         }
     },
     {
-        "Name": "Dr.S.Rajalakshmi ",
+        "Name": "Dr.S.Rajalakshmi",
         "department_name": "Computer Science and Engineering (CYBER SECURITY)",
         "Unique_id": "VEC-006-01-135",
         "Qualification": ["M.E", "PhD"],
@@ -209,7 +209,7 @@
         }
     },
     {
-        "Name": "திரு.மு.மு.முத்தையா M.A, M.Phil.",
+        "Name": "திரு.மு.மு.முத்தையா M.A, M.Phil",
         "department_name": "தமிழ்த்துறை",
         "Unique_id": "VEC-014-01-180",
         "Qualification": ["M.E", "PhD"],
@@ -233,6 +233,20 @@
             "LinkedIn": "https://www.linkedin.com/in/r-senthil/",
             "Google Scholar": "https://scholar.google.com/citations?user=rSenthil&hl=en",
             "Scopus": "https://www.scopus.com/authid/detail.uri?authorId=56120129400"
+        }
+    },
+    {
+        "Name": "Dr.B.Murugeswari",
+        "department_name": "M.E Computer Science Engineering",
+        "Unique_id": "VEC-005-01-120",
+        "Qualification": ["M.E", "PhD"],
+        "Hod_message": ["The department is instrumental in conducting various technical and non-technical activities for students as well as faculty members. The focus is not only technical stuff on but also moral values, ethics; professionalism and students are made aware of the latest industry trends and needs in various technological domains. Well-motivated, competent faculty members are always engaged in student’s welfare. Encouragement and guidance is offered to the students for participating in sports and various extracurricular activities to highlight and strengthen their nontechnical skills. Our academic rigor, Plan-Do-Check-Act approach in all sorts of aspects has made this department to be a one of the best choices for UG, PG and PhD admission aspirants."],
+        "Image": "/static/images/hods/cse.jpg",
+        "designation": "Professor and Head, Department of Computer Science and Engineering.",
+        "Social_media_links": {
+            "LinkedIn": "https://www.linkedin.com/in/k-nagarajan/",
+            "Google Scholar": "https://scholar.google.com/citations?user=kNagarajan&hl=en",
+            "Scopus": "https://www.scopus.com/authid/detail.uri?authorId=56140900400"
         }
     }
 ]

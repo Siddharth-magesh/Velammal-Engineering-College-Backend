@@ -41,8 +41,8 @@
         "dept_id": "002",
         "department_name": "Automobile Engineering (AUTO)",
         "regulation": {
-        "year":["2019", "2020", "2021"],
-	    "pdf_path":["/static/docs/curriculum/002/reg_19.pdf","/static/docs/curriculum/002/reg_20.pdf","/static/docs/curriculum/002/reg_21.pdf"]
+        "year":["2019", "2021", "2023"],
+	    "pdf_path":["static/curriculum/002/R19.pdf","/static/docs/curriculum/002/R21.pdf","/static/docs/curriculum/002/R23.pdf"]
 
         },
         "academic_year": {
@@ -69,23 +69,12 @@
         "program_specific_outcomes": {
             "headings":["PSO01","PSO02"],
 	        "content":[
-                "Apply the concepts of Artificial Intelligence to provide solutions for the real time problems and to integrate the professional skills with recent tools and technologies to cope with the dynamic AI needs.",
-                "Create a concrete foundation and enlighten the innovation, research and entrepreneur skills in the field of Artificial Intelligence and Data science."
+                "Design and develop the automotive system and its components with due considerations of society impact and sustainability. ",
+                "Analyze the performance of automotive system using modeling, simulation and testing. "
             ]
         },
-        "key_highlights": [
-            "Key Highlight 1: Description of key highlight 1",
-            "Key Highlight 2: Description of key highlight 2",
-            "Key Highlight 3: Description of key highlight 3"
-        ],
-        "six_unique": [
-            "Block Chain Technologies",
-            "Artificial Intelligence",
-            "Data Science",
-            "Big Data Management",
-            "Social Network Analysis",
-            "Text Analytics"
-        ]
+        "key_highlights": [],
+        "six_unique": []
     },
     {
         "dept_id": "003",

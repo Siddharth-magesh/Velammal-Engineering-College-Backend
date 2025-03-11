@@ -19,8 +19,8 @@
         "2022 - 23"
       ],
       "pdfpath": [
-        "/static/docs/iic/certificate1.pdf",
-        "/static/docs/iic/certificate2.pdf"
+        "/static/pdfs/iic/certificate1.pdf",
+        "/static/pdfs/iic/certificate2.pdf"
       ]
     },
     "events": {
@@ -31,10 +31,10 @@
         "2023 - 24"
       ],
       "pdfpath": [
-        "/static/docs/iic/event1.pdf",
-        "/static/docs/iic/event2.pdf",
-        "/static/docs/iic/event3.pdf",
-        "/static/docs/iic/event4.pdf"
+        "/static/pdfs/iic/event1.pdf",
+        "/static/pdfs/iic/event2.pdf",
+        "/static/pdfs/iic/event3.pdf",
+        "/static/pdfs/iic/event4.pdf"
       ]
     },
     "policy": {
@@ -45,10 +45,10 @@
         "Velammal Innovation and Startup Policy"
       ],
       "pdfpath": [
-        "/static/docs/iic/policy1.pdf",
-        "/static/docs/iic/policy2.pdf",
-        "/static/docs/iic/policy3.pdf",
-        "/static/docs/iic/policy4.pdf"
+        "/static/pdfs/iic/policy1.pdf",
+        "/static/pdfs/iic/policy2.pdf",
+        "/static/pdfs/iic/policy3.pdf",
+        "/static/pdfs/iic/policy4.pdf"
       ]
     },
     "members": {
@@ -155,10 +155,10 @@
         "PATENTS"
       ],
       "path": [
-        "/static/docs/iic/startup.pdf",
-        "/static/docs/iic/seed_money.pdf",
-        "/static/docs/iic/mentee_instructions.pdf",
-        "/static/docs/iic/patents.pdf"
+        "/static/pdfs/iic/startup.pdf",
+        "/static/pdfs/iic/seed_money.pdf",
+        "/static/pdfs/iic/mentee_instructions.pdf",
+        "/static/pdfs/iic/patents.pdf"
       ]
     }
   }

@@ -12,21 +12,24 @@
             "To mould students as ethical professionals to bring morals to individual and society."
         ],
         "about_department": ["Department of Artificial Intelligence aims to produce computing graduates with high potency, apply, design and develop systems to pertain and to integrate both software and hardware devices, utilize modern approaches in programming and problem solving techniques."," The Department was established in the year 2020 with the main objective of providing quality education in the field of Engineering and Technology."," It is recognized as nodal center under Anna University. The Department has proved to be a center of excellence in Academic, Sponsored research and Continuing Education Programme."],
-        "newsletter_path": "/static/docs/dapartment_data/aids_newsletter.pdf"
+        "newsletter_path": "/static/pdfs/dapartment_data/aids_newsletter.pdf"
     },
     {
         "department_id": "002",
         "department_name": "Automobile Engineering (AUTO)",
         "department_image": "/static/images/department_data/auto.jpg",
-        "department_quotes": "Innovating the future of technology.",
-        "vision": "To excel in computer science education, research, and innovation.",
+        "department_quotes": "Driving innovation, engineering the future—where passion meets precision in Automobile Engineering.",
+        "vision": "To send forth into the world competitive graduates by providing knowledge through both theoretical learning and practical exposure to latest technologies in the field of automobile engineering and inculcating in them a thirst for lifelong learning.",
         "mission": [
-            "Deliver quality education in computer science engineering.",
-            "Foster research in emerging fields of technology.",
-            "Build industry-ready professionals with strong ethical values."
+            "Maintaining state of art laboratory facilities to train the students with latest technology, to cater to industrial needs. ",
+            "To create awareness on the importance of research activities   among the students.",
+            "To encourage creativity and innovation.",
+            "To produce young engineers with an ability to boldly face their future challenges.",
+           " To identify the top class R&D and academic institution in the field of automobile engineering and establish links with them for   the mutual transfer of knowledge."
+
         ],
-        "newsletter_path": "/static/docs/dapartment_data/auto_newsletter.pdf",
-        "about_department": ["Department of Artificial Intelligence aims to produce computing graduates with high potency, apply, design and develop systems to pertain and to integrate both software and hardware devices, utilize modern approaches in programming and problem solving techniques."," The Department was established in the year 2020 with the main objective of providing quality education in the field of Engineering and Technology."," It is recognized as nodal center under Anna University. The Department has proved to be a center of excellence in Academic, Sponsored research and Continuing Education Programme."]
+        "newsletter_path": "/static/pdfs/dapartment_data/auto_newsletter.pdf",
+        "about_department": ["The department Automobile Engineering was established in the year 2012 with NBA & NAAC accreditations and ISO certification. The focus is to consistently pursue in providing innovative and quality training to the talented and dedicated students, to empower them in engineering the development of national economy, specialized in transport sector. The department has well qualified and well experienced faculty members to meet the present-day curriculum requirements both in theory and practical."]
     },
     {
         "department_id": "003",
@@ -39,7 +42,7 @@
             "Conduct cutting-edge research in materials, environmental solutions, and sustainable energy.",
             "Support industries, government, and communities while fostering innovation, entrepreneurship, and leadership."
         ],
-        "newsletter_path": "/static/docs/dapartment_data/chem_newsletter.pdf",
+        "newsletter_path": "/static/pdfs/dapartment_data/chem_newsletter.pdf",
         "about_department": ["The Chemistry department is a fascinating field that combines principles from chemistry and engineering to develop innovative solutions for various industries.  Development of new materials with specific properties for applications in energy, aerospace, biomedical, and other fields.Research on sustainable energy sources, energy storage, and environmental remediation technologies.Design and optimization of chemical processes for large-scale production of chemicals, fuels, and pharmaceuticals. Development of corrosion-resistant materials and coatings for various industries."]
     },
     {
@@ -55,7 +58,7 @@
             "To facilitate conducive environment for entrepreneurship development.",
             "To provide industry and society based solutions through innovation and creativity"
         ],
-        "newsletter_path": "/static/docs/dapartment_data/civil_newsletter.pdf",
+        "newsletter_path": "/static/pdfs/dapartment_data/civil_newsletter.pdf",
         "about_department": ["Civil Engineering, the Mother of all Engineering Disciplines, its Sons and Daughters, the Young Civil Engineers are the Nation Builders for sustaining Civilization anywhere in the World and Universe.Starting from 2007, Department of Civil Engineering joined in contributing towards nation building through our Graduate Civil Engineers.","The BE Civil Engineering program of VEC is continuously accredited by NBA since 2015. So far 32 graduates from the Department have been placed in State and Central Government jobs (IRS, IOCL, Revenue, Police, PWD, Highways, Water Resources, Buildings, CMDA, Local Administration...) and also in many other countries like UK, USA, Canada, Singapore, Dubai, Australia, etc. in various roles and positions.","To achieve this, the Department is equipped with sophisticated laboratories and field oriented teaching and training. About 85% of students are placed in Core & IT companies (45+ Core Companies & 20+ IT companies). Around 200+ Students opted for higher studies in India & Foreign Universities through GATE, GRE & GMAT. Currently under Autonomous mode, the curriculum is further enriched to facilitate student community to reach greater heights and zeniths."]
     },      
     {
@@ -70,7 +73,7 @@
             "To create an environment that encourages innovation supports multidisciplinary research endeavors, and cultivates professionals focused on research excellence in Computer Science and Engineering. ",
             "To enhance educational outcomes by nurturing entrepreneurship, integrating project-based learning, and aligning educational efforts with both industrial demands and societal aspirations."
         ],
-        "newsletter_path": "/static/docs/dapartment_data/cse_newsletter.pdf",
+        "newsletter_path": "/static/pdfs/dapartment_data/cse_newsletter.pdf",
         "about_department": ["Established in 1995, the Department of Computer Science and Engineering at our institution has been dedicated to providing high-quality education to 240 students. Our mission is to equip young minds with the knowledge and skills necessary to excel in the field of IT and drive organizational success.To achieve this, we offer a comprehensive curriculum that incorporates the latest technologies, collaborative projects, research associations, and hands-on training through semester-long internships and live industry problem-solving. Our program also features flexible electives, open electives, honors, and minor degrees, promoting an interdisciplinary approach that prepares students to thrive in a rapidly evolving tech landscape."]
     },
     {
@@ -85,7 +88,7 @@
             "To understand various protocols for network security to protect against the threats in the network",
             "To equip students in Ethical Hacking and Penetration Testing"
         ],
-        "newsletter_path": "/static/docs/dapartment_data/cyber_newsletter.pdf",
+        "newsletter_path": "/static/pdfs/dapartment_data/cyber_newsletter.pdf",
         "about_department": ["The Computer Science and Engineering (Cyber Security) course is a specialized branch of CSE that focuses on securing digital systems, networks, and data from cyber threats. It combines core computer science principles with specialized knowledge in Cyber Security. This program provides a strong foundation in computer science along with in-depth training in Cyber Security techniques, Ethical hacking, Cryptography, and Network Security. The curriculum is designed to equip students with skills to detect, prevent, and respond to cyber threats. It is a highly specialized and rewarding field with excellent career prospects. With Cyber threats increasing worldwide, there is a huge demand for skilled Cyber Security professionals. By combining technical expertise, ethical hacking skills, and knowledge of cyber laws, students can build a successful career in Cyber Security."]
     },
     {
@@ -100,7 +103,7 @@
             "To promote self-learning and teamwork and to make them industry ready graduates.",
             "To involve the faculty and students in research and consultancy for the benefit of institute, industry and society."
         ],
-        "newsletter_path": "/static/docs/dapartment_data/eee_newsletter.pdf",
+        "newsletter_path": "/static/pdfs/dapartment_data/eee_newsletter.pdf",
         "about_department": ["The department of Electrical and Electronics Engineering at Velammal Engineering College with its rich and traditional academic ambiance targets both the theory and the practical applications of engineering and technology to handle global challenges of the present and future scenarios.","The department is celebrating 25 years of academic excellence since 1995. All the departmental activities are NBA Accredited since 2002 and also ISO certified.","With academic autonomy, it offers variety of courses across a wide spectrum of specialized topics in UG, PG and PhD level under choice-based credit system in concurrence with the modern technological advancements and industrial requirements."]
     },
     {
@@ -116,7 +119,7 @@
             "To facilitate graduate with Entrepreneurship skills.",
             "To encourage faculty members and students to engage themselves in multidisciplinary research endeavors and keep abreast of current trends through continuing education."
         ],
-        "newsletter_path": "/static/docs/dapartment_data/eie_newsletter.pdf",
+        "newsletter_path": "/static/pdfs/dapartment_data/eie_newsletter.pdf",
         "about_department": ["Department of Electronics & Instrumentation Engineering is an advanced branch which deals with the application of existing scientific knowledge in electronics, instrumentation, measurements, control and automation of processes."," Started in the year 2002, the department of Electronics and Instrumentation Engineering is running a four year under graduate program accredited by NBA.","From inception, the department has grown in leaps and bounds with the state of art of infrastructure and lab facilities.","The program provides an opportunity to learn the technical skills thereby enhancing their technical competency and leadership qualities.","The graduates are having wide scope to get career opportunities in major process, energy, oil and natural gas industries as well as research opportunities in highly ranked institutes and universities within and outside the country."]
     },
     {
@@ -142,7 +145,7 @@
         "mission": [
             "To develop engineering students' communication, critical thinking, and soft skills through innovative teaching, mentoring, and assessment methods, enabling them to articulate ideas, collaborate effectively, and succeed in their academic, professional, and personal pursuits."
         ],
-        "newsletter_path": "/static/docs/dapartment_data/eng_newsletter.pdf",
+        "newsletter_path": "/static/pdfs/dapartment_data/eng_newsletter.pdf",
         "about_department": ["The Department of English has been in a dynamic existence since the inception of the college equipping the budding engineers with commendable communication skills in order to meet the ever growing demands of industry, business, public and private organizations as well as academic and human services. The Department boasts of practical curricula with a high degree of professional relevance, enabling students to face real time challenges. The faculty of the department are known for their committed teaching, individualized explorative bent of mind and close mentoring. We are delighted to extend our academic support to the institution in all its recognitions."]
     },
     {
@@ -157,7 +160,7 @@
             "To engage with the wider community, including alumni, local businesses, and societal stakeholders, to promote digital literacy, foster technology adoption, and contribute to the socio-economic development.",
             "To cultivate a dynamic environment that encourages continual growth, entrepreneurial   spirit, cohesive teamwork, exemplary professionalism, and leadership with a strong sense of social responsibility."
         ],
-        "newsletter_path": "/static/docs/dapartment_data/it_newsletter.pdf",
+        "newsletter_path": "/static/pdfs/dapartment_data/it_newsletter.pdf",
         "about_department": ["Department of Artificial Intelligence aims to produce computing graduates with high potency, apply, design and develop systems to pertain and to integrate both software and hardware devices, utilize modern approaches in programming and problem solving techniques."," The Department was established in the year 2020 with the main objective of providing quality education in the field of Engineering and Technology."," It is recognized as nodal center under Anna University. The Department has proved to be a center of excellence in Academic, Sponsored research and Continuing Education Programme."]
     },
     {
@@ -171,7 +174,7 @@
                 "Foster problem-solving, leadership, and teamwork skills." ,
                 "Prepare students for advanced studies and thriving careers."
         ],
-        "newsletter_path": "/static/docs/dapartment_data/math_newsletter.pdf",
+        "newsletter_path": "/static/pdfs/dapartment_data/math_newsletter.pdf",
         "about_department": ["Since 1995, the department continues to provide mathematical skill and analytical thinking to all engineering and science graduates of this institution. Our aim is primarily on teaching and evenly on research also. The department has the faculty strength of 18 members includes 6 doctorates and 5 pursuing having an average teaching experience of 15 years. The department also trains engineering students in strong mathematical background to enhance and apply their skills to find solutions to their field specific problems. The department is a recognized nodal Centre for research under Anna University, Chennai.."]
     },
     {
@@ -188,7 +191,7 @@
             "Empowering the students in organizing events to gain experience in team work and leadership qualities.",
             "Preparing the students for their role as Engineers in society with an awareness of ethical, environmental, economic, safety and quality issues"
         ],
-        "newsletter_path": "/static/docs/dapartment_data/mech_newsletter.pdf",
+        "newsletter_path": "/static/pdfs/dapartment_data/mech_newsletter.pdf",
         "about_department": ["Mechanical Engineering is the only branch of engineering that can fit into any kind of industries, is the oldest engineering disciplines and an extremely diverse profession. Mechanical engineers are inherently multi-disciplinary and having wide range of career choices. Manufacturing has emerged as one of the high growth sectors in India.  Government aims to create 100 million new jobs in the sector in near future.The Department of Mechanical Engineering at Velammal Engineering College, Chennai started its journey in the year 1999. We have a strong undergraduate program in mechanical engineering. The Department has a distinguished record in both teaching and research. The Department is committed to provide knowledge creation, innovation and research among the students to meet challenges in Mechanical Engineering Field.  Minor degree in the area of Electric vehicle Technology and Data Science, and honours degree in the area of Robotics and Automation are offered to Mechanical Engineering Students.The department is accredited by National Board of Accreditation (NBA), New Delhi is recognized as the Nodal Research Centre by Anna University, Chennai.  Our Alumni play key role in different industrial, academic and Government organizations. The department providing value based holistic development for each student."]
     },
     {
@@ -203,7 +206,7 @@
             "மொழித்திறன் மற்றும் படைப்பாற்றலை வளர்த்தல்.",
            "சமூகத்திற்குப் பயனளிக்கும் வகையில் ஒழுக்கமும் ஆளுமைத்திறனும் உடையவர்களாக உருவாக்குதல்." 
         ],
-        "newsletter_path": "/static/docs/dapartment_data/physical_newsletter.pdf",
+        "newsletter_path": "/static/pdfs/dapartment_data/physical_newsletter.pdf",
         "about_department": ["தமிழர்களின் வளமான பண்பாடு, கலை, கலாச்சாரம், இலக்கியம், அறிவியல் சிந்தனைகள், பொறியியல் தொழில்நுட்பத் தகவல்கள் முதலானவற்றை மாணவர்கள் கற்கும் நோக்கில் ‘தமிழர் மரபு’ மற்றும் தமிழர் தொழில்நுட்பம்’ ஆகிய இரண்டு தனித்துவமான பாடங்களைக் கற்பிப்பதனை நோக்கமாகக் கொண்டு 2023 ஆம் ஆண்டு முதல் தமிழ்த்துறை இயங்கிவருகிறது."," மேலும் இத்துறை, மாணவர்கள் மொழி, ஆளுமைத்திறன், புதுமை படைத்தல், வாழ்வியல் அறநெறி மற்றும் பண்பாட்டு மாண்புகளைப் பெற்று, சமூகத்தோடு கூடி வாழ வழிகாட்டுகிறது."]
     },
     {
@@ -217,7 +220,7 @@
             "Encourage research in genetic engineering and bioprocess technology.",
             "Prepare students for global challenges in biotechnology and healthcare."
         ],
-        "newsletter_path": "/static/docs/dapartment_data/physics_newsletter.pdf",
+        "newsletter_path": "/static/pdfs/dapartment_data/physics_newsletter.pdf",
         "about_department": ["Department of Artificial Intelligence aims to produce computing graduates with high potency, apply, design and develop systems to pertain and to integrate both software and hardware devices, utilize modern approaches in programming and problem solving techniques."," The Department was established in the year 2020 with the main objective of providing quality education in the field of Engineering and Technology."," It is recognized as nodal center under Anna University. The Department has proved to be a center of excellence in Academic, Sponsored research and Continuing Education Programme."]
     },
     {
@@ -232,7 +235,7 @@
             "To create an environment that encourages innovation supports multidisciplinary research endeavors, and cultivates professionals focused on research excellence in Computer Science and Engineering. ",
             "To enhance educational outcomes by nurturing entrepreneurship, integrating project-based learning, and aligning educational efforts with both industrial demands and societal aspirations."
         ],
-        "newsletter_path": "/static/docs/dapartment_data/physics_newsletter.pdf",
+        "newsletter_path": "/static/pdfs/dapartment_data/physics_newsletter.pdf",
         "about_department": ["Computer Science and Engineering plays a vital role in helping organizations to achieve profitable results and keep competitive forces in check. Keeping this objective in mind, young mindsets are educated here with full academic rigor to convert them into effective IT professionals. The de-partment is instrumental in conducting various technical and non-technical activities for students as well as faculty members. The focus is not only technical stuff on but also moral values, ethics, professionalism and so. Regular classes of the latest technologies are being conducted for stu-dents. On a continuous basis, students are made aware of the latest industry trends and needs in various technological domains. Well-motivated, competent faculty members are always engaged in student’s welfare. Encouragement and guidance is offered to the students for participating in sports and various extracurricular activities to highlight and strengthen their nontechnical skills. Our academic rigor, Plan Do Check Act approach in all sorts of aspects has made this department to be a one of the best choices for UG, PG and PhD admission aspirants. The industry inputs are taken into consideration in each and every course. The Curriculum has features like Industry con-nect, research associations, semester-long internship, live industry problem-solving, electives, open elective, honors and minor degree to support an interdisciplinary approach."]
     },
     {
@@ -244,7 +247,7 @@
         "mission": [
             "To become a world class institution of higher learning renowned for its excellence in management and for its commitment to the holistic development of the individual and society by creating a novel approach to students through education and industry practice by encouraging value-based knowledge, thus creating a goodwill to the future generation of our country."
         ],
-        "newsletter_path": "/static/docs/dapartment_data/physics_newsletter.pdf",
+        "newsletter_path": "/static/pdfs/dapartment_data/physics_newsletter.pdf",
         "about_department": ["The Department of Management Sciences (DoMS) is committed to nurturing learners into Champions, Mindful Leaders, Entrepreneurial Managers, and Innovators. With this vision, inspired by the ideology of its founder, DoMS was established in 2007."," The department is on a transformative journey to become a B-School of excellence, embracing modern learning methodologies and an outcome-based approach.", "It has implemented a choice-based credit system, a case discussion courtyard, and a hybrid learning model that integrates Bloom's taxonomy on knowledge levels."]
     }
 ]
