@@ -3,13 +3,14 @@
       "deptId": "001",
       "department_name": "Artificial Intelligence and Data Science (AI&DS)",
       "content": [
-        {"id": "HeadDepartment", "hascontent": true},
         {"id": "Vision&Mission", "hascontent": true},
+        {"id": "HeadDepartment", "hascontent": true},
         {"id": "Faculties", "hascontent": true},
-        {"id": "Activities", "hascontent": true},
         {"id": "Syllabus", "hascontent": true},
-        {"id": "Infrastructure", "hascontent": true},
+        {"id": "Newsletter", "hascontent":true},
+        {"id": "Activities", "hascontent": true},
         {"id": "StudentActivities", "hascontent": true},
+        {"id": "Infrastructure", "hascontent": true},
         {"id": "SupportingStaff", "hascontent": false},
         {"id": "Mous", "hascontent": false},
         {"id": "Research", "hascontent": true}
