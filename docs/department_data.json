@@ -59,7 +59,38 @@
             "To identify the top class R&D and academic institution in the field of automobile engineering and establish links with them for   the mutual transfer of knowledge."
         ],
         "newsletter_path": "/static/pdfs/dapartment_data/auto_newsletter.pdf",
-        "about_department": ["The department Automobile Engineering was established in the year 2012 with NBA & NAAC accreditations and ISO certification. The focus is to consistently pursue in providing innovative and quality training to the talented and dedicated students, to empower them in engineering the development of national economy, specialized in transport sector. The department has well qualified and well experienced faculty members to meet the present-day curriculum requirements both in theory and practical."]
+        "about_department": ["The department Automobile Engineering was established in the year 2012 with NBA & NAAC accreditations and ISO certification. The focus is to consistently pursue in providing innovative and quality training to the talented and dedicated students, to empower them in engineering the development of national economy, specialized in transport sector. The department has well qualified and well experienced faculty members to meet the present-day curriculum requirements both in theory and practical."],
+        "program_outcomes": {
+            "headings":["PO1:Engineering knowledge","PO2:Problem analysis","PO3:Design/development of solutions","PO4:Conduct investigations of complex problems","PO5:Modern tool usage","PO6:The engineer and society","PO7:Environment and sustainability","PO8:Ethics","PO9:Individual and team work","PO10:Communication","PO11:Project management and finance","PO12:Life-long learning"],
+            "content": [
+                    "Apply the knowledge of mathematics, science, engineering fundamentals, and an engineering specialization for the solution of complex engineering problems.",
+                    "Identify, formulate, research literature, and analyze complex engineering problems reaching substantiated conclusions using first principles of mathematics, natural sciences, and engineering sciences.",
+                    "Design solutions for complex engineering problems and design system components or processes that meet the specified needs with appropriate consideration for public health and safety, and cultural, societal, and environmental considerations.",
+                    "Use research-based knowledge and research methods including design of experiments, analysis and interpretation of data, and synthesis of the information to provide valid conclusions.",
+                    "Create, select, and apply appropriate techniques, resources, and modern engineering and AI and Data Science tools, including prediction and modelling to complex engineering activities, with an understanding of the limitations.",
+                    "Apply reasoning informed by the contextual knowledge to assess societal, health, safety, legal and cultural issues and the consequent responsibilities relevant to the professional engineering practice.",
+                    "Understand the impact of the professional engineering solutions in societal and environmental contexts, and demonstrate the knowledge of, and need for sustainable development.",
+                    "Apply ethical principles and commit to professional ethics and responsibilities and norms of the engineering practice.",
+                    "Function effectively as an individual, and as a member or leader in diverse teams, and in multidisciplinary settings.",
+                    "Communicate effectively on complex engineering activities with the engineering community and with the society at large, such as, being able to comprehend and write effective reports and design documentation, make effective presentations, and give and receive clear instructions.",
+                    "Demonstrate knowledge and understanding of the engineering and management principles and apply these to one’s own work, as a member and leader in a team, to manage projects and in multidisciplinary environments.",
+                    "Recognize the need for, and have the preparation and ability to engage in independent and life-long learning in the broadest context of technological change."
+                ]
+        },
+        "program_specific_outcomes": {
+            "headings":["PSO01","PSO02"],
+	        "content":[
+                "Design and develop the automotive system and its components with due considerations of society impact and sustainability. ",
+                "Analyze the performance of automotive system using modeling, simulation and testing. "
+            ]
+        },
+        "program_educational_outcomes": {
+            "headings":["PSO01","PSO02"],
+	        "content":[
+                "Apply the concepts of Artificial Intelligence to provide solutions for the real time problems and to integrate the professional skills with recent tools and technologies to cope with the dynamic AI needs.",
+                "Create a concrete foundation and enlighten the innovation, research and entrepreneur skills in the field of Artificial Intelligence and Data science."
+            ]
+        }
     },
     {
         "department_id": "003",
@@ -73,7 +104,38 @@
             "Support industries, government, and communities while fostering innovation, entrepreneurship, and leadership."
         ],
         "newsletter_path": "/static/pdfs/dapartment_data/chem_newsletter.pdf",
-        "about_department": ["The Chemistry department is a fascinating field that combines principles from chemistry and engineering to develop innovative solutions for various industries.  Development of new materials with specific properties for applications in energy, aerospace, biomedical, and other fields.Research on sustainable energy sources, energy storage, and environmental remediation technologies.Design and optimization of chemical processes for large-scale production of chemicals, fuels, and pharmaceuticals. Development of corrosion-resistant materials and coatings for various industries."]
+        "about_department": ["The Chemistry department is a fascinating field that combines principles from chemistry and engineering to develop innovative solutions for various industries.  Development of new materials with specific properties for applications in energy, aerospace, biomedical, and other fields.Research on sustainable energy sources, energy storage, and environmental remediation technologies.Design and optimization of chemical processes for large-scale production of chemicals, fuels, and pharmaceuticals. Development of corrosion-resistant materials and coatings for various industries."],
+        "program_outcomes": {
+                "headings":["PO1:Engineering knowledge","PO2:Problem analysis","PO3:Design/development of solutions","PO4:Conduct investigations of complex problems","PO5:Modern tool usage","PO6:The engineer and society","PO7:Environment and sustainability","PO8:Ethics","PO9:Individual and team work","PO10:Communication","PO11:Project management and finance","PO12:Life-long learning"],
+                "content": [
+                        "Apply the knowledge of mathematics, science, engineering fundamentals, and an engineering specialization for the solution of complex engineering problems.",
+                        "Identify, formulate, research literature, and analyze complex engineering problems reaching substantiated conclusions using first principles of mathematics, natural sciences, and engineering sciences.",
+                        "Design solutions for complex engineering problems and design system components or processes that meet the specified needs with appropriate consideration for public health and safety, and cultural, societal, and environmental considerations.",
+                        "Use research-based knowledge and research methods including design of experiments, analysis and interpretation of data, and synthesis of the information to provide valid conclusions.",
+                        "Create, select, and apply appropriate techniques, resources, and modern engineering and AI and Data Science tools, including prediction and modelling to complex engineering activities, with an understanding of the limitations.",
+                        "Apply reasoning informed by the contextual knowledge to assess societal, health, safety, legal and cultural issues and the consequent responsibilities relevant to the professional engineering practice.",
+                        "Understand the impact of the professional engineering solutions in societal and environmental contexts, and demonstrate the knowledge of, and need for sustainable development.",
+                        "Apply ethical principles and commit to professional ethics and responsibilities and norms of the engineering practice.",
+                        "Function effectively as an individual, and as a member or leader in diverse teams, and in multidisciplinary settings.",
+                        "Communicate effectively on complex engineering activities with the engineering community and with the society at large, such as, being able to comprehend and write effective reports and design documentation, make effective presentations, and give and receive clear instructions.",
+                        "Demonstrate knowledge and understanding of the engineering and management principles and apply these to one’s own work, as a member and leader in a team, to manage projects and in multidisciplinary environments.",
+                        "Recognize the need for, and have the preparation and ability to engage in independent and life-long learning in the broadest context of technological change."
+                ]
+        },
+        "program_specific_outcomes": {
+            "headings":["PSO01","PSO02"],
+	        "content":[
+                "Apply the concepts of Artificial Intelligence to provide solutions for the real time problems and to integrate the professional skills with recent tools and technologies to cope with the dynamic AI needs.",
+                "Create a concrete foundation and enlighten the innovation, research and entrepreneur skills in the field of Artificial Intelligence and Data science."
+            ]
+        },
+        "program_educational_outcomes": {
+            "headings":["PSO01","PSO02"],
+	        "content":[
+                "Apply the concepts of Artificial Intelligence to provide solutions for the real time problems and to integrate the professional skills with recent tools and technologies to cope with the dynamic AI needs.",
+                "Create a concrete foundation and enlighten the innovation, research and entrepreneur skills in the field of Artificial Intelligence and Data science."
+            ]
+        }
     },
     {
         "department_id": "004",
@@ -89,7 +151,38 @@
             "To provide industry and society based solutions through innovation and creativity"
         ],
         "newsletter_path": "/static/pdfs/dapartment_data/civil_newsletter.pdf",
-        "about_department": ["Civil Engineering, the Mother of all Engineering Disciplines, its Sons and Daughters, the Young Civil Engineers are the Nation Builders for sustaining Civilization anywhere in the World and Universe.Starting from 2007, Department of Civil Engineering joined in contributing towards nation building through our Graduate Civil Engineers.","The BE Civil Engineering program of VEC is continuously accredited by NBA since 2015. So far 32 graduates from the Department have been placed in State and Central Government jobs (IRS, IOCL, Revenue, Police, PWD, Highways, Water Resources, Buildings, CMDA, Local Administration...) and also in many other countries like UK, USA, Canada, Singapore, Dubai, Australia, etc. in various roles and positions.","To achieve this, the Department is equipped with sophisticated laboratories and field oriented teaching and training. About 85% of students are placed in Core & IT companies (45+ Core Companies & 20+ IT companies). Around 200+ Students opted for higher studies in India & Foreign Universities through GATE, GRE & GMAT. Currently under Autonomous mode, the curriculum is further enriched to facilitate student community to reach greater heights and zeniths."]
+        "about_department": ["Civil Engineering, the Mother of all Engineering Disciplines, its Sons and Daughters, the Young Civil Engineers are the Nation Builders for sustaining Civilization anywhere in the World and Universe.Starting from 2007, Department of Civil Engineering joined in contributing towards nation building through our Graduate Civil Engineers.","The BE Civil Engineering program of VEC is continuously accredited by NBA since 2015. So far 32 graduates from the Department have been placed in State and Central Government jobs (IRS, IOCL, Revenue, Police, PWD, Highways, Water Resources, Buildings, CMDA, Local Administration...) and also in many other countries like UK, USA, Canada, Singapore, Dubai, Australia, etc. in various roles and positions.","To achieve this, the Department is equipped with sophisticated laboratories and field oriented teaching and training. About 85% of students are placed in Core & IT companies (45+ Core Companies & 20+ IT companies). Around 200+ Students opted for higher studies in India & Foreign Universities through GATE, GRE & GMAT. Currently under Autonomous mode, the curriculum is further enriched to facilitate student community to reach greater heights and zeniths."],
+        "program_outcomes": {
+            "headings":["PO1:Engineering knowledge","PO2:Problem analysis","PO3:Design/development of solutions","PO4:Conduct investigations of complex problems","PO5:Modern tool usage","PO6:The engineer and society","PO7:Environment and sustainability","PO8:Ethics","PO9:Individual and team work","PO10:Communication","PO11:Project management and finance","PO12:Life-long learning"],
+            "content": [
+                    "Apply the knowledge of mathematics, science, engineering fundamentals, and an engineering specialization for the solution of complex engineering problems.",
+                    "Identify, formulate, research literature, and analyze complex engineering problems reaching substantiated conclusions using first principles of mathematics, natural sciences, and engineering sciences.",
+                    "Design solutions for complex engineering problems and design system components or processes that meet the specified needs with appropriate consideration for public health and safety, and cultural, societal, and environmental considerations.",
+                    "Use research-based knowledge and research methods including design of experiments, analysis and interpretation of data, and synthesis of the information to provide valid conclusions.",
+                    "Create, select, and apply appropriate techniques, resources, and modern engineering and AI and Data Science tools, including prediction and modelling to complex engineering activities, with an understanding of the limitations.",
+                    "Apply reasoning informed by the contextual knowledge to assess societal, health, safety, legal and cultural issues and the consequent responsibilities relevant to the professional engineering practice.",
+                    "Understand the impact of the professional engineering solutions in societal and environmental contexts, and demonstrate the knowledge of, and need for sustainable development.",
+                    "Apply ethical principles and commit to professional ethics and responsibilities and norms of the engineering practice.",
+                    "Function effectively as an individual, and as a member or leader in diverse teams, and in multidisciplinary settings.",
+                    "Communicate effectively on complex engineering activities with the engineering community and with the society at large, such as, being able to comprehend and write effective reports and design documentation, make effective presentations, and give and receive clear instructions.",
+                    "Demonstrate knowledge and understanding of the engineering and management principles and apply these to one’s own work, as a member and leader in a team, to manage projects and in multidisciplinary environments.",
+                    "Recognize the need for, and have the preparation and ability to engage in independent and life-long learning in the broadest context of technological change."
+                ]
+        },
+        "program_specific_outcomes": {
+            "headings":["PSO01","PSO02"],
+	        "content":[
+                "Plan, design and implement smart and sustainable infrastructure.",
+                "Provide solutions for the social needs and challenges by applying modern tools and techniques."
+            ]
+        },
+        "program_educational_outcomes": {
+            "headings":["PSO01","PSO02"],
+	        "content":[
+                "Apply the concepts of Artificial Intelligence to provide solutions for the real time problems and to integrate the professional skills with recent tools and technologies to cope with the dynamic AI needs.",
+                "Create a concrete foundation and enlighten the innovation, research and entrepreneur skills in the field of Artificial Intelligence and Data science."
+            ]
+        }
     },      
     {
         "department_id": "005",
@@ -104,7 +197,38 @@
             "To enhance educational outcomes by nurturing entrepreneurship, integrating project-based learning, and aligning educational efforts with both industrial demands and societal aspirations."
         ],
         "newsletter_path": "/static/pdfs/dapartment_data/cse_newsletter.pdf",
-        "about_department": ["Established in 1995, the Department of Computer Science and Engineering at our institution has been dedicated to providing high-quality education to 240 students. Our mission is to equip young minds with the knowledge and skills necessary to excel in the field of IT and drive organizational success.To achieve this, we offer a comprehensive curriculum that incorporates the latest technologies, collaborative projects, research associations, and hands-on training through semester-long internships and live industry problem-solving. Our program also features flexible electives, open electives, honors, and minor degrees, promoting an interdisciplinary approach that prepares students to thrive in a rapidly evolving tech landscape."]
+        "about_department": ["Established in 1995, the Department of Computer Science and Engineering at our institution has been dedicated to providing high-quality education to 240 students. Our mission is to equip young minds with the knowledge and skills necessary to excel in the field of IT and drive organizational success.To achieve this, we offer a comprehensive curriculum that incorporates the latest technologies, collaborative projects, research associations, and hands-on training through semester-long internships and live industry problem-solving. Our program also features flexible electives, open electives, honors, and minor degrees, promoting an interdisciplinary approach that prepares students to thrive in a rapidly evolving tech landscape."],
+        "program_outcomes": {
+            "headings":["PO1:Engineering knowledge","PO2:Problem analysis","PO3:Design/development of solutions","PO4:Conduct investigations of complex problems","PO5:Modern tool usage","PO6:The engineer and society","PO7:Environment and sustainability","PO8:Ethics","PO9:Individual and team work","PO10:Communication","PO11:Project management and finance","PO12:Life-long learning"],
+            "content": [
+                    "Apply the knowledge of mathematics, science, engineering fundamentals, and an engineering specialization for the solution of complex engineering problems.",
+                    "Identify, formulate, research literature, and analyze complex engineering problems reaching substantiated conclusions using first principles of mathematics, natural sciences, and engineering sciences.",
+                    "Design solutions for complex engineering problems and design system components or processes that meet the specified needs with appropriate consideration for public health and safety, and cultural, societal, and environmental considerations.",
+                    "Use research-based knowledge and research methods including design of experiments, analysis and interpretation of data, and synthesis of the information to provide valid conclusions.",
+                    "Create, select, and apply appropriate techniques, resources, and modern engineering and AI and Data Science tools, including prediction and modelling to complex engineering activities, with an understanding of the limitations.",
+                    "Apply reasoning informed by the contextual knowledge to assess societal, health, safety, legal and cultural issues and the consequent responsibilities relevant to the professional engineering practice.",
+                    "Understand the impact of the professional engineering solutions in societal and environmental contexts, and demonstrate the knowledge of, and need for sustainable development.",
+                    "Apply ethical principles and commit to professional ethics and responsibilities and norms of the engineering practice.",
+                    "Function effectively as an individual, and as a member or leader in diverse teams, and in multidisciplinary settings.",
+                    "Communicate effectively on complex engineering activities with the engineering community and with the society at large, such as, being able to comprehend and write effective reports and design documentation, make effective presentations, and give and receive clear instructions.",
+                    "Demonstrate knowledge and understanding of the engineering and management principles and apply these to one’s own work, as a member and leader in a team, to manage projects and in multidisciplinary environments.",
+                    "Recognize the need for, and have the preparation and ability to engage in independent and life-long learning in the broadest context of technological change."
+                ]
+        },
+        "program_specific_outcomes": {
+            "headings":["PSO01","PSO02"],
+	        "content":[
+                "Apply the concepts of Artificial Intelligence to provide solutions for the real time problems and to integrate the professional skills with recent tools and technologies to cope with the dynamic AI needs.",
+                "Create a concrete foundation and enlighten the innovation, research and entrepreneur skills in the field of Artificial Intelligence and Data science."
+            ]
+        },
+        "program_educational_outcomes": {
+            "headings":["PSO01","PSO02"],
+	        "content":[
+                "Apply the concepts of Artificial Intelligence to provide solutions for the real time problems and to integrate the professional skills with recent tools and technologies to cope with the dynamic AI needs.",
+                "Create a concrete foundation and enlighten the innovation, research and entrepreneur skills in the field of Artificial Intelligence and Data science."
+            ]
+        }
     },
     {
         "department_id": "006",
@@ -119,7 +243,38 @@
             "To equip students in Ethical Hacking and Penetration Testing"
         ],
         "newsletter_path": "/static/pdfs/dapartment_data/cyber_newsletter.pdf",
-        "about_department": ["The Computer Science and Engineering (Cyber Security) course is a specialized branch of CSE that focuses on securing digital systems, networks, and data from cyber threats. It combines core computer science principles with specialized knowledge in Cyber Security. This program provides a strong foundation in computer science along with in-depth training in Cyber Security techniques, Ethical hacking, Cryptography, and Network Security. The curriculum is designed to equip students with skills to detect, prevent, and respond to cyber threats. It is a highly specialized and rewarding field with excellent career prospects. With Cyber threats increasing worldwide, there is a huge demand for skilled Cyber Security professionals. By combining technical expertise, ethical hacking skills, and knowledge of cyber laws, students can build a successful career in Cyber Security."]
+        "about_department": ["The Computer Science and Engineering (Cyber Security) course is a specialized branch of CSE that focuses on securing digital systems, networks, and data from cyber threats. It combines core computer science principles with specialized knowledge in Cyber Security. This program provides a strong foundation in computer science along with in-depth training in Cyber Security techniques, Ethical hacking, Cryptography, and Network Security. The curriculum is designed to equip students with skills to detect, prevent, and respond to cyber threats. It is a highly specialized and rewarding field with excellent career prospects. With Cyber threats increasing worldwide, there is a huge demand for skilled Cyber Security professionals. By combining technical expertise, ethical hacking skills, and knowledge of cyber laws, students can build a successful career in Cyber Security."],
+        "program_outcomes": {
+            "headings":["PO1:Engineering knowledge","PO2:Problem analysis","PO3:Design/development of solutions","PO4:Conduct investigations of complex problems","PO5:Modern tool usage","PO6:The engineer and society","PO7:Environment and sustainability","PO8:Ethics","PO9:Individual and team work","PO10:Communication","PO11:Project management and finance","PO12:Life-long learning"],
+            "content": [
+                    "Apply the knowledge of mathematics, science, engineering fundamentals, and an engineering specialization for the solution of complex engineering problems.",
+                    "Identify, formulate, research literature, and analyze complex engineering problems reaching substantiated conclusions using first principles of mathematics, natural sciences, and engineering sciences.",
+                    "Design solutions for complex engineering problems and design system components or processes that meet the specified needs with appropriate consideration for public health and safety, and cultural, societal, and environmental considerations.",
+                    "Use research-based knowledge and research methods including design of experiments, analysis and interpretation of data, and synthesis of the information to provide valid conclusions.",
+                    "Create, select, and apply appropriate techniques, resources, and modern engineering and AI and Data Science tools, including prediction and modelling to complex engineering activities, with an understanding of the limitations.",
+                    "Apply reasoning informed by the contextual knowledge to assess societal, health, safety, legal and cultural issues and the consequent responsibilities relevant to the professional engineering practice.",
+                    "Understand the impact of the professional engineering solutions in societal and environmental contexts, and demonstrate the knowledge of, and need for sustainable development.",
+                    "Apply ethical principles and commit to professional ethics and responsibilities and norms of the engineering practice.",
+                    "Function effectively as an individual, and as a member or leader in diverse teams, and in multidisciplinary settings.",
+                    "Communicate effectively on complex engineering activities with the engineering community and with the society at large, such as, being able to comprehend and write effective reports and design documentation, make effective presentations, and give and receive clear instructions.",
+                    "Demonstrate knowledge and understanding of the engineering and management principles and apply these to one’s own work, as a member and leader in a team, to manage projects and in multidisciplinary environments.",
+                    "Recognize the need for, and have the preparation and ability to engage in independent and life-long learning in the broadest context of technological change."
+                ]
+        },
+        "program_specific_outcomes": {
+            "headings":["PSO01","PSO02"],
+	        "content":[
+                "Ability to understand, analyse and develop computer programs in the areas related to networking, cryptography, web development and database management by adhering software development life cycle.",
+                "Graduate students will be able to develop data, resource, and asset protection strategies for organizations, processes, peoples, and individuals through Cyber security-centric skills."
+            ]
+        },
+        "program_educational_outcomes": {
+            "headings":["PSO01","PSO02"],
+	        "content":[
+                "Apply the concepts of Artificial Intelligence to provide solutions for the real time problems and to integrate the professional skills with recent tools and technologies to cope with the dynamic AI needs.",
+                "Create a concrete foundation and enlighten the innovation, research and entrepreneur skills in the field of Artificial Intelligence and Data science."
+            ]
+        }
     },
     {
         "department_id": "007",
@@ -134,7 +289,38 @@
             "To involve the faculty and students in research and consultancy for the benefit of institute, industry and society."
         ],
         "newsletter_path": "/static/pdfs/dapartment_data/eee_newsletter.pdf",
-        "about_department": ["The department of Electrical and Electronics Engineering at Velammal Engineering College with its rich and traditional academic ambiance targets both the theory and the practical applications of engineering and technology to handle global challenges of the present and future scenarios.","The department is celebrating 25 years of academic excellence since 1995. All the departmental activities are NBA Accredited since 2002 and also ISO certified.","With academic autonomy, it offers variety of courses across a wide spectrum of specialized topics in UG, PG and PhD level under choice-based credit system in concurrence with the modern technological advancements and industrial requirements."]
+        "about_department": ["The department of Electrical and Electronics Engineering at Velammal Engineering College with its rich and traditional academic ambiance targets both the theory and the practical applications of engineering and technology to handle global challenges of the present and future scenarios.","The department is celebrating 25 years of academic excellence since 1995. All the departmental activities are NBA Accredited since 2002 and also ISO certified.","With academic autonomy, it offers variety of courses across a wide spectrum of specialized topics in UG, PG and PhD level under choice-based credit system in concurrence with the modern technological advancements and industrial requirements."],
+        "program_outcomes": {
+            "headings":["PO1:Engineering knowledge","PO2:Problem analysis","PO3:Design/development of solutions","PO4:Conduct investigations of complex problems","PO5:Modern tool usage","PO6:The engineer and society","PO7:Environment and sustainability","PO8:Ethics","PO9:Individual and team work","PO10:Communication","PO11:Project management and finance","PO12:Life-long learning"],
+            "content": [
+                    "Apply the knowledge of mathematics, science, engineering fundamentals, and an engineering specialization for the solution of complex engineering problems.",
+                    "Identify, formulate, research literature, and analyze complex engineering problems reaching substantiated conclusions using first principles of mathematics, natural sciences, and engineering sciences.",
+                    "Design solutions for complex engineering problems and design system components or processes that meet the specified needs with appropriate consideration for public health and safety, and cultural, societal, and environmental considerations.",
+                    "Use research-based knowledge and research methods including design of experiments, analysis and interpretation of data, and synthesis of the information to provide valid conclusions.",
+                    "Create, select, and apply appropriate techniques, resources, and modern engineering and AI and Data Science tools, including prediction and modelling to complex engineering activities, with an understanding of the limitations.",
+                    "Apply reasoning informed by the contextual knowledge to assess societal, health, safety, legal and cultural issues and the consequent responsibilities relevant to the professional engineering practice.",
+                    "Understand the impact of the professional engineering solutions in societal and environmental contexts, and demonstrate the knowledge of, and need for sustainable development.",
+                    "Apply ethical principles and commit to professional ethics and responsibilities and norms of the engineering practice.",
+                    "Function effectively as an individual, and as a member or leader in diverse teams, and in multidisciplinary settings.",
+                    "Communicate effectively on complex engineering activities with the engineering community and with the society at large, such as, being able to comprehend and write effective reports and design documentation, make effective presentations, and give and receive clear instructions.",
+                    "Demonstrate knowledge and understanding of the engineering and management principles and apply these to one’s own work, as a member and leader in a team, to manage projects and in multidisciplinary environments.",
+                    "Recognize the need for, and have the preparation and ability to engage in independent and life-long learning in the broadest context of technological change."
+                ]
+        },
+        "program_specific_outcomes": {
+            "headings":["PSO01","PSO02"],
+	        "content":[
+                "Graduates will have the ability to design, simulate and control the Electrical and Electronics circuits using the concepts of power and control engineering.",
+                "Graduates will have the ability to identify, analyze the problems and innovate ideas by adapting the concepts of Power electronics, Recent trends in power systems and Drives systems in Electrical Engineering to provide solutions to existing/novel problems."
+            ]
+        },
+        "program_educational_outcomes": {
+            "headings":["PSO01","PSO02"],
+	        "content":[
+                "Apply the concepts of Artificial Intelligence to provide solutions for the real time problems and to integrate the professional skills with recent tools and technologies to cope with the dynamic AI needs.",
+                "Create a concrete foundation and enlighten the innovation, research and entrepreneur skills in the field of Artificial Intelligence and Data science."
+            ]
+        }
     },
     {
         "department_id": "008",
@@ -150,7 +336,39 @@
             "To encourage faculty members and students to engage themselves in multidisciplinary research endeavors and keep abreast of current trends through continuing education."
         ],
         "newsletter_path": "/static/pdfs/dapartment_data/eie_newsletter.pdf",
-        "about_department": ["Department of Electronics & Instrumentation Engineering is an advanced branch which deals with the application of existing scientific knowledge in electronics, instrumentation, measurements, control and automation of processes."," Started in the year 2002, the department of Electronics and Instrumentation Engineering is running a four year under graduate program accredited by NBA.","From inception, the department has grown in leaps and bounds with the state of art of infrastructure and lab facilities.","The program provides an opportunity to learn the technical skills thereby enhancing their technical competency and leadership qualities.","The graduates are having wide scope to get career opportunities in major process, energy, oil and natural gas industries as well as research opportunities in highly ranked institutes and universities within and outside the country."]
+        "about_department": ["Department of Electronics & Instrumentation Engineering is an advanced branch which deals with the application of existing scientific knowledge in electronics, instrumentation, measurements, control and automation of processes."," Started in the year 2002, the department of Electronics and Instrumentation Engineering is running a four year under graduate program accredited by NBA.","From inception, the department has grown in leaps and bounds with the state of art of infrastructure and lab facilities.","The program provides an opportunity to learn the technical skills thereby enhancing their technical competency and leadership qualities.","The graduates are having wide scope to get career opportunities in major process, energy, oil and natural gas industries as well as research opportunities in highly ranked institutes and universities within and outside the country."],
+        "program_outcomes": {
+            "headings":["PO1:Engineering knowledge","PO2:Problem analysis","PO3:Design/development of solutions","PO4:Conduct investigations of complex problems","PO5:Modern tool usage","PO6:The engineer and society","PO7:Environment and sustainability","PO8:Ethics","PO9:Individual and team work","PO10:Communication","PO11:Project management and finance","PO12:Life-long learning"],
+            "content": [
+                    "Apply the knowledge of mathematics, science, engineering fundamentals, and an engineering specialization for the solution of complex engineering problems.",
+                    "Identify, formulate, research literature, and analyze complex engineering problems reaching substantiated conclusions using first principles of mathematics, natural sciences, and engineering sciences.",
+                    "Design solutions for complex engineering problems and design system components or processes that meet the specified needs with appropriate consideration for public health and safety, and cultural, societal, and environmental considerations.",
+                    "Use research-based knowledge and research methods including design of experiments, analysis and interpretation of data, and synthesis of the information to provide valid conclusions.",
+                    "Create, select, and apply appropriate techniques, resources, and modern engineering and AI and Data Science tools, including prediction and modelling to complex engineering activities, with an understanding of the limitations.",
+                    "Apply reasoning informed by the contextual knowledge to assess societal, health, safety, legal and cultural issues and the consequent responsibilities relevant to the professional engineering practice.",
+                    "Understand the impact of the professional engineering solutions in societal and environmental contexts, and demonstrate the knowledge of, and need for sustainable development.",
+                    "Apply ethical principles and commit to professional ethics and responsibilities and norms of the engineering practice.",
+                    "Function effectively as an individual, and as a member or leader in diverse teams, and in multidisciplinary settings.",
+                    "Communicate effectively on complex engineering activities with the engineering community and with the society at large, such as, being able to comprehend and write effective reports and design documentation, make effective presentations, and give and receive clear instructions.",
+                    "Demonstrate knowledge and understanding of the engineering and management principles and apply these to one’s own work, as a member and leader in a team, to manage projects and in multidisciplinary environments.",
+                    "Recognize the need for, and have the preparation and ability to engage in independent and life-long learning in the broadest context of technological change."
+                ]
+        },
+        "program_specific_outcomes": {
+            "headings":["PSO01","PSO02","PSO03"],
+	        "content":[
+                "Develop mathematical models of the industrial process and provide solutions for industrial automation systems ",
+                "Design, implement, test and analyses embedded based instrumentation systems for monitoring and control.",
+                "Empower the students to work on research platforms and instill entrepreneurship skills to work on a large industrial scale. "
+            ]
+        },
+        "program_educational_outcomes": {
+            "headings":["PSO01","PSO02"],
+	        "content":[
+                "Apply the concepts of Artificial Intelligence to provide solutions for the real time problems and to integrate the professional skills with recent tools and technologies to cope with the dynamic AI needs.",
+                "Create a concrete foundation and enlighten the innovation, research and entrepreneur skills in the field of Artificial Intelligence and Data science."
+            ]
+        }
     },
     {
         "department_id": "009",
@@ -165,7 +383,38 @@
             "To nurture leadership through teamwork.."
         ],
         "newsletter_path": "/static/docs/dapartment_data/ece_newsletter.pdf",
-        "about_department": [ "We are proud to be honoured as the recipient of “National Employability Award 2021” for being among the top 10% colleges in India that excelled in AMCAT 21. Also we have received “Best ISF Award” from IETE for two consecutive years.Several Govt. initiatives have Telecommunication infrastructure as the backbone which is an opportunity to work with Government as a stakeholder in research.Industry 4.0 requires Smart Factories which depend on Machine to Machine Communication thus improving placement prospects for ECE students.An Electronics and Communication Engineer can work in Robotics, Drones,Design of Gadgets, Machine Automation, Aviation and Avionics, Consumer Electronics, Communications, Control and Automation, Telecommunication,Computer Application, Health Care diagnostic equipment manufacturing"]
+        "about_department": [ "We are proud to be honoured as the recipient of “National Employability Award 2021” for being among the top 10% colleges in India that excelled in AMCAT 21. Also we have received “Best ISF Award” from IETE for two consecutive years.Several Govt. initiatives have Telecommunication infrastructure as the backbone which is an opportunity to work with Government as a stakeholder in research.Industry 4.0 requires Smart Factories which depend on Machine to Machine Communication thus improving placement prospects for ECE students.An Electronics and Communication Engineer can work in Robotics, Drones,Design of Gadgets, Machine Automation, Aviation and Avionics, Consumer Electronics, Communications, Control and Automation, Telecommunication,Computer Application, Health Care diagnostic equipment manufacturing"],
+        "program_outcomes": {
+            "headings":["PO1:Engineering knowledge","PO2:Problem analysis","PO3:Design/development of solutions","PO4:Conduct investigations of complex problems","PO5:Modern tool usage","PO6:The engineer and society","PO7:Environment and sustainability","PO8:Ethics","PO9:Individual and team work","PO10:Communication","PO11:Project management and finance","PO12:Life-long learning"],
+            "content": [
+                    "Apply the knowledge of mathematics, science, engineering fundamentals, and an engineering specialization for the solution of complex engineering problems.",
+                    "Identify, formulate, research literature, and analyze complex engineering problems reaching substantiated conclusions using first principles of mathematics, natural sciences, and engineering sciences.",
+                    "Design solutions for complex engineering problems and design system components or processes that meet the specified needs with appropriate consideration for public health and safety, and cultural, societal, and environmental considerations.",
+                    "Use research-based knowledge and research methods including design of experiments, analysis and interpretation of data, and synthesis of the information to provide valid conclusions.",
+                    "Create, select, and apply appropriate techniques, resources, and modern engineering and AI and Data Science tools, including prediction and modelling to complex engineering activities, with an understanding of the limitations.",
+                    "Apply reasoning informed by the contextual knowledge to assess societal, health, safety, legal and cultural issues and the consequent responsibilities relevant to the professional engineering practice.",
+                    "Understand the impact of the professional engineering solutions in societal and environmental contexts, and demonstrate the knowledge of, and need for sustainable development.",
+                    "Apply ethical principles and commit to professional ethics and responsibilities and norms of the engineering practice.",
+                    "Function effectively as an individual, and as a member or leader in diverse teams, and in multidisciplinary settings.",
+                    "Communicate effectively on complex engineering activities with the engineering community and with the society at large, such as, being able to comprehend and write effective reports and design documentation, make effective presentations, and give and receive clear instructions.",
+                    "Demonstrate knowledge and understanding of the engineering and management principles and apply these to one’s own work, as a member and leader in a team, to manage projects and in multidisciplinary environments.",
+                    "Recognize the need for, and have the preparation and ability to engage in independent and life-long learning in the broadest context of technological change."
+                ]
+        },
+        "program_specific_outcomes": {
+            "headings":["PSO01","PSO02"],
+	        "content":[
+                "Apply the concepts of Artificial Intelligence to provide solutions for the real time problems and to integrate the professional skills with recent tools and technologies to cope with the dynamic AI needs.",
+                "Create a concrete foundation and enlighten the innovation, research and entrepreneur skills in the field of Artificial Intelligence and Data science."
+            ]
+        },
+        "program_educational_outcomes": {
+            "headings":["PSO01","PSO02"],
+	        "content":[
+                "Apply the concepts of Artificial Intelligence to provide solutions for the real time problems and to integrate the professional skills with recent tools and technologies to cope with the dynamic AI needs.",
+                "Create a concrete foundation and enlighten the innovation, research and entrepreneur skills in the field of Artificial Intelligence and Data science."
+            ]
+        }
     },
     {
         "department_id": "010",
@@ -177,7 +426,35 @@
             "To develop engineering students' communication, critical thinking, and soft skills through innovative teaching, mentoring, and assessment methods, enabling them to articulate ideas, collaborate effectively, and succeed in their academic, professional, and personal pursuits."
         ],
         "newsletter_path": "/static/pdfs/dapartment_data/eng_newsletter.pdf",
-        "about_department": ["The Department of English has been in a dynamic existence since the inception of the college equipping the budding engineers with commendable communication skills in order to meet the ever growing demands of industry, business, public and private organizations as well as academic and human services. The Department boasts of practical curricula with a high degree of professional relevance, enabling students to face real time challenges. The faculty of the department are known for their committed teaching, individualized explorative bent of mind and close mentoring. We are delighted to extend our academic support to the institution in all its recognitions."]
+        "about_department": ["The Department of English has been in a dynamic existence since the inception of the college equipping the budding engineers with commendable communication skills in order to meet the ever growing demands of industry, business, public and private organizations as well as academic and human services. The Department boasts of practical curricula with a high degree of professional relevance, enabling students to face real time challenges. The faculty of the department are known for their committed teaching, individualized explorative bent of mind and close mentoring. We are delighted to extend our academic support to the institution in all its recognitions."],
+        "program_outcomes": {
+            "headings":["PO1:Engineering knowledge","PO2:Problem analysis","PO3:Design/development of solutions","PO4:Conduct investigations of complex problems","PO5:Modern tool usage","PO6:The engineer and society","PO7:Environment and sustainability","PO8:Ethics","PO9:Individual and team work","PO10:Communication","PO11:Project management and finance","PO12:Life-long learning"],
+            "content": [
+                    "Apply the knowledge of mathematics, science, engineering fundamentals, and an engineering specialization for the solution of complex engineering problems.",
+                    "Identify, formulate, research literature, and analyze complex engineering problems reaching substantiated conclusions using first principles of mathematics, natural sciences, and engineering sciences.",
+                    "Design solutions for complex engineering problems and design system components or processes that meet the specified needs with appropriate consideration for public health and safety, and cultural, societal, and environmental considerations.",
+                    "Use research-based knowledge and research methods including design of experiments, analysis and interpretation of data, and synthesis of the information to provide valid conclusions.",
+                    "Create, select, and apply appropriate techniques, resources, and modern engineering and AI and Data Science tools, including prediction and modelling to complex engineering activities, with an understanding of the limitations.",
+                    "Apply reasoning informed by the contextual knowledge to assess societal, health, safety, legal and cultural issues and the consequent responsibilities relevant to the professional engineering practice.",
+                    "Understand the impact of the professional engineering solutions in societal and environmental contexts, and demonstrate the knowledge of, and need for sustainable development.",
+                    "Apply ethical principles and commit to professional ethics and responsibilities and norms of the engineering practice.",
+                    "Function effectively as an individual, and as a member or leader in diverse teams, and in multidisciplinary settings.",
+                    "Communicate effectively on complex engineering activities with the engineering community and with the society at large, such as, being able to comprehend and write effective reports and design documentation, make effective presentations, and give and receive clear instructions.",
+                    "Demonstrate knowledge and understanding of the engineering and management principles and apply these to one’s own work, as a member and leader in a team, to manage projects and in multidisciplinary environments.",
+                    "Recognize the need for, and have the preparation and ability to engage in independent and life-long learning in the broadest context of technological change."
+                ]
+        },
+        "program_specific_outcomes": {
+            "headings":[],
+	        "content":[]
+        },
+        "program_educational_outcomes": {
+            "headings":["PSO01","PSO02"],
+	        "content":[
+                "Apply the concepts of Artificial Intelligence to provide solutions for the real time problems and to integrate the professional skills with recent tools and technologies to cope with the dynamic AI needs.",
+                "Create a concrete foundation and enlighten the innovation, research and entrepreneur skills in the field of Artificial Intelligence and Data science."
+            ]
+        }
     },
     {
         "department_id": "011",
@@ -192,7 +469,38 @@
             "To cultivate a dynamic environment that encourages continual growth, entrepreneurial   spirit, cohesive teamwork, exemplary professionalism, and leadership with a strong sense of social responsibility."
         ],
         "newsletter_path": "/static/pdfs/dapartment_data/it_newsletter.pdf",
-        "about_department": ["Department of Artificial Intelligence aims to produce computing graduates with high potency, apply, design and develop systems to pertain and to integrate both software and hardware devices, utilize modern approaches in programming and problem solving techniques."," The Department was established in the year 2020 with the main objective of providing quality education in the field of Engineering and Technology."," It is recognized as nodal center under Anna University. The Department has proved to be a center of excellence in Academic, Sponsored research and Continuing Education Programme."]
+        "about_department": ["Department of Artificial Intelligence aims to produce computing graduates with high potency, apply, design and develop systems to pertain and to integrate both software and hardware devices, utilize modern approaches in programming and problem solving techniques."," The Department was established in the year 2020 with the main objective of providing quality education in the field of Engineering and Technology."," It is recognized as nodal center under Anna University. The Department has proved to be a center of excellence in Academic, Sponsored research and Continuing Education Programme."],
+        "program_outcomes": {
+            "headings":["PO1:Engineering knowledge","PO2:Problem analysis","PO3:Design/development of solutions","PO4:Conduct investigations of complex problems","PO5:Modern tool usage","PO6:The engineer and society","PO7:Environment and sustainability","PO8:Ethics","PO9:Individual and team work","PO10:Communication","PO11:Project management and finance","PO12:Life-long learning"],
+            "content": [
+                    "Apply the knowledge of mathematics, science, engineering fundamentals, and an engineering specialization for the solution of complex engineering problems.",
+                    "Identify, formulate, research literature, and analyze complex engineering problems reaching substantiated conclusions using first principles of mathematics, natural sciences, and engineering sciences.",
+                    "Design solutions for complex engineering problems and design system components or processes that meet the specified needs with appropriate consideration for public health and safety, and cultural, societal, and environmental considerations.",
+                    "Use research-based knowledge and research methods including design of experiments, analysis and interpretation of data, and synthesis of the information to provide valid conclusions.",
+                    "Create, select, and apply appropriate techniques, resources, and modern engineering and AI and Data Science tools, including prediction and modelling to complex engineering activities, with an understanding of the limitations.",
+                    "Apply reasoning informed by the contextual knowledge to assess societal, health, safety, legal and cultural issues and the consequent responsibilities relevant to the professional engineering practice.",
+                    "Understand the impact of the professional engineering solutions in societal and environmental contexts, and demonstrate the knowledge of, and need for sustainable development.",
+                    "Apply ethical principles and commit to professional ethics and responsibilities and norms of the engineering practice.",
+                    "Function effectively as an individual, and as a member or leader in diverse teams, and in multidisciplinary settings.",
+                    "Communicate effectively on complex engineering activities with the engineering community and with the society at large, such as, being able to comprehend and write effective reports and design documentation, make effective presentations, and give and receive clear instructions.",
+                    "Demonstrate knowledge and understanding of the engineering and management principles and apply these to one’s own work, as a member and leader in a team, to manage projects and in multidisciplinary environments.",
+                    "Recognize the need for, and have the preparation and ability to engage in independent and life-long learning in the broadest context of technological change."
+                ]
+        },
+        "program_specific_outcomes": {
+            "headings":["PSO01","PSO02"],
+	        "content":[
+                "To utilize cutting-edge techniques, programming languages, and the latest Information Technology tools and platforms for solving real time applications to meet out the societal and industrial needs.",
+                "To design and develop fruitful service utilities and products for various aspects of technological needs involving different domains"
+            ]
+        },
+        "program_educational_outcomes": {
+            "headings":["PSO01","PSO02"],
+	        "content":[
+                "Apply the concepts of Artificial Intelligence to provide solutions for the real time problems and to integrate the professional skills with recent tools and technologies to cope with the dynamic AI needs.",
+                "Create a concrete foundation and enlighten the innovation, research and entrepreneur skills in the field of Artificial Intelligence and Data science."
+            ]
+        }
     },
     {
         "department_id": "012",
@@ -206,7 +514,38 @@
                 "Prepare students for advanced studies and thriving careers."
         ],
         "newsletter_path": "/static/pdfs/dapartment_data/math_newsletter.pdf",
-        "about_department": ["Since 1995, the department continues to provide mathematical skill and analytical thinking to all engineering and science graduates of this institution. Our aim is primarily on teaching and evenly on research also. The department has the faculty strength of 18 members includes 6 doctorates and 5 pursuing having an average teaching experience of 15 years. The department also trains engineering students in strong mathematical background to enhance and apply their skills to find solutions to their field specific problems. The department is a recognized nodal Centre for research under Anna University, Chennai.."]
+        "about_department": ["Since 1995, the department continues to provide mathematical skill and analytical thinking to all engineering and science graduates of this institution. Our aim is primarily on teaching and evenly on research also. The department has the faculty strength of 18 members includes 6 doctorates and 5 pursuing having an average teaching experience of 15 years. The department also trains engineering students in strong mathematical background to enhance and apply their skills to find solutions to their field specific problems. The department is a recognized nodal Centre for research under Anna University, Chennai.."],
+        "program_outcomes": {
+            "headings":["PO1:Engineering knowledge","PO2:Problem analysis","PO3:Design/development of solutions","PO4:Conduct investigations of complex problems","PO5:Modern tool usage","PO6:The engineer and society","PO7:Environment and sustainability","PO8:Ethics","PO9:Individual and team work","PO10:Communication","PO11:Project management and finance","PO12:Life-long learning"],
+            "content": [
+                    "Apply the knowledge of mathematics, science, engineering fundamentals, and an engineering specialization for the solution of complex engineering problems.",
+                    "Identify, formulate, research literature, and analyze complex engineering problems reaching substantiated conclusions using first principles of mathematics, natural sciences, and engineering sciences.",
+                    "Design solutions for complex engineering problems and design system components or processes that meet the specified needs with appropriate consideration for public health and safety, and cultural, societal, and environmental considerations.",
+                    "Use research-based knowledge and research methods including design of experiments, analysis and interpretation of data, and synthesis of the information to provide valid conclusions.",
+                    "Create, select, and apply appropriate techniques, resources, and modern engineering and AI and Data Science tools, including prediction and modelling to complex engineering activities, with an understanding of the limitations.",
+                    "Apply reasoning informed by the contextual knowledge to assess societal, health, safety, legal and cultural issues and the consequent responsibilities relevant to the professional engineering practice.",
+                    "Understand the impact of the professional engineering solutions in societal and environmental contexts, and demonstrate the knowledge of, and need for sustainable development.",
+                    "Apply ethical principles and commit to professional ethics and responsibilities and norms of the engineering practice.",
+                    "Function effectively as an individual, and as a member or leader in diverse teams, and in multidisciplinary settings.",
+                    "Communicate effectively on complex engineering activities with the engineering community and with the society at large, such as, being able to comprehend and write effective reports and design documentation, make effective presentations, and give and receive clear instructions.",
+                    "Demonstrate knowledge and understanding of the engineering and management principles and apply these to one’s own work, as a member and leader in a team, to manage projects and in multidisciplinary environments.",
+                    "Recognize the need for, and have the preparation and ability to engage in independent and life-long learning in the broadest context of technological change."
+                ]
+        },
+        "program_specific_outcomes": {
+            "headings":["PSO01","PSO02"],
+	        "content":[
+                "Apply the concepts of Artificial Intelligence to provide solutions for the real time problems and to integrate the professional skills with recent tools and technologies to cope with the dynamic AI needs.",
+                "Create a concrete foundation and enlighten the innovation, research and entrepreneur skills in the field of Artificial Intelligence and Data science."
+            ]
+        },
+        "program_educational_outcomes": {
+            "headings":["PSO01","PSO02"],
+	        "content":[
+                "Apply the concepts of Artificial Intelligence to provide solutions for the real time problems and to integrate the professional skills with recent tools and technologies to cope with the dynamic AI needs.",
+                "Create a concrete foundation and enlighten the innovation, research and entrepreneur skills in the field of Artificial Intelligence and Data science."
+            ]
+        }
     },
     {
         "department_id": "013",
@@ -223,7 +562,38 @@
             "Preparing the students for their role as Engineers in society with an awareness of ethical, environmental, economic, safety and quality issues"
         ],
         "newsletter_path": "/static/pdfs/dapartment_data/mech_newsletter.pdf",
-        "about_department": ["Mechanical Engineering is the only branch of engineering that can fit into any kind of industries, is the oldest engineering disciplines and an extremely diverse profession. Mechanical engineers are inherently multi-disciplinary and having wide range of career choices. Manufacturing has emerged as one of the high growth sectors in India.  Government aims to create 100 million new jobs in the sector in near future.The Department of Mechanical Engineering at Velammal Engineering College, Chennai started its journey in the year 1999. We have a strong undergraduate program in mechanical engineering. The Department has a distinguished record in both teaching and research. The Department is committed to provide knowledge creation, innovation and research among the students to meet challenges in Mechanical Engineering Field.  Minor degree in the area of Electric vehicle Technology and Data Science, and honours degree in the area of Robotics and Automation are offered to Mechanical Engineering Students.The department is accredited by National Board of Accreditation (NBA), New Delhi is recognized as the Nodal Research Centre by Anna University, Chennai.  Our Alumni play key role in different industrial, academic and Government organizations. The department providing value based holistic development for each student."]
+        "about_department": ["Mechanical Engineering is the only branch of engineering that can fit into any kind of industries, is the oldest engineering disciplines and an extremely diverse profession. Mechanical engineers are inherently multi-disciplinary and having wide range of career choices. Manufacturing has emerged as one of the high growth sectors in India.  Government aims to create 100 million new jobs in the sector in near future.The Department of Mechanical Engineering at Velammal Engineering College, Chennai started its journey in the year 1999. We have a strong undergraduate program in mechanical engineering. The Department has a distinguished record in both teaching and research. The Department is committed to provide knowledge creation, innovation and research among the students to meet challenges in Mechanical Engineering Field.  Minor degree in the area of Electric vehicle Technology and Data Science, and honours degree in the area of Robotics and Automation are offered to Mechanical Engineering Students.The department is accredited by National Board of Accreditation (NBA), New Delhi is recognized as the Nodal Research Centre by Anna University, Chennai.  Our Alumni play key role in different industrial, academic and Government organizations. The department providing value based holistic development for each student."],
+        "program_outcomes": {
+            "headings":["PO1:Engineering knowledge","PO2:Problem analysis","PO3:Design/development of solutions","PO4:Conduct investigations of complex problems","PO5:Modern tool usage","PO6:The engineer and society","PO7:Environment and sustainability","PO8:Ethics","PO9:Individual and team work","PO10:Communication","PO11:Project management and finance","PO12:Life-long learning"],
+            "content": [
+                    "Apply the knowledge of mathematics, science, engineering fundamentals, and an engineering specialization for the solution of complex engineering problems.",
+                    "Identify, formulate, research literature, and analyze complex engineering problems reaching substantiated conclusions using first principles of mathematics, natural sciences, and engineering sciences.",
+                    "Design solutions for complex engineering problems and design system components or processes that meet the specified needs with appropriate consideration for public health and safety, and cultural, societal, and environmental considerations.",
+                    "Use research-based knowledge and research methods including design of experiments, analysis and interpretation of data, and synthesis of the information to provide valid conclusions.",
+                    "Create, select, and apply appropriate techniques, resources, and modern engineering and AI and Data Science tools, including prediction and modelling to complex engineering activities, with an understanding of the limitations.",
+                    "Apply reasoning informed by the contextual knowledge to assess societal, health, safety, legal and cultural issues and the consequent responsibilities relevant to the professional engineering practice.",
+                    "Understand the impact of the professional engineering solutions in societal and environmental contexts, and demonstrate the knowledge of, and need for sustainable development.",
+                    "Apply ethical principles and commit to professional ethics and responsibilities and norms of the engineering practice.",
+                    "Function effectively as an individual, and as a member or leader in diverse teams, and in multidisciplinary settings.",
+                    "Communicate effectively on complex engineering activities with the engineering community and with the society at large, such as, being able to comprehend and write effective reports and design documentation, make effective presentations, and give and receive clear instructions.",
+                    "Demonstrate knowledge and understanding of the engineering and management principles and apply these to one’s own work, as a member and leader in a team, to manage projects and in multidisciplinary environments.",
+                    "Recognize the need for, and have the preparation and ability to engage in independent and life-long learning in the broadest context of technological change."
+                ]
+        },
+        "program_specific_outcomes": {
+            "headings":["PSO01","PSO02"],
+	        "content":[
+                "Graduates will have an ability to identify, formulate and analyze the problems related to design, manufacturing, thermal and materials engineering",
+                "Graduates will have an ability to implement/use appropriate techniques, programming skills, and latest/recent computer aided engineering tools/packages for modelling, simulation and analysis of mechanical engineering problems."
+            ]
+        },
+        "program_educational_outcomes": {
+            "headings":["PSO01","PSO02"],
+	        "content":[
+                "Apply the concepts of Artificial Intelligence to provide solutions for the real time problems and to integrate the professional skills with recent tools and technologies to cope with the dynamic AI needs.",
+                "Create a concrete foundation and enlighten the innovation, research and entrepreneur skills in the field of Artificial Intelligence and Data science."
+            ]
+        }
     },
     {
         "department_id": "014",
@@ -238,7 +608,38 @@
            "சமூகத்திற்குப் பயனளிக்கும் வகையில் ஒழுக்கமும் ஆளுமைத்திறனும் உடையவர்களாக உருவாக்குதல்." 
         ],
         "newsletter_path": "/static/pdfs/dapartment_data/physical_newsletter.pdf",
-        "about_department": ["தமிழர்களின் வளமான பண்பாடு, கலை, கலாச்சாரம், இலக்கியம், அறிவியல் சிந்தனைகள், பொறியியல் தொழில்நுட்பத் தகவல்கள் முதலானவற்றை மாணவர்கள் கற்கும் நோக்கில் ‘தமிழர் மரபு’ மற்றும் தமிழர் தொழில்நுட்பம்’ ஆகிய இரண்டு தனித்துவமான பாடங்களைக் கற்பிப்பதனை நோக்கமாகக் கொண்டு 2023 ஆம் ஆண்டு முதல் தமிழ்த்துறை இயங்கிவருகிறது."," மேலும் இத்துறை, மாணவர்கள் மொழி, ஆளுமைத்திறன், புதுமை படைத்தல், வாழ்வியல் அறநெறி மற்றும் பண்பாட்டு மாண்புகளைப் பெற்று, சமூகத்தோடு கூடி வாழ வழிகாட்டுகிறது."]
+        "about_department": ["தமிழர்களின் வளமான பண்பாடு, கலை, கலாச்சாரம், இலக்கியம், அறிவியல் சிந்தனைகள், பொறியியல் தொழில்நுட்பத் தகவல்கள் முதலானவற்றை மாணவர்கள் கற்கும் நோக்கில் ‘தமிழர் மரபு’ மற்றும் தமிழர் தொழில்நுட்பம்’ ஆகிய இரண்டு தனித்துவமான பாடங்களைக் கற்பிப்பதனை நோக்கமாகக் கொண்டு 2023 ஆம் ஆண்டு முதல் தமிழ்த்துறை இயங்கிவருகிறது."," மேலும் இத்துறை, மாணவர்கள் மொழி, ஆளுமைத்திறன், புதுமை படைத்தல், வாழ்வியல் அறநெறி மற்றும் பண்பாட்டு மாண்புகளைப் பெற்று, சமூகத்தோடு கூடி வாழ வழிகாட்டுகிறது."],
+        "program_outcomes": {
+            "headings":["PO1:Engineering knowledge","PO2:Problem analysis","PO3:Design/development of solutions","PO4:Conduct investigations of complex problems","PO5:Modern tool usage","PO6:The engineer and society","PO7:Environment and sustainability","PO8:Ethics","PO9:Individual and team work","PO10:Communication","PO11:Project management and finance","PO12:Life-long learning"],
+            "content": [
+                    "Apply the knowledge of mathematics, science, engineering fundamentals, and an engineering specialization for the solution of complex engineering problems.",
+                    "Identify, formulate, research literature, and analyze complex engineering problems reaching substantiated conclusions using first principles of mathematics, natural sciences, and engineering sciences.",
+                    "Design solutions for complex engineering problems and design system components or processes that meet the specified needs with appropriate consideration for public health and safety, and cultural, societal, and environmental considerations.",
+                    "Use research-based knowledge and research methods including design of experiments, analysis and interpretation of data, and synthesis of the information to provide valid conclusions.",
+                    "Create, select, and apply appropriate techniques, resources, and modern engineering and AI and Data Science tools, including prediction and modelling to complex engineering activities, with an understanding of the limitations.",
+                    "Apply reasoning informed by the contextual knowledge to assess societal, health, safety, legal and cultural issues and the consequent responsibilities relevant to the professional engineering practice.",
+                    "Understand the impact of the professional engineering solutions in societal and environmental contexts, and demonstrate the knowledge of, and need for sustainable development.",
+                    "Apply ethical principles and commit to professional ethics and responsibilities and norms of the engineering practice.",
+                    "Function effectively as an individual, and as a member or leader in diverse teams, and in multidisciplinary settings.",
+                    "Communicate effectively on complex engineering activities with the engineering community and with the society at large, such as, being able to comprehend and write effective reports and design documentation, make effective presentations, and give and receive clear instructions.",
+                    "Demonstrate knowledge and understanding of the engineering and management principles and apply these to one’s own work, as a member and leader in a team, to manage projects and in multidisciplinary environments.",
+                    "Recognize the need for, and have the preparation and ability to engage in independent and life-long learning in the broadest context of technological change."
+                ]
+        },
+        "program_specific_outcomes": {
+            "headings":["PSO01","PSO02"],
+	        "content":[
+                "Apply the concepts of Artificial Intelligence to provide solutions for the real time problems and to integrate the professional skills with recent tools and technologies to cope with the dynamic AI needs.",
+                "Create a concrete foundation and enlighten the innovation, research and entrepreneur skills in the field of Artificial Intelligence and Data science."
+            ]
+        },
+        "program_educational_outcomes": {
+            "headings":["PSO01","PSO02"],
+	        "content":[
+                "Apply the concepts of Artificial Intelligence to provide solutions for the real time problems and to integrate the professional skills with recent tools and technologies to cope with the dynamic AI needs.",
+                "Create a concrete foundation and enlighten the innovation, research and entrepreneur skills in the field of Artificial Intelligence and Data science."
+            ]
+        }
     },
     {
         "department_id": "015",
@@ -252,7 +653,38 @@
             "Prepare students for global challenges in biotechnology and healthcare."
         ],
         "newsletter_path": "/static/pdfs/dapartment_data/physics_newsletter.pdf",
-        "about_department": ["Department of Artificial Intelligence aims to produce computing graduates with high potency, apply, design and develop systems to pertain and to integrate both software and hardware devices, utilize modern approaches in programming and problem solving techniques."," The Department was established in the year 2020 with the main objective of providing quality education in the field of Engineering and Technology."," It is recognized as nodal center under Anna University. The Department has proved to be a center of excellence in Academic, Sponsored research and Continuing Education Programme."]
+        "about_department": ["Department of Artificial Intelligence aims to produce computing graduates with high potency, apply, design and develop systems to pertain and to integrate both software and hardware devices, utilize modern approaches in programming and problem solving techniques."," The Department was established in the year 2020 with the main objective of providing quality education in the field of Engineering and Technology."," It is recognized as nodal center under Anna University. The Department has proved to be a center of excellence in Academic, Sponsored research and Continuing Education Programme."],
+        "program_outcomes": {
+            "headings":["PO1:Engineering knowledge","PO2:Problem analysis","PO3:Design/development of solutions","PO4:Conduct investigations of complex problems","PO5:Modern tool usage","PO6:The engineer and society","PO7:Environment and sustainability","PO8:Ethics","PO9:Individual and team work","PO10:Communication","PO11:Project management and finance","PO12:Life-long learning"],
+            "content": [
+                    "Apply the knowledge of mathematics, science, engineering fundamentals, and an engineering specialization for the solution of complex engineering problems.",
+                    "Identify, formulate, research literature, and analyze complex engineering problems reaching substantiated conclusions using first principles of mathematics, natural sciences, and engineering sciences.",
+                    "Design solutions for complex engineering problems and design system components or processes that meet the specified needs with appropriate consideration for public health and safety, and cultural, societal, and environmental considerations.",
+                    "Use research-based knowledge and research methods including design of experiments, analysis and interpretation of data, and synthesis of the information to provide valid conclusions.",
+                    "Create, select, and apply appropriate techniques, resources, and modern engineering and AI and Data Science tools, including prediction and modelling to complex engineering activities, with an understanding of the limitations.",
+                    "Apply reasoning informed by the contextual knowledge to assess societal, health, safety, legal and cultural issues and the consequent responsibilities relevant to the professional engineering practice.",
+                    "Understand the impact of the professional engineering solutions in societal and environmental contexts, and demonstrate the knowledge of, and need for sustainable development.",
+                    "Apply ethical principles and commit to professional ethics and responsibilities and norms of the engineering practice.",
+                    "Function effectively as an individual, and as a member or leader in diverse teams, and in multidisciplinary settings.",
+                    "Communicate effectively on complex engineering activities with the engineering community and with the society at large, such as, being able to comprehend and write effective reports and design documentation, make effective presentations, and give and receive clear instructions.",
+                    "Demonstrate knowledge and understanding of the engineering and management principles and apply these to one’s own work, as a member and leader in a team, to manage projects and in multidisciplinary environments.",
+                    "Recognize the need for, and have the preparation and ability to engage in independent and life-long learning in the broadest context of technological change."
+                ]
+        },
+        "program_specific_outcomes": {
+            "headings":["PSO01","PSO02"],
+	        "content":[
+                "Apply the concepts of Artificial Intelligence to provide solutions for the real time problems and to integrate the professional skills with recent tools and technologies to cope with the dynamic AI needs.",
+                "Create a concrete foundation and enlighten the innovation, research and entrepreneur skills in the field of Artificial Intelligence and Data science."
+            ]
+        },
+        "program_educational_outcomes": {
+            "headings":["PSO01","PSO02"],
+	        "content":[
+                "Apply the concepts of Artificial Intelligence to provide solutions for the real time problems and to integrate the professional skills with recent tools and technologies to cope with the dynamic AI needs.",
+                "Create a concrete foundation and enlighten the innovation, research and entrepreneur skills in the field of Artificial Intelligence and Data science."
+            ]
+        }
     },
     {
         "department_id": "016",
@@ -279,6 +711,37 @@
             "To become a world class institution of higher learning renowned for its excellence in management and for its commitment to the holistic development of the individual and society by creating a novel approach to students through education and industry practice by encouraging value-based knowledge, thus creating a goodwill to the future generation of our country."
         ],
         "newsletter_path": "/static/pdfs/dapartment_data/physics_newsletter.pdf",
-        "about_department": ["The Department of Management Sciences (DoMS) is committed to nurturing learners into Champions, Mindful Leaders, Entrepreneurial Managers, and Innovators. With this vision, inspired by the ideology of its founder, DoMS was established in 2007."," The department is on a transformative journey to become a B-School of excellence, embracing modern learning methodologies and an outcome-based approach.", "It has implemented a choice-based credit system, a case discussion courtyard, and a hybrid learning model that integrates Bloom's taxonomy on knowledge levels."]
+        "about_department": ["The Department of Management Sciences (DoMS) is committed to nurturing learners into Champions, Mindful Leaders, Entrepreneurial Managers, and Innovators. With this vision, inspired by the ideology of its founder, DoMS was established in 2007."," The department is on a transformative journey to become a B-School of excellence, embracing modern learning methodologies and an outcome-based approach.", "It has implemented a choice-based credit system, a case discussion courtyard, and a hybrid learning model that integrates Bloom's taxonomy on knowledge levels."],
+        "program_outcomes": {
+            "headings":["PO1:Engineering knowledge","PO2:Problem analysis","PO3:Design/development of solutions","PO4:Conduct investigations of complex problems","PO5:Modern tool usage","PO6:The engineer and society","PO7:Environment and sustainability","PO8:Ethics","PO9:Individual and team work","PO10:Communication","PO11:Project management and finance","PO12:Life-long learning"],
+            "content": [
+                    "Apply the knowledge of mathematics, science, engineering fundamentals, and an engineering specialization for the solution of complex engineering problems.",
+                    "Identify, formulate, research literature, and analyze complex engineering problems reaching substantiated conclusions using first principles of mathematics, natural sciences, and engineering sciences.",
+                    "Design solutions for complex engineering problems and design system components or processes that meet the specified needs with appropriate consideration for public health and safety, and cultural, societal, and environmental considerations.",
+                    "Use research-based knowledge and research methods including design of experiments, analysis and interpretation of data, and synthesis of the information to provide valid conclusions.",
+                    "Create, select, and apply appropriate techniques, resources, and modern engineering and AI and Data Science tools, including prediction and modelling to complex engineering activities, with an understanding of the limitations.",
+                    "Apply reasoning informed by the contextual knowledge to assess societal, health, safety, legal and cultural issues and the consequent responsibilities relevant to the professional engineering practice.",
+                    "Understand the impact of the professional engineering solutions in societal and environmental contexts, and demonstrate the knowledge of, and need for sustainable development.",
+                    "Apply ethical principles and commit to professional ethics and responsibilities and norms of the engineering practice.",
+                    "Function effectively as an individual, and as a member or leader in diverse teams, and in multidisciplinary settings.",
+                    "Communicate effectively on complex engineering activities with the engineering community and with the society at large, such as, being able to comprehend and write effective reports and design documentation, make effective presentations, and give and receive clear instructions.",
+                    "Demonstrate knowledge and understanding of the engineering and management principles and apply these to one’s own work, as a member and leader in a team, to manage projects and in multidisciplinary environments.",
+                    "Recognize the need for, and have the preparation and ability to engage in independent and life-long learning in the broadest context of technological change."
+                ]
+        },
+        "program_specific_outcomes": {
+            "headings":["PSO01","PSO02"],
+	        "content":[
+                "Students should explore practical application of the management concept and to become professional managers",
+                "Students should have a strong analytical foundation in key functional areas and continously learn,improvise,adapt,energize,excel and grow"
+            ]
+        },
+        "program_educational_outcomes": {
+            "headings":["PSO01","PSO02"],
+	        "content":[
+                "Apply the concepts of Artificial Intelligence to provide solutions for the real time problems and to integrate the professional skills with recent tools and technologies to cope with the dynamic AI needs.",
+                "Create a concrete foundation and enlighten the innovation, research and entrepreneur skills in the field of Artificial Intelligence and Data science."
+            ]
+        }
     }
 ]
