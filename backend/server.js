@@ -41,7 +41,7 @@ app.get("/", (req, res) => {
 
 //Vision and Mission
 app.get('/api/department/:id', async (req, res) => {
-    const departmentId = parseInt(req.params.id); 
+    const departmentId = req.params.id.toString(); 
     const db = client.db(dbName);
     const collection = db.collection('vision_and_mission');
 
@@ -51,6 +51,25 @@ app.get('/api/department/:id', async (req, res) => {
             res.json(result);
         } else {
             res.status(404).json({ error: "Department not found" });
+        }
+    } catch (error) {
+        console.error("❌ Error fetching department data:", error);
+        res.status(500).json({ error: "Error fetching data" });
+    }
+});
+
+//Newsletter endpoint
+app.get('/api/newsletter/:id', async (req, res) => {
+    const departmentId = req.params.id.toString();
+    const db = client.db(dbName);
+    const collection = db.collection('vision_and_mission');
+
+    try {
+        const result = await collection.findOne({ department_id: departmentId }, { projection: { newsletter_path: 1, _id: 0 } });
+        if (result && result.newsletter_path) {
+            res.json({ newsletter_path: result.newsletter_path });
+        } else {
+            res.status(404).json({ error: "Newsletter path not found" });
         }
     } catch (error) {
         console.error("❌ Error fetching department data:", error);

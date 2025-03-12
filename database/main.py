@@ -108,7 +108,7 @@ def generate_unique_id(index, department, designation):
     return f"VEC-{department_id}-{designation_id}-{unique_id}"
 
 
-df = df.head(1) #Remove this line to deactivate Test settings
+#df = df.head(1) #Remove this line to deactivate Test settings
 
 df['unique_id'] = [
     generate_unique_id(i, df.at[i, 'Department Name'], df.at[i, 'Designation'])
@@ -1265,7 +1265,7 @@ def add_hostel_student_database():
     else:
         print("⚠️ No student data to insert.")
 
-#add_hostel_student_database()
+add_hostel_student_database()
 
 department_mapping1 = {
     "001": "Artificial Intelligence and Data Science (AI&DS)",
@@ -1336,7 +1336,7 @@ for department_id in os.listdir(parent_folder):
     with open(output_file, "w", encoding="utf-8") as json_file:
         json.dump(output_json, json_file, indent=4)
 
-    print(f"✅ Processed {department_name} ({department_id}) → {output_file}")
+    print(f"Processed {department_name} ({department_id}) → {output_file}")
 
 print("🎉 All department files processed successfully!")
 
