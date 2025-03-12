@@ -1152,6 +1152,14 @@ def insert_warden_hostel_data():
     
     print("inserted warden profile data")
 
+def insert_iqac_data():
+    collection = db['IQAC']
+    with open("/Velammal-Engineering-College-Backend/docs/IQAC.json","r",encoding="utf-8") as file:
+        documents = json.load(file)
+        collection.insert_many(documents)
+    
+    print("inserted IQAC data")
+
 insert_sports_Zonal_results()
 insert_sports_Zonal_images()
 insert_sports_faculty_data()
@@ -1168,6 +1176,7 @@ insert_warden_hostel_data()
 insert_incubation_data()
 insert_army_data()
 insert_navy_data()
+insert_iqac_data()
 
 def add_hostel_student_database():
     collection = db["student_database"]
