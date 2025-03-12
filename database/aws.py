@@ -1171,8 +1171,8 @@ insert_navy_data()
 
 def add_hostel_student_database():
     collection = db["student_database"]
-    storage_dir = r"/root/Velammal-Engineering-College-Backend\docs"
-    image_dir = r"/root/Velammal-Engineering-College-Backend\static\student_database"
+    storage_dir = r"/root/Velammal-Engineering-College-Backend/docs"
+    image_dir = r"/root/Velammal-Engineering-College-Backend/static/student_database"
     os.makedirs(storage_dir, exist_ok=True)  
     os.makedirs(image_dir, exist_ok=True)  
 
@@ -1220,25 +1220,38 @@ def add_hostel_student_database():
     
     def format_food_type(food_type):
         return "Non-Veg" if food_type == "Non-Vegetarian" else "Veg"
+
+    def set_year(year, department):
+        if department == 'MBA':
+            if year == 1:
+                return 5
+            elif year == 2:
+                return 6
+        elif department == 'MECSE':
+            if year == 1:
+                return 7
+            elif year == 2:
+                return 8
+        return year
         
     students = []
     for _, row in df.iterrows():
-        reg_number = str(row["Registration Number (Example : 11322207000)"])
-        
+        reg_number = str(row.get("Registration Number (Example : 11322207000)", ""))
+
         student_doc = {
-            "name": row["Name (Example : JOHN DOE K)"],
+            "name": row.get("Name (Example : JOHN DOE K)", ""),
             "registration_number": reg_number,
-            "password": hash_password(str(row["Password (Format  DD-MM-YYYY)"])),
-            "admin_number": row["Admission Number (Example : 22VEC-000)"],
-            "room_number": row["Room Number (Current)"],
-            "department": row["Department"],
-            "gender": row["Gender"],
-            "phone_number_student": row["Student Phone Number (Example : 9876543210)"],
-            "city": row["City"],
-            "foodtype": format_food_type(row["Food Type"]),
-            "year": int(row["Year of Studying"]),
+            "password": hash_password(str(row.get("Password (Format  DD-MM-YYYY)", ""))),
+            "admin_number": row.get("Admission Number (Example : 22VEC-000)", ""),
+            "room_number": row.get("Room Number (Current)", ""),
+            "department": row.get("Department", ""),
+            "gender": row.get("Gender", ""),
+            "phone_number_student": row.get("Student Phone Number (Example : 9876543210)", ""),
+            "city": row.get("City", ""),
+            "foodtype": format_food_type(row.get("Food Type", "")),
+            "year": set_year(int(row.get("Year of Studying", 0) or 0), row.get("Department", "")),
             "profile_photo_path": set_path(row.get("Student Image", ""), reg_number),
-            "block_name": row["Block Name"],
+            "block_name": row.get("Block Name", ""),
             "late_count": 0,
             "QR_path": f"/static/student_barcode/{reg_number}.png",
             "edit_status": "Approved",
