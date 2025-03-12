@@ -65,7 +65,10 @@ department_mapping = {
     "Mathematics": "012",
     "Mechancial Engineering": "013",
     "Tamil": "014",
-    "Physics": "015"
+    "Physics": "015",
+    "Master Of Business Administration": "017",
+    "Physical Education":"20",
+    "Placement":"21"
 }
 
 department_mapping1 = {
