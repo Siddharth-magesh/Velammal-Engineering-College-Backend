@@ -863,6 +863,13 @@ def insert_auto_dept_activities_details():
         collection.insert_many(documents)
     print("auto dept activities documents inserted successfully")
 
+def insert_mba_dept_activities_details():
+    collection= db['department_activities']
+    with open ("/Velammal-Engineering-College-Backend/docs/MBA-DEPT-ACT/017.json","r",encoding="utf-8") as file:
+        documents= json.load(file)
+        collection.insert_many(documents)
+    print("mba dept activities documents inserted successfully")
+
 def insert_alumni_data(directory_path='/root/Velammal-Engineering-College-Backend/docs/ALUMINI'):
     collection = db["alumni"]
 
@@ -914,6 +921,7 @@ insert_math_dept_activities_details()
 insert_eee_dept_activities_details()
 insert_civil_dept_activities_details()
 insert_auto_dept_activities_details()
+insert_mba_dept_activities_details()
 
 department_mapping = {
     "Artificial Intelligence and Data Science": "001",
