@@ -9,10 +9,10 @@
       {"id": "Syllabus", "hascontent": true},
       {"id": "Newsletter", "hascontent": false},
       {"id": "Activities", "hascontent": false},
-      {"id": "StudentActivities", "hascontent": false},
+      {"id": "StudentActivities", "hascontent": true},
       {"id": "Infrastructure", "hascontent": true},
       {"id": "SupportingStaff", "hascontent": false},
-      {"id": "Mous", "hascontent": false},
+      {"id": "Mous", "hascontent": true},
       {"id": "Research", "hascontent": true}
     ]
   },
@@ -25,11 +25,11 @@
       {"id": "Faculties", "hascontent": true},
       {"id": "Syllabus", "hascontent": true},
       {"id": "Newsletter", "hascontent": false},
-      {"id": "Activities", "hascontent": false},
-      {"id": "StudentActivities", "hascontent": false},
-      {"id": "Infrastructure", "hascontent": true},
+      {"id": "Activities", "hascontent": true},
+      {"id": "StudentActivities", "hascontent": true},
+      {"id": "Infrastructure", "hascontent": false},
       {"id": "SupportingStaff", "hascontent": false},
-      {"id": "Mous", "hascontent": false},
+      {"id": "Mous", "hascontent": true},
       {"id": "Research", "hascontent": false}
     ]
   },
@@ -44,7 +44,7 @@
       {"id": "Newsletter", "hascontent": false},
       {"id": "Activities", "hascontent": false},
       {"id": "StudentActivities", "hascontent": false},
-      {"id": "Infrastructure", "hascontent": true},
+      {"id": "Infrastructure", "hascontent": false},
       {"id": "SupportingStaff", "hascontent": false},
       {"id": "Mous", "hascontent": false},
       {"id": "Research", "hascontent": false}
@@ -59,10 +59,10 @@
       {"id": "Faculties", "hascontent": true},
       {"id": "Syllabus", "hascontent": true},
       {"id": "Newsletter", "hascontent": false},
-      {"id": "Activities", "hascontent": false},
+      {"id": "Activities", "hascontent": true},
       {"id": "StudentActivities", "hascontent": true},
-      {"id": "Infrastructure", "hascontent": true},
-      {"id": "SupportingStaff", "hascontent": false},
+      {"id": "Infrastructure", "hascontent": false},
+      {"id": "SupportingStaff", "hascontent": true},
       {"id": "Mous", "hascontent": true},
       {"id": "Research", "hascontent": false}
     ]
@@ -78,7 +78,7 @@
       {"id": "Newsletter", "hascontent": false},
       {"id": "Activities", "hascontent": false},
       {"id": "StudentActivities", "hascontent": false},
-      {"id": "Infrastructure", "hascontent": true},
+      {"id": "Infrastructure", "hascontent":false},
       {"id": "SupportingStaff", "hascontent": false},
       {"id": "Mous", "hascontent": false},
       {"id": "Research", "hascontent": false}
@@ -96,7 +96,7 @@
         {"id": "Newsletter", "hascontent": false},
         {"id": "Activities", "hascontent": true},
         {"id": "StudentActivities", "hascontent": true},
-        {"id": "Infrastructure", "hascontent": true},
+        {"id": "Infrastructure", "hascontent": false},
         {"id": "SupportingStaff", "hascontent": false},
         {"id": "Mous", "hascontent": false},
         {"id": "Research", "hascontent": false}
@@ -113,7 +113,7 @@
         {"id": "Newsletter", "hascontent": false},
         {"id": "Activities", "hascontent": true},
         {"id": "StudentActivities", "hascontent": true},
-        {"id": "Infrastructure", "hascontent": true},
+        {"id": "Infrastructure", "hascontent": false},
         {"id": "SupportingStaff", "hascontent": false},
         {"id": "Mous", "hascontent": false},
         {"id": "Research", "hascontent": false}
@@ -128,9 +128,9 @@
         {"id": "Faculties", "hascontent": true},
         {"id": "Syllabus", "hascontent": true},
         {"id": "Newsletter", "hascontent": true},
-        {"id": "Activities", "hascontent": false},
-        {"id": "StudentActivities", "hascontent": false},
-        {"id": "Infrastructure", "hascontent": true},
+        {"id": "Activities", "hascontent": true},
+        {"id": "StudentActivities", "hascontent": true},
+        {"id": "Infrastructure", "hascontent": false},
         {"id": "SupportingStaff", "hascontent": false},
         {"id": "Mous", "hascontent": false},
         {"id": "Research", "hascontent": false}
@@ -146,10 +146,10 @@
         {"id": "Syllabus", "hascontent": true},
         {"id": "Newsletter", "hascontent": false},
         {"id": "Activities", "hascontent": false},
-        {"id": "StudentActivities", "hascontent": false},
-        {"id": "Infrastructure", "hascontent": true},
+        {"id": "StudentActivities", "hascontent": true},
+        {"id": "Infrastructure", "hascontent": false},
         {"id": "SupportingStaff", "hascontent": false},
-        {"id": "Mous", "hascontent": false},
+        {"id": "Mous", "hascontent": true},
         {"id": "Research", "hascontent": false}
       ]
     },
@@ -160,11 +160,11 @@
         {"id": "Vision&Mission", "hascontent": true},
         {"id": "HeadDepartment", "hascontent": true},
         {"id": "Faculties", "hascontent": true},
-        {"id": "Syllabus", "hascontent": true},
+        {"id": "Syllabus", "hascontent": false},
         {"id": "Newsletter", "hascontent": false},
         {"id": "Activities", "hascontent": true},
         {"id": "StudentActivities", "hascontent": false},
-        {"id": "Infrastructure", "hascontent": true},
+        {"id": "Infrastructure", "hascontent": false},
         {"id": "SupportingStaff", "hascontent": false},
         {"id": "Mous", "hascontent": false},
         {"id": "Research", "hascontent": true}
@@ -181,8 +181,8 @@
         {"id": "Newsletter", "hascontent": false},
         {"id": "Activities", "hascontent": false},
         {"id": "StudentActivities", "hascontent": true},
-        {"id": "Infrastructure", "hascontent": true},
-        {"id": "SupportingStaff", "hascontent": true},
+        {"id": "Infrastructure", "hascontent": false},
+        {"id": "SupportingStaff", "hascontent": false},
         {"id": "Mous", "hascontent": true},
         {"id": "Research", "hascontent": false}
       ]
@@ -194,11 +194,11 @@
         {"id": "Vision&Mission", "hascontent": true},
         {"id": "HeadDepartment", "hascontent": true},
         {"id": "Faculties", "hascontent": true},
-        {"id": "Syllabus", "hascontent": true},
+        {"id": "Syllabus", "hascontent": false},
         {"id": "Newsletter", "hascontent": false},
         {"id": "Activities", "hascontent": false},
         {"id": "StudentActivities", "hascontent": false},
-        {"id": "Infrastructure", "hascontent": true},
+        {"id": "Infrastructure", "hascontent": false},
         {"id": "SupportingStaff", "hascontent": false},
         {"id": "Mous", "hascontent": false},
         {"id": "Research", "hascontent": false}
@@ -213,9 +213,9 @@
         {"id": "Faculties", "hascontent": true},
         {"id": "Syllabus", "hascontent": true},
         {"id": "Newsletter", "hascontent": false},
-        {"id": "Activities", "hascontent": false},
-        {"id": "StudentActivities", "hascontent": false},
-        {"id": "Infrastructure", "hascontent": true},
+        {"id": "Activities", "hascontent": true},
+        {"id": "StudentActivities", "hascontent": true},
+        {"id": "Infrastructure", "hascontent": false},
         {"id": "SupportingStaff", "hascontent": false},
         {"id": "Mous", "hascontent": false},
         {"id": "Research", "hascontent": false}
@@ -245,14 +245,51 @@
         {"id": "Vision&Mission", "hascontent": true},
         {"id": "HeadDepartment", "hascontent": true},
         {"id": "Faculties", "hascontent": true},
-        {"id": "Syllabus", "hascontent": true},
+        {"id": "Syllabus", "hascontent": false},
         {"id": "Newsletter", "hascontent": false},
         {"id": "Activities", "hascontent": true},
         {"id": "StudentActivities", "hascontent": false},
-        {"id": "Infrastructure", "hascontent": true},
+        {"id": "Infrastructure", "hascontent": false},
         {"id": "SupportingStaff", "hascontent": false},
         {"id": "Mous", "hascontent": false},
         {"id": "Research", "hascontent": true}
+      ]
+    },
+
+    
+    {
+      "deptId": "016",
+      "department_name": "ME Computer Science & Engineering (ME CSE)",
+      "content": [
+        {"id": "Vision&Mission", "hascontent": true},
+        {"id": "HeadDepartment", "hascontent": true},
+        {"id": "Faculties", "hascontent": true},
+        {"id": "Syllabus", "hascontent": true},
+        {"id": "Newsletter", "hascontent": false},
+        {"id": "Activities", "hascontent": false},
+        {"id": "StudentActivities", "hascontent": false},
+        {"id": "Infrastructure", "hascontent": false},
+        {"id": "SupportingStaff", "hascontent": false},
+        {"id": "Mous", "hascontent": false},
+        {"id": "Research", "hascontent": false}
+      ]
+    }, 
+
+    {
+      "deptId": "017",
+      "department_name": "Master of Business Administration (MBA)",
+      "content": [
+        {"id": "Vision&Mission", "hascontent": true},
+        {"id": "HeadDepartment", "hascontent": true},
+        {"id": "Faculties", "hascontent": true},
+        {"id": "Syllabus", "hascontent": true},
+        {"id": "Newsletter", "hascontent": false},
+        {"id": "Activities", "hascontent": false},
+        {"id": "StudentActivities", "hascontent": true},
+        {"id": "Infrastructure", "hascontent": false},
+        {"id": "SupportingStaff", "hascontent": false},
+        {"id": "Mous", "hascontent": true},
+        {"id": "Research", "hascontent": false}
       ]
     }
 ]
