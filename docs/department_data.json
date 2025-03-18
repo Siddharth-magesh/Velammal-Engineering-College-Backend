@@ -99,9 +99,10 @@
         "department_quotes": "Innovating chemistry, transforming the future.",
         "vision": "To be a world-renowned department of chemistry, known for its superior teaching, research, and innovation, and to cultivate a community of critical and creative thinkers capable of tackling the intricate chemical and environmental problems of the twenty-first century.",
         "mission": [
-            "Provide strong undergraduate and graduate programs that develop critical thinking, practical skills, and deep theoretical knowledge.",
-            "Conduct cutting-edge research in materials, environmental solutions, and sustainable energy.",
-            "Support industries, government, and communities while fostering innovation, entrepreneurship, and leadership."
+            "Offer graduate and undergraduate programs that give students a solid grounding in engineering chemistry, encompassing critical thinking, practical skills, and theoretical understanding. ",
+            "Carry out state-of-the-art engineering chemical research with an emphasis on innovative materials, environmental remediation, and sustainable energy.",
+            "Offer knowledge and tools to help government organizations, business associates, and local communities deal with urgent chemical and environmental issues.",
+            "Encourage our staff, instructors, and students to have an innovative, entrepreneurial, and leadership mindset."
         ],
         "newsletter_path": "/static/pdfs/newsletter/chem.pdf",
         "about_department": ["The Chemistry department is a fascinating field that combines principles from chemistry and engineering to develop innovative solutions for various industries.  Development of new materials with specific properties for applications in energy, aerospace, biomedical, and other fields.Research on sustainable energy sources, energy storage, and environmental remediation technologies.Design and optimization of chemical processes for large-scale production of chemicals, fuels, and pharmaceuticals. Development of corrosion-resistant materials and coatings for various industries."],
@@ -507,9 +508,8 @@
         "department_quotes": "Mathematics is a powerful motivator for everyone, as its journey begins with zero and stretches endlessly into infinity.",
         "vision": "To promote a deep understanding and appreciation of mathematics among engineering students, empowering them to become innovative problem-solvers, critical thinkers and leaders in their fields.",
         "mission": [
-                "Empower students with a strong academic foundation for future success.",
-                "Foster problem-solving, leadership, and teamwork skills." ,
-                "Prepare students for advanced studies and thriving careers."
+                "To develop students' competencies in a dynamic learning environment and related disciplines, cultivating problem-solving, leadership and collaboration skills. ",
+                "To provide a strong academic foundation that empowers students to pursue advanced studies and achieve success in leading industries." 
         ],
         "newsletter_path": "/static/pdfs/newsletter/math.pdf",
         "about_department": ["Since 1995, the department continues to provide mathematical skill and analytical thinking to all engineering and science graduates of this institution. Our aim is primarily on teaching and evenly on research also. The department has the faculty strength of 18 members includes 6 doctorates and 5 pursuing having an average teaching experience of 15 years. The department also trains engineering students in strong mathematical background to enhance and apply their skills to find solutions to their field specific problems. The department is a recognized nodal Centre for research under Anna University, Chennai.."],
@@ -633,8 +633,8 @@
         "department_id": "015",
         "department_name": "Physics",
         "department_image": "/static/images/department_data/physics.jpg",
-        "department_quotes": "Bridging the gap between theory and innovation, Physics drives the technology that engineers the future.",
-        "vision": "To lead in biotechnology education and research for sustainable developmentTo provide knowledge of Physics in all areas of life through transfer of fundamental technology and to do more research work.",
+        "department_quotes": "Harnessing life sciences for a better tomorrow.",
+        "vision": "To provide knowledge of Physics in all areas of life through transfer of fundamental technology and to do more research work.”",
         "mission": [
             "To offer an education of the highest quality in the field of Engineering Physics to students to do research in the field of Materials science, Nanotechnology & Environmental Engineering expose to experimental as well as theoretical bases."
         ],
@@ -658,18 +658,12 @@
                 ]
         },
         "program_specific_outcomes": {
-            "headings":["PSO01","PSO02"],
-	        "content":[
-                "Apply the concepts of Artificial Intelligence to provide solutions for the real time problems and to integrate the professional skills with recent tools and technologies to cope with the dynamic AI needs.",
-                "Create a concrete foundation and enlighten the innovation, research and entrepreneur skills in the field of Artificial Intelligence and Data science."
-            ]
+            "headings":[],
+	        "content":[]
         },
         "program_educational_outcomes": {
-            "headings":["PSO01","PSO02"],
-	        "content":[
-                "Apply the concepts of Artificial Intelligence to provide solutions for the real time problems and to integrate the professional skills with recent tools and technologies to cope with the dynamic AI needs.",
-                "Create a concrete foundation and enlighten the innovation, research and entrepreneur skills in the field of Artificial Intelligence and Data science."
-            ]
+            "headings":[],
+	        "content":[]
         }
     },
     {
