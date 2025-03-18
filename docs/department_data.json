@@ -633,15 +633,13 @@
         "department_id": "015",
         "department_name": "Physics",
         "department_image": "/static/images/department_data/physics.jpg",
-        "department_quotes": "Harnessing life sciences for a better tomorrow.",
-        "vision": "To lead in biotechnology education and research for sustainable development.",
+        "department_quotes": "Bridging the gap between theory and innovation, Physics drives the technology that engineers the future.",
+        "vision": "To lead in biotechnology education and research for sustainable developmentTo provide knowledge of Physics in all areas of life through transfer of fundamental technology and to do more research work.",
         "mission": [
-            "Provide comprehensive knowledge in biotechnology.",
-            "Encourage research in genetic engineering and bioprocess technology.",
-            "Prepare students for global challenges in biotechnology and healthcare."
+            "To offer an education of the highest quality in the field of Engineering Physics to students to do research in the field of Materials science, Nanotechnology & Environmental Engineering expose to experimental as well as theoretical bases."
         ],
         "newsletter_path": "/static/pdfs/newsletter/physics.pdf",
-        "about_department": ["Department of Artificial Intelligence aims to produce computing graduates with high potency, apply, design and develop systems to pertain and to integrate both software and hardware devices, utilize modern approaches in programming and problem solving techniques."," The Department was established in the year 2020 with the main objective of providing quality education in the field of Engineering and Technology."," It is recognized as nodal center under Anna University. The Department has proved to be a center of excellence in Academic, Sponsored research and Continuing Education Programme."],
+        "about_department": ["Department of Physics is a place for learning, fundamental research, innovation, discovery and expression. This department supports the young minds to follow their passion, explore technology, create curiosity and take up scientific challenges across the various engineering discipline. This is one of the sprawling and leading academic and research-based department. Department of Physics is recognized as Nodal Research Centre by Anna University for offering research program (Ph.D). Faculty members of Department of Physics have received Research projects worth Rs. 142 Lakhs from various funding agencies."],
         "program_outcomes": {
             "headings":["PO1:Engineering knowledge","PO2:Problem analysis","PO3:Design/development of solutions","PO4:Conduct investigations of complex problems","PO5:Modern tool usage","PO6:The engineer and society","PO7:Environment and sustainability","PO8:Ethics","PO9:Individual and team work","PO10:Communication","PO11:Project management and finance","PO12:Life-long learning"],
             "content": [
