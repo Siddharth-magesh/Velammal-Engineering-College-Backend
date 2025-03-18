@@ -1,0 +1,15 @@
+[{
+    "dept_id": "001",
+    "years": {
+      "2021": [
+        "pdfs/sample4.pdf"
+      ],
+      "2022": [
+        "pdfs/sample2.pdf",
+        "pdfs/sample3.pdf"
+      ],
+      "2023": [
+        "pdfs/sample1.pdf"
+      ]
+    }
+  }]

@@ -696,7 +696,7 @@ def insert_curriculum_and_syllabus_data():
     collection = db['curriculum_and_syllabus']  
     with open("/root/Velammal-Engineering-College-Backend/docs/curriculum_and_syllabus.json", "r",encoding="utf-8") as file:
         documents = json.load(file)
-        collection.insert_many(documents)
+        collection.insert_one(documents)
 
     print("curriculum_And_syllabus documents inserted successfully.")
 

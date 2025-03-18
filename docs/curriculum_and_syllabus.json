@@ -1,140 +1,39 @@
-[
-    {
-        "2023": [
-            {
-                "year": "For the Students admitted from 2023&2024",
-                "department": [
-                    "B.E Automobile Engineering",
-                    "B.E Civil Engineering",
-                    "B.E Computer Science and Engineering",
-                    "B.E Computer Science and Engineering (Cyber Security)",
-                    "B.E Electronics and Communication Engineering",
-                    "B.E Electrical and Electronics Engineering",
-                    "B.E Electronics and Instrumentation Engineering",
-                    "B.Tech Information Technology",
-                    "B.Tech Artificial Intelligence and Data Science",
-                    "B.E Mechanical Engineering",
-                    "M.E Computer Science and Engineering",
-                    "M.E Power Systems Engineering",
-                    "MBA - Master of Business Administration"
-                ],
-                "pdf_path": [
-                    "/static/pdfs/curriculum/002/reg_23.pdf",
-                    "/static/pdfs/curriculum/004/reg_23.pdf",
-                    "/static/pdfs/curriculum/005/reg_23.pdf",
-                    "/static/pdfs/curriculum/006/reg_23.pdf",
-                    "/static/pdfs/curriculum/009/reg_23.pdf",
-                    "/static/pdfs/curriculum/007/reg_23.pdf",
-                    "/static/pdfs/curriculum/008/reg_23.pdf",
-                    "/static/pdfs/curriculum/011/reg_23.pdf",
-                    "/static/pdfs/curriculum/001/reg_23.pdf",
-                    "/static/pdfs/curriculum/013/reg_23.pdf",
-                    "/static/pdfs/curriculum/me_cse_23.pdf",
-                    "/static/pdfs/curriculum/power_23.pdf",
-                    "/static/pdfs/curriculum/mba_23.pdf"
-                ]
-            }
+{
+    "2023": [
+      {
+        "year": "For the Students admitted from 2023&2024",
+        "department": [
+          "B.E Automobile Engineering",
+          "B.E Civil Engineering",
+          "B.E Computer Science and Engineering",
+          "B.E Computer Science and Engineering (Cyber Security)",
+          "B.E Electronics and Communication Engineering",
+          "B.E Electrical and Electronics Engineering",
+          "B.E Electronics and Instrumentation Engineering",
+          "B.Tech Information Technology",
+          "B.Tech Artificial Intelligence and Data Science",
+          "B.E Mechanical Engineering",
+          "M.E Computer Science and Engineering",
+          "M.E Power Systems Engineering",
+          "MBA - Master of Business Administration"
+        ],
+        "deptid": [
+          "002",
+          "003",
+          "004",
+          "005",
+          "006",
+          "007",
+          "008",
+          "009",
+          "001",
+          "011",
+          "012",
+          "013",
+          "014",
+          "015",
+          "010"
         ]
-    },
-    {
-        "2021": [
-            {
-                "year": "For the Students admitted from 2021&2022",
-                "department": [
-                    "B.E Automobile Engineering",
-                    "B.E Civil Engineering",
-                    "B.E Computer Science and Engineering",
-                    "B.E Electronics and Communication Engineering",
-                    "B.E Electrical and Electronics Engineering",
-                    "B.E Electronics and Instrumentation Engineering",
-                    "B.Tech Information Technology",
-                    "B.Tech Artificial Intelligence and Data Science",
-                    "B.E Mechanical Engineering",
-                    "M.E Computer Science and Engineering",
-                    "M.E Power Systems Engineering",
-                    "MBA - Master of Business Administration"
-                ],
-                "pdf_path": [
-                    "/static/pdfs/curriculum/002/reg_21.pdf",
-                    "/static/pdfs/curriculum/004/reg_21.pdf",
-                    "/static/pdfs/curriculum/005/reg_21.pdf",
-                    "/static/pdfs/curriculum/006/reg_21.pdf",
-                    "/static/pdfs/curriculum/009/reg_21.pdf",
-                    "/static/pdfs/curriculum/007/reg_21.pdf",
-                    "/static/pdfs/curriculum/008/reg_21.pdf",
-                    "/static/pdfs/curriculum/011/reg_21.pdf",
-                    "/static/pdfs/curriculum/001/reg_21.pdf",
-                    "/static/pdfs/curriculum/013/reg_21.pdf",
-                    "/static/pdfs/curriculum/me_cse_21.pdf",
-                    "/static/pdfs/curriculum/power_21.pdf",
-                    "/static/pdfs/curriculum/mba_21.pdf"
-                ]
-            }
-        ]
-    },
-    {
-        "2019": [
-            {
-                "year": "For the Students admitted from 2019&2020",
-                "department": [
-                    "B.E Automobile Engineering",
-                    "B.E Civil Engineering",
-                    "B.E Computer Science and Engineering",
-                    "B.E Electronics and Communication Engineering",
-                    "B.E Electrical and Electronics Engineering",
-                    "B.E Electronics and Instrumentation Engineering",
-                    "B.Tech Information Technology",
-                    "B.Tech Artificial Intelligence and Data Science",
-                    "B.E Mechanical Engineering",
-                    "M.E Computer Science and Engineering",
-                    "M.E Power Systems Engineering",
-                    "MBA - Master of Business Administration"
-                ],
-                "pdf_path": [
-                    "/static/pdfs/curriculum/002/reg_19.pdf",
-                    "/static/pdfs/curriculum/004/reg_19.pdf",
-                    "/static/pdfs/curriculum/005/reg_19.pdf",
-                    "/static/pdfs/curriculum/006/reg_19.pdf",
-                    "/static/pdfs/curriculum/009/reg_19.pdf",
-                    "/static/pdfs/curriculum/007/reg_19.pdf",
-                    "/static/pdfs/curriculum/008/reg_19.pdf",
-                    "/static/pdfs/curriculum/011/reg_19.pdf",
-                    "/static/pdfs/curriculum/001/reg_19.pdf",
-                    "/static/pdfs/curriculum/013/reg_19.pdf",
-                    "/static/pdfs/curriculum/me_cse_19.pdf",
-                    "/static/pdfs/curriculum/power_19.pdf",
-                    "/static/pdfs/curriculum/mba_19.pdf"
-                ]
-            }
-        ]
-    },
-    {
-        "01": [
-            {
-                "year": "Verticals",
-                "department": [
-                    "B.E Automobile Engineering",
-                    "B.E Civil Engineering",
-                    "B.E Computer Science and Engineering",
-                    "B.E Electronics and Communication Engineering",
-                    "B.E Electrical and Electronics Engineering",
-                    "B.E Electronics and Instrumentation Engineering",
-                    "B.Tech Information Technology",
-                    "B.Tech Artificial Intelligence and Data Science",
-                    "B.E Mechanical Engineering"
-                ],
-                "pdf_path": [
-                    "/static/pdfs/curriculum_and_syllabus/auto_ve.pdf",
-                    "/static/pdfs/curriculum_and_syllabus/civil_ve.pdf",
-                    "/static/pdfs/curriculum_and_syllabus/cse_ve.pdf",
-                    "/static/pdfs/curriculum_and_syllabus/ece_ve.pdf",
-                    "/static/pdfs/curriculum_and_syllabus/eee_ve.pdf",
-                    "/static/pdfs/curriculum_and_syllabus/eie_ve.pdf",
-                    "/static/pdfs/curriculum_and_syllabus/it_ve.pdf",
-                    "/static/pdfs/curriculum_and_syllabus/aids_ve.pdf",
-                    "/static/pdfs/curriculum_and_syllabus/mech_ve.pdf"
-                ]
-            }
-        ]
-    }
-]
+      }
+    ]
+}
