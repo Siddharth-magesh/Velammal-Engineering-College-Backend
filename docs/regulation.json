@@ -1,26 +1,51 @@
-[
-    {
-        "name": "R2023(B.E/B.Tech)",
+[{
+    "year": "2023",
+    "links": [
+      {
+        "name": "UG - B.E / B.Tech",
         "pdf_path": "/static/pdfs/regulation_docs/2023_be.pdf"
-    },
-    {
-        "name": "R2023(M.E)",
+      },
+      {
+        "name": "PG - ME",
         "pdf_path": "/static/pdfs/regulation_docs/2023_me.pdf"
-    },
-    {
-        "name": "R2023(MBA)",
+      },
+      {
+        "name": "PG - MBA",
         "pdf_path": "/static/pdfs/regulation_docs/2023_mba.pdf"
-    },
-    {
-        "name": "R2019(B.E/B.Tech)",
+      }
+    ]
+  },
+  {
+    "year": "2019(A)",
+    "links": [
+      {
+        "name": "UG - B.E / B.Tech",
+        "pdf_path": "/static/pdfs/regulation_docs/2019(A)_be.pdf"
+      },
+      {
+        "name": "PG - ME",
+        "pdf_path": "/static/pdfs/regulation_docs/2019(A)_be.pdf"
+      },
+      {
+        "name": "PG - MBA",
+        "pdf_path": "/static/pdfs/regulation_docs/2019(A)_be.pdf"
+      }
+    ]
+  },
+  {
+    "year": "2019",
+    "links": [
+      {
+        "name": "UG - B.E / B.Tech",
         "pdf_path": "/static/pdfs/regulation_docs/2019_be.pdf"
-    },
-    {
-        "name": "R2019(M.E)",
-        "pdf_path": "/static/pdfs/regulation_docs/2019_me.pdf"
-    },
-    {
-        "name": "R2019(MBA)",
-        "pdf_path": "/static/pdfs/regulation_docs/2019_mba.pdf"
-    }
-]
+      },
+      {
+        "name": "PG - ME",
+        "pdf_path": "/static/pdfs/regulation_docs/2019_be.pdf"
+      },
+      {
+        "name": "PG - MBA",
+        "pdf_path": "/static/pdfs/regulation_docs/2019_be.pdf"
+      }
+    ]
+  }]
