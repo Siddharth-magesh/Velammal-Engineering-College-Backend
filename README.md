@@ -1,99 +1,85 @@
+# Velammal Engineering College Main Website Backend Initializations
 
+This project contains automation code to initialize the database of the main website.
 
-# **Hostel Management System API Endpoints**  
+## System Requirements
 
-## **Student Endpoints**  
-### **Authentication**  
-- `POST /api/login` – Logs in the student  
-- `POST /api/logout` – Logs out the student  
+- Minimum **8GB RAM**
+- **Windows 10 or later** / **Linux**
+- Minimum **1GB storage**
+- **Good internet bandwidth** (highly recommended)
+- **Python 3.10 or later**
+- Required Software:
+  - Miniconda or Anaconda
+  - Git
+  - MongoDB Server & MongoDB Compass
+  - VS Code
 
-### **Pass Management**  
-- `POST /api/verify_student` – Gets the phone number and updates the student details  
-- `POST /api/submit_pass_parent_approval` – Submits the pass request to the parent  
-- `POST /api/submit_pass_warden_approval` – Submits the pass request to the warden and superior warden (sets `notify_warden=true`)  
-- `POST /api/save_draft` – Saves the draft of the pass form  
-- `GET /api/fetch_draft` – Fetches the saved draft  
-- `GET /api/get_student_pass` – Retrieves the student's submitted passes  
+## Installation Steps
 
-### **Profile & Food Requests**  
-- `POST /api/change_food_change` – Sends a request to the warden for food type change  
-- `POST /api/request_profile_update` – Sends a request to the superior warden to update profile details  
-- `GET /api/fetch_student_profile` – Fetches the student’s profile  
+### 1. Clone the Repository
 
----
+Clone the GitHub repository into a root-level folder:
 
-## **Warden Endpoints**  
-### **Authentication**  
-- `POST /api/login` – Logs in the warden  
-- `POST /api/logout` – Logs out the warden  
+```sh
+git clone https://github.com/Siddharth-magesh/Velammal-Engineering-College-Backend.git
+cd Velammal-Engineering-College-Backend
+```
 
-### **Pass Management**  
-- `GET /api/fetch_pending_passes_warden` – Fetches pending passes for approval  
-- `POST /api/warden_accept` – Approves the pass request  
-- `POST /api/warden_not_accept` – Declines the pass request  
+### 2. Create & Activate a Conda Environment
 
-### **Food Requests**  
-- `GET /api/food_requests_changes` – Fetches student-submitted food change requests  
-- `POST /api/approve_food_change` – Approves or declines food change requests  
-- `POST /api/warden_change_foodtype` – Directly changes the food type of students  
-- `GET /api/food_count` – Retrieves the count of vegetarian and non-vegetarian students  
+```sh
+conda create -n vec python=3.10
+conda activate vec
+```
 
-### **Analysis & Reports**  
-- `GET /api/fetch_waiting_members` – Fetches the names of waiting members  
-- `GET /api/fetch_late_members` – Fetches the names of members who exceeded allowed time  
-- `GET /api/pass_measures` – Provides analytics on passes (total, overtime, waiting, grouping reason)  
-- `GET /api/pass_analysis` – Analyzes passes for each reason type on the current date  
-- `GET /api/pass_analysis_by_date` – Analyzes passes for each reason on a specific date  
-- `GET /api/fetch_warden_year` – Retrieves the warden’s assigned primary years  
+### 3. Install Dependencies
 
-### **Miscellaneous**  
-- `GET /api/get_student_details` – Fetches student profiles for the warden  
-- `GET /api/sidebar_warden` – Retrieves sidebar content for the warden  
+```sh
+pip install -r requirements.txt
+```
 
----
+### 4. Configure Environment Variables
 
-## **Superior Warden Endpoints**  
-### **Authentication**  
-- `POST /api/login` – Logs in the superior warden  
-- `POST /api/logout` – Logs out the superior warden  
+Inside the `backend` folder, create a `.env` file and add the following:
 
-### **Pass & Profile Management**  
-- `GET /api/profile_request_changes` – Fetches student profile update requests  
-- `POST /api/handle_request` – Approves or rejects profile update requests  
-- `POST /api/superior_accept` – Approves pass requests  
-- `POST /api/superior_decline` – Declines pass requests  
+```
+MONGO_URI=mongodb://localhost:27017
+DB_NAME=VEC
+PORT=5000
+```
 
-### **Warden & Student Management**  
-- `GET /api/fetch_warden_details` – Fetches warden profiles  
-- `GET /api/fetch_warden_details_reallocation` – Fetches wardens for reallocation  
-- `POST /api/warden_inactive_status_handling` – Marks a warden as inactive  
-- `POST /api/warden_active_status_handling` – Marks a warden as active  
-- `POST /api/update_student_by_warden` – Updates student details directly  
-- `POST /api/update_warden_by_superior` – Updates warden profiles directly  
-- `DELETE /api/delete_student` – Deletes student or warden records  
+## Database Initialization
 
-### **Pass & Food Analytics**  
-- `GET /api/fetch_passes_for_superior` – Retrieves passes that require superior warden approval  
-- `GET /api/fetch_student_details_superior` – Fetches all student details  
-- `GET /api/food_count` – Fetches vegetarian and non-vegetarian counts  
-- `GET /api/sidebar_warden` – Retrieves sidebar content for the superior warden  
+1. **Ensure MongoDB Server is Running**
 
----
+   - Make sure you are connected to `mongosh`.
 
-## **Parent Endpoints**  
-- `POST /api/parent_accept/:pass_id` – Parent approves the pass request  
-- `POST /api/parent_not_accept/:pass_id` – Parent declines the pass request  
+2. **Navigate to the Database Folder**
 
----
+   ```sh
+   cd database
+   ```
 
-## **Security Endpoints**  
-### **Authentication**  
-- `POST /api/security_login` – Logs in the security personnel  
-- `POST /api/logout` – Logs out the security personnel  
+3. **Run the Initialization Script**
 
-### **Pass Verification**  
-- `GET /api/fetch_pass_details` – Fetches pass details for verification  
-- `POST /api/security_accept` – Approves the pass  
-- `POST /api/security_decline` – Declines the pass  
+   - If testing locally, run:
+     ```sh
+     python main.py
+     ```
+   - To insert the entire faculty database, **comment out `head(1)` in `main.py`**, around 114.  
+     Otherwise, only one record will be inserted.
 
+   - To insert the entire student database, **comment out `head(1)` in `main.py`**, around 1210.  
+     Otherwise, only one record will be inserted.
 
+   - To insert in the AWS , run:
+     ```sh
+     python aws.py
+     ```
+
+4. **Wait for Image Downloads**
+   - **Downloading may take ~10 minutes**, depending on internet speed.
+   - **Extraction may take another ~10 minutes**.
+   - Logs will be available after completion.
+   - **Do not put the system in sleep mode** while running.

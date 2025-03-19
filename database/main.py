@@ -111,7 +111,7 @@ def generate_unique_id(index, department, designation):
     return f"VEC-{department_id}-{designation_id}-{unique_id}"
 
 
-#df = df.head(1) #Remove this line to deactivate Test settings
+df = df.head(1) #Remove this line to deactivate Test settings
 
 df['unique_id'] = [
     generate_unique_id(i, df.at[i, 'Department Name'], df.at[i, 'Designation'])
@@ -591,7 +591,7 @@ def insert_MOUs_data():
 
             with open(file_path,"r") as file:
                 documents = json.load(file)
-                collection.insert_one(documents)
+                collection.insert_many(documents)
     
     print("All MOU documents have been inserted successfully.")
 
@@ -875,7 +875,7 @@ def insert_mba_dept_activities_details():
 
 def insert_newsletter():
     collection= db['news_letter']
-    with open ("/Velammal-Engineering-College-Backend/docs/newsletter.json","r",encoding="utf-8") as file:
+    with open ("/Velammal-Engineering-College-Backend/docs/news_letter.json","r",encoding="utf-8") as file:
         documents= json.load(file)
         collection.insert_many(documents)
     print("newsletter inserted successfully")
@@ -1207,7 +1207,7 @@ def add_hostel_student_database():
     csv_file_path = os.path.join(storage_dir, "VEC_Hostel_Students.csv")
 
     df = pd.read_csv(csv_file_path)
-    df = df.head(1)
+    df = df.head(1) #comment this line for getting the full student database in
 
     df.columns = df.columns.str.strip()
 
@@ -1234,7 +1234,7 @@ def add_hostel_student_database():
                 with open(image_path, "wb") as file:
                     for chunk in response.iter_content(1024):
                         file.write(chunk)
-                print(f"✅ Downloaded profile photo for {reg_number}")
+                print(f"Downloaded profile photo for {reg_number}")
                 return f"/static/images/student_profile_photos/{reg_number}.jpeg"
             else:
                 print(f"❌ Failed to download image for {reg_number} (HTTP {response.status_code})")
@@ -1289,7 +1289,7 @@ def add_hostel_student_database():
 
     if students:
         collection.insert_many(students)
-        print(f"✅ Successfully inserted {len(students)} students into MongoDB!")
+        print(f"Successfully inserted {len(students)} students into MongoDB!")
     else:
         print("⚠️ No student data to insert.")
 
@@ -1366,7 +1366,7 @@ for department_id in os.listdir(parent_folder):
 
     print(f"Processed {department_name} ({department_id}) → {output_file}")
 
-print("🎉 All department files processed successfully!")
+print("All department files processed successfully!")
 
 #OLD RESEARCH ENDPOINTS DATA INSERTIONS
 

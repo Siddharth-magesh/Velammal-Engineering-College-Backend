@@ -1,4 +1,5 @@
-{
+[
+    {
     "Departments": "006",
     "department_name": "Computer Science and Engineering (CYBER SECURITY) ",
     "MOUs": [
@@ -143,3 +144,4 @@
         }
     ]
 }
+]

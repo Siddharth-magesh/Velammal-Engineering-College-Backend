@@ -1,4 +1,5 @@
-{
+[
+    {
     "Departments": "013",
     "department_name": "Mechancial Engineering (MECH)",
     "MOUs": [
@@ -143,3 +144,4 @@
         }
     ]
 }
+]
