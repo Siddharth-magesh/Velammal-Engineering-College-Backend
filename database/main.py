@@ -66,6 +66,7 @@ department_mapping = {
     "Mechancial Engineering": "013",
     "Tamil": "014",
     "Physics": "015",
+    "Master Of Computer Science": "016",
     "Master Of Business Administration": "017",
     "Physical Education":"20",
     "Placement":"21"
@@ -86,7 +87,11 @@ department_mapping1 = {
     "Mathematics": "012",
     "Mechancial Engineering (MECH)": "013",
     "Tamil": "014",
-    "Physics": "015"
+    "Physics": "015",
+    "Master Of Computer Science": "016",
+    "Master Of Business Administration": "017",
+    "Physical Education":"020",
+    "Placement":"021"
 }
 
 designation_mapping = {
@@ -111,7 +116,7 @@ def generate_unique_id(index, department, designation):
     return f"VEC-{department_id}-{designation_id}-{unique_id}"
 
 
-df = df.head(1) #Remove this line to deactivate Test settings
+#df = df.head(1) #Remove this line to deactivate Test settings
 
 df['unique_id'] = [
     generate_unique_id(i, df.at[i, 'Department Name'], df.at[i, 'Designation'])
@@ -147,7 +152,7 @@ def download_image(
             if len(parts) >= 3:
                 department_code = parts[1]
 
-                if department_code.isdigit() and 1 <= int(department_code) <= 15:
+                if department_code.isdigit() and 1 <= int(department_code) <= 22:
                     target_folder = os.path.join(target_base_dir, f"{int(department_code):03}")
                     os.makedirs(target_folder, exist_ok=True)
 
