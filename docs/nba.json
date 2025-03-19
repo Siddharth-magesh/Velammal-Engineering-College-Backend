@@ -1,99 +1,112 @@
 [{
-    "DEPT": [
-      "Civil",
-      "CSE",
-      "EEE",
-      "ECE",
-      "E&I",
-      "IT",
-      "Mech"
-    ],
-    "year": [
-      [
-        2021,
-        2022,
-        2023,
-        2024
-      ],
-      [
-        2021,
-        2022,
-        2023,
-        2024
-      ],
-      [
-        2021,
-        2022,
-        2023,
-        2024
-      ],
-      [
-        2021,
-        2022,
-        2023,
-        2024
-      ],
-      [
-        2021,
-        2022,
-        2023,
-        2024
-      ],
-      [
-        2021,
-        2022,
-        2023,
-        2024
-      ],
-      [
-        2021,
-        2022,
-        2023,
-        2024
+  "departments": [
+    {
+      "id": 1,
+      "department": "Civil",
+      "pdfs": [
+        {
+          "name": "2021-2022",
+          "pdfs_path": "/static/pdfs/nba/2.pdf"
+        },
+        {
+          "name": "2022-2023 to 2024-2025",
+          "pdfs_path": "/static/pdfs/nba/4.pdf"
+        }
       ]
-    ],
-    "PDF_Path": [
-      [
-        "/static/pdfs/nba/2021/Civil.pdf",
-        "/static/pdfs/nba/2022/Civil.pdf",
-        "/static/pdfs/nba/2023/Civil.pdf",
-        "/static/pdfs/nba/2024/Civil.pdf"
-      ],
-      [
-        "/static/pdfs/nba/2021/CSE.pdf",
-        "/static/pdfs/nba/2022/CSE.pdf",
-        "/static/pdfs/nba/2023/CSE.pdf",
-        "/static/pdfs/nba/2024/CSE.pdf"
-      ],
-      [
-        "/static/pdfs/nba/2021/EEE.pdf",
-        "/static/pdfs/nba/2022/EEE.pdf",
-        "/static/pdfs/nba/2023/EEE.pdf",
-        "/static/pdfs/nba/2024/EEE.pdf"
-      ],
-      [
-        "/static/pdfs/nba/2021/ECE.pdf",
-        "/static/pdfs/nba/2022/ECE.pdf",
-        "/static/pdfs/nba/2023/ECE.pdf",
-        "/static/pdfs/nba/2024/ECE.pdf"
-      ],
-      [
-        "/static/pdfs/nba/2021/EI.pdf",
-        "/static/pdfs/nba/2022/EI.pdf",
-        "/static/pdfs/nba/2023/EI.pdf",
-        "/static/pdfs/nba/2024/EI.pdf"
-      ],
-      [
-        "/static/pdfs/nba/2021/IT.pdf",
-        "/static/pdfs/nba/2022/IT.pdf",
-        "/static/pdfs/nba/2023/IT.pdf",
-        "/static/pdfs/nba/2024/IT.pdf"
-      ],
-      [
-        "/static/pdfs/nba/2021/Mech.pdf",
-        "/static/pdfs/nba/2022/Mech.pdf",
-        "/static/pdfs/nba/2023/Mech.pdf",
-        "/static/pdfs/nba/2024/Mech.pdf"
+    },
+    {
+      "id": 2,
+      "department": "CSE",
+      "pdfs": [
+        {
+          "name": "2019-2020 to 2021-2022",
+          "pdfs_path": "/static/pdfs/nba/3.pdf"
+        },
+        {
+          "name": "2022-2023 to 2024-2025",
+          "pdfs_path": "/static/pdfs/nba/4.pdf"
+        }
       ]
-    ]
-  }]
+    },
+    {
+      "id": 3,
+      "department": "EEE",
+      "pdfs": [
+        {
+          "name": "2021-2022",
+          "pdfs_path": "/static/pdfs/nba/2.pdf"
+        },
+        {
+          "name": "2022-2023 to 2024-2025",
+          "pdfs_path": "/static/pdfs/nba/4.pdf"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "department": "ECE",
+      "pdfs": [
+        {
+          "name": "2019-2020 to 2021-2022",
+          "pdfs_path": "/static/pdfs/nba/3.pdf"
+        },
+        {
+          "name": "2022-2023 to 2024-2025",
+          "pdfs_path": "/static/pdfs/nba/4.pdf"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "department": "E&I",
+      "pdfs": [
+        {
+          "name": "2019-2020 to 2021-2022",
+          "pdfs_path": "/static/pdfs/nba/3.pdf"
+        },
+        {
+          "name": "2022-2023 to 2024-2025",
+          "pdfs_path": "/static/pdfs/nba/4.pdf"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "department": "IT",
+      "pdfs": [
+        {
+          "name": "2019-2020 to 2021-2022",
+          "pdfs_path": "/static/pdfs/nba/1.pdf"
+        },
+        {
+          "name": "2022-2023 to 2024-2025",
+          "pdfs_path": "/static/pdfs/nba/5.pdf"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "department": "Mech",
+      "pdfs": [
+        {
+          "name": "2019-2020 to 2021-2022",
+          "pdfs_path": "/static/pdfs/nba/1.pdf"
+        },
+        {
+          "name": "2022-2023 to 2024-2025",
+          "pdfs_path": "/static/pdfs/nba/5.pdf"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "department": "Auto",
+      "pdfs": [
+        {
+          "name": "2019-2020 to 2021-2022",
+          "pdfs_path": "/static/pdfs/nba/1.pdf"
+        }
+      ]
+    }
+  ]
+}]
