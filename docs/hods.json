@@ -36,18 +36,20 @@
         "department_name": "Mathematics",
         "Unique_id": "VEC-012-01-096",
         "Qualification": ["M.sc", "M.Phil", "PhD"],
-        "Hod_message": ["The Department of Mathematics at VEC is highly focused on imparting quality education and supports the core departments in teaching mathematics for both UG and PG students in their quest for mathematical thinking. Mathematics is one which unifies all branches of science and technology and it reflects the spirit of rationality and plays a very significant role in shaping the career of an engineering student to meet the global challenges, making Engineers to develop mathematical thoughts and applying it to solve complex engineering problems, designing mathematical models to meet the requirements."],
+        "Hod_message": ["The Department of Mathematics at VEC is highly focused on imparting quality education and supports the core departments in teaching mathematics for both UG and PG students in their quest for mathematical thinking. Mathematics is one which unifies all branches of science and technology and it reflects the spirit of rationality and plays a very significant role in shaping the career of an engineering student to meet the global challenges, making Engineers to develop mathematical thoughts and applying it to solve complex engineering problems, designing mathematical models to meet the requirements"],
         "Image": "/static/images/hods/math.jpg",
         "designation": "Professor and Head, Department of Mathematics",
         "Social_media_links": {
             "LinkedIn": "linkedin.com/in/rajeswaran-subramani-03b61349",
             "Google Scholar": "https://scholar.google.com/citations?user=hLT4dVIAAAAJ&amp;hl=en&amp;oi=sra",
             "Research Gate": "https://www.researchgate.net/profile/Rajeswaran-Subramani",
-            "Scopus": "https://www.scopus.com/authid/detail.uri?authorId=56049208900"
+            "Scopus": "https://www.scopus.com/authid/detail.uri?authorId=56049208900",
+            "Orchid Profile":"https://orcid.org/0009-0006-3944-6212"
+
         }
     },
     {
-        "Name": "JEBAMALAR",
+        "Name": "Dr.A.JEBAMALAR",
         "department_name": "Civil Engineering (CIVIL)",
         "Unique_id": "VEC-004-01-145",
         "Qualification": ["M.E", "PhD"],
@@ -85,7 +87,12 @@
         "Social_media_links": {
             "LinkedIn": "www.linkedin.com/in/dr-abdul-razak-mohamed-sikkander-51485246",
             "Google Scholar": "https://scholar.google.co.in/citations?user=M5UgVCMAAAAJ&hl=en",
-            "Scopus": "https://www.scopus.com/authid/detail.uri?authorId=57195150706"
+            "Scopus": "https://www.scopus.com/authid/detail.uri?authorId=57195150706",
+            "Orchid":"https://orcid.org/0000-0002-8458-7448",
+            "Research Gate":"https://www.researchgate.net/profile/Abdul-Razak-Mohamed-Sikkander",
+            "Publon": "https://www.webofscience.com/wos/author/record/21718142",
+            "Sciprofiles":"https://sciprofiles.com/profile/16397"
+
         }
     },
     {

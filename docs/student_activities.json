@@ -58,9 +58,9 @@
         "content": "Department 4 Content",
         "images": [
             {"image_path": "/static/images/student_activities/004/civil_1.jpg", "event_name": "Anna University   Civilization - 2024 - Overall Championship ", "image_content": "VEC Civil Engineering Department won the Overall Championship of Civilization - a national level technical symposium conducted by College of Engineering, Guindy, Anna University consecutively for 7 years.", "date": "2024"},
-            {"image_path": "/static/images/student_activities/004/civil_2.jpg", "event_name": "ANNA UNIVERSITY   CIVILIZATION - 2022 - OVERALL CHAMPIONSHIP ", "image_content": "Civil Engineering Department won the Overall Championship of Civilization - a national level technical symposium conducted by College of Engineering, Guindy, Anna University consecutively for 7 years.", "date": "2022"},
-            {"image_path": "/static/images/student_activities/004/civil_3.jpg", "event_name": "Inter-collegiate symposium ", "image_content": "Overall Trophy in Inter-collegiate symposium conducted by Dayanand Sagar College of Engineering & Technology, Bengaluru", "date": "2022"},
-            {"image_path": "/static/images/student_activities/004/civil_4.jpg", "event_name": "BAI - builders’ Association of India Oratory Competition", "image_content": "Our Students have been winning prizes every year since 2016 in the BAI - builders’ Association of India Oratory Competition.", "date": "2021"}
+            {"image_path": "/static/images/student_activities/004/civil_2.jpg", "event_name": "ANNA UNIVERSITY   CIVILIZATION - 2022 - OVERALL CHAMPIONSHIP (Students Won Anna University Civilization Overall Championship Trophy for the last 7 consecutive years)", "image_content": "Our Students were awarded 4 funded projects through IEDC for innovative project and products", "date": "2022"},
+            {"image_path": "/static/images/student_activities/004/civil_3.jpg", "event_name": "Overall Trophy in Inter-collegiate symposium conducted by Dayanand Sagar College of Engineering and Technology,Bengaluru,2022 ", "image_content": "Our Students were awarded 5 Final Year funded projects by TNSCST for modern project works", "date": "2022"},
+            {"image_path": "/static/images/student_activities/004/civil_4.jpg", "event_name": "First Prize in BAI Oratorical Competition 2021", "image_content": "Our Students have been winning prizes every year since 2016 in the BAI - builders’ Association of India Oratory Competition.", "date": "2021"}
         ] },
     {
         "dept_id": "005",

@@ -36,11 +36,13 @@
         "dept_id": "004",
         "department_name": "Civil Engineering (CIVIL)",
         "infrastructure_images": [
-            {"image_path": "/static/images/infrastructure/civil_1.jpg", "image_name": "Image 4_1", "image_content": "Description of Image 4_1"},
-            {"image_path": "/static/images/infrastructure/civil_2.jpg", "image_name": "Image 4_2", "image_content": "Description of Image 4_2"},
-            {"image_path": "/static/images/infrastructure/civil_3.jpg", "image_name": "Image 4_3", "image_content": "Description of Image 4_3"},
-            {"image_path": "/static/images/infrastructure/civil_4.jpg", "image_name": "Image 4_4", "image_content": "Description of Image 4_4"},
-            {"image_path": "/static/images/infrastructure/civil_5.jpg", "image_name": "Image 4_5", "image_content": "Description of Image 4_5"}
+            {"image_path": "/static/images/infrastructure/civil_1.jpg", "image_name": "Strength of Materials Lab", "image_content": "Strength of Materials Lab"},
+            {"image_path": "/static/images/infrastructure/civil_2.jpg", "image_name": "Fluid Mechanics and Hydraulic Machinery Lab", "image_content": "Fluid Mechanics and Hydraulic Machinery Lab"},
+            {"image_path": "/static/images/infrastructure/civil_3.jpg", "image_name": "Soil Mechanics Lab", "image_content": "Soil Mechanics Lab"},
+            {"image_path": "/static/images/infrastructure/civil_4.jpg", "image_name": "Concrete and Highway Engineering Lab", "image_content": "Concrete and Highway Engineering Lab"},
+            {"image_path": "/static/images/infrastructure/civil_5.jpg", "image_name": "Surveying Lab", "image_content": "Surveying Lab"},
+            {"image_path": "/static/images/infrastructure/civil_6.jpg", "image_name": "Environmental Engineering Lab", "image_content": "Environmental Engineering Lab"},
+            {"image_path": "/static/images/infrastructure/civil_7.jpg", "image_name": "Computer Aided Design and Drawing LabOratory", "image_content": "Computer Aided Design and Drawn Laboratory"}
         ]
     },
     {

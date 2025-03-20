@@ -172,13 +172,15 @@
             ]
         },
         "program_educational_outcomes": {
-            "headings":["PSO01","PSO02"],
+            "headings":["PSO01","PSO02","PSO03","PSO04"],
 	        "content":[
-                "Apply the concepts of Artificial Intelligence to provide solutions for the real time problems and to integrate the professional skills with recent tools and technologies to cope with the dynamic AI needs.",
-                "Create a concrete foundation and enlighten the innovation, research and entrepreneur skills in the field of Artificial Intelligence and Data science."
+                "Will be able to achieve greater heights in higher studies/research/profession.",
+                "Will have knowledge to provide feasible solutions for real world civil engineering projects.",
+                "Will have a passion for start-ups,entrepreneurship and ability to work in team/individual setup.",
+                "Will progress in lifelong learning with the consideration of human and ethical values for the betterment of society."
             ]
         }
-    },      
+    }, 
     {
         "department_id": "005",
         "department_name": "Computer Science & Engineering (CSE)",
