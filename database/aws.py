@@ -65,7 +65,11 @@ department_mapping = {
     "Mathematics": "012",
     "Mechancial Engineering": "013",
     "Tamil": "014",
-    "Physics": "015"
+    "Physics": "015",
+    "Master Of Computer Science": "016",
+    "Master Of Business Administration": "017",
+    "Physical Education":"020",
+    "Placement":"021"
 }
 
 department_mapping1 = {
@@ -83,7 +87,11 @@ department_mapping1 = {
     "Mathematics": "012",
     "Mechancial Engineering (MECH)": "013",
     "Tamil": "014",
-    "Physics": "015"
+    "Physics": "015",
+    "Master Of Computer Science": "016",
+    "Master Of Business Administration": "017",
+    "Physical Education":"020",
+    "Placement":"021"
 }
 
 designation_mapping = {
@@ -144,7 +152,7 @@ def download_image(
             if len(parts) >= 3:
                 department_code = parts[1]
 
-                if department_code.isdigit() and 1 <= int(department_code) <= 15:
+                if department_code.isdigit() and 1 <= int(department_code) <= 22:
                     target_folder = os.path.join(target_base_dir, f"{int(department_code):03}")
                     os.makedirs(target_folder, exist_ok=True)
 
@@ -877,22 +885,7 @@ def insert_newsletter():
         collection.insert_many(documents)
     print("newsletter inserted successfully")
 
-def insert_alumni_data(directory_path='/root/Velammal-Engineering-College-Backend/docs/ALUMINI'):
-    collection = db["alumni"]
 
-    for filename in os.listdir(directory_path):
-        if filename.endswith(".json"):
-            file_path = os.path.join(directory_path, filename)
-            with open(file_path, "r") as file:
-                data = json.load(file)
-                if isinstance(data, list):
-                    collection.insert_many(data)
-                elif isinstance(data, dict):
-                    collection.insert_one(data)
-                else:
-                    print(f"Unsupported data format in file: {filename}")
-
-    print("Data from JSON files has been inserted into the 'alumni' collection.")
 
 insert_department_data()
 insert_hod_datas()
@@ -914,7 +907,6 @@ insert_placement_data()
 insert_dean_and_associates_data()
 insert_curriculum_and_syllabus_data()
 insert_all_forms_data()
-insert_alumni_data()
 insert_banners()
 insert_NBA_data()
 insert_naac_data()
@@ -1105,13 +1097,13 @@ def insert_library_data():
 
     print("Library data inserted successfully.")
 
-def insert_nss_personnel():
+def insert_nss_personel():
     collection = db["nss_data"]
-    with open("/root/Velammal-Engineering-College-Backend/docs/nss_personnel.json", "r",encoding="utf-8") as file:
+    with open("/root/Velammal-Engineering-College-Backend/docs/nss_personel.json", "r",encoding="utf-8") as file:
         documents = json.load(file)
         collection.insert_many(documents)
 
-    print("nss_personnel data inserted successfully.")
+    print("nss_personel data inserted successfully.")
 
 def insert_nss_carousal():
     collection = db["nss_data"]
@@ -1136,23 +1128,23 @@ def insert_yrc_data():
 
 def insert_overall_department_research():
     collection = db['overall_research']
-    with open("/root/Velammal-Engineering-College-Backend/docs/research_data.json","r",encoding="utf-8") as file:
+    with open("/root/Velammal-Engineering-College-Backend/docs/overall_research_data.json","r",encoding="utf-8") as file:
         documents = json.load(file)
         collection.insert_one(documents)
     
     print("inserted overall research data")
 
 def insert_department_research_data():
-    collection = db['department_research_data']
+    collection = db['research_data']
     
-    folder_path = "/root/Velammal-Engineering-College-Backend/docs/new_research_data"
+    folder_path = "/root/Velammal-Engineering-College-Backend/docs/RESEARCH-DATA"
     
     for file_name in os.listdir(folder_path):
         if file_name.endswith(".json"):
             file_path = os.path.join(folder_path, file_name)
             
             try:
-                with open(file_path, "r") as file:
+                with open(file_path, "r",encoding='utf-8') as file:
                     document = json.load(file)
                     collection.insert_one(document)
             except Exception as e:
@@ -1170,7 +1162,7 @@ def insert_warden_hostel_data():
 
 def insert_iqac_data():
     collection = db['IQAC']
-    with open("/Velammal-Engineering-College-Backend/docs/IQAC.json","r",encoding="utf-8") as file:
+    with open("/root/Velammal-Engineering-College-Backend/docs/IQAC.json","r",encoding="utf-8") as file:
         documents = json.load(file)
         collection.insert_many(documents)
     
@@ -1183,7 +1175,7 @@ insert_sports_achievements_data()
 insert_other_facilties()
 insert_library_data()
 insert_sports_coordinates()
-insert_nss_personnel()
+insert_nss_personel()
 insert_nss_carousal()
 insert_yrc_data()
 insert_overall_department_research()
@@ -1292,75 +1284,3 @@ def add_hostel_student_database():
 
 #add_hostel_student_database()
 
-department_mapping1 = {
-    "001": "Artificial Intelligence and Data Science (AI&DS)",
-    "002": "Automobile Engineering (AUTO)",
-    "003": "Chemistry",
-    "004": "Civil Engineering (CIVIL)",
-    "005": "Computer Science & Engineering (CSE)",
-    "006": "Computer Science and Engineering (CYBER SECURITY)",
-    "007": "Electrical & Electronics Engineering (EEE)",
-    "008": "Electronics & Instrumentation Engineering (EIE)",
-    "009": "Electronics and Communication Engineering (ECE)",
-    "010": "English",
-    "011": "Information Technology (IT)",
-    "012": "Mathematics",
-    "013": "Mechancial Engineering (MECH)",
-    "014": "Tamil",
-    "015": "Physics"
-}
-
-parent_folder = "/root/Velammal-Engineering-College-Backend/docs/depts_fol"
-
-def convert_df_to_json(df):
-    df = df.astype(str)
-    return {col: df[col].dropna().tolist() for col in df.columns}
-
-def format_sheet_name(sheet_name):
-    return sheet_name.lower().replace(" ", "_")
-
-def extract_year_from_filename(filename):
-    match = re.search(r"(\d{4}-\d{2})", filename)
-    return match.group(1) if match else "Unknown"
-
-for department_id in os.listdir(parent_folder):
-    department_path = os.path.join(parent_folder, department_id)
-    
-    if not os.path.isdir(department_path) or department_id not in department_mapping1:
-        continue
-
-    department_name = department_mapping1[department_id]
-    
-    research_data = []
-
-    for file in os.listdir(department_path):
-        if file.endswith(".xlsx") or file.endswith(".xls"):
-            file_path = os.path.join(department_path, file)
-            
-            year = extract_year_from_filename(file)
-            xls = pd.ExcelFile(file_path)
-            
-            data_dict = {}
-
-            for sheet_name in xls.sheet_names:
-                formatted_sheet_name = format_sheet_name(sheet_name)
-                df = pd.read_excel(xls, sheet_name=sheet_name)
-                data_dict[formatted_sheet_name] = convert_df_to_json(df)
-
-            research_data.append({
-                "year": year,
-                "data": data_dict
-            })
-
-    output_json = {
-        "department_id": department_id,
-        "department_name": department_name,
-        "research_data": research_data
-    }
-    output_file = os.path.join(parent_folder, f"{department_id}.json")
-    with open(output_file, "w", encoding="utf-8") as json_file:
-        json.dump(output_json, json_file, indent=4)
-
-    print(f"✅ Processed {department_name} ({department_id}) → {output_file}")
-
-print("🎉 All department files processed successfully!")

@@ -68,8 +68,8 @@ department_mapping = {
     "Physics": "015",
     "Master Of Computer Science": "016",
     "Master Of Business Administration": "017",
-    "Physical Education":"20",
-    "Placement":"21"
+    "Physical Education":"020",
+    "Placement":"021"
 }
 
 department_mapping1 = {
@@ -236,11 +236,11 @@ def insert_educational_qualifications_per_faculty(unique_id):
             {"$set": educational_data}
         )
 
-        print(f"Update result: {result.modified_count} document(s) updated.")
+        print(f"Update result: {result.modified_count} document(s) updated.\n")
         if result.modified_count > 0:
-            print(f"Educational qualifications added for {unique_id}.")
+            print(f"Educational qualifications added for {unique_id}.\n")
         else:
-            print(f"No changes made for {unique_id}.")
+            print(f"No changes made for {unique_id}.\n")
     except Exception as e:
         print(f"Error inserting educational qualifications for {unique_id}: {e}")
 
@@ -270,25 +270,25 @@ def insert_experience(unique_id):
                 {"unique_id": unique_id},
                 {"$set": experience_data}
             )
-            print(f"Update result: {result.modified_count} document(s) updated.")
+            print(f"Update result: {result.modified_count} document(s) updated.\n")
             if result.modified_count > 0:
-                print(f"Experience data updated for {unique_id}.")
+                print(f"Experience data updated for {unique_id}.\n")
             else:
-                print(f"No changes made for {unique_id}.")
+                print(f"No changes made for {unique_id}.\n")
         else:
             experience_data["unique_id"] = unique_id
             collection.insert_one(experience_data)
-            print(f"Experience data added for {unique_id}.")
+            print(f"Experience data added for {unique_id}.\n")
         
     except Exception as e:
-        print(f"Error inserting experience data for {unique_id}: {e}")
+        print(f"Error inserting experience data for {unique_id}: {e}\n")
 
 def insert_projects(unique_id):
     folder_path = os.path.join(base_save_dir, unique_id)
     projects_file_path = os.path.join(folder_path, "PROJECTS.csv")
 
     if not os.path.exists(projects_file_path):
-        print(f"Projects file not found for {unique_id}. Skipping.")
+        print(f"Projects file not found for {unique_id}. Skipping.\n")
         return
 
     try:
@@ -309,25 +309,25 @@ def insert_projects(unique_id):
                 {"unique_id": unique_id},
                 {"$set": projects_data}
             )
-            print(f"Update result: {result.modified_count} document(s) updated.")
+            print(f"Update result: {result.modified_count} document(s) updated.\n")
             if result.modified_count > 0:
-                print(f"Projects data updated for {unique_id}.")
+                print(f"Projects data updated for {unique_id}.\n")
             else:
-                print(f"No changes made for {unique_id}.")
+                print(f"No changes made for {unique_id}.\n")
         else:
             projects_data["unique_id"] = unique_id
             collection.insert_one(projects_data)
-            print(f"Projects data added for {unique_id}.")
+            print(f"Projects data added for {unique_id}.\n")
         
     except Exception as e:
-        print(f"Error inserting projects data for {unique_id}: {e}")
+        print(f"Error inserting projects data for {unique_id}: {e}\n")
 
 def insert_patents(unique_id):
     folder_path = os.path.join(base_save_dir, unique_id)
     patents_file_path = os.path.join(folder_path, "PATENTS.csv")
 
     if not os.path.exists(patents_file_path):
-        print(f"Patents file not found for {unique_id}. Skipping.")
+        print(f"Patents file not found for {unique_id}. Skipping.\n")
         return
 
     try:
@@ -348,25 +348,25 @@ def insert_patents(unique_id):
                 {"unique_id": unique_id},
                 {"$set": patents_data}
             )
-            print(f"Update result: {result.modified_count} document(s) updated.")
+            print(f"Update result: {result.modified_count} document(s) updated.\n")
             if result.modified_count > 0:
-                print(f"Patents data updated for {unique_id}.")
+                print(f"Patents data updated for {unique_id}.\n")
             else:
-                print(f"No changes made for {unique_id}.")
+                print(f"No changes made for {unique_id}.\n")
         else:
             patents_data["unique_id"] = unique_id
             collection.insert_one(patents_data)
-            print(f"Patents data added for {unique_id}.")
+            print(f"Patents data added for {unique_id}.\n")
         
     except Exception as e:
-        print(f"Error inserting patents data for {unique_id}: {e}")
+        print(f"Error inserting patents data for {unique_id}: {e}\n")
 
 def insert_journal_publications(unique_id):
     folder_path = os.path.join(base_save_dir, unique_id)
     journal_publications_file_path = os.path.join(folder_path, "JOURNAL-PUBLICATIONS.csv")
 
     if not os.path.exists(journal_publications_file_path):
-        print(f"Journal publications file not found for {unique_id}. Skipping.")
+        print(f"Journal publications file not found for {unique_id}. Skipping.\n")
         return
 
     try:
@@ -387,25 +387,25 @@ def insert_journal_publications(unique_id):
                 {"unique_id": unique_id},
                 {"$set": journal_publications_data}
             )
-            print(f"Update result: {result.modified_count} document(s) updated.")
+            print(f"Update result: {result.modified_count} document(s) updated.\n")
             if result.modified_count > 0:
-                print(f"Journal publications data updated for {unique_id}.")
+                print(f"Journal publications data updated for {unique_id}.\n")
             else:
-                print(f"No changes made for {unique_id}.")
+                print(f"No changes made for {unique_id}.\n")
         else:
             journal_publications_data["unique_id"] = unique_id
             collection.insert_one(journal_publications_data)
-            print(f"Journal publications data added for {unique_id}.")
+            print(f"Journal publications data added for {unique_id}.\n")
         
     except Exception as e:
-        print(f"Error inserting journal publications data for {unique_id}: {e}")
+        print(f"Error inserting journal publications data for {unique_id}: {e}\n")
 
 def insert_conference_publications(unique_id):
     folder_path = os.path.join(base_save_dir, unique_id)
     conference_publications_file_path = os.path.join(folder_path, "CONFERENCE-PUBLICATIONS.csv")
 
     if not os.path.exists(conference_publications_file_path):
-        print(f"Conference publications file not found for {unique_id}. Skipping.")
+        print(f"Conference publications file not found for {unique_id}. Skipping.\n")
         return
 
     try:
@@ -426,25 +426,25 @@ def insert_conference_publications(unique_id):
                 {"unique_id": unique_id},
                 {"$set": conference_publications_data}
             )
-            print(f"Update result: {result.modified_count} document(s) updated.")
+            print(f"Update result: {result.modified_count} document(s) updated.\n")
             if result.modified_count > 0:
-                print(f"Conference publications data updated for {unique_id}.")
+                print(f"Conference publications data updated for {unique_id}.\n")
             else:
-                print(f"No changes made for {unique_id}.")
+                print(f"No changes made for {unique_id}.\n")
         else:
             conference_publications_data["unique_id"] = unique_id
             collection.insert_one(conference_publications_data)
-            print(f"Conference publications data added for {unique_id}.")
+            print(f"Conference publications data added for {unique_id}.\n")
         
     except Exception as e:
-        print(f"Error inserting conference publications data for {unique_id}: {e}")
+        print(f"Error inserting conference publications data for {unique_id}: {e}\n")
 
 def insert_book_publications(unique_id):
     folder_path = os.path.join(base_save_dir, unique_id)
     book_publications_file_path = os.path.join(folder_path, "BOOK-PUBLICATIONS.csv")
 
     if not os.path.exists(book_publications_file_path):
-        print(f"Book publications file not found for {unique_id}. Skipping.")
+        print(f"Book publications file not found for {unique_id}. Skipping.\n")
         return
 
     try:
@@ -465,25 +465,25 @@ def insert_book_publications(unique_id):
                 {"unique_id": unique_id},
                 {"$set": book_publications_data}
             )
-            print(f"Update result: {result.modified_count} document(s) updated.")
+            print(f"Update result: {result.modified_count} document(s) updated.\n")
             if result.modified_count > 0:
-                print(f"Book publications data updated for {unique_id}.")
+                print(f"Book publications data updated for {unique_id}.\n")
             else:
-                print(f"No changes made for {unique_id}.")
+                print(f"No changes made for {unique_id}.\n")
         else:
             book_publications_data["unique_id"] = unique_id
             collection.insert_one(book_publications_data)
-            print(f"Book publications data added for {unique_id}.")
+            print(f"Book publications data added for {unique_id}.\n")
         
     except Exception as e:
-        print(f"Error inserting book publications data for {unique_id}: {e}")
+        print(f"Error inserting book publications data for {unique_id}: {e}\n")
 
 def insert_research_scholars(unique_id):
     folder_path = os.path.join(base_save_dir, unique_id)
     research_scholars_file_path = os.path.join(folder_path, "RESEARCH SCHOLARS.csv")
 
     if not os.path.exists(research_scholars_file_path):
-        print(f"Research scholars file not found for {unique_id}. Skipping.")
+        print(f"Research scholars file not found for {unique_id}. Skipping.\n")
         return
 
     try:
@@ -504,35 +504,35 @@ def insert_research_scholars(unique_id):
                 {"unique_id": unique_id},
                 {"$set": research_scholars_data}
             )
-            print(f"Update result: {result.modified_count} document(s) updated.")
+            print(f"Update result: {result.modified_count} document(s) updated.\n")
             if result.modified_count > 0:
-                print(f"Research scholars data updated for {unique_id}.")
+                print(f"Research scholars data updated for {unique_id}.\n")
             else:
-                print(f"No changes made for {unique_id}.")
+                print(f"No changes made for {unique_id}.\n")
         else:
             research_scholars_data["unique_id"] = unique_id
             collection.insert_one(research_scholars_data)
-            print(f"Research scholars data added for {unique_id}.")
+            print(f"Research scholars data added for {unique_id}.\n")
         
     except Exception as e:
-        print(f"Error inserting research scholars data for {unique_id}: {e}")
+        print(f"Error inserting research scholars data for {unique_id}: {e}\n")
 
 data = df.to_dict(orient="records")
 try:
     collection.insert_many(data)
-    print(f"Successfully inserted {len(data)} documents into the '{collection_name}' collection.")
+    print(f"Successfully inserted {len(data)} documents into the '{collection_name}' collection.\n")
 except Exception as e:
-    print(f"Error inserting initial data: {e}")
+    print(f"Error inserting initial data: {e}\n")
 
 for _, row in df.iterrows():
     faculty_unique_id = row['unique_id']
     file_url = row.get('Upload Your Excel File Here', None)
     
     if not file_url:
-        print(f"No file URL provided for {faculty_unique_id}. Skipping download.")
+        print(f"No file URL provided for {faculty_unique_id}. Skipping download.\n")
         continue
     
-    print(f"Processing educational qualifications for {faculty_unique_id} with file URL: {file_url}")
+    print(f"Processing educational qualifications for {faculty_unique_id} with file URL: {file_url}\n")
     
     download_and_save_faculty_data(faculty_unique_id, file_url)
     
@@ -545,7 +545,7 @@ for _, row in df.iterrows():
     insert_journal_publications(faculty_unique_id)
     insert_research_scholars(faculty_unique_id)
 
-    print(f"Completed processing data for {faculty_unique_id}.")
+    print(f"Completed processing data for {faculty_unique_id}.\n")
 
 def insert_department_data():
     collection = db["vision_and_mission"]
@@ -553,7 +553,7 @@ def insert_department_data():
         documents = json.load(file)
         collection.insert_many(documents)
 
-    print("Department documents inserted successfully.")
+    print("Department documents inserted successfully.\n")
 
 def insert_hod_datas():
     collection = db['HODS']
@@ -561,7 +561,7 @@ def insert_hod_datas():
         documents = json.load(file)
         collection.insert_many(documents)
 
-    print("HOD documents inserted successfully.")
+    print("HOD documents inserted successfully.\n")
 
 def insert_infrastructure_data():
     collection = db["infrastructure"]
@@ -569,7 +569,7 @@ def insert_infrastructure_data():
         documents = json.load(file)
         collection.insert_many(documents)
 
-    print("Infrastructure documents inserted successfully.")
+    print("Infrastructure documents inserted successfully.\n")
 
 def insert_student_activities_data():
     collection = db['student_activities'] 
@@ -577,7 +577,7 @@ def insert_student_activities_data():
         documents = json.load(file)
         collection.insert_many(documents)
     
-    print("Student documents inserted successfully.")
+    print("Student documents inserted successfully.\n")
 
 def insert_support_staff_data():
     collection = db['support_staffs'] 
@@ -585,7 +585,7 @@ def insert_support_staff_data():
         documents = json.load(file)
         collection.insert_many(documents)
     
-    print("Support staffs documents inserted successfully.")
+    print("Support staffs documents inserted successfully.\n")
 
 def insert_MOUs_data():
     collection = db['MOUs']
@@ -598,7 +598,7 @@ def insert_MOUs_data():
                 documents = json.load(file)
                 collection.insert_many(documents)
     
-    print("All MOU documents have been inserted successfully.")
+    print("All MOU documents have been inserted successfully.\n")
 
 def insert_curriculum_data():
     collection = db['curriculum']
@@ -606,7 +606,7 @@ def insert_curriculum_data():
         documents = json.load(file)
         collection.insert_many(documents)
 
-    print("Cirrculum documents inserted successfully.")
+    print("Cirrculum documents inserted successfully.\n")
 
 def insert_events_data():
     collection = db['events']  
@@ -614,7 +614,7 @@ def insert_events_data():
         documents = json.load(file)
         collection.insert_many(documents)
 
-    print("Events documents inserted successfully.")
+    print("Events documents inserted successfully.\n")
 
 def insert_special_announcements():
     collection = db['special_announcement']  
@@ -622,7 +622,7 @@ def insert_special_announcements():
         documents = json.load(file)
         collection.insert_many(documents)
 
-    print("special_announcements documents inserted successfully.")
+    print("special_announcements documents inserted successfully.\n")
 
 def insert_announcements_data():
    
@@ -631,7 +631,7 @@ def insert_announcements_data():
         documents = json.load(file)
         collection.insert_many(documents)
 
-    print("Announcements documents inserted successfully.")
+    print("Announcements documents inserted successfully.\n")
 
 def principal_data():
     collection = db["principal_data"]
@@ -639,7 +639,7 @@ def principal_data():
         documents = json.load(file)
         collection.insert_many(documents)
 
-    print("Principals documents inserted successfully.")
+    print("Principals documents inserted successfully.\n")
 
 def insert_admin_office_data():
     collection = db['admin_office']  
@@ -647,7 +647,7 @@ def insert_admin_office_data():
         documents = json.load(file)
         collection.insert_many(documents)
 
-    print("admin office documents inserted successfully.")
+    print("admin office documents inserted successfully.\n")
 
 def insert_committee_data():
 
@@ -656,7 +656,7 @@ def insert_committee_data():
         documents = json.load(file)
         collection.insert_many(documents)
 
-    print("Committee documents inserted successfully.")
+    print("Committee documents inserted successfully.\n")
 
 def insert_regulation_data():
     collection = db['regulation']  
@@ -664,7 +664,7 @@ def insert_regulation_data():
         documents = json.load(file)
         collection.insert_many(documents)
 
-    print("regulation documents inserted successfully.")
+    print("regulation documents inserted successfully.\n")
 
 def placement_team():
     collection = db["placement_team"]
@@ -672,7 +672,7 @@ def placement_team():
         documents = json.load(file)
         collection.insert_many(documents)
 
-    print(f"Placement Team Details Inserted")
+    print(f"Placement Team Details Inserted\n")
 
 def insert_intake_data():    
     collection = db["Intakes"]        
@@ -680,7 +680,7 @@ def insert_intake_data():
         documents = json.load(file)
     collection.insert_many(documents)
 
-    print("Intake data inserted successfully.")
+    print("Intake data inserted successfully.\n")
 
 def insert_dean_and_associates_data():    
     collection = db["dean_and_associates"]        
@@ -688,7 +688,7 @@ def insert_dean_and_associates_data():
         documents = json.load(file)
     collection.insert_many(documents)
 
-    print("dean_and_associates data inserted successfully.")
+    print("dean_and_associates data inserted successfully.\n")
 
 def insert_placement_data():
 
@@ -697,7 +697,7 @@ def insert_placement_data():
         documents = json.load(file)
         collection.insert_many(documents)
 
-    print("placement documents inserted successfully.")
+    print("placement documents inserted successfully.\n")
 
 def insert_curriculum_and_syllabus_data():
 
@@ -706,7 +706,7 @@ def insert_curriculum_and_syllabus_data():
         documents = json.load(file)
         collection.insert_one(documents)
 
-    print("curriculum_And_syllabus documents inserted successfully.")
+    print("curriculum_And_syllabus documents inserted successfully.\n")
 
 def insert_banners():
     collection = db['banner']  
@@ -714,7 +714,7 @@ def insert_banners():
         documents = json.load(file)
         collection.insert_many(documents)
 
-    print("Banner documents inserted successfully.")
+    print("Banner documents inserted successfully.\n")
 
 def insert_all_forms_data():
 
@@ -723,7 +723,7 @@ def insert_all_forms_data():
         documents = json.load(file)
         collection.insert_many(documents)
 
-    print("all_forms documents inserted successfully.")
+    print("all_forms documents inserted successfully.\n")
 
 def insert_NBA_data():
     collection = db['nba']
@@ -731,35 +731,35 @@ def insert_NBA_data():
         documents = json.load(file)
         collection.insert_many(documents)
 
-    print("NBA documents inserted successfully.")
+    print("NBA documents inserted successfully.\n")
 
 def insert_naac_data():
     collection = db['naac']
     with open("/Velammal-Engineering-College-Backend/docs/naac.json", "r",encoding="utf-8") as file:
         documents = json.load(file)
         collection.insert_many(documents)
-    print("NAAC documents inserted successfully.")
+    print("NAAC documents inserted successfully.\n")
 
 def insert_nirf_data():
     collection = db['nirf']
     with open("/Velammal-Engineering-College-Backend/docs/nirf.json", "r",encoding="utf-8") as file:
         documents = json.load(file)
         collection.insert_many(documents)
-    print("NIRF documents inserted successfully.")
+    print("NIRF documents inserted successfully.\n")
 
 def insert_sidebar_details():
     collection= db['sidebar']
     with open ("/Velammal-Engineering-College-Backend/docs/sidebar.json","r",encoding="utf-8") as file:
         documents= json.load(file)
         collection.insert_many(documents)
-    print("Sidebar documents inserted successfully")
+    print("Sidebar documents inserted successfully\n")
 
 def insert_iic_details():
     collection= db['iic']
     with open ("/Velammal-Engineering-College-Backend/docs/iic.json","r",encoding="utf-8") as file:
         documents= json.load(file)
         collection.insert_one(documents)
-    print("iic documents inserted successfully")
+    print("iic documents inserted successfully\n")
 
 def process_and_combine_Department_Activities_data_for_aids(folder_path, dept_id="001"):
     COLLECTION_NAME = "department_activities"
@@ -787,7 +787,7 @@ def process_and_combine_Department_Activities_data_for_aids(folder_path, dept_id
 
     combined_activities = []
     if not os.path.exists(folder_path) or not os.listdir(folder_path):
-        print(f"Skipping '{folder_path}'. No data found for dept_id '{dept_id}'.")
+        print(f"Skipping '{folder_path}'. No data found for dept_id '{dept_id}'.\n")
         return
 
     for file_name in os.listdir(folder_path):
@@ -797,7 +797,7 @@ def process_and_combine_Department_Activities_data_for_aids(folder_path, dept_id
             combined_activities.extend(activities)
 
     if not combined_activities:
-        print(f"No activity data extracted from '{folder_path}' for dept_id '{dept_id}'. Skipping.")
+        print(f"No activity data extracted from '{folder_path}' for dept_id '{dept_id}'. Skipping.\n")
         return
     
     department_name=None
@@ -817,7 +817,7 @@ def process_and_combine_Department_Activities_data_for_aids(folder_path, dept_id
         {"$set": combined_document},
         upsert=True
     )
-    print(f"Data combined and inserted into MongoDB under dept_id '{dept_id}'.")
+    print(f"Data combined and inserted into MongoDB under dept_id '{dept_id}'.\n")
 
 aids_department_path = "/Velammal-Engineering-College-Backend/docs/AIDS-DEPT-ACT/"
 process_and_combine_Department_Activities_data_for_aids(aids_department_path)
@@ -827,80 +827,65 @@ def insert_cscb_dept_activities_details():
     with open ("/Velammal-Engineering-College-Backend/docs/CSCBS-DEPT-ACT/006.json","r",encoding="utf-8") as file:
         documents= json.load(file)
         collection.insert_many(documents)
-    print("cyber securtiy dept activities documents inserted successfully")
+    print("cyber securtiy dept activities documents inserted successfully\n")
 
 def insert_eie_dept_activities_details():
     collection= db['department_activities']
     with open ("/Velammal-Engineering-College-Backend/docs/EIE-DEPT-ACT/008.json","r",encoding="utf-8") as file:
         documents= json.load(file)
         collection.insert_many(documents)
-    print("EIE dept activities documents inserted successfully")
+    print("EIE dept activities documents inserted successfully\n")
 
 def insert_mech_dept_activities_details():
     collection= db['department_activities']
     with open ("/Velammal-Engineering-College-Backend/docs/MECH-DEPT-ACT/013.json","r",encoding="utf-8") as file:
         documents= json.load(file)
         collection.insert_many(documents)
-    print("MECH dept activities documents inserted successfully")
+    print("MECH dept activities documents inserted successfully\n")
 
 def insert_math_dept_activities_details():
     collection= db['department_activities']
     with open ("/Velammal-Engineering-College-Backend/docs/MATH-DEPT-ACT/012.json","r",encoding="utf-8") as file:
         documents= json.load(file)
         collection.insert_many(documents)
-    print("MATH dept activities documents inserted successfully")
+    print("MATH dept activities documents inserted successfully\n")
 
 def insert_eee_dept_activities_details():
     collection= db['department_activities']
     with open ("/Velammal-Engineering-College-Backend/docs/EEE-DEPT-ACT/007.json","r",encoding="utf-8") as file:
         documents= json.load(file)
         collection.insert_many(documents)
-    print("EEE dept activities documents inserted successfully")
+    print("EEE dept activities documents inserted successfully\n")
 
 def insert_civil_dept_activities_details():
     collection= db['department_activities']
     with open ("/Velammal-Engineering-College-Backend/docs/CIVIL-DEPT-ACT/004.json","r",encoding="utf-8") as file:
         documents= json.load(file)
         collection.insert_many(documents)
-    print("civil dept activities documents inserted successfully")
+    print("civil dept activities documents inserted successfully\n")
 
 def insert_auto_dept_activities_details():
     collection= db['department_activities']
     with open ("/Velammal-Engineering-College-Backend/docs/AUTO-DEPT-ACT/002.json","r",encoding="utf-8") as file:
         documents= json.load(file)
         collection.insert_many(documents)
-    print("auto dept activities documents inserted successfully")
+    print("auto dept activities documents inserted successfully\n")
 
 def insert_mba_dept_activities_details():
     collection= db['department_activities']
     with open ("/Velammal-Engineering-College-Backend/docs/MBA-DEPT-ACT/017.json","r",encoding="utf-8") as file:
         documents= json.load(file)
         collection.insert_many(documents)
-    print("mba dept activities documents inserted successfully")
+    print("mba dept activities documents inserted successfully \n")
 
 def insert_newsletter():
     collection= db['news_letter']
     with open ("/Velammal-Engineering-College-Backend/docs/news_letter.json","r",encoding="utf-8") as file:
         documents= json.load(file)
         collection.insert_many(documents)
-    print("newsletter inserted successfully")
+    print("newsletter inserted successfully \n")
 
-def insert_alumni_data(directory_path='/Velammal-Engineering-College-Backend/docs/ALUMINI'):
-    collection = db["alumni"]
 
-    for filename in os.listdir(directory_path):
-        if filename.endswith(".json"):
-            file_path = os.path.join(directory_path, filename)
-            with open(file_path, "r") as file:
-                data = json.load(file)
-                if isinstance(data, list):
-                    collection.insert_many(data)
-                elif isinstance(data, dict):
-                    collection.insert_one(data)
-                else:
-                    print(f"Unsupported data format in file: {filename}")
-
-    print("Data from JSON files has been inserted into the 'alumni' collection.")
 
 insert_department_data()
 insert_hod_datas()
@@ -922,7 +907,6 @@ insert_placement_data()
 insert_dean_and_associates_data()
 insert_curriculum_and_syllabus_data()
 insert_all_forms_data()
-insert_alumni_data()
 insert_banners()
 insert_NBA_data()
 insert_naac_data()
@@ -962,21 +946,21 @@ def insert_incubation_data():
     with open ("/Velammal-Engineering-College-Backend/docs/incubation.json","r",encoding="utf-8") as file:
         documents= json.load(file)
         collection.insert_many(documents)
-    print("Incubation documents inserted successfully")
+    print("Incubation documents inserted successfully. \n")
     
 def insert_army_data():
     collection = db['army']
     with open("/Velammal-Engineering-College-Backend/docs/ncc_army.json", "r",encoding="utf-8") as file:
         documents = json.load(file)
         collection.insert_many(documents)
-    print("armydocuments inserted successfully.")
+    print("armydocuments inserted successfully. \n")
 
 def insert_navy_data():
     collection = db['navy']
     with open("/Velammal-Engineering-College-Backend/docs/navy.json", "r",encoding="utf-8") as file:
         documents = json.load(file)
         collection.insert_many(documents)
-    print("navy documents inserted successfully.")
+    print("navy documents inserted successfully. \n")
 
 def insert_faculty_data(folder_path):
     department_name=None
@@ -985,7 +969,7 @@ def insert_faculty_data(folder_path):
     try:
         collection = db['faculty_data']
         if not os.path.exists(folder_path):
-            print(f"Error: Folder path '{folder_path}' does not exist.")
+            print(f"Error: Folder path '{folder_path}' does not exist. \n")
             return
 
         for file_name in os.listdir(folder_path):
@@ -998,7 +982,7 @@ def insert_faculty_data(folder_path):
                 try:
                     df = pd.read_excel(file_path)
                 except Exception as e:
-                    print(f"Error reading Excel file '{file_name}': {e}")
+                    print(f"Error reading Excel file '{file_name}': {e}\n")
                     continue
                 required_columns = [
                     "Name", "Designation", "Photo", "Google Scholar Profile",
@@ -1007,7 +991,7 @@ def insert_faculty_data(folder_path):
                 ]
                 missing_columns = [col for col in required_columns if col not in df.columns]
                 if missing_columns:
-                    print(f"Error: Missing columns in '{file_name}': {missing_columns}")
+                    print(f"Error: Missing columns in '{file_name}': {missing_columns}\n")
                     continue 
 
                 faculty_list = []
@@ -1029,7 +1013,7 @@ def insert_faculty_data(folder_path):
                         }
                         faculty_list.append(faculty_data)
                     except Exception as e:
-                        print(f"Error processing row {index} in '{file_name}': {e}")
+                        print(f"Error processing row {index} in '{file_name}': {e}\n")
                 for name, id in department_mapping1.items() :
                     if id==dept_id:
                         department_name=name
@@ -1044,13 +1028,13 @@ def insert_faculty_data(folder_path):
                     try:
                         collection.insert_one(department_document)
                     except Exception as e:
-                        print(f"Error inserting document for '{dept_id}' into MongoDB: {e}")
+                        print(f"Error inserting document for '{dept_id}' into MongoDB: {e}\n")
                 else:
-                    print(f"No valid faculty data to insert for '{file_name}'.")
+                    print(f"No valid faculty data to insert for '{file_name}'.\n")
     except Exception as e:
-        print(f"Unexpected error: {e}")
+        print(f"Unexpected error: {e}\n")
 
-    print("Faculty Data Insertion Done")
+    print("Faculty Data Insertion Done\n")
     return
 
 insert_faculty_data(folder_path=r"/Velammal-Engineering-College-Backend/docs/STAFF-DATA/")
@@ -1063,7 +1047,7 @@ def insert_sports_Zonal_results():
         documents = json.load(file)
         collection.insert_many(documents)
 
-    print("Sports Zonal data inserted successfully.")
+    print("Sports Zonal data inserted successfully.\n")
 
 def insert_sports_Zonal_images():
     collection = db["sports_data"]
@@ -1071,7 +1055,7 @@ def insert_sports_Zonal_images():
         documents = json.load(file)
         collection.insert_many(documents)
 
-    print("Sports Zonal images data inserted successfully.")
+    print("Sports Zonal images data inserted successfully.\n")
 
 def insert_sports_faculty_data():
     collection = db["sports_data"]
@@ -1079,7 +1063,7 @@ def insert_sports_faculty_data():
         documents = json.load(file)
         collection.insert_one(documents)
 
-    print("sports faculty data inserted successfully.")
+    print("sports faculty data inserted successfully.\n")
 
 def insert_sports_achievements_data():
     collection = db["sports_data"]
@@ -1087,7 +1071,7 @@ def insert_sports_achievements_data():
         documents = json.load(file)
         collection.insert_one(documents)
 
-    print("sports achievements data inserted successfully.")
+    print("sports achievements data inserted successfully.\n")
 
 def insert_sports_coordinates():
     collection = db["sports_data"]
@@ -1095,7 +1079,7 @@ def insert_sports_coordinates():
         documents = json.load(file)
         collection.insert_many(documents)
 
-    print("sports coordinates data inserted successfully.")
+    print("sports coordinates data inserted successfully.\n")
 
 def insert_other_facilties():
     collection = db["other_facilties"]
@@ -1103,7 +1087,7 @@ def insert_other_facilties():
         documents = json.load(file)
         collection.insert_many(documents)
 
-    print("Other Facilties data inserted successfully.")
+    print("Other Facilties data inserted successfully.\n")
 
 def insert_library_data():
     collection = db["library"]
@@ -1111,15 +1095,15 @@ def insert_library_data():
         documents = json.load(file)
         collection.insert_many(documents)
 
-    print("Library data inserted successfully.")
+    print("Library data inserted successfully.\n")
 
-def insert_nss_personnel():
+def insert_nss_personel():
     collection = db["nss_data"]
-    with open("/Velammal-Engineering-College-Backend/docs/nss_personnel.json", "r",encoding="utf-8") as file:
+    with open("/Velammal-Engineering-College-Backend/docs/nss_personel.json", "r",encoding="utf-8") as file:
         documents = json.load(file)
         collection.insert_many(documents)
 
-    print("nss_personnel data inserted successfully.")
+    print("nss_personnel data inserted successfully.\n")
 
 def insert_nss_carousal():
     collection = db["nss_data"]
@@ -1127,7 +1111,7 @@ def insert_nss_carousal():
         documents = json.load(file)
         collection.insert_many(documents)
     
-    print("nss_carousal data inserted successfully.")
+    print("nss_carousal data inserted successfully.\n")
 
 def insert_yrc_data():
     collection = db["yrc_data"]
@@ -1135,38 +1119,38 @@ def insert_yrc_data():
         documents = json.load(file)
         collection.insert_many(documents)
 
-    print("yrc_carousal data inserted successfully.")
+    print("yrc_carousal data inserted successfully.\n")
 
     with open("/Velammal-Engineering-College-Backend/docs/yrc_personnel.json", "r",encoding="utf-8") as file:
         documents = json.load(file)
         collection.insert_many(documents)
-    print("yrc_personnel data inserted successfully.")
+    print("yrc_personnel data inserted successfully.\n")
 
 def insert_overall_department_research():
     collection = db['overall_research']
-    with open("/Velammal-Engineering-College-Backend/docs/research_data.json","r",encoding="utf-8") as file:
+    with open("/Velammal-Engineering-College-Backend/docs/overall_research_data.json","r",encoding="utf-8") as file:
         documents = json.load(file)
         collection.insert_one(documents)
     
-    print("inserted overall research data")
+    print("Inserted overall research data.\n")
 
 def insert_department_research_data():
-    collection = db['department_research_data']
+    collection = db['research_data']
     
-    folder_path = "/Velammal-Engineering-College-Backend/docs/new_research_data"
+    folder_path = "/Velammal-Engineering-College-Backend/docs/RESEARCH-DATA"
     
     for file_name in os.listdir(folder_path):
         if file_name.endswith(".json"):
             file_path = os.path.join(folder_path, file_name)
             
             try:
-                with open(file_path, "r") as file:
+                with open(file_path, "r",encoding='utf-8') as file:
                     document = json.load(file)
                     collection.insert_one(document)
             except Exception as e:
                 print(f"Error inserting {file_name}: {e}")
     
-    print("All available Department Research documents inserted successfully.")
+    print("All available Department Research documents inserted successfully.\n")
 
 def insert_warden_hostel_data():
     collection = db['warden_profile']
@@ -1174,7 +1158,7 @@ def insert_warden_hostel_data():
         documents = json.load(file)
         collection.insert_many(documents)
     
-    print("inserted warden profile data")
+    print("Inserted warden profile data. \n")
 
 def insert_iqac_data():
     collection = db['IQAC']
@@ -1182,7 +1166,7 @@ def insert_iqac_data():
         documents = json.load(file)
         collection.insert_many(documents)
     
-    print("inserted IQAC data")
+    print("Inserted IQAC data successfully.\n")
 
 insert_sports_Zonal_results()
 insert_sports_Zonal_images()
@@ -1191,7 +1175,7 @@ insert_sports_achievements_data()
 insert_other_facilties()
 insert_library_data()
 insert_sports_coordinates()
-insert_nss_personnel()
+insert_nss_personel()
 insert_nss_carousal()
 insert_yrc_data()
 insert_overall_department_research()
@@ -1300,140 +1284,5 @@ def add_hostel_student_database():
 
 add_hostel_student_database()
 
-department_mapping1 = {
-    "001": "Artificial Intelligence and Data Science (AI&DS)",
-    "002": "Automobile Engineering (AUTO)",
-    "003": "Chemistry",
-    "004": "Civil Engineering (CIVIL)",
-    "005": "Computer Science & Engineering (CSE)",
-    "006": "Computer Science and Engineering (CYBER SECURITY)",
-    "007": "Electrical & Electronics Engineering (EEE)",
-    "008": "Electronics & Instrumentation Engineering (EIE)",
-    "009": "Electronics and Communication Engineering (ECE)",
-    "010": "English",
-    "011": "Information Technology (IT)",
-    "012": "Mathematics",
-    "013": "Mechancial Engineering (MECH)",
-    "014": "Tamil",
-    "015": "Physics"
-}
-
-parent_folder = "/Velammal-Engineering-College-Backend/docs/depts_fol"
-
-def convert_df_to_json(df):
-    df = df.astype(str)
-    return {col: df[col].dropna().tolist() for col in df.columns}
-
-def format_sheet_name(sheet_name):
-    return sheet_name.lower().replace(" ", "_")
-
-def extract_year_from_filename(filename):
-    match = re.search(r"(\d{4}-\d{2})", filename)
-    return match.group(1) if match else "Unknown"
-
-for department_id in os.listdir(parent_folder):
-    department_path = os.path.join(parent_folder, department_id)
-    
-    if not os.path.isdir(department_path) or department_id not in department_mapping1:
-        continue
-
-    department_name = department_mapping1[department_id]
-    
-    research_data = []
-
-    for file in os.listdir(department_path):
-        if file.endswith(".xlsx") or file.endswith(".xls"):
-            file_path = os.path.join(department_path, file)
-            
-            year = extract_year_from_filename(file)
-            xls = pd.ExcelFile(file_path)
-            
-            data_dict = {}
-
-            for sheet_name in xls.sheet_names:
-                formatted_sheet_name = format_sheet_name(sheet_name)
-                df = pd.read_excel(xls, sheet_name=sheet_name)
-                data_dict[formatted_sheet_name] = convert_df_to_json(df)
-
-            research_data.append({
-                "year": year,
-                "data": data_dict
-            })
-
-    output_json = {
-        "department_id": department_id,
-        "department_name": department_name,
-        "research_data": research_data
-    }
-    output_file = os.path.join(parent_folder, f"{department_id}.json")
-    with open(output_file, "w", encoding="utf-8") as json_file:
-        json.dump(output_json, json_file, indent=4)
-
-    print(f"Processed {department_name} ({department_id}) → {output_file}")
-
-print("All department files processed successfully!")
-
-#OLD RESEARCH ENDPOINTS DATA INSERTIONS
-
-'''def upload_research_data(folder_path):
-    collection = db['research_data']
-    for filename in os.listdir(folder_path):
-        if filename.endswith('.json'):
-            file_path = os.path.join(folder_path, filename)
-            with open(file_path, 'r') as file:
-                try:
-                    data = json.load(file)
-                    dept_id = filename.split('.')[0]
-                    if dept_id not in department_mapping.values():
-                        print(f"Skipping unrecognized dept_id: {dept_id}")
-                        continue
-
-                    collection.insert_one({"dept_id": dept_id, "data": data})
-                    print(f"✅ Successfully inserted data for {dept_id}")
-
-                except json.JSONDecodeError as e:
-                    print(f"❌ Error decoding JSON from {filename}: {e}")
-                except Exception as e:
-                    print(f"❌ Error processing {filename}: {e}")
-
-folder_path = r'/Velammal-Engineering-College-Backend/docs/RESEARCH-DATA'
-upload_research_data(folder_path)'''
 
 
-#OLD NSS ENDPOINTS DATA INSERTIONS
-
-'''def insert_nss_podcast():
-    collection= db['nsspodcast']
-    with open ("/Velammal-Engineering-College-Backend/docs/nsspodcast.json","r") as file:
-        documents= json.load(file)
-        collection.insert_many(documents)
-    print("NSS_Podcast documents inserted successfully")
-
-def insert_nss_home_data():
-    collection = db["nsshome"]
-    with open("/Velammal-Engineering-College-Backend/docs/nss_home.json", "r") as file:
-        documents = json.load(file)
-        collection.insert_one(documents)
-
-    print("NSS home data inserted successfully.")
-
-def insert_nss_events():
-    collection = db["nssgallery"]
-    with open("/Velammal-Engineering-College-Backend/docs/nss_gallery.json", "r") as file:
-        documents = json.load(file)
-        collection.insert_many(documents)
-
-    print("NSS gallery data inserted successfully.")
-
-def insert_nss_faculty_data():
-    collection = db["nss_faculty"]
-    with open("/Velammal-Engineering-College-Backend/docs/nss_faculty.json", "r") as file:
-        documents = json.load(file)
-        collection.insert_one(documents)
-
-    print("NSS faculty data inserted successfully.")
-
-insert_nss_podcast()
-insert_nss_home_data()
-insert_nss_events()
-insert_nss_faculty_data()'''
