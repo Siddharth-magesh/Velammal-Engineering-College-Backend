@@ -1,15 +1,19 @@
-[{
-    "dept_id": "001",
+[
+  {
+    "dept_id": "004",
     "years": {
+      "2020": [
+        "/static/pdfs/newsletter/004/2020.pdf "
+      ],
       "2021": [
-        "pdfs/sample4.pdf"
+        "/static/pdfs/newsletter/004/2021.pdf"
       ],
       "2022": [
-        "pdfs/sample2.pdf",
-        "pdfs/sample3.pdf"
+        "/static/pdfs/newsletter/004/2022.pdf"
       ],
       "2023": [
-        "pdfs/sample1.pdf"
+        "/static/pdfs/newsletter/004/2023.pdf"
       ]
     }
-  }]
+  }
+ ]

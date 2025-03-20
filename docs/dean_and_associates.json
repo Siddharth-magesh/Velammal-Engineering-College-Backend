@@ -1,7 +1,4 @@
 [{
-    "_id": {
-      "$oid": "67d002220ffc1a366fa9e83e"
-    },
     "Position": "Academics",
     "Dean": "Dr. A. Jebamalar",
     "Dean_Type": "Dean",
@@ -15,9 +12,6 @@
     "Associate_dean_unique_id": "VEC-001-01-001"
   },
   {
-    "_id": {
-      "$oid": "67d002220ffc1a366fa9e83f"
-    },
     "Position": "Planning and Development",
     "Dean": "Dr. Jeeva Katiravan",
     "Dean_Type": "Dean",
@@ -29,9 +23,6 @@
     "Associate_Dean_Image": "/static/images/dean_and_associates/dr_s_rajalakshmi.JPG"
   },
   {
-    "_id": {
-      "$oid": "67d002220ffc1a366fa9e840"
-    },
     "Position": "Student Development and Welfare",
     "Dean": "Dr. S. Shahil Kirupavathy",
     "Dean_Type": "Dean",
@@ -43,9 +34,6 @@
     "Associate_Dean_Image": "/static/images/dean_and_associates/dr_geetha_r.JPG"
   },
   {
-    "_id": {
-      "$oid": "67d002220ffc1a366fa9e841"
-    },
     "Position": "Faculty Development and Welfare",
     "Dean": "Dr. S Mary Jones",
     "Dean_Type": "Dean",
@@ -53,9 +41,6 @@
     "Dean_Image": "/static/images/dean_and_associates/dr_s_mary_jones.JPG"
   },
   {
-    "_id": {
-      "$oid": "67d002220ffc1a366fa9e842"
-    },
     "Position": "Research and Development",
     "Associate_Dean": "Dr. S. Bhaskara Sethupathy",
     "Ass_Dean_Type": "Associate Dean",
@@ -63,9 +48,6 @@
     "Associate_Dean_Image": "/static/images/dean_and_associates/dr_s_bhaskara_sethupathy.JPG"
   },
   {
-    "_id": {
-      "$oid": "67d002220ffc1a366fa9e843"
-    },
     "Position": "Accreditations and Ranking",
     "Dean": "Dr. E Ganapathy Sundaram",
     "Dean_Type": "Dean",
@@ -77,9 +59,6 @@
     "Associate_Dean_Image": "/static/images/dean_and_associates/dr_p_visu.JPG"
   },
   {
-    "_id": {
-      "$oid": "67d002220ffc1a366fa9e844"
-    },
     "Position": "Corporate Relations and Higher Studies",
     "Dean": "Mr. Arun Ramasamy",
     "Dean_Type": "Dean",

@@ -588,7 +588,7 @@ def insert_MOUs_data():
 
             with open(file_path,"r") as file:
                 documents = json.load(file)
-                collection.insert_one(documents)
+                collection.insert_many(documents)
     
     print("All MOU documents have been inserted successfully.")
 
@@ -1364,68 +1364,3 @@ for department_id in os.listdir(parent_folder):
     print(f"✅ Processed {department_name} ({department_id}) → {output_file}")
 
 print("🎉 All department files processed successfully!")
-
-#OLD RESEARCH ENDPOINTS DATA INSERTIONS
-
-'''def upload_research_data(folder_path):
-    collection = db['research_data']
-    for filename in os.listdir(folder_path):
-        if filename.endswith('.json'):
-            file_path = os.path.join(folder_path, filename)
-            with open(file_path, 'r') as file:
-                try:
-                    data = json.load(file)
-                    dept_id = filename.split('.')[0]
-                    if dept_id not in department_mapping.values():
-                        print(f"Skipping unrecognized dept_id: {dept_id}")
-                        continue
-
-                    collection.insert_one({"dept_id": dept_id, "data": data})
-                    print(f"✅ Successfully inserted data for {dept_id}")
-
-                except json.JSONDecodeError as e:
-                    print(f"❌ Error decoding JSON from {filename}: {e}")
-                except Exception as e:
-                    print(f"❌ Error processing {filename}: {e}")
-
-folder_path = r'/root/Velammal-Engineering-College-Backend/docs/RESEARCH-DATA'
-upload_research_data(folder_path)'''
-
-
-#OLD NSS ENDPOINTS DATA INSERTIONS
-
-'''def insert_nss_podcast():
-    collection= db['nsspodcast']
-    with open ("/root/Velammal-Engineering-College-Backend/docs/nsspodcast.json","r") as file:
-        documents= json.load(file)
-        collection.insert_many(documents)
-    print("NSS_Podcast documents inserted successfully")
-
-def insert_nss_home_data():
-    collection = db["nsshome"]
-    with open("/root/Velammal-Engineering-College-Backend/docs/nss_home.json", "r") as file:
-        documents = json.load(file)
-        collection.insert_one(documents)
-
-    print("NSS home data inserted successfully.")
-
-def insert_nss_events():
-    collection = db["nssgallery"]
-    with open("/root/Velammal-Engineering-College-Backend/docs/nss_gallery.json", "r") as file:
-        documents = json.load(file)
-        collection.insert_many(documents)
-
-    print("NSS gallery data inserted successfully.")
-
-def insert_nss_faculty_data():
-    collection = db["nss_faculty"]
-    with open("/root/Velammal-Engineering-College-Backend/docs/nss_faculty.json", "r") as file:
-        documents = json.load(file)
-        collection.insert_one(documents)
-
-    print("NSS faculty data inserted successfully.")
-
-insert_nss_podcast()
-insert_nss_home_data()
-insert_nss_events()
-insert_nss_faculty_data()'''
