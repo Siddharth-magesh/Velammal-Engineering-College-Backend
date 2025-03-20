@@ -1,62 +1,65 @@
-[
-    {
-        "name": "Kalpana M",
-        "designation": "Receptionist & ERP Co-ordinator",
-        "photo_path": "/static/images/admin_office/Kalpana.jpg"
-    },
-    {
-        "name": "S Kalyani",
-        "designation": "PA to Principal",
-        "photo_path": "/static/images/admin_office/Kalyani.jpg"
-    },
-    {
-        "name": "B Prakash Kumar",
-        "designation": "Superintendent",
-        "photo_path": "/static/images/admin_office/Prakash.jpg"
-    },
-    {
-        "name": "C Muruganantham",
-        "designation": "Clerk",
-        "photo_path": "/static/images/admin_office/Muruganantham.jpg"
-    },
-    {
-        "name": "Vithya",
-        "designation": "Accountant Assistant",
-        "photo_path": "/static/images/admin_office/Vithya.jpg"
-    },
-    {
-        "name": "E Esther Flora ",
-        "designation": "Manager – HR",
-        "photo_path": "/static/images/admin_office/Esther.jpg"
-    },
-    {
-        "name": "N Nivethitha",
-        "designation": "Admission Co-Ordinator",
-        "photo_path": "/static/images/admin_office/Nivethitha.jpg"
-    },
-    {
-        "name": "K Sheeba",
-        "designation": "Student Affairs",
-        "photo_path": "/static/images/admin_office/Sheeba.jpg"
-    },
-    {
-        "name": "M Rajalakshmi",
-        "designation": "Cashier",
-        "photo_path": "/static/images/admin_office/Rajalakshmi.jpg"
-    },
-    {
-        "name": "Karthikeyan N",
-        "designation": "Office Assistant",
-        "photo_path": "/static/images/admin_office/Karthikeyan.jpg"
-    },
-    {
-        "name": "Thavamani T",
-        "designation": "Office Assistant",
-        "photo_path": "/static/images/admin_office/Thavamani.jpg"
-    },
-    {
-        "name": "R Lakshmi",
-        "designation": "Office Assistant",
-        "photo_path": "/static/images/admin_office/Lakshmi.jpg"
-    }
-]
+[{
+    "name": "Jeyabalraj",
+    "designation": "Administrative Officer",
+    "photo_path": "static/images/trust/velammal.JPG"
+  },
+  {
+    "name": "Prakash Kumar B",
+    "designation": "Office Superintendent",
+    "photo_path": "/static/images/admin_office/Prakash.JPG"
+  },
+  {
+    "name": "Esther Flora E",
+    "designation": "Manager – HR",
+    "photo_path": "/static/images/admin_office/Esther.JPG"
+  },
+  {
+    "name": "Kalyani S",
+    "designation": "PA to Principal",
+    "photo_path": "/static/images/admin_office/Kalyani.JPG"
+  },
+  {
+    "name": "Sheeba K",
+    "designation": "Student Affairs",
+    "photo_path": "/static/images/admin_office/Sheeba.JPG"
+  },
+  {
+    "name": "Rajalakshmi M",
+    "designation": "Cashier",
+    "photo_path": "/static/images/admin_office/Rajalakshmi.JPG"
+  },
+  {
+    "name": "Kalpana M",
+    "designation": "Receptionist",
+    "photo_path": "/static/images/admin_office/Kalpana.JPG"
+  },
+  {
+    "name": "Vithya",
+    "designation": "Accountant",
+    "photo_path": "/static/images/admin_office/Vithya.JPG"
+  },
+  {
+    "name": "Muruganantham C",
+    "designation": "Clerk",
+    "photo_path": "/static/images/admin_office/Muruganantham.JPG"
+  },
+  {
+    "name": "Nivethitha N",
+    "designation": "Admission Co-Ordinator",
+    "photo_path": "/static/images/admin_office/Nivethitha.JPG"
+  },
+  {
+    "name": "Karthikeyan N",
+    "designation": "Office Assistant",
+    "photo_path": "/static/images/admin_office/Karthikeyan.JPG"
+  },
+  {
+    "name": "Thavamani T",
+    "designation": "Office Assistant",
+    "photo_path": "/static/images/admin_office/Thavamani.JPG"
+  },
+  {
+    "name": "Lakshmi R",
+    "designation": "Office Assistant",
+    "photo_path": "/static/images/admin_office/Lakshmi.JPG"
+  }]

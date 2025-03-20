@@ -1,79 +1,41 @@
 [
     {
-        "Title": [
+      "sections": [
+        {
+          "title": "Self Study Reports",
+          "content": [
             {
-                "IQUAC MOM": {
-                    "PDF_Path": [
-                        "/static/pdfs/naac/IQUAC_MOM_ODD_SEM_2020-2021.pdf",
-                        "/static/pdfs/naac/IQUAC_MOM_EVEN_SEM_2020-2021.pdf"
-                    ],
-                    "years": [
-                        "ODD SEM 2020-2021",
-                        "EVEN SEM 2020-2021"
-                    ]
-                }
+              "title": "Cycle 1 SSR",
+              "pdfs_path": "/static/pdfs/naac/ssr_1.pdf"
             },
             {
-                "AQAR": {
-                    "years": [
-                        "2018-2019",
-                        "2019-2020",
-                        "2020-2021",
-                        "2021-2022",
-                        "2022-2023",
-                        "2023-2024"
-                    ],
-                    "PDF_Path": [
-                        "/static/pdfs/naac/AQAR_2018-2019.pdf",
-                        "/static/pdfs/naac/AQAR_2019-2020.pdf",
-                        "/static/pdfs/naac/AQAR_2020-2021.pdf",
-                        "/static/pdfs/naac/AQAR_2021-2022.pdf",
-                        "/static/pdfs/naac/AQAR_2022-2023.pdf",
-                        "/static/pdfs/naac/AQAR_2023-2024.pdf"
-                    ]
-                }
-            },
-            {
-                "best_practices": {
-                    "PDF_Path": [
-                        "/static/pdfs/naac/best_practices_2019-2020.pdf",
-                        "/static/pdfs/naac/best_practices_2020-2021.pdf",
-                        "/static/pdfs/naac/best_practices_2021-2022.pdf",
-                        "/static/pdfs/naac/best_practices_2022-2023.pdf",
-                        "/static/pdfs/naac/best_practices_2023-2024.pdf"
-                    ],
-                    "years": [
-                        "2019-2020",
-                        "2020-2021",
-                        "2021-2022",
-                        "2022-2023",
-                        "2023-2024"
-                    ]
-                }
-            },
-            {
-                "institutional_distinctives": {
-                    "years": [
-                        "2019-2020",
-                        "2020-2021",
-                        "2021-2022",
-                        "2022-2023",
-                        "2023-2024"
-                    ],
-                    "PDF_Path": [
-                        "/static/pdfs/naac/institutional_distinctives_2019-2020.pdf",
-                        "/static/pdfs/naac/institutional_distinctives_2020-2021.pdf",
-                        "/static/pdfs/naac/institutional_distinctives_2021-2022.pdf",
-                        "/static/pdfs/naac/institutional_distinctives_2022-2023.pdf",
-                        "/static/pdfs/naac/institutional_distinctives_2023-2024.pdf"
-                    ]
-                }
-            },
-            {
-                "code_of_ethics": {
-                    "PDF_Path": "/static/pdfs/naac/code_of_ethics.pdf"
-                }
+              "title": "Cycle 2 SSR",
+              "pdfs_path": "/static/pdfs/naac/ssr_2.pdf"
             }
-        ]
+          ]
+        },
+        {
+          "title": "Certificates",
+          "content": [
+            {
+              "title": "Cycle 1 - 2009-2014",
+              "pdfs_path": "/static/pdfs/naac/1.pdf"
+            },
+            {
+              "title": "Cycle 2 - 2016-2021",
+              "pdfs_path": "/static/pdfs/naac/2.pdf"
+            },
+            {
+              "title": "Extended Cycle 2 (2018-2024)",
+              "pdfs_path": "/static/pdfs/naac/3.pdf"
+            },
+            {
+              "title": "Extended Cycle 2 January 2025 till date",
+              "pdfs_path": "/static/pdfs/naac/4.pdf"
+            }
+          ]
+        }
+      ]
     }
-]
+  ]
+  
