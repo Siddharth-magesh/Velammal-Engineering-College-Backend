@@ -123,61 +123,10 @@ df['unique_id'] = [
     for i in range(len(df))
 ]
 
-def download_image(
-        unique_id, 
-        photo_url, 
-        target_base_dir,
-        save_base_dir
-):
-    if not photo_url or not isinstance(photo_url, str):
-        return None
-    
-    file_name = f"{unique_id}.jpg"
-    temp_save_dir = os.path.join(photo_base_dir, unique_id)
-    os.makedirs(temp_save_dir, exist_ok=True)
-    temp_file_path = os.path.join(temp_save_dir, file_name)
+def get_image_path(unique_id):
+    return f"/static/images/staff_profile_images/{unique_id}.webp"
 
-    try:
-        if "drive.google.com" in photo_url:
-            file_id = photo_url.split("id=")[-1]
-            photo_url = f"https://drive.google.com/uc?id={file_id}"
-        
-        response = requests.get(photo_url, stream=True)
-        if response.status_code == 200:
-            with open(temp_file_path, "wb") as file:
-                for chunk in response.iter_content(1024):
-                    file.write(chunk)
-
-            parts = unique_id.split('-')
-            if len(parts) >= 3:
-                department_code = parts[1]
-
-                if department_code.isdigit() and 1 <= int(department_code) <= 22:
-                    target_folder = os.path.join(target_base_dir, f"{int(department_code):03}")
-                    os.makedirs(target_folder, exist_ok=True)
-
-                    new_file_path = os.path.join(target_folder, file_name)
-                    save_base_dir = os.path.join(save_base_dir, f"{int(department_code):03}")
-                    save_file_path = os.path.join(save_base_dir, file_name)
-                    shutil.move(temp_file_path, new_file_path)
-
-                    return save_file_path
-                else:
-                    print(f"Skipping {unique_id} - Invalid department code {department_code}")
-                    return None
-            else:
-                print(f"Skipping {unique_id} - Invalid format")
-                return None
-        else:
-            print(f"Failed to download image for {unique_id}. URL: {photo_url}")
-            return None
-    except Exception as e:
-        print(f"Error downloading image for {unique_id}: {e}")
-        return None
-
-target_base_dir = r"/root/Velammal-Engineering-College-Backend/static/images/profile_photos/"
-save_base_dir = r"/root/Velammal-Engineering-college/static/images/profile_photos/"
-df['Photo'] = df.apply(lambda row: download_image(row['unique_id'], row['Photo'], target_base_dir,save_base_dir), axis=1)
+df['Photo'] = df['unique_id'].apply(get_image_path)
 
 
 def extract_file_id(url):
