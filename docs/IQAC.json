@@ -1,220 +1,138 @@
 [
-    {
-      "imagepath": [
-        "/static/images/iic/image1.jpg",
-        "/static/images/iic/image2.jpg",
-        "/static/images/iic/image3.jpg",
-        "/static/images/iic/image4.jpg",
-        "/static/images/iic/image5.jpg",
-        "/static/images/iic/image6.jpg",
-        "/static/images/iic/image7.jpg",
-        "/static/images/iic/image8.jpg",
-        "/static/images/iic/image9.jpg",
-        "/static/images/iic/image10.jpg",
-        "/static/images/iic/image11.jpg",
-        "/static/images/iic/image12.jpg"
+  { 
+    "members": {
+      "faculty": [
+        {
+          "name": "Dr.A.Nirmal Raj",
+          "designation": "HoD MBA",
+          "role": "President",
+          "imagepath": "/static/images/iic/faculty1.jpg"
+        },
+        {
+          "name": "Dr.A.Balaji Ganesh",
+          "designation": "Research Dean",
+          "role": "Vice President",
+          "imagepath": "/static/images/iic/faculty2.jpg"
+        },
+        {
+          "name": "Mr.Viveak M Palanivasan",
+          "designation": "Founder of Voltrix Mobility",
+          "role": "Industry Expert",
+          "imagepath": "/static/images/iic/faculty3.jpg"
+        },
+        {
+          "name": "Member 4",
+          "designation": "Designation",
+          "role": "Industry Expert",
+          "imagepath": "/static/images/iic/faculty4.jpg"
+        },
+        {
+          "name": "Member 5",
+          "designation": "Designation",
+          "role": "Industry Expert",
+          "imagepath": "/static/images/iic/faculty5.jpg"
+        },
+        {
+          "name": "Member 6",
+          "designation": "Designation",
+          "role": "Industry Expert",
+          "imagepath": "/static/images/iic/faculty6.jpg"
+        }
       ],
-      "events": {
-        "year": ["2020 - 21", "2021 - 22", "2022 - 23", "2023 - 24"],
-        "pdfpath": [
-          "/static/docs/iic/event1.pdf",
-          "/static/docs/iic/event2.pdf",
-          "/static/docs/iic/event3.pdf",
-          "/static/docs/iic/event4.pdf"
-        ]
-      },
-      "policy": {
-        "name": [
-          "National Innovation Startup Policy",
-          "Tamilnadu Innovation and Startup Policy",
-          "TNMSME Policy",
-          "Velammal Innovation and Startup Policy"
-        ],
-        "pdfpath": [
-          "/static/docs/iic/policy1.pdf",
-          "/static/docs/iic/policy2.pdf",
-          "/static/docs/iic/policy3.pdf",
-          "/static/docs/iic/policy4.pdf"
-        ]
-      },
-      "members": {
-        "faculty": [
-          {
-            "name": "Dr.A.Nirmal Raj",
-            "designation": "HoD MBA",
-            "role": "President",
-            "imagepath": "/static/images/iic/faculty1.jpg"
-          },
-          {
-            "name": "Dr.A.Balaji Ganesh",
-            "designation": "Research Dean",
-            "role": "Vice President",
-            "imagepath": "/static/images/iic/faculty2.jpg"
-          },
-          {
-            "name": "Mr.Viveak M Palanivasan",
-            "designation": "Founder of Voltrix Mobility",
-            "role": "Industry Expert",
-            "imagepath": "/static/images/iic/faculty3.jpg"
-          },
-          {
-            "name": "Member 4",
-            "designation": "Designation",
-            "role": "Industry Expert",
-            "imagepath": "/static/images/iic/faculty4.jpg"
-          },
-          {
-            "name": "Member 5",
-            "designation": "Designation",
-            "role": "Industry Expert",
-            "imagepath": "/static/images/iic/faculty5.jpg"
-          },
-          {
-            "name": "Member 6",
-            "designation": "Designation",
-            "role": "Industry Expert",
-            "imagepath": "/static/images/iic/faculty6.jpg"
-          }
-        ],
-        "coordinator": {
-          "name": "Dr. Jane Smith",
-          "designation": "Professor, Dept of Computer Science",
-          "role": "IQAC Coordinator",
-          "email": "janesmith@example.edu",
-          "phone": "+91 98765 43210",
-          "imagepath": "/static/images/iic/coordinator.jpg"
-        }
-      },
-      "NIR": {
-        "RegistrationStatistics": {
-          "name": [
-            "Total Individuals Registered",
-            "Total Ideas Submitted",
-            "Total Ideas Assigned",
-            "Total Ideas Verified",
-            "Total Ideas Recommended",
-            "Total Ideas Implemented"
-          ],
-          "count": [2119, 265, 254, 250, 220, 180]
-        },
-        "InnovationMetrics": {
-          "name": [
-            "Patents Filed",
-            "Startups Incubated",
-            "Research Publications",
-            "Industry Collaborations",
-            "Funding Received",
-            "Mentorship Hours"
-          ],
-          "count": [45, 32, 156, 28, "₹2.5Cr", 1200]
-        },
-        "ImpactAssessment": {
-          "name": [
-            "Student Participation",
-            "Faculty Involvement",
-            "Success Rate",
-            "Industry Adoption",
-            "Community Impact",
-            "Overall Rating"
-          ],
-          "count": ["85%", "92%", "78%", "45%", "High", "4.8/5"]
-        }
-      },
-      "otherstuffs": {
-        "name": ["STARTUP", "SEED_MONEY", "MENTEE_INSTRUCTIONS", "PATENTS"],
-        "path": [
-          "/static/docs/iic/startup.pdf",
-          "/static/docs/iic/seed_money.pdf",
-          "/static/docs/iic/mentee_instructions.pdf",
-          "/static/docs/iic/patents.pdf"
-        ]
-      },
-      "objectives": {
-        "about": "The Internal Quality Assurance Cell (IQAC) was established in 2004 as per the guidelines of the National Assessment and Accreditation Council (NAAC). The IQAC is responsible for developing, implementing, and continuously improving the quality systems within the institution.",
-        "objectives": [
-          "To develop a system for conscious, consistent and catalytic action to improve the academic and administrative performance of the institution.",
-          "To promote measures for institutional functioning towards quality enhancement through internalization of quality culture and institutionalization of best practices.",
-          "To provide a sound basis for decision-making to improve institutional functioning.",
-          "To act as a dynamic system for quality changes in higher education."
-        ]
-      },
-      "minutesOfMeetings": {
-        "years": ["2020-2021 (ODD)", "2020-2021 (EVEN)",
-        "2021-2022 (ODD)", "2021-2022 (EVEN)",
-        "2022-2023 (ODD)", "2022-2023 (EVEN)",
-        "2023-2024 (ODD)", "2023-2024 (EVEN)",
-        "2024-2025 (ODD)"],
-        "paths": [
-          "/static/pdfs/iqac/IQAC_MOM_ODD_SEM_2020-2021.pdf",
-          "/static/pdfs/iqac/IQAC_MOM_EVEN_SEM_2020-2021.pdf",
-          "/static/pdfs/iqac/IQAC_MOM_ODD_SEM_2021-2022.pdf",
-          "/static/pdfs/iqac/IQAC_MOM_EVEN_SEM_2021-2022.pdf",
-          "/static/pdfs/iqac/IQAC_MOM_ODD_SEM_2022-2023.pdf",
-          "/static/pdfs/iqac/IQAC_MOM_EVEN_SEM_2022-2023.pdf",
-          "/static/pdfs/iqac/IQAC_MOM_ODD_SEM_2023-2024.pdf",
-          "/static/pdfs/iqac/IQAC_MOM_EVEN_SEM_2023-2024.pdf",
-          "/static/pdfs/iqac/IQAC_MOM_ODD_SEM_2024-2025.pdf"
-        ]
-      },
-      "academicAdminAudit": {
-        "years": ["2021-22", "2022-23", "2023-24"],
-        "paths": [
-          "/static/pdfs/iqac/audit_2021-22.pdf",
-          "/static/pdfs/iqac/audit_2022-23.pdf",
-          "/static/pdfs/iqac/audit_2023-24.pdf"
-        ]
-      },
-      "gallery": {
-        "23-24 FIRST MEETING": [
-          "/static/images/iqac/23-24_first_meeting/1.jpg",
-          "/static/images/iqac/23-24_first_meeting/2.jpg"
-        ],
-         "23-24 SECOND MEETING": [
-          "/static/images/iqac/23-24_second_meeting/1.jpg",
-          "/static/images/iqac/23-24_second_meeting/2.jpg"
-        ],
-        "24-25 FIRST MEETING":  [
-          "/static/images/iqac/24-25_first_meeting/1.jpg",
-          "/static/images/iqac/24-25_first_meeting/2.jpg"
-        ],
-        "24-25 SECOND MEETING":  [
-          "/static/images/iqac/24-25_second_meeting/1.PNG",
-          "/static/images/iqac/24-25_second_meeting/2.PNG"
-        ]
-      },
-      "strategicPlan": {
-        "years": ["2024-29"],
-        "paths": [
-          "/static/pdfs/iqac/strategic_plan_2024-29.pdf"
-        ]
-      },
-      "bestPractices": {
-        "years": ["2019-20", "2020-21", "2021-22", "2022-23", "2023-24"],
-        "paths": [
-          "/static/pdfs/iqac/best_practices_2019-2020.pdf",
-          "/static/pdfs/iqac/best_practices_2020-2021.pdf",
-          "/static/pdfs/iqac/best_practices_2021-2022.pdf",
-          "/static/pdfs/iqac/best_practices_2022-2023.pdf",
-          "/static/pdfs/iqac/best_practices_2023-2024.pdf"
-        ]
-      },
-      "codeOfEthics": {
-        "path": "/static/pdfs/iqac/code_of_ethics.pdf"
-      },
-      "aqar": {
-        "years": ["2018-19", "2019-20", "2020-21", "2021-22", "2022-23", "2023-24"],
-        "paths": [
-          "/static/pdfs/iqac/AQAR_2018-2019.pdf",
-          "/static/pdfs/iqac/AQAR_2019-2020.pdf",
-          "/static/pdfs/iqac/AQAR_2020-2021.pdf",
-          "/static/pdfs/iqac/AQAR_2021-2022.pdf",
-          "/static/pdfs/iqac/AQAR_2022-2023.pdf",
-          "/static/pdfs/iqac/AQAR_2023-2024.pdf"
-        ]
-      },
-      "isoCertificate": {
-        "path": "/static/pdfs/iqac/iso_certificate.pdf"
+      "coordinator": {
+        "name": "Dr. Jane Smith",
+        "designation": "Professor, Dept of Computer Science",
+        "role": "IQAC Coordinator",
+        "email": "janesmith@example.edu",
+        "phone": "+91 98765 43210",
+        "imagepath": "/static/images/iic/coordinator.jpg"
       }
+    },
+    "objectives": {
+      "about": "The Internal Quality Assurance Cell (IQAC) was established in 2004 as per the guidelines of the National Assessment and Accreditation Council (NAAC). The IQAC is responsible for developing, implementing, and continuously improving the quality systems within the institution.",
+      "objectives": [
+        "To develop a system for conscious, consistent and catalytic action to improve the academic and administrative performance of the institution.",
+        "To promote measures for institutional functioning towards quality enhancement through internalization of quality culture and institutionalization of best practices.",
+        "To provide a sound basis for decision-making to improve institutional functioning.",
+        "To act as a dynamic system for quality changes in higher education."
+      ]
+    },
+    "minutesOfMeetings": {
+      "years": ["2020-2021 (ODD)", "2020-2021 (EVEN)",
+      "2021-2022 (ODD)", "2021-2022 (EVEN)",
+      "2022-2023 (ODD)", "2022-2023 (EVEN)",
+      "2023-2024 (ODD)", "2023-2024 (EVEN)",
+      "2024-2025 (ODD)"],
+      "paths": [
+        "/static/pdfs/iqac/IQAC_MOM_ODD_SEM_2020-2021.pdf",
+        "/static/pdfs/iqac/IQAC_MOM_EVEN_SEM_2020-2021.pdf",
+        "/static/pdfs/iqac/IQAC_MOM_ODD_SEM_2021-2022.pdf",
+        "/static/pdfs/iqac/IQAC_MOM_EVEN_SEM_2021-2022.pdf",
+        "/static/pdfs/iqac/IQAC_MOM_ODD_SEM_2022-2023.pdf",
+        "/static/pdfs/iqac/IQAC_MOM_EVEN_SEM_2022-2023.pdf",
+        "/static/pdfs/iqac/IQAC_MOM_ODD_SEM_2023-2024.pdf",
+        "/static/pdfs/iqac/IQAC_MOM_EVEN_SEM_2023-2024.pdf",
+        "/static/pdfs/iqac/IQAC_MOM_ODD_SEM_2024-2025.pdf"
+      ]
+    },
+    "academicAdminAudit": {
+      "years": ["2021-22", "2022-23", "2023-24"],
+      "paths": [
+        "/static/pdfs/iqac/audit_2021-22.pdf",
+        "/static/pdfs/iqac/audit_2022-23.pdf",
+        "/static/pdfs/iqac/audit_2023-24.pdf"
+      ]
+    },
+    "gallery": {
+      "23-24 FIRST MEETING": [
+        "/static/images/iqac/23-24_first_meeting/1.jpg",
+        "/static/images/iqac/23-24_first_meeting/2.jpg"
+      ],
+       "23-24 SECOND MEETING": [
+        "/static/images/iqac/23-24_second_meeting/1.jpg",
+        "/static/images/iqac/23-24_second_meeting/2.jpg"
+      ],
+      "24-25 FIRST MEETING":  [
+        "/static/images/iqac/24-25_first_meeting/1.jpg",
+        "/static/images/iqac/24-25_first_meeting/2.jpg"
+      ],
+      "24-25 SECOND MEETING":  [
+        "/static/images/iqac/24-25_second_meeting/1.PNG",
+        "/static/images/iqac/24-25_second_meeting/2.PNG"
+      ]
+    },
+    "strategicPlan": {
+      "years": ["2024-29"],
+      "paths": [
+        "/static/pdfs/iqac/strategic_plan_2024-29.pdf"
+      ]
+    },
+    "bestPractices": {
+      "years": ["2019-20", "2020-21", "2021-22", "2022-23", "2023-24"],
+      "paths": [
+        "/static/pdfs/iqac/best_practices_2019-2020.pdf",
+        "/static/pdfs/iqac/best_practices_2020-2021.pdf",
+        "/static/pdfs/iqac/best_practices_2021-2022.pdf",
+        "/static/pdfs/iqac/best_practices_2022-2023.pdf",
+        "/static/pdfs/iqac/best_practices_2023-2024.pdf"
+      ]
+    },
+    "codeOfEthics": {
+      "path": "/static/pdfs/iqac/code_of_ethics.pdf"
+    },
+    "aqar": {
+      "years": ["2018-19", "2019-20", "2020-21", "2021-22", "2022-23", "2023-24"],
+      "paths": [
+        "/static/pdfs/iqac/AQAR_2018-2019.pdf",
+        "/static/pdfs/iqac/AQAR_2019-2020.pdf",
+        "/static/pdfs/iqac/AQAR_2020-2021.pdf",
+        "/static/pdfs/iqac/AQAR_2021-2022.pdf",
+        "/static/pdfs/iqac/AQAR_2022-2023.pdf",
+        "/static/pdfs/iqac/AQAR_2023-2024.pdf"
+      ]
+    },
+    "isoCertificate": {
+      "path": "/static/pdfs/iqac/iso_certificate.pdf"
     }
-  ]
-  
+  }
+]
