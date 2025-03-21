@@ -218,9 +218,8 @@
             ]
         },
         "program_educational_outcomes": {
-            "headings":["PSO01","PSO02"],
-	        "content":[
-            ]
+            "headings":[],
+	        "content":[]
         }
     },
     {
@@ -378,10 +377,11 @@
             "To provide an ideal learning environment through futuristic and flexible curricula with innovative teaching and learning methods.",
             "To foster cutting edge research with ethical values.",
             "To promote technical and entrepreneurship skills to provide socially relevant and sustainable solutions with innovation.",
-            "To nurture leadership through teamwork.."
+            "To nurture leadership through teamwork."
         ],
         "newsletter_path": "/static/pdfs/newsletter/ece.pdf",
-        "about_department": [ "We are proud to be honoured as the recipient of “National Employability Award 2021” for being among the top 10% colleges in India that excelled in AMCAT 21. Also we have received “Best ISF Award” from IETE for two consecutive years.Several Govt. initiatives have Telecommunication infrastructure as the backbone which is an opportunity to work with Government as a stakeholder in research.Industry 4.0 requires Smart Factories which depend on Machine to Machine Communication thus improving placement prospects for ECE students.An Electronics and Communication Engineer can work in Robotics, Drones,Design of Gadgets, Machine Automation, Aviation and Avionics, Consumer Electronics, Communications, Control and Automation, Telecommunication,Computer Application, Health Care diagnostic equipment manufacturing"],
+        "about_department": [ "We are proud to be honoured as the recipient of “National Employability Award 2021” for being among the top 10% colleges in India that excelled in AMCAT 21. Also we have received “Best ISF Award” from IETE for two consecutive years.Several Govt. initiatives have Telecommunication infrastructure as the backbone which is an opportunity to work with Government as a stakeholder in research.Industry 4.0 requires Smart Factories which depend on Machine to Machine Communication thus improving placement prospects for ECE students.An Electronics and Communication Engineer can work in Robotics, Drones,Design of Gadgets, Machine Automation, Aviation and Avionics, Consumer Electronics, Communications, Control and Automation, Telecommunication,Computer Application, Health Care diagnostic equipment manufacturing Our facultyare dedicated to creating a diverse and inclusive environment for our students. The Department endorses with pride of having National Level Accreditations like NBA, NAAC and ISO Certifications. Also it is permanently affiliated to Anna University, with Autonomous Status.It has optimum blend of faculty strength which includes 9 Doctorates with an average experience of 15 years."],
+
         "program_outcomes": {
             "headings":["PO1:Engineering knowledge","PO2:Problem analysis","PO3:Design/development of solutions","PO4:Conduct investigations of complex problems","PO5:Modern tool usage","PO6:The engineer and society","PO7:Environment and sustainability","PO8:Ethics","PO9:Individual and team work","PO10:Communication","PO11:Project management and finance","PO12:Life-long learning"],
             "content": [
@@ -401,17 +401,11 @@
         },
         "program_specific_outcomes": {
             "headings":["PSO01","PSO02"],
-	        "content":[
-                "Apply the concepts of Artificial Intelligence to provide solutions for the real time problems and to integrate the professional skills with recent tools and technologies to cope with the dynamic AI needs.",
-                "Create a concrete foundation and enlighten the innovation, research and entrepreneur skills in the field of Artificial Intelligence and Data science."
-            ]
+	        "content":[]
         },
         "program_educational_outcomes": {
             "headings":["PSO01","PSO02"],
-	        "content":[
-                "Apply the concepts of Artificial Intelligence to provide solutions for the real time problems and to integrate the professional skills with recent tools and technologies to cope with the dynamic AI needs.",
-                "Create a concrete foundation and enlighten the innovation, research and entrepreneur skills in the field of Artificial Intelligence and Data science."
-            ]
+	        "content":[]
         }
     },
     {
@@ -631,7 +625,7 @@
         "department_id": "015",
         "department_name": "Physics",
         "department_image": "/static/images/department_data/physics.jpg",
-        "department_quotes": "Harnessing life sciences for a better tomorrow.",
+        "department_quotes": "Bridging the gap between theory and innovation, Physics drives the technology that engineers the future.",
         "vision": "To provide knowledge of Physics in all areas of life through transfer of fundamental technology and to do more research work.”",
         "mission": [
             "To offer an education of the highest quality in the field of Engineering Physics to students to do research in the field of Materials science, Nanotechnology & Environmental Engineering expose to experimental as well as theoretical bases."
@@ -679,12 +673,20 @@
         "newsletter_path": "/static/pdfs/newsletter/me_cse.pdf",
         "about_department": ["Computer Science and Engineering plays a vital role in helping organizations to achieve profitable results and keep competitive forces in check. Keeping this objective in mind, young mindsets are educated here with full academic rigor to convert them into effective IT professionals. The de-partment is instrumental in conducting various technical and non-technical activities for students as well as faculty members. The focus is not only technical stuff on but also moral values, ethics, professionalism and so. Regular classes of the latest technologies are being conducted for stu-dents. On a continuous basis, students are made aware of the latest industry trends and needs in various technological domains. Well-motivated, competent faculty members are always engaged in student’s welfare. Encouragement and guidance is offered to the students for participating in sports and various extracurricular activities to highlight and strengthen their nontechnical skills. Our academic rigor, Plan Do Check Act approach in all sorts of aspects has made this department to be a one of the best choices for UG, PG and PhD admission aspirants. The industry inputs are taken into consideration in each and every course. The Curriculum has features like Industry con-nect, research associations, semester-long internship, live industry problem-solving, electives, open elective, honors and minor degree to support an interdisciplinary approach."],
         "program_specific_outcomes": {
-            "headings":[],
-	        "content":[]
+            "headings":["PSO01","PSO02"],
+	        "content":[
+                "Design and develop the automotive system and its components with due considerations of society impact and sustainability. ",
+                "Analyze the performance of automotive system using modeling, simulation and testing. "
+            ]
         },
-        "program_educational_outcomes": {
-            "headings":[],
-	        "content":[]
+        "program_educational_outcome":
+        {
+            "headings":["PEO 1","PEO 2","PEO 3"],
+            "content":[
+                "Graduates will have successful career in Automobile / Allied Industries and/or Academics.",
+                "Graduates will excel in Higher education/Entrepreneurship.",
+                "Graduates will work as part of team/lead a team, use ethical attitudes. in their profession and solve engineering issues in the broader social context through life-long learning"
+            ]
         }
     
     

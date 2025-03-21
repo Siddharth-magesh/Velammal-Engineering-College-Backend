@@ -23,7 +23,7 @@
         "Qualification": ["M.E", "PhD"],
         "Hod_message": ["Department of ECE at Velammal Engineering College has proved its excellence in the field of Teaching, Research, placement and Student Activities since its establishment from 1995 onwards. Creative engineers solve practical problems to find out a solution for a societal problem. Also to crack society’s utmost challenges, country desires ECE engineers with entrepreneurial state of mind who can apply curiosity and creativity to the technical skillets in order to come up with truly novel ideas. Students in our department are trained with relevant practice through labs and projects for building the problem-solving skills, keeping industry requirements in view."],
         "Image": "/static/images/hods/ece.jpg",
-        "designation": "Professor and Head, Dept of Artificial Intelligence and Data Science",
+        "designation": "Professor and Head, Dept of Electronics and Communication Engineering",
         "Social_media_links": {
             "Google Scholar": "https://scholar.google.com/citations?user=CXHND6AAAAAJ&hl=en",
             "Research Gate": "https://www.researchgate.net/profile/Mary-Joans",
@@ -234,15 +234,10 @@
         "Name": "Dr.A.NIRMALRAJ",
         "department_name": "Master of Business Administration (MBA)",
         "Unique_id": "VEC-016-01-181",
-        "Qualification": ["MBA", "PhD"],
+        "Qualification": ["B.COM.", "MBA.", "Ph.D"],
         "Hod_message": ["At VEC, we provide our learners—who come from diverse backgrounds—with ample opportunities for academic exploration and holistic development."," We recognize the growing need for business leaders who are well-versed in business principles, technology, and managerial skills. Therefore, our program offers a comprehensive overview of essential business concepts and industry-relevant technical practices, equipping learners with the knowledge and expertise required to excel in today's dynamic business landscape."],
         "Image": "/static/images/hods/physical.jpg",
-        "designation": "Professor and Head, Dept of Master of Business Administration",
-        "Social_media_links": {
-            "LinkedIn": "https://www.linkedin.com/in/r-senthil/",
-            "Google Scholar": "https://scholar.google.com/citations?user=rSenthil&hl=en",
-            "Scopus": "https://www.scopus.com/authid/detail.uri?authorId=56120129400"
-        }
+        "designation": "Professor and Head, Dept of Master of Business Administration"
     },
     {
         "Name": "Dr.B.Murugeswari",
