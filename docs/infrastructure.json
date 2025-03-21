@@ -189,11 +189,6 @@
         "department_name": "Physical Education",
         "infrastructure_images": [
             {
-                "image_path": "/static/images/infrastructure/020/BALL BADMINTON COURT.png",
-                "image_name": "BALL BADMINTON COURT",
-                "image_content": "A 12m × 24m court with a 1.5m high net, marked boundaries, and a smooth playing surface."
-            },
-            {
                 "image_path": "/static/images/infrastructure/020/WILMA RUDOLPH INDOOR STADIUM.png",
                 "image_name": "WILMA RUDOLPH INDOOR STADIUM",
                 "image_content": "A spacious indoor stadium for multiple sports with modern facilities."
