@@ -12,8 +12,7 @@ mongo_uri = "mongodb://localhost:27017/"
 db_name = "VEC"
 collection_name = "staff_details"
 
-file_path = r"/Velammal-Engineering-College-Backend/docs/VEC_Faculty_Details.csv"
-photo_base_dir = r"/Velammal-Engineering-College-Backend/static/temp_photos/"
+file_path = r"/Velammal-Engineering-College-Backend/docs/CSV/VEC_Faculty_Details.csv"
 base_save_dir = r"/Velammal-Engineering-College-Backend/static/staff_scholar_details/"
 
 client = MongoClient(mongo_uri)
@@ -116,7 +115,7 @@ def generate_unique_id(index, department, designation):
     return f"VEC-{department_id}-{designation_id}-{unique_id}"
 
 
-df = df.head(1) #Remove this line to deactivate Test settings
+#df = df.head(1) #Remove this line to deactivate Test settings
 
 df['unique_id'] = [
     generate_unique_id(i, df.at[i, 'Department Name'], df.at[i, 'Designation'])
@@ -709,130 +708,22 @@ def insert_iic_details():
         collection.insert_one(documents)
     print("iic documents inserted successfully\n")
 
-def process_and_combine_Department_Activities_data_for_aids(folder_path, dept_id="001"):
-    COLLECTION_NAME = "department_activities"
-    collection = db[COLLECTION_NAME]
-    
-    def extract_data_from_docx(file_path):
-        document = Document(file_path)
-        activities = []
-        
-        for table in document.tables:
-            for row in table.rows[1:]:  
-                cells = row.cells
-                if len(cells) >= 6:  
-                    activity = {
-                        "date": cells[1].text.strip(),
-                        "name_of_event": cells[2].text.strip(),
-                        "coordinator": cells[3].text.strip(),
-                        "resource_person": cells[4].text.strip(),
-                        "beneficiaries": cells[5].text.strip(),
-                        "relevant_PO_PSO": cells[6].text.strip(),
-                        "image_path": "image_path yet to be filled",
-                    }
-                    activities.append(activity)
-        return activities
+def insert_dept_activities_details():
+    collection = db['department_activities']
+    directory = "/Velammal-Engineering-College-Backend/docs/DEPT_ACT/"
+    for filename in os.listdir(directory):
+        if filename.endswith(".json"):  
+            file_path = os.path.join(directory, filename)
+            
+            with open(file_path, "r", encoding="utf-8") as file:
+                try:
+                    document = json.load(file)
+                    collection.insert_many(document)
+                    print(f"Inserted {filename} successfully.")
+                except Exception as e:
+                    print(f"Error inserting {filename}: {e}")
 
-    combined_activities = []
-    if not os.path.exists(folder_path) or not os.listdir(folder_path):
-        print(f"Skipping '{folder_path}'. No data found for dept_id '{dept_id}'.\n")
-        return
-
-    for file_name in os.listdir(folder_path):
-        if file_name.endswith(".docx"):
-            file_path = os.path.join(folder_path, file_name)
-            activities = extract_data_from_docx(file_path)
-            combined_activities.extend(activities)
-
-    if not combined_activities:
-        print(f"No activity data extracted from '{folder_path}' for dept_id '{dept_id}'. Skipping.\n")
-        return
-    
-    department_name=None
-    
-    for name, id in department_mapping1.items() :
-        if id==dept_id:
-            department_name = name
-
-    combined_document = {
-        "dept_id": dept_id,
-        "department_name":department_name,
-        "dept_activities": combined_activities
-    }
-
-    collection.update_one(
-        {"dept_id": dept_id},
-        {"$set": combined_document},
-        upsert=True
-    )
-    print(f"Data combined and inserted into MongoDB under dept_id '{dept_id}'.\n")
-
-aids_department_path = "/Velammal-Engineering-College-Backend/docs/AIDS-DEPT-ACT/"
-process_and_combine_Department_Activities_data_for_aids(aids_department_path)
-
-def insert_cscb_dept_activities_details():
-    collection= db['department_activities']
-    with open ("/Velammal-Engineering-College-Backend/docs/CSCBS-DEPT-ACT/006.json","r",encoding="utf-8") as file:
-        documents= json.load(file)
-        collection.insert_many(documents)
-    print("cyber securtiy dept activities documents inserted successfully\n")
-
-
-def insert_cse_dept_activities_details():
-    collection= db['department_activities']
-    with open ("/Velammal-Engineering-College-Backend/docs/CSE-DEPT-ACT/005.json","r",encoding="utf-8") as file:
-        documents= json.load(file)
-        collection.insert_many(documents)
-    print("CSE dept activities documents inserted successfully\n")
-
-def insert_eie_dept_activities_details():
-    collection= db['department_activities']
-    with open ("/Velammal-Engineering-College-Backend/docs/EIE-DEPT-ACT/008.json","r",encoding="utf-8") as file:
-        documents= json.load(file)
-        collection.insert_many(documents)
-    print("EIE dept activities documents inserted successfully\n")
-
-def insert_mech_dept_activities_details():
-    collection= db['department_activities']
-    with open ("/Velammal-Engineering-College-Backend/docs/MECH-DEPT-ACT/013.json","r",encoding="utf-8") as file:
-        documents= json.load(file)
-        collection.insert_many(documents)
-    print("MECH dept activities documents inserted successfully\n")
-
-def insert_math_dept_activities_details():
-    collection= db['department_activities']
-    with open ("/Velammal-Engineering-College-Backend/docs/MATH-DEPT-ACT/012.json","r",encoding="utf-8") as file:
-        documents= json.load(file)
-        collection.insert_many(documents)
-    print("MATH dept activities documents inserted successfully\n")
-
-def insert_eee_dept_activities_details():
-    collection= db['department_activities']
-    with open ("/Velammal-Engineering-College-Backend/docs/EEE-DEPT-ACT/007.json","r",encoding="utf-8") as file:
-        documents= json.load(file)
-        collection.insert_many(documents)
-    print("EEE dept activities documents inserted successfully\n")
-
-def insert_civil_dept_activities_details():
-    collection= db['department_activities']
-    with open ("/Velammal-Engineering-College-Backend/docs/CIVIL-DEPT-ACT/004.json","r",encoding="utf-8") as file:
-        documents= json.load(file)
-        collection.insert_many(documents)
-    print("civil dept activities documents inserted successfully\n")
-
-def insert_auto_dept_activities_details():
-    collection= db['department_activities']
-    with open ("/Velammal-Engineering-College-Backend/docs/AUTO-DEPT-ACT/002.json","r",encoding="utf-8") as file:
-        documents= json.load(file)
-        collection.insert_many(documents)
-    print("auto dept activities documents inserted successfully\n")
-
-def insert_mba_dept_activities_details():
-    collection= db['department_activities']
-    with open ("/Velammal-Engineering-College-Backend/docs/MBA-DEPT-ACT/017.json","r",encoding="utf-8") as file:
-        documents= json.load(file)
-        collection.insert_many(documents)
-    print("mba dept activities documents inserted successfully \n")
+    print("All department activities documents inserted successfully.\n")
 
 def insert_newsletter():
     collection= db['news_letter']
@@ -869,15 +760,7 @@ insert_naac_data()
 insert_nirf_data()
 insert_sidebar_details()
 insert_iic_details()
-insert_cscb_dept_activities_details()
-insert_cse_dept_activities_details()
-insert_eie_dept_activities_details()
-insert_mech_dept_activities_details()
-insert_math_dept_activities_details()
-insert_eee_dept_activities_details()
-insert_civil_dept_activities_details()
-insert_auto_dept_activities_details()
-insert_mba_dept_activities_details()
+insert_dept_activities_details()
 insert_newsletter()
 
 department_mapping = {
@@ -1110,7 +993,7 @@ insert_iqac_data()
 
 def add_hostel_student_database():
     collection = db["student_database"]
-    storage_dir = r"/Velammal-Engineering-College-Backend/docs"
+    storage_dir = r"/Velammal-Engineering-College-Backend/docs/CSV"
     image_dir = r"/Velammal-Engineering-College-Backend/static/student_database"
     os.makedirs(storage_dir, exist_ok=True)  
     os.makedirs(image_dir, exist_ok=True)  
