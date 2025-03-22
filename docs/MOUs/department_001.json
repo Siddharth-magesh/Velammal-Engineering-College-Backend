@@ -1,5 +1,5 @@
 [{
-  "Departments": "001",
+  "dept_id": "001",
   "department_name": "Artificial Intelligence and Data Science (AI&DS)",
   "MOUs": [
     {

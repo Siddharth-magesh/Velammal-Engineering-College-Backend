@@ -1,5 +1,9 @@
 [
     {
+        "dept_id": "002",
+        "department_name": "Automobile Engineering (AUTO)",
+        "dept_activities": [
+    {
         "date": "17.02.2025",
         "name_of_event": "Energy and Fuel Users Association of India (ENFUSE) Professional Society Student Chapter, Saksham 2025",
         "coordinator": "Dr.M.Senthamil Selvan",
@@ -161,4 +165,6 @@
         "relevant_PO_PSO": "PO1, PO2, PO6, PO7, PO8, PO9, P11 PO12 & PSO1",
         "image_path":["/static/images/dept_activities/002/21.jpg","/static/images/dept_activities/002/22.jpg"]
     }
+]
+}
 ]

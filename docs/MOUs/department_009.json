@@ -1,5 +1,5 @@
 [{
-    "Departments": "009",
+    "dept_id": "009",
     "department_name": "Electronics and Communication Engineering (ECE)",
     "MOUs": [
       {
