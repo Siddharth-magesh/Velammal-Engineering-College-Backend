@@ -1,4 +1,4 @@
-[{
+{
   "zonal_table": {
     "Game": [
       "Badminton(M)",
@@ -100,8 +100,8 @@
       "static/sports/faculty/srinivasan.webp"
     ],
     "designation": [
-      "ASST.PD",
-      "ASST.PD"
+      "Asst.Physical Director",
+      "Asst.Physical Director"
     ],
     "qualification": [
       "MPEd.Mphil",
@@ -138,7 +138,8 @@
       "static/sports/others/others_kheloindia_boxing_w_3_23.webp",
       "static/sports/others/others_kumite_m_2_23.webp",
       "static/sports/others/others_taekwondo_w.webp",
-      "static/sports/others/others_taekwondo_overall_m_23.webp"
+      "static/sports/others/others_taekwondo_overall_m_23.webp",
+      "static/sports/others/others_Jr_Mr_Tamilnadu.webp"
     ],
     "title":[
       "Our college student Miss T. Keerthana Lakshmi of I year Civil secure Gold in BFI talent Hunt Boxing tournament held at Bangalore.",
@@ -151,6 +152,61 @@
       "Our College Student G.Yashwanth Kumar of IV Mech secure Silver medal in Jr.Mr.Tamilnadu competition held at Rajalakshmi Engg College and got selected for Jr.India competition going to participate Chhattisgarh. And also he selected to Anna University team for Participate All India Best Physiqe competition held at Kerala."
     ]
   },
+  "interamural": {
+    "image_path":[
+      "static/sports/intramural/basketball_boys_winner.webp",
+      "static/sports/intramural/basketball_boys_runner.webp",
+      "static/sports/intramural/basketball_girls_winner.webp",
+      "static/sports/intramural/basketball_girls_runner.webp",
+      "static/sports/intramural/batminton_boys_winner.webp",
+      "static/sports/intramural/batminton_boys_runner.webp",
+      "static/sports/intramural/batminton_girls_winner.webp",
+      "static/sports/intramural/batminton_girls_runner.webp",
+      "static/sports/intramural/chess_boys_winner.webp",
+      "static/sports/intramural/chess_boys_runner.webp",
+      "static/sports/intramural/chess_girls_winner.webp",
+      "static/sports/intramural/chess_girls_runner.webp",
+      "static/sports/intramural/football_boys_winner.webp",
+      "static/sports/intramural/football_boys_runner.webp",
+      "static/sports/intramural/tabletennis_boys_winner.webp",
+      "static/sports/intramural/tabletennis_boys_runner.webp",
+      "static/sports/intramural/tabletennis_girls_winner.webp",
+      "static/sports/intramural/tabletennis_girls_runner.webp",
+      "static/sports/intramural/tennis_boys_winner.webp",
+      "static/sports/intramural/tennis_boys_runner.webp",
+      "static/sports/intramural/volleyball_boys_winner.webp",
+      "static/sports/intramural/volleyball_boys_runner.webp",
+      "static/sports/intramural/volleyball_girls_winner.webp",
+      "static/sports/intramural/volleyball_girls_runner.webp"
+    ],
+    "title":[
+      "Boys Basketball Winner IT Department",
+      "Boys Basketball Runner CSE Department",
+      "Girls Basketball Winner ECE Department",
+      "Girls Basketball Runner AI&DS Department",
+      "Boys Badminton Winner EEE Department",
+      "Boys Badminton Runner ECE Department",
+      "Girls Badminton Winner CSE Department",
+      "Girls Badminton Runner ECE Department",
+      "Boys Chess Winner AI&DS Department",
+      "Boys Chess Runner CSE Department",
+      "Girls Chess Winner ECE Department",
+      "Girls Chess Runner AI&DS Department",
+      "Boys Football Winner AI&DS Department",
+      "Boys Football Runner MECH Department",
+      "Boys Table Tennis Winner MECH Department",
+      "Boys Table Tennis Runner AI&DS Department",
+      "Girls Table Tennis Winner MECH Department",
+      "Girls Table Tennis Runner CSE Department",
+      "Boys Tennis Winner CIVIL Department",
+      "Boys Tennis Runner EEE Department",
+      "Boys Volleyball Winner IT Department",
+      "Boys Volleyball Runner CIVIL Department",
+      "Girls Volleybaall Winner ECE Department",
+      "Girls Volleyball Runner EEE Department"
+    ],
+    "year":"2024-25"
+  },
   "coordinator": {
     "zone": "1",
     "year": "2024-25",
@@ -162,4 +218,3 @@
     ]
   }
 }
-]

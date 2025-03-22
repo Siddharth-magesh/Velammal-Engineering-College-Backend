@@ -89,8 +89,8 @@
         "dept_id": "003",
         "department_name": "Chemistry ",
         "regulation": {
-        "year":["2020", "2021", "2022"],
-	    "pdf_path":["/static/docs/curriculum/003/reg_20.pdf","/static/docs/curriculum/003/reg_21.pdf","/static/docs/curriculum/003/reg_22.pdf"]
+        "year":[ "2023"],
+	    "pdf_path":["/static/docs/curriculum/003/reg_23.pdf"]
 
         },
         "academic_year": {
@@ -582,7 +582,7 @@
         "department_name": "Physics",
         "regulation": {
         "year":["1st semester", "2023 for electronics engineer", "2023 for materials science","2023 for civil engineers","2023 for computer engineers"],
-	    "pdf_path":["/static/docs/curriculum/015/1.pdf","/static/docs/curriculum/015/2.pdf","/static/docs/curriculum/015/3.pdf","/static/docs/curriculum/015/4.pdf","/static/docs/curriculum/015/5.pdf"]
+	    "pdf_path":["/static/docs/curriculum/015/reg_1_23.pdf","/static/docs/curriculum/015/reg_electronics_engineering.pdf","/static/docs/curriculum/015/reg_material_science.pdf","/static/docs/curriculum/015/reg_civil_engineers.pdf","/static/docs/curriculum/015/reg_computer_engineers.pdf"]
 
         },
         "academic_year": {

@@ -30,7 +30,7 @@
           "date": "06/03/2024",
           "name_of_event": "Industrial Visit to STP at Kodungaiyur ",
           "coordinator":"Mr. M Thillai Backiam&  Mrs. A Surekha",
-          "resource_person": null,
+          "resource_person": "",
           "beneficiaries": "III YR STUDENTS",
           "relevant_PO_PSO":"PO1 , PO2 , PO3 , PO5,PO6,PO7,PO11 ",
           "image_path": ["/static/images/dept_activities/004/3.jpg"]
@@ -81,7 +81,7 @@
           "date": "25/08/2023",
           "name_of_event": "Industrial Visit to Thamaraipakkam Anaikkattu",
           "coordinator":"Dr A Jebamalar &  Dr R Sudharsanan",
-          "resource_person":null,
+          "resource_person":"",
           "beneficiaries":"III & IV Yr Students",
           "relevant_PO_PSO":"PO1 , PO2 , PO3 , PO 6,PO7  , PO12",
           "image_path": ["/static/images/dept_activities/004/8.jpg"]

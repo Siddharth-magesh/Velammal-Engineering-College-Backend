@@ -3,49 +3,229 @@
     "members": {
       "faculty": [
         {
-          "name": "Dr.A.Nirmal Raj",
-          "designation": "HoD MBA",
-          "role": "President",
-          "imagepath": "/static/images/iic/faculty1.jpg"
+          "name": "Dr.S.Satish Kumar",
+          "designation": "Chairperson",
+          "role": "Principal, VEC",
+          "imagepath": ""
+        },
+        {
+          "name": "Dr.A.Jebamalar",
+          "designation": "Deans and Department Heads",
+          "role": "Professor and Head, Dept. of Civil Engineering, Dean, Academics",
+          "imagepath": ""
+        },
+        {
+          "name": "Dr.S Mary Joans",
+          "designation": "Deans and Department Heads",
+          "role": "Professor and Head, Dept. of ECE & Dean, Faculty Development and Welfare",
+          "imagepath": ""
+        },
+        {
+          "name": "Dr.Jeevaa Katiravan",
+          "designation": "Deans and Department Heads",
+          "role": "Professor and Head, Dept. of IT & Dean, Planning and Development",
+          "imagepath": ""
+        },
+        {
+          "name": "Dr.E.Ganapathy Sundaram",
+          "designation": "Deans and Department Heads",
+          "role": "Professor and Head, Dept. of Mechanical Engineering & Dean, Accreditations and Ranking",
+          "imagepath": ""
         },
         {
           "name": "Dr.A.Balaji Ganesh",
-          "designation": "Research Dean",
-          "role": "Vice President",
-          "imagepath": "/static/images/iic/faculty2.jpg"
+          "designation": "Deans and Department Heads",
+          "role": "Professor and Head, Dept. of CSe, Dean, Research & Development",
+          "imagepath": ""
         },
         {
-          "name": "Mr.Viveak M Palanivasan",
-          "designation": "Founder of Voltrix Mobility",
-          "role": "Industry Expert",
-          "imagepath": "/static/images/iic/faculty3.jpg"
+          "name": "Dr.S.Shahil Kirupavathy",
+          "designation": "Deans and Department Heads",
+          "role": "Professor and Head, Dept. of Physics, Dean, Student Development and welfare",
+          "imagepath": ""
         },
         {
-          "name": "Member 4",
-          "designation": "Designation",
-          "role": "Industry Expert",
-          "imagepath": "/static/images/iic/faculty4.jpg"
+          "name": "Mr.A.Arun Ramaswami",
+          "designation": "Deans and Department Heads",
+          "role": "Dean, Corporate relations and Higher Studies",
+          "imagepath": ""
         },
         {
-          "name": "Member 5",
-          "designation": "Designation",
-          "role": "Industry Expert",
-          "imagepath": "/static/images/iic/faculty5.jpg"
+          "name": "Dr.S.Srinath",
+          "designation": "Deans and Department Heads",
+          "role": "Controller of Examination",
+          "imagepath": ""
         },
         {
-          "name": "Member 6",
-          "designation": "Designation",
-          "role": "Industry Expert",
-          "imagepath": "/static/images/iic/faculty6.jpg"
+          "name": "Dr.P.visu",
+          "designation": "Deans and Department Heads",
+          "role": "Professor and Head, Dept. of Artificial Intelligence & Data Science, Associative Dean, Accrediations and Ranking",
+          "imagepath": ""
+        },
+        {
+          "name": "Dr.S.Baskara Sethupathy",
+          "designation": "Deans and Department Heads",
+          "role": "Professor and Head, Dept. of Automobile Engineering, Associate Dean, Research & Development",
+          "imagepath": ""
+        },
+        {
+          "name": "Dr.B.Murugeshwari",
+          "designation": "Deans and Department Heads",
+          "role": "Professor and Head, Dept. of Computer Science and Engineering ",
+          "imagepath": ""
+        },
+        {
+          "name": "Dr.K.Sureshkumar",
+          "designation": "Deans and Department Heads",
+          "role": "Assoc Professor and Head, Dept. of Electrical and Electronics Engineering",
+          "imagepath": ""
+        },
+        {
+          "name": "Dr.Z.Brijet",
+          "designation": "Deans and Department Heads",
+          "role": "Professor and Head, Dept. of Electronics & Instrumentation Engineering ",
+          "imagepath": ""
+        },
+        {
+          "name": "Dr.A.NirmalRaj",
+          "designation": "Deans and Department Heads",
+          "role": "Professor and Head, Dept. of Master of Business Administration",
+          "imagepath": ""
+        },
+        {
+          "name": "Mr.V.Baskaran",
+          "designation": "Deans and Department Heads",
+          "role": "Head, Department of English",
+          "imagepath": ""
+        },
+        {
+          "name": "Dr.A.Mohamed Sikkander",
+          "designation": "Deans and Department Heads",
+          "role": "Assoc.Professor & Head, Dept. of Chemistry",
+          "imagepath": ""
+        },
+        {
+          "name": "Dr.S.Rajeswaran",
+          "designation": "Deans and Department Heads",
+          "role": "Professor & Head, Deptartment of Mathematics",
+          "imagepath": ""
+        },
+        {
+          "name": "Mr.M.M.Muthiah",
+          "designation": "Deans and Department Heads",
+          "role": "Head, Dept. of Tamil",
+          "imagepath": ""
+        },
+        {
+          "name": "Dr.M.Arokia Jaswin",
+          "designation": "Senior Teachers",
+          "role": "Professor, Dept. of Mechanical Engineering, Associate Dean, Academics",
+          "imagepath": ""
+        },
+        {
+          "name": "Dr.S.Manju",
+          "designation": "Senior Teachers",
+          "role": "Assistant Professor, Dept. of ECE",
+          "imagepath": ""
+        },
+        {
+          "name": "Mr.C.V.Dayakar",
+          "designation": "Senior Teachers",
+          "role": "Assistant Professor, Dept. of EIE",
+          "imagepath": ""
+        },
+        {
+          "name": "Dr.Geetha",
+          "designation": "Senior Teachers",
+          "role": "Assistant Professor, Dept. of EEE, Associate Dean,Student Development and welfare",
+          "imagepath": ""
+        },
+        {
+          "name": "Dr.S.Rajalakshmi",
+          "designation": "Senior Teachers",
+          "role": "Assistant Professor, Dept. of CSE, Associate Dean, Planning and Development",
+          "imagepath": ""
+        },
+        {
+          "name": "Mr.R.Kumar",
+          "designation": "Member from Management",
+          "role": "AVP(Finance),Velammal Educational Trust",
+          "imagepath": ""
+        },
+        {
+          "name": "Mr. T.A.Rajha Rajeswaran",
+          "designation": "Local Professional Society Chapter",
+          "role": "Assistant Professor, Dept. of Civil Engineering, Secretary-chennai Centre, ACCE(I) Association of Consulting civil Engineers(India)",
+          "imagepath": ""
+        },
+        {
+          "name": "Ms. B.Niharika",
+          "designation": "Student Members",
+          "role": "Third year student, AI & DS",
+          "imagepath": ""
+        },
+        {
+          "name": "Mr. AL.Karpagavinayagam",
+          "designation": "Student Members",
+          "role": "Third year student, IT",
+          "imagepath": ""
+        },
+        {
+          "name": "Mr. D.Ranjana",
+          "designation": "Student Members",
+          "role": "Third year student, ECE",
+          "imagepath": ""
+        },
+        {
+          "name": "Mr. P.Abinand",
+          "designation": "Student Members",
+          "role": "Third year student, CSE",
+          "imagepath": ""
+        },
+        {
+          "name": "Mr. A.S.Giftson",
+          "designation": "Student Members",
+          "role": "Third year student, Mechanical",
+          "imagepath": ""
+        },
+        {
+          "name": "Mr. M.Arunraj",
+          "designation": "Alumni Members",
+          "role": "Google India, Senior Software Engineer, IT 2010 Batch",
+          "imagepath": ""
+        },
+        {
+          "name": "Mr. E.Kughan",
+          "designation": "Alumni Members",
+          "role": "chargebee, Senior Software Engineer, CSE 2017 Batch",
+          "imagepath": ""
+        },
+        {
+          "name": "Mr.Raghuraman Krishnamoorthy",
+          "designation": "Member from Employers",
+          "role": "Associate Vice President Cognizant",
+          "imagepath": ""
+        },
+        {
+          "name": "Mr.Aravind Ramesh",
+          "designation": "Member from Industry",
+          "role": "Managing Director, Vetri Pressing Pvt. Limited",
+          "imagepath": ""
+        },
+        {
+          "name": "Dr.S.Thiruvenkadam",
+          "designation": "Stakeholders",
+          "role": "Professor/EEE, VIT, Vellore Campus",
+          "imagepath": ""
         }
       ],
       "coordinator": {
-        "name": "Dr. Jane Smith",
-        "designation": "Professor, Dept of Computer Science",
-        "role": "IQAC Coordinator",
-        "email": "janesmith@example.edu",
-        "phone": "+91 98765 43210",
-        "imagepath": "/static/images/iic/coordinator.jpg"
+        "name": "Dr.S.Gunasundari",
+        "designation": "Coordinator",
+        "role": "Associate Prof, Dept of CSE",
+        "email": "gunasundari@velammal.edu.in",
+        "phone": "+91 8754509510",
+        "imagepath": ""
       }
     },
     "objectives": {
@@ -84,6 +264,16 @@
       ]
     },
     "gallery": {
+      "OVERALL":[ 
+      "/static/images/iqac/23-24_first_meeting/1.jpg",
+      "/static/images/iqac/23-24_first_meeting/2.jpg",
+      "/static/images/iqac/23-24_second_meeting/1.jpg",
+      "/static/images/iqac/23-24_second_meeting/2.jpg", 
+      "/static/images/iqac/24-25_first_meeting/1.jpg",
+      "/static/images/iqac/24-25_first_meeting/2.jpg",
+      "/static/images/iqac/24-25_second_meeting/1.PNG",
+      "/static/images/iqac/24-25_second_meeting/2.PNG"
+    ],
       "23-24 FIRST MEETING": [
         "/static/images/iqac/23-24_first_meeting/1.jpg",
         "/static/images/iqac/23-24_first_meeting/2.jpg"

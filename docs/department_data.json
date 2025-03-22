@@ -85,8 +85,11 @@
             ]
         },
         "program_educational_outcomes": {
-            "headings":["PSO01","PSO02"],
+            "headings":["PEO01","PEO02","PEO03"],
 	        "content":[
+                "Graduates will have successful career in Automobile / Allied Industries and/ or Academics.",
+                "Graduates will excel in Higher education / Entrepreneurship.",
+                " Graduates will work as part of team / lead a team, use ethical attitudes in their profession and solve engineering issues in the broader social context through life-long learning."
             ]
         }
     },
@@ -323,7 +326,7 @@
         "department_id": "008",
         "department_name": "Electronics & Instrumentation Engineering (EIE)",
         "department_image": "/static/images/department_data/eie.jpg",
-        "department_quotes": "Empowering minds with the knowledge of electronics, instrumentation, and control, we pave the path for innovation and leadership, nurturing talents for a globally competitive future.",
+        "department_quotes": "From the smallest sensor to the most complex control system, Electronics and Instrumentation Engineering is the driving force behind technological advancements that shape our modern world",
         "vision": "To impart knowledge base and skill sets in the field of Electronics and Instrumentation by providing learning ambience for academic and research activities, leading to global competence.",
         "mission": [
             "To provide students with strong foundation in electronics, instrumentation and control engineering.",
@@ -360,10 +363,11 @@
             ]
         },
         "program_educational_outcomes": {
-            "headings":["PSO01","PSO02"],
+            "headings":["PSO01","PSO02","PSO03"],
 	        "content":[
-                "Apply the concepts of Artificial Intelligence to provide solutions for the real time problems and to integrate the professional skills with recent tools and technologies to cope with the dynamic AI needs.",
-                "Create a concrete foundation and enlighten the innovation, research and entrepreneur skills in the field of Artificial Intelligence and Data science."
+                "Graduates will lead a successful career in the field of Instrumentation / Automation industries or allied industries or research or business organization.",
+                "Graduates will be able to adapt latest technological developments in the global scenario.",
+                "Graduates will exhibit professionalism and ethical attitude towards issues in the society at large."
             ]
         }
     },
@@ -372,12 +376,11 @@
         "department_name": "Electronics and Communication Engineering (ECE)",
         "department_image": "/static/images/department_data/ece.jpg",
         "department_quotes": "ECE HOLDS THE KEY TOWARDS TRANSCENDING TECHNOLOGY",
-        "vision": "To impart technical knowledge and skills to create resourceful Electronics and Communication Engineering graduates with innovationand research to meet industry and societal needs",
+        "vision": "To contribute to the society through Excellence in Technical Educationand Research, in order to create Resourceful Self-confident Graduates.",
         "mission": [
-            "To provide an ideal learning environment through futuristic and flexible curricula with innovative teaching and learning methods.",
-            "To foster cutting edge research with ethical values.",
-            "To promote technical and entrepreneurship skills to provide socially relevant and sustainable solutions with innovation.",
-            "To nurture leadership through teamwork."
+            "To facilitate Quality Technical Education and to Foster Effective research",
+            "To motivate Entrepreneurship and Intrapreneurship to cater the industrialand societal needs.",
+            "To cultivate Leadership Quality, Teamwork and Self-confidence."
         ],
         "newsletter_path": "/static/pdfs/newsletter/ece.pdf",
         "about_department": [ "We are proud to be honoured as the recipient of “National Employability Award 2021” for being among the top 10% colleges in India that excelled in AMCAT 21. Also we have received “Best ISF Award” from IETE for two consecutive years.Several Govt. initiatives have Telecommunication infrastructure as the backbone which is an opportunity to work with Government as a stakeholder in research.Industry 4.0 requires Smart Factories which depend on Machine to Machine Communication thus improving placement prospects for ECE students.An Electronics and Communication Engineer can work in Robotics, Drones,Design of Gadgets, Machine Automation, Aviation and Avionics, Consumer Electronics, Communications, Control and Automation, Telecommunication,Computer Application, Health Care diagnostic equipment manufacturing Our facultyare dedicated to creating a diverse and inclusive environment for our students. The Department endorses with pride of having National Level Accreditations like NBA, NAAC and ISO Certifications. Also it is permanently affiliated to Anna University, with Autonomous Status.It has optimum blend of faculty strength which includes 9 Doctorates with an average experience of 15 years."],
@@ -401,11 +404,16 @@
         },
         "program_specific_outcomes": {
             "headings":["PSO01","PSO02"],
-	        "content":[]
+	        "content":["Be proficient and employment ready with career development skills in both software and hardware through Industry oriented mini &amp; major projects, internship, industry visits, seminars and workshops to ethically serve the needs of the society.",
+                        "Develop hardware/software for components/systems for applications in Signal processing, VLSI, Communication, Networking, Computer-based Systems and/or pursue Higher Studies/Research with a strong base in Electronics and Communication Engineering."
+                    ]
         },
         "program_educational_outcomes": {
-            "headings":["PSO01","PSO02"],
-	        "content":[]
+            "headings":["PEO01","PEO02","PEO03"],
+	        "content":["Be highly competent with in-depth knowledge in the Electronics and Communication Engineering to have a successful career in Core/IT/Research/ Entrepreneurship.",
+                        "Design and Develop comprehensive and multi-disciplinary projects which require team work, leadership and ethical values taking into consideration legal, social, environmental and economic issues.",
+                        "Analyze and implement solutions in Electronics and Communication Engineering and adapt to changes in technology by continuous learning."
+                    ]
         }
     },
     {

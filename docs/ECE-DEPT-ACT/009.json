@@ -1,0 +1,89 @@
+[
+    {
+        "dept_id": "009",
+        "department_name": "Electrical & Communication Engineering (ECE)",
+        "dept_activities": [
+          {
+            "date": "25.01.24",
+            "name_of_event": "ELECTROWIZ’24",
+            "coordinator": "" ,
+            "resource_person": "",
+            "beneficiaries": "",
+            "relevant_PO_PSO": "",
+            "image_path": ["/static/images/dept_activities/009/1.jpeg"]
+          },
+          {
+            "date": "25.01.2024",
+            "name_of_event": "Workshop on Artificial Intelligence for IoT",
+            "coordinator": "",
+            "resource_person": "",
+            "beneficiaries": "",
+            "relevant_PO_PSO":"",
+            "image_path": ["/static/images/dept_activities/009/2.jpeg"]
+          },
+          {
+            "date": "01.02.2024 & 02.02.24",
+            "name_of_event": "Industrial Visit to Retech lasers, Chennai ",
+            "coordinator": "",
+            "resource_person":"",
+            "beneficiaries": "",
+            "relevant_PO_PSO": "",
+            "image_path": ["/static/images/dept_activities/009/3.jpeg"]
+          },
+          {
+            "date": "05.03.2024",
+            "name_of_event": "Project Expo-INVENTRONIX’24 ",
+            "coordinator": "",
+            "resource_person":"",
+            "beneficiaries": "",
+            "relevant_PO_PSO": "",
+            "image_path": ["/static/images/dept_activities/009/4.jpeg"]
+          },
+          {
+            "date": "",
+            "name_of_event": "IETE Students Forum’24 Events",
+            "coordinator": "",
+            "resource_person": "",
+            "beneficiaries": "",
+            "relevant_PO_PSO": "" ,
+            "image_path": ["/static/images/dept_activities/009/5.jpeg"]
+          },
+          {
+            "date": "07.03.2024 ",
+            "name_of_event": "Technical Turncoat, Start-up Idea Poster Presentation ",
+            "coordinator": "",
+            "resource_person": "",
+            "beneficiaries": "",
+            "relevant_PO_PSO": "" ,
+            "image_path": ["/static/images/dept_activities/009/6.jpeg"]
+          },
+          {
+            "date": "12.3.2024 ",
+            "name_of_event": "Clusters and Warehouse Scale Computers",
+            "coordinator": "",
+            "resource_person": "",
+            "beneficiaries": "",
+            "relevant_PO_PSO": "" ,
+            "image_path": ["/static/images/dept_activities/009/7.jpeg"]
+          },
+          {
+            "date": "20.3.2024",
+            "name_of_event": "Insights on VLSI ",
+            "coordinator": "",
+            "resource_person": "",
+            "beneficiaries": "",
+            "relevant_PO_PSO": "" ,
+            "image_path": ["/static/images/dept_activities/009/8.jpeg"]
+          },
+          {
+            "date": "13.03.2024",
+            "name_of_event": "National Conference RACES’24",
+            "coordinator": "",
+            "resource_person": "",
+            "beneficiaries": "",
+            "relevant_PO_PSO": "" ,
+            "image_path": ["/static/images/dept_activities/009/9.jpeg"]
+          }
+        ]
+      }
+    ] 

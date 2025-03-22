@@ -6,11 +6,12 @@
         "Image": "/static/images/support_staffs/example.jpg",
         "Qualification": "M.SC(IT).",
         "Designation": "Lab Instructor",
+        "dept":"",
         "Social_media_links": {
-          "Publon": null,
-          "LinkedIn": null,
-          "GitHub": null,
-          "ResearchGate": null
+          "Publon": "",
+          "LinkedIn": "",
+          "GitHub": "",
+          "ResearchGate": ""
         },
         "Unique_id": "VEC-013-01-160"
       },
@@ -19,109 +20,79 @@
         "Image": "/static/images/support_staffs/example.jpg",
         "Qualification":"M.Sc., M. Phil",
         "Designation": "Lab Instructor",
+        "dept":"",
         "Social_media_links": {
-          "Publon": null,
-          "LinkedIn": null,
-          "GitHub": null,
-          "ResearchGate": null
+          "Publon": "",
+          "LinkedIn": "",
+          "GitHub": "",
+          "ResearchGate": ""
         },
         "Unique_id": "VEC-013-01-161"
       },
       {
-        "Name": "Ms. Emily Davis",
+        "Name": "Ms. M. Vijayalakshmi",
         "Image": "/static/images/support_staffs/example.jpg",
-        "Designation": "Administrative Assistant",
+        "Designation": "Lab Instructor",
+        "dept":"011",
         "Social_media_links": {
-          "Publon": "https://publons.com/researcher/67890/emily-davis/",
-          "LinkedIn": "https://linkedin.com/in/emily-davis/",
-          "GitHub": "https://github.com/emilydavis",
-          "ResearchGate": "https://www.researchgate.net/profile/Emily_Davis"
+          "Publon": "",
+          "LinkedIn": "",
+          "GitHub": "",
+          "ResearchGate": ""
         },
-        "Unique_id": "VEC-013-01-162"
+        "Unique_id": ""
       },
       {
-        "Name": "Dr. Michael Brown",
+        "Name": "Mr. V. Suresh",
         "Image": "/static/images/support_staffs/example.jpg",
-        "Designation": "Senior Technician",
+        "Designation": "Lab Instructor",
+        "dept":"011",
         "Social_media_links": {
-          "Publon": "https://publons.com/researcher/98765/michael-brown/",
-          "LinkedIn": "https://linkedin.com/in/michael-brown/",
-          "GitHub": "https://github.com/michaelbrown",
-          "ResearchGate": "https://www.researchgate.net/profile/Michael_Brown"
+          "Publon": "",
+          "LinkedIn": "",
+          "GitHub": "",
+          "ResearchGate": ""
         },
-        "Unique_id": "VEC-013-01-163"
+        "Unique_id": ""
       },
       {
-        "Name": "Dr. Susan Lee",
+        "Name": "Mr. B. Kanagaraj",
         "Image": "/static/images/support_staffs/example.jpg",
-        "Designation": "Technical Writer",
+        "Designation": "Lab Instructor",
+        "dept":"011",
         "Social_media_links": {
-          "Publon": "https://publons.com/researcher/23456/susan-lee/",
-          "LinkedIn": "https://linkedin.com/in/susan-lee/",
-          "GitHub": "https://github.com/susanlee",
-          "ResearchGate": "https://www.researchgate.net/profile/Susan_Lee"
+          "Publon": "",
+          "LinkedIn": "",
+          "GitHub": "",
+          "ResearchGate": ""
         },
-        "Unique_id": "VEC-013-01-164"
+        "Unique_id": ""
       },
       {
-        "Name": "Mr. Alex Wilson",
-        "Image": "/static/images/support_staffs/example.jpg",
-        "Designation": "IT Support Specialist",
+        "Name": "Mrs.DhanaLakshmi G",
+        "Image": "",
+        "Designation": "Lab Instructor",
+        "dept":"009",
         "Social_media_links": {
-          "Publon": "https://publons.com/researcher/34567/alex-wilson/",
-          "LinkedIn": "https://linkedin.com/in/alex-wilson/",
-          "GitHub": "https://github.com/alexwilson",
-          "ResearchGate": "https://www.researchgate.net/profile/Alex_Wilson"
+          "Publon": "",
+          "LinkedIn": "",
+          "GitHub": "",
+          "ResearchGate": ""
         },
-        "Unique_id": "VEC-013-01-165"
+        "Unique_id": ""
       },
       {
-        "Name": "Ms. Olivia Martinez",
-        "Image": "/static/images/support_staffs/example.jpg",
-        "Designation": "Project Coordinator",
+        "Name": "Mr.Subramanian N",
+        "Image": "",
+        "Designation": "Lab Instructor",
+        "dept":"009",
         "Social_media_links": {
-          "Publon": "https://publons.com/researcher/45678/olivia-martinez/",
-          "LinkedIn": "https://linkedin.com/in/olivia-martinez/",
-          "GitHub": "https://github.com/oliviamartinez",
-          "ResearchGate": "https://www.researchgate.net/profile/Olivia_Martinez"
+          "Publon": "",
+          "LinkedIn": "",
+          "GitHub": "",
+          "ResearchGate": ""
         },
-        "Unique_id": "VEC-013-01-166"
-      },
-      {
-        "Name": "Dr. Robert Johnson",
-        "Image": "/static/images/support_staffs/example.jpg",
-        "Designation": "Data Analyst",
-        "Social_media_links": {
-          "Publon": "https://publons.com/researcher/56789/robert-johnson/",
-          "LinkedIn": "https://linkedin.com/in/robert-johnson/",
-          "GitHub": "https://github.com/robertjohnson",
-          "ResearchGate": "https://www.researchgate.net/profile/Robert_Johnson"
-        },
-        "Unique_id": "VEC-013-01-167"
-      },
-      {
-        "Name": "Ms. Sophia Walker",
-        "Image": "/static/images/support_staffs/example.jpg",
-        "Designation": "Library Manager",
-        "Social_media_links": {
-          "Publon": "https://publons.com/researcher/67890/sophia-walker/",
-          "LinkedIn": "https://linkedin.com/in/sophia-walker/",
-          "GitHub": "https://github.com/sophiawalker",
-          "ResearchGate": "https://www.researchgate.net/profile/Sophia_Walker"
-        },
-        "Unique_id": "VEC-013-01-168"
-      },
-      {
-        "Name": "Mr. Ethan Carter",
-        "Image": "/static/images/support_staffs/example.jpg",
-        "Designation": "Research Associate",
-        "Social_media_links": {
-          "Publon": "https://publons.com/researcher/78901/ethan-carter/",
-          "LinkedIn": "https://linkedin.com/in/ethan-carter/",
-          "GitHub": "https://github.com/ethancarter",
-          "ResearchGate": "https://www.researchgate.net/profile/Ethan_Carter"
-        },
-        "Unique_id": "VEC-013-01-169"
+        "Unique_id": ""
       }
     ]
   }

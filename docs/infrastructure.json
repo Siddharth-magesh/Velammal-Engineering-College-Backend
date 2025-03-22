@@ -3,11 +3,7 @@
         "dept_id": "001",
         "department_name": "Artificial Intelligence and Data Science (AI&DS)",
         "infrastructure_images": [
-            {"image_path": "/static/images/infrastructure/aids_1.jpg", "image_name": "Image 1_1", "image_content": "Description of Image 1_1"},
-            {"image_path": "/static/images/infrastructure/aids_2.jpg", "image_name": "Image 1_2", "image_content": "Description of Image 1_2"},
-            {"image_path": "/static/images/infrastructure/aids_3.jpg", "image_name": "Image 1_3", "image_content": "Description of Image 1_3"},
-            {"image_path": "/static/images/infrastructure/aids_4.jpg", "image_name": "Image 1_4", "image_content": "Description of Image 1_4"},
-            {"image_path": "/static/images/infrastructure/aids_5.jpg", "image_name": "Image 1_5", "image_content": "Description of Image 1_5"}
+            {"image_path": "/static/images/infrastructure/aids_1.jpg", "image_name": "DATA SCIENCE LABORATORY", "image_content": ""}
         ]
     },
     {
@@ -33,24 +29,21 @@
         "dept_id": "003",
         "department_name": "Chemistry",
         "infrastructure_images": [
-            {"image_path": "/static/images/infrastructure/chem_1.jpg", "image_name": "Image 3_1", "image_content": "Description of Image 3_1"},
-            {"image_path": "/static/images/infrastructure/chem_2.jpg", "image_name": "Image 3_2", "image_content": "Description of Image 3_2"},
-            {"image_path": "/static/images/infrastructure/chem_3.jpg", "image_name": "Image 3_3", "image_content": "Description of Image 3_3"},
-            {"image_path": "/static/images/infrastructure/chem_4.jpg", "image_name": "Image 3_4", "image_content": "Description of Image 3_4"},
-            {"image_path": "/static/images/infrastructure/chem_5.jpg", "image_name": "Image 3_5", "image_content": "Description of Image 3_5"}
+            {"image_path": "/static/images/infrastructure/chem_1.jpg", "image_name": "ENGINEERING CHEMISTRY LAV", "image_content": ""},
+            {"image_path": "/static/images/infrastructure/chem_2.jpg", "image_name": "ELECTRO CHEMISTRY RESEARCH LAB", "image_content": ""}
         ]
     },
     {
         "dept_id": "004",
         "department_name": "Civil Engineering (CIVIL)",
         "infrastructure_images": [
-            {"image_path": "/static/images/infrastructure/civil_1.jpg", "image_name": "Strength of Materials Lab", "image_content": "Strength of Materials Lab"},
-            {"image_path": "/static/images/infrastructure/civil_2.jpg", "image_name": "Fluid Mechanics and Hydraulic Machinery Lab", "image_content": "Fluid Mechanics and Hydraulic Machinery Lab"},
-            {"image_path": "/static/images/infrastructure/civil_3.jpg", "image_name": "Soil Mechanics Lab", "image_content": "Soil Mechanics Lab"},
-            {"image_path": "/static/images/infrastructure/civil_4.jpg", "image_name": "Concrete and Highway Engineering Lab", "image_content": "Concrete and Highway Engineering Lab"},
-            {"image_path": "/static/images/infrastructure/civil_5.jpg", "image_name": "Surveying Lab", "image_content": "Surveying Lab"},
-            {"image_path": "/static/images/infrastructure/civil_6.jpg", "image_name": "Environmental Engineering Lab", "image_content": "Environmental Engineering Lab"},
-            {"image_path": "/static/images/infrastructure/civil_7.jpg", "image_name": "Computer Aided Design and Drawing LabOratory", "image_content": "Computer Aided Design and Drawn Laboratory"}
+            {"image_path": "/static/images/infrastructure/civil_1.jpg", "image_name": "Strength of Materials Lab", "image_content": ""},
+            {"image_path": "/static/images/infrastructure/civil_2.jpg", "image_name": "Fluid Mechanics and Hydraulic Machinery Lab", "image_content": ""},
+            {"image_path": "/static/images/infrastructure/civil_3.jpg", "image_name": "Soil Mechanics Lab", "image_content": ""},
+            {"image_path": "/static/images/infrastructure/civil_4.jpg", "image_name": "Concrete and Highway Engineering Lab", "image_content": ""},
+            {"image_path": "/static/images/infrastructure/civil_5.jpg", "image_name": "Surveying Lab", "image_content": ""},
+            {"image_path": "/static/images/infrastructure/civil_6.jpg", "image_name": "Environmental Engineering Lab", "image_content": ""},
+            {"image_path": "/static/images/infrastructure/civil_7.jpg", "image_name": "Computer Aided Design and Drawing LabOratory", "image_content": ""}
         ]
     },
     {
@@ -73,8 +66,8 @@
         "dept_id": "006",
         "department_name": "Computer Science and Engineering (CYBER SECURITY)",
         "infrastructure_images": [
-            {"image_path": "/static/images/infrastructure/006/1.png", "image_name": "KIRLOSKAR BLOCK  III FLOOR", "image_content": null},
-            {"image_path": "/static/images/infrastructure/006/2.jpg", "image_name": "II YEAR CSE(CYBER SECURITY) - CLASS ROOM", "image_content": null}
+            {"image_path": "/static/images/infrastructure/006/1.png", "image_name": "KIRLOSKAR BLOCK  III FLOOR", "image_content":""},
+            {"image_path": "/static/images/infrastructure/006/2.jpg", "image_name": "II YEAR CSE(CYBER SECURITY) - CLASS ROOM", "image_content": ""}
         ]
     },
     {
@@ -99,11 +92,13 @@
         "dept_id": "008",
         "department_name": "Electronics & Instrumentation Engineering (EIE)",
         "infrastructure_images": [
-            {"image_path": "/static/images/infrastructure/eie_1.jpg", "image_name": "Image 8_1", "image_content": "Description of Image 8_1"},
-            {"image_path": "/static/images/infrastructure/eie_2.jpg", "image_name": "Image 8_2", "image_content": "Description of Image 8_2"},
-            {"image_path": "/static/images/infrastructure/eie_3.jpg", "image_name": "Image 8_3", "image_content": "Description of Image 8_3"},
-            {"image_path": "/static/images/infrastructure/eie_4.jpg", "image_name": "Image 8_4", "image_content": "Description of Image 8_4"},
-            {"image_path": "/static/images/infrastructure/eie_5.jpg", "image_name": "Image 8_5", "image_content": "Description of Image 8_5"}
+            {"image_path": "/static/images/infrastructure/eie_1.jpg", "image_name": "VIRTUAL INSTRUMENTATION CENTRE", "image_content": ""},
+            {"image_path": "/static/images/infrastructure/eie_2.jpg", "image_name": "PROCESS CONTROL LABORATORY", "image_content": ""},
+            {"image_path": "/static/images/infrastructure/eie_3.jpg", "image_name": "R&D LABORATORY", "image_content": ""},
+            {"image_path": "/static/images/infrastructure/eie_4.jpg", "image_name": "DEPARTMENT LIBRARY", "image_content": ""},
+            {"image_path": "/static/images/infrastructure/eie_5.jpg", "image_name": "MICROPROCESSOR AND MICROCONTROLLER LABORATORY", "image_content": ""},
+            {"image_path": "/static/images/infrastructure/eie_6.jpg", "image_name": "CIRCUITS AND DEVICES LABORATORY", "image_content": ""},
+            {"image_path": "/static/images/infrastructure/eie_7.jpg", "image_name": "INSTRUMENTATION LABORATORY", "image_content": ""}
         ]
     },
     {
@@ -132,11 +127,10 @@
         "dept_id": "011",
         "department_name": "Information Technology (IT)",
         "infrastructure_images": [
-            {"image_path": "/static/images/infrastructure/it_1.jpg", "image_name": "Image 11_1", "image_content": "Description of Image 11_1"},
-            {"image_path": "/static/images/infrastructure/it_2.jpg", "image_name": "Image 11_2", "image_content": "Description of Image 11_2"},
-            {"image_path": "/static/images/infrastructure/it_3.jpg", "image_name": "Image 11_3", "image_content": "Description of Image 11_3"},
-            {"image_path": "/static/images/infrastructure/it_4.jpg", "image_name": "Image 11_4", "image_content": "Description of Image 11_4"},
-            {"image_path": "/static/images/infrastructure/it_5.jpg", "image_name": "Image 11_5", "image_content": "Description of Image 11_5"}
+            {"image_path": "/static/images/infrastructure/it_1.jpg", "image_name": "CASE TOOLS LAB", "image_content":"To develop programming skills in design and implementation of data structures and their applications. To practice design and implementation of Java program with classes and objects as real world entities, develop programs using Multithreading ,explore exception handling techniques and its implementation,build a simple application using File stream concepts, build a simple application using Databases and Networking Concepts. To explore various network commands in different operating systems, hands on experience on various networking protocols, implement functionalities using raw sockets, understand and implement the network programming concepts using APIs, explore the various network simulators for analysing network behavior. To understand the components and structure of mobile application development frameworks for Android and windows OS based mobiles, understand how to work with various mobile application development frameworks, learn the basic and important design concepts and issues of development of mobile applications, understand the capabilities and limitations of mobile devices."},
+            {"image_path": "/static/images/infrastructure/it_2.jpg", "image_name": "PROGRAMMING LAB", "image_content": "To practice design and implementation of C++ program with classes and objects as real world entities,  reusability using inheritance , design and implementation of OOP concepts like polymorphism, develop programs using C++ templates , explore exception handling techniques and its implementation, build a simple application using File stream concepts. To understand data definition, data manipulation, data control and transaction control language commands,  apply suitable Integrity constraints, views, sequences required for the applications,  learn the use of simple, nested and join queries, execute cursors, triggers, goto, exception handling ,functions and procedures using PL/SQL , To implement various database applications using respective front and back end tools. To practice HTML Tags, develop webpage using HTML, CSS and JavaScript, design XML applications,  Server-Side programming using servlets and JSP, build a web application using AJAX and web services. Mini-projects are a powerful tool for both students and professionals to strengthen their practical skills and demonstrate their expertise. Typically completed by small teams or even individuals, these projects help engineers to apply theoretical knowledge to real-world scenarios."},
+            {"image_path": "/static/images/infrastructure/it_3.jpg", "image_name": "RDBMS LAB", "image_content": "To understand the problem solving approaches, learn the basic programming constructs in Python and  practice various computing strategies for Python-based solutions to real world problems.To familiarize with C programming constructs, develop programs in C using basic constructs,arrays, strings, pointers, functions, structures, file processing."},
+            {"image_path": "/static/images/infrastructure/it_4.jpg", "image_name": "RESEARCH LAB", "image_content": "To practice design and implementation of C++ program with classes and objects as real world entities,  reusability using inheritance , design and implementation of OOP concepts like polymorphism, develop programs using C++ templates , explore exception handling techniques and its implementation, build a simple application using File stream concepts. Projects span a variety of domains, from electronics and software development to mechanical and civil engineering, with each offering its own set of challenges. While some projects may be straightforward, others push the boundaries of creativity and innovation. What matters most is the learning process and how well you can apply your technical abilities to solve problems."}
         ]
     },
     {
