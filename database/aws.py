@@ -778,6 +778,13 @@ def insert_cscb_dept_activities_details():
         collection.insert_many(documents)
     print("cyber securtiy dept activities documents inserted successfully")
 
+def insert_cse_dept_activities_details():
+    collection= db['department_activities']
+    with open ("/root/Velammal-Engineering-College-Backend/docs/CSE-DEPT-ACT/005.json","r",encoding="utf-8") as file:
+        documents= json.load(file)
+        collection.insert_many(documents)
+    print("CSE dept activities documents inserted successfully")
+
 def insert_eie_dept_activities_details():
     collection= db['department_activities']
     with open ("/root/Velammal-Engineering-College-Backend/docs/EIE-DEPT-ACT/008.json","r",encoding="utf-8") as file:
@@ -863,6 +870,7 @@ insert_nirf_data()
 insert_sidebar_details()
 insert_iic_details()
 insert_cscb_dept_activities_details()
+insert_cse_dept_activities_details()
 insert_eie_dept_activities_details()
 insert_mech_dept_activities_details()
 insert_math_dept_activities_details()

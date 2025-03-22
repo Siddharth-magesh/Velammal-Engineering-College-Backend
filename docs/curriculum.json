@@ -5,37 +5,7 @@
         "regulation": {
 	    "year":["2018", "2019", "2020"],
 	    "pdf_path":["/static/docs/curriculum/001/reg_18.pdf","/static/docs/curriculum/001/reg_19.pdf","/static/docs/curriculum/001/reg_20.pdf"]
-        },
-        "academic_year": {
-            "2018-2019": "/path/to/academic_year_18_19.pdf",
-            "2019-2020": "/path/to/academic_year_19_20.pdf"
-        },
-        "program_outcomes": {
-            "headings":["PO1:Engineering knowledge","PO2:Problem analysis","PO3:Design/development of solutions","PO4:Conduct investigations of complex problems","PO5:Modern tool usage","PO6:The engineer and society","PO7:Environment and sustainability","PO8:Ethics","PO9:Individual and team work","PO10:Communication","PO11:Project management and finance","PO12:Life-long learning"],
-            "content": [
-                    "Apply the knowledge of mathematics, science, engineering fundamentals, and an engineering specialization for the solution of complex engineering problems.",
-                    "Identify, formulate, research literature, and analyze complex engineering problems reaching substantiated conclusions using first principles of mathematics, natural sciences, and engineering sciences.",
-                    "Design solutions for complex engineering problems and design system components or processes that meet the specified needs with appropriate consideration for public health and safety, and cultural, societal, and environmental considerations.",
-                    "Use research-based knowledge and research methods including design of experiments, analysis and interpretation of data, and synthesis of the information to provide valid conclusions.",
-                    "Create, select, and apply appropriate techniques, resources, and modern engineering and AI and Data Science tools, including prediction and modelling to complex engineering activities, with an understanding of the limitations.",
-                    "Apply reasoning informed by the contextual knowledge to assess societal, health, safety, legal and cultural issues and the consequent responsibilities relevant to the professional engineering practice.",
-                    "Understand the impact of the professional engineering solutions in societal and environmental contexts, and demonstrate the knowledge of, and need for sustainable development.",
-                    "Apply ethical principles and commit to professional ethics and responsibilities and norms of the engineering practice.",
-                    "Function effectively as an individual, and as a member or leader in diverse teams, and in multidisciplinary settings.",
-                    "Communicate effectively on complex engineering activities with the engineering community and with the society at large, such as, being able to comprehend and write effective reports and design documentation, make effective presentations, and give and receive clear instructions.",
-                    "Demonstrate knowledge and understanding of the engineering and management principles and apply these to one’s own work, as a member and leader in a team, to manage projects and in multidisciplinary environments.",
-                    "Recognize the need for, and have the preparation and ability to engage in independent and life-long learning in the broadest context of technological change."
-                ]
-        },
-        "program_specific_outcomes": {
-            "headings":["PSO01","PSO02"],
-	        "content":[
-                "Apply the concepts of Artificial Intelligence to provide solutions for the real time problems and to integrate the professional skills with recent tools and technologies to cope with the dynamic AI needs.",
-                "Create a concrete foundation and enlighten the innovation, research and entrepreneur skills in the field of Artificial Intelligence and Data science."
-            ]
-        },
-        "key_highlights": [],
-        "six_unique": []
+        }
     },
     {
         "dept_id": "002",
@@ -43,47 +13,7 @@
         "regulation": {
         "year":["2019", "2021", "2023"],
 	    "pdf_path":["static/curriculum/002/R19.pdf","/static/docs/curriculum/002/R21.pdf","/static/docs/curriculum/002/R23.pdf"]
-
-        },
-        "academic_year": {
-            "2019-2020": "/path/to/academic_year_19_20.pdf",
-            "2020-2021": "/path/to/academic_year_20_21.pdf"
-        },
-        "program_outcomes": {
-            "headings":["PO1:Engineering knowledge","PO2:Problem analysis","PO3:Design/development of solutions","PO4:Conduct investigations of complex problems","PO5:Modern tool usage","PO6:The engineer and society","PO7:Environment and sustainability","PO8:Ethics","PO9:Individual and team work","PO10:Communication","PO11:Project management and finance","PO12:Life-long learning"],
-            "content": [
-                    "Apply the knowledge of mathematics, science, engineering fundamentals, and an engineering specialization for the solution of complex engineering problems.",
-                    "Identify, formulate, research literature, and analyze complex engineering problems reaching substantiated conclusions using first principles of mathematics, natural sciences, and engineering sciences.",
-                    "Design solutions for complex engineering problems and design system components or processes that meet the specified needs with appropriate consideration for public health and safety, and cultural, societal, and environmental considerations.",
-                    "Use research-based knowledge and research methods including design of experiments, analysis and interpretation of data, and synthesis of the information to provide valid conclusions.",
-                    "Create, select, and apply appropriate techniques, resources, and modern engineering and AI and Data Science tools, including prediction and modelling to complex engineering activities, with an understanding of the limitations.",
-                    "Apply reasoning informed by the contextual knowledge to assess societal, health, safety, legal and cultural issues and the consequent responsibilities relevant to the professional engineering practice.",
-                    "Understand the impact of the professional engineering solutions in societal and environmental contexts, and demonstrate the knowledge of, and need for sustainable development.",
-                    "Apply ethical principles and commit to professional ethics and responsibilities and norms of the engineering practice.",
-                    "Function effectively as an individual, and as a member or leader in diverse teams, and in multidisciplinary settings.",
-                    "Communicate effectively on complex engineering activities with the engineering community and with the society at large, such as, being able to comprehend and write effective reports and design documentation, make effective presentations, and give and receive clear instructions.",
-                    "Demonstrate knowledge and understanding of the engineering and management principles and apply these to one’s own work, as a member and leader in a team, to manage projects and in multidisciplinary environments.",
-                    "Recognize the need for, and have the preparation and ability to engage in independent and life-long learning in the broadest context of technological change."
-                ]
-        },
-        "program_specific_outcomes": {
-            "headings":["PSO01","PSO02"],
-	        "content":[
-                "Design and develop the automotive system and its components with due considerations of society impact and sustainability. ",
-                "Analyze the performance of automotive system using modeling, simulation and testing. "
-            ]
-        },
-        "program_educational_outcome":
-        {
-            "headings":["PEO 1","PEO 2","PEO 3"],
-            "content":[
-                "Graduates will have successful career in Automobile / Allied Industries and/or Academics.",
-                "Graduates will excel in Higher education/Entrepreneurship.",
-                "Graduates will work as part of team/lead a team, use ethical attitudes. in their profession and solve engineering issues in the broader social context through life-long learning"
-            ]
-        },
-        "key_highlights": [],
-        "six_unique": []
+        }
     },
     {
         "dept_id": "003",
@@ -91,50 +21,7 @@
         "regulation": {
         "year":[ "2023"],
 	    "pdf_path":["/static/docs/curriculum/003/reg_23.pdf"]
-
-        },
-        "academic_year": {
-            "2020-2021": "/path/to/academic_year_20_21.pdf",
-            "2021-2022": "/path/to/academic_year_21_22.pdf"
-        },
-        "program_outcomes": {
-                "headings":["PO1:Engineering knowledge","PO2:Problem analysis","PO3:Design/development of solutions","PO4:Conduct investigations of complex problems","PO5:Modern tool usage","PO6:The engineer and society","PO7:Environment and sustainability","PO8:Ethics","PO9:Individual and team work","PO10:Communication","PO11:Project management and finance","PO12:Life-long learning"],
-                "content": [
-                        "Apply the knowledge of mathematics, science, engineering fundamentals, and an engineering specialization for the solution of complex engineering problems.",
-                        "Identify, formulate, research literature, and analyze complex engineering problems reaching substantiated conclusions using first principles of mathematics, natural sciences, and engineering sciences.",
-                        "Design solutions for complex engineering problems and design system components or processes that meet the specified needs with appropriate consideration for public health and safety, and cultural, societal, and environmental considerations.",
-                        "Use research-based knowledge and research methods including design of experiments, analysis and interpretation of data, and synthesis of the information to provide valid conclusions.",
-                        "Create, select, and apply appropriate techniques, resources, and modern engineering and AI and Data Science tools, including prediction and modelling to complex engineering activities, with an understanding of the limitations.",
-                        "Apply reasoning informed by the contextual knowledge to assess societal, health, safety, legal and cultural issues and the consequent responsibilities relevant to the professional engineering practice.",
-                        "Understand the impact of the professional engineering solutions in societal and environmental contexts, and demonstrate the knowledge of, and need for sustainable development.",
-                        "Apply ethical principles and commit to professional ethics and responsibilities and norms of the engineering practice.",
-                        "Function effectively as an individual, and as a member or leader in diverse teams, and in multidisciplinary settings.",
-                        "Communicate effectively on complex engineering activities with the engineering community and with the society at large, such as, being able to comprehend and write effective reports and design documentation, make effective presentations, and give and receive clear instructions.",
-                        "Demonstrate knowledge and understanding of the engineering and management principles and apply these to one’s own work, as a member and leader in a team, to manage projects and in multidisciplinary environments.",
-                        "Recognize the need for, and have the preparation and ability to engage in independent and life-long learning in the broadest context of technological change."
-                ]
-        },
-        "program_specific_outcomes": {
-            "headings":["PSO01","PSO02"],
-	        "content":[
-                "Apply the concepts of Artificial Intelligence to provide solutions for the real time problems and to integrate the professional skills with recent tools and technologies to cope with the dynamic AI needs.",
-                "Create a concrete foundation and enlighten the innovation, research and entrepreneur skills in the field of Artificial Intelligence and Data science."
-            ]
-        },
-        "key_highlights": [
-            "Key Highlight 1: Description of key highlight 1",
-            "Key Highlight 2: Description of key highlight 2",
-            "Key Highlight 3: Description of key highlight 3",
-            "Key Highlight 4: Description of key highlight 4"
-        ],
-        "six_unique": [
-            "Block Chain Technologies",
-            "Artificial Intelligence",
-            "Data Science",
-            "Big Data Management",
-            "Social Network Analysis",
-            "Text Analytics"
-        ]
+        }
     },
     {
         "dept_id": "004",
@@ -142,38 +29,7 @@
         "regulation": {
         "year":["2020", "2021", "2022"],
 	    "pdf_path":["/static/docs/curriculum/004/reg_20.pdf","/static/docs/curriculum/004/reg_21.pdf","/static/docs/curriculum/004/reg_22.pdf"]
-
-        },
-        "academic_year": {
-            "2020-2021": "/path/to/academic_year_20_21.pdf",
-            "2021-2022": "/path/to/academic_year_21_22.pdf"
-        },
-        "program_outcomes": {
-            "headings":["PO1:Engineering knowledge","PO2:Problem analysis","PO3:Design/development of solutions","PO4:Conduct investigations of complex problems","PO5:Modern tool usage","PO6:The engineer and society","PO7:Environment and sustainability","PO8:Ethics","PO9:Individual and team work","PO10:Communication","PO11:Project management and finance","PO12:Life-long learning"],
-            "content": [
-                    "Apply the knowledge of mathematics, science, engineering fundamentals, and an engineering specialization for the solution of complex engineering problems.",
-                    "Identify, formulate, research literature, and analyze complex engineering problems reaching substantiated conclusions using first principles of mathematics, natural sciences, and engineering sciences.",
-                    "Design solutions for complex engineering problems and design system components or processes that meet the specified needs with appropriate consideration for public health and safety, and cultural, societal, and environmental considerations.",
-                    "Use research-based knowledge and research methods including design of experiments, analysis and interpretation of data, and synthesis of the information to provide valid conclusions.",
-                    "Create, select, and apply appropriate techniques, resources, and modern engineering and AI and Data Science tools, including prediction and modelling to complex engineering activities, with an understanding of the limitations.",
-                    "Apply reasoning informed by the contextual knowledge to assess societal, health, safety, legal and cultural issues and the consequent responsibilities relevant to the professional engineering practice.",
-                    "Understand the impact of the professional engineering solutions in societal and environmental contexts, and demonstrate the knowledge of, and need for sustainable development.",
-                    "Apply ethical principles and commit to professional ethics and responsibilities and norms of the engineering practice.",
-                    "Function effectively as an individual, and as a member or leader in diverse teams, and in multidisciplinary settings.",
-                    "Communicate effectively on complex engineering activities with the engineering community and with the society at large, such as, being able to comprehend and write effective reports and design documentation, make effective presentations, and give and receive clear instructions.",
-                    "Demonstrate knowledge and understanding of the engineering and management principles and apply these to one’s own work, as a member and leader in a team, to manage projects and in multidisciplinary environments.",
-                    "Recognize the need for, and have the preparation and ability to engage in independent and life-long learning in the broadest context of technological change."
-                ]
-        },
-        "program_specific_outcomes": {
-            "headings":["PSO01","PSO02"],
-	        "content":[
-                "Plan, design and implement smart and sustainable infrastructure.",
-                "Provide solutions for the social needs and challenges by applying modern tools and techniques."
-            ]
-        },
-        "key_highlights": [],
-        "six_unique": []
+        }
     },
     {
         "dept_id": "005",
@@ -181,38 +37,7 @@
         "regulation": {
         "year":["2020", "2021", "2022"],
 	    "pdf_path":["/static/docs/curriculum/005/reg_20.pdf","/static/docs/curriculum/005/reg_21.pdf","/static/docs/curriculum/005/reg_22.pdf"]
-
-        },
-        "academic_year": {
-            "2020-2021": "/path/to/academic_year_20_21.pdf",
-            "2021-2022": "/path/to/academic_year_21_22.pdf"
-        },
-        "program_outcomes": {
-            "headings":["PO1:Engineering knowledge","PO2:Problem analysis","PO3:Design/development of solutions","PO4:Conduct investigations of complex problems","PO5:Modern tool usage","PO6:The engineer and society","PO7:Environment and sustainability","PO8:Ethics","PO9:Individual and team work","PO10:Communication","PO11:Project management and finance","PO12:Life-long learning"],
-            "content": [
-                    "Apply the knowledge of mathematics, science, engineering fundamentals, and an engineering specialization for the solution of complex engineering problems.",
-                    "Identify, formulate, research literature, and analyze complex engineering problems reaching substantiated conclusions using first principles of mathematics, natural sciences, and engineering sciences.",
-                    "Design solutions for complex engineering problems and design system components or processes that meet the specified needs with appropriate consideration for public health and safety, and cultural, societal, and environmental considerations.",
-                    "Use research-based knowledge and research methods including design of experiments, analysis and interpretation of data, and synthesis of the information to provide valid conclusions.",
-                    "Create, select, and apply appropriate techniques, resources, and modern engineering and AI and Data Science tools, including prediction and modelling to complex engineering activities, with an understanding of the limitations.",
-                    "Apply reasoning informed by the contextual knowledge to assess societal, health, safety, legal and cultural issues and the consequent responsibilities relevant to the professional engineering practice.",
-                    "Understand the impact of the professional engineering solutions in societal and environmental contexts, and demonstrate the knowledge of, and need for sustainable development.",
-                    "Apply ethical principles and commit to professional ethics and responsibilities and norms of the engineering practice.",
-                    "Function effectively as an individual, and as a member or leader in diverse teams, and in multidisciplinary settings.",
-                    "Communicate effectively on complex engineering activities with the engineering community and with the society at large, such as, being able to comprehend and write effective reports and design documentation, make effective presentations, and give and receive clear instructions.",
-                    "Demonstrate knowledge and understanding of the engineering and management principles and apply these to one’s own work, as a member and leader in a team, to manage projects and in multidisciplinary environments.",
-                    "Recognize the need for, and have the preparation and ability to engage in independent and life-long learning in the broadest context of technological change."
-                ]
-        },
-        "program_specific_outcomes": {
-            "headings":["PSO01","PSO02"],
-	        "content":[
-                "Proficient in designing and implementing computing solutions, and use the fundamental knowledge of algorithms, networking Principles, web design, cloud computing, and data analytics to identify research gaps and pioneer innovative solutions",
-                "Ability to refine ethical approaches for addressing environmental and social issues, while enhancing interdisciplinary project management skills using IT tools to meet industry and societal demands effectively."
-            ]
-        },
-        "key_highlights": [],
-        "six_unique": []
+        }
     },
     {
         "dept_id": "006",
@@ -220,38 +45,7 @@
         "regulation": {
         "year":["2023"],
 	    "pdf_path":["/static/docs/curriculum/006/reg_23.pdf"]
-
-        },
-        "academic_year": {
-            "2020-2021": "/path/to/academic_year_20_21.pdf",
-            "2021-2022": "/path/to/academic_year_21_22.pdf"
-        },
-        "program_outcomes": {
-            "headings":["PO1:Engineering knowledge","PO2:Problem analysis","PO3:Design/development of solutions","PO4:Conduct investigations of complex problems","PO5:Modern tool usage","PO6:The engineer and society","PO7:Environment and sustainability","PO8:Ethics","PO9:Individual and team work","PO10:Communication","PO11:Project management and finance","PO12:Life-long learning"],
-            "content": [
-                    "Apply the knowledge of mathematics, science, engineering fundamentals, and an engineering specialization for the solution of complex engineering problems.",
-                    "Identify, formulate, research literature, and analyze complex engineering problems reaching substantiated conclusions using first principles of mathematics, natural sciences, and engineering sciences.",
-                    "Design solutions for complex engineering problems and design system components or processes that meet the specified needs with appropriate consideration for public health and safety, and cultural, societal, and environmental considerations.",
-                    "Use research-based knowledge and research methods including design of experiments, analysis and interpretation of data, and synthesis of the information to provide valid conclusions.",
-                    "Create, select, and apply appropriate techniques, resources, and modern engineering and AI and Data Science tools, including prediction and modelling to complex engineering activities, with an understanding of the limitations.",
-                    "Apply reasoning informed by the contextual knowledge to assess societal, health, safety, legal and cultural issues and the consequent responsibilities relevant to the professional engineering practice.",
-                    "Understand the impact of the professional engineering solutions in societal and environmental contexts, and demonstrate the knowledge of, and need for sustainable development.",
-                    "Apply ethical principles and commit to professional ethics and responsibilities and norms of the engineering practice.",
-                    "Function effectively as an individual, and as a member or leader in diverse teams, and in multidisciplinary settings.",
-                    "Communicate effectively on complex engineering activities with the engineering community and with the society at large, such as, being able to comprehend and write effective reports and design documentation, make effective presentations, and give and receive clear instructions.",
-                    "Demonstrate knowledge and understanding of the engineering and management principles and apply these to one’s own work, as a member and leader in a team, to manage projects and in multidisciplinary environments.",
-                    "Recognize the need for, and have the preparation and ability to engage in independent and life-long learning in the broadest context of technological change."
-                ]
-        },
-        "program_specific_outcomes": {
-            "headings":["PSO01","PSO02"],
-	        "content":[
-                "Ability to understand, analyse and develop computer programs in the areas related to networking, cryptography, web development and database management by adhering software development life cycle.",
-                "Graduate students will be able to develop data, resource, and asset protection strategies for organizations, processes, peoples, and individuals through Cyber security-centric skills."
-            ]
-        },
-        "key_highlights": [],
-        "six_unique": []
+        }
     },
     {
         "dept_id": "007",
@@ -260,39 +54,7 @@
         "year":["2019", "2021", "2023"],
 	    "pdf_path":["/static/docs/curriculum/007/reg_19.pdf","/static/docs/curriculum/007/reg_21.pdf","/static/docs/curriculum/007/reg_23.pdf"]
 
-        },
-        "academic_year": {
-            "2020-2021": "/path/to/academic_year_20_21.pdf",
-            "2021-2022": "/path/to/academic_year_21_22.pdf"
-        },
-        "program_outcomes": {
-            "headings":["PO1:Engineering knowledge","PO2:Problem analysis","PO3:Design/development of solutions","PO4:Conduct investigations of complex problems","PO5:Modern tool usage","PO6:The engineer and society","PO7:Environment and sustainability","PO8:Ethics","PO9:Individual and team work","PO10:Communication","PO11:Project management and finance","PO12:Life-long learning"],
-            "content": [
-                    "Apply the knowledge of mathematics, science, engineering fundamentals, and an engineering specialization for the solution of complex engineering problems.",
-                    "Identify, formulate, research literature, and analyze complex engineering problems reaching substantiated conclusions using first principles of mathematics, natural sciences, and engineering sciences.",
-                    "Design solutions for complex engineering problems and design system components or processes that meet the specified needs with appropriate consideration for public health and safety, and cultural, societal, and environmental considerations.",
-                    "Use research-based knowledge and research methods including design of experiments, analysis and interpretation of data, and synthesis of the information to provide valid conclusions.",
-                    "Create, select, and apply appropriate techniques, resources, and modern engineering and AI and Data Science tools, including prediction and modelling to complex engineering activities, with an understanding of the limitations.",
-                    "Apply reasoning informed by the contextual knowledge to assess societal, health, safety, legal and cultural issues and the consequent responsibilities relevant to the professional engineering practice.",
-                    "Understand the impact of the professional engineering solutions in societal and environmental contexts, and demonstrate the knowledge of, and need for sustainable development.",
-                    "Apply ethical principles and commit to professional ethics and responsibilities and norms of the engineering practice.",
-                    "Function effectively as an individual, and as a member or leader in diverse teams, and in multidisciplinary settings.",
-                    "Communicate effectively on complex engineering activities with the engineering community and with the society at large, such as, being able to comprehend and write effective reports and design documentation, make effective presentations, and give and receive clear instructions.",
-                    "Demonstrate knowledge and understanding of the engineering and management principles and apply these to one’s own work, as a member and leader in a team, to manage projects and in multidisciplinary environments.",
-                    "Recognize the need for, and have the preparation and ability to engage in independent and life-long learning in the broadest context of technological change."
-                ]
-        },
-        "program_specific_outcomes": {
-            "headings":["PSO01","PSO02"],
-	        "content":[
-                "Graduates will have the ability to design, simulate and control the Electrical and Electronics circuits using the concepts of power and control engineering.",
-                "Graduates will have the ability to identify, analyze the problems and innovate ideas by adapting the concepts of Power electronics, Recent trends in power systems and Drives systems in Electrical Engineering to provide solutions to existing/novel problems."
-            ]
-        },
-        "key_highlights": [
-        ],
-        "six_unique": [
-        ]
+        }
     },
     {
         "dept_id": "008",
@@ -300,39 +62,7 @@
         "regulation": {
         "year":["2019", "2021", "2023"],
 	    "pdf_path":["/static/docs/curriculum/008/reg_19.pdf","/static/docs/curriculum/008/reg_21.pdf","/static/docs/curriculum/008/reg_23.pdf"]
-
-        },
-        "academic_year": {
-            "2020-2021": "/path/to/academic_year_20_21.pdf",
-            "2021-2022": "/path/to/academic_year_21_22.pdf"
-        },
-        "program_outcomes": {
-            "headings":["PO1:Engineering knowledge","PO2:Problem analysis","PO3:Design/development of solutions","PO4:Conduct investigations of complex problems","PO5:Modern tool usage","PO6:The engineer and society","PO7:Environment and sustainability","PO8:Ethics","PO9:Individual and team work","PO10:Communication","PO11:Project management and finance","PO12:Life-long learning"],
-            "content": [
-                    "Apply the knowledge of mathematics, science, engineering fundamentals, and an engineering specialization for the solution of complex engineering problems.",
-                    "Identify, formulate, research literature, and analyze complex engineering problems reaching substantiated conclusions using first principles of mathematics, natural sciences, and engineering sciences.",
-                    "Design solutions for complex engineering problems and design system components or processes that meet the specified needs with appropriate consideration for public health and safety, and cultural, societal, and environmental considerations.",
-                    "Use research-based knowledge and research methods including design of experiments, analysis and interpretation of data, and synthesis of the information to provide valid conclusions.",
-                    "Create, select, and apply appropriate techniques, resources, and modern engineering and AI and Data Science tools, including prediction and modelling to complex engineering activities, with an understanding of the limitations.",
-                    "Apply reasoning informed by the contextual knowledge to assess societal, health, safety, legal and cultural issues and the consequent responsibilities relevant to the professional engineering practice.",
-                    "Understand the impact of the professional engineering solutions in societal and environmental contexts, and demonstrate the knowledge of, and need for sustainable development.",
-                    "Apply ethical principles and commit to professional ethics and responsibilities and norms of the engineering practice.",
-                    "Function effectively as an individual, and as a member or leader in diverse teams, and in multidisciplinary settings.",
-                    "Communicate effectively on complex engineering activities with the engineering community and with the society at large, such as, being able to comprehend and write effective reports and design documentation, make effective presentations, and give and receive clear instructions.",
-                    "Demonstrate knowledge and understanding of the engineering and management principles and apply these to one’s own work, as a member and leader in a team, to manage projects and in multidisciplinary environments.",
-                    "Recognize the need for, and have the preparation and ability to engage in independent and life-long learning in the broadest context of technological change."
-                ]
-        },
-        "program_specific_outcomes": {
-            "headings":["PSO01","PSO02","PSO03"],
-	        "content":[
-                "Develop mathematical models of the industrial process and provide solutions for industrial automation systems ",
-                "Design, implement, test and analyses embedded based instrumentation systems for monitoring and control.",
-                "Empower the students to work on research platforms and instill entrepreneurship skills to work on a large industrial scale. "
-            ]
-        },
-        "key_highlights": [],
-        "six_unique": []
+        }
     },
     {
         "dept_id": "009",
@@ -340,38 +70,7 @@
         "regulation": {
         "year":["2020", "2021", "2022"],
 	    "pdf_path":["/static/docs/curriculum/009/reg_20.pdf","/static/docs/curriculum/009/reg_21.pdf","/static/docs/curriculum/009/reg_22.pdf"]
-
-        },
-        "academic_year": {
-            "2020-2021": "/path/to/academic_year_20_21.pdf",
-            "2021-2022": "/path/to/academic_year_21_22.pdf"
-        },
-        "program_outcomes": {
-            "headings":["PO1:Engineering knowledge","PO2:Problem analysis","PO3:Design/development of solutions","PO4:Conduct investigations of complex problems","PO5:Modern tool usage","PO6:The engineer and society","PO7:Environment and sustainability","PO8:Ethics","PO9:Individual and team work","PO10:Communication","PO11:Project management and finance","PO12:Life-long learning"],
-            "content": [
-                    "Apply the knowledge of mathematics, science, engineering fundamentals, and an engineering specialization for the solution of complex engineering problems.",
-                    "Identify, formulate, research literature, and analyze complex engineering problems reaching substantiated conclusions using first principles of mathematics, natural sciences, and engineering sciences.",
-                    "Design solutions for complex engineering problems and design system components or processes that meet the specified needs with appropriate consideration for public health and safety, and cultural, societal, and environmental considerations.",
-                    "Use research-based knowledge and research methods including design of experiments, analysis and interpretation of data, and synthesis of the information to provide valid conclusions.",
-                    "Create, select, and apply appropriate techniques, resources, and modern engineering and AI and Data Science tools, including prediction and modelling to complex engineering activities, with an understanding of the limitations.",
-                    "Apply reasoning informed by the contextual knowledge to assess societal, health, safety, legal and cultural issues and the consequent responsibilities relevant to the professional engineering practice.",
-                    "Understand the impact of the professional engineering solutions in societal and environmental contexts, and demonstrate the knowledge of, and need for sustainable development.",
-                    "Apply ethical principles and commit to professional ethics and responsibilities and norms of the engineering practice.",
-                    "Function effectively as an individual, and as a member or leader in diverse teams, and in multidisciplinary settings.",
-                    "Communicate effectively on complex engineering activities with the engineering community and with the society at large, such as, being able to comprehend and write effective reports and design documentation, make effective presentations, and give and receive clear instructions.",
-                    "Demonstrate knowledge and understanding of the engineering and management principles and apply these to one’s own work, as a member and leader in a team, to manage projects and in multidisciplinary environments.",
-                    "Recognize the need for, and have the preparation and ability to engage in independent and life-long learning in the broadest context of technological change."
-                ]
-        },
-        "program_specific_outcomes": {
-            "headings":["PSO01","PSO02"],
-	        "content":[
-                "Apply the concepts of Artificial Intelligence to provide solutions for the real time problems and to integrate the professional skills with recent tools and technologies to cope with the dynamic AI needs.",
-                "Create a concrete foundation and enlighten the innovation, research and entrepreneur skills in the field of Artificial Intelligence and Data science."
-            ]
-        },
-        "key_highlights": [],
-        "six_unique": []
+        }
     },
     {
         "dept_id": "010",
@@ -379,35 +78,7 @@
         "regulation": {
         "year":[],
 	    "pdf_path":[]
-
-        },
-        "academic_year": {
-            "2020-2021": "/path/to/academic_year_20_21.pdf",
-            "2021-2022": "/path/to/academic_year_21_22.pdf"
-        },
-        "program_outcomes": {
-            "headings":["PO1:Engineering knowledge","PO2:Problem analysis","PO3:Design/development of solutions","PO4:Conduct investigations of complex problems","PO5:Modern tool usage","PO6:The engineer and society","PO7:Environment and sustainability","PO8:Ethics","PO9:Individual and team work","PO10:Communication","PO11:Project management and finance","PO12:Life-long learning"],
-            "content": [
-                    "Apply the knowledge of mathematics, science, engineering fundamentals, and an engineering specialization for the solution of complex engineering problems.",
-                    "Identify, formulate, research literature, and analyze complex engineering problems reaching substantiated conclusions using first principles of mathematics, natural sciences, and engineering sciences.",
-                    "Design solutions for complex engineering problems and design system components or processes that meet the specified needs with appropriate consideration for public health and safety, and cultural, societal, and environmental considerations.",
-                    "Use research-based knowledge and research methods including design of experiments, analysis and interpretation of data, and synthesis of the information to provide valid conclusions.",
-                    "Create, select, and apply appropriate techniques, resources, and modern engineering and AI and Data Science tools, including prediction and modelling to complex engineering activities, with an understanding of the limitations.",
-                    "Apply reasoning informed by the contextual knowledge to assess societal, health, safety, legal and cultural issues and the consequent responsibilities relevant to the professional engineering practice.",
-                    "Understand the impact of the professional engineering solutions in societal and environmental contexts, and demonstrate the knowledge of, and need for sustainable development.",
-                    "Apply ethical principles and commit to professional ethics and responsibilities and norms of the engineering practice.",
-                    "Function effectively as an individual, and as a member or leader in diverse teams, and in multidisciplinary settings.",
-                    "Communicate effectively on complex engineering activities with the engineering community and with the society at large, such as, being able to comprehend and write effective reports and design documentation, make effective presentations, and give and receive clear instructions.",
-                    "Demonstrate knowledge and understanding of the engineering and management principles and apply these to one’s own work, as a member and leader in a team, to manage projects and in multidisciplinary environments.",
-                    "Recognize the need for, and have the preparation and ability to engage in independent and life-long learning in the broadest context of technological change."
-                ]
-        },
-        "program_specific_outcomes": {
-            "headings":[],
-	        "content":[]
-        },
-        "key_highlights": [],
-        "six_unique": []
+        }
     },
     {
         "dept_id": "011",
@@ -415,38 +86,7 @@
         "regulation": {
         "year":["2020", "2021", "2022"],
 	    "pdf_path":["/static/docs/curriculum/011/it_reg_19.pdf","/static/docs/curriculum/011/it_reg_21.pdf","/static/docs/curriculum/011/it_reg_23.pdf"]
-
-        },
-        "academic_year": {
-            "2020-2021": "/path/to/academic_year_20_21.pdf",
-            "2021-2022": "/path/to/academic_year_21_22.pdf"
-        },
-        "program_outcomes": {
-            "headings":["PO1:Engineering knowledge","PO2:Problem analysis","PO3:Design/development of solutions","PO4:Conduct investigations of complex problems","PO5:Modern tool usage","PO6:The engineer and society","PO7:Environment and sustainability","PO8:Ethics","PO9:Individual and team work","PO10:Communication","PO11:Project management and finance","PO12:Life-long learning"],
-            "content": [
-                    "Apply the knowledge of mathematics, science, engineering fundamentals, and an engineering specialization for the solution of complex engineering problems.",
-                    "Identify, formulate, research literature, and analyze complex engineering problems reaching substantiated conclusions using first principles of mathematics, natural sciences, and engineering sciences.",
-                    "Design solutions for complex engineering problems and design system components or processes that meet the specified needs with appropriate consideration for public health and safety, and cultural, societal, and environmental considerations.",
-                    "Use research-based knowledge and research methods including design of experiments, analysis and interpretation of data, and synthesis of the information to provide valid conclusions.",
-                    "Create, select, and apply appropriate techniques, resources, and modern engineering and AI and Data Science tools, including prediction and modelling to complex engineering activities, with an understanding of the limitations.",
-                    "Apply reasoning informed by the contextual knowledge to assess societal, health, safety, legal and cultural issues and the consequent responsibilities relevant to the professional engineering practice.",
-                    "Understand the impact of the professional engineering solutions in societal and environmental contexts, and demonstrate the knowledge of, and need for sustainable development.",
-                    "Apply ethical principles and commit to professional ethics and responsibilities and norms of the engineering practice.",
-                    "Function effectively as an individual, and as a member or leader in diverse teams, and in multidisciplinary settings.",
-                    "Communicate effectively on complex engineering activities with the engineering community and with the society at large, such as, being able to comprehend and write effective reports and design documentation, make effective presentations, and give and receive clear instructions.",
-                    "Demonstrate knowledge and understanding of the engineering and management principles and apply these to one’s own work, as a member and leader in a team, to manage projects and in multidisciplinary environments.",
-                    "Recognize the need for, and have the preparation and ability to engage in independent and life-long learning in the broadest context of technological change."
-                ]
-        },
-        "program_specific_outcomes": {
-            "headings":["PSO01","PSO02"],
-	        "content":[
-                "To utilize cutting-edge techniques, programming languages, and the latest Information Technology tools and platforms for solving real time applications to meet out the societal and industrial needs.",
-                "To design and develop fruitful service utilities and products for various aspects of technological needs involving different domains"
-            ]
-        },
-        "key_highlights": [],
-        "six_unique": []
+        }
     },
     {
         "dept_id": "012",
@@ -454,38 +94,7 @@
         "regulation": {
         "year":["2020", "2021", "2022"],
 	    "pdf_path":["/static/docs/curriculum/012/reg_20.pdf","/static/docs/curriculum/012/reg_21.pdf","/static/docs/curriculum/012/reg_22.pdf"]
-
-        },
-        "academic_year": {
-            "2020-2021": "/path/to/academic_year_20_21.pdf",
-            "2021-2022": "/path/to/academic_year_21_22.pdf"
-        },
-        "program_outcomes": {
-            "headings":["PO1:Engineering knowledge","PO2:Problem analysis","PO3:Design/development of solutions","PO4:Conduct investigations of complex problems","PO5:Modern tool usage","PO6:The engineer and society","PO7:Environment and sustainability","PO8:Ethics","PO9:Individual and team work","PO10:Communication","PO11:Project management and finance","PO12:Life-long learning"],
-            "content": [
-                    "Apply the knowledge of mathematics, science, engineering fundamentals, and an engineering specialization for the solution of complex engineering problems.",
-                    "Identify, formulate, research literature, and analyze complex engineering problems reaching substantiated conclusions using first principles of mathematics, natural sciences, and engineering sciences.",
-                    "Design solutions for complex engineering problems and design system components or processes that meet the specified needs with appropriate consideration for public health and safety, and cultural, societal, and environmental considerations.",
-                    "Use research-based knowledge and research methods including design of experiments, analysis and interpretation of data, and synthesis of the information to provide valid conclusions.",
-                    "Create, select, and apply appropriate techniques, resources, and modern engineering and AI and Data Science tools, including prediction and modelling to complex engineering activities, with an understanding of the limitations.",
-                    "Apply reasoning informed by the contextual knowledge to assess societal, health, safety, legal and cultural issues and the consequent responsibilities relevant to the professional engineering practice.",
-                    "Understand the impact of the professional engineering solutions in societal and environmental contexts, and demonstrate the knowledge of, and need for sustainable development.",
-                    "Apply ethical principles and commit to professional ethics and responsibilities and norms of the engineering practice.",
-                    "Function effectively as an individual, and as a member or leader in diverse teams, and in multidisciplinary settings.",
-                    "Communicate effectively on complex engineering activities with the engineering community and with the society at large, such as, being able to comprehend and write effective reports and design documentation, make effective presentations, and give and receive clear instructions.",
-                    "Demonstrate knowledge and understanding of the engineering and management principles and apply these to one’s own work, as a member and leader in a team, to manage projects and in multidisciplinary environments.",
-                    "Recognize the need for, and have the preparation and ability to engage in independent and life-long learning in the broadest context of technological change."
-                ]
-        },
-        "program_specific_outcomes": {
-            "headings":["PSO01","PSO02"],
-	        "content":[
-                "Apply the concepts of Artificial Intelligence to provide solutions for the real time problems and to integrate the professional skills with recent tools and technologies to cope with the dynamic AI needs.",
-                "Create a concrete foundation and enlighten the innovation, research and entrepreneur skills in the field of Artificial Intelligence and Data science."
-            ]
-        },
-        "key_highlights": [],
-        "six_unique": []
+        }
     },
     {
         "dept_id": "013",
@@ -493,38 +102,7 @@
         "regulation": {
         "year":["2020", "2021", "2022"],
 	    "pdf_path":["/static/docs/curriculum/013/reg_20.pdf","/static/docs/curriculum/013/reg_21.pdf","/static/docs/curriculum/013/reg_22.pdf"]
-
-        },
-        "academic_year": {
-            "2020-2021": "/path/to/academic_year_20_21.pdf",
-            "2021-2022": "/path/to/academic_year_21_22.pdf"
-        },
-        "program_outcomes": {
-            "headings":["PO1:Engineering knowledge","PO2:Problem analysis","PO3:Design/development of solutions","PO4:Conduct investigations of complex problems","PO5:Modern tool usage","PO6:The engineer and society","PO7:Environment and sustainability","PO8:Ethics","PO9:Individual and team work","PO10:Communication","PO11:Project management and finance","PO12:Life-long learning"],
-            "content": [
-                    "Apply the knowledge of mathematics, science, engineering fundamentals, and an engineering specialization for the solution of complex engineering problems.",
-                    "Identify, formulate, research literature, and analyze complex engineering problems reaching substantiated conclusions using first principles of mathematics, natural sciences, and engineering sciences.",
-                    "Design solutions for complex engineering problems and design system components or processes that meet the specified needs with appropriate consideration for public health and safety, and cultural, societal, and environmental considerations.",
-                    "Use research-based knowledge and research methods including design of experiments, analysis and interpretation of data, and synthesis of the information to provide valid conclusions.",
-                    "Create, select, and apply appropriate techniques, resources, and modern engineering and AI and Data Science tools, including prediction and modelling to complex engineering activities, with an understanding of the limitations.",
-                    "Apply reasoning informed by the contextual knowledge to assess societal, health, safety, legal and cultural issues and the consequent responsibilities relevant to the professional engineering practice.",
-                    "Understand the impact of the professional engineering solutions in societal and environmental contexts, and demonstrate the knowledge of, and need for sustainable development.",
-                    "Apply ethical principles and commit to professional ethics and responsibilities and norms of the engineering practice.",
-                    "Function effectively as an individual, and as a member or leader in diverse teams, and in multidisciplinary settings.",
-                    "Communicate effectively on complex engineering activities with the engineering community and with the society at large, such as, being able to comprehend and write effective reports and design documentation, make effective presentations, and give and receive clear instructions.",
-                    "Demonstrate knowledge and understanding of the engineering and management principles and apply these to one’s own work, as a member and leader in a team, to manage projects and in multidisciplinary environments.",
-                    "Recognize the need for, and have the preparation and ability to engage in independent and life-long learning in the broadest context of technological change."
-                ]
-        },
-        "program_specific_outcomes": {
-            "headings":["PSO01","PSO02"],
-	        "content":[
-                "Graduates will have an ability to identify, formulate and analyze the problems related to design, manufacturing, thermal and materials engineering",
-                "Graduates will have an ability to implement/use appropriate techniques, programming skills, and latest/recent computer aided engineering tools/packages for modelling, simulation and analysis of mechanical engineering problems."
-            ]
-        },
-        "key_highlights": [],
-        "six_unique": []
+        }
     },
     {
         "dept_id": "014",
@@ -532,50 +110,7 @@
         "regulation": {
         "year":["2023","2023"],
 	    "pdf_path":["/static/docs/curriculum/014/reg_23_1.pdf","/static/docs/curriculum/014/reg_23_2.pdf"]
-
-        },
-        "academic_year": {
-            "2020-2021": "/path/to/academic_year_20_21.pdf",
-            "2021-2022": "/path/to/academic_year_21_22.pdf"
-        },
-        "program_outcomes": {
-            "headings":["PO1:Engineering knowledge","PO2:Problem analysis","PO3:Design/development of solutions","PO4:Conduct investigations of complex problems","PO5:Modern tool usage","PO6:The engineer and society","PO7:Environment and sustainability","PO8:Ethics","PO9:Individual and team work","PO10:Communication","PO11:Project management and finance","PO12:Life-long learning"],
-            "content": [
-                    "Apply the knowledge of mathematics, science, engineering fundamentals, and an engineering specialization for the solution of complex engineering problems.",
-                    "Identify, formulate, research literature, and analyze complex engineering problems reaching substantiated conclusions using first principles of mathematics, natural sciences, and engineering sciences.",
-                    "Design solutions for complex engineering problems and design system components or processes that meet the specified needs with appropriate consideration for public health and safety, and cultural, societal, and environmental considerations.",
-                    "Use research-based knowledge and research methods including design of experiments, analysis and interpretation of data, and synthesis of the information to provide valid conclusions.",
-                    "Create, select, and apply appropriate techniques, resources, and modern engineering and AI and Data Science tools, including prediction and modelling to complex engineering activities, with an understanding of the limitations.",
-                    "Apply reasoning informed by the contextual knowledge to assess societal, health, safety, legal and cultural issues and the consequent responsibilities relevant to the professional engineering practice.",
-                    "Understand the impact of the professional engineering solutions in societal and environmental contexts, and demonstrate the knowledge of, and need for sustainable development.",
-                    "Apply ethical principles and commit to professional ethics and responsibilities and norms of the engineering practice.",
-                    "Function effectively as an individual, and as a member or leader in diverse teams, and in multidisciplinary settings.",
-                    "Communicate effectively on complex engineering activities with the engineering community and with the society at large, such as, being able to comprehend and write effective reports and design documentation, make effective presentations, and give and receive clear instructions.",
-                    "Demonstrate knowledge and understanding of the engineering and management principles and apply these to one’s own work, as a member and leader in a team, to manage projects and in multidisciplinary environments.",
-                    "Recognize the need for, and have the preparation and ability to engage in independent and life-long learning in the broadest context of technological change."
-                ]
-        },
-        "program_specific_outcomes": {
-            "headings":["PSO01","PSO02"],
-	        "content":[
-                "Apply the concepts of Artificial Intelligence to provide solutions for the real time problems and to integrate the professional skills with recent tools and technologies to cope with the dynamic AI needs.",
-                "Create a concrete foundation and enlighten the innovation, research and entrepreneur skills in the field of Artificial Intelligence and Data science."
-            ]
-        },
-        "key_highlights": [
-            "Key Highlight 1: Description of key highlight 1",
-            "Key Highlight 2: Description of key highlight 2",
-            "Key Highlight 3: Description of key highlight 3",
-            "Key Highlight 4: Description of key highlight 4"
-        ],
-        "six_unique": [
-            "Block Chain Technologies",
-            "Artificial Intelligence",
-            "Data Science",
-            "Big Data Management",
-            "Social Network Analysis",
-            "Text Analytics"
-        ]
+        }
     },
     {
         "dept_id": "015",
@@ -583,54 +118,7 @@
         "regulation": {
         "year":["1st semester", "2023 for electronics engineer", "2023 for materials science","2023 for civil engineers","2023 for computer engineers"],
 	    "pdf_path":["/static/docs/curriculum/015/reg_1_23.pdf","/static/docs/curriculum/015/reg_electronics_engineering.pdf","/static/docs/curriculum/015/reg_material_science.pdf","/static/docs/curriculum/015/reg_civil_engineers.pdf","/static/docs/curriculum/015/reg_computer_engineers.pdf"]
-
-        },
-        "academic_year": {
-            "2021-2022": "/path/to/academic_year_21_22.pdf",
-            "2022-2023": "/path/to/academic_year_22_23.pdf",
-            "2023-2024": "/path/to/academic_year_23_24.pdf"
-        },
-        "program_outcomes": {
-            "headings":["PO1:Engineering knowledge","PO2:Problem analysis","PO3:Design/development of solutions","PO4:Conduct investigations of complex problems","PO5:Modern tool usage","PO6:The engineer and society","PO7:Environment and sustainability","PO8:Ethics","PO9:Individual and team work","PO10:Communication","PO11:Project management and finance","PO12:Life-long learning"],
-            "content": [
-                    "Apply the knowledge of mathematics, science, engineering fundamentals, and an engineering specialization for the solution of complex engineering problems.",
-                    "Identify, formulate, research literature, and analyze complex engineering problems reaching substantiated conclusions using first principles of mathematics, natural sciences, and engineering sciences.",
-                    "Design solutions for complex engineering problems and design system components or processes that meet the specified needs with appropriate consideration for public health and safety, and cultural, societal, and environmental considerations.",
-                    "Use research-based knowledge and research methods including design of experiments, analysis and interpretation of data, and synthesis of the information to provide valid conclusions.",
-                    "Create, select, and apply appropriate techniques, resources, and modern engineering and AI and Data Science tools, including prediction and modelling to complex engineering activities, with an understanding of the limitations.",
-                    "Apply reasoning informed by the contextual knowledge to assess societal, health, safety, legal and cultural issues and the consequent responsibilities relevant to the professional engineering practice.",
-                    "Understand the impact of the professional engineering solutions in societal and environmental contexts, and demonstrate the knowledge of, and need for sustainable development.",
-                    "Apply ethical principles and commit to professional ethics and responsibilities and norms of the engineering practice.",
-                    "Function effectively as an individual, and as a member or leader in diverse teams, and in multidisciplinary settings.",
-                    "Communicate effectively on complex engineering activities with the engineering community and with the society at large, such as, being able to comprehend and write effective reports and design documentation, make effective presentations, and give and receive clear instructions.",
-                    "Demonstrate knowledge and understanding of the engineering and management principles and apply these to one’s own work, as a member and leader in a team, to manage projects and in multidisciplinary environments.",
-                    "Recognize the need for, and have the preparation and ability to engage in independent and life-long learning in the broadest context of technological change."
-                ]
-        },
-        "program_specific_outcomes": {
-            "headings":["PSO01","PSO02"],
-	        "content":[
-                "Apply the concepts of Artificial Intelligence to provide solutions for the real time problems and to integrate the professional skills with recent tools and technologies to cope with the dynamic AI needs.",
-                "Create a concrete foundation and enlighten the innovation, research and entrepreneur skills in the field of Artificial Intelligence and Data science."
-            ]
-        },
-        "program_outcomes_headings":["PO1:Engineering knowledge","PO2:Problem analysis","PO3:Design/development of solutions","PO4:Conduct investigations of complex problems","PO5:Modern tool usage","PO6:The engineer and society","PO7:Environment and sustainability","PO8:Ethics","PO9:Individual and team work","PO10:Communication","PO11:Project management and finance","PO12:Life-long learning"],
-        "program_specific_outcomes_headings":["PS01","PSO2"],
-        "key_highlights": [
-            "Key Highlight 1: Description of key highlight 1",
-            "Key Highlight 2: Description of key highlight 2",
-            "Key Highlight 3: Description of key highlight 3",
-            "Key Highlight 4: Description of key highlight 4",
-            "Key Highlight 5: Description of key highlight 5"
-        ],
-        "six_unique": [
-            "Block Chain Technologies",
-            "Artificial Intelligence",
-            "Data Science",
-            "Big Data Management",
-            "Social Network Analysis",
-            "Text Analytics"
-        ]
+        }
     },
     {
         "dept_id": "016",
@@ -638,40 +126,7 @@
         "regulation": {
         "year":[],
 	    "pdf_path":[""]
-
-        },
-        "academic_year": {
-        
-        },
-        "program_outcomes": {
-            "headings":["PO1:Engineering knowledge","PO2:Problem analysis","PO3:Design/development of solutions","PO4:Conduct investigations of complex problems","PO5:Modern tool usage","PO6:The engineer and society","PO7:Environment and sustainability","PO8:Ethics","PO9:Individual and team work","PO10:Communication","PO11:Project management and finance","PO12:Life-long learning"],
-            "content": [
-                    "Apply the knowledge of mathematics, science, engineering fundamentals, and an engineering specialization for the solution of complex engineering problems.",
-                    "Identify, formulate, research literature, and analyze complex engineering problems reaching substantiated conclusions using first principles of mathematics, natural sciences, and engineering sciences.",
-                    "Design solutions for complex engineering problems and design system components or processes that meet the specified needs with appropriate consideration for public health and safety, and cultural, societal, and environmental considerations.",
-                    "Use research-based knowledge and research methods including design of experiments, analysis and interpretation of data, and synthesis of the information to provide valid conclusions.",
-                    "Create, select, and apply appropriate techniques, resources, and modern engineering and AI and Data Science tools, including prediction and modelling to complex engineering activities, with an understanding of the limitations.",
-                    "Apply reasoning informed by the contextual knowledge to assess societal, health, safety, legal and cultural issues and the consequent responsibilities relevant to the professional engineering practice.",
-                    "Understand the impact of the professional engineering solutions in societal and environmental contexts, and demonstrate the knowledge of, and need for sustainable development.",
-                    "Apply ethical principles and commit to professional ethics and responsibilities and norms of the engineering practice.",
-                    "Function effectively as an individual, and as a member or leader in diverse teams, and in multidisciplinary settings.",
-                    "Communicate effectively on complex engineering activities with the engineering community and with the society at large, such as, being able to comprehend and write effective reports and design documentation, make effective presentations, and give and receive clear instructions.",
-                    "Demonstrate knowledge and understanding of the engineering and management principles and apply these to one’s own work, as a member and leader in a team, to manage projects and in multidisciplinary environments.",
-                    "Recognize the need for, and have the preparation and ability to engage in independent and life-long learning in the broadest context of technological change."
-                ]
-        },
-        "program_specific_outcomes": {
-            "headings":["PSO01","PSO02"],
-	        "content":[
-                "M.E Computer Science & Engineering curriculum involves the design and understanding of computational process and programming languages",
-                "The syllabus includes topics such as the algorithms, Advanced Programming Languages, Cloud & Machine Learning, Deep Learning, artificial intelligence etc., to name  a few. The department also provides Full time and Part-time PhD",
-                "After completion of the degree in M.E Computer Science & Engineering, PG Graduates can excel in Career advancement, Research Opportunities to meet with peers, Faculty team and Industry Professionals and can also develop Enhanced Problem solving skills to meet the need of industry related works",
-                "It is a broad field to work in private and government sector as well"
-
-            ]
-        },
-        "key_highlights": [],
-        "six_unique": []
+        }
     },
     {
         "dept_id": "017",
@@ -680,37 +135,6 @@
         "year":["2020", "2021", "2022"],
 	    "pdf_path":["/static/docs/curriculum/015/reg_20.pdf","/static/docs/curriculum/015/reg_21.pdf","/static/docs/curriculum/015/reg_22.pdf"]
 
-        },
-        "academic_year": {
-            "2021-2022": "/path/to/academic_year_21_22.pdf",
-            "2022-2023": "/path/to/academic_year_22_23.pdf",
-            "2023-2024": "/path/to/academic_year_23_24.pdf"
-        },
-        "program_outcomes": {
-            "headings":["PO1:Engineering knowledge","PO2:Problem analysis","PO3:Design/development of solutions","PO4:Conduct investigations of complex problems","PO5:Modern tool usage","PO6:The engineer and society","PO7:Environment and sustainability","PO8:Ethics","PO9:Individual and team work","PO10:Communication","PO11:Project management and finance","PO12:Life-long learning"],
-            "content": [
-                    "Apply the knowledge of mathematics, science, engineering fundamentals, and an engineering specialization for the solution of complex engineering problems.",
-                    "Identify, formulate, research literature, and analyze complex engineering problems reaching substantiated conclusions using first principles of mathematics, natural sciences, and engineering sciences.",
-                    "Design solutions for complex engineering problems and design system components or processes that meet the specified needs with appropriate consideration for public health and safety, and cultural, societal, and environmental considerations.",
-                    "Use research-based knowledge and research methods including design of experiments, analysis and interpretation of data, and synthesis of the information to provide valid conclusions.",
-                    "Create, select, and apply appropriate techniques, resources, and modern engineering and AI and Data Science tools, including prediction and modelling to complex engineering activities, with an understanding of the limitations.",
-                    "Apply reasoning informed by the contextual knowledge to assess societal, health, safety, legal and cultural issues and the consequent responsibilities relevant to the professional engineering practice.",
-                    "Understand the impact of the professional engineering solutions in societal and environmental contexts, and demonstrate the knowledge of, and need for sustainable development.",
-                    "Apply ethical principles and commit to professional ethics and responsibilities and norms of the engineering practice.",
-                    "Function effectively as an individual, and as a member or leader in diverse teams, and in multidisciplinary settings.",
-                    "Communicate effectively on complex engineering activities with the engineering community and with the society at large, such as, being able to comprehend and write effective reports and design documentation, make effective presentations, and give and receive clear instructions.",
-                    "Demonstrate knowledge and understanding of the engineering and management principles and apply these to one’s own work, as a member and leader in a team, to manage projects and in multidisciplinary environments.",
-                    "Recognize the need for, and have the preparation and ability to engage in independent and life-long learning in the broadest context of technological change."
-                ]
-        },
-        "program_specific_outcomes": {
-            "headings":["PSO01","PSO02"],
-	        "content":[
-                "Students should explore practical application of the management concept and to become professional managers",
-                "Students should have a strong analytical foundation in key functional areas and continously learn,improvise,adapt,energize,excel and grow"
-            ]
-        },
-        "key_highlights": [],
-        "six_unique": []
+        }
     }
 ]

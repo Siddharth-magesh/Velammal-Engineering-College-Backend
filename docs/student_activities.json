@@ -64,23 +64,17 @@
             {"image_path": "/static/images/student_activities/004/civil_3.jpg", "event_name": "Overall Trophy in Inter-collegiate symposium conducted by Dayanand Sagar College of Engineering and Technology,Bengaluru,2022 ", "image_content": "Our Students were awarded 5 Final Year funded projects by TNSCST for modern project works", "date": "2022"},
             {"image_path": "/static/images/student_activities/004/civil_4.jpg", "event_name": "First Prize in BAI Oratorical Competition 2021", "image_content": "Our Students have been winning prizes every year since 2016 in the BAI - builders’ Association of India Oratory Competition.", "date": "2021"}
         ] },
-    {
-        "dept_id": "005",
-        "department_name": "Computer Science & Engineering (CSE)",
-        "content": "Department 5 Content",
-        "images": [
-            {"image_path": "/static/images/student_activities/005/cse_1.jpg", "event_name": "Description of Image 5_1", "image_content": "Event 5_1", "date": "YYYY-MM-DD"},
-            {"image_path": "/static/images/student_activities/005/cse_2.jpg", "event_name": "Description of Image 5_2", "image_content": "Event 5_2", "date": "YYYY-MM-DD"},
-            {"image_path": "/static/images/student_activities/005/cse_3.jpg", "event_name": "Description of Image 5_3", "image_content": "Event 5_3", "date": "YYYY-MM-DD"},
-            {"image_path": "/static/images/student_activities/005/cse_4.jpg", "event_name": "Description of Image 5_4", "image_content": "Event 5_4", "date": "YYYY-MM-DD"},
-            {"image_path": "/static/images/student_activities/005/cse_5.jpg", "event_name": "Description of Image 5_5", "image_content": "Event 5_5", "date": "YYYY-MM-DD"},
-            {"image_path": "/static/images/student_activities/005/cse_6.jpg", "event_name": "Description of Image 5_6", "image_content": "Event 5_6", "date": "YYYY-MM-DD"},
-            {"image_path": "/static/images/student_activities/005/cse_7.jpg", "event_name": "Description of Image 5_7", "image_content": "Event 5_7", "date": "YYYY-MM-DD"},
-            {"image_path": "/static/images/student_activities/005/cse_8.jpg", "event_name": "Description of Image 5_8", "image_content": "Event 5_8", "date": "YYYY-MM-DD"},
-            {"image_path": "/static/images/student_activities/005/cse_9.jpg", "event_name": "Description of Image 5_9", "image_content": "Event 5_9", "date": "YYYY-MM-DD"},
-            {"image_path": "/static/images/student_activities/005/cse_10.jpg", "event_name": "Description of Image 5_10", "image_content": "Event 5_10", "date": "YYYY-MM-DD"}
-        ]
-    },
+        {
+            "dept_id": "005",
+            "department_name": "Computer Science & Engineering (CSE)",
+            "content": "",
+            "images": [
+                {"image_path": "/static/images/student_activities/005/cse_1.jpg", "event_name": "Code Debugging ", "image_content": "Mr.R. Prasath, K. Logendiran, KM. Udaya Krishna has won first place in Code Debugging event with a Cash  Award of 5000/- held at VelTech Engineering College ", "date": "2025-02-14"},
+                {"image_path": "/static/images/student_activities/005/cse_2.jpg", "event_name": "Matter Mind", "image_content": "Mr.R. Prasath, S R Jefrin Jijo has won second place in Matter Mind event with a cash prize of 1000/- held at Jerusalem Engineering College ", "date": "2025-02-15"},
+                {"image_path": "/static/images/student_activities/005/cse_3.jpg", "event_name": "Code Debugging ", "image_content": "Mr. K M. Udaya Krishna and P.Sri Sai Charan has won Second place in Code Debugging event with a Cash Prize  held at Jerusalem Engineering College ", "date": "2025-02-15"},
+                {"image_path": "/static/images/student_activities/005/cse_4.jpg", "event_name": "Exdathon", "image_content": "MrRageshwaran, Mr.Tarakeshwaran and Mr.Praveen kumar has won Second place Exdathon event with a Cash Prize  of 7000/- held at SRM Engineering College ", "date": "2024-08-28"}
+            ]
+        },
     {
         "dept_id": "006",
         "department_name": "Computer Science and Engineering (CYBER SECURITY)",

@@ -1,6 +1,6 @@
 [
     {
-        "department_id": "001",
+        "dept_id": "001",
         "department_name": "Artificial Intelligence and Data Science (AI&DS)",
         "department_image": "/static/images/department_data/aids.jpg",
         "department_quotes": "Empowering innovation through data-driven intelligence.",
@@ -46,7 +46,7 @@
         }
     },
     {
-        "department_id": "002",
+        "dept_id": "002",
         "department_name": "Automobile Engineering (AUTO)",
         "department_image": "/static/images/department_data/auto.jpg",
         "department_quotes": "Driving innovation, engineering the future—where passion meets precision in Automobile Engineering.",
@@ -94,7 +94,7 @@
         }
     },
     {
-        "department_id": "003",
+        "dept_id": "003",
         "department_name": "Chemistry ",
         "department_image": "/static/images/department_data/chem.jpg",
         "department_quotes": "Innovating chemistry, transforming the future.",
@@ -134,7 +134,7 @@
         }
     },
     {
-        "department_id": "004",
+        "dept_id": "004",
         "department_name": "Civil Engineering (CIVIL)",
         "department_image": "/static/images/department_data/civil.jpg",
         "department_quotes": "The road to success is always under construction",
@@ -183,7 +183,7 @@
         }
     }, 
     {
-        "department_id": "005",
+        "dept_id": "005",
         "department_name": "Computer Science & Engineering (CSE)",
         "department_image": "/static/images/department_data/cse.jpg",
         "department_quotes": "To build strategic partnerships with industry to encourage collaborative innovation, facilitate knowledge exchange, and align educational efforts with real-world demands",
@@ -226,7 +226,7 @@
         }
     },
     {
-        "department_id": "006",
+        "dept_id": "006",
         "department_name": "Computer Science and Engineering (CYBER SECURITY)",
         "department_image": "/static/images/department_data/cyber.jpg",
         "department_quotes": "Securing tomorrows technology with todays intelligence",
@@ -275,7 +275,7 @@
         }
     },
     {
-        "department_id": "007",
+        "dept_id": "007",
         "department_name": "Electrical & Electronics Engineering (EEE)",
         "department_image": "/static/images/department_data/eee.jpg",
         "department_quotes": "Electrify, Energize, Enlighten. Driving the future with electric brilliance!",
@@ -323,7 +323,7 @@
         }
     },
     {
-        "department_id": "008",
+        "dept_id": "008",
         "department_name": "Electronics & Instrumentation Engineering (EIE)",
         "department_image": "/static/images/department_data/eie.jpg",
         "department_quotes": "From the smallest sensor to the most complex control system, Electronics and Instrumentation Engineering is the driving force behind technological advancements that shape our modern world",
@@ -372,7 +372,7 @@
         }
     },
     {
-        "department_id": "009",
+        "dept_id": "009",
         "department_name": "Electronics and Communication Engineering (ECE)",
         "department_image": "/static/images/department_data/ece.jpg",
         "department_quotes": "ECE HOLDS THE KEY TOWARDS TRANSCENDING TECHNOLOGY",
@@ -417,7 +417,7 @@
         }
     },
     {
-        "department_id": "010",
+        "dept_id": "010",
         "department_name": "English ",
         "department_image": "/static/images/department_data/eng.jpg",
         "department_quotes": "Mastering the art of communication: one lesson at a time",
@@ -454,7 +454,7 @@
         }
     },
     {
-        "department_id": "011",
+        "dept_id": "011",
         "department_name": "Information Technology (IT)",
         "department_image": "/static/images/department_data/it.jpg",
         "department_quotes": "Communicating the world with clarity and creativity.",
@@ -502,7 +502,7 @@
         }
     },
     {
-        "department_id": "012",
+        "dept_id": "012",
         "department_name": "Mathematics",
         "department_image": "/static/images/department_data/math.jpg",
         "department_quotes": "Mathematics is a powerful motivator for everyone, as its journey begins with zero and stretches endlessly into infinity.",
@@ -540,7 +540,7 @@
         }
     },
     {
-        "department_id": "013",
+        "dept_id": "013",
         "department_name": "Mechancial Engineering (MECH)",
         "department_image": "/static/images/department_data/mech.jpg",
         "department_quotes": "Quality and consistency are not an accident; it's the result of high intention, sincere effort, intelligent direction, and skillful execution.",
@@ -590,7 +590,7 @@
         }
     },
     {
-        "department_id": "014",
+        "dept_id": "014",
         "department_name": "தமிழ்த்துறை",
         "department_image": "/static/images/department_data/tamil.jpg",
         "department_quotes": "தமிழ் எங்கள் சமூகத்தின் விளைவுக்கு நீர்!",
@@ -630,7 +630,7 @@
         }
     },
     {
-        "department_id": "015",
+        "dept_id": "015",
         "department_name": "Physics",
         "department_image": "/static/images/department_data/physics.jpg",
         "department_quotes": "Bridging the gap between theory and innovation, Physics drives the technology that engineers the future.",
@@ -667,7 +667,7 @@
         }
     },
     {
-        "department_id": "016",
+        "dept_id": "016",
         "department_name": "M.E Computer Science Engineering",
         "department_image": "/static/images/department_data/mecse.jpg",
         "department_quotes": "Harnessing life sciences for a better tomorrow.",
@@ -701,7 +701,7 @@
     
     },
     {
-        "department_id": "017",
+        "dept_id": "017",
         "department_name": "Master of Business Administration (MBA)",
         "department_image": "/static/images/department_data/mba.jpg",
         "department_quotes": "Harnessing life sciences for a better tomorrow.",

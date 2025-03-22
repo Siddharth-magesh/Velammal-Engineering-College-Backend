@@ -8,16 +8,16 @@
         "PG": [
             {
                 "M.E Computer Science & Engineering": {
-                    "Government Quota Intakes": "09",
-                    "Management Quota Intakes": "09",
-                    "Total Intakes": "18"
+                    "Government Quota Intakes": "03",
+                    "Management Quota Intakes": "03",
+                    "Total Intakes": "06"
                 }
             },
             {
                 "M.E Power System Engineering": {
-                    "Government Quota Intakes": "09",
-                    "Management Quota Intakes": "09",
-                    "Total Intakes": "18"
+                    "Government Quota Intakes": "03",
+                    "Management Quota Intakes": "03",
+                    "Total Intakes": "06"
                 }
             }
         ],
