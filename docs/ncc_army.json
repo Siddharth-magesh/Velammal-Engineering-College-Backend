@@ -1,7 +1,7 @@
 [{
     "Coordinator": {
       "coordinator_name": "Captain R Chezian",
-      "coordinator_image": "https://ncc.army.mil.in/Content/Coordinator/1.jpg",
+      "coordinator_image": "https://ncc.army.mil.in/Content/Coordinator/1.webp",
       "coordinator_designation": "NCC Army Coordinator",
       "coordinator_description": "NCC Army Coordinator"
     },
@@ -240,11 +240,11 @@
     },
     "image": {
       "carousal_images": [
-        "https://ncc.army.mil.in/Content/Carousel/1.jpg",
-        "https://ncc.army.mil.in/Content/Carousel/2.jpg",
-        "https://ncc.army.mil.in/Content/Carousel/3.jpg",
-        "https://ncc.army.mil.in/Content/Carousel/4.jpg",
-        "https://ncc.army.mil.in/Content/Carousel/5.jpg"
+        "https://ncc.army.mil.in/Content/Carousel/1.webp",
+        "https://ncc.army.mil.in/Content/Carousel/2.webp",
+        "https://ncc.army.mil.in/Content/Carousel/3.webp",
+        "https://ncc.army.mil.in/Content/Carousel/4.webp",
+        "https://ncc.army.mil.in/Content/Carousel/5.webp"
       ],
       "carousal_title": [
         "NCC Army",

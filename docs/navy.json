@@ -1,7 +1,7 @@
 [{
     "Coordinator": {
       "coordinator_name": "R DHANALAKSHMI",
-      "coordinator_image": "/static/images/navy/chairman.jpg",
+      "coordinator_image": "/static/images/navy/chairman.webp",
       "coordinator_designation": "NCC Navy Coordinator",
       "coordinator_description": "Sub. LT R DHANALAKSHMI is an NCC Cadet (2008) with CUO Rank 1 & Grade A Associate NCC Officer (NAVY). She was awarded the Certificate of Excellence 2024 for Best Naval Practical Skills and secured the 1st position among all India ANOs. She also led her team as Section-1 Commander."
     },
@@ -275,10 +275,10 @@
     },
     "image": {
       "carousal_images": [
-        "/static/images/navy/1.jpg",
-        "/static/images/navy/2.jpg",
-        "/static/images/navy/3.jpg",
-        "/static/images/navy/4.jpg"
+        "/static/images/navy/1.webp",
+        "/static/images/navy/2.webp",
+        "/static/images/navy/3.webp",
+        "/static/images/navy/4.webp"
       ],
       "carousal_title": [
         "a",

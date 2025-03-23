@@ -2,7 +2,7 @@
     {
         "dept_id": "001",
         "department_name": "Artificial Intelligence and Data Science (AI&DS)",
-        "department_image": "/static/images/department_data/aids.jpg",
+        "department_image": "/static/images/department_data/aids.webp",
         "department_quotes": "Empowering innovation through data-driven intelligence.",
         "vision": "To achieve value based education and bring idealistic, ethical engineers to meet the thriving trends and technology in the field of Artificial Intelligence and Data Science",
         "mission": [
@@ -48,7 +48,7 @@
     {
         "dept_id": "002",
         "department_name": "Automobile Engineering (AUTO)",
-        "department_image": "/static/images/department_data/auto.jpg",
+        "department_image": "/static/images/department_data/auto.webp",
         "department_quotes": "Driving innovation, engineering the future—where passion meets precision in Automobile Engineering.",
         "vision": "To send forth into the world competitive graduates by providing knowledge through both theoretical learning and practical exposure to latest technologies in the field of automobile engineering and inculcating in them a thirst for lifelong learning.",
         "mission": [
@@ -96,7 +96,7 @@
     {
         "dept_id": "003",
         "department_name": "Chemistry ",
-        "department_image": "/static/images/department_data/chem.jpg",
+        "department_image": "/static/images/department_data/chem.webp",
         "department_quotes": "Innovating chemistry, transforming the future.",
         "vision": "To be a world-renowned department of chemistry, known for its superior teaching, research, and innovation, and to cultivate a community of critical and creative thinkers capable of tackling the intricate chemical and environmental problems of the twenty-first century.",
         "mission": [
@@ -136,7 +136,7 @@
     {
         "dept_id": "004",
         "department_name": "Civil Engineering (CIVIL)",
-        "department_image": "/static/images/department_data/civil.jpg",
+        "department_image": "/static/images/department_data/civil.webp",
         "department_quotes": "The road to success is always under construction",
         "vision": "Department of Civil Engineering aims to transform the students, through theory and practice, into competitive civil engineers, who will provide smart solutions for the futuristic sustainable development of the nation with human values.",
         "mission": [
@@ -185,7 +185,7 @@
     {
         "dept_id": "005",
         "department_name": "Computer Science & Engineering (CSE)",
-        "department_image": "/static/images/department_data/cse.jpg",
+        "department_image": "/static/images/department_data/cse.webp",
         "department_quotes": "To build strategic partnerships with industry to encourage collaborative innovation, facilitate knowledge exchange, and align educational efforts with real-world demands",
         "vision": "To provide quality education aimed at cultivating exceptionally skilled technologists and entrepreneurs with a global footprint, supported by strong ethical values, and inventive thinking in the field of Computer Science and Engineering, tailored to fulfill both industrial demands and societal aspirations",
         "mission": [
@@ -228,7 +228,7 @@
     {
         "dept_id": "006",
         "department_name": "Computer Science and Engineering (CYBER SECURITY)",
-        "department_image": "/static/images/department_data/cyber.jpg",
+        "department_image": "/static/images/department_data/cyber.webp",
         "department_quotes": "Securing tomorrows technology with todays intelligence",
         "vision": "To provide comprehensive coverage and Hands-on Experience to enrich the knowledge of the student and also focus on Industry standards. To grab the attention of students in the area of Research, Critical Thinking and Problem-Solving",
         "mission": [
@@ -277,7 +277,7 @@
     {
         "dept_id": "007",
         "department_name": "Electrical & Electronics Engineering (EEE)",
-        "department_image": "/static/images/department_data/eee.jpg",
+        "department_image": "/static/images/department_data/eee.webp",
         "department_quotes": "Electrify, Energize, Enlighten. Driving the future with electric brilliance!",
         "vision": "Imparting high quality education and grooming of competent Electrical and Electronics Engineers to cater to the global needs of Academics, Industry and Society",
         "mission": [
@@ -325,7 +325,7 @@
     {
         "dept_id": "008",
         "department_name": "Electronics & Instrumentation Engineering (EIE)",
-        "department_image": "/static/images/department_data/eie.jpg",
+        "department_image": "/static/images/department_data/eie.webp",
         "department_quotes": "From the smallest sensor to the most complex control system, Electronics and Instrumentation Engineering is the driving force behind technological advancements that shape our modern world",
         "vision": "To impart knowledge base and skill sets in the field of Electronics and Instrumentation by providing learning ambience for academic and research activities, leading to global competence.",
         "mission": [
@@ -374,7 +374,7 @@
     {
         "dept_id": "009",
         "department_name": "Electronics and Communication Engineering (ECE)",
-        "department_image": "/static/images/department_data/ece.jpg",
+        "department_image": "/static/images/department_data/ece.webp",
         "department_quotes": "ECE HOLDS THE KEY TOWARDS TRANSCENDING TECHNOLOGY",
         "vision": "To contribute to the society through Excellence in Technical Educationand Research, in order to create Resourceful Self-confident Graduates.",
         "mission": [
@@ -419,7 +419,7 @@
     {
         "dept_id": "010",
         "department_name": "English ",
-        "department_image": "/static/images/department_data/eng.jpg",
+        "department_image": "/static/images/department_data/eng.webp",
         "department_quotes": "Mastering the art of communication: one lesson at a time",
         "vision": "To empower engineering students with effective communication skills, critical thinking, and creative expression, enabling them to excel as global professionals, innovators, and leaders, while fostering a culture of linguistic excellence, intellectual curiosity, and lifelong learning.”",
         "mission": [
@@ -456,7 +456,7 @@
     {
         "dept_id": "011",
         "department_name": "Information Technology (IT)",
-        "department_image": "/static/images/department_data/it.jpg",
+        "department_image": "/static/images/department_data/it.webp",
         "department_quotes": "Communicating the world with clarity and creativity.",
         "vision": "Empowering innovation through cutting-edge technology solutions, transforming learning experiences with digital excellence, driving operational efficiency through strategic IT initiatives, and securing a dynamic digital future.",
         "mission": [
@@ -504,7 +504,7 @@
     {
         "dept_id": "012",
         "department_name": "Mathematics",
-        "department_image": "/static/images/department_data/math.jpg",
+        "department_image": "/static/images/department_data/math.webp",
         "department_quotes": "Mathematics is a powerful motivator for everyone, as its journey begins with zero and stretches endlessly into infinity.",
         "vision": "To promote a deep understanding and appreciation of mathematics among engineering students, empowering them to become innovative problem-solvers, critical thinkers and leaders in their fields.",
         "mission": [
@@ -542,7 +542,7 @@
     {
         "dept_id": "013",
         "department_name": "Mechancial Engineering (MECH)",
-        "department_image": "/static/images/department_data/mech.jpg",
+        "department_image": "/static/images/department_data/mech.webp",
         "department_quotes": "Quality and consistency are not an accident; it's the result of high intention, sincere effort, intelligent direction, and skillful execution.",
         "vision": "Producing competent Mechanical Engineers by imparting quality education blended with human values, as potential contributors to the industrial development of the nation leading to the well being of the future generation.",
         "mission": [
@@ -592,7 +592,7 @@
     {
         "dept_id": "014",
         "department_name": "தமிழ்த்துறை",
-        "department_image": "/static/images/department_data/tamil.jpg",
+        "department_image": "/static/images/department_data/tamil.webp",
         "department_quotes": "தமிழ் எங்கள் சமூகத்தின் விளைவுக்கு நீர்!",
         "vision": "தமிழரின் பண்பாட்டு விழுமியங்களைக் கற்று வாழ்நாள் முழுவதும் பயன்படுத்துதல். பொறியியல் துறைகளில் தமிழரின் அறிவியல் மற்றும் தொழில்நுட்பச் சிந்தனைகளை ஆய்ந்து மரபார்ந்த புத்தாக்கங்களைப் படைத்தல் ஆகிய இரு இலக்குகளைத் தமிழ்த்துறை தொலைநோக்காகக் கொண்டுள்ளது.",
         "mission": [
@@ -632,7 +632,7 @@
     {
         "dept_id": "015",
         "department_name": "Physics",
-        "department_image": "/static/images/department_data/physics.jpg",
+        "department_image": "/static/images/department_data/physics.webp",
         "department_quotes": "Bridging the gap between theory and innovation, Physics drives the technology that engineers the future.",
         "vision": "To provide knowledge of Physics in all areas of life through transfer of fundamental technology and to do more research work.”",
         "mission": [
@@ -669,7 +669,7 @@
     {
         "dept_id": "016",
         "department_name": "M.E Computer Science Engineering",
-        "department_image": "/static/images/department_data/mecse.jpg",
+        "department_image": "/static/images/department_data/mecse.webp",
         "department_quotes": "Harnessing life sciences for a better tomorrow.",
         "vision": "To provide quality education aimed at cultivating exceptionally skilled technologists and entrepreneurs with a global footprint, supported by strong ethical values, and inventive thinking in the field of Computer Science and Engineering, tailored to fulfill both industrial demands and societal aspirations",
         "mission": [
@@ -703,7 +703,7 @@
     {
         "dept_id": "017",
         "department_name": "Master of Business Administration (MBA)",
-        "department_image": "/static/images/department_data/mba.jpg",
+        "department_image": "/static/images/department_data/mba.webp",
         "department_quotes": "Harnessing life sciences for a better tomorrow.",
         "vision": "Educate with Global Exposure, Enhance Research Knowledge and Energize Entrepreneurial Spirit.",
         "mission": [

@@ -3,11 +3,11 @@
     "Dean": "Dr. A. Jebamalar",
     "Dean_Type": "Dean",
     "Dean_Designation": "Prof and Head - Civil Engineering",
-    "Dean_Image": "static/images/dean_and_associates/dr_a_jebamalar.JPG",
+    "Dean_Image": "static/images/dean_and_associates/dr_a_jebamalar.webp",
     "Associate_Dean": "Dr. M. Arockia Jaswin",
     "Ass_Dean_Type": "Associate Dean",
     "Associate_Dean_Designation": "Prof. Mechanical Engineering.",
-    "Associate_Dean_Image": "/static/images/dean_and_associates/dr_m_arockia_jaswin.JPG",
+    "Associate_Dean_Image": "/static/images/dean_and_associates/dr_m_arockia_jaswin.webp",
     "Dean_unique_id": "VEC-001-01-001",
     "Associate_dean_unique_id": "VEC-001-01-001"
   },
@@ -16,56 +16,56 @@
     "Dean": "Dr. Jeeva Katiravan",
     "Dean_Type": "Dean",
     "Dean_Designation": "Prof and Head - Information Technology",
-    "Dean_Image": "/static/images/dean_and_associates/dr_jeeva_katiravan.JPG",
+    "Dean_Image": "/static/images/dean_and_associates/dr_jeeva_katiravan.webp",
     "Associate_Dean": "Dr. S. Rajalakshmi",
     "Ass_Dean_Type": "Associate Dean",
     "Associate_Dean_Designation": "Asst Prof and Head - Cyber Security",
-    "Associate_Dean_Image": "/static/images/dean_and_associates/dr_s_rajalakshmi.JPG"
+    "Associate_Dean_Image": "/static/images/dean_and_associates/dr_s_rajalakshmi.webp"
   },
   {
     "Position": "Student Development and Welfare",
     "Dean": "Dr. S. Shahil Kirupavathy",
     "Dean_Type": "Dean",
     "Dean_Designation": "Prof and Head - Department of Physics",
-    "Dean_Image": "/static/images/dean_and_associates/dr_s_shahil_kirupavathy.JPG",
+    "Dean_Image": "/static/images/dean_and_associates/dr_s_shahil_kirupavathy.webp",
     "Associate_Dean": "Dr. Geetha R",
     "Ass_Dean_Type": "Associate Dean",
     "Associate_Dean_Designation": "Asst Prof - Electricals and Electronics Engineering",
-    "Associate_Dean_Image": "/static/images/dean_and_associates/dr_geetha_r.JPG"
+    "Associate_Dean_Image": "/static/images/dean_and_associates/dr_geetha_r.webp"
   },
   {
     "Position": "Faculty Development and Welfare",
     "Dean": "Dr. S Mary Jones",
     "Dean_Type": "Dean",
     "Dean_Designation": "Prof & Head - Electronics and Communication Engineering.",
-    "Dean_Image": "/static/images/dean_and_associates/dr_s_mary_jones.JPG"
+    "Dean_Image": "/static/images/dean_and_associates/dr_s_mary_jones.webp"
   },
   {
     "Position": "Research and Development",
     "Associate_Dean": "Dr. S. Bhaskara Sethupathy",
     "Ass_Dean_Type": "Associate Dean",
     "Associate_Dean_Designation": "Prof & Head - Automobile Engineering",
-    "Associate_Dean_Image": "/static/images/dean_and_associates/dr_s_bhaskara_sethupathy.JPG"
+    "Associate_Dean_Image": "/static/images/dean_and_associates/dr_s_bhaskara_sethupathy.webp"
   },
   {
     "Position": "Accreditations and Ranking",
     "Dean": "Dr. E Ganapathy Sundaram",
     "Dean_Type": "Dean",
     "Dean_Designation": "Prof & Head - Mechanical Engineering",
-    "Dean_Image": "/static/images/dean_and_associates/dr_e_ganapathy_sundaram.JPG",
+    "Dean_Image": "/static/images/dean_and_associates/dr_e_ganapathy_sundaram.webp",
     "Associate_Dean": "Dr. P. Visu",
     "Ass_Dean_Type": "Associate Dean",
     "Associate_Dean_Designation": "Prof and Head - Artificial Intelligence and Data Science",
-    "Associate_Dean_Image": "/static/images/dean_and_associates/dr_p_visu.JPG"
+    "Associate_Dean_Image": "/static/images/dean_and_associates/dr_p_visu.webp"
   },
   {
     "Position": "Corporate Relations and Higher Studies",
     "Dean": "Mr. Arun Ramasamy",
     "Dean_Type": "Dean",
     "Dean_Designation": "Head - Trainig & Placements",
-    "Dean_Image": "/static/images/dean_and_associates/mr_arun_ramasamy.JPG",
+    "Dean_Image": "/static/images/dean_and_associates/mr_arun_ramasamy.webp",
     "Associate_Dean": "Dr. K.Suresh Kumar",
     "Ass_Dean_Type": "Associate Dean",
     "Associate_Dean_Designation": "Asst Prof - Electricals and Electronics Engineering",
-    "Associate_Dean_Image": "/static/images/dean_and_associates/dr_k_suresh_kumar.JPG"
+    "Associate_Dean_Image": "/static/images/dean_and_associates/dr_k_suresh_kumar.webp"
   }]

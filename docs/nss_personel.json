@@ -2,11 +2,11 @@
     {
         "name": "Dr. R.Karthick",
         "designation": "Programme Officer",
-        "image_path": "static/images/Nss/1.jpg"
+        "image_path": "static/images/Nss/1.webp"
     },
     {
         "name": ["Kaviaya Shree", "Lalith Kannan", "Vinoth Kumar", "Dayanitha", "Sanjay Kumar", "Subashini", "Rahul Kumararan", "Sharavanth Kumar", "Swedha", "Mukesh", "Monova Daniel"],
         "designation": ["GCO & Mech & Auto coordinator", "VCO & CSE coordinator", "ECE coordinator", "IT coordinator", "Civil, Cyber, EIE department coordinator", "EEE coordinator", "AI&DS coordinator", "Poster Team Head", "Newsletter Team Head", "Technical Team Head", "Website & Camera Handling Team Head"],
-        "image_path": ["static/images/Nss/2.jpg", "static/images/Nss/3.jpg", "static/images/Nss/4.jpg", "static/images/Nss/5.jpg", "static/images/Nss/6.jpg", "static/images/Nss/7.jpg", "static/images/Nss/8.jpg", "static/images/Nss/9.jpg", "static/images/Nss/10.jpg", "static/images/Nss/11.jpg", "static/images/Nss/12.jpg"]
+        "image_path": ["static/images/Nss/2.webp", "static/images/Nss/3.webp", "static/images/Nss/4.webp", "static/images/Nss/5.webp", "static/images/Nss/6.webp", "static/images/Nss/7.webp", "static/images/Nss/8.webp", "static/images/Nss/9.webp", "static/images/Nss/10.webp", "static/images/Nss/11.webp", "static/images/Nss/12.webp"]
     }
 ]

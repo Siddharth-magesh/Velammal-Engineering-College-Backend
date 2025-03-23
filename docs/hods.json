@@ -5,7 +5,7 @@
         "Unique_id": "VEC-001-01-077",
         "Qualification": ["M.E", "PhD"],
         "Hod_message": ["I feel privileged to lead a team of talented and experienced faculty members. AI & DS is the most conspicuous technology transforming the facet of industry and mankind. This course is specially designed to enable students to build intelligent machines, software, or applications with a cutting-edge combination of Machine Learning, Deep Learning, Analytics, and Visualization technologies.", "Our department aims to produce skilled professionals in the domain of AI and DS and enable them to excel professionally. It also provides state-of-the-art laboratory facilities to the students to get better practical exposure and strong ties with industry, research organizations, and the community at large."],
-        "Image": "/static/images/hods/aids.JPG",
+        "Image": "/static/images/hods/aids.webp",
         "designation": "Professor and Head, Dept of Artificial Intelligence and Data Science",
         "Social_media_links": {
             "LinkedIn": "https://www.linkedin.com/in/dr-visu-p-12a78961/?trk=public_profile_browsemap&originalSubdomain=in",
@@ -22,7 +22,7 @@
         "Unique_id": "VEC-007-01-090",
         "Qualification": ["M.E", "PhD"],
         "Hod_message": ["Department of ECE at Velammal Engineering College has proved its excellence in the field of Teaching, Research, placement and Student Activities since its establishment from 1995 onwards. Creative engineers solve practical problems to find out a solution for a societal problem. Also to crack society’s utmost challenges, country desires ECE engineers with entrepreneurial state of mind who can apply curiosity and creativity to the technical skillets in order to come up with truly novel ideas. Students in our department are trained with relevant practice through labs and projects for building the problem-solving skills, keeping industry requirements in view."],
-        "Image": "/static/images/hods/ece.jpg",
+        "Image": "/static/images/hods/ece.webp",
         "designation": "Professor and Head, Dept of Electronics and Communication Engineering",
         "Social_media_links": {
             "Google Scholar": "https://scholar.google.com/citations?user=CXHND6AAAAAJ&hl=en",
@@ -37,7 +37,7 @@
         "Unique_id": "VEC-012-01-096",
         "Qualification": ["M.sc", "M.Phil", "PhD"],
         "Hod_message": ["The Department of Mathematics at VEC is highly focused on imparting quality education and supports the core departments in teaching mathematics for both UG and PG students in their quest for mathematical thinking. Mathematics is one which unifies all branches of science and technology and it reflects the spirit of rationality and plays a very significant role in shaping the career of an engineering student to meet the global challenges, making Engineers to develop mathematical thoughts and applying it to solve complex engineering problems, designing mathematical models to meet the requirements"],
-        "Image": "/static/images/hods/math.jpg",
+        "Image": "/static/images/hods/math.webp",
         "designation": "Professor and Head, Department of Mathematics",
         "Social_media_links": {
             "LinkedIn": "linkedin.com/in/rajeswaran-subramani-03b61349",
@@ -54,7 +54,7 @@
         "Unique_id": "VEC-004-01-145",
         "Qualification": ["M.E", "PhD"],
         "Hod_message": ["Civil Engineering, the Mother of all Engineering Disciplines, also bears the prestige of being in the forefront with advanced applications in all domains based on technologies like Drones,  AI, AR and VR,  3 D Printing,  IoT and with special  emphasis  on   Sustainability and the 17 SDG Goals as envisaged by UN. The BE  Civil Engineering Graduates from VEC  are trained with skills and technical know-how  to stay on par with global peers  in application of concepts and tools with utmost  responsibility towards Environment and the Society."],
-        "Image": "/static/images/hods/civil.jpg",
+        "Image": "/static/images/hods/civil.webp",
         "designation": "Professor and Head, Dept of Civil Engineering",
         "Social_media_links": {
             "LinkedIn": "https://www.linkedin.com/in/jebamalar-abraham-986a35203/",
@@ -68,7 +68,7 @@
         "Unique_id": "VEC-002-01-102",
         "Qualification": ["M.E", "PhD"],
         "Hod_message": ["Our department was established to provide well qualified industry ready engineers in the field of Automobile Engineering. The Department has a team of highly qualified, experienced and dedicated faculty members in diversified streams to cater for all-round development of students. Indian automotive industry is growing at a very fast rate with newer designs of automobiles and change in technologies. This will be a way for moulding our students for a bright future."],
-        "Image": "/static/images/hods/auto.jpg",
+        "Image": "/static/images/hods/auto.webp",
         "designation": "Professor and Head, Dept of Automobile Engineering",
         "Social_media_links": {
             "LinkedIn": "https://www.linkedin.com/in/dr-s-baskara-sethupathy-272b2235?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app ",
@@ -82,7 +82,7 @@
         "Unique_id": "VEC-003-01-110",
         "Qualification": ["M.Sc","B.Ed","M.Phil","Ph.D"],
         "Hod_message": ["As the Head of the Chemistry Department, I am thrilled to share our vision, mission, and values that drive our pursuit of excellence in education, research, and innovation. You are part of a dynamic community dedicated to solving complex chemical and environmental challenges. Our department is committed to providing a world-class education, cutting-edge research opportunities, and a supportive environment that fosters creativity, innovation, and leadership. I encourage you to explore the vast possibilities of engineering chemistry, build a strong foundation in theoretical and practical knowledge, and engage in research, internships, and industry collaborations to gain hands-on experience. Networking with peers, faculty, and industry professionals will help you forge lifelong connections, while curiosity and a proactive mindset will drive your success. With experienced faculty, state-of-the-art facilities, and extensive resources, we are here to support your academic and professional journey. Together, we can build an inclusive and vibrant community passionate about engineering chemistry and dedicated to making a positive impact on society. Welcome to the Department of Chemistry—I look forward to witnessing your achievements!"],
-        "Image": "/static/images/hods/chem.jpg",
+        "Image": "/static/images/hods/chem.webp",
         "designation": "Associate Professor & Head",
         "Social_media_links": {
             "LinkedIn": "www.linkedin.com/in/dr-abdul-razak-mohamed-sikkander-51485246",
@@ -101,7 +101,7 @@
         "Unique_id": "VEC-007-01-125",
         "Qualification": ["M.E", "PhD"],
         "Hod_message": ["I feel privileged to lead a team of talented and experienced faculty members. AI & DS is the most conspicuous technology transforming the facet of industry and mankind. This course is specially designed to enable students to build intelligent machines, software, or applications with a cutting-edge combination of Machine Learning, Deep Learning, Analytics, and Visualization technologies.", "Our department aims to produce skilled professionals in the domain of AI and DS and enable them to excel professionally. It also provides state-of-the-art laboratory facilities to the students to get better practical exposure and strong ties with industry, research organizations, and the community at large."],
-        "Image": "/static/images/hods/eee.jpg",
+        "Image": "/static/images/hods/eee.webp",
         "designation": "Associate Professor and Head",
         "Social_media_links": {
             "LinkedIn": "https://www.linkedin.com/in/sureshkumar-k-19111860/",
@@ -117,7 +117,7 @@
         "Unique_id": "VEC-008-01-130",
         "Qualification": ["M.E", "PhD"],
         "Hod_message": ["People relying on yesterdays idea have no chance of survival in todays competitive environment where change is at the speed of thought. The pace of change requires continuous improvement and constant learning. Keeping this in mind, we train our students to be fully prepared for the challenges of the future."],
-        "Image": "/static/images/hods/eie.jpg",
+        "Image": "/static/images/hods/eie.webp",
         "designation": "Professor and Head, Dept of Electronics & Instrumentation Engineering (EIE)",
         "Social_media_links": {
             "LinkedIn": "www.linkedin.com/in/brijet-z-952880203",
@@ -132,7 +132,7 @@
         "Unique_id": "VEC-005-01-120",
         "Qualification": ["M.E", "PhD"],
         "Hod_message": ["The department is instrumental in conducting various technical and non-technical activities for students as well as faculty members. The focus is not only technical stuff on but also moral values, ethics; professionalism and students are made aware of the latest industry trends and needs in various technological domains. Well-motivated, competent faculty members are always engaged in student’s welfare. Encouragement and guidance is offered to the students for participating in sports and various extracurricular activities to highlight and strengthen their nontechnical skills. Our academic rigor, Plan-Do-Check-Act approach in all sorts of aspects has made this department to be a one of the best choices for UG, PG and PhD admission aspirants."],
-        "Image": "/static/images/hods/cse.jpg",
+        "Image": "/static/images/hods/cse.webp",
         "designation": "Professor and Head, Department of Computer Science and Engineering.",
         "Social_media_links": {
             "LinkedIn": "https://www.linkedin.com/in/k-nagarajan/",
@@ -146,7 +146,7 @@
         "Unique_id": "VEC-006-01-135",
         "Qualification": ["M.E", "PhD"],
         "Hod_message": ["It is my privilege to lead a dedicated team that works tirelessly to provide cutting-edge education and hands-on experience in the field of Cyber Security. Our curriculum focuses on key areas like network security, ethical hacking, and data protection, preparing students to tackle the challenges of a rapidly evolving digital world. With a strong emphasis on practical learning, industry collaboration, and innovation, we aim to equip our students with the skills necessary to secure the digital future."],
-        "Image": "/static/images/hods/cyber.jpg",
+        "Image": "/static/images/hods/cyber.webp",
         "designation":"Associate Professor & Head, Department of CSE(Cyber Security)",
         "Social_media_links": {
             "LinkedIn": "www.linkedin.com/in/rajalakshmi-srinivasan-a14927161",
@@ -163,7 +163,7 @@
         "Unique_id": "VEC-010-01-140",
         "Qualification": ["M.A", "M.Phil."],
         "Hod_message": ["He plays a pivotal role in steering the department towards its designated goals. His qualification includes M.A, M. Phil, and he has been teaching English for the past 32 years. If the USP of the department is the application of technology in teaching and training, he is the motivator. With his knowledge of grammar and polite demeanour he has been instrumental in fostering a conducive learning environment, encouraging both faculty and students to embrace innovative methods while maintaining a strong foundation in language proficiency."],
-        "Image": "/static/images/hods/eng.jpg",
+        "Image": "/static/images/hods/eng.webp",
         "designation": "Assistant Professor III and HOD",
         "Social_media_links": {
             "LinkedIn": "https://www.linkedin.com/in/vhod-english-47812162/",
@@ -176,6 +176,7 @@
         "Unique_id": "VEC-011-01-150",
         "Qualification": ["M.E", "PhD"],
         "Hod_message": [""],
+        "Image": "/static/images/hods/it.webp",
         "designation": "Professor and Head, Dept of Information Technology",
         "Social_media_links": {
             "LinkedIn": "https://www.linkedin.com/in/dr-jeevaa-katiravan-936b16104/ ",
@@ -191,7 +192,7 @@
         "Unique_id": "VEC-013-01-160",
         "Qualification": ["M.E", "PhD"],
         "Hod_message": ["The department of Mechanical Engineering is designed to facilitate for teaching and research in the area of Thermal and Energy, Design and Manufacturing, Material Science, Mechatronics, Industrial automation and Industrial Engineering. A highly skilled, well qualified and motivated team of 20 faculty members, including 10 Doctorates and 9 are pursuing Doctorate, imparts quality education to students and support them to reach greater heights. Faculty members support the students to do various industrial projects, innovative projects carried out through funds received from various government agencies like DST New Gen IEDC, Tamilnadu State Council for Science and Technology, Indian Society for Refrigeration and Air Conditioning etc. A separate project lab facility is established to support the students to get various hands on skill, carryout different project work in the curriculum and support to participate various student’s events. The department regularly organizes events to promote higher studies and entrepreneurship among the students. The department also offering Honours and minor degree to students in emerging thrust areas."],
-        "Image": "/static/images/hods/mech.jpg",
+        "Image": "/static/images/hods/mech.webp",
         "designation": "Professor and Head,Department of Mechanical Engineering",
         "Social_media_links": {
             "LinkedIn": "linkedin.com/in/ganapathy-sundaram-esakkimuthu-787163204",
@@ -206,7 +207,7 @@
         "Unique_id": "VEC-015-01-191",
         "Qualification": ["M.Sc.", "M. Phil."," Ph.D."],
         "Hod_message": ["A good education is the foundation for a better future. In VEC we ensure that every student entrusted to us will receive wholistic development and also support to unearth all the potentials found in them. The students who come to this beautiful campus enter the world as successful Engineers."],
-        "Image": "/static/images/hods/015.jpg",
+        "Image": "/static/images/hods/phy.webp",
         "designation": "Professor & Head, Department of Physics",
         "Social_media_links": {
             "LinkedIn": "https://www.linkedin.com/in/shahil-kirupavathy-0632b416/",
@@ -222,7 +223,7 @@
         "Unique_id": "VEC-014-01-180",
         "Qualification": ["M.E", "PhD"],
         "Hod_message": ["இன்றைய நவீன தொழில்நுட்ப உலகில் அருந்தமிழ், அறிவியல் தமிழாய், கணினித்தமிழாய் காலமாற்றத்திற்கேற்ப தன்னைப் புதுப்பித்து என்றும் கன்னித்தமிழாய்த் திகழ்கிறது. செம்மொழித் தமிழின் வளமான இலக்கண இலக்கியங்களில், இல்லாதன இல்லை எனும்படி பல்துறை சார்ந்த கருத்துகளைப் பண்டைத் தமிழர்கள் பொதிந்து வைத்துள்ளனர்."," அத்தரவுகள் யாவும் நவீன பொறியியல் துறைகளில் புத்தாக்கம் படைக்கத் துணைபுரிவனவாகும். ஒரு நிறுவனம் அல்லது சமூகத்தின் உயர்வு என்பது எத்தனை பேர் உள்ளார்கள் என்பதைவிட எத்தகு திறனுடையவராக உள்ளார்கள் என்பதைப் பொறுத்தே அமைகிறது ஆகவே மாணவர்கள் ஒழுக்கநெறியும், பல்திறனும் பெற்று அறவழியில் செயலாற்றி சமூகத்தில் சிறந்து விளங்க தமிழின் பண்பாட்டு விழுமியங்கள் பெரும்பங்காற்றும். போட்டித் தேர்வுகளுக்கும், ஊடகம், மொழிபெயர்ப்பு, கலைச்சொல்லாக்கம், தொல்லியல் என விரியும் தமிழின் பல்துறைகளிலும் பணிவாய்ப்புகள் பெறவும் தமிழைக் கற்பது பேருதவி புரியும் என்பது உறுதி.","நம் முன்னோரின் அடிபற்றி புதுமைகள் படைப்போம்!"],
-        "Image": "/static/images/hods/tamil.jpg",
+        "Image": "/static/images/hods/tamil.webp",
         "designation": "உதவிப்பேராசிரியர் மற்றும் தமிழ்த்துறைத் தலைவர்",
         "Social_media_links": {
             "LinkedIn": "www.linkedin.com/in/muthiah-m-m-190398355",
@@ -235,7 +236,7 @@
         "Unique_id": "VEC-016-01-181",
         "Qualification": ["B.COM.", "MBA.", "Ph.D"],
         "Hod_message": ["At VEC, we provide our learners—who come from diverse backgrounds—with ample opportunities for academic exploration and holistic development."," We recognize the growing need for business leaders who are well-versed in business principles, technology, and managerial skills. Therefore, our program offers a comprehensive overview of essential business concepts and industry-relevant technical practices, equipping learners with the knowledge and expertise required to excel in today's dynamic business landscape."],
-        "Image": "/static/images/hods/physical.jpg",
+        "Image": "/static/images/hods/mba.webp",
         "designation": "Professor and Head, Dept of Master of Business Administration"
     },
     {
@@ -244,7 +245,7 @@
         "Unique_id": "VEC-005-01-120",
         "Qualification": ["M.E", "PhD"],
         "Hod_message": ["The department is instrumental in conducting various technical and non-technical activities for students as well as faculty members. The focus is not only technical stuff on but also moral values, ethics; professionalism and students are made aware of the latest industry trends and needs in various technological domains. Well-motivated, competent faculty members are always engaged in student’s welfare. Encouragement and guidance is offered to the students for participating in sports and various extracurricular activities to highlight and strengthen their nontechnical skills. Our academic rigor, Plan-Do-Check-Act approach in all sorts of aspects has made this department to be a one of the best choices for UG, PG and PhD admission aspirants."],
-        "Image": "/static/images/hods/cse.jpg",
+        "Image": "/static/images/hods/cse.webp",
         "designation": "Professor and Head, Department of Computer Science and Engineering.",
         "Social_media_links": {
             "LinkedIn": "https://www.linkedin.com/in/k-nagarajan/",

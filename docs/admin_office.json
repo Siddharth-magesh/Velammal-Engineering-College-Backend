@@ -1,65 +1,65 @@
 [{
     "name": "Jeyabalraj",
     "designation": "Administrative Officer",
-    "photo_path": "static/images/trust/velammal.JPG"
+    "photo_path": "static/images/trust/velammal.webp"
   },
   {
     "name": "Prakash Kumar B",
     "designation": "Office Superintendent",
-    "photo_path": "/static/images/admin_office/Prakash.JPG"
+    "photo_path": "/static/images/admin_office/Prakash.webp"
   },
   {
     "name": "Esther Flora E",
     "designation": "Manager – HR",
-    "photo_path": "/static/images/admin_office/Esther.JPG"
+    "photo_path": "/static/images/admin_office/Esther.webp"
   },
   {
     "name": "Kalyani S",
     "designation": "PA to Principal",
-    "photo_path": "/static/images/admin_office/Kalyani.JPG"
+    "photo_path": "/static/images/admin_office/Kalyani.webp"
   },
   {
     "name": "Sheeba K",
     "designation": "Student Affairs",
-    "photo_path": "/static/images/admin_office/Sheeba.JPG"
+    "photo_path": "/static/images/admin_office/Sheeba.webp"
   },
   {
     "name": "Rajalakshmi M",
     "designation": "Cashier",
-    "photo_path": "/static/images/admin_office/Rajalakshmi.JPG"
+    "photo_path": "/static/images/admin_office/Rajalakshmi.webp"
   },
   {
     "name": "Kalpana M",
     "designation": "Receptionist",
-    "photo_path": "/static/images/admin_office/Kalpana.JPG"
+    "photo_path": "/static/images/admin_office/Kalpana.webp"
   },
   {
     "name": "Vithya",
     "designation": "Accountant",
-    "photo_path": "/static/images/admin_office/Vithya.JPG"
+    "photo_path": "/static/images/admin_office/Vithya.webp"
   },
   {
     "name": "Muruganantham C",
     "designation": "Clerk",
-    "photo_path": "/static/images/admin_office/Muruganantham.JPG"
+    "photo_path": "/static/images/admin_office/Muruganantham.webp"
   },
   {
     "name": "Nivethitha N",
     "designation": "Admission Co-Ordinator",
-    "photo_path": "/static/images/admin_office/Nivethitha.JPG"
+    "photo_path": "/static/images/admin_office/Nivethitha.webp"
   },
   {
     "name": "Karthikeyan N",
     "designation": "Office Assistant",
-    "photo_path": "/static/images/admin_office/Karthikeyan.JPG"
+    "photo_path": "/static/images/admin_office/Karthikeyan.webp"
   },
   {
     "name": "Thavamani T",
     "designation": "Office Assistant",
-    "photo_path": "/static/images/admin_office/Thavamani.JPG"
+    "photo_path": "/static/images/admin_office/Thavamani.webp"
   },
   {
     "name": "Lakshmi R",
     "designation": "Office Assistant",
-    "photo_path": "/static/images/admin_office/Lakshmi.JPG"
+    "photo_path": "/static/images/admin_office/Lakshmi.webp"
   }]

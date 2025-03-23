@@ -3,62 +3,62 @@
         "dept_id": "001",
         "department_name": "Artificial Intelligence and Data Science (AI&DS)",
         "infrastructure_images": [
-            {"image_path": "/static/images/infrastructure/aids_1.jpg", "image_name": "DATA SCIENCE LABORATORY", "image_content": ""}
+            {"image_path": "/static/images/infrastructure/aids_1.webp", "image_name": "DATA SCIENCE LABORATORY", "image_content": ""}
         ]
     },
     {
         "dept_id": "002",
         "department_name": "Automobile Engineering (AUTO)",
         "infrastructure_images": [
-    {"image_path": "/static/images/infrastructure/auto_1.jpg", "image_name": "Heavy Duty Chassis Assembly", "image_content": "A structural framework designed to support large vehicles, such as trucks and buses, providing strength and stability."}, 
-    {"image_path": "/static/images/infrastructure/auto_2.jpg", "image_name": "Light Duty Chassis Assembly", "image_content": "A structural framework designed for smaller vehicles like passenger cars and light commercial vehicles."}, 
-    {"image_path": "/static/images/infrastructure/auto_3.jpg", "image_name": "Common Rail System", "image_content": "A modern fuel injection system used in diesel engines to deliver high-pressure fuel to injectors, improving efficiency and reducing emissions."}, 
-    {"image_path": "/static/images/infrastructure/auto_4.jpg", "image_name": "Training Module for MPFI Petrol Engine", "image_content": "A practical educational setup for understanding Multi-Point Fuel Injection (MPFI) systems used in petrol engines."}, 
-    {"image_path": "/static/images/infrastructure/auto_5.jpg", "image_name": "Bomb Calorimeter", "image_content": "A device used to measure the calorific value (energy content) of solid and liquid fuels by combustion in a high-pressure environment."}, 
-    {"image_path": "/static/images/infrastructure/auto_6.jpg", "image_name": "Boy’s G as Calorimeter", "image_content": "A calorimeter used to measure the calorific value of gaseous fuels by determining the heat released during combustion."}, 
-    {"image_path": "/static/images/infrastructure/auto_7.jpg", "image_name": "Two-Wheeler Chassis Dynamometer Computerized", "image_content": "A testing system that simulates road conditions to analyze the performance of motorcycles and scooters under various load conditions."}, 
-    {"image_path": "/static/images/infrastructure/auto_8.jpg", "image_name": "Multi-Cylinder Petrol Engine with Hydraulic Dynamometer", "image_content": "A setup for testing petrol engines, where the hydraulic dynamometer measures engine performance and emission characteristics."}, 
-    {"image_path": "/static/images/infrastructure/auto_9.jpg", "image_name": "Multi-Cylinder FIP Diesel Engine with Eddy Current Dynamometer", "image_content": "A diesel engine test setup where the eddy current dynamometer measures engine performance and emission characteristics."}, 
-    {"image_path": "/static/images/infrastructure/auto_10.jpg", "image_name": "Computerized Multi-Cylinder Petrol Engine Test Rig", "image_content": "A fully instrumented test rig that evaluates petrol engine performance, emissions, and fuel efficiency with digital data acquisition."}, 
-    {"image_path": "/static/images/infrastructure/auto_11.jpg", "image_name": "Piezo Electric Pick Up-1 Amplifier-1, Angle Encoder-3", "image_content": "A set of sensors used to measure engine pressure variations and crankshaft angles during testing of single-cylinder diesel engines."}, 
-    {"image_path": "/static/images/infrastructure/auto_12.jpg", "image_name": "Wheel Alignment Apparatus", "image_content": "A device used to check and adjust the alignment of vehicle wheels for optimal driving stability and tire wear."}, 
-    {"image_path": "/static/images/infrastructure/auto_13.jpg", "image_name": "Fuel Injector Calibration Test Bench – With Nozzle Tester", "image_content": "A testing setup for measuring and adjusting fuel injector performance, ensuring proper fuel atomization and spray pattern."}
+    {"image_path": "/static/images/infrastructure/auto_1.webp", "image_name": "Heavy Duty Chassis Assembly", "image_content": "A structural framework designed to support large vehicles, such as trucks and buses, providing strength and stability."}, 
+    {"image_path": "/static/images/infrastructure/auto_2.webp", "image_name": "Light Duty Chassis Assembly", "image_content": "A structural framework designed for smaller vehicles like passenger cars and light commercial vehicles."}, 
+    {"image_path": "/static/images/infrastructure/auto_3.webp", "image_name": "Common Rail System", "image_content": "A modern fuel injection system used in diesel engines to deliver high-pressure fuel to injectors, improving efficiency and reducing emissions."}, 
+    {"image_path": "/static/images/infrastructure/auto_4.webp", "image_name": "Training Module for MPFI Petrol Engine", "image_content": "A practical educational setup for understanding Multi-Point Fuel Injection (MPFI) systems used in petrol engines."}, 
+    {"image_path": "/static/images/infrastructure/auto_5.webp", "image_name": "Bomb Calorimeter", "image_content": "A device used to measure the calorific value (energy content) of solid and liquid fuels by combustion in a high-pressure environment."}, 
+    {"image_path": "/static/images/infrastructure/auto_6.webp", "image_name": "Boy’s G as Calorimeter", "image_content": "A calorimeter used to measure the calorific value of gaseous fuels by determining the heat released during combustion."}, 
+    {"image_path": "/static/images/infrastructure/auto_7.webp", "image_name": "Two-Wheeler Chassis Dynamometer Computerized", "image_content": "A testing system that simulates road conditions to analyze the performance of motorcycles and scooters under various load conditions."}, 
+    {"image_path": "/static/images/infrastructure/auto_8.webp", "image_name": "Multi-Cylinder Petrol Engine with Hydraulic Dynamometer", "image_content": "A setup for testing petrol engines, where the hydraulic dynamometer measures engine performance and emission characteristics."}, 
+    {"image_path": "/static/images/infrastructure/auto_9.webp", "image_name": "Multi-Cylinder FIP Diesel Engine with Eddy Current Dynamometer", "image_content": "A diesel engine test setup where the eddy current dynamometer measures engine performance and emission characteristics."}, 
+    {"image_path": "/static/images/infrastructure/auto_10.webp", "image_name": "Computerized Multi-Cylinder Petrol Engine Test Rig", "image_content": "A fully instrumented test rig that evaluates petrol engine performance, emissions, and fuel efficiency with digital data acquisition."}, 
+    {"image_path": "/static/images/infrastructure/auto_11.webp", "image_name": "Piezo Electric Pick Up-1 Amplifier-1, Angle Encoder-3", "image_content": "A set of sensors used to measure engine pressure variations and crankshaft angles during testing of single-cylinder diesel engines."}, 
+    {"image_path": "/static/images/infrastructure/auto_12.webp", "image_name": "Wheel Alignment Apparatus", "image_content": "A device used to check and adjust the alignment of vehicle wheels for optimal driving stability and tire wear."}, 
+    {"image_path": "/static/images/infrastructure/auto_13.webp", "image_name": "Fuel Injector Calibration Test Bench – With Nozzle Tester", "image_content": "A testing setup for measuring and adjusting fuel injector performance, ensuring proper fuel atomization and spray pattern."}
     ]
     },
     {
         "dept_id": "003",
         "department_name": "Chemistry",
         "infrastructure_images": [
-            {"image_path": "/static/images/infrastructure/chem_1.jpg", "image_name": "ENGINEERING CHEMISTRY LAV", "image_content": ""},
-            {"image_path": "/static/images/infrastructure/chem_2.jpg", "image_name": "ELECTRO CHEMISTRY RESEARCH LAB", "image_content": ""}
+            {"image_path": "/static/images/infrastructure/chem_1.webp", "image_name": "ENGINEERING CHEMISTRY LAV", "image_content": ""},
+            {"image_path": "/static/images/infrastructure/chem_2.webp", "image_name": "ELECTRO CHEMISTRY RESEARCH LAB", "image_content": ""}
         ]
     },
     {
         "dept_id": "004",
         "department_name": "Civil Engineering (CIVIL)",
         "infrastructure_images": [
-            {"image_path": "/static/images/infrastructure/civil_1.jpg", "image_name": "Strength of Materials Lab", "image_content": ""},
-            {"image_path": "/static/images/infrastructure/civil_2.jpg", "image_name": "Fluid Mechanics and Hydraulic Machinery Lab", "image_content": ""},
-            {"image_path": "/static/images/infrastructure/civil_3.jpg", "image_name": "Soil Mechanics Lab", "image_content": ""},
-            {"image_path": "/static/images/infrastructure/civil_4.jpg", "image_name": "Concrete and Highway Engineering Lab", "image_content": ""},
-            {"image_path": "/static/images/infrastructure/civil_5.jpg", "image_name": "Surveying Lab", "image_content": ""},
-            {"image_path": "/static/images/infrastructure/civil_6.jpg", "image_name": "Environmental Engineering Lab", "image_content": ""},
-            {"image_path": "/static/images/infrastructure/civil_7.jpg", "image_name": "Computer Aided Design and Drawing LabOratory", "image_content": ""}
+            {"image_path": "/static/images/infrastructure/civil_1.webp", "image_name": "Strength of Materials Lab", "image_content": ""},
+            {"image_path": "/static/images/infrastructure/civil_2.webp", "image_name": "Fluid Mechanics and Hydraulic Machinery Lab", "image_content": ""},
+            {"image_path": "/static/images/infrastructure/civil_3.webp", "image_name": "Soil Mechanics Lab", "image_content": ""},
+            {"image_path": "/static/images/infrastructure/civil_4.webp", "image_name": "Concrete and Highway Engineering Lab", "image_content": ""},
+            {"image_path": "/static/images/infrastructure/civil_5.webp", "image_name": "Surveying Lab", "image_content": ""},
+            {"image_path": "/static/images/infrastructure/civil_6.webp", "image_name": "Environmental Engineering Lab", "image_content": ""},
+            {"image_path": "/static/images/infrastructure/civil_7.webp", "image_name": "Computer Aided Design and Drawing LabOratory", "image_content": ""}
         ]
     },
     {
         "dept_id": "005",
         "department_name": "Computer Science & Engineering (CSE)",
         "infrastructure_images": [
-            {"image_path": "/static/images/infrastructure/cse_1.jpg", "image_name": "Lab Facilities", "image_content": "Multimedia Lab"},
-            {"image_path": "/static/images/infrastructure/cse_2.jpg", "image_name": "Lab Facilities", "image_content": "Networks Lab"},
-            {"image_path": "/static/images/infrastructure/cse_3.jpg", "image_name": "Lab Facilities", "image_content": "Operating Systems Lab"},
-            {"image_path": "/static/images/infrastructure/cse_4.jpg", "image_name": "Lab Facilities", "image_content": "Computing Lab"},
-            {"image_path": "/static/images/infrastructure/cse_5.jpg", "image_name": "Classroom Facilities", "image_content": "Comfortable learning environment"},
-            {"image_path": "/static/images/infrastructure/cse_6.jpg", "image_name": "Classroom Facilities", "image_content": "Reduced distractions"},
-            {"image_path": "/static/images/infrastructure/cse_7.jpg", "image_name": "Classroom Facilities", "image_content": "Increased mobility and flexibility"},
-            {"image_path": "/static/images/infrastructure/cse_8.jpg", "image_name": "Classroom Facilities", "image_content": "Enhanced collaboration and group work opportunities"},
-            {"image_path": "/static/images/infrastructure/cse_9.jpg", "image_name": "Classroom Facilities", "image_content": "Improved focus and productivity"}
+            {"image_path": "/static/images/infrastructure/cse_1.webp", "image_name": "Lab Facilities", "image_content": "Multimedia Lab"},
+            {"image_path": "/static/images/infrastructure/cse_2.webp", "image_name": "Lab Facilities", "image_content": "Networks Lab"},
+            {"image_path": "/static/images/infrastructure/cse_3.webp", "image_name": "Lab Facilities", "image_content": "Operating Systems Lab"},
+            {"image_path": "/static/images/infrastructure/cse_4.webp", "image_name": "Lab Facilities", "image_content": "Computing Lab"},
+            {"image_path": "/static/images/infrastructure/cse_5.webp", "image_name": "Classroom Facilities", "image_content": "Comfortable learning environment"},
+            {"image_path": "/static/images/infrastructure/cse_6.webp", "image_name": "Classroom Facilities", "image_content": "Reduced distractions"},
+            {"image_path": "/static/images/infrastructure/cse_7.webp", "image_name": "Classroom Facilities", "image_content": "Increased mobility and flexibility"},
+            {"image_path": "/static/images/infrastructure/cse_8.webp", "image_name": "Classroom Facilities", "image_content": "Enhanced collaboration and group work opportunities"},
+            {"image_path": "/static/images/infrastructure/cse_9.webp", "image_name": "Classroom Facilities", "image_content": "Improved focus and productivity"}
 
         ]
     },
@@ -67,51 +67,51 @@
         "department_name": "Computer Science and Engineering (CYBER SECURITY)",
         "infrastructure_images": [
             {"image_path": "/static/images/infrastructure/006/1.png", "image_name": "KIRLOSKAR BLOCK  III FLOOR", "image_content":""},
-            {"image_path": "/static/images/infrastructure/006/2.jpg", "image_name": "II YEAR CSE(CYBER SECURITY) - CLASS ROOM", "image_content": ""}
+            {"image_path": "/static/images/infrastructure/006/2.webp", "image_name": "II YEAR CSE(CYBER SECURITY) - CLASS ROOM", "image_content": ""}
         ]
     },
     {
         "dept_id": "007",
         "department_name": "Electrical & Electronics Engineering (EEE)",
         "infrastructure_images": [
-            {"image_path": "/static/images/infrastructure/ece_1.jpg", "image_name": "Workshop Practice", "image_content": "The Workshop Practice in the EEE department provides hands-on training in wiring, digital electronics, and CRO operation, bridging theoretical knowledge with practical application."},
-            {"image_path": "/static/images/infrastructure/ece_2.jpg", "image_name": "Electric Circuits Lab", "image_content": "The Electric Circuits Lab in the EEE department provides hands-on experience in circuit analysis, network theorems, and measurement techniques using instruments like multimeters and oscilloscopes, enhancing students' practical understanding of electrical fundamentals."},
-            {"image_path": "/static/images/infrastructure/ece_3.jpg", "image_name": "Electrical Machines – I & II Lab", "image_content": "The Electrical Machines – I & II Lab in the EEE department provides practical training in testing, analyzing performance, and operating DC machines, transformers, induction motors, and synchronous machines, seamlessly connecting theory with real-world applications."},
-            {"image_path": "/static/images/infrastructure/ece_4.jpg", "image_name": "Electronics Laboratory lab", "image_content": "The Electronics Laboratory offers practical training in designing, testing, and analyzing electronic circuits such as amplifiers, oscillators, and digital logic circuits, strengthening students' understanding of electronic systems."},
-            {"image_path": "/static/images/infrastructure/ece_5.jpg", "image_name": "Linear Integrated Circuits Lab", "image_content": "The Linear Integrated Circuits Lab provides hands-on experience in designing, testing, and analyzing analog circuits using operational amplifiers, voltage regulators, and signal processing ICs, enhancing students' practical understanding of integrated circuit applications."},
-            {"image_path": "/static/images/infrastructure/ece_6.jpg", "image_name": "Control and Instrumentation Lab", "image_content": "The Control and Instrumentation Lab provides hands-on training in analyzing and implementing control systems, sensors, and instrumentation techniques, enabling students to design and test automation and measurement systems."},
-            {"image_path": "/static/images/infrastructure/ece_7.jpg", "image_name": "Microprocessor and Microcontroller  Lab", "image_content": "The Microprocessor and Microcontroller Lab provides hands-on experience in programming, interfacing, and debugging microprocessors and microcontrollers, enabling students to develop and implement embedded system applications."},
-            {"image_path": "/static/images/infrastructure/ece_8.jpg", "image_name": "Power Electronics Lab", "image_content": "The Power Electronics Lab provides hands-on experience in designing, testing, and analyzing power semiconductor devices, converters, inverters, and motor control circuits, equipping students with practical skills in power electronic applications."},
-            {"image_path": "/static/images/infrastructure/ece_9.jpg", "image_name": "Renewable Energy Systems Lab ", "image_content": "The Renewable Energy Systems Lab provides hands-on training in solar, wind, and other renewable energy technologies, focusing on power generation, conversion, and efficiency analysis to equip students with practical skills in sustainable energy systems."},
-            {"image_path": "/static/images/infrastructure/ece_10.jpg", "image_name": "Power System Simulation Lab", "image_content": "The Power System Simulation Lab provides hands-on experience in modeling, analyzing, and simulating power systems using advanced software tools like MATLAB and ETAP, enabling students to study load flow, fault analysis, stability, and power quality."},
-            {"image_path": "/static/images/infrastructure/ece_11.jpg", "image_name": "Research Labs", "image_content": "The research lab in the EEE department at Velammal Engineering College is equipped with advanced facilities to support innovation and academic research."},
-            {"image_path": "/static/images/infrastructure/ece_12.jpg", "image_name": "Project Lab", "image_content": "The Project Lab in the EEE department at Velammal Engineering College provides students with essential tools and facilities to develop and implement innovative projects"}
+            {"image_path": "/static/images/infrastructure/ece_1.webp", "image_name": "Workshop Practice", "image_content": "The Workshop Practice in the EEE department provides hands-on training in wiring, digital electronics, and CRO operation, bridging theoretical knowledge with practical application."},
+            {"image_path": "/static/images/infrastructure/ece_2.webp", "image_name": "Electric Circuits Lab", "image_content": "The Electric Circuits Lab in the EEE department provides hands-on experience in circuit analysis, network theorems, and measurement techniques using instruments like multimeters and oscilloscopes, enhancing students' practical understanding of electrical fundamentals."},
+            {"image_path": "/static/images/infrastructure/ece_3.webp", "image_name": "Electrical Machines – I & II Lab", "image_content": "The Electrical Machines – I & II Lab in the EEE department provides practical training in testing, analyzing performance, and operating DC machines, transformers, induction motors, and synchronous machines, seamlessly connecting theory with real-world applications."},
+            {"image_path": "/static/images/infrastructure/ece_4.webp", "image_name": "Electronics Laboratory lab", "image_content": "The Electronics Laboratory offers practical training in designing, testing, and analyzing electronic circuits such as amplifiers, oscillators, and digital logic circuits, strengthening students' understanding of electronic systems."},
+            {"image_path": "/static/images/infrastructure/ece_5.webp", "image_name": "Linear Integrated Circuits Lab", "image_content": "The Linear Integrated Circuits Lab provides hands-on experience in designing, testing, and analyzing analog circuits using operational amplifiers, voltage regulators, and signal processing ICs, enhancing students' practical understanding of integrated circuit applications."},
+            {"image_path": "/static/images/infrastructure/ece_6.webp", "image_name": "Control and Instrumentation Lab", "image_content": "The Control and Instrumentation Lab provides hands-on training in analyzing and implementing control systems, sensors, and instrumentation techniques, enabling students to design and test automation and measurement systems."},
+            {"image_path": "/static/images/infrastructure/ece_7.webp", "image_name": "Microprocessor and Microcontroller  Lab", "image_content": "The Microprocessor and Microcontroller Lab provides hands-on experience in programming, interfacing, and debugging microprocessors and microcontrollers, enabling students to develop and implement embedded system applications."},
+            {"image_path": "/static/images/infrastructure/ece_8.webp", "image_name": "Power Electronics Lab", "image_content": "The Power Electronics Lab provides hands-on experience in designing, testing, and analyzing power semiconductor devices, converters, inverters, and motor control circuits, equipping students with practical skills in power electronic applications."},
+            {"image_path": "/static/images/infrastructure/ece_9.webp", "image_name": "Renewable Energy Systems Lab ", "image_content": "The Renewable Energy Systems Lab provides hands-on training in solar, wind, and other renewable energy technologies, focusing on power generation, conversion, and efficiency analysis to equip students with practical skills in sustainable energy systems."},
+            {"image_path": "/static/images/infrastructure/ece_10.webp", "image_name": "Power System Simulation Lab", "image_content": "The Power System Simulation Lab provides hands-on experience in modeling, analyzing, and simulating power systems using advanced software tools like MATLAB and ETAP, enabling students to study load flow, fault analysis, stability, and power quality."},
+            {"image_path": "/static/images/infrastructure/ece_11.webp", "image_name": "Research Labs", "image_content": "The research lab in the EEE department at Velammal Engineering College is equipped with advanced facilities to support innovation and academic research."},
+            {"image_path": "/static/images/infrastructure/ece_12.webp", "image_name": "Project Lab", "image_content": "The Project Lab in the EEE department at Velammal Engineering College provides students with essential tools and facilities to develop and implement innovative projects"}
         ]
     },
     {
         "dept_id": "008",
         "department_name": "Electronics & Instrumentation Engineering (EIE)",
         "infrastructure_images": [
-            {"image_path": "/static/images/infrastructure/eie_1.jpg", "image_name": "VIRTUAL INSTRUMENTATION CENTRE", "image_content": ""},
-            {"image_path": "/static/images/infrastructure/eie_2.jpg", "image_name": "PROCESS CONTROL LABORATORY", "image_content": ""},
-            {"image_path": "/static/images/infrastructure/eie_3.jpg", "image_name": "R&D LABORATORY", "image_content": ""},
-            {"image_path": "/static/images/infrastructure/eie_4.jpg", "image_name": "DEPARTMENT LIBRARY", "image_content": ""},
-            {"image_path": "/static/images/infrastructure/eie_5.jpg", "image_name": "MICROPROCESSOR AND MICROCONTROLLER LABORATORY", "image_content": ""},
-            {"image_path": "/static/images/infrastructure/eie_6.jpg", "image_name": "CIRCUITS AND DEVICES LABORATORY", "image_content": ""},
-            {"image_path": "/static/images/infrastructure/eie_7.jpg", "image_name": "INSTRUMENTATION LABORATORY", "image_content": ""}
+            {"image_path": "/static/images/infrastructure/eie_1.webp", "image_name": "VIRTUAL INSTRUMENTATION CENTRE", "image_content": ""},
+            {"image_path": "/static/images/infrastructure/eie_2.webp", "image_name": "PROCESS CONTROL LABORATORY", "image_content": ""},
+            {"image_path": "/static/images/infrastructure/eie_3.webp", "image_name": "R&D LABORATORY", "image_content": ""},
+            {"image_path": "/static/images/infrastructure/eie_4.webp", "image_name": "DEPARTMENT LIBRARY", "image_content": ""},
+            {"image_path": "/static/images/infrastructure/eie_5.webp", "image_name": "MICROPROCESSOR AND MICROCONTROLLER LABORATORY", "image_content": ""},
+            {"image_path": "/static/images/infrastructure/eie_6.webp", "image_name": "CIRCUITS AND DEVICES LABORATORY", "image_content": ""},
+            {"image_path": "/static/images/infrastructure/eie_7.webp", "image_name": "INSTRUMENTATION LABORATORY", "image_content": ""}
         ]
     },
     {
         "dept_id": "009",
         "department_name": "Electronics and Communication Engineering (ECE)",
         "infrastructure_images": [
-            {"image_path": "/static/images/infrastructure/ece_1.jpg", "image_name": "ELECTRONICS LABORATORY", "image_content": "ELECTRONICS LABORATORY "},
-            {"image_path": "/static/images/infrastructure/ece_2.jpg", "image_name": "NETWORK LABORATORY", "image_content": "NETWORK LABORATORY"},
-            {"image_path": "/static/images/infrastructure/ece_3.jpg", "image_name": "MICROPROCESSOR LABORATORY", "image_content": "MICROPROCESSOR LABORATORY "},
-            {"image_path": "/static/images/infrastructure/ece_4.jpg", "image_name": "MICROWAVE & COMMUNICATION LABORATORY", "image_content": "MICROWAVE & COMMUNICATION LABORATORY "},
-            {"image_path": "/static/images/infrastructure/ece_5.jpg", "image_name": "INTEGRATED CIRCUITS LABORATORY", "image_content": "INTEGRATED CIRCUITS LABORATORY "},
-            {"image_path": "/static/images/infrastructure/ece_6.jpg", "image_name": "ADVANCED ELECTRONICS LABORATORY", "image_content": "ADVANCED ELECTRONICS LABORATORY "},
-            {"image_path": "/static/images/infrastructure/ece_7.jpg", "image_name": "STIMULATION LABORATORY", "image_content": "STIMULATION LABORATORY "}
+            {"image_path": "/static/images/infrastructure/ece_1.webp", "image_name": "ELECTRONICS LABORATORY", "image_content": "ELECTRONICS LABORATORY "},
+            {"image_path": "/static/images/infrastructure/ece_2.webp", "image_name": "NETWORK LABORATORY", "image_content": "NETWORK LABORATORY"},
+            {"image_path": "/static/images/infrastructure/ece_3.webp", "image_name": "MICROPROCESSOR LABORATORY", "image_content": "MICROPROCESSOR LABORATORY "},
+            {"image_path": "/static/images/infrastructure/ece_4.webp", "image_name": "MICROWAVE & COMMUNICATION LABORATORY", "image_content": "MICROWAVE & COMMUNICATION LABORATORY "},
+            {"image_path": "/static/images/infrastructure/ece_5.webp", "image_name": "INTEGRATED CIRCUITS LABORATORY", "image_content": "INTEGRATED CIRCUITS LABORATORY "},
+            {"image_path": "/static/images/infrastructure/ece_6.webp", "image_name": "ADVANCED ELECTRONICS LABORATORY", "image_content": "ADVANCED ELECTRONICS LABORATORY "},
+            {"image_path": "/static/images/infrastructure/ece_7.webp", "image_name": "STIMULATION LABORATORY", "image_content": "STIMULATION LABORATORY "}
             
         ]
     },
@@ -119,63 +119,63 @@
         "dept_id": "010",
         "department_name": "English",
         "infrastructure_images": [
-            {"image_path": "/static/images/infrastructure/010/1.jpg", "image_name": "Communicative Skills Lab", "image_content": null},
-            {"image_path": "/static/images/infrastructure/010/2.jpg", "image_name": "Department Staff room photo", "image_content": null}
+            {"image_path": "/static/images/infrastructure/010/1.webp", "image_name": "Communicative Skills Lab", "image_content": null},
+            {"image_path": "/static/images/infrastructure/010/2.webp", "image_name": "Department Staff room photo", "image_content": null}
         ]
     },
     {
         "dept_id": "011",
         "department_name": "Information Technology (IT)",
         "infrastructure_images": [
-            {"image_path": "/static/images/infrastructure/it_1.jpg", "image_name": "CASE TOOLS LAB", "image_content":"To develop programming skills in design and implementation of data structures and their applications. To practice design and implementation of Java program with classes and objects as real world entities, develop programs using Multithreading ,explore exception handling techniques and its implementation,build a simple application using File stream concepts, build a simple application using Databases and Networking Concepts. To explore various network commands in different operating systems, hands on experience on various networking protocols, implement functionalities using raw sockets, understand and implement the network programming concepts using APIs, explore the various network simulators for analysing network behavior. To understand the components and structure of mobile application development frameworks for Android and windows OS based mobiles, understand how to work with various mobile application development frameworks, learn the basic and important design concepts and issues of development of mobile applications, understand the capabilities and limitations of mobile devices."},
-            {"image_path": "/static/images/infrastructure/it_2.jpg", "image_name": "PROGRAMMING LAB", "image_content": "To practice design and implementation of C++ program with classes and objects as real world entities,  reusability using inheritance , design and implementation of OOP concepts like polymorphism, develop programs using C++ templates , explore exception handling techniques and its implementation, build a simple application using File stream concepts. To understand data definition, data manipulation, data control and transaction control language commands,  apply suitable Integrity constraints, views, sequences required for the applications,  learn the use of simple, nested and join queries, execute cursors, triggers, goto, exception handling ,functions and procedures using PL/SQL , To implement various database applications using respective front and back end tools. To practice HTML Tags, develop webpage using HTML, CSS and JavaScript, design XML applications,  Server-Side programming using servlets and JSP, build a web application using AJAX and web services. Mini-projects are a powerful tool for both students and professionals to strengthen their practical skills and demonstrate their expertise. Typically completed by small teams or even individuals, these projects help engineers to apply theoretical knowledge to real-world scenarios."},
-            {"image_path": "/static/images/infrastructure/it_3.jpg", "image_name": "RDBMS LAB", "image_content": "To understand the problem solving approaches, learn the basic programming constructs in Python and  practice various computing strategies for Python-based solutions to real world problems.To familiarize with C programming constructs, develop programs in C using basic constructs,arrays, strings, pointers, functions, structures, file processing."},
-            {"image_path": "/static/images/infrastructure/it_4.jpg", "image_name": "RESEARCH LAB", "image_content": "To practice design and implementation of C++ program with classes and objects as real world entities,  reusability using inheritance , design and implementation of OOP concepts like polymorphism, develop programs using C++ templates , explore exception handling techniques and its implementation, build a simple application using File stream concepts. Projects span a variety of domains, from electronics and software development to mechanical and civil engineering, with each offering its own set of challenges. While some projects may be straightforward, others push the boundaries of creativity and innovation. What matters most is the learning process and how well you can apply your technical abilities to solve problems."}
+            {"image_path": "/static/images/infrastructure/it_1.webp", "image_name": "CASE TOOLS LAB", "image_content":"To develop programming skills in design and implementation of data structures and their applications. To practice design and implementation of Java program with classes and objects as real world entities, develop programs using Multithreading ,explore exception handling techniques and its implementation,build a simple application using File stream concepts, build a simple application using Databases and Networking Concepts. To explore various network commands in different operating systems, hands on experience on various networking protocols, implement functionalities using raw sockets, understand and implement the network programming concepts using APIs, explore the various network simulators for analysing network behavior. To understand the components and structure of mobile application development frameworks for Android and windows OS based mobiles, understand how to work with various mobile application development frameworks, learn the basic and important design concepts and issues of development of mobile applications, understand the capabilities and limitations of mobile devices."},
+            {"image_path": "/static/images/infrastructure/it_2.webp", "image_name": "PROGRAMMING LAB", "image_content": "To practice design and implementation of C++ program with classes and objects as real world entities,  reusability using inheritance , design and implementation of OOP concepts like polymorphism, develop programs using C++ templates , explore exception handling techniques and its implementation, build a simple application using File stream concepts. To understand data definition, data manipulation, data control and transaction control language commands,  apply suitable Integrity constraints, views, sequences required for the applications,  learn the use of simple, nested and join queries, execute cursors, triggers, goto, exception handling ,functions and procedures using PL/SQL , To implement various database applications using respective front and back end tools. To practice HTML Tags, develop webpage using HTML, CSS and JavaScript, design XML applications,  Server-Side programming using servlets and JSP, build a web application using AJAX and web services. Mini-projects are a powerful tool for both students and professionals to strengthen their practical skills and demonstrate their expertise. Typically completed by small teams or even individuals, these projects help engineers to apply theoretical knowledge to real-world scenarios."},
+            {"image_path": "/static/images/infrastructure/it_3.webp", "image_name": "RDBMS LAB", "image_content": "To understand the problem solving approaches, learn the basic programming constructs in Python and  practice various computing strategies for Python-based solutions to real world problems.To familiarize with C programming constructs, develop programs in C using basic constructs,arrays, strings, pointers, functions, structures, file processing."},
+            {"image_path": "/static/images/infrastructure/it_4.webp", "image_name": "RESEARCH LAB", "image_content": "To practice design and implementation of C++ program with classes and objects as real world entities,  reusability using inheritance , design and implementation of OOP concepts like polymorphism, develop programs using C++ templates , explore exception handling techniques and its implementation, build a simple application using File stream concepts. Projects span a variety of domains, from electronics and software development to mechanical and civil engineering, with each offering its own set of challenges. While some projects may be straightforward, others push the boundaries of creativity and innovation. What matters most is the learning process and how well you can apply your technical abilities to solve problems."}
         ]
     },
     {
         "dept_id": "013",
         "department_name": "Mechancial Engineering (MECH)",
         "infrastructure_images": [
-            {"image_path": "/static/images/infrastructure/mech_1.jpg", "image_name": "Engineering Practice Laboratory", "image_content": ""},
-            {"image_path": "/static/images/infrastructure/mech_2.jpg", "image_name": " Thermal Engineering Laboratory ", "image_content": ""},
-            {"image_path": "/static/images/infrastructure/mech_3.jpg", "image_name": "Heat Transfer Laboratory", "image_content": ""},
-            {"image_path": "/static/images/infrastructure/mech_4.jpg", "image_name": "Manufacturing Technology Laboratory ", "image_content": ""},
-            {"image_path": "/static/images/infrastructure/mech_5.jpg", "image_name": "Dynamics Laboratory ", "image_content": ""},
-            {"image_path": "/static/images/infrastructure/mech_5.jpg", "image_name": "Metrology and Measurements Laboratory", "image_content": ""},
-            {"image_path": "/static/images/infrastructure/mech_5.jpg", "image_name": "Mechatronics Laboratory ", "image_content": ""},
-            {"image_path": "/static/images/infrastructure/mech_1.jpg", "image_name": "CAD/CAM Laboratory", "image_content": ""},
-            {"image_path": "/static/images/infrastructure/mech_1.jpg", "image_name": "Simulation and Analysis Laboratory", "image_content": ""},
-            {"image_path": "/static/images/infrastructure/mech_1.jpg", "image_name": "Project Laboratory-  Stir Casting", "image_content": ""},
-            {"image_path": "/static/images/infrastructure/mech_1.jpg", "image_name": "Project Laboratory-  Double Roll Mill (Rubber compounding Mill)", "image_content":""},
-            {"image_path": "/static/images/infrastructure/mech_1.jpg", "image_name": "Project Laboratory-   Planetary Ball Mill", "image_content": ""},
-            {"image_path": "/static/images/infrastructure/mech_1.jpg", "image_name": "Project Laboratory-   Hydraulic Press", "image_content": ""},
-            {"image_path": "/static/images/infrastructure/mech_1.jpg", "image_name": "Project Laboratory-   Computerized Universal Testing Machine", "image_content": ""},
-            {"image_path": "/static/images/infrastructure/mech_1.jpg", "image_name": "Project Laboratory-   Muffle Furnace", "image_content": ""},
-            {"image_path": "/static/images/infrastructure/mech_1.jpg", "image_name": "Project Laboratory-   Optical Microscope with image analyzer", "image_content": ""},
-            {"image_path": "/static/images/infrastructure/mech_1.jpg", "image_name": "Project Laboratory-  Wire Cut EDM", "image_content": ""}
+            {"image_path": "/static/images/infrastructure/mech_1.webp", "image_name": "Engineering Practice Laboratory", "image_content": ""},
+            {"image_path": "/static/images/infrastructure/mech_2.webp", "image_name": " Thermal Engineering Laboratory ", "image_content": ""},
+            {"image_path": "/static/images/infrastructure/mech_3.webp", "image_name": "Heat Transfer Laboratory", "image_content": ""},
+            {"image_path": "/static/images/infrastructure/mech_4.webp", "image_name": "Manufacturing Technology Laboratory ", "image_content": ""},
+            {"image_path": "/static/images/infrastructure/mech_5.webp", "image_name": "Dynamics Laboratory ", "image_content": ""},
+            {"image_path": "/static/images/infrastructure/mech_5.webp", "image_name": "Metrology and Measurements Laboratory", "image_content": ""},
+            {"image_path": "/static/images/infrastructure/mech_5.webp", "image_name": "Mechatronics Laboratory ", "image_content": ""},
+            {"image_path": "/static/images/infrastructure/mech_1.webp", "image_name": "CAD/CAM Laboratory", "image_content": ""},
+            {"image_path": "/static/images/infrastructure/mech_1.webp", "image_name": "Simulation and Analysis Laboratory", "image_content": ""},
+            {"image_path": "/static/images/infrastructure/mech_1.webp", "image_name": "Project Laboratory-  Stir Casting", "image_content": ""},
+            {"image_path": "/static/images/infrastructure/mech_1.webp", "image_name": "Project Laboratory-  Double Roll Mill (Rubber compounding Mill)", "image_content":""},
+            {"image_path": "/static/images/infrastructure/mech_1.webp", "image_name": "Project Laboratory-   Planetary Ball Mill", "image_content": ""},
+            {"image_path": "/static/images/infrastructure/mech_1.webp", "image_name": "Project Laboratory-   Hydraulic Press", "image_content": ""},
+            {"image_path": "/static/images/infrastructure/mech_1.webp", "image_name": "Project Laboratory-   Computerized Universal Testing Machine", "image_content": ""},
+            {"image_path": "/static/images/infrastructure/mech_1.webp", "image_name": "Project Laboratory-   Muffle Furnace", "image_content": ""},
+            {"image_path": "/static/images/infrastructure/mech_1.webp", "image_name": "Project Laboratory-   Optical Microscope with image analyzer", "image_content": ""},
+            {"image_path": "/static/images/infrastructure/mech_1.webp", "image_name": "Project Laboratory-  Wire Cut EDM", "image_content": ""}
         ]
     },  
     {
         "dept_id": "015",
         "department_name": "Physics",
         "infrastructure_images": [
-            {"image_path": "/static/images/infrastructure/physics_1.jpg", "image_name": "Image 15_1", "image_content": "Description of Image 15_1"},
-            {"image_path": "/static/images/infrastructure/physics_2.jpg", "image_name": "Image 15_2", "image_content": "Description of Image 15_2"},
-            {"image_path": "/static/images/infrastructure/physics_3.jpg", "image_name": "Image 15_3", "image_content": "Description of Image 15_3"},
-            {"image_path": "/static/images/infrastructure/physics_4.jpg", "image_name": "Image 15_4", "image_content": "Description of Image 15_4"},
-            {"image_path": "/static/images/infrastructure/physics_5.jpg", "image_name": "Image 15_5", "image_content": "Description of Image 15_5"}
+            {"image_path": "/static/images/infrastructure/physics_1.webp", "image_name": "Image 15_1", "image_content": "Description of Image 15_1"},
+            {"image_path": "/static/images/infrastructure/physics_2.webp", "image_name": "Image 15_2", "image_content": "Description of Image 15_2"},
+            {"image_path": "/static/images/infrastructure/physics_3.webp", "image_name": "Image 15_3", "image_content": "Description of Image 15_3"},
+            {"image_path": "/static/images/infrastructure/physics_4.webp", "image_name": "Image 15_4", "image_content": "Description of Image 15_4"},
+            {"image_path": "/static/images/infrastructure/physics_5.webp", "image_name": "Image 15_5", "image_content": "Description of Image 15_5"}
         ]
     },
     {
         "dept_id": "016",
         "department_name": "M.E Computer Science Engineering",
         "infrastructure_images": [
-            {"image_path": "/static/images/infrastructure/me_cse_1.jpg", "image_name": "", "image_content": ""},
-            {"image_path": "/static/images/infrastructure/me_cse_2.jpg", "image_name": "", "image_content": ""},
-            {"image_path": "/static/images/infrastructure/me_cse_3.jpg", "image_name": "", "image_content": ""},
-            {"image_path": "/static/images/infrastructure/me_cse_4.jpg", "image_name": "", "image_content": ""},
-            {"image_path": "/static/images/infrastructure/me_cse_5.jpg", "image_name": "", "image_content": ""}
+            {"image_path": "/static/images/infrastructure/me_cse_1.webp", "image_name": "", "image_content": ""},
+            {"image_path": "/static/images/infrastructure/me_cse_2.webp", "image_name": "", "image_content": ""},
+            {"image_path": "/static/images/infrastructure/me_cse_3.webp", "image_name": "", "image_content": ""},
+            {"image_path": "/static/images/infrastructure/me_cse_4.webp", "image_name": "", "image_content": ""},
+            {"image_path": "/static/images/infrastructure/me_cse_5.webp", "image_name": "", "image_content": ""}
         ]
     },
     {
