@@ -38,23 +38,6 @@
         ]
     },
     {
-        "dept_id": "003",
-        "department_name": "Chemistry",
-        "content": "Department 3 Content",
-        "images": [
-            {"image_path": "/static/images/student_activities/003/1.webp", "event_name": "Description of Image 3_1", "image_content": "Event 3_1", "date": "YYYY-MM-DD"},
-            {"image_path": "/static/images/student_activities/003/2.webp", "event_name": "Description of Image 3_2", "image_content": "Event 3_2", "date": "YYYY-MM-DD"},
-            {"image_path": "/static/images/student_activities/003/3.webp", "event_name": "Description of Image 3_3", "image_content": "Event 3_3", "date": "YYYY-MM-DD"},
-            {"image_path": "/static/images/student_activities/003/4.webp", "event_name": "Description of Image 3_4", "image_content": "Event 3_4", "date": "YYYY-MM-DD"},
-            {"image_path": "/static/images/student_activities/003/5.webp", "event_name": "Description of Image 3_5", "image_content": "Event 3_5", "date": "YYYY-MM-DD"},
-            {"image_path": "/static/images/student_activities/003/6.webp", "event_name": "Description of Image 3_6", "image_content": "Event 3_6", "date": "YYYY-MM-DD"},
-            {"image_path": "/static/images/student_activities/003/7.webp", "event_name": "Description of Image 3_7", "image_content": "Event 3_7", "date": "YYYY-MM-DD"},
-            {"image_path": "/static/images/student_activities/003/8.webp", "event_name": "Description of Image 3_8", "image_content": "Event 3_8", "date": "YYYY-MM-DD"},
-            {"image_path": "/static/images/student_activities/003/9.webp", "event_name": "Description of Image 3_9", "image_content": "Event 3_9", "date": "YYYY-MM-DD"},
-            {"image_path": "/static/images/student_activities/003/10.webp", "event_name": "Description of Image 3_10", "image_content": "Event 3_10", "date": "YYYY-MM-DD"}
-        ]
-    },
-    {
         "dept_id": "004",
         "department_name": "Civil Engineering (CIVL)",
         "content": "Department 4 Content",
@@ -190,23 +173,6 @@
         ]
     },
     {
-        "dept_id": "012",
-        "department_name": "Mathematics",
-        "content": "Department 12 Content",
-        "images": [
-            {"image_path": "/static/images/student_activities/012/1.webp", "image_content": "Description of Image 12_1", "event_name": "Event 12_1", "date": "YYYY-MM-DD"},
-            {"image_path": "/static/images/student_activities/012/2.webp", "image_content": "Description of Image 12_2", "event_name": "Event 12_2", "date": "YYYY-MM-DD"},
-            {"image_path": "/static/images/student_activities/012/3.webp", "image_content": "Description of Image 12_3", "event_name": "Event 12_3", "date": "YYYY-MM-DD"},
-            {"image_path": "/static/images/student_activities/012/4.webp", "image_content": "Description of Image 12_4", "event_name": "Event 12_4", "date": "YYYY-MM-DD"},
-            {"image_path": "/static/images/student_activities/012/5.webp", "image_content": "Description of Image 12_5", "event_name": "Event 12_5", "date": "YYYY-MM-DD"},
-            {"image_path": "/static/images/student_activities/012/6.webp", "image_content": "Description of Image 12_6", "event_name": "Event 12_6", "date": "YYYY-MM-DD"},
-            {"image_path": "/static/images/student_activities/012/7.webp", "image_content": "Description of Image 12_7", "event_name": "Event 12_7", "date": "YYYY-MM-DD"},
-            {"image_path": "/static/images/student_activities/012/8.webp", "image_content": "Description of Image 12_8", "event_name": "Event 12_8", "date": "YYYY-MM-DD"},
-            {"image_path": "/static/images/student_activities/012/9.webp", "image_content": "Description of Image 12_9", "event_name": "Event 12_9", "date": "YYYY-MM-DD"},
-            {"image_path": "/static/images/student_activities/012/10.webp", "image_content": "Description of Image 12_10", "event_name": "Event 12_10", "date": "YYYY-MM-DD"}
-        ]
-    },
-    {
         "dept_id": "013", 
         "department_name": "Mechancial Engineering (MECH)",
         "content": "Department 13 Content",
@@ -233,36 +199,17 @@
     },
     {
         "dept_id": "014",
-        "department_name": "Physical Education",
+        "department_name": "Tamil",
         "content": "Department 14 Content",
         "images": [
-            {"image_path": "/static/images/student_activities/014/1.webp", "image_content": "Description of Image 14_1", "event_name": "Event 14_1", "date": "YYYY-MM-DD"},
-            {"image_path": "/static/images/student_activities/014/2.webp", "image_content": "Description of Image 14_2", "event_name": "Event 14_2", "date": "YYYY-MM-DD"},
-            {"image_path": "/static/images/student_activities/014/3.webp", "image_content": "Description of Image 14_3", "event_name": "Event 14_3", "date": "YYYY-MM-DD"},
-            {"image_path": "/static/images/student_activities/014/4.webp", "image_content": "Description of Image 14_4", "event_name": "Event 14_4", "date": "YYYY-MM-DD"},
-            {"image_path": "/static/images/student_activities/014/5.webp", "image_content": "Description of Image 14_5", "event_name": "Event 14_5", "date": "YYYY-MM-DD"},
-            {"image_path": "/static/images/student_activities/014/6.webp", "image_content": "Description of Image 14_6", "event_name": "Event 14_6", "date": "YYYY-MM-DD"},
-            {"image_path": "/static/images/student_activities/014/7.webp", "image_content": "Description of Image 14_7", "event_name": "Event 14_7", "date": "YYYY-MM-DD"},
-            {"image_path": "/static/images/student_activities/014/8.webp", "image_content": "Description of Image 14_8", "event_name": "Event 14_8", "date": "YYYY-MM-DD"},
-            {"image_path": "/static/images/student_activities/014/9.webp", "image_content" :"Description of Image 14_8", "event_name": "Event 14_8", "date": "YYYY-MM-DD"}
-        ]
+           ]
     },
     {
         "dept_id": "015", 
         "department_name": "Physics",
         "content": "Department 15 Content",
         "images": [
-            {"image_path": "/static/images/student_activities/015/1.webp", "image_content": "Description of Image 13_1", "event_name": "Event 13_1", "date": "YYYY-MM-DD"},
-            {"image_path": "/static/images/student_activities/015/2.webp", "image_content": "Description of Image 13_2", "event_name": "Event 13_2", "date": "YYYY-MM-DD"},
-            {"image_path": "/static/images/student_activities/015/3.webp", "image_content": "Description of Image 13_3", "event_name": "Event 13_3", "date": "YYYY-MM-DD"},
-            {"image_path": "/static/images/student_activities/015/4.webp", "image_content": "Description of Image 13_4", "event_name": "Event 13_4", "date": "YYYY-MM-DD"},
-            {"image_path": "/static/images/student_activities/015/5.webp", "image_content": "Description of Image 13_5", "event_name": "Event 13_5", "date": "YYYY-MM-DD"},
-            {"image_path": "/static/images/student_activities/015/6.webp", "image_content": "Description of Image 13_6", "event_name": "Event 13_6", "date": "YYYY-MM-DD"},
-            {"image_path": "/static/images/student_activities/015/7.webp", "image_content": "Description of Image 13_7", "event_name": "Event 13_7", "date": "YYYY-MM-DD"},
-            {"image_path": "/static/images/student_activities/015/8.webp", "image_content": "Description of Image 13_8", "event_name": "Event 13_8", "date": "YYYY-MM-DD"},
-            {"image_path": "/static/images/student_activities/015/9.webp", "image_content": "Description of Image 13_9", "event_name": "Event 13_9", "date": "YYYY-MM-DD"},
-            {"image_path": "/static/images/student_activities/015/10.webp", "image_content": "Description of Image 13_10", "event_name": "Event 13_10", "date": "YYYY-MM-DD"}
-        ]
+           ]
     },
     {
         "dept_id": "016",

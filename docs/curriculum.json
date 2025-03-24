@@ -3,8 +3,8 @@
         "dept_id": "001",
         "department_name": "Artificial Intelligence and Data Science (AI&DS)",
         "regulation": {
-	    "year":["2018", "2019", "2020"],
-	    "pdf_path":["/static/docs/curriculum/001/reg_18.pdf","/static/docs/curriculum/001/reg_19.pdf","/static/docs/curriculum/001/reg_20.pdf"]
+	    "year":["2019", "2021", "2023"],
+	    "pdf_path":["/static/docs/curriculum/001/reg_19.pdf","/static/docs/curriculum/001/reg_21.pdf","/static/docs/curriculum/001/reg_23.pdf"]
         }
     },
     {
@@ -27,16 +27,16 @@
         "dept_id": "004",
         "department_name": "Civil Engineering",
         "regulation": {
-        "year":["2020", "2021", "2022"],
-	    "pdf_path":["/static/docs/curriculum/004/reg_20.pdf","/static/docs/curriculum/004/reg_21.pdf","/static/docs/curriculum/004/reg_22.pdf"]
+        "year":["2019", "2021"],
+	    "pdf_path":["/static/docs/curriculum/004/reg_19.pdf","/static/docs/curriculum/004/reg_21.pdf"]
         }
     },
     {
         "dept_id": "005",
         "department_name": "Computer Science & Engineering (CSE) ",
         "regulation": {
-        "year":["2020", "2021", "2022"],
-	    "pdf_path":["/static/docs/curriculum/005/reg_20.pdf","/static/docs/curriculum/005/reg_21.pdf","/static/docs/curriculum/005/reg_22.pdf"]
+        "year":["2019", "2021", "2023"],
+	    "pdf_path":["/static/docs/curriculum/005/reg_19.pdf","/static/docs/curriculum/005/reg_21.pdf","/static/docs/curriculum/005/reg_23.pdf"]
         }
     },
     {
@@ -68,8 +68,8 @@
         "dept_id": "009",
         "department_name": "Electronics and Communication Engineering (ECE)",
         "regulation": {
-        "year":["2020", "2021", "2022"],
-	    "pdf_path":["/static/docs/curriculum/009/reg_20.pdf","/static/docs/curriculum/009/reg_21.pdf","/static/docs/curriculum/009/reg_22.pdf"]
+        "year":["2019", "2021", "2023"],
+	    "pdf_path":["/static/docs/curriculum/009/reg_19.pdf","/static/docs/curriculum/009/reg_21.pdf","/static/docs/curriculum/009/reg_23.pdf"]
         }
     },
     {
@@ -84,7 +84,7 @@
         "dept_id": "011",
         "department_name": "Information Technology (IT)",
         "regulation": {
-        "year":["2020", "2021", "2022"],
+        "year":["2019", "2021", "2023"],
 	    "pdf_path":["/static/docs/curriculum/011/it_reg_19.pdf","/static/docs/curriculum/011/it_reg_21.pdf","/static/docs/curriculum/011/it_reg_23.pdf"]
         }
     },
@@ -92,23 +92,23 @@
         "dept_id": "012",
         "department_name": "Mathematics",
         "regulation": {
-        "year":["2020", "2021", "2022"],
-	    "pdf_path":["/static/docs/curriculum/012/reg_20.pdf","/static/docs/curriculum/012/reg_21.pdf","/static/docs/curriculum/012/reg_22.pdf"]
+        "year":[],
+	    "pdf_path":[]
         }
     },
     {
         "dept_id": "013",
         "department_name": "Mechancial Engineering (MECH)",
         "regulation": {
-        "year":["2020", "2021", "2022"],
-	    "pdf_path":["/static/docs/curriculum/013/reg_20.pdf","/static/docs/curriculum/013/reg_21.pdf","/static/docs/curriculum/013/reg_22.pdf"]
+        "year":["2019", "2021"],
+	    "pdf_path":["/static/docs/curriculum/013/reg_19.pdf","/static/docs/curriculum/013/reg_21.pdf"]
         }
     },
     {
         "dept_id": "014",
         "department_name": "Tamil",
         "regulation": {
-        "year":["2023","2023"],
+        "year":["2023 (I)","2023 (II)"],
 	    "pdf_path":["/static/docs/curriculum/014/reg_23_1.pdf","/static/docs/curriculum/014/reg_23_2.pdf"]
         }
     },
@@ -124,16 +124,16 @@
         "dept_id": "016",
         "department_name": "M.E Computer Science Engineering",
         "regulation": {
-        "year":[],
-	    "pdf_path":[""]
+        "year":["2019", "2021", "2023"],
+	    "pdf_path":["/static/pdfs/curriculum/016/me_cse_19.pdf","/static/pdfs/curriculum/016/me_cse_21.pdf","/static/pdfs/curriculum/016/me_cse_23.pdf"]
         }
     },
     {
         "dept_id": "017",
         "department_name": "Master of Business Administration (MBA)",
         "regulation": {
-        "year":["2020", "2021", "2022"],
-	    "pdf_path":["/static/docs/curriculum/015/reg_20.pdf","/static/docs/curriculum/015/reg_21.pdf","/static/docs/curriculum/015/reg_22.pdf"]
+        "year":["2019", "2021", "2023"],
+	    "pdf_path":["/static/docs/curriculum/017/mba_19.pdf","/static/docs/curriculum/017/mba_21.pdf","/static/docs/curriculum/017/reg_23.pdf"]
 
         }
     }

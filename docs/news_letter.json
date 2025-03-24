@@ -96,6 +96,22 @@
       "2024 - 2025": [
         "/static/pdfs/newsletter/011/2024 25.pdf"
       ]
+    }   
+  },
+  {
+    "dept_id": "013",
+    "years": {
+      "2022": [
+        "/static/pdfs/newsletter/013/DECEMBER 2022.pdf",
+        "/static/pdfs/newsletter/013/JUNE 2022.pdf"
+      ],
+      "2023": [
+         "/static/pdfs/newsletter/013/JUNE 2023.pdf",
+          "/static/pdfs/newsletter/013/DECEMBER 2023.pdf"
+      ],
+      "2024": [
+        "/static/pdfs/newsletter/013/JUNE 2024.pdf"
+     ]
     }
   }
  ]
