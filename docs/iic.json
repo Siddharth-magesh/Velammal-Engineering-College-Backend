@@ -1,17 +1,10 @@
 {
-    "imagepath": [
-      "/static/images/iic/image1.webp",
-      "/static/images/iic/image2.webp",
-      "/static/images/iic/image3.webp",
-      "/static/images/iic/image4.webp",
-      "/static/images/iic/image5.webp",
-      "/static/images/iic/image6.webp",
-      "/static/images/iic/image7.webp",
-      "/static/images/iic/image8.webp",
-      "/static/images/iic/image9.webp",
-      "/static/images/iic/image10.webp",
-      "/static/images/iic/image11.webp",
-      "/static/images/iic/image12.webp"
+   "imagepath": [
+      "/static/images/iic/Incubation 1.webp",
+      "/static/images/iic/Incubation 2.webp",
+      "/static/images/iic/Incubation 3.webp",
+      "/static/images/iic/Incubation 4.webp",
+      "/static/images/iic/Incubation 5.webp"   
     ],
     "certificate": {
       "year": [
