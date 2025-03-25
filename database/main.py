@@ -66,7 +66,7 @@ department_mapping = {
     "Tamil": "014",
     "Physics": "015",
     "Master Of Computer Science": "016",
-    "Master Of Business Administration": "017",
+    "Master of Business Admin": "017",
     
     "Physical Education":"020",
     "Placement":"021"
@@ -89,7 +89,7 @@ department_mapping1 = {
     "Tamil": "014",
     "Physics": "015",
     "Master Of Computer Science": "016",
-    "Master Of Business Administration": "017",
+    "Master of Business Admin": "017",
     "Physical Education":"020",
     "Placement":"021"
 }
@@ -116,7 +116,7 @@ def generate_unique_id(index, department, designation):
     return f"VEC-{department_id}-{designation_id}-{unique_id}"
 
 
-#df = df.head(1) #Remove this line to deactivate Test settings
+df = df.head(1) #Remove this line to deactivate Test settings
 
 df['unique_id'] = [
     generate_unique_id(i, df.at[i, 'Department Name'], df.at[i, 'Designation'])
@@ -779,7 +779,11 @@ department_mapping = {
     "Mathematics": "012",
     "Mechancial Engineering": "013",
     "Tamil": "014",
-    "Physics": "015"
+    "Physics": "015",
+    "Master Of Computer Science": "016",
+    "Master of Business Admin": "017",
+    "Physical Education":"020",
+    "Placement":"021"
 }
 
 def insert_incubation_data():
@@ -798,10 +802,10 @@ def insert_army_data():
 
 def insert_navy_data():
     collection = db['navy']
-    with open("/Velammal-Engineering-College-Backend/docs/navy.json", "r",encoding="utf-8") as file:
+    with open("/Velammal-Engineering-College-Backend/docs/ncc_navy.json", "r",encoding="utf-8") as file:
         documents = json.load(file)
         collection.insert_many(documents)
-    print("navy documents inserted successfully. \n")
+    print("NCC(NAVY) documents inserted successfully. \n")
 
 def insert_faculty_data(folder_path):
     department_name=None
@@ -907,34 +911,22 @@ def insert_library_data():
 
     print("Library data inserted successfully.\n")
 
-def insert_nss_personel():
+def insert_nss_data():
     collection = db["nss_data"]
-    with open("/Velammal-Engineering-College-Backend/docs/nss_personel.json", "r",encoding="utf-8") as file:
+    with open("/Velammal-Engineering-College-Backend/docs/nss.json", "r",encoding="utf-8") as file:
         documents = json.load(file)
         collection.insert_many(documents)
 
-    print("nss_personnel data inserted successfully.\n")
-
-def insert_nss_carousal():
-    collection = db["nss_data"]
-    with open("/Velammal-Engineering-College-Backend/docs/nss_carousal.json", "r",encoding="utf-8") as file:
-        documents = json.load(file)
-        collection.insert_many(documents)
-    
-    print("nss_carousal data inserted successfully.\n")
+    print("NSS data inserted successfully.\n")
 
 def insert_yrc_data():
     collection = db["yrc_data"]
-    with open("/Velammal-Engineering-College-Backend/docs/yrc_carousal.json", "r",encoding="utf-8") as file:
+    with open("/Velammal-Engineering-College-Backend/docs/yrc.json", "r",encoding="utf-8") as file:
         documents = json.load(file)
         collection.insert_many(documents)
 
-    print("yrc_carousal data inserted successfully.\n")
+    print("YRC data inserted successfully.\n")
 
-    with open("/Velammal-Engineering-College-Backend/docs/yrc_personnel.json", "r",encoding="utf-8") as file:
-        documents = json.load(file)
-        collection.insert_many(documents)
-    print("yrc_personnel data inserted successfully.\n")
 
 def insert_overall_department_research():
     collection = db['overall_research']
@@ -981,8 +973,7 @@ def insert_iqac_data():
 insert_sports_data()
 insert_other_facilties()
 insert_library_data()
-insert_nss_personel()
-insert_nss_carousal()
+insert_nss_data()
 insert_yrc_data()
 insert_overall_department_research()
 insert_department_research_data()

@@ -798,10 +798,10 @@ def insert_army_data():
 
 def insert_navy_data():
     collection = db['navy']
-    with open("/root/Velammal-Engineering-College-Backend/docs/navy.json", "r",encoding="utf-8") as file:
+    with open("/root/Velammal-Engineering-College-Backend/docs/ncc_navy.json", "r",encoding="utf-8") as file:
         documents = json.load(file)
         collection.insert_many(documents)
-    print("navy documents inserted successfully.")
+    print("NCC(NAVY) documents inserted successfully.")
 
 def insert_faculty_data(folder_path):
     department_name=None
@@ -906,34 +906,22 @@ def insert_library_data():
 
     print("Library data inserted successfully.")
 
-def insert_nss_personel():
+def insert_nss_data():
     collection = db["nss_data"]
-    with open("/root/Velammal-Engineering-College-Backend/docs/nss_personel.json", "r",encoding="utf-8") as file:
+    with open("/root/Velammal-Engineering-College-Backend/docs/nss.json", "r",encoding="utf-8") as file:
         documents = json.load(file)
         collection.insert_many(documents)
 
-    print("nss_personel data inserted successfully.")
+    print("NSS data inserted successfully.")
 
-def insert_nss_carousal():
-    collection = db["nss_data"]
-    with open("/root/Velammal-Engineering-College-Backend/docs/nss_carousal.json", "r",encoding="utf-8") as file:
-        documents = json.load(file)
-        collection.insert_many(documents)
-    
-    print("nss_carousal data inserted successfully.")
 
 def insert_yrc_data():
     collection = db["yrc_data"]
-    with open("/root/Velammal-Engineering-College-Backend/docs/yrc_carousal.json", "r",encoding="utf-8") as file:
+    with open("/root/Velammal-Engineering-College-Backend/docs/yrc.json", "r",encoding="utf-8") as file:
         documents = json.load(file)
         collection.insert_many(documents)
 
-    print("yrc_carousal data inserted successfully.")
-
-    with open("/root/Velammal-Engineering-College-Backend/docs/yrc_personnel.json", "r",encoding="utf-8") as file:
-        documents = json.load(file)
-        collection.insert_many(documents)
-    print("yrc_personnel data inserted successfully.")
+    print("YRC data inserted successfully.")
 
 def insert_overall_department_research():
     collection = db['overall_research']
@@ -981,8 +969,7 @@ def insert_iqac_data():
 insert_sports_data()
 insert_other_facilties()
 insert_library_data()
-insert_nss_personel()
-insert_nss_carousal()
+insert_nss_data()
 insert_yrc_data()
 insert_overall_department_research()
 insert_department_research_data()
