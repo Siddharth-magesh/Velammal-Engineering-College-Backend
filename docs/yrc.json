@@ -1,0 +1,49 @@
+[{
+    "coordinater": 
+        {
+            "name": "Ramesh Kumar",
+            "designation": "coordinator",
+            "image_path": "static/images/yrc/head.jpg"
+        },
+    "members": {
+      
+        "name": ["Praveen Hari S", "Neena V", "Aram Valartha Nayaki K", "Logesh G", "Siddharth M", "Tarakeshwaran S", "Mithun Raj S", "Jothi Lakshmi", "Akshaya S", "Dakshan B"],
+        "designation": ["chairman", "vice chairman", "secretary", "treasurer", "Tech Head", "Tech Head", "non-tech Head", "non-tech Head", "joint secretary", "joint secretary"],
+        "reg_no": [
+        ],
+        "rank": [
+        ],
+        "year": [
+        ],
+        "image_path": [
+            
+        ]
+    },
+    "events": {
+        "image_path":[
+
+        ],
+        "title": [
+
+        ],
+        "des": [
+
+        ],
+        "date": [
+
+        ]
+    },
+    "awards": {
+        "image_path": [
+
+        ],
+        "des": [
+
+        ]
+    },
+    "news": {
+        "updaates": [
+
+        ]
+    }
+}]
