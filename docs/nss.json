@@ -25,62 +25,82 @@
         "designation":["GCO & Mech & Auto coordinator", "VCO & CSE coordinator", "ECE coordinator", "IT coordinator", "Civil, Cyber, EIE department coordinator", "EEE coordinator", "AI&DS coordinator", "Poster Team Head", "Newsletter Team Head", "Technical Team Head", "Website & Camera Handling Team Head"]
     },
     "events": {
-        "image_path":["/static/images/nss_carousal/1.webp",
-            "/static/images/nss_carousal/2.webp",
-            "/static/images/nss_carousal/3.webp",
-            "/static/images/nss_carousal/4.webp",
-            "/static/images/nss_carousal/5.webp",
-            "/static/images/nss_carousal/6.webp",
-            "/static/images/nss_carousal/7.webp",
-            "/static/images/nss_carousal/8.webp",
-            "/static/images/nss_carousal/9.webp",
-            "/static/images/nss_carousal/10.webp",
-            "/static/images/nss_carousal/11.webp",
-            "/static/images/nss_carousal/12.webp"
+        "image_path":[
+            "/static/images/nss/anbagam.webp",
+            "/static/images/nss/republic day.webp",
+            "/static/images/nss/rally.webp",
+            "/static/images/nss/eye camp.webp",
+            "/static/images/nss/road safety.webp",
+            "/static/images/nss/aram.webp",
+            "/static/images/nss/vanam padaipu.webp",
+            "/static/images/nss/ignite.webp",
+            "/static/images/nss/nss day.webp",
+            "/static/images/nss/thooimai nagaram.webp",
+            "/static/images/nss/debris.webp",
+            "/static/images/nss/mental health wellness.webp",
+            "/static/images/nss/nss rec.webp",
+            "/static/images/nss/beach event.webp",
+            "/static/images/nss/blood camp.webp",
+            "/static/images/nss/park cleaning event.webp",
+            "/static/images/nss/special camp.webp",
+            "/static/images/nss/women awarness.webp",
+            "/static/images/nss/women safety.webp"
 
         ],
-        "title": [ "Republic Day",
-        "Anti-Drug Awareness Beach Rally",
-        "Eco-Park Cleaning",
+        "title": [ "Anbagam",
+        "Republic Day",
+        "Vigilance Rally",
         "Eye Camp",
-        "Traffic Awareness",
+        "Road Safety Awarness",
         "Aram Pongal Event",
-        "Campaign",
-        "Eegai",
         "Vanam Padaipu",
         "Ignite",
         "NSS Day",
-        "Thooimai Nagaram"
+        "Thooimai Nagaram",
+        "Debris",
+        "Mental Health Wellness",
+        "Recruitment'24 Event",
+        "Beach Event",
+        "Blood Camp",
+        "Park Cleaning Event",
+        "Special Camp",
+        "Women Awarness",
+        "Women Safety Awarness"
+
 
         ],
-        "des": [ "Celebrating India's independence with flag hoisting, songs, and cultural performances.",
-        "Rally to spread awareness about the dangers of drug abuse at the beach.",
-        "Volunteers cleaning and preserving eco-parks, promoting environmental sustainability and community responsibility.",
-        "Free eye check-ups and consultations to raise awareness about eye health.",
-        "Campaign focused on educating the public about traffic rules and road safety.",
-        "Traditional harvest celebration with cultural performances, food, and community sharing.",
-        "Initiative spreading awareness about health, education, and environmental issues through campaigns.",
-        "Charitable event providing clothes, food, and essential items to underprivileged communities.",
-        "Tree-planting event promoting environmental conservation and afforestation for a better future.",
-        "Event focused on inspiring creativity, leadership, and innovation through talks and workshops.",
-        "Celebrating NSS Day by encouraging students to engage in community service activities.",
-        "Cleanliness drive promoting sanitation and waste management in urban areas."
-
-        ],
-        "date": [
+        "des": [],
+        "date": ["22nd December 2024",
+        "26th January 2025",
+        "29th October 2024",
+        "11th December 2024",
+        "30th January 2025",
+        "12th January 2025",
+        "15th December 2024",
+        "21st November 2024",
+        "20th September 2024",
+        "8th December 2024",
+        "04th to 5th September 2024 ",
+        "24th October 2024",
+        "24th October 2024",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "05th February 2025"
 
         ]
     },
     "awards": {
-        "image_path": [
-
-        ],
-        "des": [
-
-        ]
+        "image_path": [],
+        "des": []
     },
     "news": {
-        "updaates": [
+        "updaates": ["Blood Donation and Eye Check-Up Camps: In February 2019, the NSS unit, in collaboration with the Youth Red Cross (YRC), organized blood donation and eye check-up camps, partnering with multiple hospitals to facilitate these health services",
+        "Environmental Awareness Campaigns: The NSS volunteers have participated in campaigns such as 'Lifestyle for Environment (LiFE),'' emphasizing sustainable living practices. ",
+        "Health and Safety Programs: The NSS unit has conducted various health campaigns, including eye camps, first aid awareness programs, and COVID-19 care awareness initiatives.",
+        "Community Engagement Activities: Volunteers have engaged in activities such as lake cleaning, orphanage and old age home visits, drug prevention awareness programs, mental health awareness, fire safety awareness, and campaigns against child marriage."
 
         ]
     }

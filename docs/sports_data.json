@@ -57,30 +57,30 @@
       "ANNA UNIVERSITY ZONAL KHO KHO MEN WINNER MATCH HELD AT PRATHYUSHA ENGG COLLEGE ON 16.03.24"
     ],
     "image_path": [
-      "static/sports/zonal/zonal_badminton_m_3.webp",
-      "static/sports/zonal/zonal_badminton_w_2.webp",
-      "static/sports/zonal/zonal_chess_m_1.webp",
-      "static/sports/zonal/zonal_tabletennis_w_1.webp",
-      "static/sports/zonal/zonal_tabletennis_m_1.webp",
-      "static/sports/zonal/zonal_basketball_m_2.webp",
-      "static/sports/zonal/zonal_basketball_w_2.webp",
-      "static/sports/zonal/zonal_hockey_m_3.webp",
-      "static/sports/zonal/zonal_khokho_m_2.webp",
-      "static/sports/zonal/zonal_football_m_3.webp",
-      "static/sports/zonal/zonal_kabaddi_m_1.webp",
-      "static/sports/zonal/zonal_volleyball_m_3.webp",
-      "static/sports/zonal/zonal_chess_m&w_1_23.webp",
-      "static/sports/zonal/zonal_zonal_tabletennis_m_2_23.webp",
-      "static/sports/zonal/zonal_badminton_w_2_23.webp",
-      "static/sports/zonal/zonal_hockey_m_1_23.webp",
-      "static/sports/zonal/zonal_football_m_1_23.webp",
-      "static/sports/zonal/zonal_volleyball_m_3_23.webp",
-      "static/sports/zonal/zonal_cricket_m_3_23.webp",
-      "static/sports/zonal/zonal_basketball_w_2_23.webp",
-      "static/sports/zonal/zonal_ballbadminton_w_2_23.webp",
-      "static/sports/zonal/zonal_athletics_overall_2_23.webp",
-      "static/sports/zonal/zonal_handball_m_2_23.webp",
-      "static/sports/zonal/zonal_khokho_m_1_23.webp"
+      "static/images/aports/zonal/zonal_badminton_m_3.webp",
+      "static/images/sports/zonal/zonal_badminton_w_2.webp",
+      "static/images/sports/zonal/zonal_chess_m_1.webp",
+      "static/images/sports/zonal/zonal_tabletennis_w_1.webp",
+      "static/images/sports/zonal/zonal_tabletennis_m_1.webp",
+      "static/images/sports/zonal/zonal_basketball_m_2.webp",
+      "static/images/sports/zonal/zonal_basketball_w_2.webp",
+      "static/images/sports/zonal/zonal_hockey_m_3.webp",
+      "static/images/sports/zonal/zonal_khokho_m_2.webp",
+      "static/images/sports/zonal/zonal_football_m_3.webp",
+      "static/images/sports/zonal/zonal_kabaddi_m_1.webp",
+      "static/images/sports/zonal/zonal_volleyball_m_3.webp",
+      "static/images/sports/zonal/zonal_chess_m&w_1_23.webp",
+      "static/images/sports/zonal/zonal_zonal_tabletennis_m_2_23.webp",
+      "static/images/sports/zonal/zonal_badminton_w_2_23.webp",
+      "static/images/sports/zonal/zonal_hockey_m_1_23.webp",
+      "static/images/sports/zonal/zonal_football_m_1_23.webp",
+      "static/images/sports/zonal/zonal_volleyball_m_3_23.webp",
+      "static/images/sports/zonal/zonal_cricket_m_3_23.webp",
+      "static/images/sports/zonal/zonal_basketball_w_2_23.webp",
+      "static/images/sports/zonal/zonal_ballbadminton_w_2_23.webp",
+      "static/images/sports/zonal/zonal_athletics_overall_2_23.webp",
+      "static/images/sports/zonal/zonal_handball_m_2_23.webp",
+      "static/images/sports/zonal/zonal_khokho_m_1_23.webp"
     ]
   },
   "HOD": {
@@ -88,7 +88,7 @@
     "designation": "Head & Director of Physical Education",
     "qualification": "MA.MPEd,Mphil,Ph.D",
     "message": "Sports play an important role in every human being’s day-to-day life and bring people together irrespective of their age, gender and nationality. Our department of Physical Education is marching towards fulfilling CEO Sir Vision as a reality. Young achievers in various sports have won prizes and medals at various state, National and international level events. Our goal is to increase the participation of our teams in various competitions and win medals and bring laurels to the College and the country.",
-    "image_path": "static/sports/hod/ramesh.webp"
+    "image_path": "static/images/sports/hod/Rameshkannan.webp"
   },
   "faculty": {
     "name": [
@@ -96,8 +96,8 @@
       "Mr.SRINIVASAN.S"
     ],
     "image_path": [
-      "static/sports/faculty/jayanthi.webp",
-      "static/sports/faculty/srinivasan.webp"
+      "static/images/sports/faculty/Jayanthi.webp",
+      "static/images/sports/faculty/Srinivasan.webp"
     ],
     "designation": [
       "Asst.Physical Director",
@@ -110,14 +110,14 @@
   },
   "interzone": {
     "image_path": [
-      "static/sports/interzonal/interzonal_boxing_w_1_23.webp",
-      "static/sports/interzonal/interzonal_softball_m_23.webp",
-      "static/sports/interzonal/interzonal_taekwondo_m_1_23.webp",
-      "static/sports/interzonal/interzonal_taekwondo_m_1_ajith.webp",
-      "static/sports/interzonal/interzonal_bestphysique_m_1.webp",
-      "static/sports/interzonal/interzonal_boxing_w_1.webp",
-      "static/sports/interzonal/interzonal_powerlifting_m_2.webp",
-      "static/sports/interzonal/interzonal_taekwondo_m_1.webp"
+      "static/images/sports/interzonal/interzonal_boxing_w_1_23.webp",
+      "static/images/sports/interzonal/interzonal_softball_m_23.webp",
+      "static/images/sports/interzonal/interzonal_taekwondo_m_1_23.webp",
+      "static/images/sports/interzonal/interzonal_taekwondo_m_1_ajith.webp",
+      "static/images/sports/interzonal/interzonal_bestphysique_m_1.webp",
+      "static/images/sports/interzonal/interzonal_boxing_w_1.webp",
+      "static/images/sports/interzonal/interzonal_powerlifting_m_2.webp",
+      "static/images/sports/interzonal/interzonal_taekwondo_m_1.webp"
     ],
     "title": [
       "Anna University Inter zone Boxing competition our college student Miss T. Keerthana Lakshmi of I year Civil secured a Gold medal and qualified to represent Anna University in the All India Inter-University Boxing Tournament to be held at Chandigarh University, Mohali.",
@@ -132,14 +132,14 @@
   },
   "others": {
     "image_path": [
-      "static/sports/others/others_dfi_talenthunt_1.webp",
-      "static/sports/others/others_fencing_m.webp",
-      "static/sports/others/others_kheloindia_boxing_w.webp",
-      "static/sports/others/others_kheloindia_boxing_w_3_23.webp",
-      "static/sports/others/others_kumite_m_2_23.webp",
-      "static/sports/others/others_taekwondo_w.webp",
-      "static/sports/others/others_taekwondo_overall_m_23.webp",
-      "static/sports/others/others_Jr_Mr_Tamilnadu.webp"
+      "static/images/sports/others/others_dfi_talenthunt_1.webp",
+      "static/images/sports/others/others_fencing_m.webp",
+      "static/images/sports/others/others_kheloindia_boxing_w.webp",
+      "static/images/sports/others/others_kheloindia_boxing_w_3_23.webp",
+      "static/images/sports/others/others_kumite_m_2_23.webp",
+      "static/images/sports/others/others_taekwondo_w.webp",
+      "static/images/sports/others/others_taekwondo_overall_m_23.webp",
+      "static/images/sports/others/others_Jr_Mr_Tamilnadu.webp"
     ],
     "title":[
       "Our college student Miss T. Keerthana Lakshmi of I year Civil secure Gold in BFI talent Hunt Boxing tournament held at Bangalore.",
@@ -154,30 +154,30 @@
   },
   "interamural": {
     "image_path":[
-      "static/sports/intramural/basketball_boys_winner.webp",
-      "static/sports/intramural/basketball_boys_runner.webp",
-      "static/sports/intramural/basketball_girls_winner.webp",
-      "static/sports/intramural/basketball_girls_runner.webp",
-      "static/sports/intramural/batminton_boys_winner.webp",
-      "static/sports/intramural/batminton_boys_runner.webp",
-      "static/sports/intramural/batminton_girls_winner.webp",
-      "static/sports/intramural/batminton_girls_runner.webp",
-      "static/sports/intramural/chess_boys_winner.webp",
-      "static/sports/intramural/chess_boys_runner.webp",
-      "static/sports/intramural/chess_girls_winner.webp",
-      "static/sports/intramural/chess_girls_runner.webp",
-      "static/sports/intramural/football_boys_winner.webp",
-      "static/sports/intramural/football_boys_runner.webp",
-      "static/sports/intramural/tabletennis_boys_winner.webp",
-      "static/sports/intramural/tabletennis_boys_runner.webp",
-      "static/sports/intramural/tabletennis_girls_winner.webp",
-      "static/sports/intramural/tabletennis_girls_runner.webp",
-      "static/sports/intramural/tennis_boys_winner.webp",
-      "static/sports/intramural/tennis_boys_runner.webp",
-      "static/sports/intramural/volleyball_boys_winner.webp",
-      "static/sports/intramural/volleyball_boys_runner.webp",
-      "static/sports/intramural/volleyball_girls_winner.webp",
-      "static/sports/intramural/volleyball_girls_runner.webp"
+      "static/images/sports/intramural/basketball_boys_winner.webp",
+      "static/images/sports/intramural/basketball_boys_runner.webp",
+      "static/images/sports/intramural/basketball_girls_winner.webp",
+      "static/images/sports/intramural/basketball_girls_runner.webp",
+      "static/images/sports/intramural/batminton_boys_winner.webp",
+      "static/images/sports/intramural/batminton_boys_runner.webp",
+      "static/images/sports/intramural/batminton_girls_winner.webp",
+      "static/images/sports/intramural/batminton_girls_runner.webp",
+      "static/images/sports/intramural/chess_boys_winner.webp",
+      "static/images/sports/intramural/chess_boys_runner.webp",
+      "static/images/sports/intramural/chess_girls_winner.webp",
+      "static/images/sports/intramural/chess_girls_runner.webp",
+      "static/images/sports/intramural/football_boys_winner.webp",
+      "static/images/sports/intramural/football_boys_runner.webp",
+      "static/images/sports/intramural/tabletennis_boys_winner.webp",
+      "static/images/sports/intramural/tabletennis_boys_runner.webp",
+      "static/images/sports/intramural/tabletennis_girls_winner.webp",
+      "static/images/sports/intramural/tabletennis_girls_runner.webp",
+      "static/images/sports/intramural/tennis_boys_winner.webp",
+      "static/images/sports/intramural/tennis_boys_runner.webp",
+      "static/images/sports/intramural/volleyball_boys_winner.webp",
+      "static/images/sports/intramural/volleyball_boys_runner.webp",
+      "static/images/sports/intramural/volleyball_girls_winner.webp",
+      "static/images/sports/intramural/volleyball_girls_runner.webp"
     ],
     "title":[
       "Boys Basketball Winner IT Department",
@@ -211,10 +211,21 @@
     "zone": "1",
     "year": "2024-25",
     "image": [
-      "static/sports/coordinates/coordinates_1.webp",
-      "static/sports/coordinates/coordinates_2.webp",
-      "static/sports/coordinates/coordinates_3.webp",
-      "static/sports/coordinates/coordinates_4.webp"
+      "static/images/sports/coordinates/coordinates_1.webp",
+      "static/images/sports/coordinates/coordinates_2.webp",
+      "static/images/sports/coordinates/coordinates_3.webp",
+      "static/images/sports/coordinates/coordinates_4.webp"
+    ]
+  },
+  "Infrastructure": {
+    "image_path": [
+      "static/images/sports/infrastructure/fitnesscenter.webp",
+      "static/images/sports/infrastructure/gym.webp",
+      "static/images/sports/infrastructure/Indoor Stadium.webp",
+      "static/images/sports/infrastructure/Indoor Volleyball Court.webp",
+      "static/images/sports/infrastructure/Kabaddi Court.webp",
+      "static/images/sports/infrastructure/Kapil Dev Cricket Ground.webp",
+      "static/images/sports/infrastructure/Ladies Hostel Gym.webp"
     ]
   }
 }
