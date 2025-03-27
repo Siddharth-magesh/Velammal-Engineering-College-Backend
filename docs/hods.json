@@ -237,7 +237,15 @@
         "Qualification": ["B.COM.", "MBA.", "Ph.D"],
         "Hod_message": ["At VEC, we provide our learners—who come from diverse backgrounds—with ample opportunities for academic exploration and holistic development."," We recognize the growing need for business leaders who are well-versed in business principles, technology, and managerial skills. Therefore, our program offers a comprehensive overview of essential business concepts and industry-relevant technical practices, equipping learners with the knowledge and expertise required to excel in today's dynamic business landscape."],
         "Image": "/static/images/hods/mba.webp",
-        "designation": "Professor and Head, Dept of Master of Business Administration"
+        "designation": "Professor and Head, Dept of Master of Business Administration",
+        "Social_media_links": {
+            "LinkedIn": "https://in.linkedin.com/in/nirmal-raj-a-a8201419",
+            "Google Scholar": "https://scholar.google.co.in/citations?user=kECK4sYAAAAJ&hl=en",
+            "Research Gate": "https://www.researchgate.net/profile/Nirmal-Amal-Raj",
+            "Orchid Profile": "https://orcid.org/0009-0001-6856-7412",
+            "Scopus": "https://www.scopus.com/authid/detail.uri?authorId=59511587500"
+        }
+        
     },
     {
         "Name": "Dr.B.Murugeswari",

@@ -1,0 +1,2723 @@
+{
+    "dept_id": "000",
+    "publications": [
+        {
+            "name": "VEC-000-02-188",
+            "details": {
+                "AUTHORNAME": [
+                    "Dr. G.H.Kerinab Beenu",
+                    "Dr. G.H.Kerinab Beenu",
+                    "Dr. G.H.Kerinab Beenu"
+                ],
+                "BOOKNAME": [
+                    "Holistic Research Perspectives, ",
+                    "Management Today\u201d, Recent Trends in Management",
+                    "Innovative Management Practices for Global competitiveness"
+                ],
+                "ISBN/ISSN NO": [
+                    "ISBN 978-93-87862-82-1, volume 4",
+                    "978-93-84389-04-8",
+                    "ISBN 978-81-929581-2-5 "
+                ],
+                "MONTH&YEAR": [
+                    "2019-09-01 00:00:00",
+                    "2015",
+                    "October, 2015"
+                ],
+                "BOOK CHAPTER": [
+                    "Book Chapter",
+                    "Book Chapter",
+                    "Edited Book Chapter"
+                ]
+            }
+        },
+        {
+            "name": "VEC-000-04-189",
+            "details": {
+                "AUTHORNAME": [
+                    "NAVENA NESA KUMARI",
+                    "NAVENA NESA KUMARI"
+                ],
+                "BOOKNAME": [
+                    "ENTREPRENEURAL DEVELOPMENT",
+                    "\u201cConcepts and Impact of Block chain in Human Resource Management\u201d"
+                ],
+                "ISBN/ISSN NO": [
+                    "ISBN: 361329692.",
+                    "ISBN: 9789361329692."
+                ],
+                "MONTH&YEAR": [
+                    "2018-12-01",
+                    "2024-01-01"
+                ],
+                "BOOK CHAPTER": [
+                    "BOOK CHAPTER",
+                    "BOOK"
+                ]
+            }
+        },
+        {
+            "name": "VEC-000-04-194",
+            "details": {
+                "AUTHORNAME": [
+                    "Dr.I.M.Christina Febiula"
+                ],
+                "BOOKNAME": [
+                    "Digital Transformation in Commerce, Management and Economics, 1st edition"
+                ],
+                "ISBN/ISSN NO": [
+                    "ISBN-13 978-9358424546."
+                ],
+                "MONTH&YEAR": [
+                    "May 1, 2024"
+                ],
+                "BOOK CHAPTER": [
+                    "DEI & CROSS-CULTURAL TRAINING AT WORKPLACE - A LITERATURE REVIEW"
+                ]
+            }
+        },
+        {
+            "name": "VEC-001-01-077",
+            "details": {
+                "AUTHORNAME": [
+                    "Dr.P.Visu, R.Kavitha, P.V.Rajasuganya",
+                    "Dr. R Kumar, Mr. J. Jegan Amarnath, Dr. P. Visu",
+                    "E.Kan E.Kamalanaban, P.Visu, and S.Koteeswaran ",
+                    "P.Visu, R.Srinivasan and S.Koteeswaran",
+                    "Jothikumar, R., Vijay Ad, R., Visu, P., Kumar, R., Susi, S., Kumar, K.R.",
+                    "Sabapathi, V., Visu, P., Varun Kumar, K.A."
+                ],
+                "BOOKNAME": [
+                    "Foundations of Data Science",
+                    "Advanced Machine Learning",
+                    "Computing fundamentals & Programming in C",
+                    "Introduction to Computing",
+                    "Sentiment analysis of tweets on the COVID-19 pandemic using machine learning techniques",
+                    "A hybrid cloud architecture for secure service\u00e2\u20ac\u201dmeasures against poodle vulnerability"
+                ],
+                "ISBN/ISSN NO": [
+                    "978-93-5577-894-9",
+                    "13:9781648998560",
+                    "978-81-315-2854-9",
+                    "978-93-80659-38-1",
+                    "10.4018/978-1-7998-6870-5.ch021",
+                    "10.1007/978-81-322-2674-1_67"
+                ],
+                "MONTH&YEAR": [
+                    "2024",
+                    "2020",
+                    "2015",
+                    "2013",
+                    "2021",
+                    "2016"
+                ],
+                "BOOK CHAPTER": [
+                    "BOOK",
+                    "BOOK",
+                    "BOOK",
+                    "BOOK",
+                    "BOOK CHAPTER",
+                    "BOOK CHAPTER"
+                ]
+            }
+        },
+        {
+            "name": "VEC-001-04-074",
+            "details": {
+                "AUTHORNAME": [
+                    "M. Maheswari, Dr. K. G. Revathi, J. Savija"
+                ],
+                "BOOKNAME": [
+                    "Introduction to Machine Learning"
+                ],
+                "ISBN/ISSN NO": [
+                    "978-93-6260-007-3"
+                ],
+                "MONTH&YEAR": [
+                    "2024-03-01"
+                ],
+                "BOOK CHAPTER": [
+                    "Book"
+                ]
+            }
+        },
+        {
+            "name": "VEC-001-04-075",
+            "details": {
+                "AUTHORNAME": [
+                    "R. Kavitha"
+                ],
+                "BOOKNAME": [
+                    "Foundation of Data Science"
+                ],
+                "ISBN/ISSN NO": [
+                    "13:978-93-5577-894-9"
+                ],
+                "MONTH&YEAR": [
+                    "Feburary 2024"
+                ],
+                "BOOK CHAPTER": [
+                    "Book"
+                ]
+            }
+        },
+        {
+            "name": "VEC-001-04-080",
+            "details": {
+                "AUTHORNAME": [
+                    "A.Prema"
+                ],
+                "BOOKNAME": [
+                    "Object Oriented Programming"
+                ],
+                "ISBN/ISSN NO": [
+                    "ISBN-13:978-93-5577-816-1"
+                ],
+                "MONTH&YEAR": [
+                    "2024-02-01"
+                ],
+                "BOOK CHAPTER": [
+                    "Book"
+                ]
+            }
+        },
+        {
+            "name": "VEC-001-04-085",
+            "details": {
+                "AUTHORNAME": [
+                    "P.V.RajaSuganya"
+                ],
+                "BOOKNAME": [
+                    "Foundation of Data Science"
+                ],
+                "ISBN/ISSN NO": [
+                    "13:978-93-5577-894-9"
+                ],
+                "MONTH&YEAR": [
+                    "Feburary 2024"
+                ],
+                "BOOK CHAPTER": [
+                    "Book"
+                ]
+            }
+        },
+        {
+            "name": "VEC-001-04-086",
+            "details": {
+                "AUTHORNAME": [
+                    "S.VIJAYALAKSHMI"
+                ],
+                "BOOKNAME": [
+                    "EXPLORATORY DATA ANALYSIS"
+                ],
+                "ISBN/ISSN NO": [
+                    "978-93-5577-755-3"
+                ],
+                "MONTH&YEAR": [
+                    "FEBRUARY&2024"
+                ],
+                "BOOK CHAPTER": [
+                    "BOOK"
+                ]
+            }
+        },
+        {
+            "name": "VEC-001-04-092",
+            "details": {
+                "AUTHORNAME": [
+                    "Mrs.S.Vijayalakshmi,J.Vinisha Gladys Belshi,Mrs.S.Mythili"
+                ],
+                "BOOKNAME": [
+                    "Exploratory Data Analysis,"
+                ],
+                "ISBN/ISSN NO": [
+                    "ISBN-13:978-93-5577-755-3"
+                ],
+                "MONTH&YEAR": [
+                    "2024-02-01"
+                ],
+                "BOOK CHAPTER": [
+                    "BOOK"
+                ]
+            }
+        },
+        {
+            "name": "VEC-001-04-095",
+            "details": {
+                "AUTHORNAME": [
+                    "Priya M"
+               
+                ],
+                "BOOKNAME": [
+                    "Parallel Deep Convolution Neural Network (P-DCNN) Prediction of Paddy Crop Disease"
+
+                ],
+                "ISBN/ISSN NO": [
+                    "978-981-97-2031-6"
+                ],
+                "MONTH&YEAR": [
+                    "2024-07-01 00:00:00"
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                                        
+                    
+
+                ],
+                "BOOK CHAPTER": [
+                    "Soft Computing :Theories and Applications"
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                ]
+            }
+        },
+        {
+            "name": "VEC-002-03-167",
+            "details": {
+                "AUTHORNAME": [
+                    "Dr.V.Chandran",
+                    "Dr.V.Chandran",
+                    "Dr.V.Chandran",
+                    "Dr.V.Chandran",
+                    "Dr.V.Chandran"
+                ],
+                "BOOKNAME": [
+                    "Performance of Waste Tyre Rubber in Engineering Applications",
+                    "Advanced Internal Combustion Engines",
+                    "Vehicle Body Engineering",
+                    "Power Units and Transmission",
+                    "Hydraulics and Pneumatics"
+                ],
+                "ISBN/ISSN NO": [
+                    "978-3-659-84868-1",
+                    "978-93-332-1327-1",
+                    "978-93-91330-83-5",
+                    "978-93-95254-20-5",
+                    "978-93-93808-17-2"
+                ],
+                "MONTH&YEAR": [
+                    "2016-03-01",
+                    "2017-02-01",
+                    "2021-09-01",
+                    "2022-12-01",
+                    "2023-03-01"
+                ],
+                "BOOK CHAPTER": [
+                    
+                    
+                    
+                    
+                    
+                ]
+            }
+        },
+        {
+            "name": "VEC-002-04-155",
+            "details": {
+                "AUTHORNAME": [
+                    "M.Yuvaraj"
+                ],
+                "BOOKNAME": [
+                    "Industrial Automation, First Edition"
+                ],
+                "ISBN/ISSN NO": [
+                    
+                ],
+                "MONTH&YEAR": [
+                    
+                ],
+                "BOOK CHAPTER": [
+                    
+                ]
+            }
+        },
+        {
+            "name": "VEC-003-04-083",
+            "details": {
+                "AUTHORNAME": [
+                    "J. Ramkumar, K. SenthilKan N. Balamurugapandian, K.S. Radha, and R. Divya"
+                ],
+                "BOOKNAME": [
+                    "Perspectives of Quorum Quenching in New Drug Development"
+                ],
+                "ISBN/ISSN NO": [
+                    9781003297826
+                ],
+                "MONTH&YEAR": [
+                    "2024-05-01"
+                ],
+                "BOOK CHAPTER": [
+                    "BOOK CHAPTER-5"
+                ]
+            }
+        },
+        {
+            "name": "VEC-003-04-088",
+            "details": {
+                "AUTHORNAME": [
+                    "DR.K.KAVITHA",
+                    "DR.K.KAVITHA",
+                    "DR.K.KAVITHA"
+                ],
+                "BOOKNAME": [
+                    "ENGINEERING CHEMISTRY",
+                    "ENGINEERING CHEMISTRY",
+                    "ENGINEERING CHEMISTRY"
+                ],
+                "ISBN/ISSN NO": [
+                    "ISBN:978-93- 82885-54-2 ",
+                    "ISBN:978-81-89843-43-4",
+                    "ISBN:978-81-908908-1-6"
+                ],
+                "MONTH&YEAR": [
+                    "    Nov-18",
+                    "2021-10-01 00:00:00",
+                    "2024-01-23 00:00:00"
+                ],
+                "BOOK CHAPTER": [
+                    "Book",
+                    "Book",
+                    "Book"
+                ]
+            }
+        },
+        {
+            "name": "VEC-003-04-104",
+            "details": {
+                "AUTHORNAME": [
+                    "MrsS.SASIKALA",
+                    "MrsS.SASIKALA"
+                ],
+                "BOOKNAME": [
+                    "ENGINEERING CHEMISTRY",
+                    "ENGINEERING CHEMISTRY"
+                ],
+                "ISBN/ISSN NO": [
+                    "ISBN:978-81-89843-43-4",
+                    "ISBN:978-81-908908-1-6"
+                ],
+                "MONTH&YEAR": [
+                    "2021-10-01",
+                    "2024-01-23"
+                ],
+                "BOOK CHAPTER": [
+                    "Book",
+                    "Book"
+                ]
+            }
+        },
+        {
+            "name": "VEC-003-04-108",
+            "details": {
+                "AUTHORNAME": [
+                    "Dr.A.RavikrishDr.A.Mohammed Sikkender,Dr.K.Kavitha,Ms.Ramanachiar,Dr.V.Anitha,S.Sasikala,C.Sivaraj,T.Niruban Balu"
+                ],
+                "BOOKNAME": [
+                    "Engineering Chemistry"
+                ],
+                "ISBN/ISSN NO": [
+                    "978-81-908908-1-6"
+                ],
+                "MONTH&YEAR": [
+                    
+                ],
+                "BOOK CHAPTER": [
+                    
+                ]
+            }
+        },
+        {
+            "name": "VEC-003-04-119",
+            "details": {
+                "AUTHORNAME": [
+                    "R.RAMA NACHIAR",
+                    "R.RAMA NACHIAR"
+                ],
+                "BOOKNAME": [
+                    "ENGINEERING CHEMISTRY",
+                    "ENGINEERING CHEMISTRY"
+                ],
+                "ISBN/ISSN NO": [
+                    "ISBN:978-81-89843-43-4",
+                    "ISBN:978-81-908908-1-6"
+                ],
+                "MONTH&YEAR": [
+                    "2024-10-21",
+                    "2024-01-23"
+                ],
+                "BOOK CHAPTER": [
+                    "Book",
+                    "Book"
+                ]
+            }
+        },
+        {
+            "name": "VEC-003-04-142",
+            "details": {
+                "AUTHORNAME": [
+                    "SIVARAJ C",
+                    "SIVARAJ C"
+                ],
+                "BOOKNAME": [
+                    "ENGINEERING CHEMISTRY",
+                    "ENGINEERING CHEMISTRY"
+                ],
+                "ISBN/ISSN NO": [
+                    "ISBN:978-81-89843-43-4",
+                    "ISBN:978-81-908908-1-6"
+                ],
+                "MONTH&YEAR": [
+                    "2021-10-01",
+                    "2024-01-23"
+                ],
+                "BOOK CHAPTER": [
+                    "Book",
+                    "Book"
+                ]
+            }
+        },
+        {
+            "name": "VEC-003-04-143",
+            "details": {
+                "AUTHORNAME": [
+                    "NIRUBAN BALU T",
+                    "NIRUBAN BALU T",
+                    "NIRUBAN BALU T"
+                ],
+                "BOOKNAME": [
+                    "CHEMISTRY OF ENGINEERING MATERIALS",
+                    "ENGINEERING CHEMISTRY",
+                    "ENGINEERING CHEMISTRY"
+                ],
+                "ISBN/ISSN NO": [
+                    "ISBN:978-93- 82885-53-5     ",
+                    "ISBN:978-81-89843-43-4",
+                    "ISBN:978-81-908908-1-6"
+                ],
+                "MONTH&YEAR": [
+                    "2024-03-19",
+                    "2021-10-01",
+                    "2024-01-23"
+                ],
+                "BOOK CHAPTER": [
+                    "Book",
+                    "Book",
+                    "Book"
+                ]
+            }
+        },
+        {
+            "name": "VEC-004-01-145",
+            "details": {
+                "AUTHORNAME": [
+                    "Dr.A.Jebamalar & Dr.M.Saskumar",
+                    "Dr.A.Jebamalar & Dr.G.Ravikumar",
+                    "Dr.A.Jebamalar & T.Rajha Rajeswaran",
+                    "Dr.A.Jebamalar & Dr.M.Saskumar",
+                    "Dr.A.Jebamalar & Dr.S.Suriya"
+                ],
+                "BOOKNAME": [
+                    "Applied Hydraulic Engg.",
+                    "Water Resources and Irrigation Engg.",
+                    "Prefabricated Structures",
+                    "Fluid Mechanics and Machinery",
+                    "Hydrology and Water Resources Engg "
+                ],
+                "ISBN/ISSN NO": [
+                    "ISBN- 13-978-81-927609-8-8",
+                    "ISBN- 13-978-81-933711-0-7",
+                    "ISBN- 13-978-81-933711-7-6",
+                    "ISBN- 13-978-81-934968-3-1",
+                    "ISBN- 978-81-978434-9-5"
+                ],
+                "MONTH&YEAR": [
+                    "2015-01-01",
+                    "2016-07-01",
+                    "2017-03-01",
+                    "2018-06-01",
+                    "2024-09-01"
+                ],
+                "BOOK CHAPTER": [
+                    "BOOK",
+                    "BOOK",
+                    "BOOK",
+                    "BOOK",
+                    "BOOK"
+                ]
+            }
+        },
+        {
+            "name": "VEC-004-03-093",
+            "details": {
+                "AUTHORNAME": [
+                    "Jebamalar A., Sudharsa R., Ravikumar G. and Prof. SaeidEslamian ",
+                    "Jeyanth B., Sudharsa R., ThillaiBackiam M., Vijay M.",
+                    "Sudharsa .R.",
+                    "Sudharsa .R.",
+                    "Sudharsa .R. and T.S. Viswanathan",
+                    "Sudharsa .R.",
+                    "Sudharsa .R.",
+                    "Sudharsa .R. and T.S. Viswanathan",
+                    "Sudharsa .R. and T.S. Viswanathan",
+                    "Sudharsa .R.",
+                    "Sudharsa .R.",
+                    "Sudharsa .R.",
+                    "Sudharsa .R.",
+                    "Sudharsa .R.",
+                    "Sudharsa .R.",
+                    "Sudharsa .R.",
+                    "Sudharsa .R.",
+                    "Sudharsa .R.",
+                    "Sudharsa .R.",
+                    "Sudharsa .R.",
+                    "Sudharsa .R.",
+                    "Sudharsa .R."
+                ],
+                "BOOKNAME": [
+                    "\u201cRainwater Harvesting Impact on Urban Groundwater\u201d In \u201cHANDBOOK OF WATER HARVESTING AND CONSERVATION: BASIC CONCEPTS AND FUNDAMENTALS",
+                    "Sustainability of Natural Aggregates by Utilising CDW in Concrete in INTEGRATED APPROACHES TOWARDS SOLID WASTE MANAGEMENT",
+                    "STRENGTH OF MATERIALS  ",
+                    "MECHANICS OF FLUIDS ",
+                    "STRENGTH OF MATERIALS - for Civil Engineering",
+                    "APPLIED HYDRAULIC ENGINEERING",
+                    "SOIL MECHANICS",
+                    "STRUCTURAL ANALYSIS - I ",
+                    "STRUCTURAL ANALYSIS - II",
+                    "DESIGN OF STEEL STRUCTURES \u2013 By Limit State Method as per IS 800:2007",
+                    "FOUNDATION ENGINEERING",
+                    "SURVEYING \u2013 II",
+                    "Hydrology",
+                    "PRESTRESSED CONCRETE STRUCTURES ",
+                    "PREFABRICATED STRUCTURES",
+                    "MATERIALS SCIENCE ",
+                    "SURVEYING",
+                    "FLUID MECHANICS AND MACHINERY",
+                    "PHYSICS FOR CIVIL ENGINEERING ",
+                    "DESIGN OF REINFORCED CEMENT CONCRETE ELEMENTS ",
+                    "HIGHWAY ENGINEERING ",
+                    "STRUCTURAL DESIGN AND DRAWING "
+                ],
+                "ISBN/ISSN NO": [
+                    "978-1-119-47895-9",
+                    "doi.org/10.1007/978-3-030-70463-6_12",
+                    "978-93-80659-67-1",
+                    "978-93-80659-19-0",
+                    "978-93-80659-41-1",
+                    "978-93-80659-02-2",
+                    "978-93-80659-35-0",
+                    "978-93-85364-17-4",
+                    "978-93-85365-44-7",
+                    "978-93-85364-49-5",
+                    "978-93-85364-82-2",
+                    "978-93-80659-55-8",
+                    "978-93-85364-54-9",
+                    "978-93-86590-18-3",
+                    "978-93-86590-38-1",
+                    "978-93-86590-45-9",
+                    "978-93-80659-15-2",
+                    "978-93-80659-32-9",
+                    "978-93-806590-53-4",
+                    "978-93-80659-91-6",
+                    "978-93-80659-56-5",
+                    "978-93-89878-29-5"
+                ],
+                "MONTH&YEAR": [
+                    "2021-01-01",
+                    "2021-06-01",
+                    "2014-07-01",
+                    "2014-07-01",
+                    "2015-01-01",
+                    "2015-01-01",
+                    "2015-03-01",
+                    "2015-07-01",
+                    "2016-02-01",
+                    "2016-03-01",
+                    "2016-10-01",
+                    "2016-12-01",
+                    "2017-01-01",
+                    "2017-07-01",
+                    "2017-12-01",
+                    "2018-01-01",
+                    "2018-06-01",
+                    "2018-07-01",
+                    "2018-10-01",
+                    "2019-07-01",
+                    "2019-12-01",
+                    "2021-10-01"
+                ],
+                "BOOK CHAPTER": [
+                    "Book Chapter",
+                    "Book Chapter",
+                    "Book",
+                    "Book",
+                    "Book",
+                    "Book",
+                    "Book",
+                    "Book",
+                    "Book",
+                    "Book",
+                    "Book",
+                    "Book",
+                    "Book",
+                    "Book",
+                    "Book",
+                    "Book",
+                    "Book",
+                    "Book",
+                    "Book",
+                    "Book",
+                    "Book",
+                    "Book"
+                ]
+            }
+        },
+        {
+            "name": "VEC-004-04-061",
+            "details": {
+                "AUTHORNAME": [
+                    
+                    
+                ],
+                "BOOKNAME": [
+                    
+                    "NIL"
+                ],
+                "ISBN/ISSN NO": [
+                    
+                    
+                ],
+                "MONTH&YEAR": [
+                    
+                    
+                ],
+                "BOOK CHAPTER": [
+                    
+                    
+                ]
+            }
+        },
+        {
+            "name": "VEC-004-04-064",
+            "details": {
+                "AUTHORNAME": [
+                    "Thillai Backiam & Jeyanth"
+                ],
+                "BOOKNAME": [
+                    "Integrated Approaches Towards Solid Waste Management"
+                ],
+                "ISBN/ISSN NO": [
+                    "978-3-030-70462-9 ISBN 978-3-030-70463-6 "
+                ],
+                "MONTH&YEAR": [
+                    "2021"
+                ],
+                "BOOK CHAPTER": [
+                    "Book Chater"
+                ]
+            }
+        },
+        {
+            "name": "VEC-004-04-066",
+            "details": {
+                "AUTHORNAME": [
+                    "Dr A Jebamalar, S Sampath Kumar & T A Rajha Rajeswaran "
+                ],
+                "BOOKNAME": [
+                    "Prefabricated Structures "
+                ],
+                "ISBN/ISSN NO": [
+                    "978-81-964292-4-9"
+                ],
+                "MONTH&YEAR": [
+                    "2020-05-01"
+                ],
+                "BOOK CHAPTER": [
+                    "Book Chapter "
+                ]
+            }
+        },
+        {
+            "name": "VEC-005-03-106",
+            "details": {
+                "AUTHORNAME": [
+                    "Dr.S.Gunasundari",
+                    "Dr.S.Gunasundari",
+                    "Dr.S.Gunasundari",
+                    "Dr.S.Gunasundari",
+                    "Dr.S.Gunasundari",
+                    "Dr.S.Gunasundari",
+                    "Dr.S.Gunasundari",
+                    "Dr.S.Gunasundari",
+                    "Dr.S.Gunasundari",
+                    "Dr.S.Gunasundari",
+                    "Dr.S.Gunasundari",
+                    "Dr.S.Gunasundari",
+                    "Dr.S.Gunasundari",
+                    "Dr.S.Gunasundari",
+                    "Dr.S.Gunasundari"
+                ],
+                "BOOKNAME": [
+                    "PROGRAMMING IN C",
+                    "Anna University Question Bank- Problem Solving and Python Programming",
+                    "Problem solving and Python Programming",
+                    "A Survey on Anomaly Detection in Network with ML Techniques",
+                    "Screening Application for Possible Mental Health Issues in Adolescents and PWDs Using Data Science",
+                    "A Survey Based on Privacy-Preserving Over Health Care Data Analysis.",
+                    "Gesture Controlled Drone Swarm System for violence detection using machine learning for women safety",
+                    "An Efficient Approach to Estimate Software Cost by Analogy Using ACO",
+                    "A Hybrid PSO-SFS-SBS Algorithm in Feature Selection for Liver Cancer Data,Power Electronics and Renewable Energy Systems ",
+                    "Improved Feature Selection Based on Particle Swarm Optimization for Liver Disease Diagnosis",
+                    "Fight detection in surveillance video data set versus real time surveillance video using 3DCNN and CNN-LSTM",
+                    "Loitering Detection in Home Surveillance System",
+                    "Deep Convolution Neural Network in classification of liver tumor as benign or Maligt from Abdominal Computed Tomography",
+                    "A survey on Genetic Algorithm based feature selection for disease diagnostic system",
+                    "Application of Artificial Neural Network in identification of Lung Diseases"
+                ],
+                "ISBN/ISSN NO": [
+                    "ISBN-13:978-81-934968-0-0",
+                    "ISBN-13:978-81-933710-9-1",
+                    "ISBN-13:978-81-938060-2-9",
+                    "978-981-99-9040-5",
+                    "978-981-99-9518-9",
+                    "978-981-99-1946-8 ",
+                    "978-981-99-1726-6",
+                    "978-981-99-1431-9",
+                    "978-81-322-2119-7",
+                    "978-3-319-03756-1 ",
+                    "979-8-3503-9784-0",
+                    "978-1-6654-6741-4",
+                    "978-1-6654-1005-2",
+                    "978-1-4799-3671-7 ",
+                    "978-1-4244-5053-4"
+                ],
+                "MONTH&YEAR": [
+                    "2017-12-01",
+                    "2017-09-01",
+                    "2018-08-01",
+                    "2024-03-01",
+                    "2024-03-01",
+                    "2023-06-01",
+                    "2023-06-01",
+                    "2023-09-01",
+                    "2014-11-01",
+                    "2013-09-01",
+                    "2023-03-01",
+                    "2022-06-01",
+                    "2022-10-01",
+                    "2015-03-01",
+                    "2010-01-01"
+                ],
+                "BOOK CHAPTER": [
+                    "BOOK",
+                    "BOOK",
+                    "BOOK",
+                    "BOOK CHAPTER",
+                    "BOOK CHAPTER",
+                    "BOOK CHAPTER",
+                    "BOOK CHAPTER",
+                    "BOOK CHAPTER",
+                    "BOOK CHAPTER",
+                    "BOOK CHAPTER",
+                    "BOOK CHAPTER",
+                    "BOOK CHAPTER",
+                    "BOOK CHAPTER",
+                    "BOOK CHAPTER",
+                    "BOOK CHAPTER"
+                ]
+            }
+        },
+        {
+            "name": "VEC-005-03-132",
+            "details": {
+                "AUTHORNAME": [
+                    "Smitha.P.S,R.Tamilarasi",
+                    "Smitha.P.S,R.Tamilarasi",
+                    "N.Sankar Ram,Smitha.P.S",
+                    "Smitha.P.S,Vimala,Sunil Kumar",
+                    "Smitha.P.S,Shankar Ram,T.Subashini",
+                    "Smitha.P.S",
+                    "Smitha.P.S"
+                ],
+                "BOOKNAME": [
+                    "Interactive Computer Graphics",
+                    "Software Engineering",
+                    "Object Oriented Analysis and Design",
+                    "Java Programming and programming paradigms",
+                    "Software Design",
+                    "Computer Graphics",
+                    "OOPS"
+                ],
+                "ISBN/ISSN NO": [
+                    "978-93-5577-816-1",
+                    "978-93-5577-816-1",
+                    "978-81-961872-24",
+                    "978-81-961872-24",
+                    "978-81-961872-24",
+                    "978-81-961872-24",
+                    "978-93-5577-816-1"
+                ],
+                "MONTH&YEAR": [
+                    "2006",
+                    "2005",
+                    "2012",
+                    "2012",
+                    "2013",
+                    "2015",
+                    "2024"
+                ],
+                "BOOK CHAPTER": [
+                    "Book",
+                    "Book",
+                    "Book",
+                    "Book",
+                    "Book",
+                    "Book",
+                    "Book"
+                ]
+            }
+        },
+        {
+            "name": "VEC-005-03-137",
+            "details": {
+                "AUTHORNAME": [
+                    "S. P. Shanthinii, M. Usha & P. Prittopaul ",
+                    "M. Usha, P. Prittopaul & D. Lekha ",
+                    "M. Usha, P. Prittopaul, P. S. Mounish, S. Sundar, G. Aijay Ramanujam & W. S. Shahid Farhan ",
+                    "P. Prittopaul, M. Usha, N. Thirumalai, M. Vasanth, R. Raj Kumar & B. Sakthidhasan ",
+                    "P. Prittopaul, M. Usha, M. V. S. Santhosh, R. Sharath & E. Kughan ",
+                    "M. Usha, P. Prittopaul, G. Ganesha Ram, V. S. Ashween Raj & A. Godwin Wilfred Raj "
+                ],
+                "BOOKNAME": [
+                    "Computer Vision and Machine Intelligence Paradigms for SDGs ",
+                    "Computer Vision and Machine Intelligence Paradigms for SDGs ",
+                    "ICT Infrastructure and Computing,7th edition",
+                    "ICT Infrastructure and Computing, 7th edition",
+                    " Information and Communication Technology for Sustainable Development ",
+                    "Proceedings of International Conference on Computational Intelligence "
+                ],
+                "ISBN/ISSN NO": [
+                    
+                    
+                    
+                    
+                    
+                    
+                ],
+                "MONTH&YEAR": [
+                    "2023-01-01 00:00:00",
+                    "2023-01-01 00:00:00",
+                    "2024-11-22 00:00:00",
+                    "2024-11-22 00:00:00",
+                    "2017-11-01 00:00:00",
+                    " 18 July 2024"
+                ],
+                "BOOK CHAPTER": [
+                    "Lecture Notes in Electrical Engineering",
+                    "Lecture Notes in Electrical Engineering ",
+                    " Lecture Notes in Networks and Systems",
+                    " Lecture Notes in Networks and Systems",
+                    " Lecture Notes in Networks and Systems",
+                    "Algorithms for Intelligent Systems ((AIS))"
+                ]
+            }
+        },
+        {
+            "name": "VEC-005-03-139",
+            "details": {
+                "AUTHORNAME": [
+                    "K.V.Kandasamy\nA.Lakshmi Sangeetha\nK. Sudha\nP.U.Ilavarasi"
+                ],
+                "BOOKNAME": [
+                    "Basic Electrical Electronics Measurement\nEngineering"
+                ],
+                "ISBN/ISSN NO": [
+                    "nil"
+                ],
+                "MONTH&YEAR": [
+                    "2018-09-01"
+                ],
+                "BOOK CHAPTER": [
+                    "Book"
+                ]
+            }
+        },
+        {
+            "name": "VEC-005-03-147",
+            "details": {
+                "AUTHORNAME": [
+                    "S. P. Shanthinii, M. Usha & P. Prittopaul ",
+                    "M. Usha, P. Prittopaul & D. Lekha ",
+                    "M. Usha, P. Prittopaul, P. S. Mounish, S. Sundar, G. Aijay Ramanujam & W. S. Shahid Farhan ",
+                    "P. Prittopaul, M. Usha, N. Thirumalai, M. Vasanth, R. Raj Kumar & B. Sakthidhasan ",
+                    "P. Prittopaul, M. Usha, M. V. S. Santhosh, R. Sharath & E. Kughan ",
+                    "M. Usha, P. Prittopaul, G. Ganesha Ram, V. S. Ashween Raj & A. Godwin Wilfred Raj "
+                ],
+                "BOOKNAME": [
+                    "Computer Vision and Machine Intelligence Paradigms for SDGs ",
+                    "Computer Vision and Machine Intelligence Paradigms for SDGs ",
+                    "ICT Infrastructure and Computing,7th edition",
+                    "ICT Infrastructure and Computing, 7th edition",
+                    " Information and Communication Technology for Sustainable Development ",
+                    "Proceedings of International Conference on Computational Intelligence "
+                ],
+                "ISBN/ISSN NO": [
+                    
+                    
+                    
+                    
+                    
+                    
+                ],
+                "MONTH&YEAR": [
+                    "2023-01-01 00:00:00",
+                    "2023-01-01 00:00:00",
+                    "2024-11-22 00:00:00",
+                    "2024-11-22 00:00:00",
+                    "2017-11-01 00:00:00",
+                    " 18 July 2024"
+                ],
+                "BOOK CHAPTER": [
+                    "Lecture Notes in Electrical Engineering",
+                    "Lecture Notes in Electrical Engineering ",
+                    " Lecture Notes in Networks and Systems",
+                    " Lecture Notes in Networks and Systems",
+                    " Lecture Notes in Networks and Systems",
+                    "Algorithms for Intelligent Systems ((AIS))"
+                ]
+            }
+        },
+        {
+            "name": "VEC-005-04-100",
+            "details": {
+                "AUTHORNAME": [
+                    "S.SRIDEVI"
+                ],
+                "BOOKNAME": [
+                    "Grid and Cloud Computing"
+                ],
+                "ISBN/ISSN NO": [
+                    "978\u201381-89843\u201310\u20136"
+                ],
+                "MONTH&YEAR": [
+                    "2016-05-01"
+                ],
+                "BOOK CHAPTER": [
+                    
+                ]
+            }
+        },
+        {
+            "name": "VEC-005-04-110",
+            "details": {
+                "AUTHORNAME": [
+                    "Rajeswari.A, Dr.R.Dhaya",
+                    "Rajeswari.A, Nalayini C M",
+                    "Rajeswari.A",
+                    "Dr.R.Sarasu, Dr.A.Rajeswari"
+                ],
+                "BOOKNAME": [
+                    "Mobile Computing, First Edition",
+                    "Computer Programming in C, First Edition",
+                    "Sensing Techniques for Next Generation Cognitive Radio Networks:  Spectrum Sensing in Cognitive Radio Networks",
+                    "Programming in Python"
+                ],
+                "ISBN/ISSN NO": [
+                    "ISBN:978- 81-87721-14-7",
+                    "ISBN:978-93-86638-49-6",
+                    "DOI: 10.4018/978-1-5225-5354-0, EISBN13: 9781522553557",
+                    "978-81-971479-1-3"
+                ],
+                "MONTH&YEAR": [
+                    "2016",
+                    "2017-12-01 00:00:00",
+                    "2018-08-01 00:00:00",
+                    "2024-03-01 00:00:00"
+                ],
+                "BOOK CHAPTER": [
+                    "Book",
+                    "Book",
+                    "Book Chapter",
+                    "Book"
+                ]
+            }
+        },
+        {
+            "name": "VEC-005-04-122",
+            "details": {
+                "AUTHORNAME": [
+                    "G. Shanmugaraj,\u00a0G. Sangeetha,\u00a0G. Sethuram Rao,\u00a0K. Mohanambal",
+                    "G. Shanmugaraj,\u00a0K. Mohanambal,\u00a0B. Atchaya,\u00a0G. Kavitha,\u00a0N. Susmitha"
+                ],
+                "BOOKNAME": [
+                    "IGI Global",
+                    "IGI Global"
+                ],
+                "ISBN/ISSN NO": [
+                    "SBN13:\u00a09781668492673 |ISBN10:\u00a01668492679  |                             ISBN13 Softcover:\u00a09781668492710 |EISBN13:\u00a09781668492680",
+                    "SBN13:\u00a09781668492673 |ISBN10:\u00a01668492679  |                             ISBN13 Softcover:\u00a09781668492710 |EISBN13:\u00a09781668492680"
+                ],
+                "MONTH&YEAR": [
+                    "2023-08-01",
+                    "2023-08-01"
+                ],
+                "BOOK CHAPTER": [
+                    "Cyber-Physical Systems and Supporting Technologies for Industrial Automation",
+                    "Cyber-Physical Systems and Supporting Technologies for Industrial Automation"
+                ]
+            }
+        },
+        {
+            "name": "VEC-005-04-125",
+            "details": {
+                "AUTHORNAME": [
+                    "G. Shanmugaraj,\u00a0G. Sangeetha,\u00a0G. Sethuram Rao,\u00a0K. Mohanambal",
+                    "G. Shanmugaraj,\u00a0K. Mohanambal,\u00a0B. Atchaya,\u00a0G. Kavitha,\u00a0N. Susmitha"
+                ],
+                "BOOKNAME": [
+                    "IGI Global",
+                    "IGI Global"
+                ],
+                "ISBN/ISSN NO": [
+                    "SBN13:\u00a09781668492673 |ISBN10:\u00a01668492679  |                             ISBN13 Softcover:\u00a09781668492710 |EISBN13:\u00a09781668492680",
+                    "SBN13:\u00a09781668492673 |ISBN10:\u00a01668492679  |                             ISBN13 Softcover:\u00a09781668492710 |EISBN13:\u00a09781668492680"
+                ],
+                "MONTH&YEAR": [
+                    "2023-08-01",
+                    "2023-08-01"
+                ],
+                "BOOK CHAPTER": [
+                    "Cyber-Physical Systems and Supporting Technologies for Industrial Automation",
+                    "Cyber-Physical Systems and Supporting Technologies for Industrial Automation"
+                ]
+            }
+        },
+        {
+            "name": "VEC-005-04-144",
+            "details": {
+                "AUTHORNAME": [
+                    "Smitha.P.S,Shankar Ram,T.Subashini"
+                ],
+                "BOOKNAME": [
+                    "Software Design"
+                ],
+                "ISBN/ISSN NO": [
+                    "978-81-961872-24"
+                ],
+                "MONTH&YEAR": [
+                    "2013"
+                ],
+                "BOOK CHAPTER": [
+                    "Book"
+                ]
+            }
+        },
+        {
+            "name": "VEC-006-03-039",
+            "details": {
+                "AUTHORNAME": [
+                    "S.Rajalakshmi, \nDr.V.Vijaya Chamundesswari",
+                    "Vengadeswari \nRajalakshmi S",
+                    "Deepa S\nBhagyalakshmi A\nRajalakshmi S"
+                ],
+                "BOOKNAME": [
+                    "Mapping of mineral deposits using image fusion by PCA approach  ",
+                    "A survey on urban vegetation detection using airborne lidar data images\u201d",
+                    "New controlled and unmonitored learning methods pulmonary and cancer progression characterisation"
+                ],
+                "ISBN/ISSN NO": [
+                    "978-1-4799-3672-4",
+                    "978-1-4673-5788-3",
+                    "1551-7616"
+                ],
+                "MONTH&YEAR": [
+                    "2018",
+                    "2023",
+                    "2023"
+                ],
+                "BOOK CHAPTER": [
+                    "Book Chapter ",
+                    "Book Chapter ",
+                    "Book Chapter "
+                ]
+            }
+        },
+        {
+            "name": "VEC-007-04-117",
+            "details": {
+                "AUTHORNAME": [
+                    "JAGADEESH BABU V"
+                ],
+                "BOOKNAME": [
+                    "ELECTRICAL DRIVES AND CONTROL"
+                ],
+                "ISBN/ISSN NO": [
+                    "978 93 85 983 351"
+                ],
+                "MONTH&YEAR": [
+                    "2017-07-01"
+                ],
+                "BOOK CHAPTER": [
+                    "BOOK"
+                ]
+            }
+        },
+        {
+            "name": "VEC-007-04-149",
+            "details": {
+                "AUTHORNAME": [
+                    "V.Selve, V.Rengarajan",
+                    "V.Selve, V.Rengarajan"
+                ],
+                "BOOKNAME": [
+                    "Basic Electrical, Electronics and Instrumentation Engineering",
+                    "Basic Electrical and Electronics Engineering"
+                ],
+                "ISBN/ISSN NO": [
+                    "978-93-86532-66-4",
+                    "978-93-86532-66-4"
+                ],
+                "MONTH&YEAR": [
+                    "January, 2018",
+                    "December, 2020"
+                ],
+                "BOOK CHAPTER": [
+                    "BOOK",
+                    "BOOK"
+                ]
+            }
+        },
+        {
+            "name": "VEC-007-04-177",
+            "details": {
+                "AUTHORNAME": [
+                    "V.JAGADEESH BABU",
+                    "V.JAGADEESH BABU"
+                ],
+                "BOOKNAME": [
+                    "ELECTRICC DRIVES AND CONTROL",
+                    "BASIC ELECTRICAL ENGINEERING LAB"
+                ],
+                "ISBN/ISSN NO": [
+                    "9385983350"
+                    
+                ],
+                "MONTH&YEAR": [
+                    "3 & 2018",
+                    "8 & 2020"
+                ],
+                "BOOK CHAPTER": [
+                    "BOOK",
+                    "BOOK"
+                ]
+            }
+        },
+        {
+            "name": "VEC-007-04-184",
+            "details": {
+                "AUTHORNAME": [
+                    "V.Rengarajan",
+                    "V.Rengarajan"
+                ],
+                "BOOKNAME": [
+                    "Basic Electrical and Electronics Engineering ",
+                    "Basic Electrical ,Electronics and Instrumenatation  Engineering "
+                ],
+                "ISBN/ISSN NO": [
+                    "978-93-86532-66-4",
+                    "978-93-86532-66-4"
+                ],
+                "MONTH&YEAR": [
+                    "DEC & 2020",
+                    "Jan & 2018"
+                ],
+                "BOOK CHAPTER": [
+                    "Book",
+                    "Book "
+                ]
+            }
+        },
+        {
+            "name": "VEC-007-04-185",
+            "details": {
+                "AUTHORNAME": [
+                    "R.Geetha,Anjana S, Shubashree G,Surya D"
+                ],
+                "BOOKNAME": [
+                    "Wearable sensors for sports biomechanics application"
+                ],
+                "ISBN/ISSN NO": [
+                    
+                ],
+                "MONTH&YEAR": [
+                    
+                ],
+                "BOOK CHAPTER": [
+                    "Book Chapter"
+                ]
+            }
+        },
+        {
+            "name": "VEC-008-01-191",
+            "details": {
+                "AUTHORNAME": [
+                    "DR.V.R.RAVI,DR.Z.BRIJET"
+                ],
+                "BOOKNAME": [
+                    "COMPUTER CONTROL OF PROCESS"
+                ],
+                "ISBN/ISSN NO": [
+                    "978-93-82010-51-7"
+                ],
+                "MONTH&YEAR": [
+                    "2017-04-01"
+                ],
+                "BOOK CHAPTER": [
+                    "BOOK"
+                ]
+            }
+        },
+        {
+            "name": "VEC-008-04-072",
+            "details": {
+                "AUTHORNAME": [
+                    "K.V.Kandasamy &S.PADMA"
+                ],
+                "BOOKNAME": [
+                    "POWER ELLECTRONICS"
+                ],
+                "ISBN/ISSN NO": [
+                    
+                ],
+                "MONTH&YEAR": [
+                    "2016"
+                ],
+                "BOOK CHAPTER": [
+                    "BOOK"
+                ]
+            }
+        },
+        {
+            "name": "VEC-008-04-128",
+            "details": {
+                "AUTHORNAME": [
+                    "NIL"
+                ],
+                "BOOKNAME": [
+                    
+                ],
+                "ISBN/ISSN NO": [
+                    
+                ],
+                "MONTH&YEAR": [
+                    
+                ],
+                "BOOK CHAPTER": [
+                    
+                ]
+            }
+        },
+        {
+            "name": "VEC-008-04-172",
+            "details": {
+                "AUTHORNAME": [
+                    "S.N. Sivaraj, B. Vishal and G.K. Kamaleshwar"
+                ],
+                "BOOKNAME": [
+                    "Recent trends in Instrumentation and control"
+                ],
+                "ISBN/ISSN NO": [
+                    "978-93-89934-36-6"
+                ],
+                "MONTH&YEAR": [
+                    "2024"
+                ],
+                "BOOK CHAPTER": [
+                    "BOOK CHAPTER"
+                ]
+            }
+        },
+        {
+            "name": "VEC-008-04-174",
+            "details": {
+                "AUTHORNAME": [
+                    "NIL"
+                ],
+                "BOOKNAME": [
+                    
+                ],
+                "ISBN/ISSN NO": [
+                    
+                ],
+                "MONTH&YEAR": [
+                    
+                ],
+                "BOOK CHAPTER": [
+                    
+                ]
+            }
+        },
+        {
+            "name": "VEC-009-01-090",
+            "details": {
+                "AUTHORNAME": [
+                    ". Dr.S.Baskaran & S.MaryJoans ",
+                    "S.Mary Joans",
+                    "R.Shankari, J. S. Leena Jasmine, S. MaryJoans.",
+                    "S. MaryJoans,J. S. Leena Jasmine, ",
+                    "S. MaryJoans,J. Mukuntharaj"
+                ],
+                "BOOKNAME": [
+                    "\u201cTransmission Lines & Networks ",
+                    "\u201dDigital Image Processing\u201d",
+                    "Machine learning and deep learning for breast cancer risk prediction and diagnosis: a Survey",
+                    "Embedded Systems and IoT",
+                    "Smart Parking Management System Using AI Enhanced by Quantum Network"
+                ],
+                "ISBN/ISSN NO": [
+                    
+                    
+                    
+                    
+                    "DOI: 10.4018/979-8-3693-5832-0.ch020\u00a0 Pg 321"
+                ],
+                "MONTH&YEAR": [
+                    "2003",
+                    "2009",
+                    "2022",
+                    "2023",
+                    "2024"
+                ],
+                "BOOK CHAPTER": [
+                    "BOOK ",
+                    "BOOK ",
+                    "BOOK CHAPTER",
+                    "BOOK",
+                    "BOOK CHAPTER"
+                ]
+            }
+        },
+        {
+            "name": "VEC-009-01-102",
+            "details": {
+                "AUTHORNAME": [
+                    ". Dr.S.Baskaran & S.MaryJoans ",
+                    "S.Mary Joans",
+                    "R.Shankari, J. S. Leena Jasmine, S. MaryJoans.",
+                    "S. MaryJoans,J. S. Leena Jasmine, ",
+                    "S. MaryJoans,                 Mukuntharaj"
+                ],
+                "BOOKNAME": [
+                    "\u201cTransmission Lines & Networks ",
+                    "\u201dDigital Image Processing\u201d",
+                    "Machine learning and deep learning for breast cancer risk prediction and diagnosis: a Survey",
+                    "Embedded Systems and IoT",
+                    "Smart Parking Management System Using AI Enhanced by Quantum Network"
+                ],
+                "ISBN/ISSN NO": [
+                    
+                    
+                    
+                    
+                    "DOI: 10.4018/979-8-3693-5832-0.ch020\u00a0 Pg 321"
+                ],
+                "MONTH&YEAR": [
+                    "2003",
+                    "2009",
+                    "2022",
+                    "2023"
+                    
+                ],
+                "BOOK CHAPTER": [
+                    "BOOK ",
+                    "BOOK ",
+                    "BOOK CHAPTER",
+                    "BOOK",
+                    "BOOK CHAPTER"
+                ]
+            }
+        },
+        {
+            "name": "VEC-009-02-089",
+            "details": {
+                "AUTHORNAME": [
+                    "Dr.J.S.Leena Jasmine ",
+                    "Dr.J.S.Leena Jasmine ",
+                    "Dr.J.S.Leena Jasmine ",
+                    "Dr.J.S.Leena Jasmine ",
+                    "Dr.J.S.Leena Jasmine ",
+                    "Dr.J.S.Leena Jasmine /Mrs.Grace Shoba ",
+                    "Dr.J.S.Leena Jasmine ",
+                    "Dr.J.S.Leena Jasmine ",
+                    "Dr.J.S.Leena Jasmine ",
+                    "Dr.J.S.Leena Jasmine ,Dr.Joshua Kumaresan ",
+                    "Dr.J.S.Leena Jasmine ,Dr.P.Ponsudha",
+                    "Dr.J.S.Leena Jasmine ",
+                    "Dr.S.Mary Joans   ,Dr.J.S.Leena Jasmine ",
+                    "Ms.Shankari,Dr.J.S.Leena Jasmine Dr.S.Mary Joans   "
+                ],
+                "BOOKNAME": [
+                    "Microprocessors and Microcontrollers                  First Edition ",
+                    "Computer Architecture  First Edition ",
+                    "Linear Integrated Circuits and Application /First Edition                       Revised Edirion : Oct 2018",
+                    "Digital Image Processing//Fisrt Edition",
+                    "Electronic Circuits                   First Edition ",
+                    "Linear Integrated circuits",
+                    "Computer Architecture and organization ",
+                    "Digital Image Processi9ng ",
+                    "Microprocessor and Microcontrollers ",
+                    "Digital Principles and Computer Organization /First Edition ",
+                    "Embedded Systems and IoT /First Edition ",
+                    "Image Processing /Revised Edition",
+                    "Embedded Systems and IoT design/First Edition ",
+                    "Machine learning and deep learning for breast cancer risk prediction and diagnosis: a Survey"
+                ],
+                "ISBN/ISSN NO": [
+                    "ISBN13:978-81-934968-6-2",
+                    "ISBN13:978-81-934968-6-2",
+                    "ISBN13:978-81-934968-6-2",
+                    "ISBN13:978-81-944414-5-8",
+                    "ISBN-.13:978-81-934208-7-4",
+                    "ISBN -13: 958745-4-5",
+                    " ISBN 13: 978-938060-8-1",
+                    "ISBN 13 : 978-81-94414-5-8",
+                    "ISBN-13:978-81-939626-0-2",
+                    "ISBN-13:978-81-957774-2-6",
+                    "ISBN-13:961872-4-8",
+                    "ISBN-13:978-81-961445-6-2",
+                    "ISBN-13:978-81-965418-9-7",
+                    "ISBN: 978-81-948459-4-2"
+                ],
+                "MONTH&YEAR": [
+                    "2012-06-01",
+                    "2014-06-01",
+                    "2015-06-01",
+                    "2016-06-01",
+                    "2018-06-01",
+                    "2018-11-01",
+                    "2019-04-01",
+                    "2020-01-01",
+                    "2019-04-01",
+                    "2022-09-22",
+                    "2023-06-01",
+                    "2023-06-01",
+                    "2023-12-01",
+                    "2022-01-01"
+                ],
+                "BOOK CHAPTER": [
+                    "BOOK",
+                    "BOOK",
+                    "BOOK",
+                    "Book",
+                    "Book",
+                    "Book",
+                    "Book",
+                    "Book",
+                    "Book",
+                    "Book",
+                    "Book",
+                    "Book",
+                    "Book",
+                    "Book Chapter "
+                ]
+            }
+        },
+        {
+            "name": "VEC-009-03-041",
+            "details": {
+                "AUTHORNAME": [
+                    "Thilagam.K",
+                    "Thilagam.K",
+                    "Thilagam.K",
+                    "Thilagam.K",
+                    "Thilagam.K"
+                ],
+                "BOOKNAME": [
+                    "Cognitive Radio",
+                    "Cognitive Radio",
+                    "Artificial Intelligence and machine learning",
+                    "Emerging Trends in Cybersecurity",
+                    "Enhancement of Security and Energy Efficiency Using Novel Algorithm in Cognitive Radio Networks,"
+                ],
+                "ISBN/ISSN NO": [
+                    "978-81-936779-3-3",
+                    "978-81-955848-1-9",
+                    "978-93-6132-620-2",
+                    "978-93-6132-739-1"
+                    
+                ],
+                "MONTH&YEAR": [
+                    "2018-05-01",
+                    "2021-11-01",
+                    "2024-06-01",
+                    "2024-06-01"
+                    
+                ],
+                "BOOK CHAPTER": [
+                    "BOOK",
+                    "BOOK",
+                    "BOOK",
+                    "BOOK",
+                    " BOOK CHAPTER"
+                ]
+            }
+        },
+        {
+            "name": "VEC-009-03-058",
+            "details": {
+                "AUTHORNAME": [
+                    "S.J.Grace Shoba",
+                    "Dr.J.S.Leena Jasmine,S.J.Grace Shoba",
+                    "S.J.Grace Shoba",
+                    "S.J.Grace Shoba",
+                    "S.J.Grace Shoba",
+                    "Dr.J.S.Leena Jasmine,S.J.Grace Shoba"
+                ],
+                "BOOKNAME": [
+                    "Electronic Circuits -II,First Edition",
+                    "Linear Integrated Circuits,First Edition",
+                    "Optical communication and Networking",
+                    "Electronic Circuits \u2013II( revised)",
+                    "Optical Communication, Reprint",
+                    "Electronic Circuits"
+                ],
+                "ISBN/ISSN NO": [
+                    "ISBN 13:978-81-927076-0-0",
+                    
+                    "ISBN 13:978-81-927076-2-4",
+                    "ISBN 13:978-81-939393-2-1",
+                    "ISBN 13:978-81-941915-9-9",
+                    "ISBN 13:978-81-958987-0-1"
+                ],
+                "MONTH&YEAR": [
+                    "2016-01-01",
+                    "2011-01-01",
+                    "2016-06-01",
+                    "2018-11-01",
+                    "2022-09-01",
+                    "2024-10-22"
+                ],
+                "BOOK CHAPTER": [
+                    "BOOK",
+                    "BOOK",
+                    "BOOK",
+                    "BOOK",
+                    "BOOK",
+                    "BOOK"
+                ]
+            }
+        },
+        {
+            "name": "VEC-009-04-005",
+            "details": {
+                "AUTHORNAME": [
+                    "M.Suchetha, S.Sumathi, G.Meenakshi",
+                    "S.Sumathi, A.Balajiganesh",
+                    "S.Sumathi, A.Balajiganesh"
+                ],
+                "BOOKNAME": [
+                    "Signals and Systems",
+                    "Soft Computing for Security Applications: Proceedings of ICSCS 2022"
+                    
+                ],
+                "ISBN/ISSN NO": [
+                    "978-81-927076-7-9",
+                    "ISBN : 978-981-19-3589-3"
+                    
+                ],
+                "MONTH&YEAR": [
+                    "2014-06-01",
+                    "2022-09-01"
+                    
+                ],
+                "BOOK CHAPTER": [
+                    "Book",
+                    "Book chapter"
+                    
+                ]
+            }
+        },
+        {
+            "name": "VEC-009-04-012",
+            "details": {
+                "AUTHORNAME": [
+                    "S . Manju",
+                    "V.Vidya Lakshmi, S.Manju, S.A.Anushka,P.Aruna,R.Dharini Devi,Katturu Gowthami",
+                    "S. Manju"
+                ],
+                "BOOKNAME": [
+                    "LECTURE NOTES IN NETWORKS AND SYSTEMS",
+                    "LECTURE NOTES IN NETWORKS AND SYSTEMS",
+                    "ELECTRONIC DEVICES AND CIRCUITS,FIRST EDITION"
+                ],
+                "ISBN/ISSN NO": [
+                    "2367-3389",
+                    "2367-3389",
+                    "978-93-5757-480-8"
+                ],
+                "MONTH&YEAR": [
+                    "2022-03-01",
+                    "2023-02-01",
+                    "2024-08-01"
+                ],
+                "BOOK CHAPTER": [
+                    "BOOK CHAPTER",
+                    "BOOK CHAPTER",
+                    "BOOK"
+                ]
+            }
+        },
+        {
+            "name": "VEC-009-04-013",
+            "details": {
+                "AUTHORNAME": [
+                    "Nil"
+                ],
+                "BOOKNAME": [
+                    
+                ],
+                "ISBN/ISSN NO": [
+                    
+                ],
+                "MONTH&YEAR": [
+                    
+                ],
+                "BOOK CHAPTER": [
+                    
+                ]
+            }
+        },
+        {
+            "name": "VEC-009-04-021",
+            "details": {
+                "AUTHORNAME": [
+                    "M.Ponnrajakumari"
+                ],
+                "BOOKNAME": [
+                    "Communication Systems (R-2021)/FIRST"
+                ],
+                "ISBN/ISSN NO": [
+                    "978-81-961445-0-0"
+                ],
+                "MONTH&YEAR": [
+                    "FEB,2023"
+                ],
+                "BOOK CHAPTER": [
+                    "BOOK"
+                ]
+            }
+        },
+        {
+            "name": "VEC-009-04-023",
+            "details": {
+                "AUTHORNAME": [
+                    "NIL"
+                ],
+                "BOOKNAME": [
+                    
+                ],
+                "ISBN/ISSN NO": [
+                    
+                ],
+                "MONTH&YEAR": [
+                    
+                ],
+                "BOOK CHAPTER": [
+                    
+                ]
+            }
+        },
+        {
+            "name": "VEC-009-04-025",
+            "details": {
+                "AUTHORNAME": [
+                    "K. Ramalakshmi, L. Krishna Kumari, R. Rajalakshmi, G. Theivanathan "
+                ],
+                "BOOKNAME": [
+                    "Technologies for Sustainable Healthcare Development"
+                ],
+                "ISBN/ISSN NO": [
+                    9798369329016
+                ],
+                "MONTH&YEAR": [
+                    "2024-07-01"
+                ],
+                "BOOK CHAPTER": [
+                    "BOOK CHAPTER"
+                ]
+            }
+        },
+        {
+            "name": "VEC-009-04-029",
+            "details": {
+                "AUTHORNAME": [
+                    "Dr.K.Lavanya,Mrs.S.Sarupriya"
+                ],
+                "BOOKNAME": [
+                    "Network Security"
+                ],
+                "ISBN/ISSN NO": [
+                    "978-81-964838-6-9"
+                ],
+                "MONTH&YEAR": [
+                    "2024-01-01"
+                ],
+                "BOOK CHAPTER": [
+                    "Book"
+                ]
+            }
+        },
+        {
+            "name": "VEC-009-04-033",
+            "details": {
+                "AUTHORNAME": [
+                    "Machine learning and deep learning for breast cancer risk prediction and diagnosis: a Survey"
+                ],
+                "BOOKNAME": [
+                    "Data Analytics and Artificial Intelligence"
+                ],
+                "ISBN/ISSN NO": [
+                    "ISBN: 978-81-948459-4-2"
+                ],
+                "MONTH&YEAR": [
+                    "2022-04-04"
+                ],
+                "BOOK CHAPTER": [
+                    "Book Chapter"
+                ]
+            }
+        },
+        {
+            "name": "VEC-009-04-038",
+            "details": {
+                "AUTHORNAME": [
+                    "Nil"
+                ],
+                "BOOKNAME": [
+                    "Nil"
+                ],
+                "ISBN/ISSN NO": [
+                    "Nil"
+                ],
+                "MONTH&YEAR": [
+                    "Nil"
+                ],
+                "BOOK CHAPTER": [
+                    "Nil"
+                ]
+            }
+        },
+        {
+            "name": "VEC-009-04-054",
+            "details": {
+                "AUTHORNAME": [
+                    "S.Saru priya,Dr.K.Lavanya"
+                ],
+                "BOOKNAME": [
+                    "Network Security,First Edition"
+                ],
+                "ISBN/ISSN NO": [
+                    "978-81-964838-6-9"
+                ],
+                "MONTH&YEAR": [
+                    "2024-01-01"
+                ],
+                "BOOK CHAPTER": [
+                    "Book"
+                ]
+            }
+        },
+        {
+            "name": "VEC-010-01-195",
+            "details": {
+                "AUTHORNAME": [
+                    "மு.மு.முத்தையா"
+                ],
+                "BOOKNAME": ["திருமுருகாற்றப்படை காட்டும் சமயநெறி"
+
+                ],
+                "ISBN/ISSN NO": [
+                    
+                ],
+                "MONTH&YEAR": [
+                    "டிசம்பர்-2010"
+                ],
+                "BOOK CHAPTER": [
+                    "BOOK"
+                ]
+            }
+        },
+        {
+            "name": "VEC-010-04-057",
+            "details": {
+                "AUTHORNAME": [
+                    "Dr. M. Vinothkumar, Dr. K Monika"
+                    
+                ],
+                "BOOKNAME": [
+                    "India\u2019s Culinary Conundrum: Unravelling Food Loss and Nourishing Food Security Through Data"
+                    
+                ],
+                "ISBN/ISSN NO": [
+                    "9788197445026"
+                    
+                ],
+                "MONTH&YEAR": [
+                    "2024-08-20"
+                    
+                ],
+                "BOOK CHAPTER": [
+                    "Book Chapter"
+                    
+                ]
+            }
+        },
+        {
+            "name": "VEC-010-04-150",
+            "details": {
+                "AUTHORNAME": [
+                    "Ms. S. Sugapriya"
+                ],
+                "BOOKNAME": [
+                    "Exploring the Role of Self-Motivation in Second Language Acquisition: A Task-Based Learning Perspective"
+                ],
+                "ISBN/ISSN NO": [
+                    "978-93-93622-70-9"
+                ],
+                "MONTH&YEAR": [
+                    "2023"
+                ],
+                "BOOK CHAPTER": [
+                    "BOOK CHAPTER"
+                ]
+            }
+        },
+        {
+            "name": "VEC-010-04-151",
+            "details": {
+                "AUTHORNAME": [
+                    "Prncy Sunil, A.BALAJI, S.Sugapriya",
+                    "A.BALAJI",
+                    "A.BALAJI"
+                ],
+                "BOOKNAME": [
+                    "COMMUNICATIVE ENGLISH, EDITION 1",
+                    "THE THIRD GENDER : STAIN AND PAIN' Editon 2",
+                    "Evolving Chapters: Language and Literature"
+                ],
+                "ISBN/ISSN NO": [
+                    
+                    9789392108808,
+                    9789393622709
+                ],
+                "MONTH&YEAR": [
+                    "2018",
+                    "2018",
+                    "2023"
+                ],
+                "BOOK CHAPTER": [
+                    "Book",
+                    "Book Chapter",
+                    "Book Chapter"
+                ]
+            }
+        },
+        {
+            "name": "VEC-010-04-154",
+            "details": {
+                "AUTHORNAME": [
+                    
+                    "NIL"
+                ],
+                "BOOKNAME": [
+                    
+                    
+                ],
+                "ISBN/ISSN NO": [
+                    
+                    
+                ],
+                "MONTH&YEAR": [
+                    
+                    
+                ],
+                "BOOK CHAPTER": [
+                    
+                    
+                ]
+            }
+        },
+        {
+            "name": "VEC-011-03-111",
+            "details": {
+                "AUTHORNAME": [
+                    "J Sathya Priya",
+                    "J Sathya Priya",
+                    "J Sathya Priya",
+                    "J Sathya Priya",
+                    "J Sathya Priya",
+                    "J Sathya Priya",
+                    "J Sathya Priya",
+                    "J Sathya Priya",
+                    "J Sathya Priya",
+                    "J Sathya Priya",
+                    "J Sathya Priya",
+                    "J Sathya Priya",
+                    "J Sathya Priya",
+                    "J Sathya Priya",
+                    "J Sathya Priya",
+                    "J Sathya Priya",
+                    "J Sathya Priya",
+                    "J Sathya Priya"
+                ],
+                "BOOKNAME": [
+                    "Assistive Technology",
+                    "Principles of Management,  ",
+                    " Data and Information Security",
+                    "Deep Learning",
+                    "Database Management Systems",
+                    "Computer Network",
+                    "Data Structures",
+                    "Database Design and management",
+                    "Data Exploration and Visualization",
+                    "Cryptography and Network Security",
+                    "Computer Networks",
+                    "Database Management Systems",
+                    "Software Project Management ",
+                    " Cryptography and Network Security",
+                    "Information Management",
+                    "Mobile Communication, ",
+                    "Software Project Management",
+                    "Cryptography and Network Security"
+                ],
+                "ISBN/ISSN NO": [
+                    "ISBN: 978-81-972240-1-0",
+                    "ISBN: 978-81-961881-4-6",
+                    "ISBN: 978-81-964292-6-3",
+                    "ISBN: 978-81-964292-8-7",
+                    " ISBN: 13 : 978-81-960116-1-1",
+                    " ISBN: 13 : 978-81-958987-9-4",
+                    "ISBN 13: 978-81-948630-1-4",
+                    " ISBN 13: 978-81-957774-9-5",
+                    " ISBN 13: 978-81-958745-1-4",
+                    "ISBN: 13 : 978-81-941915-8-2",
+                    "\u00a0 ISBN: 13 : 978-81-939393-3-8",
+                    "ISBN 13: 978-81-939393-0-7",
+                    "1.ISBN.: 13: 978 -81-933711-9-0",
+                    "ISBN: 13 : 978-81-932010-4-6"
+                    
+                    
+                    
+                    
+                ],
+                "MONTH&YEAR": [
+                    "June  2024. ",
+                    "June  2024. ",
+                    "2023-08-01 00:00:00",
+                    "2023-07-01 00:00:00",
+                    "2023-01-01 00:00:00",
+                    "2022-12-01 00:00:00",
+                    "2022-09-01 00:00:00",
+                    "2022-10-01 00:00:00",
+                    "2022-10-01 00:00:00",
+                    "2020-09-01 00:00:00",
+                    "2019-06-01 00:00:00",
+                    "2018-11-01 00:00:00",
+                    "2017-02-01 00:00:00",
+                    "2016-07-01 00:00:00",
+                    "2016-07-01 00:00:00",
+                    "2012-06-01 00:00:00",
+                    "2011-11-01 00:00:00",
+                    "2010-11-01 00:00:00"
+                ],
+                "BOOK CHAPTER": [
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                ]
+            }
+        },
+        {
+            "name": "VEC-011-04-008",
+            "details": {
+                "AUTHORNAME": [
+                    "NIL"
+                ],
+                "BOOKNAME": [
+                    
+                ],
+                "ISBN/ISSN NO": [
+                    
+                ],
+                "MONTH&YEAR": [
+                    
+                ],
+                "BOOK CHAPTER": [
+                    
+                ]
+            }
+        },
+        {
+            "name": "VEC-011-04-069",
+            "details": {
+                "AUTHORNAME": [
+                    "Dr.J.Sathyapriya, Mrs.Bharathi, Mrs.S.P.Revathy",
+                    "Dr.J.Sathyapriya, Mrs.T.Thivya, Mrs.S.P.Revathy",
+                    "Dr.J.Sathyapriya,  Mrs.S.P.Revathy",
+                    "Dr.R.Deepalakshmi, J Shanthalakshmi Revathy, S.P. Revathy, Dr.N.Kousika"
+                ],
+                "BOOKNAME": [
+                    "Principles of Management",
+                    "Deep Learning",
+                    " Computer Networks",
+                    "Design and Implementation of a Comprehensive Intelligent E-Learning Systems Integrated Web App Solution For\nDyslexic Students"
+                ],
+                "ISBN/ISSN NO": [
+                    "ISBN: 978-81-961881-4-6",
+                    "ISBN: 978-81-964292-8-7",
+                    "ISBN: 13 : 978-81-958987-9-4",
+                    "979-8-3503-0570-8"
+                ],
+                "MONTH&YEAR": [
+                    "June\u00a0 2024",
+                    "July\u00a0 2023",
+                    "\u00a0December 2022",
+                    "2023"
+                ],
+                "BOOK CHAPTER": [
+                    "BOOK",
+                    "BOOK",
+                    "BOOK",
+                    "BOOK CHAPTER"
+                ]
+            }
+        },
+        {
+            "name": "VEC-011-04-114",
+            "details": {
+                "AUTHORNAME": [
+                    "VIMALA IMOGEN.P"
+                ],
+                "BOOKNAME": [
+                    "A Study on digital Signature in Block Chain Technology"
+                ],
+                "ISBN/ISSN NO": [
+                    "978-1-6654-6217-4"
+                ],
+                "MONTH&YEAR": [
+                    "2023-03-01"
+                ],
+                "BOOK CHAPTER": [
+                    "BOOK CHAPTER"
+                ]
+            }
+        },
+        {
+            "name": "VEC-011-04-126",
+            "details": {
+                "AUTHORNAME": [
+                    "S.Priyadharshini,J.Sathyapriya"
+                ],
+                "BOOKNAME": [
+                    "Information Management"
+                ],
+                "ISBN/ISSN NO": [
+                    "nil"
+                ],
+                "MONTH&YEAR": [
+                    "2015-June"
+                ],
+                "BOOK CHAPTER": [
+                    "book"
+                ]
+            }
+        },
+        {
+            "name": "VEC-011-04-138",
+            "details": {
+                "AUTHORNAME": [
+                    "NIL"
+                ],
+                "BOOKNAME": [
+                    
+                ],
+                "ISBN/ISSN NO": [
+                    
+                ],
+                "MONTH&YEAR": [
+                    
+                ],
+                "BOOK CHAPTER": [
+                    
+                ]
+            }
+        },
+        {
+            "name": "VEC-011-04-152",
+            "details": {
+                "AUTHORNAME": [
+                    "NIL"
+                ],
+                "BOOKNAME": [
+                    
+                ],
+                "ISBN/ISSN NO": [
+                    
+                ],
+                "MONTH&YEAR": [
+                    
+                ],
+                "BOOK CHAPTER": [
+                    
+                ]
+            }
+        },
+        {
+            "name": "VEC-011-04-156",
+            "details": {
+                "AUTHORNAME": [
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                ],
+                "BOOKNAME": [
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                ],
+                "ISBN/ISSN NO": [
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                ],
+                "MONTH&YEAR": [
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                ],
+                "BOOK CHAPTER": [
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                ]
+            }
+        },
+        {
+            "name": "VEC-011-04-157",
+            "details": {
+                "AUTHORNAME": [
+                    
+                    
+                    
+                    
+                    
+                    
+                ],
+                "BOOKNAME": [
+                    
+                    
+                    
+                    
+                    
+                    
+                ],
+                "ISBN/ISSN NO": [
+                    
+                    
+                    
+                    
+                    
+                    
+                ],
+                "MONTH&YEAR": [
+                    
+                    
+                    
+                    
+                    
+                    
+                ],
+                "BOOK CHAPTER": [
+                    
+                    
+                    
+                    
+                    
+                    
+                ]
+            }
+        },
+        {
+            "name": "VEC-011-04-166",
+            "details": {
+                "AUTHORNAME": [
+                    "VIMALA IMOGEN.P"
+                ],
+                "BOOKNAME": [
+                    "A Study on digital Signature in Block Chain Technology"
+                ],
+                "ISBN/ISSN NO": [
+                    "978-1-6654-6217-4"
+                ],
+                "MONTH&YEAR": [
+                    "2023-03-01"
+                ],
+                "BOOK CHAPTER": [
+                    "BOOK CHAPTER"
+                ]
+            }
+        },
+        {
+            "name": "VEC-012-04-037",
+            "details": {
+                "AUTHORNAME": [
+                    "M.S.BALU"
+                ],
+                "BOOKNAME": [
+                    "RESOURCE MANAGEMENT TECHNIQUES"
+                ],
+                "ISBN/ISSN NO": [
+                    
+                ],
+                "MONTH&YEAR": [
+                    
+                ],
+                "BOOK CHAPTER": [
+                    
+                ]
+            }
+        },
+        {
+            "name": "VEC-012-04-053",
+            "details": {
+                "AUTHORNAME": [
+                    "Nil"
+                ],
+                "BOOKNAME": [
+                    "Nil"
+                ],
+                "ISBN/ISSN NO": [
+                    "Nil"
+                ],
+                "MONTH&YEAR": [
+                    "Nil"
+                ],
+                "BOOK CHAPTER": [
+                    "Nil"
+                ]
+            }
+        },
+        {
+            "name": "VEC-012-04-071",
+            "details": {
+                "AUTHORNAME": [
+                    "V.Kuppulakshmi; C. Sugapriya; Nagarajan Deivanayagampillai; Jeganathan Kathirvel"
+                ],
+                "BOOKNAME": [
+                    "Analyzing Data Through Probabilistic Modeling in Statistics"
+                ],
+                "ISBN/ISSN NO": [
+                    "ISBN13: 9781799847069 |ISBN10: 1799847063 |EISBN13: 9781799847076 |ISBN13 Softcover: 9781799854937 DOI: 10.4018/978-1-7998-4706-9"
+                ],
+                "MONTH&YEAR": [
+                    "2021-02-01"
+                ],
+                "BOOK CHAPTER": [
+                    "BOOK CHAPTER"
+                ]
+            }
+        },
+        {
+            "name": "VEC-012-04-115",
+            "details": {
+                "AUTHORNAME": [
+                    "P. Gurusamy, K.Karthikeyan, R.S.Kamala",
+                    "P. Gurusamy, K.Karthikeyan, G. Mahadevan",
+                    "P. Gurusamy, G. Mahadevan, C.Sivagam",
+                    "P. Gurusamy, K. Murugesan"
+                ],
+                "BOOKNAME": [
+                    "Engineering Mathematics - I, Second ",
+                    "Engineering Mathematics - II Second ",
+                    "Engineering Mathematics - III, First",
+                    "Probability and Random Processes"
+                ],
+                "ISBN/ISSN NO": [
+                    
+                    
+                    
+                    "81-87721-13-6"
+                ],
+                "MONTH&YEAR": [
+                    "2004-07-01 00:00:00",
+                    "2005-01-01 00:00:00",
+                    "2005-06-01 00:00:00",
+                    "2001"
+                ],
+                "BOOK CHAPTER": [
+                    "Book",
+                    "Book",
+                    "Book",
+                    "Book"
+                ]
+            }
+        },
+        {
+            "name": "VEC-013-02-027",
+            "details": {
+                "AUTHORNAME": [
+                    "Dr. Arockia Jaswin M",
+                    "Dr. Arockia Jaswin M",
+                    "Dr. Arockia Jaswin M",
+                    "Dr. Arockia Jaswin M"
+                ],
+                "BOOKNAME": [
+                    "Engineering Graphics",
+                    "Engineering Mechanics",
+                    "Cryogenic Treatment for Valve steel Materials",
+                    "Precision manufacturing through cryogenic treatment: a case study"
+                ],
+                "ISBN/ISSN NO": [
+                    "978-81-909278-2-6",
+                    "978-81-909278-6-4",
+                    "978-3-330-01287-5",
+                    "10.1515/9783111335537-006"
+                ],
+                "MONTH&YEAR": [
+                    "2011-06-01",
+                    "2013-06-01",
+                    "2016-04-01",
+                    "2023-04-01"
+                ],
+                "BOOK CHAPTER": [
+                    "BOOK",
+                    "BOOK",
+                    "BOOK",
+                    " BOOK CHAPTER"
+                ]
+            }
+        },
+        {
+            "name": "VEC-013-02-169",
+            "details": {
+                "AUTHORNAME": [
+                    "Dr.B.Ramesh, Dr.A.Elayaperumal and Dr.S.Satish kumar",
+                    "Dr. B. Ramesh, Dr. G. Kavithaa, Dr. S. Satish Kumar, Dr. T. Karthikeyan",
+                    "Dr. B. Ramesh, Dr. G. Kavithaa, Dr. S. Satish Kumar, Dr. T. Karthikeyan",
+                    "Dr. B. Ramesh, Dr. G. Kavithaa, Dr. S. Satish Kumar, Dr. T. Karthikeyan"
+                ],
+                "BOOKNAME": [
+                    "Experimental Investigation of the Drilling Process on Thick Epoxy Composites",
+                    "Contemporary Research in Engineering and Management",
+                    "Emerging Research in Engineering and Management",
+                    "Advancements in Engineering and Management"
+                ],
+                "ISBN/ISSN NO": [
+                    "ISBN: 978-81-934563-2-3",
+                    "ISBN : 978-93-91193-03-4",
+                    "ISBN : 978-93-90856-12-1",
+                    "ISBN : 978-93-91193-01-0"
+                ],
+                "MONTH&YEAR": [
+                    
+                    "2021",
+                    "2021",
+                    "2021"
+                ],
+                "BOOK CHAPTER": [
+                    "Book",
+                    "Chapter No.1",
+                    "Chapter No.5",
+                    "Chapter No.19"
+                ]
+            }
+        },
+        {
+            "name": "VEC-013-03-024",
+            "details": {
+                "AUTHORNAME": [
+                    "Suresh, S & Senthil Kumar, VS"
+                ],
+                "BOOKNAME": [
+                    "Fabrication and stamp forming of thermoplastic composites - In Book: Primary and Secondary Manufacturing of Polymer Matrix Composites"
+                ],
+                "ISBN/ISSN NO": [
+                    "978-1-4987-9930-0"
+                ],
+                "MONTH&YEAR": [
+                    "2017"
+                ],
+                "BOOK CHAPTER": [
+                    "Book Chapter"
+                ]
+            }
+        },
+        {
+            "name": "VEC-013-04-004",
+            "details": {
+                "AUTHORNAME": [
+                    "Dr. R. Geetha",
+                    "Dr.R. Geetha"
+                ],
+                "BOOKNAME": [
+                    "Fundamentals of oscience (Book)",
+                    "Precision manufacturing through cryogenic treatment: a case study"
+                ],
+                "ISBN/ISSN NO": [
+                    "978-620-0-07700-4",
+                    "10.1515/9783111335537-006"
+                ],
+                "MONTH&YEAR": [
+                    "2020-06-01",
+                    "2023-04-01"
+                ],
+                "BOOK CHAPTER": [
+                    "BOOK",
+                    " BOOK CHAPTER"
+                ]
+            }
+        },
+        {
+            "name": "VEC-013-04-084",
+            "details": {
+                "AUTHORNAME": [
+                    "D.SIVSANKAR"
+                ],
+                "BOOKNAME": [
+                    "Fundamentals Of Welding and Friction Surfacing"
+                ],
+                "ISBN/ISSN NO": [
+                    "ISBN\u00ac10: 1514271788 ISBN\u00ac13: 978\u00ac1514271780"
+                ],
+                "MONTH&YEAR": [
+                    "2015-06-01"
+                ],
+                "BOOK CHAPTER": [
+                    "BOOK"
+                ]
+            }
+        },
+        {
+            "name": "VEC-013-04-133",
+            "details": {
+                "AUTHORNAME": [
+                    "NIL"
+                ],
+                "BOOKNAME": [
+                    
+                ],
+                "ISBN/ISSN NO": [
+                    
+                ],
+                "MONTH&YEAR": [
+                    
+                ],
+                "BOOK CHAPTER": [
+                    
+                ]
+            }
+        },
+        {
+            "name": "VEC-015-01-190",
+            "details": {
+                "AUTHORNAME": [
+                    "Dr. S. Shahil Kirupavathy",
+                    "Dr. S. Shahil Kirupavathy",
+                    "Dr. M. .Rathna Kumari,                  Dr. T. Senthilnathan &                     Dr. S. .Shahil Kirupavathy ",
+                    "Dr. M. .Rathna Kumari,                     Dr. T. Senthilnathan &                  Dr. S. .Shahil Kirupavathy ",
+                    "Prof. S. Shahil Kirupavathy, Dr. V. Ramesh Kumar,                    Dr. T. A. Revathy, Mrs.G.Hamsavalli"
+                ],
+                "BOOKNAME": [
+                    "Engineering Physics\u2013I                   ( AU \u2013 Regulations 2008)",
+                    "Physics Laboratory Manual",
+                    "Engineering Physics\u2013I                  ( AU \u2013 Regulations 2010)",
+                    "Engineering Physics\u2013II           ( AU \u2013 Regulations 2010)",
+                    "o Materials and o Technology"
+                ],
+                "ISBN/ISSN NO": [
+                    "978-81-906170-2-4",
+                    "978-81-906170-1-7",
+                    
+                    
+                    "978-81-974075-3-6"
+                ],
+                "MONTH&YEAR": [
+                    "2008",
+                    "2008",
+                    "2010",
+                    "2010",
+                    "2024-05-01 00:00:00"
+                ],
+                "BOOK CHAPTER": [
+                    "Book",
+                    "Book",
+                    "Book Chapter",
+                    "Book Chapter",
+                    "Book Chapter"
+                ]
+            }
+        },
+        {
+            "name": "VEC-015-03-193",
+            "details": {
+                "AUTHORNAME": [
+                    "S. Shahil Kirupavathy, V. Ramesh Kumar, T.A. Revathy, G. Hamsavalli"
+                ],
+                "BOOKNAME": [
+                    "omaterials and otechnology"
+                ],
+                "ISBN/ISSN NO": [
+                    "978-81-974075-3-6"
+                ],
+                "MONTH&YEAR": [
+                    "2024-05-01"
+                ],
+                "BOOK CHAPTER": [
+                    "Book"
+                ]
+            }
+        },
+        {
+            "name": "VEC-015-04-182",
+            "details": {
+                "AUTHORNAME": [
+                    "Kennedy, F.C., Moses Kennedy, S.M., Arul RoseletMeryline, S. and Jayachandiran, M."
+                ],
+                "BOOKNAME": [
+                    "Synergies in Analysis, Discrete Mathematics, Soft Computing and Modelling"
+                ],
+                "ISBN/ISSN NO": [
+                    "https://link.springer.com/chapter/10.1007/978-981-19-7014-6_13"
+                ],
+                "MONTH&YEAR": [
+                    "2023-02-03"
+                ],
+                "BOOK CHAPTER": [
+                    "A Decision-Making Problem Involving Soft Fuzzy Number Valued Information System: Energy-Efficient Light-Emitting Diode Blubs. In Synergies in Analysis, Discrete Mathematics, Soft Computing and Modelling"
+                ]
+            }
+        }
+    ]
+}
