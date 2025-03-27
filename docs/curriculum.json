@@ -85,7 +85,7 @@
         "department_name": "Information Technology (IT)",
         "regulation": {
         "year":["2019", "2021", "2023"],
-	    "pdf_path":["/static/pdfs/curriculum/011/it_reg_19.pdf","/static/pdfs/curriculum/011/it_reg_21.pdf","/static/pdfs/curriculum/011/it_reg_23.pdf"]
+	    "pdf_path":["/static/pdfs/curriculum/011/reg_19.pdf","/static/pdfs/curriculum/011/reg_21.pdf","/static/pdfs/curriculum/011/reg_23.pdf"]
         }
     },
     {
@@ -133,7 +133,7 @@
         "department_name": "Master of Business Administration (MBA)",
         "regulation": {
         "year":["2019", "2021", "2023"],
-	    "pdf_path":["/static/pdfs/curriculum/017/mba_19.pdf","/static/pdfs/curriculum/017/mba_21.pdf","/static/pdfs/curriculum/017/reg_23.pdf"]
+	    "pdf_path":["/static/pdfs/curriculum/017/mba_19.pdf","/static/pdfs/curriculum/017/mba_21.pdf","/static/pdfs/curriculum/017/mba_23.pdf"]
 
         }
     },

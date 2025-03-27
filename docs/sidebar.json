@@ -219,7 +219,7 @@
         {"id": "NewsLetter", "hascontent": false},
         {"id": "Activities", "hascontent": false},
         {"id": "StudentAchievments", "hascontent": false},
-        {"id": "Infrastructure", "hascontent": true},
+        {"id": "Infrastructure", "hascontent": false},
         {"id": "Mous", "hascontent": false},
         {"id": "Research", "hascontent": false}
       ]

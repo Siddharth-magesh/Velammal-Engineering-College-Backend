@@ -353,84 +353,31 @@
             },
             {
                 "PATENT_DETAILS": [
-                    {
-                        "S.No": 1,
-                        "Faculty": null,
-                        "Title of the Patent": null,
-                        "Application Number": null,
-                        "Date of Filing": null,
-                        "Status": null,
-                        "Colloboration Institute": null,
-                        "Colloboration agreement Yes / No": null,
-                        "E copy patent google drive link": null
-                    }
                 ]
             },
             {
                 "BOOK___BOOK_CHAPTERS": [
-                    {
-                        "S.No": 1,
-                        "Name of Faculty": null,
-                        "Book/Chapter Title": null,
-                        "Name of Publisher": null,
-                        "ISBN Details": null,
-                        "Colloboration Institute": null,
-                        "Colloboration agreement Yes / No": null,
-                        "E copy of Book front page google drive link": null
-                    }
                 ]
             },
             {
                 "INTERNATIONAL___NATIONAL_CONFERENCES": [
-                    {
-                        "S.No": 1,
-                        "Name of faculty": null,
-                        "Title of the Paper": null,
-                        "Name of Conference": null,
-                        "Type of Conference National / Inter national": null,
-                        "Organizer": null,
-                        " Prceedings ISBN": null,
-                        "E-Copy of Prceeding google drive link": null
-                    }
+                    
                 ]
             },
             {
                 "CONSULTANCY": [
-                    {
-                        "S.No": 1,
-                        "Name of the Faculty": null,
-                        "Title of the Consultancy": null,
-                        "Funding Organisation": null,
-                        "Duration": null,
-                        "Fund Received in Rs.": null,
-                        "Request and acceptance communication details": null,
-                        "E-Copy of consultancy google drive link": null
-                    }
+                   
                 ]
             },
             {
                 "INTERNSHIP": [
-                    {
-                        "S.No": 1,
-                        "Name of the Industry, address": null,
-                        "Name of the Student": null,
-                        "Duration": null,
-                        "Internship proof google drive link": null
-                    }
+                   
                 ]
             },
 
             {
                 "PRODUCT_DEVELOPMENT": [
-                    {
-                        "S.No": 1,
-                        "Name of the Faculty": null,
-                        "Name of the Product": null,
-                        "Team members details": null,
-                        "Demo availability status": null,
-                        "Funding agency/Industrial Partners":null,
-                        "Product image in google drive link": null
-                    }
+                    
                 ]
             },
             {
@@ -443,20 +390,7 @@
         "docs": [
             {
                 "FUNDED_PROPOSALS": [
-                    {
-                        "S.No": null,
-                        "Name of the Faculty": null,
-                        "Title of the Proposal": null,
-                        "Name of Funding Agency":null,
-                        "Amount in Lakhs": null,
-                        "Project Duration in Yrs": null,
-                        "Date of Submission": null,
-                        "Current Status": null,
-                        "Colloboration Institute": null,
-                        "Colloboration agreement Yes / No": null,
-                        "E copy of sanctioned letter google drive link":null,
-                        "Image": null
-                    }
+                   
                 ]
             },
             {
