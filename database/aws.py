@@ -959,7 +959,7 @@ def insert_overall_journal_publications():
     collection = db['overall_journal_publications']
     with open("/root/Velammal-Engineering-College-Backend/docs/overall_journal_publications.json","r",encoding="utf-8") as file:
         documents = json.load(file)
-        collection.insert_one(documents)
+        collection.insert_many(documents)
     
     print("Inserted overall journal publications.\n")
 
