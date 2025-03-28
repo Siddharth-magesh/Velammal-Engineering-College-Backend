@@ -177,3 +177,6 @@ outputs/
 static/
 backup/
 output/
+
+# Node.js
+node_modules/

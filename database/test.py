@@ -3,19 +3,18 @@ import os
 from pymongo import MongoClient
 
 mongo_uri = "mongodb://localhost:27017/"
-db_name = "VEC"
+db_name = "NEW_VEC"
 
 client = MongoClient(mongo_uri)
 db = client[db_name]
 
-
-def insert_alumni_data():
-    collection = db['alumni']
-    with open("/Velammal-Engineering-College-Backend/docs/alumni.json","r",encoding="utf-8") as file:
+def insert_overall_patent():
+    collection = db['overall_patent']
+    with open("/Velammal-Engineering-College-Backend/docs/overall_patent.json","r",encoding="utf-8") as file:
         documents = json.load(file)
         collection.insert_many(documents)
     
-    print("Inserted Alumni data. \n")
+    print("Inserted overall patent.\n")
 
 
-insert_alumni_data()
+insert_overall_patent()
