@@ -935,7 +935,7 @@ def insert_overall_book_publication():
     collection = db['overall_book_publication']
     with open("/root/Velammal-Engineering-College-Backend/docs/overall_book_publication.json","r",encoding="utf-8") as file:
         documents = json.load(file)
-        collection.insert_one(documents)
+        collection.insert_many(documents)
     
     print("Inserted overall book publication.\n")
 
@@ -943,7 +943,7 @@ def insert_overall_conference_publication():
     collection = db['overall_conference_publication']
     with open("/root/Velammal-Engineering-College-Backend/docs/overall_conference_publication.json","r",encoding="utf-8") as file:
         documents = json.load(file)
-        collection.insert_one(documents)
+        collection.insert_many(documents)
     
     print("Inserted overall conference publication.\n")
 

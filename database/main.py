@@ -9,7 +9,7 @@ import bcrypt
 import re
 
 mongo_uri = "mongodb://localhost:27017/"
-db_name = "NEW_VEC"
+db_name = "VEC"
 collection_name = "staff_details"
 
 file_path = r"/Velammal-Engineering-College-Backend/docs/CSV/VEC_Faculty_Details.csv"
@@ -941,7 +941,7 @@ def insert_overall_book_publication():
     collection = db['overall_book_publication']
     with open("/Velammal-Engineering-College-Backend/docs/overall_book_publication.json","r",encoding="utf-8") as file:
         documents = json.load(file)
-        collection.insert_one(documents)
+        collection.insert_many(documents)
     
     print("Inserted overall book publication.\n")
 
@@ -949,7 +949,7 @@ def insert_overall_conference_publication():
     collection = db['overall_conference_publication']
     with open("/Velammal-Engineering-College-Backend/docs/overall_conference_publication.json","r",encoding="utf-8") as file:
         documents = json.load(file)
-        collection.insert_one(documents)
+        collection.insert_many(documents)
     
     print("Inserted overall conference publication.\n")
 
