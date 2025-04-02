@@ -17,7 +17,7 @@
         ]
     },
     "events": {
-        "image_path":[ "/static/images/yrc/eco_bloom.webp", "/static/images/yrc/Aalaya_parisutham.webp","/static/images/yrc/Twinkles_of_Hope.webp","/static/images/yrc/CLEAN_SHORE.webp","/static/images/yrc/shield_yourself.webp"
+        "image_path":[ "/static/images/yrc/event/eco_bloom.webp", "/static/images/yrc/event/Aalaya_parisutham.webp","/static/images/yrc/event/Twinkles_of_Hope.webp","/static/images/yrc/event/CLEAN_SHORE.webp","/static/images/yrc/event/shield_yourself.webp"
 
         ],
         "title": [
@@ -48,7 +48,7 @@
     },
     "awards": {
         "image_path": ["/static/images/yrc/THE_BRIDGE_PROJECT1.webp",
-            "/static/images/yrc/THE_BRIDGE_PROJECT2.webp"
+            "/static/images/yrc/award/THE_BRIDGE_PROJECT.webp"
 
         ],
         "title":["The best team-THE BRIDGE PROJECT"],
