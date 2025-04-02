@@ -3,7 +3,7 @@
         {
             "name": "Ramesh Kumar",
             "designation": "coordinator",
-            "image_path": "static/images/yrc/head.jpg"
+            "image_path": "static/images/yrc/head.webp"
         },
     "members": {
       
@@ -11,16 +11,13 @@
         "designation": ["chairman", "vice chairman", "secretary", "treasurer", "Tech Head", "Tech Head", "non-tech Head", "non-tech Head", "joint secretary", "joint secretary"],
         "reg_no": [
         ],
-        "rank": [
+        "year": ["III", "III", "III", "III", "III", "III", "III", "III", "II", "II"
         ],
-        "year": [
-        ],
-        "image_path": [
-            
+        "image_path": ["/static/images/yrc/yrc_members1.webp","/static/images/yrc/yrc_members2.webp","/static/images/yrc/yrc_members3.webp","/static/images/yrc/yrc_members4.webp","/static/images/yrc/yrc_members5.webp","/static/images/yrc/yrc_members6.webp","/static/images/yrc/yrc_members7.webp","/static/images/yrc/yrc_members8.webp","/static/images/yrc/yrc_members9.webp","/static/images/yrc/yrc_members10.webp"
         ]
     },
     "events": {
-        "image_path":[
+        "image_path":[ "/static/images/yrc/eco_bloom.webp", "/static/images/yrc/Aalaya_parisutham.webp","/static/images/yrc/Twinkles_of_Hope.webp","/static/images/yrc/CLEAN_SHORE.webp","/static/images/yrc/shield_yourself.webp"
 
         ],
         "title": [
@@ -50,15 +47,17 @@
           ]
     },
     "awards": {
-        "image_path": [
+        "image_path": ["/static/images/yrc/THE_BRIDGE_PROJECT1.webp",
+            "/static/images/yrc/THE_BRIDGE_PROJECT2.webp"
 
         ],
-        "des": [
+        "title":["The best team-THE BRIDGE PROJECT"],
+        "des": ["the Youth Red Cross (YRC) of Velammal Engineering College was honored with the prestigious Best Team Award for its outstanding humanitarian efforts and social service initiatives. The award for Batch 23-24 was presented by Mr. Velu Karthikeyan, Vice Chairman of the Bar Council of Tamil Nadu and Puducherry, while Batch 21-22 was recognized by Justices J. Sathya Narayana Prasad and D. Bharatha Chakravarthy from the High Court of Madras. This recognition celebrates YRC’s dedication to community service, environmental initiatives, and youth empowerment through volunteering, disaster relief, blood donation drives, and leadership development, inspiring future generations to serve society."
 
         ]
     },
     "news": {
-        "updaates": [
+        "updaates": ["1. College Fest 2025 will be held on March 25th.","2. We have successfully completed Eco-Nomics 3.0, a 100-day tree plantation initiative by YRC volunteers.","3. The annual sports meet is scheduled for April 10th."
 
         ]
     }
