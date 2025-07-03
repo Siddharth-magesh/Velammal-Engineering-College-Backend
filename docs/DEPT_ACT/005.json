@@ -10,7 +10,7 @@
             "resource_person": "Mr.Gladwin,GenAI Engineer at PAL Genie",
             "beneficiaries": "CSE",
             "relevant_PO_PSO": null,
-            "image_path": ["/static/images/dept_activities/005/1.jpg","/static/images/dept_activities/005/2.jpg"]
+            "image_path": [""]
           },
           {
             "date": "19/08/2024",
@@ -19,7 +19,7 @@
             "resource_person": "Dr.A.Lakshmi Sangeetha,Associate Professor,Velammal Engineering College",
             "beneficiaries": "CSE",
             "relevant_PO_PSO": null,
-            "image_path": ["/static/images/dept_activities/005/3.jpg","/static/images/dept_activities/005/4.jpg"]
+            "image_path": [""]
           },
           {
             "date": "14/09/2024",
@@ -28,7 +28,7 @@
             "resource_person": "Ms.P.Sathyakala Specialist Graphic Designer, 2adpro Media solutions private limited",
             "beneficiaries": "CSE",
             "relevant_PO_PSO": null,
-            "image_path": ["/static/images/dept_activities/005/5.jpg","/static/images/dept_activities/005/6.jpg"]
+            "image_path": [""]
           },
           {
             "date": "20/08/2024",
@@ -37,7 +37,7 @@
             "resource_person": "S.S.Sivakumar Senior Manager,Managed Services ",
             "beneficiaries": "CSE",
             "relevant_PO_PSO": null,
-            "image_path": ["/static/images/dept_activities/005/7.jpg","/static/images/dept_activities/005/8.jpg"]
+            "image_path": [""]
           },
           {
             "date": "07/08/2024",
@@ -46,7 +46,7 @@
             "resource_person": "Mr.Harish Babu,Manager NXTWAVE",
             "beneficiaries": "CSE",
             "relevant_PO_PSO": null,
-            "image_path": "/static/images/dept_activities/005/8.jpg"
+            "image_path": ""
           },
           {
             "date": "23/09/2024",
@@ -55,7 +55,7 @@
             "resource_person": "Mr.Arun Kumar.M Cloud Engineer, Presidio",
             "beneficiaries": "CSE",
             "relevant_PO_PSO": null,
-            "image_path": ["/static/images/dept_activities/005/9.jpg","/static/images/dept_activities/005/10.jpg"]
+            "image_path": [""]
           },
           {
             "date": "18/09/2024-19/09/2024",
@@ -64,7 +64,7 @@
             "resource_person": "Mr.Parthipan Muthuramalingam, Director, Bezcoder Academy",
             "beneficiaries": "CSE",
             "relevant_PO_PSO": null,
-            "image_path": ["/static/images/dept_activities/005/11.jpg","/static/images/dept_activities/005/12.jpg"]
+            "image_path": [""]
           },
           {
             "date": "18/07/2024",
@@ -73,7 +73,7 @@
             "resource_person": "Mr.Paris Kapoor, System Architect, FeOS Technologies",
             "beneficiaries": "CSE",
             "relevant_PO_PSO": null,
-            "image_path": ["/static/images/dept_activities/005/13.jpg","/static/images/dept_activities/005/14.jpg"]
+            "image_path": [""]
           },
           {
             "date": "06/02/2025",
@@ -82,7 +82,7 @@
             "resource_person": "Mr. Vamsi Valluru, Director, VIISV EDUCATION PRIVATE Ltd",
             "beneficiaries": "CSE",
             "relevant_PO_PSO": null,
-            "image_path": ["/static/images/dept_activities/005/15.jpg","/static/images/dept_activities/005/16.jpg"]
+            "image_path": [""]
           },
           {
             "date": "16/09/2024",
@@ -91,7 +91,7 @@
             "resource_person": null,
             "beneficiaries": "2nd Year Students From CSE",
             "relevant_PO_PSO": null,
-            "image_path": ["/static/images/dept_activities/005/17.jpg","/static/images/dept_activities/005/18.jpg"]
+            "image_path": [""]
           },
           {
             "date": "30/08/2024",
@@ -100,7 +100,7 @@
             "resource_person": null,
             "beneficiaries": "3rd Year Students From CSE",
             "relevant_PO_PSO": null,
-            "image_path": ["/static/images/dept_activities/005/19.jpg","/static/images/dept_activities/005/20.jpg"]
+            "image_path": [""]
           }
         ]
       }

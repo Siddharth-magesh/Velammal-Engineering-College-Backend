@@ -10,7 +10,7 @@
             "resource_person": "",
             "beneficiaries": "",
             "relevant_PO_PSO": "",
-            "image_path": ["/static/images/dept_activities/009/1.jpeg"]
+            "image_path": ["/static/images/dept_activities/009/1.webp"]
           },
           {
             "date": "25.01.2024",
@@ -19,7 +19,7 @@
             "resource_person": "",
             "beneficiaries": "",
             "relevant_PO_PSO":"",
-            "image_path": ["/static/images/dept_activities/009/2.jpeg"]
+            "image_path": ["/static/images/dept_activities/009/2.webp"]
           },
           {
             "date": "01.02.2024 & 02.02.24",
@@ -28,7 +28,7 @@
             "resource_person":"",
             "beneficiaries": "",
             "relevant_PO_PSO": "",
-            "image_path": ["/static/images/dept_activities/009/3.jpeg"]
+            "image_path": ["/static/images/dept_activities/009/3.webp"]
           },
           {
             "date": "05.03.2024",
@@ -37,7 +37,7 @@
             "resource_person":"",
             "beneficiaries": "",
             "relevant_PO_PSO": "",
-            "image_path": ["/static/images/dept_activities/009/4.jpeg"]
+            "image_path": ["/static/images/dept_activities/009/4.webp"]
           },
           {
             "date": "",
@@ -46,7 +46,7 @@
             "resource_person": "",
             "beneficiaries": "",
             "relevant_PO_PSO": "" ,
-            "image_path": ["/static/images/dept_activities/009/5.jpeg"]
+            "image_path": ["/static/images/dept_activities/009/5.webp"]
           },
           {
             "date": "07.03.2024 ",
@@ -55,7 +55,7 @@
             "resource_person": "",
             "beneficiaries": "",
             "relevant_PO_PSO": "" ,
-            "image_path": ["/static/images/dept_activities/009/6.jpeg"]
+            "image_path": ["/static/images/dept_activities/009/6.webp"]
           },
           {
             "date": "12.3.2024 ",
@@ -64,7 +64,7 @@
             "resource_person": "",
             "beneficiaries": "",
             "relevant_PO_PSO": "" ,
-            "image_path": ["/static/images/dept_activities/009/7.jpeg"]
+            "image_path": ["/static/images/dept_activities/009/7.webp"]
           },
           {
             "date": "20.3.2024",
@@ -73,7 +73,7 @@
             "resource_person": "",
             "beneficiaries": "",
             "relevant_PO_PSO": "" ,
-            "image_path": ["/static/images/dept_activities/009/8.jpeg"]
+            "image_path": ["/static/images/dept_activities/009/8.webp"]
           },
           {
             "date": "13.03.2024",
@@ -82,7 +82,7 @@
             "resource_person": "",
             "beneficiaries": "",
             "relevant_PO_PSO": "" ,
-            "image_path": ["/static/images/dept_activities/009/9.jpeg"]
+            "image_path": ["/static/images/dept_activities/009/9.webp"]
           }
         ]
       }

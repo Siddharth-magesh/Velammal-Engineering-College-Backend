@@ -9,7 +9,7 @@
         "resource_person": "Mr. Ahamed Khalid,\nHead -Academic Alliances, Imarticus Learning,IIM,Bangalore.",
         "beneficiaries": "II- and III-YEAR students.",
         "relevant_PO_PSO": "PSO1, PSO2, PO3,PO6, PO9,PO10, PO11,PSO1",
-        "image_path": "image_path yet to be filled"
+        "image_path": [""]
       },
       {
         "date": "15/02/2024",
@@ -18,7 +18,7 @@
         "resource_person": "Vasanth.P\nAI-Manager,\nZoho Corporation.",
         "beneficiaries": "II Year Students",
         "relevant_PO_PSO": "PSO1,PSO2, PO3,PO6, PO9,PO10, PO11,PSO1",
-        "image_path": "image_path yet to be filled"
+        "image_path":["/static/images/dept_activities/001/Journey_of_LLM.webp"]
       },
       {
         "date": "2-4-2024",
@@ -27,7 +27,7 @@
         "resource_person": "-",
         "beneficiaries": "III year Students",
         "relevant_PO_PSO": "PSO1, PSO2, PO3,PO6, PO9,PO10, PO11,PSO1",
-        "image_path": "image_path yet to be filled"
+        "image_path": [""]
       },
       {
         "date": "28-3-2024",
@@ -36,7 +36,7 @@
         "resource_person": "Mrs.K.BalaSaranya\nAssistant Professor,\nCSE Department,\nR.M.D. Engineering College",
         "beneficiaries": "II Year",
         "relevant_PO_PSO": "PSO1,PSO2, PO3,PO6, PO9,PO10, PO11,PSO1",
-        "image_path": "image_path yet to be filled"
+        "image_path": [""]
       },
       {
         "date": "06/10/2023",
@@ -45,7 +45,7 @@
         "resource_person": "Mr. Kamala Kannan,\nLead Technical Solution Architect,\nDXC Technology",
         "beneficiaries": "IV YEAR",
         "relevant_PO_PSO": "PSO1,PSO2, PO3,PO6, PO9,PO10, PO11,PSO1",
-        "image_path": "image_path yet to be filled"
+        "image_path": ["/static/images/dept_activities/001/Development_at_IOT.webp"]
       },
       {
         "date": "06-10-2023",
@@ -54,7 +54,7 @@
         "resource_person": "Mr. Sibi Chakaravarthy,\nAssociate Professor,\nSchool of Computing,\nVellore Institute of Technology",
         "beneficiaries": "IV Year",
         "relevant_PO_PSO": "PSO1,PSO2, PO3,PO6, PO9,PO10, PO11,PSO1",
-        "image_path": "image_path yet to be filled"
+        "image_path":["/static/images/dept_activities/001/Workshop_on_DL.webp"]
       },
       {
         "date": "27-9-2023",
@@ -63,7 +63,7 @@
         "resource_person": "Ms.J.Purnima\nSenior Associate\nFord motor company chennai.",
         "beneficiaries": "IV Year",
         "relevant_PO_PSO": "PSO1,PSO2, PO3,PO6, PO9,PO10, PO11,PSO1",
-        "image_path": "image_path yet to be filled"
+        "image_path":["/static/images/dept_activities/001/Hadoop.webp"]
       },
       {
         "date": "5-9-2023",
@@ -72,7 +72,7 @@
         "resource_person": "Mr.Shanmuga raja\nCTO,Netstack Technology Solutions.",
         "beneficiaries": "III Year",
         "relevant_PO_PSO": "PSO1,PSO2, PO3,PO6, PO9,PO10, PO11,PSO1",
-        "image_path": "image_path yet to be filled"
+        "image_path": ["/static/images/dept_activities/001/Cloud_Enabling_Technologies.webp"]
       },
       {
         "date": "19-8-2023",
@@ -81,7 +81,7 @@
         "resource_person": "Mr.Shanmuga raja\nCTO-Netstack Technology Solutions.",
         "beneficiaries": "IV year",
         "relevant_PO_PSO": "PSO1,PSO2, PO3,PO6, PO9,PO10, PO11,PSO1",
-        "image_path": "image_path yet to be filled"
+        "image_path": ["/static/images/dept_activities/001/AWS_Cloud_Workshop.webp"]
       },
       {
         "date": "8-11-2023",
@@ -90,7 +90,7 @@
         "resource_person": "Mrs.K.BalaSaranya",
         "beneficiaries": "II Year",
         "relevant_PO_PSO": "PSO1,PSO2, PO3,PO6, PO9,PO10, PO11,PSO1",
-        "image_path": "image_path yet to be filled"
+        "image_path":["/static/images/dept_activities/001/Collision_Resolution.webp"]
       },
       {
         "date": "6-11-2023",
@@ -99,7 +99,7 @@
         "resource_person": "Dr.A.Arockia Abins",
         "beneficiaries": "II Year",
         "relevant_PO_PSO": "PSO1,PSO2, PO3,PO6, PO9,PO10, PO11,PSO1",
-        "image_path": "image_path yet to be filled"
+        "image_path":["/static/images/dept_activities/001/Memory_Management.webp"]
       },
       {
         "date": "20-9-2023",
@@ -108,7 +108,7 @@
         "resource_person": "Mrs.M.Maheswari\nAssistant Professor \nDMI College of Engineering",
         "beneficiaries": "III Year",
         "relevant_PO_PSO": "PSO1,PSO2, PO3,PO6, PO9,PO10, PO11,PSO1",
-        "image_path": "image_path yet to be filled"
+        "image_path": ["/static/images/dept_activities/001/Genetic_Programming_in_ML.webp"]
       },
       {
         "date": "31-8-2023",
@@ -117,7 +117,7 @@
         "resource_person": "Dr.V.Balaji.\nAssociate Professor/E&CE,\nMAI-NEFHI College of  Engineering and Technology.",
         "beneficiaries": "II Year",
         "relevant_PO_PSO": "PSO1,PSO2, PO3,PO6, PO9,PO10, PO11,PSO1",
-        "image_path": "image_path yet to be filled"
+        "image_path":["/static/images/dept_activities/001/Utility_of_AI.webp"]
       },
       {
         "date": "2-9-2022",
@@ -126,7 +126,7 @@
         "resource_person": "Dr.K.A.Varun Kumar,Asst Professor,SRM institute of science and technology",
         "beneficiaries": "III Year Students",
         "relevant_PO_PSO": "PSO1,PSO2, PO3,PO6, PO9,PO10, PO11,PSO1",
-        "image_path": "image_path yet to be filled"
+        "image_path": [""]
       },
       {
         "date": "20.10.2022",
@@ -135,7 +135,7 @@
         "resource_person": "Dr.V.Gowri",
         "beneficiaries": "II Year Students",
         "relevant_PO_PSO": "PSO1,PSO2, PO3,PO6, PO9,PO10, PO11,PSO1",
-        "image_path": "image_path yet to be filled"
+        "image_path": [""]
       },
       {
         "date": "19.11.2022",
@@ -144,7 +144,7 @@
         "resource_person": "Mr.S.Johnson,\nProject Manager, Specialist,ISTD and MMA",
         "beneficiaries": "III,II Year Students",
         "relevant_PO_PSO": "PSO1,PSO2, PO3,PO6, PO9,PO10, PO11,PSO1",
-        "image_path": "image_path yet to be filled"
+        "image_path": [""]
       },
       {
         "date": "22-2-2023",
@@ -153,7 +153,7 @@
         "resource_person": "Mr.B.Balu,Product Manager,Zoho Corporation",
         "beneficiaries": "1st year students",
         "relevant_PO_PSO": "PSO1,PSO2, PO3,PO6, PO9,PO10, PO11,PSO1",
-        "image_path": "image_path yet to be filled"
+        "image_path": [""]
       },
       {
         "date": "2.3.2023",
@@ -162,7 +162,7 @@
         "resource_person": "Mr.A.Naresh Kumar\nAssistant Professor,Sairam Engineering college",
         "beneficiaries": "II Year students",
         "relevant_PO_PSO": "PSO1,PSO2, PO3,PO6, PO9,PO10, PO11,PSO1",
-        "image_path": "image_path yet to be filled"
+        "image_path": [""]
       },
       {
         "date": "6.3.2022&\n7.3.2022",
@@ -171,7 +171,7 @@
         "resource_person": "Ms.Reena Makwana,Product manager,Zoho Coporation Pvt ltd",
         "beneficiaries": "III year  Students",
         "relevant_PO_PSO": "PSO1,PSO2, PO3,PO6, PO9,PO10, PO11,PSO1",
-        "image_path": "image_path yet to be filled"
+        "image_path": [""]
       },
       {
         "date": "22-2-2023",
@@ -180,7 +180,7 @@
         "resource_person": "Mr.B.Praveen kumar,Software development Engineer,Comcast India.",
         "beneficiaries": "1st year students",
         "relevant_PO_PSO": "PSO1,PSO2, PO3,PO6, PO9,PO10, PO11,PSO1",
-        "image_path": "image_path yet to be filled"
+        "image_path": [""]
       },
       {
         "date": "22-2-2023",
@@ -189,7 +189,7 @@
         "resource_person": "Sri.Balaji Aravind.R\nCofounder of Arjun Vision Tech",
         "beneficiaries": "III Year Students",
         "relevant_PO_PSO": "PSO1,PSO2, PO3,PO6, PO9,PO10, PO11,PSO1",
-        "image_path": "image_path yet to be filled"
+        "image_path": [""]
       },
       {
         "date": "1.11.2022&\n2.11.2022",
@@ -198,7 +198,7 @@
         "resource_person": "Dr.S.Sibi Chakkaravathy,\nAssociate Professor,VIT,Andhra Pradesh",
         "beneficiaries": "III,II Year Students",
         "relevant_PO_PSO": "PSO1,PSO2, PO3,PO6, PO9,PO10, PO11,PSO1",
-        "image_path": "image_path yet to be filled"
+        "image_path": [""]
       },
       {
         "date": "1-4-2023",
@@ -207,7 +207,7 @@
         "resource_person": "Mr.S.Umeshwaran\nSenior Engineer,\nFord Motor Company",
         "beneficiaries": "III year  students",
         "relevant_PO_PSO": "PSO1,PSO2, PO3,PO6, PO9,PO10, PO11,PSO1",
-        "image_path": "image_path yet to be filled"
+        "image_path": [""]
       },
       {
         "date": "28.3-2023",
@@ -216,7 +216,7 @@
         "resource_person": "Ms.Cecilia.I\nObject Storage Service Offering &Autoamtion Manager\nFord Motor Company",
         "beneficiaries": "II ,III year  students",
         "relevant_PO_PSO": "PSO1,PSO2, PO3,PO6, PO9,PO10, PO11,PSO1",
-        "image_path": "image_path yet to be filled"
+        "image_path": [""]
       },
       {
         "date": "20.3.2023",
@@ -225,7 +225,7 @@
         "resource_person": "Dr.C.Geetha,\nProfessor/CSE dept\nRMK Engineering college",
         "beneficiaries": "III,II Year Students",
         "relevant_PO_PSO": "PSO1,PSO2, PO3,PO6, PO9,PO10, PO11,PSO1",
-        "image_path": "image_path yet to be filled"
+        "image_path": [""]
       },
       {
         "date": "28.11.2022",
@@ -234,7 +234,7 @@
         "resource_person": "Mrs.K.BalaSaranya,\nAssistant Professor,\nR.M.D.Engineering college",
         "beneficiaries": "II Year students",
         "relevant_PO_PSO": "PSO1,PSO2, PO3,PO6, PO9,PO10, PO11,PSO1",
-        "image_path": "image_path yet to be filled"
+        "image_path": [""]
       },
       {
         "date": "5-4-2023",
@@ -243,7 +243,7 @@
         "resource_person": "-",
         "beneficiaries": "All department Students",
         "relevant_PO_PSO": "PSO1,PSO2, PO3,PO6, PO9,PO10, PO11,PSO1",
-        "image_path": "image_path yet to be filled"
+        "image_path":["/static/images/dept_activities/001/AI_Tech_Expo.webp"]
       },
       {
         "date": "5-8-2022",
@@ -252,7 +252,7 @@
         "resource_person": "-",
         "beneficiaries": "All department Students",
         "relevant_PO_PSO": "PSO1,PSO2, PO3,PO6, PO9,PO10, PO11,PSO1",
-        "image_path": "image_path yet to be filled"
+        "image_path": [""]
       }
     ]
   }

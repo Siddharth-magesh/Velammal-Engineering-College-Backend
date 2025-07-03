@@ -11,7 +11,7 @@
               "resource_person":"Dr P B Sakthivel, Structural Consultant Chennai",
               "beneficiaries": "II ,III & IV Year Students",
               "relevant_PO_PSO": "PO1 , PO2 , PO3 , PO7 , PO11",
-              "image_path": ["/static/images/dept_activities/004/1.jpg"]
+              "image_path": ["/static/images/dept_activities/004/1.webp"]
           },
 
 
@@ -22,7 +22,7 @@
               "resource_person": " Er R Adhithya,  Research Engineer, Saint Gobain",
               "beneficiaries": "III & IV Year Students",
               "relevant_PO_PSO":"PO1 , PO2 , PO3 , PO7 ",
-              "image_path": ["/static/images/dept_activities/004/2.jpg"]
+              "image_path": ["/static/images/dept_activities/004/2.webp"]
           },  
 
 
@@ -33,7 +33,7 @@
           "resource_person": "",
           "beneficiaries": "III YR STUDENTS",
           "relevant_PO_PSO":"PO1 , PO2 , PO3 , PO5,PO6,PO7,PO11 ",
-          "image_path": ["/static/images/dept_activities/004/3.jpg"]
+          "image_path": ["/static/images/dept_activities/004/3.webp"]
         },
         {
           "date": "06/03/2024",
@@ -42,7 +42,7 @@
           "resource_person":"Er R Suresh, Assistant Engineer Buildings Division, Chennai",
           "beneficiaries":"III YR STUDENTS",
           "relevant_PO_PSO":"PO1 , PO2 , PO3 , PO5,PO6,PO7,PO11 ",
-          "image_path": ["/static/images/dept_activities/004/4.jpg"]
+          "image_path": ["/static/images/dept_activities/004/4.webp"]
         },
 
         {
@@ -52,7 +52,7 @@
           "resource_person":"Mr. M C Natarajan &amp; Mr. N Mohammed Althaf",
           "beneficiaries":"II ,III & IV Yr Students",
           "relevant_PO_PSO": "PO1 , PO2 , PO4 , PO5,PO7,PO11 ",
-          "image_path": ["/static/images/dept_activities/004/5.jpg"]
+          "image_path": ["/static/images/dept_activities/004/5.webp"]
         },
 
         {
@@ -62,7 +62,7 @@
           "resource_person": "Er M Neamitha, Assistant Engineering Manager, L & T",
           "beneficiaries":"II yr and III yr students",
           "relevant_PO_PSO":"PO1 , PO2 , PO3 , PO5,PO6,PO7,PO8,PO11 ",
-          "image_path": ["/static/images/dept_activities/004/6.jpg"]
+          "image_path": ["/static/images/dept_activities/004/6.webp"]
         },
 
 
@@ -74,7 +74,7 @@
           "resource_person":"Er Kalaiselvan, AGM Manager",
           "beneficiaries": "II yr and III yr students",
           "relevant_PO_PSO": "PO1 , PO2 , PO5 , PO7  , PO11",
-          "image_path": ["/static/images/dept_activities/008/7.jpg"]
+          "image_path": ["/static/images/dept_activities/008/7.webp"]
         },
 
         {
@@ -84,7 +84,7 @@
           "resource_person":"",
           "beneficiaries":"III & IV Yr Students",
           "relevant_PO_PSO":"PO1 , PO2 , PO3 , PO 6,PO7  , PO12",
-          "image_path": ["/static/images/dept_activities/004/8.jpg"]
+          "image_path": ["/static/images/dept_activities/004/8.webp"]
         },
 
         {
@@ -94,7 +94,7 @@
           "resource_person":"Er Akbar Ali Khader, CEO & MD, Khaas Group",
           "beneficiaries": "III & IV Yr Students",
           "relevant_PO_PSO":"PO1 , PO2 , PO3 , PO 5,PO7, PO8,PO9,PO10,PO11,PO12",
-          "image_path": ["/static/images/dept_activities/008/9.jpg"]
+          "image_path": ["/static/images/dept_activities/008/9.webp"]
         }
         
       ]
