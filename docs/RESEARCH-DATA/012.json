@@ -122,7 +122,7 @@
             {
                 "JOURNAL_PUBLICATIONS": [
                     {
-                        "S.No":"1",
+                        "S.No":1,
                         "Name of the Author(s)":"Dr.R.Karthik",
                         "Title of the Paper":"An ellipsoid restrictive region-based regularization for regression analysis",
                         "SCI/ WoS/ Scopus/ Google scholar/ UGC Care/Other":"Scopus",
@@ -135,7 +135,7 @@
                         " E copy of journal papers google drive link": "https://drive.google.com/file/d/1_77cii06d9TW-3tC1yrfTYe6nMJJJEvg/view?usp=drive_link"
                     },
                     {
-                        "S.No":"2",
+                        "S.No":2,
                         "Name of the Author(s)": "Dr.P.Gurusamy",
                         "Title of the Paper": "Lower and upper bounds for the second and third order Hermitian Toeplitz determinants for starlike and convex functions related to lemniscate of Bernoulli",
                         "SCI/ WoS/ Scopus/ Google scholar/ UGC Care/Other": "Scopus",
@@ -148,7 +148,7 @@
                         " E copy of journal papers google drive link": "https://pubs.aip.org/aip/acp/article-abstract/3005/1/020011/3325291/Lower-and-upper-bounds-for-the-second-and-third?redirectedFrom=fulltext"
                     },
                     {
-                        "S.No":"3",
+                        "S.No":3,
                         "Name of the Author(s)": "Dr.P.Gurusamy",
                         "Title of the Paper": "The Fekete–Szegö Functional Associated with the mth Root Transformation Using Conical Domains",
                         "SCI/ WoS/ Scopus/ Google scholar/ UGC Care/Other": "SCI & Scopus",
@@ -161,7 +161,7 @@
                         " E copy of journal papers google drive link": "https://link.springer.com/article/10.1007/s11253-024-02373-0"
                     },
                     {
-                        "S.No": "4",
+                        "S.No": 4,
                         "Name of the Author(s)": "Dr.P.Gurusamy",
                         "Title of the Paper": "Initial Coefficient Bounds for Bi-Close-to-Convex Classes of n-Fold-Symmetric Bi-Univalent Functions",
                         "SCI/ WoS/ Scopus/ Google scholar/ UGC Care/Other": "SCI",
@@ -174,7 +174,7 @@
                         " E copy of journal papers google drive link": "https://www.mdpi.com/2075-1680/13/11/735"
                     },
                     {
-                        "S.No":"5",
+                        "S.No":5,
                         "Name of the Author(s)": "Dr.V.Kuppulakshmi",
                         "Title of the Paper": "Fuzzy decision-making for cost-effective production planning in manufacturing systems",
                         "SCI/ WoS/ Scopus/ Google scholar/ UGC Care/Other": "SCI & Scopus",
@@ -187,7 +187,7 @@
                         " E copy of journal papers google drive link": "https://iopscience.iop.org/article/10.1088/2631-8695/ad6ad3"
                     },
                     {
-                        "S.No":"6",
+                        "S.No":6,
                         "Name of the Author(s)": "Dr.V.Kuppulakshmi",
                         "Title of the Paper": "Optimum production lot size for a perishable product under exponential demand with partial backordering and rework",
                         "Name of the Journal": "Spectrum of Mechanical Engineering and Operational Research",

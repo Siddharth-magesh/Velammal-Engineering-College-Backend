@@ -195,7 +195,7 @@
             {
                 "JOURNAL_PUBLICATIONS": [
                         {
-                            "S.No": "1",
+                            "S.No": 1,
                             "Name of the Author(s)": "P. Pathmanaban",
                             "Title of the Paper": "Recent application of imaging techniques for fruit quality assessment",
                             "SCI/ WoS/ Scopus/ Google Scholar/ UGC Care/Other": "SCI",
@@ -208,7 +208,7 @@
                             "Attach E copy of all journal papers link": "https://drive.google.com/file/d/1ZIejLacPX1uHhb7a1x0Imc0BFocwl5j4/view?usp=sharing"
                         },
                         {
-                            "S.No": "2",
+                            "S.No": 2,
                             "Name of the Author(s)": "P. Pathmanaban",
                             "Title of the Paper": "Six Sigma Methodologies for Increasing the First Pass Rate of Engines in Manufacturing",
                             "SCI/ WoS/ Scopus/ Google Scholar/ UGC Care/Other": "Google  Scolar",
@@ -221,7 +221,7 @@
                             "Attach E copy of all journal papers link": "https://drive.google.com/file/d/1L_Zdj_wAKFzzOagZBEqRVJsw5o-ZNhHx/view?usp=sharing"
                         },
                         {
-                            "S.No": "3",
+                            "S.No": 3,
                             "Name of the Author(s)": "V Chandran",
                             "Title of the Paper": "Mechanical Investigation of Crane Hook using AISI 4340 Alloy Steel with Various Proportions of Vanadium",
                             "SCI/ WoS/ Scopus/ Google Scholar/ UGC Care/Other": "Others",
@@ -234,7 +234,7 @@
                             "Attach E copy of all journal papers link": "https://drive.google.com/file/d/1S7wDF2peGa6zl38Cvrz6eW_G4JKQmKxS/view?usp=sharing"
                         },
                         {
-                            "S.No": "4",
+                            "S.No": 4,
                             "Name of the Author(s)": "V. Chandran",
                             "Title of the Paper": "Comparative behavior of various nano additives in a DIESEL engine powered by novel Garciniagummi-gutta biodiesel",
                             "SCI/ WoS/ Scopus/ Google Scholar/ UGC Care/Other": "SCI",
@@ -247,7 +247,7 @@
                             "Attach E copy of all journal papers link": "https://drive.google.com/file/d/1VcYW8emqMc4-eUKmBkYFi0k_VLs82vDF/view?usp=drive_link"
                         },
                         {
-                            "S.No": "5",
+                            "S.No": 5,
                             "Name of the Author(s)": "P.Pathmanaban ",
                             "Title of the Paper": "Testing of Coconut Shell Reinforced Brake PADS",
                             "SCI/ WoS/ Scopus/ Google Scholar/ UGC Care/Other": "Others",
@@ -260,7 +260,7 @@
                             "Attach E copy of all journal papers link": "https://drive.google.com/file/d/1_UFfk9sGz5o73twp8UyvbZ9_XknfINYN/view?usp=sharing"
                         },
                         {
-                            "S.No": "6",
+                            "S.No": 6,
                             "Name of the Author(s)": "V. Chandran",
                             "Title of the Paper": "Experimental Investigation on the Effect of Ignition Enhancers in the Blends of Sapota Biodiesel/Diesel Blends on a CRDi Engine",
                             "SCI/ WoS/ Scopus/ Google Scholar/ UGC Care/Other": "SCI",
@@ -273,7 +273,7 @@
                             "Attach E copy of all journal papers link": "https://drive.google.com/file/d/1geFNXiHJBQrJUQzgLgyUiAkpyb9rcDPZ/view?usp=sharing"
                         },
                         {
-                            "S.No": "7",
+                            "S.No": 7,
                             "Name of the Author(s)": "P.Pathmanaban, S.Chermadurai",
                             "Title of the Paper": "Application of thermal imaging for detecting cold air leak location in cold storage",
                             "SCI/ WoS/ Scopus/ Google Scholar/ UGC Care/Other": "Others",
@@ -286,7 +286,7 @@
                             "Attach E copy of all journal papers link": "https://velammal.edu.in/wp-content/uploads/2022/10/Non-indexed-journals.pdf"
                         },
                         {
-                            "S.No": "8",
+                            "S.No": 8,
                             "Name of the Author(s)": "V.Chandran",
                             "Title of the Paper": "Performance Evaluation of Mono Suspension Using Neodymium Magnets",
                             "SCI/ WoS/ Scopus/ Google Scholar/ UGC Care/Other": "Others",
@@ -299,7 +299,7 @@
                             "Attach E copy of all journal papers link": "https://velammal.edu.in/wp-content/uploads/2022/10/Non-indexed-journals.pdf"
                         },
                         {
-                            "S.No": "9",
+                            "S.No": 9,
                             "Name of the Author(s)": "V.Chandran",
                             "Title of the Paper": "Investigation on mechanical characterizes of natural fiber reinforcement polymer composite materials",
                             "SCI/ WoS/ Scopus/ Google Scholar/ UGC Care/Other": "Scopus",
@@ -312,7 +312,7 @@
                             "Attach E copy of all journal papers link": "https://velammal.edu.in/NAAC-assets /files/NAAC/2020-21/Criteria3/3.4.5-SCI-journals-with-index.pdf"
                         },
                         {
-                            "S.No": "10",
+                            "S.No": 10,
                             "Name of the Author(s)": "P.Thennarasu",
                             "Title of the Paper": "Feasibility of adding N-Butanol and di isopropyl ether with gasoline on its physico-chemical properties",
                             "SCI/ WoS/ Scopus/ Google Scholar/ UGC Care/Other": "SCI",
@@ -325,7 +325,7 @@
                             "Attach E copy of all journal papers link": "https://velammal.edu.in/NAAC-assets/files/NAAC/2021-22/Criteria3/3.4.3/1-auto.pdf"
                         },
                         {
-                            "S.No": "11",
+                            "S.No": 11,
                             "Name of the Author(s)": "P.Pathmanaban, S.Chermadurai",
                             "Title of the Paper": "An evaluation of surface temperature distribution under different charging and discharging modes of the lithiumion phosphate battery using Thermal Imaging",
                             "SCI/ WoS/ Scopus/ Google Scholar/ UGC Care/Other": "Others",
@@ -338,7 +338,7 @@
                             "Attach E copy of all journal papers link": "https://velammal.edu.in/NAAC-assets/files/NAAC/2021-22/Criteria3/3.4.5-Indexed/2-auto.pdf"
                         },
                         {
-                            "S.No": "12",
+                            "S.No": 12,
                             "Name of the Author(s)": "V.Chandran",
                             "Title of the Paper": "Effect of Multi-Objective Optimization for Double Pulse Resistance Spot Welded Joints of Ferritic Stainless Steel",
                             "SCI/ WoS/ Scopus/ Google Scholar/ UGC Care/Other": "Scopus",
@@ -351,7 +351,7 @@
                             "Attach E copy of all journal papers link": "https://velammal.edu.in/NAAC-assets/files/NAAC/2021-22/Criteria3/3.4.5-Indexed/3-auto.pdf"
                         },
                         {
-                            "S.No": "13",
+                            "S.No": 13,
                             "Name of the Author(s)": "S.Baskara Sethupathy",
                             "Title of the Paper": "Experimental investigation of performance of variable Compression Ratio engine fueled with pyrolised oil and Bio Alcohols",
                             "SCI/ WoS/ Scopus/ Google Scholar/ UGC Care/Other": "Scopus",
@@ -364,7 +364,7 @@
                             "Attach E copy of all journal papers link": "https://velammal.edu.in/NAAC-assets/files/NAAC/2021-22/Criteria3/3.4.5-Indexed/4-auto.pdf"
                         },
                         {
-                            "S.No": "14",
+                            "S.No": 14,
                             "Name of the Author(s)": "V Chandran, Stanly Wilson louis",
                             "Title of the Paper": "Mechanical Behavior of GFRP filled with Copper Nano Particles based Composite",
                             "SCI/ WoS/ Scopus/ Google Scholar/ UGC Care/Other": "Others",
@@ -377,7 +377,7 @@
                             "Attach E copy of all journal papers link": "https://velammal.edu.in/NAAC-assets/files/NAAC/2021-22/Criteria3/3.4.5-Non-Indexed/1-auto-ni.pdf"
                         },
                         {
-                            "S.No": "15",
+                            "S.No": 15,
                             "Name of the Author(s)": "S.BaskaraSethupathy",
                             "Title of the Paper": "Interlaminar Shear, Bending, and Water Retention Behavior of Nano-SiO2 Filler-Incorporated Dharbai/Glass Fiber-Based Hybrid Composites under Cryogenic Environment",
                             "SCI/ WoS/ Scopus/ Google Scholar/ UGC Care/Other": "SCI",
@@ -390,7 +390,7 @@
                             "Attach E copy of all journal papers link": "https://drive.google.com/file/d/1G27Rfj6uJK_IsXGVheBVIn2Tj8pO0u0e/view?usp=share_link"
                         },
                         {
-                            "S.No": "16",
+                            "S.No": 16,
                             "Name of the Author(s)": "S.BaskaraSethupathy",
                             "Title of the Paper": "Effect of Nano TiO2 Filler Addition on Mechanical Properties of Bamboo/Polyester Hybrid Composites and Parameters Optimized Using Grey Taguchi Method",
                             "SCI/ WoS/ Scopus/ Google Scholar/ UGC Care/Other": "SCI",
@@ -403,7 +403,7 @@
                             "Attach E copy of all journal papers link": "https://drive.google.com/file/d/1BR6PIn1K8Mt3MwNJd9ATnOBWzCaFGrrx/view?usp=share_link"
                         },
                         {
-                            "S.No": "17",
+                            "S.No": 17,
                             "Name of the Author(s)": "P.Pathmanaban,",
                             "Title of the Paper": "Damage Detection and Classification of Mangoes Based on Thermal Imaging",
                             "SCI/ WoS/ Scopus/ Google Scholar/ UGC Care/Other": "SCI",
@@ -416,7 +416,7 @@
                             "Attach E copy of all journal papers link": "https://drive.google.com/file/d/1H8maiv2LgUrNQ9BBMXogwJO8sDRfQWPs/view?usp=share_link"
                         },
                         {
-                            "S.No": "18",
+                            "S.No": 18,
                             "Name of the Author(s)": "V.Chandran",
                             "Title of the Paper": "An Evolutionary Algorithmic Approach for Improving the Success Rate of Selective Assembly through a Novel EAUB Method",
                             "SCI/ WoS/ Scopus/ Google Scholar/ UGC Care/Other": "SCI",
@@ -429,7 +429,7 @@
                             "Attach E copy of all journal papers link": "https://drive.google.com/file/d/15OmEWvjh2zyeMr0ijcnCPkMCPZKEGWAz/view?usp=share_link"
                         },
                         {
-                            "S.No": "19",
+                            "S.No": 19,
                             "Name of the Author(s)": "P.Thennarasu",
                             "Title of the Paper": "Feasibility of adding fusel oil as an oxygenate to gasoline on reducing mpfi engine emissions",
                             "SCI/ WoS/ Scopus/ Google Scholar/ UGC Care/Other": "SCI",
@@ -442,7 +442,7 @@
                             "Attach E copy of all journal papers link": "https://drive.google.com/file/d/1IrlAKrrhCLaiAKBsBvOuzNnKKtFINTvG/view?usp=share_link"
                         },
                         {
-                            "S.No": "20",
+                            "S.No": 20,
                             "Name of the Author(s)": "M.Senthamilelvan",
                             "Title of the Paper": "Ethanol, Hemp, and Cottonseed Oil Biofuel Injection Completely Eliminates Diesel Fuel in Reactivity-Controlled Compression Ignition Engine",
                             "SCI/ WoS/ Scopus/ Google Scholar/ UGC Care/Other": "SCI",
@@ -455,7 +455,7 @@
                             "Attach E copy of all journal papers link": "https://drive.google.com/file/d/1xSUBXZFRi-6x37UiO5_4Sa7Rk7E0CAvi/view?usp=share_link"
                         },
                         {
-                            "S.No": "21",
+                            "S.No": 21,
                             "Name of the Author(s)": "M.Yuvaraj",
                             "Title of the Paper": "Influence of nano-coating on the productivity of a double slope solar still",
                             "SCI/ WoS/ Scopus/ Google Scholar/ UGC Care/Other": "SCOPUS",
@@ -468,7 +468,7 @@
                             "Attach E copy of all journal papers link": "https://drive.google.com/file/d/1e0j4gpL_ZYXhtfyxgTea4MueHdbv-_Ng/view?usp=share_link"
                         },
                         {
-                            "S.No": "22",
+                            "S.No": 22,
                             "Name of the Author(s)": "P.Pathmanaban",
                             "Title of the Paper": "Guava fruit( Psidium guajava ) damage and disease detection using deep convolutional neural networks and thermal imaging",
                             "SCI/ WoS/ Scopus/ Google Scholar/ UGC Care/Other": "SCI",
@@ -481,7 +481,7 @@
                             "Attach E copy of all journal papers link": "https://drive.google.com/file/d/1TjaVt_bsOLz_CZJIHf4kOkdNncq_6jKO/view?usp=share_link"
                         },
                         {
-                            "S.No": "23",
+                            "S.No": 23,
                             "Name of the Author(s)": "P.Thennarasu",
                             "Title of the Paper": "Prediction of emission and performance of a variable compression ratio SI engine with gasoline/ethanol blend using response surface methodology",
                             "SCI/ WoS/ Scopus/ Google Scholar/ UGC Care/Other": "SCI",
@@ -494,7 +494,7 @@
                             "Attach E copy of all journal papers link": "https://www.ijcce.ac.ir/article_701489.html"
                         },
                         {
-                            "S.No": "24",
+                            "S.No": 24,
                             "Name of the Author(s)": "P.Thennarasu",
                             "Title of the Paper": "Reducing gaoline emissions using novel bio based oxygenates: a review",
                             "SCI/ WoS/ Scopus/ Google Scholar/ UGC Care/Other": "SCI",
@@ -507,7 +507,7 @@
                             "Attach E copy of all journal papers link": "https://drive.google.com/file/d/1jxBRpKjn4OoVkWwzbU-wVS2OK6yax-sV/view?usp=share_link"
                         },
                         {
-                            "S.No": "25",
+                            "S.No": 25,
                             "Name of the Author(s)": "P.Thennarasu",
                             "Title of the Paper": "Experimental investigation on effect dual oxygenates (ethanol, n-butanol) with gasoline on MPFI engine performance and emission characteristics",
                             "SCI/ WoS/ Scopus/ Google Scholar/ UGC Care/Other": "SCI",
@@ -520,7 +520,7 @@
                             "Attach E copy of all journal papers link": "https://drive.google.com/file/d/1jxBRpKjn4OoVkWwzbU-wVS2OK6yax-sV/view?usp=share_link"
                         },
                         {
-                            "S.No": "26",
+                            "S.No": 26,
                             "Name of the Author(s)": "P.Thennarasu",
                             "Title of the Paper": "Performance optimization of gasoline engine fueled with ethanol/n-butanol/gasoline blends using response surface methodology",
                             "SCI/ WoS/ Scopus/ Google Scholar/ UGC Care/Other": "SCI",
@@ -533,7 +533,7 @@
                             "Attach E copy of all journal papers link": "https://drive.google.com/file/d/1KnCXl8YZhpIPqxGuWESo0ZUFaAOlrT4j/view?usp=drive_link"
                         },
                         {
-                            "S.No": "27",
+                            "S.No": 27,
                             "Name of the Author(s)": "P.Pathmanaban",
                             "Title of the Paper": "Analysis of mango fruit surface temperature using thermal imaging and deep learning",
                             "SCI/ WoS/ Scopus/ Google Scholar/ UGC Care/Other": "SCI",
@@ -546,7 +546,7 @@
                             "Attach E copy of all journal papers link": "https://drive.google.com/file/d/13kmZW04pk-tz9Cm2LzTwGuqT9rg8rrv3/view?usp=drive_link"
                         },
                         {
-                            "S.No": "28",
+                            "S.No": 28,
                             "Name of the Author(s)": "V.Chandran",
                             "Title of the Paper": "Evaluation of mechanical and thermal behavior of ferrous and non-ferrous nano fillers based GFRP composites",
                             "SCI/ WoS/ Scopus/ Google Scholar/ UGC Care/Other": "Scopus",
@@ -559,7 +559,7 @@
                             "Attach E copy of all journal papers link": "https://drive.google.com/file/d/17--CFh_TyCftHt5NDoJUdY3UjVxYc61O/view?usp=drive_link"
                         },
                         {
-                            "S.No": "29",
+                            "S.No": 29,
                             "Name of the Author(s)": "M.Yuvaraj",
                             "Title of the Paper": "Experimental investigation on the effective condenser glass area of solar still hybrid with photovoltaic cells",
                             "SCI/ WoS/ Scopus/ Google Scholar/ UGC Care/Other": "SCI",
@@ -572,7 +572,7 @@
                             "Attach E copy of all journal papers link": "https://drive.google.com/file/d/1q7Fi6Asp-qIl32QPE-xHMeKwXqjyUnjC/view?usp=drive_link"
                         },
                         {
-                            "S.No": "30",
+                            "S.No": 30,
                             "Name of the Author(s)": "M.Senthamilselvan",
                             "Title of the Paper": "Impacts of pine oil and hydrogen induction with hemp oil\nmethyl ester on dual fuel reactivity controlled compression\nignition combustion in diesel engine",
                             "SCI/ WoS/ Scopus/ Google Scholar/ UGC Care/Other": "SCI",

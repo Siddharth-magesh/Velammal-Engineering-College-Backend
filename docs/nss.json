@@ -8,20 +8,9 @@
     "members": {
         "name": ["Kaviaya Shree", "Lalith Kannan", "Vinoth Kumar", "Dayanitha", "Sanjay Kumar", "Subashini", "Rahul Kumararan", "Sharavanth Kumar", "Swedha", "Mukesh", "Monova Daniel"
         ],
-        "reg_no": [
-            
-        ],
-        "rank": [
-            
-        ],
-        "year": [
-            
-        ],
         "image_path": ["static/images/Nss/2.webp", "static/images/Nss/3.webp", "static/images/Nss/4.webp", "static/images/Nss/5.webp", "static/images/Nss/6.webp", "static/images/Nss/7.webp", "static/images/Nss/8.webp", "static/images/Nss/9.webp", "static/images/Nss/10.webp", "static/images/Nss/11.webp", "static/images/Nss/12.webp"
             
         ],
-        "department":[],
-        "university_no":[],
         "designation":["GCO & Mech & Auto coordinator", "VCO & CSE coordinator", "ECE coordinator", "IT coordinator", "Civil, Cyber, EIE department coordinator", "EEE coordinator", "AI&DS coordinator", "Poster Team Head", "Newsletter Team Head", "Technical Team Head", "Website & Camera Handling Team Head"]
     },
     "events": {
@@ -69,7 +58,6 @@
 
 
         ],
-        "des": [],
         "date": ["22nd December 2024",
         "26th January 2025",
         "29th October 2024",
