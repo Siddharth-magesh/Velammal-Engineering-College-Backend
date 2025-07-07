@@ -6,31 +6,31 @@
           "name": "Dr.S.Satish Kumar",
           "designation": "Chairperson",
           "role": "Principal, VEC",
-          "imagepath": ""
+          "imagepath": "/static/images/principal_data/principal_photo.webp"
         },
         {
           "name": "Dr.A.Jebamalar",
           "designation": "Deans and Department Heads",
           "role": "Professor and Head, Dept. of Civil Engineering, Dean, Academics",
-          "imagepath": ""
+          "imagepath": "/static/images/dean_and_associates/dr_a_jebamalar.webp"
         },
         {
           "name": "Dr.S Mary Joans",
           "designation": "Deans and Department Heads",
           "role": "Professor and Head, Dept. of ECE & Dean, Faculty Development and Welfare",
-          "imagepath": ""
+          "imagepath": "/static/images/dean_and_associates/dr_s_mary_jones.webp"
         },
         {
           "name": "Dr.Jeevaa Katiravan",
           "designation": "Deans and Department Heads",
           "role": "Professor and Head, Dept. of IT & Dean, Planning and Development",
-          "imagepath": ""
+          "imagepath": "/static/images/dean_and_associates/dr_jeeva_katiravan.webp"
         },
         {
           "name": "Dr.E.Ganapathy Sundaram",
           "designation": "Deans and Department Heads",
           "role": "Professor and Head, Dept. of Mechanical Engineering & Dean, Accreditations and Ranking",
-          "imagepath": ""
+          "imagepath": "/static/images/dean_and_associates/dr_e_ganapathy_sundaram.webp"
         },
         {
           "name": "Dr.A.Balaji Ganesh",
@@ -42,13 +42,13 @@
           "name": "Dr.S.Shahil Kirupavathy",
           "designation": "Deans and Department Heads",
           "role": "Professor and Head, Dept. of Physics, Dean, Student Development and welfare",
-          "imagepath": ""
+          "imagepath": "/static/images/dean_and_associates/dr_s_shahil_kirupavathy.webp"
         },
         {
           "name": "Mr.A.Arun Ramaswami",
           "designation": "Deans and Department Heads",
           "role": "Dean, Corporate relations and Higher Studies",
-          "imagepath": ""
+          "imagepath": "/static/images/dean_and_associates/mr_arun_ramasamy.webp"
         },
         {
           "name": "Dr.S.Srinath",
@@ -57,16 +57,16 @@
           "imagepath": ""
         },
         {
-          "name": "Dr.P.visu",
+          "name": "Dr.P.Visu",
           "designation": "Deans and Department Heads",
           "role": "Professor and Head, Dept. of Artificial Intelligence & Data Science, Associative Dean, Accrediations and Ranking",
-          "imagepath": ""
+          "imagepath": "/static/images/dean_and_associates/dr_p_visu.webp"
         },
         {
           "name": "Dr.S.Baskara Sethupathy",
           "designation": "Deans and Department Heads",
           "role": "Professor and Head, Dept. of Automobile Engineering, Associate Dean, Research & Development",
-          "imagepath": ""
+          "imagepath": "/static/images/dean_and_associates/dr_s_bhaskara_sethupathy.webp"
         },
         {
           "name": "Dr.B.Murugeshwari",
@@ -78,7 +78,7 @@
           "name": "Dr.K.Sureshkumar",
           "designation": "Deans and Department Heads",
           "role": "Assoc Professor and Head, Dept. of Electrical and Electronics Engineering",
-          "imagepath": ""
+          "imagepath": "/static/images/dean_and_associates/dr_k_suresh_kumar.webp"
         },
         {
           "name": "Dr.Z.Brijet",

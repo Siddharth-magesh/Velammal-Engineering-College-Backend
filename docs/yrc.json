@@ -3,7 +3,7 @@
         {
             "name": "Dr. V.Ramesh Kumar",
             "designation": "Programme Officer",
-            "image_path": "static/images/yrc/head.webp"
+            "image_path": "/static/images/yrc/head.webp"
         },
     "members": {
       

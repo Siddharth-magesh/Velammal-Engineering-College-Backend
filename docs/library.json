@@ -2,7 +2,7 @@
     {
         "HOD": {
             "name": "Dr.S.RAJENDRAPRASATH",
-            "image_path" : "static/images//library/hod/Rajendra Prasath S.webp",
+            "image_path" : "/static/images/library/hod/Rajendra Prasath S.webp",
             "designation" : "Librarian/HOD",
             "education_qualification": "B.Sc., M.A., M.L.I.Sc., M.phil., Ph.D",
             "message": "VEC’s Central Library is a one of it’s kind installation that facilitates teaching, learning and research endeavours of our students, scholars and faculty members. It is one of the formost such libraries in Tamil Nadu  higher educational systems.  significant efforts are not just building structure that stores books.  It serves more realistically as a space for learning and knowledge exchange with users coming from diverse study and aspirational backgrounds."
@@ -16,10 +16,10 @@
             ],
             "description": "Our faculties are true professionals who have the capacity to raise incisive, difficult and sometimes uncomfortable questions that become potential GAME CHANGER. Our Faculty members consider teaching and training of new generation of graduate students as their highest calling.",
             "image": [
-                "static/images/library/faculty/Senthivel T.webp",
-                "static/images/library/faculty/Kumaravel P.webp",
-                "static/images/library/faculty/Panchavarnam M.webp",
-                "static/images/library/faculty/Udayakkal P.webp"
+                "/static/images/library/faculty/Senthivel T.webp",
+                "/static/images/library/faculty/Kumaravel P.webp",
+                "/static/images/library/faculty/Panchavarnam M.webp",
+                "/static/images/library/faculty/Udayakkal P.webp"
             ],
             "designation": [
                 "Library Assistant",

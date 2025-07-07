@@ -9,7 +9,7 @@
         "resource_person": "Mr. Ahamed Khalid,\nHead -Academic Alliances, Imarticus Learning,IIM,Bangalore.",
         "beneficiaries": "II- and III-YEAR students.",
         "relevant_PO_PSO": "PSO1, PSO2, PO3,PO6, PO9,PO10, PO11,PSO1",
-        "image_path": [""]
+        "image_path": ["/static/images/dept_activities/001/career_oppurtunity.webp"]
       },
       {
         "date": "15/02/2024",
@@ -27,7 +27,7 @@
         "resource_person": "-",
         "beneficiaries": "III year Students",
         "relevant_PO_PSO": "PSO1, PSO2, PO3,PO6, PO9,PO10, PO11,PSO1",
-        "image_path": [""]
+        "image_path": ["/static/images/dept_activities/001/AI_Tech_Expo.webp"]
       },
       {
         "date": "28-3-2024",
@@ -198,7 +198,7 @@
         "resource_person": "Dr.S.Sibi Chakkaravathy,\nAssociate Professor,VIT,Andhra Pradesh",
         "beneficiaries": "III,II Year Students",
         "relevant_PO_PSO": "PSO1,PSO2, PO3,PO6, PO9,PO10, PO11,PSO1",
-        "image_path": [""]
+        "image_path": ["/static/images/dept_activities/001/Workshop _on_DL.webp"]
       },
       {
         "date": "1-4-2023",

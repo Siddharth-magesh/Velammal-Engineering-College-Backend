@@ -270,7 +270,7 @@
         {"id": "NewsLetter", "hascontent": false},
         {"id": "Activities", "hascontent": false},
         {"id": "StudentAchievments", "hascontent": true},
-        {"id": "Infrastructure", "hascontent": true},
+        {"id": "Infrastructure", "hascontent": false},
         {"id": "Mous", "hascontent": true},
         {"id": "Research", "hascontent": true}
       ]

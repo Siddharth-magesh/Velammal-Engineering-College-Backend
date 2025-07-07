@@ -1,7 +1,7 @@
 [{
     "name": "Jeyabalraj",
     "designation": "Administrative Officer",
-    "photo_path": "static/images/admin_office/Jeyabalraj.webp"
+    "photo_path": "/static/images/admin_office/Jeyabalraj.webp"
   },
   {
     "name": "Prakash Kumar B",
