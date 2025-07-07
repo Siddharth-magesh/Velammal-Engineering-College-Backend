@@ -1,14 +1,14 @@
 [{
     "coordinater": 
         {
-            "name": "Ramesh Kumar",
-            "designation": "coordinator",
+            "name": "Dr. V.Ramesh Kumar",
+            "designation": "Programme Officer",
             "image_path": "static/images/yrc/head.webp"
         },
     "members": {
       
         "name": ["Praveen Hari S", "Neena V", "Aram Valartha Nayaki K", "Logesh G", "Siddharth M", "Tarakeshwaran S", "Mithun Raj S", "Jothi Lakshmi", "Akshaya S", "Dakshan B"],
-        "designation": ["chairman", "vice chairman", "secretary", "treasurer", "Tech Head", "Tech Head", "non-tech Head", "non-tech Head", "joint secretary", "joint secretary"],
+        "designation": ["Chairman", "Vice Chairman", "Secretary", "Treasurer", "Tech Head", "Tech Head", "Non-Tech Head", "Non-Tech Head", "Joint Secretary", "Joint Secretary"],
         "reg_no": [
         ],
         "year": ["III", "III", "III", "III", "III", "III", "III", "III", "II", "II"
@@ -47,11 +47,10 @@
           ]
     },
     "awards": {
-        "image_path": ["/static/images/yrc/THE_BRIDGE_PROJECT1.webp",
-            "/static/images/yrc/award/THE_BRIDGE_PROJECT.webp"
+        "image_path": ["/static/images/yrc/THE_BRIDGE_PROJECT1.webp"
 
         ],
-        "title":["The best team-THE BRIDGE PROJECT"],
+        "title":["The Best Team-THE BRIDGE PROJECT"],
         "des": ["the Youth Red Cross (YRC) of Velammal Engineering College was honored with the prestigious Best Team Award for its outstanding humanitarian efforts and social service initiatives. The award for Batch 23-24 was presented by Mr. Velu Karthikeyan, Vice Chairman of the Bar Council of Tamil Nadu and Puducherry, while Batch 21-22 was recognized by Justices J. Sathya Narayana Prasad and D. Bharatha Chakravarthy from the High Court of Madras. This recognition celebrates YRC’s dedication to community service, environmental initiatives, and youth empowerment through volunteering, disaster relief, blood donation drives, and leadership development, inspiring future generations to serve society."
 
         ]

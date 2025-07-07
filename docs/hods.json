@@ -19,7 +19,7 @@
     {
         "Name": "Dr. MARY JOANS",
         "department_name": "Electronics and Communication Engineering (ECE) ",
-        "Unique_id": "VEC-007-01-090",
+        "Unique_id": "VEC-009-01-090",
         "Qualification": ["M.E", "PhD"],
         "Hod_message": ["Department of ECE at Velammal Engineering College has proved its excellence in the field of Teaching, Research, placement and Student Activities since its establishment from 1995 onwards. Creative engineers solve practical problems to find out a solution for a societal problem. Also to crack society’s utmost challenges, country desires ECE engineers with entrepreneurial state of mind who can apply curiosity and creativity to the technical skillets in order to come up with truly novel ideas. Students in our department are trained with relevant practice through labs and projects for building the problem-solving skills, keeping industry requirements in view."],
         "Image": "/static/images/hods/ece.webp",
@@ -233,7 +233,7 @@
     {
         "Name": "Dr.A.NIRMALRAJ",
         "department_name": "Master of Business Administration (MBA)",
-        "Unique_id": "VEC-016-01-181",
+        "Unique_id": "VEC-017-01-181",
         "Qualification": ["B.COM.", "MBA.", "Ph.D"],
         "Hod_message": ["At VEC, we provide our learners—who come from diverse backgrounds—with ample opportunities for academic exploration and holistic development."," We recognize the growing need for business leaders who are well-versed in business principles, technology, and managerial skills. Therefore, our program offers a comprehensive overview of essential business concepts and industry-relevant technical practices, equipping learners with the knowledge and expertise required to excel in today's dynamic business landscape."],
         "Image": "/static/images/hods/mba.webp",
@@ -251,6 +251,20 @@
         "Name": "Dr.B.Murugeswari",
         "department_name": "M.E Computer Science Engineering",
         "Unique_id": "VEC-005-01-120",
+        "Qualification": ["M.E", "PhD"],
+        "Hod_message": ["The department is instrumental in conducting various technical and non-technical activities for students as well as faculty members. The focus is not only technical stuff on but also moral values, ethics; professionalism and students are made aware of the latest industry trends and needs in various technological domains. Well-motivated, competent faculty members are always engaged in student’s welfare. Encouragement and guidance is offered to the students for participating in sports and various extracurricular activities to highlight and strengthen their nontechnical skills. Our academic rigor, Plan-Do-Check-Act approach in all sorts of aspects has made this department to be a one of the best choices for UG, PG and PhD admission aspirants."],
+        "Image": "/static/images/hods/cse.webp",
+        "designation": "Professor and Head, Department of Computer Science and Engineering.",
+        "Social_media_links": {
+            "LinkedIn": "https://www.linkedin.com/in/k-nagarajan/",
+            "Google Scholar": "https://scholar.google.com/citations?user=kNagarajan&hl=en",
+            "Scopus": "https://www.scopus.com/authid/detail.uri?authorId=56140900400"
+        }
+    },
+    {
+        "Name": "Dr.B.Murugeswari",
+        "department_name": "Computer Science & Engineering (CSE)",
+        "Unique_id": "VEC-016-01-120",
         "Qualification": ["M.E", "PhD"],
         "Hod_message": ["The department is instrumental in conducting various technical and non-technical activities for students as well as faculty members. The focus is not only technical stuff on but also moral values, ethics; professionalism and students are made aware of the latest industry trends and needs in various technological domains. Well-motivated, competent faculty members are always engaged in student’s welfare. Encouragement and guidance is offered to the students for participating in sports and various extracurricular activities to highlight and strengthen their nontechnical skills. Our academic rigor, Plan-Do-Check-Act approach in all sorts of aspects has made this department to be a one of the best choices for UG, PG and PhD admission aspirants."],
         "Image": "/static/images/hods/cse.webp",
