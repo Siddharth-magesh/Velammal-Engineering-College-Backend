@@ -1381,6 +1381,32 @@ app.get('/api/overall_book_publication', async (req, res) => {
     }
 });
 
+//coe endpoint
+app.get('/api/coe', async (req, res) => {
+    try {
+        await client.connect();
+        console.log("Mongo db connected");
+        
+        const db = client.db(dbName);
+        const collection = db.collection('COE');  // This is your MongoDB collection name
+
+        const coeData = await collection.find({}).toArray();
+
+        if (coeData.length === 0) {
+            return res.status(404).json({ message: 'No COE data found' });
+        }
+
+        res.status(200).json(coeData);
+
+    } catch (error) {
+        console.error('❌ Error fetching COE data:', error);
+        res.status(500).json({ error: 'Error fetching COE data' });
+    } finally {
+        await client.close();
+    }
+});
+
+
 app.listen(port, () => {
     console.log(`🚀 Server running at http://localhost:${port}`);
 });

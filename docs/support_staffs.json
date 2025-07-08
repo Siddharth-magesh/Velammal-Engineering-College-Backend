@@ -2,7 +2,7 @@
   {
     "supporting_staff": [
       {
-        "Name": "Ms. S. Indumathi",
+        "Name": "Ms. INDUMATHI S",
         "Image": "/static/images/support_staffs/example.jpg",
         "Qualification": "M.SC(IT).",
         "Designation": "Lab Instructor",
@@ -16,7 +16,7 @@
         "Unique_id": "VEC-013-01-160"
       },
       {
-        "Name": "Mr. C. Ravi kumar",
+        "Name": "Mr. RAVI KUMAR C",
         "Image": "/static/images/support_staffs/example.jpg",
         "Qualification":"M.Sc., M. Phil",
         "Designation": "Lab Instructor",
@@ -30,7 +30,7 @@
         "Unique_id": "VEC-013-01-161"
       },
       {
-        "Name": "Ms. M. Vijayalakshmi",
+        "Name": "Ms. VIJAYALAKSHMI M",
         "Image": "/static/images/support_staffs/example.jpg",
         "Designation": "Lab Instructor",
         "dept":"011",
@@ -43,7 +43,7 @@
         "Unique_id": ""
       },
       {
-        "Name": "Mr. V. Suresh",
+        "Name": "Mr. SURESH V",
         "Image": "/static/images/support_staffs/example.jpg",
         "Designation": "Lab Instructor",
         "dept":"011",
@@ -56,7 +56,7 @@
         "Unique_id": ""
       },
       {
-        "Name": "Mr. B. Kanagaraj",
+        "Name": "Mr. KANAGARAJ B",
         "Image": "/static/images/support_staffs/example.jpg",
         "Designation": "Lab Instructor",
         "dept":"011",
@@ -69,7 +69,7 @@
         "Unique_id": ""
       },
       {
-        "Name": "Mrs.DhanaLakshmi G",
+        "Name": "Mrs. DHANALAKSHMI G",
         "Image": "",
         "Designation": "Lab Instructor",
         "dept":"009",
@@ -82,7 +82,7 @@
         "Unique_id": ""
       },
       {
-        "Name": "Mr.Subramanian N",
+        "Name": "Mr. SUBRAMANIAN N",
         "Image": "",
         "Designation": "Lab Instructor",
         "dept":"009",

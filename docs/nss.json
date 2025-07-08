@@ -1,12 +1,23 @@
 [{
     "coordinater": {
-        "name": "Dr. R.Karthick",
+        "name": "Dr. KARTHICK r",
         "designation": "Programme Officer",
         "image_path": "/static/images/nss/1.webp",
         "message": ""
     },
     "members": {
-        "name": ["Kaviaya Shree", "Lalith Kannan", "Vinoth Kumar", "Dayanitha", "Sanjay Kumar", "Subashini", "Rahul Kumararan", "Sharavanth Kumar", "Swedha", "Mukesh", "Monova Daniel"
+"name": [
+  "KAVIAYA SHREE",
+  "LALITH KANAN",
+  "VINOTH KUMAR",
+  "DAYANITHA",
+  "SANJAY KUMAR",
+  "SUBASHINI",
+  "RAHUL KUMARARAN",
+  "SHARAVANTH KUMAR",
+  "SWEDHA",
+  "MUKESH",
+  "MONOVA DANIEL"
         ],
         "image_path": ["/static/images/nss/2.webp", "/static/images/nss/3.webp", "/static/images/nss/4.webp", "/static/images/nss/5.webp", "/static/images/nss/6.webp", "/static/images/nss/7.webp", "/static/images/nss/8.webp", "/static/images/nss/9.webp", "/static/images/nss/10.webp", "/static/images/nss/11.webp", "/static/images/nss/12.webp"
             

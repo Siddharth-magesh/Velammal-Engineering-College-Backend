@@ -1,65 +1,82 @@
-[{
-    "name": "Jeyabalraj",
+[
+  {
+    "name": "BHUVANESHWARAN U",
+    "designation": "General Manager",
+    "photo_path": "/static/images/admin_office/bhuvaneshwaran.webp"
+  },
+  {
+    "name": "DR.JEYABALRAJ V",
     "designation": "Administrative Officer",
     "photo_path": "/static/images/admin_office/Jeyabalraj.webp"
   },
   {
-    "name": "Prakash Kumar B",
+    "name": "PRAKASH KUMAR B",
     "designation": "Office Superintendent",
     "photo_path": "/static/images/admin_office/Prakash.webp"
   },
   {
-    "name": "Esther Flora E",
+    "name": "ESTHER FLORA HEMAPRIYA E",
     "designation": "Manager – HR",
     "photo_path": "/static/images/admin_office/Esther.webp"
   },
   {
-    "name": "Kalyani S",
+    "name": "KALYANI S",
     "designation": "PA to Principal",
     "photo_path": "/static/images/admin_office/Kalyani.webp"
   },
   {
-    "name": "Sheeba K",
+    "name": "SHEEBA K",
     "designation": "Student Affairs",
     "photo_path": "/static/images/admin_office/Sheeba.webp"
   },
   {
-    "name": "Rajalakshmi M",
+    "name": "RAJALAKSHMI M",
     "designation": "Cashier",
     "photo_path": "/static/images/admin_office/Rajalakshmi.webp"
   },
   {
-    "name": "Kalpana M",
+    "name": "KALPANA M",
     "designation": "Receptionist",
     "photo_path": "/static/images/admin_office/Kalpana.webp"
   },
   {
-    "name": "Vithya",
-    "designation": "Accountant",
+    "name": "VITHYA R",
+    "designation": "Accountant Assistant",
     "photo_path": "/static/images/admin_office/Vithya.webp"
   },
   {
-    "name": "Muruganantham C",
+    "name": "JENEFER ASHA JEYARANI M",
+    "designation": "SAC",
+    "photo_path": "/static/images/admin_office/Jenefer.webp"
+  },
+  {
+    "name": "VIDHYA",
+    "designation": "",
+    "photo_path": "/static/images/admin_office/.webp"
+  },
+  {
+    "name": "MURUGANANTHAM C",
     "designation": "Clerk",
     "photo_path": "/static/images/admin_office/Muruganantham.webp"
   },
   {
-    "name": "Nivethitha N",
-    "designation": "Admission Co-Ordinator",
+    "name": "NIVETHITHA N",
+    "designation": "Office Co-Ordinator",
     "photo_path": "/static/images/admin_office/Nivethitha.webp"
   },
   {
-    "name": "Karthikeyan N",
+    "name": "KARTHIKEYAN N",
     "designation": "Office Assistant",
     "photo_path": "/static/images/admin_office/Karthikeyan.webp"
   },
   {
-    "name": "Thavamani T",
+    "name": "THAVAMANI T",
     "designation": "Office Assistant",
     "photo_path": "/static/images/admin_office/Thavamani.webp"
   },
   {
-    "name": "Lakshmi R",
+    "name": "LAKSHMI R",
     "designation": "Office Assistant",
     "photo_path": "/static/images/admin_office/Lakshmi.webp"
-  }]
+  }
+]

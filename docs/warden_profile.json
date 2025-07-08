@@ -13,40 +13,41 @@
     },
     {
         "male_warden_list": [
-            {
-                "warden_name": "Donald3",
-                "phone_number": 1234567891,
-                "image_path": "/static/images/warden_profile_photos/003.jpeg",
-                "designation": "deputy"
-            },
-            {
-                "warden_name": "Donald4",
-                "phone_number": 1234567892,
-                "image_path": "/static/images/warden_profile_photos/004.jpeg",
-                "designation": "deputy"
-            },
-            {
-                "warden_name": "Donald5",
-                "phone_number": 1234567893,
-                "image_path": "/static/images/warden_profile_photos/005.jpeg",
-                "designation": "deputy"
-            }
-        ]
+    {
+      "warden_name": "TEJENDRA BAHADHUR SHAHI S",
+      "phone_number": 8098835544,
+      "image_path": "/static/images/warden_profile_photos/003.webp",
+      "designation": "deputy"
     },
     {
-        "female_warden_list": [
-            {
-                "warden_name": "Donald6",
-                "phone_number": 1234567894,
-                "image_path": "/static/images/warden_profile_photos/006.jpeg",
-                "designation": "deputy"
-            },
-            {
-                "warden_name": "Donald7",
-                "phone_number": 1234567895,
-                "image_path": "/static/images/warden_profile_photos/007.jpeg",
-                "designation": "deputy"
-            }
-        ]
+      "warden_name": "RAVI A",
+      "phone_number": 9445170364,
+      "image_path": "/static/images/warden_profile_photos/004.webp",
+      "designation": "deputy"
+    },
+    {
+      "warden_name": "Mathivanan M",
+      "phone_number": 9043857601,
+      "image_path": "/static/images/warden_profile_photos/005.webp",
+      "designation": "deputy"
     }
+  ]
+},
+{
+  "female_warden_list": [
+    {
+      "warden_name": "Ashwini Girija A",
+      "phone_number": 9600701242,
+      "image_path": "/static/images/warden_profile_photos/006.webp",
+      "designation": "deputy"
+    },
+    {
+      "warden_name": "Menaga T",
+      "phone_number": 8220348276,
+      "image_path": "/static/images/warden_profile_photos/007.webp",
+      "designation": "deputy"
+    }
+  ]
+}
+
 ]

@@ -734,6 +734,15 @@ def insert_newsletter():
     print("newsletter inserted successfully \n")
 
 
+def insert_COE_data():
+    collection = db['coe']
+    with open("/Velammal-Engineering-College-Backend/docs/coe.json", "r",encoding="utf-8") as file:
+        documents = json.load(file)
+        collection.insert_many(documents)
+
+    print("COE documents inserted successfully.\n")
+
+
 
 insert_department_data()
 insert_hod_datas()
@@ -763,6 +772,7 @@ insert_sidebar_details()
 insert_iic_details()
 insert_dept_activities_details()
 insert_newsletter()
+insert_COE_data()
 
 department_mapping = {
     "Artificial Intelligence and Data Science": "001",
