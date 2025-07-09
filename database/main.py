@@ -67,7 +67,6 @@ department_mapping = {
     "Physics": "015",
     "Master Of Computer Science": "016",
     "Master of Business Admin": "017",
-    
     "Physical Education":"020",
     "Placement":"021"
 }
