@@ -904,14 +904,6 @@ def insert_sports_data():
     print("Sports data inserted successfully.\n")
 
 
-def insert_other_facilties():
-    collection = db["other_facilties"]
-    with open("/Velammal-Engineering-College-Backend/docs/other_facilties.json", "r",encoding="utf-8") as file:
-        documents = json.load(file)
-        collection.insert_many(documents)
-
-    print("Other Facilties data inserted successfully.\n")
-
 def insert_library_data():
     collection = db["library"]
     with open("/Velammal-Engineering-College-Backend/docs/library.json", "r",encoding="utf-8") as file:
@@ -1031,7 +1023,6 @@ def insert_alumni_data():
     print("Inserted Alumni data. \n")
 
 insert_sports_data()
-insert_other_facilties()
 insert_library_data()
 insert_nss_data()
 insert_yrc_data()
