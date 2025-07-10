@@ -47,7 +47,7 @@
           ]
     },
     "awards": {
-        "image_path": ["/static/images/yrc/THE_BRIDGE_PROJECT1.webp"
+        "image_path": ["/static/images/yrc/award/THE_BRIDGE_PROJECT.webp"
 
         ],
         "title":["The Best Team-THE BRIDGE PROJECT"],
@@ -56,7 +56,7 @@
         ]
     },
     "news": {
-        "updaates": ["1. College Fest 2025 will be held on March 25th.","2. We have successfully completed Eco-Nomics 3.0, a 100-day tree plantation initiative by YRC volunteers.","3. The annual sports meet is scheduled for April 10th."
+        "updates": ["1. College Fest 2025 will be held on March 25th.","2. We have successfully completed Eco-Nomics 3.0, a 100-day tree plantation initiative by YRC volunteers.","3. The annual sports meet is scheduled for April 10th."
 
         ]
     }

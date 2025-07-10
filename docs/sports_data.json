@@ -57,7 +57,7 @@
       "ANNA UNIVERSITY ZONAL KHO KHO MEN WINNER MATCH HELD AT PRATHYUSHA ENGG COLLEGE ON 16.03.24"
     ],
     "image_path": [
-      "/static/images/aports/zonal/zonal_badminton_m_3.webp",
+      "/static/images/sports/zonal/zonal_badminton_m_3.webp",
       "/static/images/sports/zonal/zonal_badminton_w_2.webp",
       "/static/images/sports/zonal/zonal_chess_m_1.webp",
       "/static/images/sports/zonal/zonal_tabletennis_w_1.webp",
@@ -70,8 +70,8 @@
       "/static/images/sports/zonal/zonal_kabaddi_m_1.webp",
       "/static/images/sports/zonal/zonal_volleyball_m_3.webp",
       "/static/images/sports/zonal/zonal_chess_m&w_1_23.webp",
-      "/static/images/sports/zonal/zonal_zonal_tabletennis_m_2_23.webp",
-      "/static/images/sports/zonal/zonal_badminton_w_2_23.webp",
+      "/static/images/sports/zonal/zonal_tabletennis_m_2_23.webp",
+      "/static/images/sports/zonal/zonal_badminton__w_2_23.webp",
       "/static/images/sports/zonal/zonal_hockey_m_1_23.webp",
       "/static/images/sports/zonal/zonal_football_m_1_23.webp",
       "/static/images/sports/zonal/zonal_volleyball_m_3_23.webp",
@@ -84,7 +84,7 @@
     ]
   },
   "HOD": {
-    "name": "Dr.P.RAMESH KANNAN",
+    "name": "Dr.RAMESH KANNAN P",
     "designation": "Head & Director of Physical Education",
     "qualification": "M.A., M.P.Ed., M.Phil., Ph.D.",
     "message": "Sports play an important role in every human being’s day-to-day life and bring people together irrespective of their age, gender and nationality. Our department of Physical Education is marching towards fulfilling CEO Sir Vision as a reality. Young achievers in various sports have won prizes and medals at various state, National and international level events. Our goal is to increase the participation of our teams in various competitions and win medals and bring laurels to the College and the country.",
@@ -92,8 +92,8 @@
   },
   "faculty": {
     "name": [
-      "Ms.JAYANTHI.K",
-      "Mr.SRINIVASAN.S"
+      "Ms.JAYANTHI K",
+      "Mr.SRINIVASAN S"
     ],
     "image_path": [
       "/static/images/sports/faculty/Jayanthi.webp",
@@ -132,13 +132,13 @@
   },
   "others": {
     "image_path": [
-      "/static/images/sports/others/others_dfi_talenthunt_1.webp",
+      "/static/images/sports/others/others_bfi_talenthunt_1.webp",
       "/static/images/sports/others/others_fencing_m.webp",
       "/static/images/sports/others/others_kheloindia_boxing_w.webp",
       "/static/images/sports/others/others_kheloindia_boxing_w_3_23.webp",
       "/static/images/sports/others/others_kumite_m_2_23.webp",
       "/static/images/sports/others/others_taekwondo_w.webp",
-      "/static/images/sports/others/others_taekwondo_overall_m_23.webp",
+      "/static/images/sports/others/others_teakwondo_overall_m_23.webp",
       "/static/images/sports/others/others_Jr_Mr_Tamilnadu.webp"
     ],
     "title":[

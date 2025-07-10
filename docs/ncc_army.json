@@ -320,7 +320,14 @@
     ]
   },
   "events": {
+    "image_path":[],
+    "title": [],
+    "des": []
   },
-  "awards": {},
-  "news": {}
+  "awards": {
+    "title":[],
+    "image_path": [],
+      "des": []
+  },
+  "news": {"updates": []}
 }]

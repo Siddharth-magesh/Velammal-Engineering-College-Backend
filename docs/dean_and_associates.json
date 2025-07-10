@@ -30,7 +30,7 @@
     "Dean_Image": "/static/images/dean_and_associates/dr_s_shahil_kirupavathy.webp",
     "Associate_Dean": "Dr. GEETHA R",
     "Ass_Dean_Type": "Associate Dean",
-    "Associate_Dean_Designation": "Asst Prof - Electricals and Electronics Engineering",
+    "Associate_Dean_Designation": "Asst Prof - Electrical and Electronics Engineering",
     "Associate_Dean_Image": "/static/images/dean_and_associates/dr_geetha_r.webp"
   },
   {
@@ -71,6 +71,6 @@
     "Dean_Image": "/static/images/dean_and_associates/mr_arun_ramasamy.webp",
     "Associate_Dean": "Dr. SURESH KUMAR K",
     "Ass_Dean_Type": "Associate Dean",
-    "Associate_Dean_Designation": "Prof & Head - Electricals and Electronics Engineering",
+    "Associate_Dean_Designation": "Prof & Head - Electrical and Electronics Engineering",
     "Associate_Dean_Image": "/static/images/dean_and_associates/dr_k_suresh_kumar.webp"
   }]

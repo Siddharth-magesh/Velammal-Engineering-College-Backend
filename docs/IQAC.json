@@ -6,44 +6,44 @@
           {
             "name": "Dr. SATISH KUMAR S",
             "designation": "Chairperson",
-            "role": "Principal, VEC",
+            "role": "Principal, Velammal Engineering College",
             "imagepath": "/static/images/principal_data/principal_photo.webp"
           }
         ],
         "deansanddepartmentheads": [
           {
           "name": "Dr. JEBAMALAR A",
-          "designation": "Professor & Head, Dept. of Civil Engineering,",
+          "designation": "Professor & Head, Department of Civil Engineering,",
           "role": " Dean, Academics",
           "imagepath": "/static/images/dean_and_associates/dr_a_jebamalar.webp"
         },
         {
           "name": "Dr. MARY JOANS S",
-          "designation": "Professor & Head, Dept. of ECE,",
+          "designation": "Professor & Head, Department of Electronics and Communication Engineering,",
           "role": "Dean, Faculty Development and Welfare",
           "imagepath": "/static/images/dean_and_associates/dr_s_mary_jones.webp"
         },
         {
           "name": "Dr. JEEVAA KATIRAVAN",
-          "designation": "Professor & Head, Dept. of IT,",
+          "designation": "Professor & Head, Department of Information Technology,",
           "role": "Dean, Planning and Development",
           "imagepath": "/static/images/dean_and_associates/dr_jeeva_katiravan.webp"
         },
         {
           "name": "Dr. GANAPATHY SUNDARAM E",
-          "designation": "Professor & Head, Dept. of Mechanical Engineering,",
+          "designation": "Professor & Head, Department of Mechanical Engineering,",
           "role": "Dean, Accreditations and Ranking",
           "imagepath": "/static/images/dean_and_associates/dr_e_ganapathy_sundaram.webp"
         },
         {
           "name": "Dr. BALAJI GANESH A",
-          "designation": "Professor & Head, Dept. of CSE,",
+          "designation": "Professor & Head, Department of Computer Science & Engineering,",
           "role": "Dean, Research & Development",
           "imagepath": ""
         },
         {
           "name": "Dr. SHAHIL KIRUPAVATHY S",
-          "designation": "Professor & Head, Dept. of Physics,",
+          "designation": "Professor & Head, Department of Physics,",
           "role": "Dean, Student Development and welfare",
           "imagepath": "/static/images/dean_and_associates/dr_s_shahil_kirupavathy.webp"
         },
@@ -61,37 +61,37 @@
         },
         {
           "name": "Dr. VISU P",
-          "designation": "Professor and Head, Dept. of Artificial Intelligence & Data Science",
+          "designation": "Professor & Head, Department of Artificial Intelligence & Data Science",
           "role": "Associate Dean, Accrediations and Ranking",
           "imagepath": "/static/images/dean_and_associates/dr_p_visu.webp"
         },
         {
           "name": "Dr. BASKARA SETHUPATHY S",
-          "designation": "Professor and Head, Dept. of Automobile Engineering",
+          "designation": "Professor & Head, Department of Automobile Engineering",
           "role": "Associate Dean, Research & Development",
           "imagepath": "/static/images/dean_and_associates/dr_s_bhaskara_sethupathy.webp"
         },
         {
           "name": "Dr. MURUGESHWARI B",
-          "designation": "Professor and Head, Dept. of Computer Science and Engineering ",
+          "designation": "Professor & Head, Department of Computer Science and Engineering ",
           "role": "",
           "imagepath": ""
         },
         {
           "name": "Dr. SURESHKUMAR K",
-          "designation": "Assoc Professor and Head, Dept. of Electrical and Electronics Engineering",
+          "designation": "Professor & Head, Department of Electrical and Electronics Engineering",
           "role": "",
           "imagepath": "/static/images/dean_and_associates/dr_k_suresh_kumar.webp"
         },
         {
           "name": "Dr. BRIJET Z",
-          "designation": "Professor and Head, Dept. of Electronics & Instrumentation Engineering ",
+          "designation": "Professor & Head, Department of Electronics & Instrumentation Engineering ",
           "role": "",
           "imagepath": ""
         },
         {
           "name": "Dr. NIRMALRAJ A",
-          "designation": "Professor and Head, Dept. of Master of Business Administration",
+          "designation": "Professor & Head, Department of Master of Business Administration",
           "role": "",
           "imagepath": ""
         },
@@ -103,7 +103,7 @@
         },
         {
           "name": "Dr. MOHAMED SIKKANDER A",
-          "designation": "Assoc. Professor & Head, Dept. of Chemistry",
+          "designation": "Assoc. Professor & Head, Department of Chemistry",
           "role": "",
           "imagepath": ""
         },
@@ -115,7 +115,7 @@
         },
         {
           "name": "Mr. MUTHIAH M.M",
-          "designation": "Head, Dept. of Tamil",
+          "designation": "Head, Department of Tamil",
           "role": "",
           "imagepath": ""
         }
@@ -123,31 +123,31 @@
       "seniorteachers":[
         {
           "name": "Dr. AROKIA JASWIN M",
-          "designation": "",
-          "role": "Professor, Dept. of Mechanical Engineering, Associate Dean, Academics",
+          "designation": "Professor, Department of Mechanical Engineering",
+          "role": "Associate Dean, Academics",
           "imagepath": ""
         },
         {
           "name": "Dr. MANJU S",
-          "designation": "Assistant Professor, Dept. of ECE",
+          "designation": "Assistant Professor, Department of Electronics and Communication Engineering",
           "role": "",
           "imagepath": ""
         },
         {
           "name": "Mr. DAYAKAR C.V",
-          "designation": "Assistant Professor, Dept. of EIE",
+          "designation": "Assistant Professor, Department of Electronics & Instrumentation Engineering",
           "role": "",
           "imagepath": ""
         },
         {
           "name": "Dr. GEETHA R",
-          "designation": "Assistant Professor, Dept. of EEE",
+          "designation": "Assistant Professor, Department of Electrical & Electronics Engineering",
           "role": "Associate Dean,Student Development and welfare",
           "imagepath": ""
         },
         {
           "name": "Dr. RAJALAKSHMI S",
-          "designation": "Assistant Professor, Dept. of CSE",
+          "designation": "Asso Professor, Department of Computer Science & Engineering",
           "role": "Associate Dean, Planning and Development",
           "imagepath": ""
         }
@@ -164,38 +164,38 @@
       "localprofessionalsocietychapter":
       [{
           "name": "Mr. RAJHA RAJESWARAN T.A",
-          "designation": "Assistant Professor, Dept. of Civil Engineering",
+          "designation": "Assistant Professor, Department of Civil Engineering",
           "role": "Secretary-chennai Centre, ACCE(I) Association of Consulting civil Engineers(India)",
           "imagepath": ""
         }
       ],
        "studentmembers": [{
           "name": "Ms. NIHARIKA B",
-          "designation": "Final Year student, AI & DS",
+          "designation": "Final Year student, Artificial Intelligence and Data Science",
           "role": "",
           "imagepath": ""
         },
         {
           "name": "Mr. KARPAGAVINAYAGAM A.L",
-          "designation": "Final Year student, IT",
+          "designation": "Final Year student, Information Technology",
           "role": "",
           "imagepath": ""
         },
         {
           "name": "Mr. RANJANA D",
-          "designation": "Final Year student, ECE",
+          "designation": "Final Year student, Electronics and Communication Engineering",
           "role": "",
           "imagepath": ""
         },
         {
           "name": "Mr. ABINAND P",
-          "designation": "Final Year student, CSE",
+          "designation": "Final Year student, Computer Science & Engineering",
           "role": "",
           "imagepath": ""
         },
         {
           "name": "Mr. GIFTSON A.S",
-          "designation": "Final Year student, Mechanical",
+          "designation": "Final Year student, Mechanical Engineering",
           "role": "",
           "imagepath": ""
         }
@@ -203,13 +203,13 @@
         "aluminimembers": [{
           "name": "Mr. ARUNRAJ M",
           "designation": "Google India, Senior Software Engineer",
-          "role": "IT 2010 Batch",
+          "role": "Information Technology 2010 Batch",
           "imagepath": ""
         },
         {
           "name": "Mr. KUGHAN E",
           "designation": "Chargebee, Senior Software Engineer",
-          "role": "CSE 2017 Batch",
+          "role": "Computer Science & Engineering 2017 Batch",
           "imagepath": ""
         }
       ],
@@ -239,10 +239,10 @@
       "coordinator": {
         "name": "Dr. GUNASUNDARI S",
         "designation": "Coordinator",
-        "role": "Associate Prof, Dept of CSE",
+        "role": "Asso Prof, Dept of Computer Science & Engineering",
         "email": "gunasundari@velammal.edu.in",
         "phone": "+91 8754509510",
-        "imagepath": ""
+        "imagepath": "/static/images/profile_photos/005/VEC-005-03-106.webp"
       }
     },
     "objectives": {
