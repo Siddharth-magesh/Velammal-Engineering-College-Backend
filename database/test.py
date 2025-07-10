@@ -31,79 +31,13 @@ department_mapping1 = {
     "Placement":"021"
 }
 
-def insert_faculty_data(folder_path):
-    department_name=None
-    with open(r"/Velammal-Engineering-College-Backend/docs/prev_faculty.json","r",encoding="utf-8") as file:
-        data=json.load(file)
-    try:
-        collection = db['faculty_data']
-        if not os.path.exists(folder_path):
-            print(f"Error: Folder path '{folder_path}' does not exist. \n")
-            return
+def insert_placement_data():
 
-        for file_name in os.listdir(folder_path):
-            
-            if file_name.endswith(".xlsx"):
-                file_path = os.path.join(folder_path, file_name)
+    collection = db['placements_data']  
+    with open("/root/Velammal-Engineering-College-Backend/docs/placements_data.json", "r",encoding="utf-8") as file:
+        documents = json.load(file)
+        collection.insert_many(documents)
 
-                dept_id = os.path.splitext(file_name)[0]
+    print("placement documents inserted successfully.")
 
-                try:
-                    df = pd.read_excel(file_path)
-                except Exception as e:
-                    print(f"Error reading Excel file '{file_name}': {e}\n")
-                    continue
-                required_columns = [
-                    "Name", "Designation", "Photo", "Google Scholar Profile",
-                    "Research Gate", "Orchid Profile", "Publon Profile",
-                    "Scopus Author Profile", "LinkedIn Profile", "unique_id"
-                ]
-                missing_columns = [col for col in required_columns if col not in df.columns]
-                if missing_columns:
-                    print(f"Error: Missing columns in '{file_name}': {missing_columns}\n")
-                    continue 
-
-                faculty_list = []
-                for index, row in df.iterrows():
-                    try:
-                        faculty_data = {
-                            "name": row["Name"],
-                            "designation": row["Designation"],
-                            "photo": row["Photo"],
-                            "profiles": {
-                                "google_scholar": row["Google Scholar Profile"],
-                                "research_gate": row["Research Gate"],
-                                "orchid": row["Orchid Profile"],
-                                "publon": row["Publon Profile"],
-                                "scopus": row["Scopus Author Profile"],
-                                "linkedin": row["LinkedIn Profile"]
-                            },
-                            "unique_id": row["unique_id"]
-                        }
-                        faculty_list.append(faculty_data)
-                    except Exception as e:
-                        print(f"Error processing row {index} in '{file_name}': {e}\n")
-                for name, id in department_mapping1.items() :
-                    if id==dept_id:
-                        department_name=name
-                        
-                        department_document = {
-                            "department_name": department_name,
-                            "dept_id": dept_id,
-                            "previous_faculty_pdf_path":data.get(dept_id),
-                            "faculty_members": faculty_list
-                        }
-                if faculty_list:
-                    try:
-                        collection.insert_one(department_document)
-                    except Exception as e:
-                        print(f"Error inserting document for '{dept_id}' into MongoDB: {e}\n")
-                else:
-                    print(f"No valid faculty data to insert for '{file_name}'.\n")
-    except Exception as e:
-        print(f"Unexpected error: {e}\n")
-
-    print("Faculty Data Insertion Done\n")
-    return
-
-insert_faculty_data(folder_path=r"/Velammal-Engineering-College-Backend/docs/STAFF-DATA/")
+insert_placement_data()

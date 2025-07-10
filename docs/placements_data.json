@@ -30,7 +30,7 @@
       },
       "Year_Wise": {
         "Pdf_path": [
-          "static/pdfs/placement_docs/placements_23-24.pdf",
+          "/static/pdfs/placement_docs/placements_23-24.pdf",
           "/static/pdfs/placement_docs/placements_22-23.pdf",
           "/static/pdfs/placement_docs/placements_21-22.pdf",
           "/static/pdfs/placement_docs/placements_20-21.pdf",
@@ -42,8 +42,7 @@
           "/static/pdfs/placement_docs/placements_14-15.pdf",
           "/static/pdfs/placement_docs/placements_13-14.pdf",
           "/static/pdfs/placement_docs/placements_12-13.pdf",
-          "/static/pdfs/placement_docs/placements_11-12.pdf",
-          "/static/pdfs/placement_docs/2010.pdf"
+          "/static/pdfs/placement_docs/placements_11-12.pdf"
         ],
         "year_pdf": [
           "2023-24",
@@ -58,8 +57,7 @@
           "2014-15",
           "2013-14",
           "2012-13",
-          "2011-12",
-          "2010-11"
+          "2011-12"
         ]
       }
     }
