@@ -19,4 +19,13 @@ def insert_placement_data():
 
     print("placement documents inserted successfully.")
 
+def insert_army_data():
+    collection = db['army']
+    with open("/root/Velammal-Engineering-College-Backend/docs/ncc_army.json", "r",encoding="utf-8") as file:
+        documents = json.load(file)
+        collection.insert_many(documents)
+    print("armydocuments inserted successfully.")
+
+insert_army_data()
+
 insert_placement_data()
