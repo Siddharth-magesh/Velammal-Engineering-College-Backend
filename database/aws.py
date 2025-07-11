@@ -1064,6 +1064,36 @@ def insert_admission():
 
     print("admission json documents inserted successfully.\n")
 
+def  insert_downloads():
+
+    collection = db['downloads']  
+    with open("/root/Velammal-Engineering-College-Backend/docs/downloads.json", "r",encoding="utf-8") as file:
+        documents = json.load(file)
+        collection.insert_one(documents)
+
+    print("downloads json documents inserted successfully.\n")
+
+def insert_hostel_menu():
+
+    collection = db['hostel_menu']  
+    with open("/root/Velammal-Engineering-College-Backend/docs/hostel_menu.json", "r",encoding="utf-8") as file:
+        documents = json.load(file)
+        collection.insert_many(documents)
+
+    print("hostel_menu documents inserted successfully.\n")
+
+def insert_help_desk():
+
+    collection = db['help_desk']  
+    with open("/root/Velammal-Engineering-College-Backend/docs/help_desk.json", "r",encoding="utf-8") as file:
+        documents = json.load(file)
+        collection.insert_many(documents)
+
+    print("help_desk documents inserted successfully.\n")
+
+
+
+
 
 
 insert_sports_data()
@@ -1087,6 +1117,10 @@ insert_about_placement()
 insert_about_us()
 insert_organization_chart()
 insert_admission()
+insert_downloads()
+insert_hostel_menu()
+insert_help_desk()
+
 # insert_acadamic_research()
 
 def add_hostel_student_database():

@@ -97,6 +97,56 @@ app.get('/api/organization_chart', async (req, res) => {
 });
 
 
+app.get('/api/downloads', async (req, res) => {
+    const db = client.db(dbName);
+    const collection = db.collection('downloads');
+
+    try {
+        const announcements = await collection.find({}).toArray();
+        if (announcements.length === 0) {
+            return res.status(404).json({ message: 'No downloads found' });
+        }
+        res.status(200).json(announcements);
+    } catch (error) {
+        console.error('❌ Error fetching downloads:', error);
+        res.status(500).json({ error: 'Error fetching downloads' });
+    }
+});
+
+app.get('/api/hostel_menu', async (req, res) => {
+    const db = client.db(dbName);
+    const collection = db.collection('hostel_menu');
+
+    try {
+        const announcements = await collection.find({}).toArray();
+        if (announcements.length === 0) {
+            return res.status(404).json({ message: 'No announcements found' });
+        }
+        res.status(200).json(announcements);
+    } catch (error) {
+        console.error('❌ Error fetching announcements:', error);
+        res.status(500).json({ error: 'Error fetching announcements' });
+    }
+});
+
+app.get('/api/help_desk', async (req, res) => {
+    const db = client.db(dbName);
+    const collection = db.collection('help_desk');
+
+    try {
+        const announcements = await collection.find({}).toArray();
+        if (announcements.length === 0) {
+            return res.status(404).json({ message: 'No announcements found' });
+        }
+        res.status(200).json(announcements);
+    } catch (error) {
+        console.error('❌ Error fetching announcements:', error);
+        res.status(500).json({ error: 'Error fetching announcements' });
+    }
+});
+
+
+
 app.listen(port, () => {
     console.log(`🚀 Server running at http://localhost:${port}`);
 });
