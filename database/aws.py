@@ -1018,6 +1018,53 @@ def insert_iqac_data():
     
     print("inserted IQAC data")
 
+def insert_academic_calender():
+
+    collection = db['academic_calender']  
+    with open("/root/Velammal-Engineering-College-Backend/docs/academic_calender.json", "r",encoding="utf-8") as file:
+        documents = json.load(file)
+        collection.insert_many(documents)
+
+    print("academic calender inserted successfully.")
+
+def insert_about_placement():
+
+    collection = db['about_placement']  
+    with open("/root/Velammal-Engineering-College-Backend/docs/about_placement.json", "r",encoding="utf-8") as file:
+        documents = json.load(file)
+        collection.insert_many(documents)
+
+    print("about placement inserted successfully.")
+
+def insert_about_us():
+
+    collection = db['about_us']  
+    with open("/root/Velammal-Engineering-College-Backend/docs/about_us.json", "r",encoding="utf-8") as file:
+        documents = json.load(file)
+        collection.insert_many(documents)
+
+    print("about_us documents inserted successfully.\n")
+
+
+def insert_organization_chart():
+
+    collection = db['organization_chart']  
+    with open("/root/Velammal-Engineering-College-Backend/docs/organization_chart.json", "r",encoding="utf-8") as file:
+        documents = json.load(file)
+        collection.insert_one(documents)
+
+    print("organization chart json documents inserted successfully.\n")
+
+def insert_admission():
+
+    collection = db['admission']  
+    with open("/root/Velammal-Engineering-College-Backend/docs/admission.json", "r",encoding="utf-8") as file:
+        documents = json.load(file)
+        collection.insert_one(documents)
+
+    print("admission json documents inserted successfully.\n")
+
+
 
 insert_sports_data()
 insert_library_data()
@@ -1035,6 +1082,11 @@ insert_overall_book_publication()
 insert_overall_conference_publication()
 insert_overall_patent()
 insert_overall_journal_publications()
+insert_academic_calender()
+insert_about_placement()
+insert_about_us()
+insert_organization_chart()
+insert_admission()
 # insert_acadamic_research()
 
 def add_hostel_student_database():

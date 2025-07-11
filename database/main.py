@@ -971,13 +971,9 @@ def insert_overall_journal_publications():
     
     print("Inserted overall journal publications.\n")
 
-# def insert_acadamic_research():
-#     collection = db['overall_research']
-#     with open("/Velammal-Engineering-College-Backend/docs/acadamic_research.json","r",encoding="utf-8") as file:
-#         documents = json.load(file)
-#         collection.insert_one(documents)
-    
-#     print("Inserted acadamaic research.\n")
+
+
+
 
 def insert_department_research_data():
     collection = db['research_data']
@@ -1022,6 +1018,56 @@ def insert_alumni_data():
     
     print("Inserted Alumni data. \n")
 
+def insert_about_placement():
+
+    collection = db['about_placement']  
+    with open("/Velammal-Engineering-College-Backend/docs/about_placement.json", "r",encoding="utf-8") as file:
+        documents = json.load(file)
+        collection.insert_many(documents)
+
+    print("about placement inserted successfully.")
+
+def insert_about_us():
+
+    collection = db['about_us']  
+    with open("/Velammal-Engineering-College-Backend/docs/about_us.json", "r",encoding="utf-8") as file:
+        documents = json.load(file)
+        collection.insert_many(documents)
+
+    print("about_us documents inserted successfully.\n")
+
+
+def insert_organization_chart():
+
+    collection = db['organization_chart']  
+    with open("/Velammal-Engineering-College-Backend/docs/organization_chart.json", "r",encoding="utf-8") as file:
+        documents = json.load(file)
+        collection.insert_one(documents)
+
+    print("organization chart json documents inserted successfully.\n")
+
+
+def insert_admission():
+
+    collection = db['admission']  
+    with open("/Velammal-Engineering-College-Backend/docs/admission.json", "r",encoding="utf-8") as file:
+        documents = json.load(file)
+        collection.insert_one(documents)
+
+    print("admission json documents inserted successfully.\n")
+
+def insert_academic_calender():
+
+    collection = db['academic_calender']  
+    with open("/Velammal-Engineering-College-Backend/docs/academic_calender.json", "r",encoding="utf-8") as file:
+        documents = json.load(file)
+        collection.insert_many(documents)
+
+    print("academic calender inserted successfully.")
+
+
+
+
 insert_sports_data()
 insert_library_data()
 insert_nss_data()
@@ -1038,6 +1084,11 @@ insert_overall_book_publication()
 insert_overall_conference_publication()
 insert_overall_patent()
 insert_overall_journal_publications()
+insert_academic_calender()
+insert_about_placement()
+insert_about_us()
+insert_organization_chart()
+insert_admission()
 # insert_acadamic_research()
 
 def add_hostel_student_database():

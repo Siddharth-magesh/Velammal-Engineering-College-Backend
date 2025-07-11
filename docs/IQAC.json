@@ -10,7 +10,50 @@
             "imagepath": "/static/images/principal_data/principal_photo.webp"
           }
         ],
-        "deansanddepartmentheads": [
+        "memberfromemployes":
+      [{
+          "name": "Mr. RAGHURAMAN KRISHNAMOORTHY",
+          "designation": "Associate Vice President Cognizant",
+          "role": "",
+          "imagepath": ""
+        }],
+        "stakeholders":
+        [{
+          "name": "Dr. THIRUVENKADAM S",
+          "designation": "Professor/EEE, VIT, Vellore Campus",
+          "role": "",
+          "imagepath": ""
+        }],
+        "alumnimembers": [{
+          "name": "Mr. ARUNRAJ M",
+          "designation": "Google India, Senior Software Engineer",
+          "role": "Information Technology 2010 Batch",
+          "imagepath": ""
+        },
+        {
+          "name": "Mr. KUGHAN E",
+          "designation": "Chargebee, Senior Software Engineer",
+          "role": "Computer Science & Engineering 2017 Batch",
+          "imagepath": ""
+        }
+      ],
+      "memberfromindustry":
+      [{
+          "name": "Mr. ARAVIND RAMESH",
+          "designation": "Managing Director, Vetri Pressing Pvt. Limited",
+          "role": "",
+          "imagepath": ""
+        }],
+        "memberfrommanagement":
+      [{
+          "name": "Mr. KUMAR R",
+          "designation": "AVP(Finance),Velammal Educational Trust",
+          "role": "",
+          "imagepath": ""
+        }
+
+      ],
+      "deansanddepartmentheads": [
           {
           "name": "Dr. JEBAMALAR A",
           "designation": "Professor & Head, Department of Civil Engineering,",
@@ -152,15 +195,7 @@
           "imagepath": ""
         }
       ],
-      "memberfrommanagement":
-      [{
-          "name": "Mr. KUMAR R",
-          "designation": "AVP(Finance),Velammal Educational Trust",
-          "role": "",
-          "imagepath": ""
-        }
-
-      ],
+      
       "localprofessionalsocietychapter":
       [{
           "name": "Mr. RAJHA RAJESWARAN T.A",
@@ -199,41 +234,11 @@
           "role": "",
           "imagepath": ""
         }
-        ],
-        "aluminimembers": [{
-          "name": "Mr. ARUNRAJ M",
-          "designation": "Google India, Senior Software Engineer",
-          "role": "Information Technology 2010 Batch",
-          "imagepath": ""
-        },
-        {
-          "name": "Mr. KUGHAN E",
-          "designation": "Chargebee, Senior Software Engineer",
-          "role": "Computer Science & Engineering 2017 Batch",
-          "imagepath": ""
-        }
-      ],
-      "memberfromemployes":
-      [{
-          "name": "Mr. RAGHURAMAN KRISHNAMOORTHY",
-          "designation": "Associate Vice President Cognizant",
-          "role": "",
-          "imagepath": ""
-        }],
-      "memberfromindustry":
-      [{
-          "name": "Mr. ARAVIND RAMESH",
-          "designation": "Managing Director, Vetri Pressing Pvt. Limited",
-          "role": "",
-          "imagepath": ""
-        }],
-        "stakeholders":
-        [{
-          "name": "Dr. THIRUVENKADAM S",
-          "designation": "Professor/EEE, VIT, Vellore Campus",
-          "role": "",
-          "imagepath": ""
-        }]
+        ]
+        
+      
+      
+        
       },
       
       "coordinator": {
