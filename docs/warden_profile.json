@@ -45,17 +45,18 @@
     },
     {
         "warden_name": "SARAL J",
-        "phone_number": null,
+        "phone_number": 8610743147,
         "image_path": "/static/images/warden_profile_photos/007.webp",
         "designation": "Deputy Warden"
     },
     {
         "warden_name": "NITHYA E",
-        "phone_number": null,
+        "phone_number": 9566943700,
         "image_path": "/static/images/warden_profile_photos/008.webp",
         "designation": "Deputy Warden"
     }
   ]
 }
+
 
 ]
