@@ -4,7 +4,7 @@ from pymongo import MongoClient
 import pandas as pd
 
 mongo_uri = "mongodb://localhost:27017/"
-db_name = "NEW_VEC"
+db_name = "VEC"
 
 client = MongoClient(mongo_uri)
 db = client[db_name]
