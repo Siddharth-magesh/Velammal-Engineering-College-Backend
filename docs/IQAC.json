@@ -33,7 +33,7 @@
         {
           "name": "Mr. KUGHAN E",
           "designation": "Chargebee, Senior Software Engineer",
-          "role": "Computer Science & Engineering 2017 Batch",
+          "role": "Computer Science and Engineering 2017 Batch",
           "imagepath": ""
         }
       ],
@@ -80,7 +80,7 @@
         },
         {
           "name": "Dr. BALAJI GANESH A",
-          "designation": "Professor & Head, Department of Computer Science & Engineering,",
+          "designation": "Professor & Head, Department of Computer Science and Engineering,",
           "role": "Dean, Research & Development",
           "imagepath": ""
         },
@@ -104,7 +104,7 @@
         },
         {
           "name": "Dr. VISU P",
-          "designation": "Professor & Head, Department of Artificial Intelligence & Data Science",
+          "designation": "Professor & Head, Department of Artificial Intelligence and Data Science",
           "role": "Associate Dean, Accrediations and Ranking",
           "imagepath": "/static/images/dean_and_associates/dr_p_visu.webp"
         },
@@ -128,7 +128,7 @@
         },
         {
           "name": "Dr. BRIJET Z",
-          "designation": "Professor & Head, Department of Electronics & Instrumentation Engineering ",
+          "designation": "Professor & Head, Department of Electronics and Instrumentation Engineering ",
           "role": "",
           "imagepath": ""
         },
@@ -178,19 +178,19 @@
         },
         {
           "name": "Mr. DAYAKAR C.V",
-          "designation": "Assistant Professor, Department of Electronics & Instrumentation Engineering",
+          "designation": "Assistant Professor, Department of Electronics and Instrumentation Engineering",
           "role": "",
           "imagepath": ""
         },
         {
           "name": "Dr. GEETHA R",
-          "designation": "Assistant Professor, Department of Electrical & Electronics Engineering",
+          "designation": "Assistant Professor, Department of Electrical and Electronics Engineering",
           "role": "Associate Dean,Student Development and welfare",
           "imagepath": ""
         },
         {
           "name": "Dr. RAJALAKSHMI S",
-          "designation": "Asso Professor, Department of Computer Science & Engineering",
+          "designation": "Asso Professor, Department of Computer Science and Engineering",
           "role": "Associate Dean, Planning and Development",
           "imagepath": ""
         }
@@ -224,7 +224,7 @@
         },
         {
           "name": "Mr. ABINAND P",
-          "designation": "Final Year student, Computer Science & Engineering",
+          "designation": "Final Year student, Computer Science and Engineering",
           "role": "",
           "imagepath": ""
         },
@@ -244,9 +244,8 @@
       "coordinator": {
         "name": "Dr. GUNASUNDARI S",
         "designation": "Coordinator",
-        "role": "Asso Prof, Dept of Computer Science & Engineering",
+        "role": "Professor, Dept of Computer Science and Engineering",
         "email": "gunasundari@velammal.edu.in",
-        "phone": "+91 8754509510",
         "imagepath": "/static/images/profile_photos/005/VEC-005-03-106.webp"
       }
     },
@@ -293,8 +292,8 @@
       "/static/images/iqac/23-24_second_meeting/2.webp", 
       "/static/images/iqac/24-25_first_meeting/1.webp",
       "/static/images/iqac/24-25_first_meeting/2.webp",
-      "/static/images/iqac/24-25_second_meeting/1.PNG",
-      "/static/images/iqac/24-25_second_meeting/2.PNG"
+      "/static/images/iqac/24-25_second_meeting/1.webp",
+      "/static/images/iqac/24-25_second_meeting/2.webp"
     ],
       "23-24 FIRST MEETING": [
         "/static/images/iqac/23-24_first_meeting/1.webp",
