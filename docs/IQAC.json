@@ -328,6 +328,11 @@
         "/static/pdfs/iqac/best_practices_2023-2024.pdf"
       ]
     },
+    "institutionaldistinctiveness ":{
+      "paths": [
+        "/static/pdfs/iqac/VEC-Institutional-Distinctivenss.pdf"
+      ]
+    },
     "codeOfEthics": {
       "path": "/static/pdfs/iqac/code_of_ethics.pdf"
     },
