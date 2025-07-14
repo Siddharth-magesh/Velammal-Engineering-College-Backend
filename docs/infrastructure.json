@@ -3,7 +3,10 @@
         "dept_id": "001",
         "department_name": "Artificial Intelligence and Data Science (AI&DS)",
         "infrastructure_images": [
-            {"image_path": "/static/images/infrastructure/001/1.webp", "image_name": "DATA SCIENCE LABORATORY", "image_content": ""}
+            {"image_path": "/static/images/infrastructure/001/1.webp", "image_name": "DATA SCIENCE LABORATORY", "image_content": ""},
+            {"image_path": "/static/images/infrastructure/001/2.webp", "image_name": "Lab Facilities", "image_content": ""},
+            {"image_path": "/static/images/infrastructure/001/3.webp", "image_name": "RDBMS LAB", "image_content": ""},
+            {"image_path": "/static/images/infrastructure/001/4.webp", "image_name": "RESEARCH LAB", "image_content":""}
         ]
     },
     {
@@ -60,7 +63,12 @@
         "dept_id": "006",
         "department_name": "Computer Science and Engineering (CYBER SECURITY)",
         "infrastructure_images": [
-            {"image_path": "/static/images/infrastructure/006/1.webp", "image_name": "II YEAR CSE(CYBER SECURITY) - CLASS ROOM", "image_content": ""}
+            {"image_path": "/static/images/infrastructure/006/1.webp", "image_name": "II YEAR CSE(CYBER SECURITY) - CLASS ROOM", "image_content": ""},
+            {"image_path": "/static/images/infrastructure/006/2.webp", "image_name": "Lab Facilities", "image_content": ""},
+            {"image_path": "/static/images/infrastructure/006/3.webp", "image_name": "PROGRAMMING LAB", "image_content":""},
+            {"image_path": "/static/images/infrastructure/006/4.webp", "image_name": "RESEARCH LAB", "image_content":""}
+            
+
         ]
     },
     {

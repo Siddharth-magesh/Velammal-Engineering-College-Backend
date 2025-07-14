@@ -246,7 +246,7 @@
         "designation": "Coordinator",
         "role": "Professor, Dept of Computer Science and Engineering",
         "email": "gunasundari@velammal.edu.in",
-        "imagepath": "/static/images/profile_photos/005/VEC-005-03-106.webp"
+        "image_path": "/static/images/profile_photos/005/VEC-005-03-106.webp"
       }
     },
     "objectives": {
