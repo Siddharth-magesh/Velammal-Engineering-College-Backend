@@ -1,0 +1,62 @@
+{
+  "landing_page_details": {
+    "email_id": "velammal@velammal.edu.in",
+    "address": "Velammal Engineering College (Autonomous) Ambattur Red-hills Road, Surapet, Chennai – 600 066. Tamil Nadu, India.",
+    "phone_number": "044 26590758",
+    "student_affairs_contact": "044 26591771",
+    "addmission_contact": "9123547550 , 8939221120",
+    "instagram": "https://www.instagram.com/vec_chennai/",
+    "linkedin": "https://www.linkedin.com/school/velammal-engineering-college/",
+    "twitter": "https://x.com/VelammalEnggC",
+    "facebook": "https://www.facebook.com/velammalengineeringcollege"
+  },
+  "department_banner": [
+    {
+      "department_name": "Computer Science and Engineering",
+      "banner_image": "image_path",
+      "redirect_url": "/dept/001"
+    },
+    {
+      "department_name": "Information Technology",
+      "banner_image": "image_path",
+      "redirect_url": "url"
+    },
+    {
+      "department_name": "Electronics and Communication Engineering",
+      "banner_image": "image_path",
+      "redirect_url": "url"
+    }
+  ],
+  "notifications": [
+    {
+      "id": "notif_001",
+      "message": "Welcome to VEC - Empowering Future Leaders",
+      "status": "active",
+      "created_at": "2025-07-14T09:32:00Z"
+    },
+    {
+      "id": "notif_002",
+      "message": "Explore our world Facilities and programs",
+      "status": "active",
+      "created_at": "2025-07-14T08:20:00Z"
+    },
+    {
+      "id": "notif_003",
+      "message": "Join us Shaping the Future Through Innovation and Education",
+      "status": "active",
+      "created_at": "2025-07-13T19:45:00Z"
+    },
+    {
+      "id": "notif_004",
+      "message": "Discover Opportunities for Personal and Acedemic Growth",
+      "status": "active",
+      "created_at": "2025-07-13T19:45:00Z"
+    },
+    {
+      "id": "notif_005",
+      "message": "Get Involved: Clubs, Events, and More at VEC",
+      "status": "active",
+      "created_at": "2025-07-13T19:45:00Z"
+    }
+  ]
+}

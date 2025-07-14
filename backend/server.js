@@ -1544,6 +1544,23 @@ app.get('/api/help_desk', async (req, res) => {
     }
 });
 
+//admin page details
+app.get('/api/landing_page_data', async (req, res) => {
+  try {
+    const db = client.db(dbName);
+    const config = await db.collection('landing_page_details').findOne({});
+
+    if (!config) {
+      return res.status(404).json({ error: 'Landing page data not found' });
+    }
+    const { _id, ...cleanedConfig } = config;
+
+    res.json(cleanedConfig);
+  } catch (error) {
+    console.error('Error fetching landing page data:', error);
+    res.status(500).json({ error: 'Internal server error' });
+  }
+});
 
 app.listen(port, () => {
     console.log(`🚀 Server running at http://localhost:${port}`);
