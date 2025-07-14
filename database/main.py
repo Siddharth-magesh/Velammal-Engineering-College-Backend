@@ -1047,15 +1047,6 @@ def insert_organization_chart():
     print("organization chart json documents inserted successfully.\n")
 
 
-def insert_admission():
-
-    collection = db['admission']  
-    with open("/Velammal-Engineering-College-Backend/docs/admission.json", "r",encoding="utf-8") as file:
-        documents = json.load(file)
-        collection.insert_one(documents)
-
-    print("admission json documents inserted successfully.\n")
-
 def insert_academic_calender():
 
     collection = db['academic_calender']  
@@ -1065,15 +1056,6 @@ def insert_academic_calender():
 
     print("academic calender inserted successfully.")
 
-
-def  insert_downloads():
-
-    collection = db['downloads']  
-    with open("/Velammal-Engineering-College-Backend/docs/downloads.json", "r",encoding="utf-8") as file:
-        documents = json.load(file)
-        collection.insert_one(documents)
-
-    print("downloads json documents inserted successfully.\n")
 
 
 def insert_hostel_menu():
@@ -1125,8 +1107,6 @@ insert_academic_calender()
 insert_about_placement()
 insert_about_us()
 insert_organization_chart()
-insert_admission()
-insert_downloads()
 insert_hostel_menu()
 insert_help_desk()
 insert_landing_page_details()

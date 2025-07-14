@@ -27,8 +27,8 @@
         "dept_id": "004",
         "department_name": "Civil Engineering",
         "regulation": {
-        "year":["2019", "2021"],
-	    "pdf_path":["/static/pdfs/curriculum/004/reg_19.pdf","/static/pdfs/curriculum/004/reg_21.pdf"]
+        "year":["2019", "2021", "2023"],
+	    "pdf_path":["/static/pdfs/curriculum/004/reg_19.pdf","/static/pdfs/curriculum/004/reg_21.pdf","/static/pdfs/curriculum/004/reg_23.pdf"]
         }
     },
     {
@@ -100,8 +100,8 @@
         "dept_id": "013",
         "department_name": "Mechancial Engineering (MECH)",
         "regulation": {
-        "year":["2019", "2021"],
-	    "pdf_path":["/static/pdfs/curriculum/013/reg_19.pdf","/static/pdfs/curriculum/013/reg_21.pdf"]
+        "year":["2019", "2021","2023"],
+	    "pdf_path":["/static/pdfs/curriculum/013/reg_19.pdf","/static/pdfs/curriculum/013/reg_21.pdf","/static/pdfs/curriculum/013/reg_23.pdf"]
         }
     },
     {
