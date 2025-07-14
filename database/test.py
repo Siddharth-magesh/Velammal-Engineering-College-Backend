@@ -10,12 +10,13 @@ client = MongoClient(mongo_uri)
 db = client[db_name]
 
 
-def insert_iqac_data():
-    collection = db['IQAC']
-    with open("/root/Velammal-Engineering-College-Backend/docs/IQAC.json","r",encoding="utf-8") as file:
-        documents = json.load(file)
-        collection.insert_many(documents)
-    
-    print("inserted IQAC data")
+def insert_landing_page_details():
 
-insert_iqac_data()
+    collection = db['landing_page_details']  
+    with open("/Velammal-Engineering-College-Backend/docs/landing_page_details.json", "r",encoding="utf-8") as file:
+        documents = json.load(file)
+        collection.insert_one(documents)
+
+    print("insert_landing_page_details documents inserted successfully.\n")
+
+insert_landing_page_details()
