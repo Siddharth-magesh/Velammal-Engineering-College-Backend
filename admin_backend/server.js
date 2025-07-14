@@ -69,6 +69,7 @@ async function AdminApproval({
   collection_name,
   admin_id,
   db,
+  category = null,
   request_reason = null
 }) {
   if (!meta_data || !type || !collection_name || !admin_id) {
@@ -86,6 +87,8 @@ async function AdminApproval({
     collection_name,
     status: 'pending',
     admin_id,
+    title,
+    category,
     reviewed_by: null,
     review_notes: null,
     request_reason,
@@ -101,9 +104,127 @@ async function AdminApproval({
   }
 }
 
+async function executeAdminOperation(operation, db) {
+    const {
+        collection_name,
+        type,
+        meta_data,
+        action_target_id
+    } = operation;
+
+    const collection = db.collection(collection_name);
+
+    try {
+        if (type === 'add') {
+            await collection.insertOne(meta_data);
+        } else if (type === 'update') {
+            if (!action_target_id) {
+                return { success: false, error: 'Missing target ID for update' };
+            }
+            await collection.updateOne({ _id: new ObjectId(action_target_id) }, { $set: meta_data });
+        } else if (type === 'delete') {
+            if (!action_target_id) {
+                return { success: false, error: 'Missing target ID for deletion' };
+            }
+            await collection.deleteOne({ _id: new ObjectId(action_target_id) });
+        } else {
+            return { success: false, error: 'Unsupported operation type' };
+        }
+
+        return { success: true };
+
+    } catch (error) {
+        console.error('Execution error:', error);
+        return { success: false, error: 'Failed to perform operation on collection' };
+    }
+}
+
 const loginAttempts = new Map();
 const MAX_ATTEMPTS = 10;
 const BLOCK_DURATION = 10 * 60 * 1000; // 10 minutes
+
+// Get all approval requests by status
+app.get('/api/fetch_admin_requests', async (req, res) => {
+    if (
+        !req.session ||
+        !req.session.admin_auth ||
+        !req.session.authenticated_sectors ||
+        req.session.authenticated_sectors.approval_access !== true
+    ) {
+        return res.status(403).json({ error: 'Unauthorized: approval access denied' });
+    }
+    const { status } = req.body;
+
+    const validStatuses = ['pending', 'approved', 'declined'];
+    const statusFilter = status?.toLowerCase();
+
+    if (!statusFilter || !validStatuses.includes(statusFilter)) {
+        return res.status(400).json({ error: 'Invalid or missing status. Must be one of: pending, approved, declined' });
+    }
+
+    try {
+        const requests = await db.collection('temp')
+            .find({ status: statusFilter })
+            .sort({ date_time: -1 })
+            .toArray();
+
+        res.json({ requests });
+    } catch (error) {
+        console.error('Error fetching approval requests:', error);
+        res.status(500).json({ error: 'Internal server error' });
+    }
+});
+
+// Execute admin operation
+app.post('/api/approve_operation', async (req, res) => {
+    const { operationId } = req.body;
+
+    if (
+        !req.session ||
+        !req.session.admin_auth ||
+        !req.session.authenticated_sectors ||
+        req.session.authenticated_sectors.approval_access !== true
+    ) {
+        return res.status(403).json({ error: 'Unauthorized: approval access denied' });
+    }
+
+    try {
+        const tempCollection = db.collection('temp');
+        const operation = await tempCollection.findOne({ unique_id: operationId });
+
+        if (!operation) {
+            return res.status(404).json({ error: 'Operation not found' });
+        }
+
+        if (operation.status !== 'pending') {
+            return res.status(400).json({ error: 'Operation has already been processed' });
+        }
+
+        const result = await executeAdminOperation(operation, db);
+
+        if (!result.success) {
+            return res.status(500).json({ error: result.error });
+        }
+
+        await tempCollection.updateOne(
+            { unique_id: operationId },
+            {
+                $set: {
+                    status: 'approved',
+                    reviewed_by: req.session.username,
+                    review_notes: req.body.review_notes || '',
+                    reviewed_at: new Date()
+                }
+            }
+        );
+
+        res.json({ message: 'Operation approved and executed successfully' });
+
+    } catch (error) {
+        console.error('Approval error:', error);
+        res.status(500).json({ error: 'Internal server error' });
+    }
+});
 
 //Admin Login
 app.post('/api/admin_login', async (req, res) => {
@@ -160,6 +281,14 @@ app.post('/api/admin_login', async (req, res) => {
 
 //Admin SignUp
 app.post('/api/admin_signup', async (req, res) => {
+    if (
+        !req.session ||
+        !req.session.admin_auth ||
+        !req.session.authenticated_sectors ||
+        req.session.authenticated_sectors.signup_access !== true
+    ) {
+        return res.status(403).json({ error: 'Unauthorized: signup access denied' });
+    }
     let { username, password, authenticated_sectors } = req.body;
 
     username = username?.trim().toLowerCase();
