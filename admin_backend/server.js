@@ -5,6 +5,7 @@ const dotenv = require('dotenv');
 const bodyParser = require('body-parser');
 const bcrypt = require('bcrypt');
 const { v4: uuidv4 } = require('uuid');
+const { ObjectId } = require('mongodb');
 
 dotenv.config({quiet: true});
 
@@ -69,6 +70,7 @@ async function AdminApproval({
   collection_name,
   admin_id,
   db,
+  title = null,
   category = null,
   request_reason = null
 }) {
@@ -137,6 +139,26 @@ async function executeAdminOperation(operation, db) {
         console.error('Execution error:', error);
         return { success: false, error: 'Failed to perform operation on collection' };
     }
+}
+
+// Middleware factory: accepts one or more access keys and returns a middleware function
+function verifyAdminAccess(...requiredAccessKeys) {
+    return (req, res, next) => {
+        if (!req.session || !req.session.admin_auth) {
+            return res.status(401).json({ error: 'Unauthorized: Admin not logged in' });
+        }
+
+        const sectors = req.session.authenticated_sectors || {};
+
+        const hasAccess = requiredAccessKeys.every(key => sectors[key] === true);
+
+        if (!hasAccess) {
+            return res.status(403).json({
+                error: `Forbidden: Missing required access rights (${requiredAccessKeys.join(', ')})`
+            });
+        }
+        next();
+    };
 }
 
 const loginAttempts = new Map();

@@ -1,10 +1,14 @@
 {
   "landing_page_details": {
     "email_id": "velammal@velammal.edu.in",
-    "address": "Velammal Engineering College (Autonomous) Ambattur Red-hills Road, Surapet, Chennai – 600 066. Tamil Nadu, India.",
-    "phone_number": "044-26590758",
-    "student_affairs_contact": "044-26591771",
-    "addmission_contact": "9123547550 , 8939221120",
+    "address": [
+      "Velammal Engineering College (Autonomous)",
+      "Ambattur Red-hills Road, Surapet,",
+      "Chennai – 600 066. Tamil Nadu, India."
+    ],
+    "phone_number": "044 26590758",
+    "student_affairs_contact": "044 26591771",
+    "addmission_contact": ["9123547550", "8939221120"],
     "instagram": "https://www.instagram.com/vec_chennai/",
     "linkedin": "https://www.linkedin.com/school/velammal-engineering-college/",
     "twitter": "https://x.com/VelammalEnggC",
@@ -12,19 +16,70 @@
   },
   "department_banner": [
     {
+      "department_name": "Automobile Engineering",
+      "dept": "AUTO",
+      "banner_image": "/static/images/banner/002",
+      "redirect_url": "/dept/002"
+    },
+    {
+      "department_name": "Civil Engineering",
+      "dept": "CIVIL",
+      "banner_image": "/static/images/banner/004",
+      "redirect_url": "/dept/004"
+    },
+    {
       "department_name": "Computer Science and Engineering",
-      "banner_image": "image_path",
+      "dept": "CSE",
+      "banner_image": "/static/images/banner/005",
+      "redirect_url": "/dept/005"
+    },
+    {
+      "department_name": "Computer Science and Engineering (CYBER SECURITY)",
+      "dept": "CSE-CS",
+      "banner_image": "/static/images/banner/006",
+      "redirect_url": "/dept/006"
+    },
+    {
+      "department_name": "Electrical & Electronics Engineering",
+      "dept": "EEE",
+      "banner_image": "/static/images/banner/007",
+      "redirect_url": "/dept/007"
+    },
+    {
+      "department_name": "Electronics and Communication Engineering",
+      "dept": "ECE",
+      "banner_image": "/static/images/banner/009",
+      "redirect_url": "/dept/009"
+    },
+    {
+      "department_name": "Electronics & Instrumentation Engineering",
+      "dept": "EIE",
+      "banner_image": "/static/images/banner/008",
+      "redirect_url": "/dept/008"
+    },
+    {
+      "department_name": "Mechancial Engineering",
+      "dept": "MECH",
+      "banner_image": "/static/images/banner/013",
+      "redirect_url": "/dept/013"
+    },
+    {
+      "department_name": "Artificial Intelligence and Data Science",
+      "dept": "AI&DS",
+      "banner_image": "/static/images/banner/001",
       "redirect_url": "/dept/001"
     },
     {
       "department_name": "Information Technology",
-      "banner_image": "image_path",
-      "redirect_url": "url"
+      "dept": "IT",
+      "banner_image": "/static/images/banner/011",
+      "redirect_url": "/dept/011"
     },
     {
-      "department_name": "Electronics and Communication Engineering",
-      "banner_image": "image_path",
-      "redirect_url": "url"
+      "department_name": "Master of Business Administration",
+      "dept": "MBA",
+      "banner_image": "/static/images/banner/017",
+      "redirect_url": "/dept/017"
     }
   ],
   "notifications": [
