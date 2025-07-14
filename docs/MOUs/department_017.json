@@ -11,7 +11,8 @@
                     "ORGANISATION_NAME": "Imarticus Learnin",
                     "MONTH_AND_YEAR": "03-02-2023",
                     "VALIDITY": null,
-                    "LOGO_PATH": "/static/images/mous/017/imarticus.jpg"
+                    "LOGO_PATH": "/static/images/mous/017/imarticus.jpg",
+        "ACTIVITIES_PLANNED": []
                 }
             ]
         }

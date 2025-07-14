@@ -9,7 +9,7 @@
           "VALIDITY": "2 years ",
           "LOGO_PATH": null,
           "PDF_PATH": null,
-          "ACTIVITIES_PLANNED": null
+          "ACTIVITIES_PLANNED":[]
       },
       {
           "S_NO": 2,
@@ -18,7 +18,7 @@
           "VALIDITY": "Till date",
           "LOGO_PATH": null,
           "PDF_PATH": null,
-          "ACTIVITIES_PLANNED": null
+          "ACTIVITIES_PLANNED": []
       },
       {
           "S_NO": 3,
@@ -27,7 +27,7 @@
           "VALIDITY": "Till date",
           "LOGO_PATH": null,
           "PDF_PATH": null,
-          "ACTIVITIES_PLANNED": null
+          "ACTIVITIES_PLANNED": []
       },
       {
           "S_NO": 4,
@@ -36,7 +36,7 @@
           "VALIDITY": "Till date",
           "LOGO_PATH": null,
           "PDF_PATH": null,
-          "ACTIVITIES_PLANNED": null
+          "ACTIVITIES_PLANNED": []
       },
       {
           "S_NO": 5,
@@ -45,7 +45,7 @@
           "VALIDITY": "Till date",
           "LOGO_PATH": null,
           "PDF_PATH": null,
-          "ACTIVITIES_PLANNED": null
+          "ACTIVITIES_PLANNED": []
       },
       {
           "S_NO": 6,
@@ -54,7 +54,7 @@
           "VALIDITY": "Till date",
           "LOGO_PATH": null,
           "PDF_PATH": null,
-          "ACTIVITIES_PLANNED": null
+          "ACTIVITIES_PLANNED": []
       },
       {
           "S_NO": 7,
@@ -63,7 +63,7 @@
           "VALIDITY": "Till date",
           "LOGO_PATH": null,
           "PDF_PATH": null,
-          "ACTIVITIES_PLANNED": null
+          "ACTIVITIES_PLANNED": []
       },
       {
           "S_NO": 8,
@@ -72,7 +72,7 @@
           "VALIDITY": "Till date",
           "LOGO_PATH": null,
           "PDF_PATH": null,
-          "ACTIVITIES_PLANNED": null
+          "ACTIVITIES_PLANNED": []
       },
       {
           "S_NO": 9,
@@ -81,7 +81,7 @@
           "VALIDITY": "Till date",
           "LOGO_PATH": null,
           "PDF_PATH": null,
-          "ACTIVITIES_PLANNED": null
+          "ACTIVITIES_PLANNED": []
       },
       {
           "S_NO": 10,
@@ -90,7 +90,7 @@
           "VALIDITY": "Till date",
           "LOGO_PATH": null,
           "PDF_PATH": null,
-          "ACTIVITIES_PLANNED": null
+          "ACTIVITIES_PLANNED": []
       }
   ]
   }
