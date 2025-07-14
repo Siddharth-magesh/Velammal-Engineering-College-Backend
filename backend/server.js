@@ -1463,21 +1463,6 @@ app.get('/api/about_us', async (req, res) => {
 
 
 
-app.get('/api/admission', async (req, res) => {
-    const db = client.db(dbName);
-    const collection = db.collection('admission');
-
-    try {
-        const announcements = await collection.find({}).toArray();
-        if (announcements.length === 0) {
-            return res.status(404).json({ message: 'No admission found' });
-        }
-        res.status(200).json(announcements);
-    } catch (error) {
-        console.error('❌ Error fetching admission:', error);
-        res.status(500).json({ error: 'Error fetching admission' });
-    }
-});
 
 app.get('/api/organization_chart', async (req, res) => {
     const db = client.db(dbName);
@@ -1495,21 +1480,6 @@ app.get('/api/organization_chart', async (req, res) => {
     }
 });
 
-app.get('/api/downloads', async (req, res) => {
-    const db = client.db(dbName);
-    const collection = db.collection('downloads');
-
-    try {
-        const announcements = await collection.find({}).toArray();
-        if (announcements.length === 0) {
-            return res.status(404).json({ message: 'No downloads found' });
-        }
-        res.status(200).json(announcements);
-    } catch (error) {
-        console.error('❌ Error fetching downloads:', error);
-        res.status(500).json({ error: 'Error fetching downloads' });
-    }
-});
 
 app.get('/api/hostel_menu', async (req, res) => {
     const db = client.db(dbName);
