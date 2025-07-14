@@ -234,20 +234,16 @@
           "role": "",
           "imagepath": ""
         }
-        ]
-        
-      
-      
-        
+        ]       
       },
-      
-      "coordinator": {
-        "name": "Dr. GUNASUNDARI S",
-        "designation": "Coordinator",
-        "role": "Professor, Dept of Computer Science and Engineering",
-        "email": "gunasundari@velammal.edu.in",
-        "image_path": "/static/images/profile_photos/005/VEC-005-03-106.webp"
-      }
+       "coordinator": {
+      "name": "Dr. GUNASUNDARI S",
+      "designation": "Coordinator",
+      "role": "Professor, Dept of Computer Science and Engineering",
+      "email": "gunasundari@velammal.edu.in",
+      "phone": "+91 8754509510",
+      "image_path": "/static/images/profile_photos/005/VEC-005-03-106.webp"
+    }
     },
     "objectives": {
       "about": "The Internal Quality Assurance Cell (IQAC) was established in 2004 as per the guidelines of the National Assessment and Accreditation Council (NAAC). The IQAC is responsible for developing, implementing, and continuously improving the quality systems within the institution.",
@@ -328,8 +324,8 @@
         "/static/pdfs/iqac/best_practices_2023-2024.pdf"
       ]
     },
-    "institutionaldistinctiveness ":{
-      "paths": [
+    "institutional_distinctiveness":{
+      "path": [
         "/static/pdfs/iqac/VEC-Institutional-Distinctivenss.pdf"
       ]
     },
