@@ -1092,8 +1092,14 @@ def insert_help_desk():
     print("help_desk documents inserted successfully.\n")
 
 
+def insert_landing_page_details():
 
+    collection = db['landing_page_details']  
+    with open("/root/Velammal-Engineering-College-Backend/docs/landing_page_details.json", "r",encoding="utf-8") as file:
+        documents = json.load(file)
+        collection.insert_one(documents)
 
+    print("insert_landing_page_details documents inserted successfully.\n")
 
 
 insert_sports_data()
@@ -1120,6 +1126,7 @@ insert_admission()
 insert_downloads()
 insert_hostel_menu()
 insert_help_desk()
+insert_landing_page_details()
 
 # insert_acadamic_research()
 
