@@ -5,6 +5,7 @@ const dotenv = require('dotenv');
 const bodyParser = require('body-parser');
 const bcrypt = require('bcrypt');
 const { v4: uuidv4 } = require('uuid');
+const { ObjectId } = require('mongodb');
 
 dotenv.config({quiet: true});
 
@@ -56,87 +57,33 @@ async function createCollectionIfNotExists(db) {
             await db.createCollection('temp');
             console.log("Collection 'temp' created");
         }
+        if (!collectionNames.includes('admin_archive')) {
+            await db.createCollection('admin_archive');
+            console.log("Collection 'admin_archive' created");
+        }
     } catch (error) {
         console.error("Error creating collections:", error);
     }
 }
 
-async function AdminApproval({
-  action_target_id = null,
-  meta_data,
-  original_data = null,
-  type,
-  collection_name,
-  admin_id,
-  db,
-  category = null,
-  request_reason = null
-}) {
-  if (!meta_data || !type || !collection_name || !admin_id) {
-    return { success: false, error: 'Missing required fields' };
-  }
-
-  const tempCollection = db.collection('temp');
-
-  const newOperation = {
-    unique_id: uuidv4(),
-    action_target_id,
-    meta_data,
-    original_data,
-    type: type.toLowerCase(),
-    collection_name,
-    status: 'pending',
-    admin_id,
-    title,
-    category,
-    reviewed_by: null,
-    review_notes: null,
-    request_reason,
-    date_time: new Date()
-  };
-
-  try {
-    await tempCollection.insertOne(newOperation);
-    return { success: true, message: 'Operation queued for approval' };
-  } catch (error) {
-    console.error('Error queuing operation:', error);
-    return { success: false, error: 'Failed to queue operation' };
-  }
-}
-
-async function executeAdminOperation(operation, db) {
-    const {
-        collection_name,
-        type,
-        meta_data,
-        action_target_id
-    } = operation;
-
-    const collection = db.collection(collection_name);
-
-    try {
-        if (type === 'add') {
-            await collection.insertOne(meta_data);
-        } else if (type === 'update') {
-            if (!action_target_id) {
-                return { success: false, error: 'Missing target ID for update' };
-            }
-            await collection.updateOne({ _id: new ObjectId(action_target_id) }, { $set: meta_data });
-        } else if (type === 'delete') {
-            if (!action_target_id) {
-                return { success: false, error: 'Missing target ID for deletion' };
-            }
-            await collection.deleteOne({ _id: new ObjectId(action_target_id) });
-        } else {
-            return { success: false, error: 'Unsupported operation type' };
+// Middleware factory: accepts one or more access keys and returns a middleware function
+function verifyAdminAccess(...requiredAccessKeys) {
+    return (req, res, next) => {
+        if (!req.session || !req.session.admin_auth) {
+            return res.status(401).json({ error: 'Unauthorized: Admin not logged in' });
         }
 
-        return { success: true };
+        const sectors = req.session.authenticated_sectors || {};
 
-    } catch (error) {
-        console.error('Execution error:', error);
-        return { success: false, error: 'Failed to perform operation on collection' };
-    }
+        const hasAccess = requiredAccessKeys.every(key => sectors[key] === true);
+
+        if (!hasAccess) {
+            return res.status(403).json({
+                error: `Forbidden: Missing required access rights (${requiredAccessKeys.join(', ')})`
+            });
+        }
+        next();
+    };
 }
 
 const loginAttempts = new Map();
@@ -171,57 +118,6 @@ app.get('/api/fetch_admin_requests', async (req, res) => {
         res.json({ requests });
     } catch (error) {
         console.error('Error fetching approval requests:', error);
-        res.status(500).json({ error: 'Internal server error' });
-    }
-});
-
-// Execute admin operation
-app.post('/api/approve_operation', async (req, res) => {
-    const { operationId } = req.body;
-
-    if (
-        !req.session ||
-        !req.session.admin_auth ||
-        !req.session.authenticated_sectors ||
-        req.session.authenticated_sectors.approval_access !== true
-    ) {
-        return res.status(403).json({ error: 'Unauthorized: approval access denied' });
-    }
-
-    try {
-        const tempCollection = db.collection('temp');
-        const operation = await tempCollection.findOne({ unique_id: operationId });
-
-        if (!operation) {
-            return res.status(404).json({ error: 'Operation not found' });
-        }
-
-        if (operation.status !== 'pending') {
-            return res.status(400).json({ error: 'Operation has already been processed' });
-        }
-
-        const result = await executeAdminOperation(operation, db);
-
-        if (!result.success) {
-            return res.status(500).json({ error: result.error });
-        }
-
-        await tempCollection.updateOne(
-            { unique_id: operationId },
-            {
-                $set: {
-                    status: 'approved',
-                    reviewed_by: req.session.username,
-                    review_notes: req.body.review_notes || '',
-                    reviewed_at: new Date()
-                }
-            }
-        );
-
-        res.json({ message: 'Operation approved and executed successfully' });
-
-    } catch (error) {
-        console.error('Approval error:', error);
         res.status(500).json({ error: 'Internal server error' });
     }
 });
@@ -319,5 +215,133 @@ app.post('/api/admin_signup', async (req, res) => {
     } catch (error) {
         console.error('Signup error:', error);
         res.status(500).json({ error: 'Internal server error' });
+    }
+});
+
+// Landing Page Update
+app.post('/api/update_landing_page', verifyAdminAccess('landing_page_access'), async (req, res) => {
+    try {
+        const { metadata, collection, category, type, title } = req.body;
+        const admin_id = req.session.username;
+
+        if (!metadata || !collection || !type || !title || !category) {
+            return res.status(400).json({ error: 'Missing required fields in request body' });
+        }
+
+        const dbCollection = db.collection(collection);
+        const existingDoc = await dbCollection.findOne({});
+
+        if (!existingDoc || !existingDoc.landing_page_details) {
+            return res.status(404).json({ error: 'Landing page details not found' });
+        }
+
+        const originalLandingPageDetails = existingDoc.landing_page_details;
+
+        const originalFields = {};
+        for (const key in metadata) {
+            originalFields[key] = originalLandingPageDetails[key] ?? null;
+        }
+
+        const tempDoc = {
+            unique_id: uuidv4(),
+            action_target_id: existingDoc._id,
+            metadata: { landing_page_details: metadata },
+            original_data: { landing_page_details: originalFields },
+            type,
+            collection_name: collection,
+            category,
+            admin_id,
+            title,
+            status: 'pending',
+            date: new Date().toISOString(),
+            reviewed_by: null,
+            reviewed_notes: null
+        };
+
+        await db.collection('temp').insertOne(tempDoc);
+
+        return res.status(200).json({
+            message: 'Landing page update request submitted for approval',
+            request_id: tempDoc.unique_id,
+            changes: metadata
+        });
+
+    } catch (err) {
+        console.error('Error updating landing page:', err);
+        return res.status(500).json({ error: 'Internal server error' });
+    }
+});
+
+//Superior Admin Review
+app.post('/api/review_landing_page_request', verifyAdminAccess('landing_page_access'), async (req, res) => {
+    try {
+        const { unique_id, decision_by, reviewed_notes, actions } = req.body;
+
+        if (!unique_id || !decision_by || !actions) {
+            return res.status(400).json({ error: 'Missing required fields' });
+        }
+
+        const tempCollection = db.collection('temp');
+        const landingPageCollection = db.collection('landing_page_details');
+        const adminArchiveCollection = db.collection('admin_archive');
+
+        const requestDoc = await tempCollection.findOne({ unique_id });
+        if (!requestDoc) return res.status(404).json({ error: 'Request not found' });
+
+        const { metadata, action_target_id } = requestDoc;
+
+        const approvedUpdates = {};
+        const rejectedFields = [];
+
+        for (const section in actions) {
+            if (!metadata[section]) continue;
+
+            for (const field in actions[section]) {
+                const decision = actions[section][field];
+                const value = metadata[section][field];
+
+                if (decision === 'approve') {
+                    approvedUpdates[`${section}.${field}`] = value;
+                } else if (decision === 'reject') {
+                    rejectedFields.push(`${section}.${field}`);
+                }
+            }
+        }
+
+        let updateStatus = 'rejected';
+
+        if (Object.keys(approvedUpdates).length > 0) {
+            await landingPageCollection.updateOne(
+                { _id: new ObjectId(action_target_id) },
+                { $set: approvedUpdates }
+            );
+            updateStatus = rejectedFields.length === 0 ? 'approved' : 'partially_approved';
+        }
+
+        const updatedRequest = {
+            ...requestDoc,
+            reviewed_by: decision_by,
+            reviewed_notes: reviewed_notes || '',
+            status: 'managed',
+            actions
+        };
+
+        await tempCollection.updateOne(
+            { unique_id },
+            { $set: { reviewed_by: decision_by, reviewed_notes, status: 'managed', actions } }
+        );
+
+        await adminArchiveCollection.insertOne(updatedRequest);
+        await tempCollection.deleteOne({ unique_id });
+
+        return res.status(200).json({
+            message: `Request ${updateStatus.replace('_', ' ')} and archived successfully.`,
+            approved_fields: approvedUpdates,
+            rejected_fields: rejectedFields
+        });
+
+    } catch (err) {
+        console.error('Error processing landing page request review:', err);
+        return res.status(500).json({ error: 'Internal server error' });
     }
 });

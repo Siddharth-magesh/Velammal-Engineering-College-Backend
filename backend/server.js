@@ -35,6 +35,10 @@ async function connectToDatabase() {
 }
 connectToDatabase();
 
+app.listen(port, () => {
+    console.log(`Server is running on http://localhost:${port}`);
+});
+
 app.get("/", (req, res) => {
     res.send("Welcome to the Node.js MongoDB API!");
 });
@@ -1523,15 +1527,18 @@ app.get('/api/landing_page_data', async (req, res) => {
     if (!config) {
       return res.status(404).json({ error: 'Landing page data not found' });
     }
-    const { _id, ...cleanedConfig } = config;
+
+    const { _id, notifications = [], ...rest } = config;
+    const activeNotifications = notifications.filter(n => n.status === 'active');
+
+    const cleanedConfig = {
+      ...rest,
+      notifications: activeNotifications
+    };
 
     res.json(cleanedConfig);
   } catch (error) {
     console.error('Error fetching landing page data:', error);
     res.status(500).json({ error: 'Internal server error' });
   }
-});
-
-app.listen(port, () => {
-    console.log(`🚀 Server running at http://localhost:${port}`);
 });
