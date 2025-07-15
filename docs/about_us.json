@@ -1,7 +1,4 @@
 [{
-  "_id": {
-    "$oid": "6874d70f5bf78633b13b576e"
-  },
   "about_vec": {
     "content": [
       "We stand for innovation, with our diverse community of scholars and engineers dedicated to making a positive impact at local, national, and global levels.",
