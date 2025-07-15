@@ -168,42 +168,42 @@
             "description":
                 "The College Library is equipped with a plain paper copier for REPROGRAPHY SERVICE, enabling users to obtain photocopies of library documents at a nominal cost while preserving the collection.",
             "image":
-                "/static/images/library_images/REPROGRAPHY SECTION.webp"
+                "/static/images/library/library_images/REPROGRAPHY SECTION.webp"
         },
         {
             "title": "STACK ROOM WITH READING HALL",
             "description":
                 "A well-equipped, multi-storied stock room with modern book stacks for easy access. Books are classified using the Universal Decimal Classification, and an Open Access System is followed.",
             "image":
-                "/static/images/library_images/STACK ROOM WITH READING HALL.webp"
+                "/static/images/library/library_images/STACK ROOM WITH READING HALL.webp"
         },
         {
             "title": "READING HALL",
             "description":
                 "Designed to provide a wonderful reading atmosphere with comfortable tables and chairs for 250 users. Students can bring books and journals from stacks for reference work.",
             "image":
-                "/static/images/library_images/Common.webp"
+                "/static/images/library/library_images/Common.webp"
         },
         {
             "title": "PERIODICAL SECTION",
             "description":
                 "Contains technical and non-technical journals of national and international origins. Latest issues are displayed outside, while back volumes are stored for reference.",
             "image":
-                "/static/images/library_images/PERIODICAL SECTION"
+                "/static/images/library/library_images/PERIODICAL SECTION"
         },
         {
             "title": "REFERENCE SECTION",
             "description":
                 "Holds about 5000 reference books on Engineering, Science, Humanities, English, Encyclopedias & Dictionaries, including a collection of rare books.",
             "image":
-                "/static/images/library_images/REFERENCE SECTION"
+                "/static/images/library/library_images/REFERENCE SECTION"
         },
         {
             "title": "PROJECT REPORT & BACK VOLUMES",
             "description":
                 "The Library houses 2768 journal back volumes covering Engineering, Science, Humanities, and Business, along with 3192 student project reports.",
             "image":
-                "/static/images/library_images/PROJECT REPORT & BACK VOLUMES"
+                "/static/images/library/library_images/PROJECT REPORT & BACK VOLUMES"
         }
     ],
     "EbookSources" : [
@@ -262,28 +262,28 @@
             "title": "NEW ARRIVALS - BOOKS/PERIODICALS",
             "description":
                 "New books are displayed in the new arrival rack for at least one week. Current periodicals are arranged subject-wise in racks until new issues arrive.",
-            "image": "/static/images/library_images/New Arrivals"
+            "image": "/static/images/library/library_images/New Arrivals"
         },
         {
             "title": "IEEE STUDENT BRANCH LIBRARY",
             "description":
                 "The IEEE student branch is highly active, providing access to 50+ IEEE journals and transactions. All students and staff can reference these materials.",
             "image":
-                "/static/images/library_images/Multimedia Library 1"
+                "/static/images/library/library_images/Multimedia Library 1"
         },
         {
             "title": "INTERNET / CD BROWSING",
             "description":
                 "Apart from internet access in the computer lab, the library offers four computers for internet and CD browsing.",
             "image":
-                "/static/images/library_images/PROJECT REPORT & BACK VOLUMES"
+                "/static/images/library/library_images/PROJECT REPORT & BACK VOLUMES"
         },
         {
             "title": "AUDIO VIDEO SECTION",
             "description":
                 "The library contains audio cassettes, video tapes, and CDs to enhance communication skills, subject knowledge, and competitive exam preparation.",
             "image":
-                "/static/images/library_images/Multimedia Library 2"
+                "/static/images/library/library_images/Multimedia Library 2"
         }
     ],
 
