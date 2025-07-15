@@ -8,6 +8,7 @@ import shutil
 import bcrypt
 import re
 
+#Hostel Student Test Settings is Turned On Till Now at line 1126
 mongo_uri = "mongodb://localhost:27017/"
 db_name = "VEC"
 collection_name = "staff_details"
