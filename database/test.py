@@ -11,12 +11,12 @@ db_name = "VEC"
 client = MongoClient(mongo_uri)
 db = client[db_name]
 
-def insert_academic_calender():
-
-    collection = db['academic_calender']  
-    with open("/root/Velammal-Engineering-College-Backend/docs/academic_calender.json", "r",encoding="utf-8") as file:
+def insert_library_data():
+    collection = db["library"]
+    with open("/root/Velammal-Engineering-College-Backend/docs/library.json", "r",encoding="utf-8") as file:
         documents = json.load(file)
         collection.insert_many(documents)
 
-    print("academic calender inserted successfully.")
-insert_academic_calender()
+    print("Library data inserted successfully.")
+
+insert_library_data()
