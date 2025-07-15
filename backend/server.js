@@ -1545,7 +1545,7 @@ app.get('/api/landing_page_data', async (req, res) => {
 
 //programmes_list
 app.get('/api/programmes_list', async (req, res) => {
-    const db = client.db("NEW_VEC");
+    const db = client.db(dbName);
     const collection = db.collection('programmes_list');
 
     try {

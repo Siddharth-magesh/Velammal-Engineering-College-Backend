@@ -1,5 +1,6 @@
 [
     {
+        "dept_id":"001",
         "Name": "Dr. VISU P",
         "department_name": "Artificial Intelligence and Data Science (AI&DS) ",
         "Unique_id": "VEC-001-01-077",
@@ -17,6 +18,7 @@
         }
     },
     {
+        "dept_id":"009",
         "Name": "Dr. MARY JOANS S",
         "department_name": "Electronics and Communication Engineering (ECE) ",
         "Unique_id": "VEC-009-01-090",
@@ -32,6 +34,7 @@
         }
     },
     {
+        "dept_id":"012",
         "Name": "Dr. RAJESWARAN S",
         "department_name": "Mathematics",
         "Unique_id": "VEC-012-01-096",
@@ -49,6 +52,7 @@
         }
     },
     {
+        "dept_id":"004",
         "Name": "Dr. JEBAMALAR A",
         "department_name": "Civil Engineering (CIVIL)",
         "Unique_id": "VEC-004-01-145",
@@ -63,6 +67,7 @@
         }
     },
     {
+        "dept_id":"002",
         "Name": "Dr. BASKARA SETHUPATHY S",
         "department_name": "Automobile Engineering (AUTO)",
         "Unique_id": "VEC-002-01-102",
@@ -77,6 +82,7 @@
         }
     },
     {
+        "dept_id":"003",
         "Name": "Dr. MOHAMED SIKKANDER A",
         "department_name": "Chemistry",
         "Unique_id": "VEC-003-01-110",
@@ -96,6 +102,7 @@
         }
     },
     {
+        "dept_id":"007",
         "Name": "Dr. SURESH KUMAR K",
         "department_name": "Electrical & Electronics Engineering (EEE)",
         "Unique_id": "VEC-007-01-125",
@@ -112,6 +119,7 @@
         }
     },
     {
+        "dept_id":"008",
         "Name": "Dr. Brijet Z",
         "department_name": "Electronics & Instrumentation Engineering (EIE)",
         "Unique_id": "VEC-008-01-130",
@@ -127,6 +135,7 @@
         }
     },
     {
+        "dept_id":"005",
         "Name": "Dr. MURUGESWARI B",
         "department_name": "Computer Science & Engineering (CSE)",
         "Unique_id": "VEC-005-01-120",
@@ -141,6 +150,7 @@
         }
     },
     {
+        "dept_id":"006",
         "Name": "Dr. Rajalakshmi S",
         "department_name": "Computer Science and Engineering (CYBER SECURITY)",
         "Unique_id": "VEC-006-01-135",
@@ -158,6 +168,7 @@
     },
 
     {
+        "dept_id":"010",
         "Name": "Mr. BASKARAN V",
         "department_name": "English",
         "Unique_id": "VEC-010-01-140",
@@ -171,6 +182,7 @@
         }
     },
    {
+        "dept_id":"011",  
         "Name": "Dr. JEEVAA KATIRAVAN",
         "department_name": "Information Technology (IT)",
         "Unique_id": "VEC-011-01-150",
@@ -187,6 +199,7 @@
     }
     },
     {
+        "dept_id":"013",
         "Name": "Dr. GANAPATHY SUNDARAM E",
         "department_name": "Mechancial Engineering (MECH)",
         "Unique_id": "VEC-013-01-160",
@@ -202,6 +215,7 @@
     },
     
     {
+        "dept_id":"015",
         "Name": "Dr. SHAHIL KIRUPAVATHY S",
         "department_name": "Physics",
         "Unique_id": "VEC-015-01-191",
@@ -218,6 +232,7 @@
         }
     },
     {
+        "dept_id":"014",
         "Name": "திரு. முத்தையா மு.மு",
         "department_name": "தமிழ்த்துறை",
         "Unique_id": "VEC-014-01-180",
@@ -231,6 +246,7 @@
         }
     },
     {
+        "dept_id":"017",
         "Name": "Dr. NIRMALRAJ A",
         "department_name": "Master of Business Administration (MBA)",
         "Unique_id": "VEC-017-01-181",
@@ -248,6 +264,7 @@
         
     },
     {
+        "dept_id":"016",
         "Name": "Dr. MURUGESWARI B",
         "department_name": "M.E Computer Science Engineering",
         "Unique_id": "VEC-005-01-120",
