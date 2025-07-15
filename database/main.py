@@ -7,6 +7,7 @@ import json
 import shutil
 import bcrypt
 import re
+from concurrent.futures import ThreadPoolExecutor, as_completed
 
 #Hostel Student Test Settings is Turned On Till Now at line 1126
 mongo_uri = "mongodb://localhost:27017/"
@@ -472,7 +473,7 @@ try:
 except Exception as e:
     print(f"Error inserting initial data: {e}\n")
 
-for _, row in df.iterrows():
+'''for _, row in df.iterrows():
     faculty_unique_id = row['unique_id']
     file_url = row.get('Upload Your Excel File Here', None)
     
@@ -493,7 +494,39 @@ for _, row in df.iterrows():
     insert_journal_publications(faculty_unique_id)
     insert_research_scholars(faculty_unique_id)
 
-    print(f"Completed processing data for {faculty_unique_id}.\n")
+    print(f"Completed processing data for {faculty_unique_id}.\n")'''
+
+def process_faculty_data(row):
+    faculty_unique_id = row['unique_id']
+    file_url = row.get('Upload Your Excel File Here', None)
+
+    if not file_url:
+        print(f"No file URL provided for {faculty_unique_id}. Skipping download.")
+        return
+
+    print(f"Processing educational qualifications for {faculty_unique_id} with file URL: {file_url}")
+
+    try:
+        download_and_save_faculty_data(faculty_unique_id, file_url)
+        
+        insert_educational_qualifications_per_faculty(faculty_unique_id)
+        insert_experience(faculty_unique_id)
+        insert_conference_publications(faculty_unique_id)
+        insert_book_publications(faculty_unique_id)
+        insert_patents(faculty_unique_id)
+        insert_projects(faculty_unique_id)
+        insert_journal_publications(faculty_unique_id)
+        insert_research_scholars(faculty_unique_id)
+
+        print(f"Completed processing data for {faculty_unique_id}.")
+    except Exception as e:
+        print(f"Error processing {faculty_unique_id}: {e}")
+
+#Threading with 8 Workers
+with ThreadPoolExecutor(max_workers=8) as executor:
+    futures = [executor.submit(process_faculty_data, row) for _, row in df.iterrows()]
+    for future in as_completed(futures):
+        future.result()  # This will raise any exception that occurred in the thread
 
 def insert_department_data():
     collection = db["vision_and_mission"]
