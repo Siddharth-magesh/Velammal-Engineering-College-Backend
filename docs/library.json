@@ -189,21 +189,21 @@
             "description":
                 "Contains technical and non-technical journals of national and international origins. Latest issues are displayed outside, while back volumes are stored for reference.",
             "image":
-                "/static/images/library/library_images/PERIODICAL SECTION"
+                "/static/images/library/library_images/PERIODICAL SECTION.webp"
         },
         {
             "title": "REFERENCE SECTION",
             "description":
                 "Holds about 5000 reference books on Engineering, Science, Humanities, English, Encyclopedias & Dictionaries, including a collection of rare books.",
             "image":
-                "/static/images/library/library_images/REFERENCE SECTION"
+                "/static/images/library/library_images/REFERENCE SECTION.webp"
         },
         {
             "title": "PROJECT REPORT & BACK VOLUMES",
             "description":
                 "The Library houses 2768 journal back volumes covering Engineering, Science, Humanities, and Business, along with 3192 student project reports.",
             "image":
-                "/static/images/library/library_images/PROJECT REPORT & BACK VOLUMES"
+                "/static/images/library/library_images/PROJECT REPORT & BACK VOLUMES.webp"
         }
     ],
     "EbookSources" : [
@@ -262,28 +262,28 @@
             "title": "NEW ARRIVALS - BOOKS/PERIODICALS",
             "description":
                 "New books are displayed in the new arrival rack for at least one week. Current periodicals are arranged subject-wise in racks until new issues arrive.",
-            "image": "/static/images/library/library_images/New Arrivals"
+            "image": "/static/images/library/library_images/New Arrivals.webp"
         },
         {
             "title": "IEEE STUDENT BRANCH LIBRARY",
             "description":
                 "The IEEE student branch is highly active, providing access to 50+ IEEE journals and transactions. All students and staff can reference these materials.",
             "image":
-                "/static/images/library/library_images/Multimedia Library 1"
+                "/static/images/library/library_images/Multimedia Library 1.webp"
         },
         {
             "title": "INTERNET / CD BROWSING",
             "description":
                 "Apart from internet access in the computer lab, the library offers four computers for internet and CD browsing.",
             "image":
-                "/static/images/library/library_images/PROJECT REPORT & BACK VOLUMES"
+                "/static/images/library/library_images/PROJECT REPORT & BACK VOLUMES.webp"
         },
         {
             "title": "AUDIO VIDEO SECTION",
             "description":
                 "The library contains audio cassettes, video tapes, and CDs to enhance communication skills, subject knowledge, and competitive exam preparation.",
             "image":
-                "/static/images/library/library_images/Multimedia Library 2"
+                "/static/images/library/library_images/Multimedia Library 2.webp"
         }
     ],
 
