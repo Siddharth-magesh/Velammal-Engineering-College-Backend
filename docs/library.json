@@ -66,7 +66,7 @@
                 ]
         },
             "collection":{
-                "Free E-Books Download Websites":[
+                "Free+E-Books_Download_Websites":[
                     "University of Pennsylvania",
                     "Project Gutenberg",
                     "Free e-books",
@@ -80,7 +80,7 @@
                     "e-Books Palace",
                     "Electronic Library of Mathematics"
                 ],
-                "Anti-Plagiarism Scanner Software":[
+                "Anti-Plagiarism_Scanner_Software":[
                     "CopyCatch",
                     "TurnItOut",
                     "Eve",
@@ -93,7 +93,7 @@
                     "Small SEO Tools",
                     "ScanMyEssay & Viper & WCopyFind"
                 ],
-                "Our Collections":[
+                "Our_Collections":[
                     "no_of_books",
                     "no_of_titles",
                     "General Bank Books",
@@ -126,6 +126,233 @@
                     ""
                 ]
                 
-            }
+            },
+    "additionalSections" : [
+        {
+            "category": "SERVICES",
+            "items": [
+                "Reference service",
+                "Reservation Service",
+                "Online Public Access Catalogue (OPAC)",
+                "Internet Service",
+                "Reprographic Service",
+                "Job Opportunity Display",
+                "Books exhibition",
+                "SDI service",
+                "Technical Film shows",
+                "Current awareness Service"
+            ]
+        },
+        {
+            "category": "FACILITIES",
+            "items": [
+                "Inter Library Network",
+                "OPAC (On-line Public Access Catalogue)",
+                "Book Bank (SC/ST)",
+                "General Book Bank",
+                "Career Guidance Sections",
+                "Reading Halls for Reference",
+                "Web Based Library Information",
+                "E-Resources Access"
+            ]
+        },
+
+        {
+            "category": "E-RESOURCES",
+            "items": ["E-Journals", "E-books", "DELNET", "NPTEL", "NDL"]
+        }
+    ],
+    "ImageGallery" : [
+        {
+            "title": "REPROGRAPHY SECTION",
+            "description":
+                "The College Library is equipped with a plain paper copier for REPROGRAPHY SERVICE, enabling users to obtain photocopies of library documents at a nominal cost while preserving the collection.",
+            "image":
+                "/static/images/library_images/REPROGRAPHY SECTION.webp"
+        },
+        {
+            "title": "STACK ROOM WITH READING HALL",
+            "description":
+                "A well-equipped, multi-storied stock room with modern book stacks for easy access. Books are classified using the Universal Decimal Classification, and an Open Access System is followed.",
+            "image":
+                "/static/images/library_images/STACK ROOM WITH READING HALL.webp"
+        },
+        {
+            "title": "READING HALL",
+            "description":
+                "Designed to provide a wonderful reading atmosphere with comfortable tables and chairs for 250 users. Students can bring books and journals from stacks for reference work.",
+            "image":
+                "/static/images/library_images/Common.webp"
+        },
+        {
+            "title": "PERIODICAL SECTION",
+            "description":
+                "Contains technical and non-technical journals of national and international origins. Latest issues are displayed outside, while back volumes are stored for reference.",
+            "image":
+                "/static/images/library_images/PERIODICAL SECTION"
+        },
+        {
+            "title": "REFERENCE SECTION",
+            "description":
+                "Holds about 5000 reference books on Engineering, Science, Humanities, English, Encyclopedias & Dictionaries, including a collection of rare books.",
+            "image":
+                "/static/images/library_images/REFERENCE SECTION"
+        },
+        {
+            "title": "PROJECT REPORT & BACK VOLUMES",
+            "description":
+                "The Library houses 2768 journal back volumes covering Engineering, Science, Humanities, and Business, along with 3192 student project reports.",
+            "image":
+                "/static/images/library_images/PROJECT REPORT & BACK VOLUMES"
+        }
+    ],
+    "EbookSources" : [
+          {
+            "name": "University of Pennsylvania",
+            "url": "http://digital.library.upenn.edu/books"
+          },
+          {
+            "name": "Project Gothenburg",
+            "url": "http://www.gutenberg.org"
+          },
+          {
+            "name": "Free e books",
+            "url": "http://www.free-ebooks.net"
+          },
+          {
+            "name": "Free Tech books",
+            "url": "http://www.freetechbooks.com"
+          },
+          {
+            "name": "Campus books",
+            "url": "http://www.campusbooks.com"
+          },
+          {
+            "name": "University of Virginia; e-book Library",
+            "url": "http://etext.lib.virginia.edu/ebooks/ebooklist.html"
+          },
+          {
+            "name": "NAP Open Book",
+            "url": "http://www.nap.edu/index.html"
+          },
+          {
+            "name": "Internet public Library",
+            "url": "http://www.ipl.org/div/books"
+          },
+          {
+            "name": "Direct Text Book",
+            "url": "http://www.directtextbook.com"
+          },
+          {
+            "name": "e-books",
+            "url": "http://e-books.org"
+          },
+          {
+            "name": "e-books Palace",
+            "url": "http://www.ebookpalace.com"
+          },
+          {
+            "name": "Electronic Library of Mathmatics",
+            "url": "http://www.emis.de/journals/short_index.html"
+          }
+    ],
+
+    "NewArrivals" : [
+        {
+            "title": "NEW ARRIVALS - BOOKS/PERIODICALS",
+            "description":
+                "New books are displayed in the new arrival rack for at least one week. Current periodicals are arranged subject-wise in racks until new issues arrive.",
+            "image": "/static/images/library_images/New Arrivals"
+        },
+        {
+            "title": "IEEE STUDENT BRANCH LIBRARY",
+            "description":
+                "The IEEE student branch is highly active, providing access to 50+ IEEE journals and transactions. All students and staff can reference these materials.",
+            "image":
+                "/static/images/library_images/Multimedia Library 1"
+        },
+        {
+            "title": "INTERNET / CD BROWSING",
+            "description":
+                "Apart from internet access in the computer lab, the library offers four computers for internet and CD browsing.",
+            "image":
+                "/static/images/library_images/PROJECT REPORT & BACK VOLUMES"
+        },
+        {
+            "title": "AUDIO VIDEO SECTION",
+            "description":
+                "The library contains audio cassettes, video tapes, and CDs to enhance communication skills, subject knowledge, and competitive exam preparation.",
+            "image":
+                "/static/images/library_images/Multimedia Library 2"
+        }
+    ],
+
+    "Links" : [
+        {
+            "title": "Anti-Plagiarism Scanner Software",
+            "content": [
+                {"name": "CopyCatch", "link": "https://www.copycatchgold.com"},
+                {"name": "TurnItOut", "link": "https://www.turnitout.com"},
+                {"name": "Eve", "link": "https://www.canexus.com"},
+                {"name": "Plagiarism.com", "link": "https://www.plagiarism.com"},
+                {"name": "Copyscape", "link": "https://www.copyscape.com"},
+                {
+                    "name": "CodeMatch (CodeSuite)",
+                    "link": "https://www.zeidmanconsulting.com/CodeSuite.htm"
+                },
+                {"name": "ArticleChecker", "link": "https://www.articlechecker.com"},
+                {
+                    "name": "PlagiarismDetect.com",
+                    "link": "https://www.plagiarismdetect.com"
+                },
+                {"name": "Duplichecker", "link": "https://www.duplichecker.com"},
+                {
+                    "name": "Small SEO Tools",
+                    "link": "https://smallseotools.com/plagiarism-checker/"
+                },
+                {
+                    "name": "ScanMyEssay & Viper & WCopyFind",
+                    "link": "https://www.scanmyessay.com/"
+                }
+            ]
+        },
+        {
+            "title": "Our Collections",
+            "content": [
+                "Total Books: 77,525",
+                "Total Titles: 25,156",
+                "General Bank Books: 1,818",
+                "SC/ST Book Bank Books: 984",
+                "e-Books: 155",
+                "Journals: 162 (75 International, 87 National)",
+                "CDs: 3,930",
+                "Video Cassettes: 127",
+                "Journal Back Volumes: 2,768",
+                "Student Project Reports: 3,192",
+                "Online Journals Package: 9,517",
+                "Magazines & Newspapers: 20"
+            ]
+        }
+    ],
+
+    "advisors" : [
+        ["Dr. RAJENDRAPRASATH S", "Librarian/HOD - Secretary"],
+        ["Dr. MANJU S", "Ass.Prof - Electronics and Communication Engineering - Convener"],
+        ["Mrs. SELVE V", "Ass.Prof - Electrical and Electronics Engineering"],
+        ["Dr. SATHYA PRIYA J", "Ass.Prof - Information Technology"],
+        ["Mrs. HEMALATHA B", "Ass.Prof -Computer Science Engineering "],
+        ["Mrs. NANDHINI", "Ass.Prof - Electronics and Communication Engineering"],
+        ["Mr. THILLAIBACKIAM M", "Ass.Prof - Civil Engineering"],
+        ["Mr. KARTHIKEYAN", "Ass.Prof - Mechanical Engineering"],
+        ["Mrs. PREMA A", "Ass.Prof - Artificial Intelligence and Data Science"],
+        ["Mr. SENTHAMILSELVAN", "Ass.Prof - Automobile Engineering"],
+        ["Dr. ANUSANKARI S", "Ass.Prof - Electronics Instrumentation Engineering"],
+        ["Ms. AKSAYA DHARANI", "Ass.Prof - Computer Science Engineering - Cyber Security"],
+        ["Mrs. REVATHY PANDIAN", "Ass.Prof - Master of Business Administration"],
+        ["Mrs. HAMSAVALLI", "Prof - Physics"],
+        ["Mr. GOPIKRISHNAN", "Ass.Prof - Mathematics"],
+        ["Mr. SIVARAJ", "Ass.Prof - Chemistry"],
+        ["Mr. BALAJI", "Ass.Prof - English"]
+    ]
         }
 ]
