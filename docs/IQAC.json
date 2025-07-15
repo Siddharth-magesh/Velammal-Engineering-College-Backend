@@ -325,9 +325,8 @@
       ]
     },
     "institutional_distinctiveness":{
-      "path": [
-        "/static/pdfs/iqac/VEC-Institutional-Distinctivenss.pdf"
-      ]
+      "path": "/static/pdfs/iqac/VEC-Institutional-Distinctivenss.pdf"
+      
     },
     "codeOfEthics": {
       "path": "/static/pdfs/iqac/code_of_ethics.pdf"

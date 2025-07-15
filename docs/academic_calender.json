@@ -4,23 +4,16 @@
       "Academic Year 2025-2026",
       "Academic Year 2024-2025",
       "Academic Year 2023-2024",
-      "Academic Year 2022-2023",
-      "Academic Year 2021-2022",
-      "Academic Year 2020-2021"
+      "Academic Year 2022-2023"
     ],
     "pdf_path": [
       "calendar/2025-2026/odd.pdf",
-      "calendar/2025-2026/even.pdf",
       "calendar/2024-2025/odd.pdf",
       "calendar/2024-2025/even.pdf",
       "calendar/2023-2024/odd.pdf",
       "calendar/2023-2024/even.pdf",
       "calendar/2022-2023/odd.pdf",
-      "calendar/2022-2023/even.pdf",
-      "calendar/2021-2022/odd.pdf",
-      "calendar/2021-2022/even.pdf",
-      "calendar/2020-2021/odd.pdf",
-      "calendar/2020-2021/even.pdf"
+      "calendar/2022-2023/even.pdf"
     ]
   }
 ]
