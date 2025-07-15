@@ -6,11 +6,122 @@ const bodyParser = require('body-parser');
 const bcrypt = require('bcrypt');
 const { v4: uuidv4 } = require('uuid');
 const { ObjectId } = require('mongodb');
+const multer = require('multer');
+const path = require('path');
+const fs = require('fs');
+const AWS = require('aws-sdk');
+const sharp = require('sharp');
+const mime = require('mime-types');
 
 dotenv.config({quiet: true});
 
+// Suppress AWS SDK maintenance warning
+process.removeAllListeners('warning');
+process.on('warning', (warning) => {
+  if (!warning.message.includes('AWS SDK for JavaScript (v2) is in maintenance mode')) {
+    console.warn(warning);
+  }
+});
+
 const app = express();
 const port = process.env.PORT || 5000;
+
+const BASE_UPLOAD_PATH = path.join(__dirname, 'static', 'TEMP');
+
+function ensureDirectoryExists(dirPath) {
+    if (!fs.existsSync(dirPath)) {
+        fs.mkdirSync(dirPath, { recursive: true });
+    }
+}
+
+const storage = multer.diskStorage({
+    destination: function (req, file, cb) {
+        const relativeDestination = req.body.destination || req.destination;
+        if (!relativeDestination) {
+            return cb(new Error("Missing 'destination' in request"));
+        }
+        const absolutePath = path.join(BASE_UPLOAD_PATH, relativeDestination);
+        if (!absolutePath.startsWith(BASE_UPLOAD_PATH)) {
+            return cb(new Error("Invalid upload destination"));
+        }
+        ensureDirectoryExists(absolutePath);
+        cb(null, absolutePath);
+    },
+
+    filename: function (req, file, cb) {
+        const filename = req.filename; // Always prefer backend-injected name
+        if (!filename) {
+            return cb(new Error("Missing 'filename' in request"));
+        }
+        const extension = path.extname(file.originalname);
+        const finalName = `${filename}${extension}`;
+        cb(null, finalName);
+    }
+});
+
+const upload = multer({ storage });
+
+AWS.config.update({
+  region: process.env.AWS_REGION,
+  accessKeyId: process.env.AWS_ACCESS_KEY_ID,
+  secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
+});
+
+const s3 = new AWS.S3();
+
+s3.listBuckets((err, data) => {
+  if (err) {
+    console.error('AWS S3 connection failed:', err.message);
+  } else {
+    console.log('Connected to AWS S3');
+  }
+});
+
+async function uploadFileToS3FromPath(localFilePath) {
+  try {
+    const fileExt = path.extname(localFilePath).toLowerCase();
+    const isImage = ['.jpg', '.jpeg', '.png'].includes(fileExt.toLowerCase());
+
+    if (!fs.existsSync(localFilePath)) {
+      throw new Error(`File does not exist: ${localFilePath}`);
+    }
+
+    const fileBuffer = fs.readFileSync(localFilePath);
+    let finalBuffer = fileBuffer;
+    let contentType = mime.lookup(fileExt) || 'application/octet-stream';
+
+    let finalKey = localFilePath.replace(/^static[\/\\]TEMP[\/\\]/, 'static/').replace(/\\/g, '/');
+
+    if (isImage) {
+      finalBuffer = await sharp(fileBuffer)
+        .webp({ quality: 80 })
+        .toBuffer();
+      contentType = 'image/webp';
+      finalKey = finalKey.replace(fileExt, '.webp');
+    }
+
+    const params = {
+      Bucket: process.env.AWS_S3_NAME,
+      Key: finalKey,
+      Body: finalBuffer,
+      ContentType: contentType,
+      ACL: 'public-read',
+    };
+
+    const result = await s3.upload(params).promise();
+
+    console.log('Uploaded to S3:', result.Location);
+    return {
+      s3Path: `/${finalKey}`,
+      url: result.Location,
+    };
+  } catch (error) {
+    console.error('S3 Upload Failed:', error.message);
+    throw error;
+  }
+}
+
+module.exports = uploadFileToS3FromPath;
 
 app.use(bodyParser.json());
 app.use(express.json());
@@ -219,7 +330,7 @@ app.post('/api/admin_signup', async (req, res) => {
 });
 
 // Landing Page Update
-app.post('/api/update_landing_page', verifyAdminAccess('landing_page_access'), async (req, res) => {
+app.post('/api/update_landing_page_details', verifyAdminAccess('landing_page_access'), async (req, res) => {
     try {
         const { metadata, collection, category, type, title } = req.body;
         const admin_id = req.session.username;
@@ -272,12 +383,12 @@ app.post('/api/update_landing_page', verifyAdminAccess('landing_page_access'), a
     }
 });
 
-//Superior Admin Review
+//Superior Admin Review for landing page details
 app.post('/api/review_landing_page_request', verifyAdminAccess('landing_page_access'), async (req, res) => {
     try {
-        const { unique_id, decision_by, reviewed_notes, actions } = req.body;
+        const { unique_id, reviewed_notes, actions } = req.body;
 
-        if (!unique_id || !decision_by || !actions) {
+        if (!unique_id || !actions) {
             return res.status(400).json({ error: 'Missing required fields' });
         }
 
@@ -320,7 +431,7 @@ app.post('/api/review_landing_page_request', verifyAdminAccess('landing_page_acc
 
         const updatedRequest = {
             ...requestDoc,
-            reviewed_by: decision_by,
+            reviewed_by: req.session.username,
             reviewed_notes: reviewed_notes || '',
             status: 'managed',
             actions
@@ -342,6 +453,360 @@ app.post('/api/review_landing_page_request', verifyAdminAccess('landing_page_acc
 
     } catch (err) {
         console.error('Error processing landing page request review:', err);
+        return res.status(500).json({ error: 'Internal server error' });
+    }
+});
+
+// Update Department Banner
+app.post(
+    '/api/update_department_banner',
+    async (req, res, next) => {
+    try {
+        const { type, existing_id } = req.body;
+
+        const dbCollection = db.collection('landing_page_details');
+        const existingDoc = await dbCollection.findOne({});
+        if (!existingDoc) {
+            return res.status(404).json({ error: 'Landing page document not found' });
+        }
+
+        const departmentBanners = existingDoc.department_banner || [];
+
+        if (type === 'add') {
+            const newIndex = departmentBanners.length + 1;
+            const paddedIndex = String(newIndex).padStart(3, '0');
+            req.filename = paddedIndex;
+            req.body.destination = 'images/banner/';
+        } else if (type === 'update') {
+            const idx = departmentBanners.findIndex(b => b.dept === existing_id);
+            if (idx === -1) {
+                return res.status(404).json({ error: 'Department banner not found' });
+            }
+            const currentBanner = departmentBanners[idx];
+            const pathParts = currentBanner.banner_image.split('/');
+            const existingFilename = pathParts[pathParts.length - 1].split('.')[0]; // '003'
+            req.filename = existingFilename;
+            req.body.destination = 'images/banner/';
+        } else if (type === 'delete') {
+            return next();
+        } else {
+            return res.status(400).json({ error: 'Invalid type specified' });
+        }
+        next();
+    } catch (err) {
+        console.error('Error injecting filename/destination:', err);
+        return res.status(500).json({ error: 'Internal server error' });
+    }
+    },
+    upload.single('banner_image'),
+    verifyAdminAccess('landing_page_access'),
+    async (req, res) => {
+        try {
+            const { metadata, type, title, existing_id } = req.body;
+            const admin_id = req.session.username;
+
+            if (!metadata || !type || !title ) {
+                return res.status(400).json({ error: 'Missing required fields in request body' });
+            }
+
+            const dbCollection = db.collection('landing_page_details');
+            const existingDoc = await dbCollection.findOne({});
+            if (!existingDoc) {
+                return res.status(404).json({ error: 'Landing page document not found' });
+            }
+
+            const departmentBanners = existingDoc.department_banner || [];
+
+            if (type === 'add') {
+                const uploadedFile = req.file;
+                //if (!uploadedFile) {
+                  //  return res.status(400).json({ error: 'Banner image file is required' });
+                //}
+
+                const paddedIndex = req.filename;
+                let bannerImagePath = metadata.banner_image || '';
+                if (uploadedFile) {
+                    bannerImagePath = `/static${uploadedFile.path.split('/static')[1]}`.replace(/\\/g, '/');
+                }
+                const redirectURL = `/dept/${paddedIndex}`;
+
+                const newDeptBanner = {
+                    ...metadata,
+                    banner_image: bannerImagePath,
+                    redirect_url: redirectURL
+                };
+
+                const tempDoc = {
+                    unique_id: uuidv4(),
+                    action_target_id: null,
+                    metadata: {department_banner : newDeptBanner },
+                    original_data: {department_banner : null},
+                    type,
+                    collection_name: 'landing_page_details',
+                    category: 'department_banner',
+                    admin_id,
+                    title,
+                    status: 'pending',
+                    date: new Date().toISOString(),
+                    reviewed_by: null,
+                    reviewed_notes: null
+                };
+
+                await db.collection('temp').insertOne(tempDoc);
+
+                return res.status(200).json({
+                    message: 'Department banner add request submitted for approval',
+                    request_id: tempDoc.unique_id,
+                    banner_preview: newDeptBanner
+                });
+            }
+
+            else if (type === 'update') {
+                const idx = departmentBanners.findIndex(b => b.dept === existing_id);
+                if (idx === -1) {
+                    return res.status(404).json({ error: 'Department banner not found' });
+                }
+
+                const currentBanner = departmentBanners[idx];
+                const originalFields = {};
+
+                for (const key in metadata) {
+                    originalFields[key] = currentBanner[key] ?? null;
+                }
+
+                if (req.file) {
+                    const newImagePath = `/static${req.file.path.split('/static')[1]}`.replace(/\\/g, '/');
+                    metadata.banner_image = newImagePath;
+                }
+
+                const updatedBanner = { ...metadata };
+
+                const tempDoc = {
+                    unique_id: uuidv4(),
+                    action_target_id: existingDoc._id,
+                    metadata: { department_banner: metadata },
+                    original_data: {department_banner : originalFields},
+                    type,
+                    collection_name: 'landing_page_details',
+                    category: 'department_banner',
+                    admin_id,
+                    title,
+                    status: 'pending',
+                    date: new Date().toISOString(),
+                    reviewed_by: null,
+                    reviewed_notes: null
+                };
+
+                await db.collection('temp').insertOne(tempDoc);
+
+                return res.status(200).json({
+                    message: 'Department banner update request submitted for approval',
+                    request_id: tempDoc.unique_id,
+                    banner_preview: updatedBanner
+                });
+            }
+
+            else if (type === 'delete') {
+                const bannerToDelete = departmentBanners.find(b => b.dept === existing_id);
+
+                if (!bannerToDelete) {
+                    return res.status(404).json({ error: 'Department banner not found' });
+                }
+
+                const tempDoc = {
+                    unique_id: uuidv4(),
+                    action_target_id: existingDoc._id,
+                    metadata: {},
+                    original_data: { department_banner : bannerToDelete},
+                    type,
+                    collection_name: 'landing_page_details',
+                    category: 'department_banner',
+                    admin_id,
+                    title,
+                    status: 'pending',
+                    date: new Date().toISOString(),
+                    reviewed_by: null,
+                    reviewed_notes: null
+                };
+
+                await db.collection('temp').insertOne(tempDoc);
+
+                return res.status(200).json({
+                    message: 'Department banner delete request submitted for approval',
+                    request_id: tempDoc.unique_id,
+                    deleted_banner: bannerToDelete
+                });
+            }
+
+            return res.status(400).json({ error: 'Invalid type. Must be "add", "update", or "delete"' });
+        } catch (err) {
+            console.error('Error updating department banner:', err);
+            return res.status(500).json({ error: 'Internal server error' });
+        }
+    }
+);
+
+//Superior Admin Review for Department Banner
+app.post('/api/review_department_banner_request', verifyAdminAccess('landing_page_access'), async (req, res) => {
+    try {
+        const payload = req.body.superior_payload;
+        if (!Array.isArray(payload) || payload.length === 0) {
+            return res.status(400).json({ error: 'Invalid or empty superior_payload' });
+        }
+
+        const tempCollection = db.collection('temp');
+        const landingPageCollection = db.collection('landing_page_details');
+        const adminArchiveCollection = db.collection('admin_archive');
+        const username = req.session.username;
+
+        const results = [];
+
+        for (const review of payload) {
+            const { unique_id, reviewed_notes, actions } = review;
+            const requestDoc = await tempCollection.findOne({ unique_id });
+
+            if (!requestDoc) {
+                results.push({ unique_id, status: 'failed', reason: 'Request not found' });
+                continue;
+            }
+
+            const { type, metadata, original_data, action_target_id } = requestDoc;
+            let updateResult = null;
+            let finalStatus = 'rejected';
+            const approvedFields = {};
+            const rejectedFields = [];
+
+            if (type === 'add') {
+                const section = 'department_banner';
+                const sectionData = metadata[section];
+                const sectionActions = actions[section];
+
+                const approvedBanner = {};
+                for (const field in sectionActions) {
+                    if (sectionActions[field] === 'approve') {
+                        if (field === 'banner_image') {
+                        try {
+                            const uploadResult = await uploadFileToS3FromPath(sectionData[field]);
+                            approvedBanner[field] = uploadResult.s3Path;
+                        } catch (err) {
+                            rejectedFields.push(`${section}.${field}`);
+                            continue;
+                        }
+                        } else {
+                        approvedBanner[field] = sectionData[field];
+                        }
+                    } else {
+                        rejectedFields.push(`${section}.${field}`);
+                    }
+                }
+
+                if (Object.keys(approvedBanner).length > 0) {
+                    await landingPageCollection.updateOne({}, {
+                        $push: { department_banner: approvedBanner }
+                    });
+                    approvedFields[section] = approvedBanner;
+                    finalStatus = rejectedFields.length === 0 ? 'approved' : 'partially_approved';
+                }
+
+            } else if (type === 'update') {
+                const section = 'department_banner';
+                const sectionData = metadata[section];
+                const sectionActions = actions[section];
+                const deptToUpdate = original_data[section]?.dept;
+
+                if (!deptToUpdate) {
+                    results.push({ unique_id, status: 'failed', reason: 'Original department not found' });
+                    continue;
+                }
+
+                const doc = await landingPageCollection.findOne({});
+                const banners = doc?.department_banner || [];
+                const bannerIndex = banners.findIndex(b => b.dept === deptToUpdate);
+
+                if (bannerIndex === -1) {
+                    results.push({ unique_id, status: 'failed', reason: 'Matching department not found in live data' });
+                    continue;
+                }
+
+                const updates = {};
+                for (const field in sectionActions) {
+                    if (sectionActions[field] === 'approve') {
+                        if (field === 'banner_image') {
+                        try {
+                            const uploadResult = await uploadFileToS3FromPath(sectionData[field]);
+                            updates[`department_banner.${bannerIndex}.${field}`] = uploadResult.s3Path;
+                        } catch (err) {
+                            rejectedFields.push(`${section}.${field}`);
+                            continue;
+                        }
+                        } else {
+                        updates[`department_banner.${bannerIndex}.${field}`] = sectionData[field];
+                        }
+                    } else {
+                        rejectedFields.push(`${section}.${field}`);
+                    }
+                }
+
+                if (Object.keys(updates).length > 0) {
+                    await landingPageCollection.updateOne({}, { $set: updates });
+                    approvedFields[section] = updates;
+                    finalStatus = rejectedFields.length === 0 ? 'approved' : 'partially_approved';
+                }
+
+            } else if (type === 'delete') {
+                const section = 'department_banner';
+                const sectionActions = actions[section];
+                if (sectionActions.delete_department === 'approve') {
+                    const deptToDelete = original_data[section]?.dept;
+
+                    if (!deptToDelete) {
+                        results.push({ unique_id, status: 'failed', reason: 'Department info missing for delete' });
+                        continue;
+                    }
+
+                    await landingPageCollection.updateOne({}, {
+                        $pull: {
+                            department_banner: { dept: deptToDelete }
+                        }
+                    });
+
+                    approvedFields[section] = { delete_department: deptToDelete };
+                    finalStatus = 'approved';
+                } else {
+                    rejectedFields.push('department_banner.delete_department');
+                }
+            } else {
+                results.push({ unique_id, status: 'failed', reason: 'Unknown request type' });
+                continue;
+            }
+
+            // Archive the decision
+            const archiveDoc = {
+                ...requestDoc,
+                reviewed_by: username,
+                reviewed_notes: reviewed_notes || '',
+                status: 'managed',
+                actions
+            };
+
+            await adminArchiveCollection.insertOne(archiveDoc);
+            await tempCollection.deleteOne({ unique_id });
+
+            results.push({
+                unique_id,
+                status: finalStatus,
+                approved_fields: approvedFields,
+                rejected_fields: rejectedFields
+            });
+        }
+
+        return res.status(200).json({
+            message: 'Review process completed',
+            results
+        });
+
+    } catch (err) {
+        console.error('Error reviewing department banner requests:', err);
         return res.status(500).json({ error: 'Internal server error' });
     }
 });
