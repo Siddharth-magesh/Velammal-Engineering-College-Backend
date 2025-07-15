@@ -21,7 +21,7 @@
     {
         "dept_id": "002",
         "department_name": "Automobile Engineering (AUTO)",
-        "content": "Department 2 Content",
+        "content": "",
         "images": [
             {"image_path": "/static/images/student_activities/002/1.webp", "event_name": "Supra 2015", "image_content": "In 2015, our students showcased their engineering skills and innovation by participating in the SUPRA SAEINDIA event, a national-level competition where budding engineers design, build, and race a Formula-style vehicle. This hands-on experience provided our students with valuable exposure to vehicle dynamics, powertrain optimization, and design validation, fostering technical expertise and teamwork. Their participation in SUPRA 2015 reflects our commitment to nurturing industry-ready engineers equipped with practical knowledge and a passion for automotive excellence.", "date": "2015-07-15"},
             {"image_path": "/static/images/student_activities/002/2.webp", "event_name": "International Go-Kart Championship", "image_content": "Our department is proud to highlight the outstanding participation of our students in the International Go-Kart Championship (IGC) 2015, held at Lovely Professional University, Punjab. This prestigious event provided a platform for young engineers to design, fabricate, and race their own Go-Karts, applying their technical knowledge and innovative thinking. Our students demonstrated exceptional skills in vehicle design, powertrain integration, and performance optimization, competing against teams from across the country.Lovely Professional University, Punjab", "date": "2015-03-26"},
@@ -40,7 +40,7 @@
     {
         "dept_id": "004",
         "department_name": "Civil Engineering (CIVL)",
-        "content": "Department 4 Content",
+        "content": "",
         "images": [
             {"image_path": "/static/images/student_activities/004/1.webp", "event_name": "Anna University   Civilization - 2024 - Overall Championship ", "image_content": "VEC Civil Engineering Department won the Overall Championship of Civilization - a national level technical symposium conducted by College of Engineering, Guindy, Anna University consecutively for 7 years.", "date": "2024"},
             {"image_path": "/static/images/student_activities/004/2.webp", "event_name": "ANNA UNIVERSITY   CIVILIZATION - 2022 - OVERALL CHAMPIONSHIP (Students Won Anna University Civilization Overall Championship Trophy for the last 7 consecutive years)", "image_content": "Our Students were awarded 4 funded projects through IEDC for innovative project and products", "date": "2022"},
@@ -86,7 +86,7 @@
     {
         "dept_id": "008",
         "department_name": "Electronics & Instrumentation Engineering  (EIE)",
-        "content": "Department 8 Content",
+        "content": "",
         "images": [
             {"image_path": "/static/images/student_activities/008/1.webp", "event_name": "EDII's Hackathon-2024  ", "image_content": "Priya V, Anushaa J and Sivapriya B of Final year Electronics and Instrumentation Engineering students  have won 1st Runner up Position in EDII's Hackathon-2024  and received the Cash Prize of Rs. 25,000  from Honourable MSME Minister, Mr. Anbarasan at Anna University", "date": null},
             {"image_path": "/static/images/student_activities/008/2.webp", "event_name": "NATIONAL ENTREPRENEURSHIP CONCLAVE 2.0", "image_content": "DEEPIKA D AND SHIVA RANJANI PASUPATHY OF III YEAR SECURE 41ST POSITION (TOP 50) OUT OF 170 TEAMS AND WON CASH AWARD OF RS. 5,000/- AT  NATIONAL ENTREPRENEURSHIP CONCLAVE 2.0BY LEAD COLLEGE OF MANAGEMENT, DHONI, PALAKKAD, KERALA", "date": null},
@@ -105,7 +105,7 @@
     {
         "dept_id": "009",
         "department_name": "Electronics and Communication Engineering (ECE)",
-        "content": "Department 9 Content",
+        "content": "",
         "images": [
             {"image_path": "/static/images/student_activities/009/1.webp", "event_name": "RAISEathon", "image_content": "Raj Kisan ,Santhosh M, Vijay A, Shalini Agnes Mary A  won 1st place and a cash prize of 300000lakhs in RAISEathon", "date":null },
             {"image_path": "/static/images/student_activities/009/2.webp", "event_name": "omega 24", "image_content": "Raj Kisan  Santhosh M Monisha  Vijay A Shalini Agnes Mary A won First place  in hackathon and second price in paper presentation in Hindustan College omega 24 Symposium", "date":null},
@@ -125,7 +125,7 @@
     {
         "dept_id": "010",
         "department_name": "English",
-        "content": "Department 10 Content",
+        "content": "",
         "images": [
             {"image_path": "/static/images/student_activities/010/1.webp", "image_content": "Description of Image 10_1", "event_name": "Event 10_1", "date": "YYYY-MM-DD"},
             {"image_path": "/static/images/student_activities/010/2.webp", "image_content": "Description of Image 10_2", "event_name": "Event 10_2", "date": "YYYY-MM-DD"},
@@ -142,7 +142,7 @@
     {
         "dept_id": "011",
         "department_name": "Information Technology (IT)",
-        "content": "Department 11 Content",
+        "content": "",
         "images": [
             {"image_path": "/static/images/student_activities/011/1.webp", "image_content": "Subathra and Udayaravina of III IT won Second  prize(Cash Prize of Rs.22000) in Idea Incubators (Paper Presentation) in the event IDEA INCUBATORS conducted by Department of Spatial Informatics  at Saveetha Engineering College Description of Image 11_1", "event_name": "IDEA INCUBATORS ", "date": "2024-01-24"},
             {"image_path": "/static/images/student_activities/011/2.webp", "image_content": "Harish Ragav of II year IT B Section won first prize(Cash Prize of Rs.5000) in Research Showcase (Paper Presentation) in the event CISBOSSIUM'24 conducted by Department of Computer Science and Business System at R.M.K Engineering college ", "event_name": "CISBOSSIUM'24", "date": "2024-02-05"},
@@ -175,7 +175,7 @@
     {
         "dept_id": "013", 
         "department_name": "Mechancial Engineering (MECH)",
-        "content": "Department 13 Content",
+        "content": "",
         "images": [
             {"image_path": "/static/images/student_activities/013/1.webp", "image_content": "Final Year Student Mr.G.Yashwanth Kumar secured Gold medal in Anna University Inter Zone Best Physique men Tournament held @ Paavai Engineering College, Namakkal ", "event_name": "Anna University Inter Zone Best Physique men Tournament", "date": "2024-12-21"},
             {"image_path": "/static/images/student_activities/013/2.webp", "image_content": "Final year and third year students were participated in Maze Solver Challenge and Drone Racing (FPV) Challenge of TechnoXian World Cup 2024 (Technical event competition) held at Noida Stadium Complex, Noida, India ", "event_name": "TECHNOXIAN ’24", "date": "2024-02-24"},
@@ -200,14 +200,14 @@
     {
         "dept_id": "014",
         "department_name": "Tamil",
-        "content": "Department 14 Content",
+        "content": "",
         "images": [
            ]
     },
     {
         "dept_id": "015", 
         "department_name": "Physics",
-        "content": "Department 15 Content",
+        "content": "",
         "images": [
            ]
     },

@@ -12,7 +12,7 @@
         "department_name": "Automobile Engineering (AUTO)",
         "regulation": {
         "year":["2019", "2021", "2023"],
-	    "pdf_path":["static/pdfs/curriculum/002/R19.pdf","/static/pdfs/curriculum/002/R21.pdf","/static/pdfs/curriculum/002/R23.pdf"]
+	    "pdf_path":["static/pdfs/curriculum/002/reg_19.pdf","/static/pdfs/curriculum/002/reg_21.pdf","/static/pdfs/curriculum/002/reg_23.pdf"]
         }
     },
     {
