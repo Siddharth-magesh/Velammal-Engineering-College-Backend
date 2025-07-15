@@ -1121,6 +1121,27 @@ def insert_landing_page_details():
 
     print("insert_landing_page_details documents inserted successfully.\n")
 
+def insert_programmes_list():
+
+    collection = db['programmes_list']  
+    with open("/Velammal-Engineering-College-Backend/docs/programmes_list.json", "r",encoding="utf-8") as file:
+        documents = json.load(file)
+        collection.insert_many(documents)
+
+    print("Programmes list inserted successfully.")
+
+def insert_departments_list():
+
+    collection = db['departments_list']  
+    with open("/Velammal-Engineering-College-Backend/docs/departments_list.json", "r",encoding="utf-8") as file:
+        documents = json.load(file)
+        collection.insert_many(documents)
+
+    print("departments list inserted successfully.")
+
+
+
+
 insert_sports_data()
 insert_library_data()
 insert_nss_data()
@@ -1144,6 +1165,8 @@ insert_organization_chart()
 insert_hostel_menu()
 insert_help_desk()
 insert_landing_page_details()
+insert_programmes_list()
+insert_departments_list()
 # insert_acadamic_research()
 
 def add_hostel_student_database():
