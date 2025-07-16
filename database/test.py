@@ -12,11 +12,13 @@ client = MongoClient(mongo_uri)
 db = client[db_name]
 
 
-def insert_hod_datas():
-    collection = db['HODS']
-    with open("/root/Velammal-Engineering-College-Backend/docs/hods.json", "r",encoding="utf-8") as file:
+def insert_iqac_data():
+    collection = db['IQAC']
+    with open("/root/Velammal-Engineering-College-Backend/docs/IQAC.json","r",encoding="utf-8") as file:
         documents = json.load(file)
         collection.insert_many(documents)
+    
+    print("inserted IQAC data")
 
-    print("HOD documents inserted successfully.")
-insert_hod_datas()
+
+insert_iqac_data()
