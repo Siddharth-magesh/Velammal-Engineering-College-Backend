@@ -11,14 +11,13 @@ db_name = "VEC"
 client = MongoClient(mongo_uri)
 db = client[db_name]
 
-
-def insert_about_us():
-
-    collection = db['about_us']  
-    with open("/root/Velammal-Engineering-College-Backend/docs/about_us.json", "r",encoding="utf-8") as file:
+def insert_intake_data():    
+    collection = db["Intakes"]        
+    with open('/root/Velammal-Engineering-College-Backend/docs/intakes.json', "r",encoding="utf-8") as file:
         documents = json.load(file)
-        collection.insert_many(documents)
+    collection.insert_many(documents)
 
-    print("about_us documents inserted successfully.\n")
+    print("Intake data inserted successfully.")
 
-insert_about_us()
+    
+insert_intake_data()
