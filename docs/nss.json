@@ -19,9 +19,8 @@
   "MUKESH",
   "MONOVA DANIEL"
         ],
-        "image_path": ["/static/images/nss/2.webp", "/static/images/nss/3.webp", "/static/images/nss/4.webp", "/static/images/nss/5.webp", "/static/images/nss/6.webp", "/static/images/nss/7.webp", "/static/images/nss/8.webp", "/static/images/nss/9.webp", "/static/images/nss/10.webp", "/static/images/nss/11.webp", "/static/images/nss/12.webp"
-            
-        ],
+        "image_path": ["/static/images/nss/2.webp", "/static/images/nss/3.webp", "/static/images/nss/4.webp", "/static/images/nss/5.webp", "/static/images/nss/6.webp", "/static/images/nss/7.webp", "/static/images/nss/8.webp", "/static/images/nss/9.webp", "/static/images/nss/10.webp", "/static/images/nss/11.webp", "/static/images/nss/12.webp"       
+        ], 
         "designation":["GCO & Mech & Auto coordinator", "VCO & CSE coordinator", "ECE coordinator", "IT coordinator", "Civil, Cyber, EIE department coordinator", "EEE coordinator", "AI&DS coordinator", "Poster Team Head", "Newsletter Team Head", "Technical Team Head", "Website & Camera Handling Team Head"]
     },
     "events": {
