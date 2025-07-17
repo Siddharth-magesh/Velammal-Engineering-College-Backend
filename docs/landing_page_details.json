@@ -1,4 +1,7 @@
-{
+[{
+  "_id": {
+    "$oid": "6874a59d5bf78633b13b5758"
+  },
   "landing_page_details": {
     "email_id": "velammal@velammal.edu.in",
     "address": [
@@ -8,7 +11,10 @@
     ],
     "phone_number": "044 26590758",
     "student_affairs_contact": "044 26591771",
-    "addmission_contact": ["9123547550", "8939221120"],
+    "addmission_contact": [
+      "9123547550",
+      "8939221120"
+    ],
     "instagram": "https://www.instagram.com/vec_chennai/",
     "linkedin": "https://www.linkedin.com/school/velammal-engineering-college/",
     "twitter": "https://x.com/VelammalEnggC",
@@ -18,67 +24,67 @@
     {
       "department_name": "Automobile Engineering",
       "dept": "AUTO",
-      "banner_image": "/static/images/banner/002.gif",
+      "banner_image": "002.mp4",
       "redirect_url": "/dept/002"
     },
     {
       "department_name": "Civil Engineering",
       "dept": "CIVIL",
-      "banner_image": "/static/images/banner/004.gif",
+      "banner_image": "004.mp4",
       "redirect_url": "/dept/004"
     },
     {
       "department_name": "Computer Science and Engineering",
       "dept": "CSE",
-      "banner_image": "/static/images/banner/005.gif",
+      "banner_image": "005.mp4",
       "redirect_url": "/dept/005"
     },
     {
       "department_name": "Computer Science and Engineering (CYBER SECURITY)",
       "dept": "CSE-CS",
-      "banner_image": "/static/images/banner/006.gif",
+      "banner_image": "006.mp4",
       "redirect_url": "/dept/006"
     },
     {
       "department_name": "Electrical & Electronics Engineering",
       "dept": "EEE",
-      "banner_image": "/static/images/banner/007.gif",
+      "banner_image": "007.mp4",
       "redirect_url": "/dept/007"
     },
     {
       "department_name": "Electronics and Communication Engineering",
       "dept": "ECE",
-      "banner_image": "/static/images/banner/009.gif",
+      "banner_image": "009.mp4",
       "redirect_url": "/dept/009"
     },
     {
       "department_name": "Electronics & Instrumentation Engineering",
       "dept": "EIE",
-      "banner_image": "/static/images/banner/008.gif",
+      "banner_image": "008.mp4",
       "redirect_url": "/dept/008"
     },
     {
       "department_name": "Mechancial Engineering",
       "dept": "MECH",
-      "banner_image": "/static/images/banner/013.gif",
+      "banner_image": "013.mp4",
       "redirect_url": "/dept/013"
     },
     {
       "department_name": "Artificial Intelligence and Data Science",
       "dept": "AI&DS",
-      "banner_image": "/static/images/banner/001.gif",
+      "banner_image": "001.mp4",
       "redirect_url": "/dept/001"
     },
     {
       "department_name": "Information Technology",
       "dept": "IT",
-      "banner_image": "/static/images/banner/011.gif",
+      "banner_image": "011.mp4",
       "redirect_url": "/dept/011"
     },
     {
       "department_name": "Master of Business Administration",
       "dept": "MBA",
-      "banner_image": "/static/images/banner/017.gif",
+      "banner_image": "017.mp4",
       "redirect_url": "/dept/017"
     }
   ],
@@ -114,4 +120,4 @@
       "created_at": "2025-07-13T19:45:00Z"
     }
   ]
-}
+}]

@@ -139,7 +139,7 @@
     },
     {
         "dept_id": "018",
-        "department_name": "M.E Power System",
+        "department_name": "M.E Power Systems",
         "regulation": {
         "year":["2019", "2021", "2023"],
 	    "pdf_path":["/static/pdfs/curriculum/018/power_19.pdf","/static/pdfs/curriculum/018/power_21.pdf","/static/pdfs/curriculum/018/power_23.pdf"]
