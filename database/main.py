@@ -1117,7 +1117,7 @@ def insert_landing_page_details():
     collection = db['landing_page_details']  
     with open("/Velammal-Engineering-College-Backend/docs/landing_page_details.json", "r",encoding="utf-8") as file:
         documents = json.load(file)
-        collection.insert_one(documents)
+        collection.insert_many(documents)
 
     print("insert_landing_page_details documents inserted successfully.\n")
 
