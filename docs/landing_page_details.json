@@ -1,7 +1,4 @@
 [{
-  "_id": {
-    "$oid": "6874a59d5bf78633b13b5758"
-  },
   "landing_page_details": {
     "email_id": "velammal@velammal.edu.in",
     "address": [
