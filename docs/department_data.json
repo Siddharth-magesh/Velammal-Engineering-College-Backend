@@ -38,7 +38,7 @@
             ]
         },
         "program_educational_outcomes": {
-            "headings":["PSO01","PSO02"],
+            "headings":["PEO01","PEO02"],
 	        "content":[
                 "Apply the concepts of Artificial Intelligence to provide solutions for the real time problems and to integrate the professional skills with recent tools and technologies to cope with the dynamic AI needs.",
                 "Create a concrete foundation and enlighten the innovation, research and entrepreneur skills in the field of Artificial Intelligence and Data science."
@@ -78,14 +78,14 @@
                 ]
         },
         "program_specific_outcomes": {
-            "headings":["PSO01","PSO02"],
+            "headings":["PSO 1","PSO 2"],
 	        "content":[
                 "Design and develop the automotive system and its components with due considerations of society impact and sustainability. ",
                 "Analyze the performance of automotive system using modeling, simulation and testing. "
             ]
         },
         "program_educational_outcomes": {
-            "headings":["PEO01","PEO02","PEO03"],
+            "headings":["PEO 1","PEO 2","PEO 3"],
 	        "content":[
                 "Graduates will have successful career in Automobile / Allied Industries and/ or Academics.",
                 "Graduates will excel in Higher education / Entrepreneurship.",
@@ -230,12 +230,12 @@
         "department_name": "Computer Science and Engineering (CYBER SECURITY)",
         "department_image": "/static/images/department_data/cyber.webp",
         "department_quotes": "Securing tomorrows technology with todays intelligence",
-        "vision": "To provide comprehensive coverage and Hands-on Experience to enrich the knowledge of the student and also focus on Industry standards. To grab the attention of students in the area of Research, Critical Thinking and Problem-Solving",
+        "vision": "To be a center of excellence in cyber security education, research, and innovation—empowering professionals to safeguard digital assets and contribute to a secure cyber world through ethical practices and the adoption of cutting-edge technologies.",
         "mission": [
-            "To make the students understand basics of Cryptography and Network Security.",
-            "To make the students robust in maintaining the Confidentiality, Integrity and Availability of a data.",
-            "To understand various protocols for network security to protect against the threats in the network",
-            "To equip students in Ethical Hacking and Penetration Testing"
+            "To equip students with high-quality education and training in cyber security, fostering technical expertise and encouraging innovative research to address global cyber threats.",
+            "To nurture technically proficient engineers by raising awareness of the importance of securing digital infrastructure, promoting cyber security best practices, and empowering them to contribute to national and international cyber security initiatives.",
+            "To foster industry collaboration, enhance career readiness, and develop leadership skills among students.",
+            "To develop ethical cyber security professionals who contribute positively to society through responsible and impactful cyber security practices"
         ],
         "newsletter_path": "/static/pdfs/newsletter/cyber.pdf",
         "about_department": ["The Computer Science and Engineering (Cyber Security) course is a specialized branch of CSE that focuses on securing digital systems, networks, and data from cyber threats. It combines core computer science principles with specialized knowledge in Cyber Security. This program provides a strong foundation in computer science along with in-depth training in Cyber Security techniques, Ethical hacking, Cryptography, and Network Security. The curriculum is designed to equip students with skills to detect, prevent, and respond to cyber threats. It is a highly specialized and rewarding field with excellent career prospects. With Cyber threats increasing worldwide, there is a huge demand for skilled Cyber Security professionals. By combining technical expertise, ethical hacking skills, and knowledge of cyber laws, students can build a successful career in Cyber Security."],
@@ -264,12 +264,11 @@
             ]
         },
         "program_educational_outcomes": {
-            "headings":["PEO01","PEO02","PEO03","PEO04"],
+            "headings":["PEO01","PEO02","PEO03"],
 	        "content":[
-                "Graduates will demonstrate a comprehensive understanding of cyber security principles, concepts, and practices, including network security, cryptography, threat analysis, and incident response.",
-                "Graduates will exhibit ethical behavior, professional responsibility, and an understanding of the legal and regulatory aspects of Cyber Security.",
-                "Graduates will demonstrate a commitment to continuous learning and professional development to stay abreast of the rapidly evolving cyber security landscape.",
-                "Graduates will have the potential to advance in their cyber security careers by taking on higher-level positions and responsibilities within the industry."
+                "Graduates will demonstrate a comprehensive understanding of cyber security principles, concepts, and practices.",
+                "Graduates will progress in their careers by upholding ethical standards, demonstrating professional responsibility, and adhering to legal and regulatory frameworks in the field of cyber security.",
+                "Graduates will excel as industry professionals or entrepreneurs by leveraging effective communication, teamwork, interpersonal skills, and leadership qualities."
               ]
               
         }
