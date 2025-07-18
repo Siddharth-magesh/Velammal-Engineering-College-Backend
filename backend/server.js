@@ -1575,3 +1575,35 @@ app.get('/api/departments_list', async (req, res) => {
         res.status(500).json({ error: 'Error fetching announcements' });
     }
 });
+
+app.get('/api/admission_team', async (req, res) => {
+    const db = client.db(VEC);
+    const collection = db.collection('admission_team');
+
+    try {
+        const admission_team = await collection.find({}).toArray();
+        if (admission_team.length === 0) {
+            return res.status(404).json({ message: 'No admission team data  found' });
+        }
+        res.status(200).json(admission_team);
+    } catch (error) {
+        console.error('❌ Error fetching admission team:', error);
+        res.status(500).json({ error: 'Error fetching admission team' });
+    }
+});
+
+app.get('/api/E-cell', async (req, res) => {
+    const db = client.db("VEC");
+    const collection = db.collection('e_cell');
+
+    try {
+        const announcements = await collection.find({}).toArray();
+        if (announcements.length === 0) {
+            return res.status(404).json({ message: 'No E-cell list found' });
+        }
+        res.status(200).json(announcements);
+    } catch (error) {
+        console.error('❌ Error fetching e-cell list:', error);
+        res.status(500).json({ error: 'Error fetching programmes list' });
+}
+});
