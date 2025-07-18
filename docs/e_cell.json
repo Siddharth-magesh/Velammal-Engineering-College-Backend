@@ -1,0 +1,128 @@
+{
+
+    "home": {
+      "vision": ["To train our members, so as to face the challenges provided by the real world by exposing them to real world problems and also give them theoretical background and to inspire them to attain their dreams."],
+      "mission": ["To make each and every member achieve his entrepreneurial dreams by providing",
+                 "1. A platform for expressing their views.",
+                 "2. An atmosphere where idea generation is made possible.",
+                 "3. An interaction with the real world to get overall exposure."
+                ]
+    },
+    "committee": {
+      "entrepreneur_men": {
+        "name": [
+          "Dr.A.Nirmal Raj",
+          "Mr.M.Yuvaraj",
+          "Mr.K.Rajendhiran",
+          "Mr.Rajesh",
+          "Mr.K.Radhakrishnan",
+          "Mr.V.Rengarajan",
+          "Mrs.Padma",
+          "Mr.K.R.Mohanraj",
+          "Dr.S.Pradeep Kumar",
+          "Mrs.S.Mythili",
+          "Mr.Pramila",
+          "Ms.Sudharani",
+          "Vidhyalakshmi T",
+          "DEEPAN A",
+          "PREETHI R",
+          "Gowtham R"
+        ],
+        "position": [
+          "Head",
+          "Overall Coordinator",
+          "Department Coordinator",
+          "Department Coordinator",
+          "Department Coordinator",
+          "Department Coordinator",
+          "Department Coordinator",
+          "Department Coordinator",
+          "Department Coordinator",
+          "Department Coordinator",
+          "Department Coordinator",
+          "Member",
+          "Student President",
+          "Student Vice-President",
+          "Student Convener",
+          "Public Relation Officer"
+        ],
+        "affiliation": [
+          "Head - Dept. of Master of Business Administration",
+          "Assistant Professor, Department of Automobile",
+          "Assistant Professor, Department of Civil",
+          "Assistant Professor, Department of CSE",
+          "Assistant Professor, Department of ECE",
+          "Assistant Professor, Department of EEE",
+          "Assistant Professor, Department of E&I",
+          "Assistant Professor, Department of IT",
+          "Assistant Professor, Department of Mechanical",
+          "Assistant Professor, Department of AI&DS",
+          "Assistant Professor, CSE-CS department",
+          "Assistant Professor, MBA department",
+          "Student - CSE-CS",
+          "Student - ECE",
+          "Student - EEE",
+          "Student - Civil"
+        ]
+      },
+      "entrepreneur_women": {
+        "name": [
+          "Dr.A.Nirmal Raj",
+          "Mr.M.Yuvaraj",
+          "Mrs.S.Mythili",
+          "MONISHA TV",
+          "BUVANESWARI S",
+          "R ADHIRA",
+          "AYISHA SIDDIKA J"
+        ],
+        "position": [
+          "Head",
+          "Overall Coordinator",
+          "Cell In-charge",
+          "Student President",
+          "Student Vice-President",
+          "Student President",
+          "Public Relation Officer"
+        ],
+        "affiliation": [
+          "Head - Dept. of Master of Business Administration",
+          "Assistant Professor, Department of Automobile",
+          "Assistant Professor, Department of AI&DS",
+          "Student - CSE",
+          "Student - CSE",
+          "Student - CSE",
+          "Student - CSE"
+        ]
+      }
+    },
+    "entrepreneur":{},
+    "activity": {
+      "pdfs_path": [
+        "/static/pdfs/e_cell/2015-2016.pdf",
+        "/static/pdfs/e_cell/2016-2017.pdf",
+        "/static/pdfs/e_cell/2017-2018.pdf",
+        "/static/pdfs/e_cell/2018-2019.pdf",
+        "/static/pdfs/e_cell/2019-2020.pdf",
+        "/static/pdfs/e_cell/2020-2021, 2021-2022.pdf",
+        "/static/pdfs/e_cell/2022-2023 back.pdf",
+        "/static/pdfs/e_cell/2022-2023.pdf",
+        "/static/pdfs/e_cell/2023-2024.pdf",
+        "/static/pdfs/e_cell/2024-2025 ecell.pdf"
+      ]
+    },
+    "gallery": {
+      "image_path": [
+        "/static/images/e_cell/1.webp",
+        "/static/images/e_cell/2.webp",
+        "/static/images/e_cell/3.webp",
+        "/static/images/e_cell/4.webp",
+        "/static/images/e_cell/6.webp",
+        "/static/images/e_cell/5.webp",
+        "/static/images/e_cell/7.webp",
+        "/static/images/e_cell/8.webp",
+        "/static/images/e_cell/9.webp",
+        "/static/images/e_cell/10.webp"
+      ]
+    }
+  }
+

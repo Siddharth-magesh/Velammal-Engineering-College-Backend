@@ -118,7 +118,7 @@
         "dept_id": "010",
         "department_name": "English",
         "infrastructure_images": [
-            {"image_path": "/static/images/infrastructure/010/1.webp", "image_name": "Communicative Skills Lab", "image_content": ""}
+            {"image_path": "/static/images/infrastructure/010/1.webp", "image_name": "Communication Skills Lab", "image_content": ""}
         ]
     },
     {
@@ -171,6 +171,13 @@
             {"image_path": "/static/images/infrastructure/016/3.webp", "image_name": "", "image_content": ""},
             {"image_path": "/static/images/infrastructure/016/4.webp", "image_name": "", "image_content": ""},
             {"image_path": "/static/images/infrastructure/016/5.webp", "image_name": "", "image_content": ""}
+        ]
+    },
+    {
+        "dept_id": "017",
+        "department_name": "Master of Business Administration",
+        "infrastructure_images":[
+            {"image_path": "/static/images/infrastructure/017/1.webp", "image_name": "Data Analysis and Business Modeling Lab","image_content": ""}
         ]
     }
 ]

@@ -30,11 +30,6 @@
     "photo_path": "/static/images/admin_office/Kalyani.webp"
   },
   {
-    "name": "Mrs. SHEEBA K",
-    "designation": "Student Affairs",
-    "photo_path": "/static/images/admin_office/Sheeba.webp"
-  },
-  {
     "name": "Mrs. RAJALAKSHMI M",
     "designation": "Cashier",
     "photo_path": "/static/images/admin_office/Rajalakshmi.webp"
@@ -50,24 +45,9 @@
     "photo_path": "/static/images/admin_office/Vithya.webp"
   },
   {
-    "name": "Mrs. JENEFER ASHA JEYARANI M",
-    "designation": "Student Admission Counseller",
-    "photo_path": "/static/images/admin_office/Jenefer.webp"
-  },
-  {
-    "name": "Ms. SRIVIDHYA C",
-    "designation": "Admission Coordinator",
-    "photo_path": "/static/images/admin_office/Srividhya.webp"
-  },
-  {
     "name": "Mr. MURUGANANTHAM C",
     "designation": "Clerk",
     "photo_path": "/static/images/admin_office/Muruganantham.webp"
-  },
-  {
-    "name": "Mrs. NIVETHITHA N",
-    "designation": "Office Co-Ordinator",
-    "photo_path": "/static/images/admin_office/Nivethitha.webp"
   },
   {
     "name": "Mr. KARTHIKEYAN N",

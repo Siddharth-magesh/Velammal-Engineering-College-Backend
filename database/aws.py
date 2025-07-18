@@ -1136,6 +1136,21 @@ def insert_departments_list():
 
     print("departments list inserted successfully.")
 
+def insert_admission_team():    
+    collection = db["admission_team"]        
+    with open('/root/Velammal-Engineering-College-Backend/docs/admission_team.json', "r",encoding="utf-8") as file:
+     documents = json.load(file)
+     collection.insert_many(documents)
+
+    print("admission team data data inserted successfully.")
+
+def insert_ecell_data():
+    collection = db["e_cell"]
+    with open("/root/Velammal-Engineering-College-Backend/docs/e_cell.json", "r",encoding="utf-8") as file:
+        documents = json.load(file)
+        collection.insert_many(documents)
+
+    print("e_cell data inserted successfully.")
 
 
 insert_sports_data()
@@ -1163,7 +1178,8 @@ insert_help_desk()
 insert_landing_page_details()
 insert_programmes_list()
 insert_departments_list()
-
+insert_admission_team()
+insert_ecell_data()
 # insert_acadamic_research()
 
 def add_hostel_student_database():

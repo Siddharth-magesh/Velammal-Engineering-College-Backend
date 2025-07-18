@@ -55,7 +55,9 @@
                 {"image_path": "/static/images/student_activities/005/1.webp", "event_name": "Code Debugging ", "image_content": "Mr.R. Prasath, K. Logendiran, KM. Udaya Krishna has won first place in Code Debugging event with a Cash  Award of 5000/- held at VelTech Engineering College ", "date": "2025-02-14"},
                 {"image_path": "/static/images/student_activities/005/2.webp", "event_name": "Matter Mind", "image_content": "Mr.R. Prasath, S R Jefrin Jijo has won second place in Matter Mind event with a cash prize of 1000/- held at Jerusalem Engineering College ", "date": "2025-02-15"},
                 {"image_path": "/static/images/student_activities/005/3.webp", "event_name": "Code Debugging ", "image_content": "Mr. K M. Udaya Krishna and P.Sri Sai Charan has won Second place in Code Debugging event with a Cash Prize  held at Jerusalem Engineering College ", "date": "2025-02-15"},
-                {"image_path": "/static/images/student_activities/005/4.webp", "event_name": "Exdathon", "image_content": "MrRageshwaran, Mr.Tarakeshwaran and Mr.Praveen kumar has won Second place Exdathon event with a Cash Prize  of 7000/- held at SRM Engineering College ", "date": "2024-08-28"}
+                {"image_path": "/static/images/student_activities/005/4.webp", "event_name": "Exdathon", "image_content": "MrRageshwaran, Mr.Tarakeshwaran and Mr.Praveen kumar has won Second place Exdathon event with a Cash Prize  of 7000/- held at SRM Engineering College ", "date": "2024-08-28"},
+                {"image_path": "/static/images/student_activities/005/5.webp", "event_name": "Lingo Flow", "image_content": "Vyshnavi N D D, Fahrudeen and Hamil Haasan has won second place in Lingo Flow Event at KK Wagh Institute of Engineering Education & Research ", "date": "2025-02-02"},
+                {"image_path": "/static/images/student_activities/005/6.webp", "event_name": "Techathon", "image_content": "Kamilhaasan A, Abinand P and Fahrudeen M has won first place in Techathon - AI/ML Challenge at IIT Madras Shaastra ", "date": "2024-09-28"}
             ]
         },
     {
@@ -223,7 +225,7 @@
         "department_name": "Master of Business Administration (MBA)",
         "content": "Department 17 Content",
         "images": [
-            {"image_path": "/static/images/student_activities/017/1.webp", "image_content": "Students participated in the inter collegiate meet MATRIX organized by Vel Tech University.", "event_name": "MATRIX", "date": "28.02.2025"},
+            {"image_path": "/static/images/student_activities/017/1.webp", "image_content": "Students participated in the inter collegiate meet MATRIX organized by Vel Tech University.", "event_name": "MATRIX", "date": "28.02.2025","status":"true"},
             {"image_path": "/static/images/student_activities/017/2.webp", "image_content": "Bharathi Srinivasan and Moonisha. A of First year (MBA) has won Rs. 5000 CASH PRIZE in the event FORD VS FERARRI at NATIONAL LEVEL TECHNICAL SYMPOSIUM, conducted at SRM INSTITUTE OF SCIENCE AND TECHNOLOGY ", "event_name": "FORD VS FERARRI ", "date": "13 & 14-05-2023"},
             {"image_path": "/static/images/student_activities/017/3.webp", "image_content": "Bharathi Srinivasan and Moonisha of First year (MBA) has won SECOND PRIZE in the event MARGINAL CALL at NATIONAL LEVEL TECHNICAL SYMPOSIUM, conducted at SRM INSTITUTE OF SCIENCE AND TECHNOLOGY ", "event_name": "MARGINAL CALL ", "date": "13 & 14-05-2023"},
             {"image_path": "/static/images/student_activities/017/4.webp", "image_content": "Kanda Sirparan,First year (MBA) has won FIRST PRIZE in the event PORTFOLIO Management at PARADIGM 2022,conducted at Ethiraj College For Women", "event_name": "PORTFOLIO MANAGEMENT", "date": "08-11-2022"},
