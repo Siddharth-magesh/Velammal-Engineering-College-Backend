@@ -147,7 +147,7 @@
             "To provide industry and society based solutions through innovation and creativity"
         ],
         "newsletter_path": "/static/pdfs/newsletter/civil.pdf",
-        "about_department": ["Civil Engineering, the Mother of all Engineering Disciplines, its Sons and Daughters, the Young Civil Engineers are the Nation Builders for sustaining Civilization anywhere in the World and Universe.Starting from 2007, Department of Civil Engineering joined in contributing towards nation building through our Graduate Civil Engineers.","The BE Civil Engineering program of VEC is continuously accredited by NBA since 2015. So far 32 graduates from the Department have been placed in State and Central Government jobs (IRS, IOCL, Revenue, Police, PWD, Highways, Water Resources, Buildings, CMDA, Local Administration...) and also in many other countries like UK, USA, Canada, Singapore, Dubai, Australia, etc. in various roles and positions.","To achieve this, the Department is equipped with sophisticated laboratories and field oriented teaching and training. About 85% of students are placed in Core & IT companies (45+ Core Companies & 20+ IT companies). Around 200+ Students opted for higher studies in India & Foreign Universities through GATE, GRE & GMAT. Currently under Autonomous mode, the curriculum is further enriched to facilitate student community to reach greater heights and zeniths."],
+        "about_department": ["Civil Engineering, the Mother of all Engineering Disciplines, its Sons and Daughters, the Young Civil Engineers are the Nation Builders for sustaining Civilization anywhere in the World and Universe.Starting from 2007, Department of Civil Engineering joined in contributing towards nation building through our Graduate Civil Engineers.","The B.E. Civil Engineering program of VEC is continuously accredited by NBA since 2015. So far 32 graduates from the Department have been placed in State and Central Government jobs (IRS, IOCL, Revenue, Police, PWD, Highways, Water Resources, Buildings, CMDA, Local Administration...) and also in many other countries like UK, USA, Canada, Singapore, Dubai, Australia, etc. in various roles and positions.","To achieve this, the Department is equipped with sophisticated laboratories and field oriented teaching and training. About 85% of students are placed in Core & IT companies (45+ Core Companies & 20+ IT companies). Around 200+ Students opted for higher studies in India & Foreign Universities through GATE, GRE & GMAT. Currently under Autonomous mode, the curriculum is further enriched to facilitate student community to reach greater heights and zeniths."],
         "program_outcomes": {
             "headings":["PO1:Engineering knowledge","PO2:Problem analysis","PO3:Design/development of solutions","PO4:Conduct investigations of complex problems","PO5:Modern tool usage","PO6:The engineer and society","PO7:Environment and sustainability","PO8:Ethics","PO9:Individual and team work","PO10:Communication","PO11:Project management and finance","PO12:Life-long learning"],
             "content": [
@@ -166,14 +166,14 @@
                 ]
         },
         "program_specific_outcomes": {
-            "headings":["PSO01","PSO02"],
+            "headings":["PSO 1","PSO 2"],
 	        "content":[
                 "Plan, design and implement smart and sustainable infrastructure.",
                 "Provide solutions for the social needs and challenges by applying modern tools and techniques."
             ]
         },
         "program_educational_outcomes": {
-            "headings":["PSO01","PSO02","PSO03","PSO04"],
+            "headings":["PEO 1","PEO 2","PEO 3","PEO 4"],
 	        "content":[
                 "Will be able to achieve greater heights in higher studies/research/profession.",
                 "Will have knowledge to provide feasible solutions for real world civil engineering projects.",
@@ -263,14 +263,14 @@
                 ]
         },
         "program_specific_outcomes": {
-            "headings":["PSO01","PSO02"],
+            "headings":["PEO 1","PEO 2"],
 	        "content":[
                 "Ability to understand, analyse and develop computer programs in the areas related to networking, cryptography, web development and database management by adhering software development life cycle.",
                 "Graduate students will be able to develop data, resource, and asset protection strategies for organizations, processes, peoples, and individuals through Cyber security-centric skills."
             ]
         },
         "program_educational_outcomes": {
-            "headings":["PEO01","PEO02","PEO03"],
+            "headings":["PEO 1","PEO 2","PEO 3"],
 	        "content":[
                 "Graduates will demonstrate a comprehensive understanding of cyber security principles, concepts, and practices.",
                 "Graduates will progress in their careers by upholding ethical standards, demonstrating professional responsibility, and adhering to legal and regulatory frameworks in the field of cyber security.",
@@ -311,14 +311,14 @@
                 ]
         },
         "program_specific_outcomes": {
-            "headings":["PSO01","PSO02"],
+            "headings":["PEO 1","PEO 2"],
 	        "content":[
                 "Graduates will have the ability to design, simulate and control the Electrical and Electronics circuits using the concepts of power and control engineering.",
                 "Graduates will have the ability to identify, analyze the problems and innovate ideas by adapting the concepts of Power electronics, Recent trends in power systems and Drives systems in Electrical Engineering to provide solutions to existing/novel problems."
             ]
         },
         "program_educational_outcomes": {
-            "headings":["PEO01","PEO02","PEO03"],
+            "headings":["PEO 1","PEO 2","PEO 3"],
 	        "content":[
                 "Have successful technical and professional careers in their chosen fields such as Circuit theory, Field theory, Control theory and Computational platforms.",
                 "Engross in lifelong process of learning to keep themselves abreast of new developments in the field of Electronics and their applications in power engineering.",
@@ -360,7 +360,7 @@
                 ]
         },
         "program_specific_outcomes": {
-            "headings":["PSO01","PSO02","PSO03"],
+            "headings":["PEO 1","PEO 2","PEO 3"],
 	        "content":[
                 "Develop mathematical models of the industrial process and provide solutions for industrial automation systems ",
                 "Design, implement, test and analyses embedded based instrumentation systems for monitoring and control.",
@@ -368,7 +368,7 @@
             ]
         },
         "program_educational_outcomes": {
-            "headings":["PSO01","PSO02","PSO03"],
+            "headings":["PEO 1","PEO 2","PEO 3"],
 	        "content":[
                 "Graduates will lead a successful career in the field of Instrumentation / Automation industries or allied industries or research or business organization.",
                 "Graduates will be able to adapt latest technological developments in the global scenario.",
@@ -381,17 +381,18 @@
         "department_name": "Electronics and Communication Engineering (ECE)",
         "department_image": "/static/images/department_data/ece.webp",
         "department_quotes": "ECE HOLDS THE KEY TOWARDS TRANSCENDING TECHNOLOGY",
-        "vision": "To contribute to the society through Excellence in Technical Educationand Research, in order to create Resourceful Self-confident Graduates.",
+        "vision": "To impart technical knowledge and skills to create resourceful Electronics and Communication Engineering graduates with innovation and research to meet industry and societal needs.",
         "mission": [
-            "To facilitate Quality Technical Education and to Foster Effective research",
-            "To motivate Entrepreneurship and Intrapreneurship to cater the industrialand societal needs.",
-            "To cultivate Leadership Quality, Teamwork and Self-confidence."
+            "To provide an ideal learning environment through futuristic and flexible curriculum with innovative teaching and learning methods.",
+            "To foster cutting edge research with ethical values.",
+            "To promote technical and entrepreneurship skills to provide socially relevant and sustainable solutions with innovation.",
+            "To nurture leadership through teamwork."
         ],
         "newsletter_path": "/static/pdfs/newsletter/ece.pdf",
         "about_department": [ "We are proud to be honoured as the recipient of “National Employability Award 2021” for being among the top 10% colleges in India that excelled in AMCAT 21. Also we have received “Best ISF Award” from IETE for two consecutive years.Several Govt. initiatives have Telecommunication infrastructure as the backbone which is an opportunity to work with Government as a stakeholder in research.Industry 4.0 requires Smart Factories which depend on Machine to Machine Communication thus improving placement prospects for ECE students.An Electronics and Communication Engineer can work in Robotics, Drones,Design of Gadgets, Machine Automation, Aviation and Avionics, Consumer Electronics, Communications, Control and Automation, Telecommunication,Computer Application, Health Care diagnostic equipment manufacturing Our facultyare dedicated to creating a diverse and inclusive environment for our students. The Department endorses with pride of having National Level Accreditations like NBA, NAAC and ISO Certifications. Also it is permanently affiliated to Anna University, with Autonomous Status.It has optimum blend of faculty strength which includes 9 Doctorates with an average experience of 15 years."],
 
         "program_outcomes": {
-            "headings":["PO1:Engineering knowledge","PO2:Problem analysis","PO3:Design/development of solutions","PO4:Conduct investigations of complex problems","PO5:Modern tool usage","PO6:The engineer and society","PO7:Environment and sustainability","PO8:Ethics","PO9:Individual and team work","PO10:Communication","PO11:Project management and finance","PO12:Life-long learning"],
+            "headings":["PO 1:Engineering knowledge","PO 2:Problem analysis","PO 3:Design/development of solutions","PO 4:Conduct investigations of complex problems","PO 5:Modern tool usage","PO 6:The engineer and society","PO 7:Environment and sustainability","PO 8:Ethics","PO 9:Individual and team work","PO 10:Communication","PO 11:Project management and finance","PO 12:Life-long learning"],
             "content": [
                     "Apply the knowledge of mathematics, science, engineering fundamentals, and an engineering specialization for the solution of complex engineering problems.",
                     "Identify, formulate, research literature, and analyze complex engineering problems reaching substantiated conclusions using first principles of mathematics, natural sciences, and engineering sciences.",
@@ -408,15 +409,15 @@
                 ]
         },
         "program_specific_outcomes": {
-            "headings":["PSO01","PSO02"],
-	        "content":["Be proficient and employment ready with career development skills in both software and hardware through Industry oriented mini &amp; major projects, internship, industry visits, seminars and workshops to ethically serve the needs of the society.",
-                        "Develop hardware/software for components/systems for applications in Signal processing, VLSI, Communication, Networking, Computer-based Systems and/or pursue Higher Studies/Research with a strong base in Electronics and Communication Engineering."
+            "headings":["PSO 1","PSO 2"],
+	        "content":["Be proficient and employment ready with career development skills in both software and hardware through Industry oriented mini & major projects, internship, industry visits, seminars and workshops to ethically serve the needs of the society.",
+                        "Develop hardware / software for components / systems for applications in Signal processing, VLSI, Communication, Networking, Computer-based Systems and/or pursue Higher Studies / Research with a strong base in Electronics and Communication Engineering."
                     ]
         },
         "program_educational_outcomes": {
-            "headings":["PEO01","PEO02","PEO03"],
-	        "content":["Be highly competent with in-depth knowledge in the Electronics and Communication Engineering to have a successful career in Core/IT/Research/ Entrepreneurship.",
-                        "Design and Develop comprehensive and multi-disciplinary projects which require team work, leadership and ethical values taking into consideration legal, social, environmental and economic issues.",
+            "headings":["PEO 1","PEO 2","PEO 3"],
+	        "content":["Be highly competent with in-depth knowledge in the Electronics and Communication Engineering to have a successful career in Core / IT / Research / Entrepreneurship.",
+                        "Design and Develop comprehensive and multi-disciplinary projects which require teamwork, leadership and ethical values taking into consideration legal, social, environmental and economic issues.",
                         "Analyze and implement solutions in Electronics and Communication Engineering and adapt to changes in technology by continuous learning."
                     ]
         }
@@ -490,14 +491,14 @@
                 ]
         },
         "program_specific_outcomes": {
-            "headings":["PSO01","PSO02"],
+            "headings":["PEO 1","PEO 2"],
 	        "content":[
                 "To utilize cutting-edge techniques, programming languages, and the latest Information Technology tools and platforms for solving real time applications to meet out the societal and industrial needs.",
                 "To design and develop fruitful service utilities and products for various aspects of technological needs involving different domains"
             ]
         },
         "program_educational_outcomes": {
-            "headings":["PEO01","PEO02","PEO03"],
+            "headings":["PEO 1","PEO 2","PEO 3"],
 	        "content":[
                 "To proactively recognize industry and societal challenges, devising impactful solutions that promote the welfare of both sectors with professional ethics.",
                 "To embrace technological evolution by discovering and implementing innovative ideas with leadership qualities to propel continuous learning.",
@@ -578,14 +579,14 @@
                 ]
         },
         "program_specific_outcomes": {
-            "headings":["PSO01","PSO02"],
+            "headings":["PEO 1","PEO 2"],
 	        "content":[
                 "Graduates will have an ability to identify, formulate and analyze the problems related to design, manufacturing, thermal and materials engineering",
                 "Graduates will have an ability to implement/use appropriate techniques, programming skills, and latest/recent computer aided engineering tools/packages for modelling, simulation and analysis of mechanical engineering problems."
             ]
         },
         "program_educational_outcomes": {
-            "headings":["PEO01","PEO02","PEO03"],
+            "headings":["PEO 1","PEO 2","PEO 3"],
 	        "content":[
                 "Successful profession in Mechanical or allied Industries or Research/Academics or business enterprise.",
                 "Attitudes and abilities of leaders to adapt to the changing global scenario.",
@@ -686,7 +687,7 @@
         "newsletter_path": "/static/pdfs/newsletter/me_cse.pdf",
         "about_department": ["Computer Science and Engineering plays a vital role in helping organizations to achieve profitable results and keep competitive forces in check. Keeping this objective in mind, young mindsets are educated here with full academic rigor to convert them into effective IT professionals. The de-partment is instrumental in conducting various technical and non-technical activities for students as well as faculty members. The focus is not only technical stuff on but also moral values, ethics, professionalism and so. Regular classes of the latest technologies are being conducted for stu-dents. On a continuous basis, students are made aware of the latest industry trends and needs in various technological domains. Well-motivated, competent faculty members are always engaged in student’s welfare. Encouragement and guidance is offered to the students for participating in sports and various extracurricular activities to highlight and strengthen their nontechnical skills. Our academic rigor, Plan Do Check Act approach in all sorts of aspects has made this department to be a one of the best choices for UG, PG and PhD admission aspirants. The industry inputs are taken into consideration in each and every course. The Curriculum has features like Industry con-nect, research associations, semester-long internship, live industry problem-solving, electives, open elective, honors and minor degree to support an interdisciplinary approach."],
         "program_specific_outcomes": {
-            "headings":["PSO01","PSO02"],
+            "headings":["PEO 1","PEO 2"],
 	        "content":[
                 "Design and develop the automotive system and its components with due considerations of society impact and sustainability. ",
                 "Analyze the performance of automotive system using modeling, simulation and testing. "
@@ -731,7 +732,7 @@
                 ]
         },
         "program_specific_outcomes": {
-            "headings":["PSO01","PSO02"],
+            "headings":["PEO 1","PEO 2"],
 	        "content":[
                 "Students should explore practical application of the management concept and to become professional managers",
                 "Students should have a strong analytical foundation in key functional areas and continously learn,improvise,adapt,energize,excel and grow"
